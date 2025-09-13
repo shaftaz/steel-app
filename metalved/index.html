@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steel Weight Calculator</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f5;
+            line-height: 1.6;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #1e3a8a, #3730a3);
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .logo::before {
+            content: "⚖️";
+            margin-right: 8px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+
+        .nav-links a:hover {
+            opacity: 0.8;
+        }
+
+        .main-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .hero {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .hero h1 {
+            color: #1e3a8a;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .hero p {
+            color: #6b7280;
+            font-size: 1.1rem;
+        }
+
+        .calculator-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border: 1px solid #e5e7eb;
+        }
+
+        .card h2 {
+            color: #1e3a8a;
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #374151;
+            font-weight: 500;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #d1d5db;
+            border-radius: 6px;
+            font-size: 1rem;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: #3730a3;
+            box-shadow: 0 0 0 3px rgba(55, 48, 163, 0.1);
+        }
+
+        .calculate-btn {
+            background: linear-gradient(135deg, #1e3a8a, #3730a3);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.3s;
+            width: 100%;
+        }
+
+        .calculate-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 15px rgba(30, 58, 138, 0.3);
+        }
+
+        .results-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 25px;
+        }
+
+        .result-item {
+            text-align: center;
+            padding: 20px;
+            background: #f8fafc;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .result-label {
+            color: #64748b;
+            font-size: 0.9rem;
+            margin-bottom: 5px;
+        }
+
+        .result-value {
+            color: #1e3a8a;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .calculation-details h3 {
+            color: #1e3a8a;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        .detail-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            color: #4b5563;
+        }
+
+        .conversion-section h3 {
+            color: #1e3a8a;
+            margin: 25px 0 15px 0;
+            font-size: 1.1rem;
+        }
+
+        .conversion-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .how-it-works {
+            margin-bottom: 40px;
+        }
+
+        .how-it-works h2 {
+            color: #1e3a8a;
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .step {
+            text-align: center;
+        }
+
+        .step-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #1e3a8a, #3730a3);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .step h3 {
+            color: #1e3a8a;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .step p {
+            color: #6b7280;
+            font-size: 0.9rem;
+        }
+
+        .shapes-section {
+            margin-bottom: 50px;
+        }
+
+        .shapes-section h2 {
+            color: #1e3a8a;
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+
+        .shapes-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .shape-card {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            border: 1px solid #e5e7eb;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .shape-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+        }
+
+        .shape-icon {
+            width: 80px;
+            height: 60px;
+            background: #f1f5f9;
+            border-radius: 6px;
+            margin: 0 auto 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+        }
+
+        .shape-card h3 {
+            color: #1e3a8a;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        .footer {
+            background: #1f2937;
+            color: #d1d5db;
+            padding: 40px 0 20px;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 40px;
+        }
+
+        .footer-section h3 {
+            color: white;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        .footer-section p {
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .footer-section a {
+            color: #d1d5db;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #374151;
+            margin-top: 30px;
+            color: #9ca3af;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .calculator-section {
+                grid-template-columns: 1fr;
+            }
+            .steps {
+                grid-template-columns: 1fr;
+            }
+            .shapes-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .footer-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="nav-container">
+            <div class="logo">Steel Weight Calculator</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="main-container">
+        <div class="hero">
+            <h1>Steel Weight Calculator</h1>
+            <p>Quickly calculate the weight of steel materials for your projects</p>
+        </div>
+
+        <div class="calculator-section">
+            <div class="card">
+                <h2>Input Parameters</h2>
+                <form id="calculatorForm">
+                    <div class="form-group">
+                        <label for="shapeType">Shape Type</label>
+                        <select id="shapeType" class="form-control">
+                            <option value="round">Round Bar</option>
+                            <option value="square">Square Bar</option>
+                            <option value="plate">Plate</option>
+                            <option value="pipe">Pipe</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="diameter">Diameter (mm)</label>
+                        <input type="number" id="diameter" class="form-control" placeholder="Enter diameter" value="50">
+                    </div>
+                    <div class="form-group">
+                        <label for="length">Length (mm)</label>
+                        <input type="number" id="length" class="form-control" placeholder="Enter length" value="1000">
+                    </div>
+                    <div class="form-group">
+                        <label for="materialType">Material Type</label>
+                        <select id="materialType" class="form-control">
+                            <option value="7.85">Mild Steel (7.85 g/cm³)</option>
+                            <option value="7.93">Stainless Steel (7.93 g/cm³)</option>
+                            <option value="8.9">High Carbon Steel (8.9 g/cm³)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="quantity">Quantity</label>
+                        <input type="number" id="quantity" class="form-control" value="1" min="1">
+                    </div>
+                    <button type="button" class="calculate-btn" onclick="calculateWeight()">Calculate Weight</button>
+                </form>
+            </div>
+
+            <div class="card">
+                <h2>Results</h2>
+                <div class="results-grid">
+                    <div class="result-item">
+                        <div class="result-label">Single Unit Weight:</div>
+                        <div class="result-value" id="singleWeight">5.42 kg</div>
+                    </div>
+                    <div class="result-item">
+                        <div class="result-label">Total Weight:</div>
+                        <div class="result-value" id="totalWeight">5.42 kg</div>
+                    </div>
+                </div>
+
+                <div class="calculation-details">
+                    <h3>Calculation Details</h3>
+                    <div class="detail-item">
+                        <span>Volume:</span>
+                        <span id="volume">691.15 cm³</span>
+                    </div>
+                    <div class="detail-item">
+                        <span>Density:</span>
+                        <span id="density">7.85 g/cm³</span>
+                    </div>
+                    <div class="detail-item">
+                        <span>Formula Used:</span>
+                        <span id="formula">π × r² × h × density</span>
+                    </div>
+                </div>
+
+                <div class="conversion-section">
+                    <h3>Unit Conversion</h3>
+                    <div class="conversion-grid">
+                        <div class="detail-item">
+                            <span>In Pounds:</span>
+                            <span id="weightPounds">11.95 lbs</span>
+                        </div>
+                        <div class="detail-item">
+                            <span>In Tons:</span>
+                            <span id="weightTons">0.00542 tons</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card how-it-works">
+            <h2>How It Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-icon">📐</div>
+                    <h3>1. Enter Dimensions</h3>
+                    <p>Input the dimensions of your steel material based on its shape.</p>
+                </div>
+                <div class="step">
+                    <div class="step-icon">⚗️</div>
+                    <h3>2. Select Material</h3>
+                    <p>Choose the type of steel to use the correct density value.</p>
+                </div>
+                <div class="step">
+                    <div class="step-icon">📊</div>
+                    <h3>3. Get Results</h3>
+                    <p>Instantly receive accurate weight calculations for your project.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="shapes-section">
+            <h2>Common Steel Shapes</h2>
+            <div class="shapes-grid">
+                <div class="shape-card">
+                    <div class="shape-icon">⚫</div>
+                    <h3>Round Bar</h3>
+                </div>
+                <div class="shape-card">
+                    <div class="shape-icon">⬛</div>
+                    <h3>Square Bar</h3>
+                </div>
+                <div class="shape-card">
+                    <div class="shape-icon">▬</div>
+                    <h3>Plate</h3>
+                </div>
+                <div class="shape-card">
+                    <div class="shape-icon">⭕</div>
+                    <h3>Pipe</h3>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>⚖️ Steel Weight Calculator</h3>
+                <p>A simple tool to help professionals quickly calculate steel weights for various shapes and materials.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+                <a href="#privacy">Privacy Policy</a>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>📧 support@steelcalculator.com</p>
+                <p>📞 (555) 123-4567</p>
+                <div style="margin-top: 15px;">
+                    <span style="margin-right: 15px;">🌐</span>
+                    <span style="margin-right: 15px;">🐦</span>
+                    <span>💼</span>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            © 2023 Steel Weight Calculator. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        function calculateWeight() {
+            const shapeType = document.getElementById('shapeType').value;
+            const diameter = parseFloat(document.getElementById('diameter').value) || 0;
+            const length = parseFloat(document.getElementById('length').value) || 0;
+            const density = parseFloat(document.getElementById('materialType').value) || 7.85;
+            const quantity = parseInt(document.getElementById('quantity').value) || 1;
+
+            let volume = 0;
+            let formula = '';
+
+            // Convert mm to cm
+            const diameterCm = diameter / 10;
+            const lengthCm = length / 10;
+            const radiusCm = diameterCm / 2;
+
+            switch(shapeType) {
+                case 'round':
+                    volume = Math.PI * Math.pow(radiusCm, 2) * lengthCm;
+                    formula = 'π × r² × h × density';
+                    break;
+                case 'square':
+                    volume = Math.pow(diameterCm, 2) * lengthCm;
+                    formula = 'w² × h × density';
+                    break;
+                case 'plate':
+                    const width = parseFloat(prompt('Enter width (mm):') || '100') / 10;
+                    const thickness = parseFloat(prompt('Enter thickness (mm):') || '10') / 10;
+                    volume = lengthCm * width * thickness;
+                    formula = 'l × w × t × density';
+                    break;
+                case 'pipe':
+                    const wallThickness = parseFloat(prompt('Enter wall thickness (mm):') || '5') / 10;
+                    const outerRadius = radiusCm;
+                    const innerRadius = outerRadius - wallThickness;
+                    volume = Math.PI * (Math.pow(outerRadius, 2) - Math.pow(innerRadius, 2)) * lengthCm;
+                    formula = 'π × (R² - r²) × h × density';
+                    break;
+            }
+
+            // Calculate weight in grams, then convert to kg
+            const weightGrams = volume * density;
+            const weightKg = weightGrams / 1000;
+            const totalWeightKg = weightKg * quantity;
+
+            // Update display
+            document.getElementById('singleWeight').textContent = weightKg.toFixed(2) + ' kg';
+            document.getElementById('totalWeight').textContent = totalWeightKg.toFixed(2) + ' kg';
+            document.getElementById('volume').textContent = volume.toFixed(2) + ' cm³';
+            document.getElementById('density').textContent = density + ' g/cm³';
+            document.getElementById('formula').textContent = formula;
+            document.getElementById('weightPounds').textContent = (totalWeightKg * 2.20462).toFixed(2) + ' lbs';
+            document.getElementById('weightTons').textContent = (totalWeightKg / 1000).toFixed(5) + ' tons';
+        }
+
+        // Calculate initial values
+        calculateWeight();
+
+        // Update calculations when inputs change
+        document.getElementById('calculatorForm').addEventListener('change', calculateWeight);
+        document.getElementById('calculatorForm').addEventListener('input', calculateWeight);
+    </script>
+</body>
+</html>
