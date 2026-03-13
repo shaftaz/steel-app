@@ -1,0 +1,211 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme inline {
+  --color-accent: #00d4ff;
+  --color-accent-dim: #0099cc;
+  --color-accent-glow: rgba(0, 212, 255, 0.3);
+  --color-teal: #00e5a0;
+  --color-teal-dim: #00b37e;
+  --color-green-up: #00e676;
+  --color-red-down: #ff5252;
+  --color-warn: #ffab00;
+  --color-glass: rgba(255, 255, 255, 0.06);
+  --color-glass-hover: rgba(255, 255, 255, 0.1);
+  --color-glass-border: rgba(255, 255, 255, 0.1);
+  --color-glass-border-hover: rgba(255, 255, 255, 0.2);
+  --color-panel: rgba(10, 25, 47, 0.65);
+  --color-panel-solid: #0d1f3c;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255,255,255,0.1) transparent;
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background: #070e1b;
+  min-height: 100vh;
+  color: #c8d6e5;
+  overflow-x: hidden;
+}
+
+/* Industrial background with light spots */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 50% 40% at 15% 20%, rgba(0, 100, 180, 0.12) 0%, transparent 60%),
+    radial-gradient(ellipse 40% 35% at 85% 25%, rgba(0, 212, 255, 0.08) 0%, transparent 55%),
+    radial-gradient(ellipse 55% 45% at 50% 80%, rgba(0, 60, 120, 0.1) 0%, transparent 60%),
+    radial-gradient(ellipse 30% 25% at 70% 60%, rgba(0, 229, 160, 0.05) 0%, transparent 50%),
+    linear-gradient(180deg, #070e1b 0%, #0a1628 40%, #0d1a30 100%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Subtle grid overlay */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(0, 212, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 212, 255, 0.02) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Glass panel base */
+.glass-panel {
+  background: rgba(10, 25, 50, 0.55);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 3D glass highlight on upper-left edge */
+.glass-panel::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 50%;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(0, 212, 255, 0.3), transparent);
+  pointer-events: none;
+}
+.glass-panel::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; bottom: 50%;
+  width: 1px;
+  background: linear-gradient(180deg, rgba(0, 212, 255, 0.2), transparent);
+  pointer-events: none;
+}
+
+.glass-panel-hover {
+  transition: all 0.3s ease;
+}
+.glass-panel-hover:hover {
+  border-color: rgba(0, 212, 255, 0.2);
+  box-shadow: 0 0 30px rgba(0, 212, 255, 0.06), inset 0 0 30px rgba(0, 212, 255, 0.02);
+}
+
+/* Glass input */
+.glass-input {
+  background: rgba(0, 20, 50, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: #fff;
+  transition: all 0.2s ease;
+}
+.glass-input:focus {
+  background: rgba(0, 30, 60, 0.6);
+  border-color: rgba(0, 212, 255, 0.4);
+  box-shadow: 0 0 0 3px rgba(0, 212, 255, 0.08);
+  outline: none;
+}
+.glass-input::placeholder {
+  color: rgba(255, 255, 255, 0.25);
+}
+
+/* Glass select */
+.glass-select {
+  background: rgba(0, 20, 50, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: #fff;
+  transition: all 0.2s ease;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='rgba(255,255,255,0.4)' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  padding-right: 28px;
+}
+.glass-select:focus {
+  border-color: rgba(0, 212, 255, 0.4);
+  box-shadow: 0 0 0 3px rgba(0, 212, 255, 0.08);
+  outline: none;
+}
+.glass-select option {
+  background: #0d1f3c;
+  color: #fff;
+}
+
+/* CTA button glow */
+.btn-glow {
+  background: linear-gradient(135deg, #00b4d8, #0077b6);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+.btn-glow:hover {
+  box-shadow: 0 0 25px rgba(0, 180, 216, 0.4), 0 0 60px rgba(0, 180, 216, 0.15);
+  transform: translateY(-1px);
+}
+
+/* Widget header */
+.widget-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px 8px;
+}
+
+/* Ticker scroll animation */
+@keyframes ticker-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.ticker-track {
+  animation: ticker-scroll 45s linear infinite;
+}
+.ticker-track:hover {
+  animation-play-state: paused;
+}
+
+/* Pulse glow for live indicator */
+@keyframes pulse-glow {
+  0%, 100% { opacity: 1; box-shadow: 0 0 4px currentColor; }
+  50% { opacity: 0.5; box-shadow: 0 0 8px currentColor; }
+}
+.pulse-dot {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Prose overrides for dark glass articles */
+.prose-glass {
+  --tw-prose-body: #b0c4d8;
+  --tw-prose-headings: #e8f0f8;
+  --tw-prose-lead: #8899aa;
+  --tw-prose-links: #00d4ff;
+  --tw-prose-bold: #d0dde8;
+  --tw-prose-counters: #5a7080;
+  --tw-prose-bullets: #3a5060;
+  --tw-prose-hr: rgba(255, 255, 255, 0.08);
+  --tw-prose-quotes: #b0c4d8;
+  --tw-prose-quote-borders: rgba(0, 212, 255, 0.3);
+  --tw-prose-captions: #5a7080;
+  --tw-prose-code: #d0dde8;
+  --tw-prose-pre-code: #b0c4d8;
+  --tw-prose-pre-bg: rgba(0, 0, 0, 0.3);
+  --tw-prose-th-borders: rgba(255, 255, 255, 0.1);
+  --tw-prose-td-borders: rgba(255, 255, 255, 0.05);
+}
+
+/* Floating chat bubble */
+@keyframes float-bob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+.chat-float {
+  animation: float-bob 3s ease-in-out infinite;
+}
