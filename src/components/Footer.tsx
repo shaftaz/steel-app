@@ -96,7 +96,7 @@ export default function Footer() {
 
         {/* Bottom row: copyright */}
         <div className="mt-4 pt-4 border-t border-white/[0.03] text-center text-white/15 text-[11px]">
-          &copy; 2025 SteelMath. All rights reserved. Developed by MetalX.
+          &copy; 2026 SteelMath. All rights reserved. Developed by MetalX.
         </div>
       </div>
     </footer>
