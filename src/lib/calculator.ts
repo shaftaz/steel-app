@@ -13,6 +13,11 @@ export function calculateSteelWeight(
 ): CalculationResult | null {
   let volume = 0;
 
+  // Reject negative or zero dimensions
+  for (const v of Object.values(dimensions)) {
+    if (!v || v <= 0 || !isFinite(v)) return null;
+  }
+
   switch (type) {
     case "round": {
       const { diameter, length } = dimensions;

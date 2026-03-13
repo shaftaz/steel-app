@@ -43,9 +43,9 @@ export const articles: Article[] = [
 
 <p>Since the crisis began 13 days ago, four things have moved simultaneously against the Indian steel industry:</p>
 
-<p>Crude oil has jumped from approximately \u20B970 per barrel to over $92 \u2014 a 30% surge that directly feeds into energy costs at every steel mill in the country. Whether you\u2019re running a blast furnace operation or an EAF shop, your power and fuel bill just went up.</p>
+<p>Crude oil has jumped from approximately $70 per barrel to over $92 \u2014 a 30% surge that directly feeds into energy costs at every steel mill in the country. Whether you\u2019re running a blast furnace operation or an EAF shop, your power and fuel bill just went up.</p>
 
-<p>Ocean freight rates have spiked roughly 38% as vessels reroute around the Cape of Good Hope instead of passing through Hormuz. What was a 15-day sailing from the Gulf to Mumbai is now 25\u201330 days via southern Africa. That\u2019s not just a freight cost increase \u2014 it\u2019s a working capital cost increase, because your material is floating at sea for an extra two weeks.</p>
+<p>Ocean freight rates have spiked roughly 38% as vessels reroute around the Cape of Good Hope instead of passing through Hormuz. What was a 3\u20134 day sailing from the Gulf to Mumbai is now 20\u201325 days via the Cape of Good Hope. That\u2019s not just a freight cost increase \u2014 it\u2019s a working capital cost increase, because your material is floating at sea for an extra two to three weeks.</p>
 
 <p>Indian mills have responded with three consecutive rounds of price hikes since March 1. HRC base prices have climbed by approximately \u20B92,100 per MT across major producers. More hikes are widely expected by mid-March as the full energy cost impact hits production economics.</p>
 
@@ -199,7 +199,7 @@ export const articles: Article[] = [
 
 <p>For 100 such bars: 10.66 \u00D7 100 = 1,066 kg = 1.066 MT.</p>
 
-<p>Quick reference for common TMT bar weights per metre: 8mm weighs 0.395 kg/m, 10mm weighs 0.617 kg/m, 12mm weighs 0.889 kg/m, 16mm weighs 1.580 kg/m, 20mm weighs 2.469 kg/m, 25mm weighs 3.858 kg/m, and 32mm weighs 6.324 kg/m.</p>
+<p>Quick reference for common TMT bar weights per metre: 8mm weighs 0.395 kg/m, 10mm weighs 0.617 kg/m, 12mm weighs 0.889 kg/m, 16mm weighs 1.580 kg/m, 20mm weighs 2.469 kg/m, 25mm weighs 3.853 kg/m, and 32mm weighs 6.313 kg/m.</p>
 
 <h2>Steel Plate / Sheet</h2>
 
@@ -588,7 +588,7 @@ export const articles: Article[] = [
 
 <h2>Current Approximate Cost</h2>
 
-<p>At the current TMT price of approximately \u20B948,500 per MT in Delhi (March 2026), the cost per bar works out to: 12mm \u00D7 12m bar = 10.666 kg = approximately \u20B9517 per bar. For a residential column requiring 8 bars of 12mm \u00D7 3m, the steel cost is approximately \u20B9138.</p>
+<p>At the current TMT price of approximately \u20B948,500 per MT in Delhi (March 2026), the cost per bar works out to: 12mm \u00D7 12m bar = 10.666 kg = approximately \u20B9517 per bar. For a residential column requiring 8 bars of 12mm \u00D7 3m: total weight = 8 \u00D7 0.889 \u00D7 3 = 21.34 kg, so the steel cost is approximately \u20B91,035.</p>
 
 <p>For exact calculations with your specific dimensions and quantities, use SteelMath\u2019s free <a href="/calculator">Steel Weight Calculator</a>. It handles every section type and lets you build full BOMs with automatic weight and cost computation.</p>
 `,
@@ -734,7 +734,7 @@ export const articles: Article[] = [
 
 <p><strong>Rolling and finishing costs</strong> add another \u20B91,500\u20132,500 per MT to convert crude steel into HRC.</p>
 
-<p>The <strong>total HRC production cost via BF-BOF</strong> at current input prices is approximately <strong>\u20B938,000\u201342,000 per MT</strong>. With HRC selling at \u20B952,000\u201354,000 in the domestic market, operating margins are healthy at roughly \u20B910,000\u201314,000 per MT, though they\u2019ve compressed from pre-crisis levels due to input cost inflation.</p>
+<p>The <strong>total HRC production cost via BF-BOF</strong> at current input prices is approximately <strong>\u20B938,000\u201342,000 per MT</strong> (including overhead, logistics, depreciation, and other unlisted costs beyond the raw material and processing components above). With HRC selling at \u20B952,000\u201354,000 in the domestic market, operating margins are healthy at roughly \u20B910,000\u201314,000 per MT, though they\u2019ve compressed from pre-crisis levels due to input cost inflation.</p>
 
 <h2>EAF / IF Route (Secondary Producers)</h2>
 

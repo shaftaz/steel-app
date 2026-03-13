@@ -10,11 +10,11 @@ export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: {
     default:
-      "SteelMath — Free Steel Weight Calculator, Market Prices & Industry Analysis for India",
+      "SteelMath — Free Steel Weight Calculator, Industry Analysis & Guides for India",
     template: "%s | SteelMath",
   },
   description:
-    "Free online steel weight calculator for TMT bar, plate, pipe, angle, channel & beam. Live Indian steel prices city-wise in ₹/MT. Expert analysis on Hormuz crisis, safeguard duty, CBAM & more. Built for Indian steel professionals.",
+    "Free online steel weight calculator for TMT bar, plate, pipe, angle, channel & beam. Expert analysis on Hormuz crisis, safeguard duty, CBAM, GST on steel & more. Built for Indian steel professionals.",
   keywords: [
     "steel weight calculator",
     "steel weight calculator india",
@@ -50,9 +50,9 @@ export const metadata: Metadata = {
     url: BASE_URL,
     siteName: "SteelMath",
     title:
-      "SteelMath — Free Steel Weight Calculator & Market Prices India",
+      "SteelMath — Free Steel Weight Calculator & Industry Analysis India",
     description:
-      "Free steel weight calculator for TMT bar, pipe, plate, angle & beam. Live Indian steel prices in ₹/MT. Industry analysis for steel professionals.",
+      "Free steel weight calculator for TMT bar, pipe, plate, angle & beam. Expert industry analysis, weight charts & guides for steel professionals.",
     images: [
       {
         url: "/og-image.png",
@@ -64,9 +64,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "SteelMath — Steel Weight Calculator & Market Prices India",
+    title: "SteelMath — Steel Weight Calculator & Industry Analysis India",
     description:
-      "Free steel weight calculator. Live Indian steel prices. Expert market analysis. Built for steel professionals.",
+      "Free steel weight calculator. Expert industry analysis and weight charts. Built for steel professionals.",
     images: ["/og-image.png"],
   },
   robots: {
@@ -101,7 +101,7 @@ export default function RootLayout({
     url: BASE_URL,
     logo: `${BASE_URL}/logo.png`,
     description:
-      "Free steel calculators, live market prices, and expert analysis for Indian steel professionals.",
+      "Free steel calculators, weight charts, and expert analysis for Indian steel professionals.",
     sameAs: [],
   };
 
@@ -111,7 +111,7 @@ export default function RootLayout({
     name: "SteelMath",
     url: BASE_URL,
     description:
-      "Steel weight calculator, market prices, and industry analysis for Indian steel professionals.",
+      "Steel weight calculator, industry analysis, and expert guides for Indian steel professionals.",
     potentialAction: {
       "@type": "SearchAction",
       target: {
