@@ -24,76 +24,133 @@ export const articles: Article[] = [
   {
     slug: "hormuz-crisis-steel-impact-india",
     title:
-      "How the Hormuz Crisis Is Changing Steel Costs in India \u2014 A Data-Driven Analysis",
+      "Hormuz Strait Closure: Full Impact Assessment on India\u2019s Steel Industry \u2014 Costs, Supply Chains & Downstream Risk",
     category: "CRISIS",
     categoryColor: "red",
-    date: "2026-03-12",
-    readTime: "8 min",
+    date: "2026-03-14",
+    readTime: "12 min",
     excerpt:
-      "Oil up 30%, freight up 38%, three mill price hikes in 13 days. Here\u2019s exactly how the Hormuz crisis is hitting your cost sheet \u2014 and what to do about it.",
+      "Oil at $92, freight up 38%, propane supply under threat, coated steel lines at risk. A comprehensive breakdown of every cost channel the Hormuz crisis is hitting \u2014 from blast furnace energy bills to galvanizing plant shutdowns.",
     metaTitle:
-      "Hormuz Crisis Steel Impact India 2026 \u2014 Price, Freight & Cost Analysis | SteelMath",
+      "Hormuz Crisis Full Impact on Indian Steel 2026 \u2014 Costs, Freight, Propane, Coated Steel | SteelMath",
     metaDescription:
-      "Data-driven analysis of how the Strait of Hormuz closure is impacting Indian steel prices, freight costs, raw material routes, and production economics. Updated daily.",
+      "Comprehensive analysis of how the Strait of Hormuz closure impacts Indian steel: crude oil, freight, propane supply, coated steel production, raw materials, and actionable strategy for every stakeholder. March 2026.",
     relatedCalculators: ["freight", "energy-cost", "landed-cost"],
     content: `
-<p>The Strait of Hormuz has been effectively closed since February 28, 2026. For Indian steel professionals, this isn\u2019t a distant geopolitical headline \u2014 it\u2019s a direct hit to your cost sheet. Here\u2019s exactly what\u2019s changing, what\u2019s coming next, and what you can do about it.</p>
+<p>The Strait of Hormuz \u2014 the 33-km-wide chokepoint between Iran and Oman through which roughly 20% of global oil and a significant share of LPG and propane transit daily \u2014 has been effectively closed since February 28, 2026. Two weeks in, the disruption has moved well beyond oil prices. It is now reaching into energy supply chains, industrial gas availability, and downstream steel processing in ways that most initial assessments failed to anticipate.</p>
 
-<h2>The Numbers That Matter Right Now</h2>
+<p>This analysis covers every major cost channel: crude oil, ocean freight, raw material routing, industrial gas supply, and the emerging threat to India\u2019s coated and value-added steel segment.</p>
 
-<p>Since the crisis began 13 days ago, four things have moved simultaneously against the Indian steel industry:</p>
+<h2>Crude Oil: The First-Order Shock</h2>
 
-<p>Crude oil has jumped from approximately $70 per barrel to over $92 \u2014 a 30% surge that directly feeds into energy costs at every steel mill in the country. Whether you\u2019re running a blast furnace operation or an EAF shop, your power and fuel bill just went up.</p>
+<p>Brent crude has moved from approximately $70 per barrel in late February to over $92 as of March 14 \u2014 a 31.4% increase in under three weeks. This is the steepest sustained oil rally since the Russia-Ukraine war spike of 2022.</p>
 
-<p>Ocean freight rates have spiked roughly 38% as vessels reroute around the Cape of Good Hope instead of passing through Hormuz. What was a 3\u20134 day sailing from the Gulf to Mumbai is now 20\u201325 days via the Cape of Good Hope. That\u2019s not just a freight cost increase \u2014 it\u2019s a working capital cost increase, because your material is floating at sea for an extra two to three weeks.</p>
+<p>For the Indian steel industry, the oil-to-cost transmission works through multiple parallel channels:</p>
 
-<p>Indian mills have responded with three consecutive rounds of price hikes since March 1. HRC base prices have climbed by approximately \u20B92,100 per MT across major producers. More hikes are widely expected by mid-March as the full energy cost impact hits production economics.</p>
+<p><strong>Direct energy consumption:</strong> A typical BF-BOF integrated mill in India consumes 5.5\u20136.5 Gcal of energy per tonne of crude steel. At current prices, we estimate this adds \u20B91,200\u20131,800 per MT to production costs versus pre-crisis levels. EAF and induction furnace (IF) producers, more dependent on electricity, see a somewhat lower but still material \u20B9800\u20131,200 per MT increase.</p>
 
-<p>The Indian rupee has weakened against the dollar, making all dollar-denominated imports \u2014 coking coal, scrap, finished steel \u2014 more expensive in rupee terms.</p>
+<p><strong>Electricity tariffs:</strong> States where power generation depends heavily on fossil fuels \u2014 Maharashtra, Tamil Nadu, Gujarat \u2014 are likely to see industrial tariff adjustments within 30\u201360 days if crude stays above $85. Some open-access consumers are already paying 8\u201312% more on power exchanges.</p>
 
-<h2>How Oil Prices Flow Into Your Steel Cost</h2>
+<p><strong>Inland logistics:</strong> Diesel prices directly affect the \u20B9300\u2013500 per MT cost of transporting finished steel from mills to distribution hubs. With diesel up roughly \u20B94\u20135 per litre since February, road freight quotes from Jamshedpur to Delhi have risen approximately 6%.</p>
 
-<p>Steel production is extraordinarily energy-intensive. A typical integrated steel mill (BF-BOF route) in India consumes energy equivalent to roughly 5.5\u20136.5 Gcal per tonne of crude steel. When oil crosses $90 per barrel, the cascading effect works through multiple channels.</p>
+<p><strong>Petrochemical inputs:</strong> Lubricants, coolants, and coating materials used across steel processing are all petroleum-derived. These costs are slower to move but will compound over the next 30\u201345 days.</p>
 
-<p>Direct energy costs rise \u2014 coal, coke, and natural gas prices are all correlated with crude. Electricity rates in many Indian states are linked to fuel costs. Transport costs rise across the entire value chain, from moving iron ore to the mill to delivering finished steel to your warehouse. And petrochemical inputs used in processes like galvanising, coating, and lubrication all get more expensive.</p>
+<h2>Ocean Freight: Beyond the Headline 38%</h2>
 
-<p>Our Energy \u2192 Production Cost calculator on SteelMath models this relationship. At $92 per barrel of Brent crude, we estimate Indian BF-BOF steel production costs have risen by \u20B91,200\u20131,800 per MT compared to pre-crisis levels. For EAF producers, the impact is somewhat lower at \u20B9800\u20131,200 per MT, but still significant.</p>
+<p>The widely reported 38% spike in freight rates from the Persian Gulf to western India understates the actual cost to importers. Here\u2019s the full picture:</p>
 
-<h2>The Freight Multiplier Effect</h2>
+<p><strong>Route economics:</strong> Jebel Ali (UAE) to Mumbai via the Strait of Hormuz is approximately 1,200 nautical miles \u2014 a 3\u20134 day voyage. Rerouting via the Cape of Good Hope extends this to roughly 8,500 nautical miles and 20\u201325 days. That is a 7x increase in sailing distance.</p>
 
-<p>The headline freight rate increase of 38% doesn\u2019t tell the full story. Here\u2019s what rerouting via the Cape of Good Hope actually means for Indian steel buyers importing material:</p>
+<p><strong>Direct freight cost:</strong> For a 50,000 MT Supramax bulk carrier, the additional fuel consumption and charter days add $8\u201315 per MT, depending on current charter rates and bunker prices (which themselves are elevated due to crude oil).</p>
 
-<p>Sailing from Jebel Ali (UAE) to Mumbai via Hormuz takes approximately 3\u20134 days. Via the Cape, it\u2019s 20\u201325 days. That\u2019s 17\u201321 additional days at sea.</p>
+<p><strong>War risk insurance:</strong> Premiums for vessels transiting anywhere near the Gulf of Oman have jumped from near-zero to 0.3\u20130.5% of cargo value. On a $500/MT steel cargo, that\u2019s $1.50\u2013$2.50 per MT.</p>
 
-<p>For a 50,000 MT bulk carrier, the additional fuel and charter cost translates to roughly $8\u201315 per MT of additional freight, depending on vessel size and current charter rates. On top of that, war risk insurance premiums have gone from negligible to as high as 0.5% of cargo value.</p>
+<p><strong>Working capital cost:</strong> The often-overlooked financial cost of material sitting at sea for 17\u201321 extra days. At India\u2019s typical trade finance rate of 10\u201312% per annum, 20 additional days on a $500/MT cargo costs approximately $2.75\u20133.30 per MT in interest alone.</p>
 
-<p>But the hidden cost is working capital. If you\u2019re financing your imports, those extra 20 days at sea mean an additional interest cost. At a 12% annual interest rate, 20 extra days on a $500/MT cargo costs you approximately $3.30 per MT in financing alone.</p>
+<p><strong>Container availability:</strong> The longer voyages are tying up vessel capacity, creating a secondary squeeze on container availability. Container repositioning costs from Indian ports have risen 15\u201320% since late February.</p>
 
-<h2>What\u2019s Happening With Raw Material Routes</h2>
+<p>When you sum direct freight, insurance, financing, and container surcharges, the all-in additional landed cost for Gulf-origin imports is closer to $15\u201325 per MT \u2014 or approximately \u20B91,300\u20132,100 at current exchange rates.</p>
 
-<p>India\u2019s steel industry depends on imported coking coal (primarily from Australia, the US, and Mozambique) and, to some extent, imported scrap. Here\u2019s the current status of key supply routes:</p>
+<h2>Industrial Gas Supply: The Underestimated Crisis</h2>
 
-<p><strong>Australia to India via the Indian Ocean</strong> \u2014 largely unaffected. This is India\u2019s most critical coking coal route, and it doesn\u2019t transit the Hormuz strait. Shipments continue normally, though freight rates have risen modestly due to general market tightness.</p>
+<p>This is the dimension most market commentary has missed entirely. The Hormuz closure does not only disrupt crude oil \u2014 it disrupts the flow of <strong>liquefied petroleum gas (LPG) and propane</strong>, industrial gases that are critical to downstream steel processing.</p>
 
-<p><strong>Mozambique to India</strong> \u2014 similarly unaffected by Hormuz, as these routes go through the Mozambique Channel and across the Indian Ocean.</p>
+<p>Approximately 30\u201335% of India\u2019s LPG imports and a significant share of industrial-grade propane originate from West Asian suppliers, primarily Qatar, Saudi Arabia, and the UAE. These cargoes transit the Strait of Hormuz. With the strait closed, three problems have emerged simultaneously:</p>
 
-<p><strong>Middle Eastern scrap (UAE, Saudi Arabia)</strong> \u2014 severely impacted. Scrap shipments from Gulf ports that normally transit Hormuz are now either halted or being rerouted at significant additional cost.</p>
+<p><strong>1. Delayed and diverted cargoes:</strong> Propane and LPG tankers that would normally reach Indian ports in 4\u20136 days from Gulf terminals are now either stuck, rerouted via the Cape (adding 18\u201322 days), or not sailing at all due to insurance constraints. This has created an estimated 2\u20133 week supply gap for industrial-grade propane at Indian ports.</p>
 
-<p><strong>Iron ore imports</strong> \u2014 India is largely self-sufficient in iron ore, so the direct impact is minimal. However, Iran itself supplies about 3% of global iron ore, and that supply is now disrupted.</p>
+<p><strong>2. Global price spike:</strong> Saudi Aramco\u2019s Contract Price (CP) for propane \u2014 the benchmark for Asian markets \u2014 has risen sharply. Spot propane in the Far East has moved from approximately $580/MT in February to over $680/MT, a 17% jump. Indian industrial buyers, who typically purchase on spot or short-term contracts, are bearing the full impact.</p>
 
-<h2>What Should You Do Right Now?</h2>
+<p><strong>3. Allocation competition:</strong> With domestic LPG demand for cooking and heating being a political priority, industrial users face the risk of being deprioritized in allocation decisions. Oil marketing companies (IOCs) may redirect available propane stocks toward household LPG cylinders, further squeezing industrial supply.</p>
 
-<p><strong>For steel traders and stockholders:</strong> the near-term price trajectory is upward. With oil above $90, freight elevated, and mills announcing successive hikes, prices have further room to rise. If you have inventory, hold. If you need to buy, don\u2019t wait for a correction that may not come for weeks.</p>
+<h2>Coated Steel Production: Galvanizing Lines Under Threat</h2>
 
-<p><strong>For purchase managers:</strong> lock in rates where possible. If your suppliers are offering fixed-price contracts for March-April delivery, evaluate them against the likely scenario of continued price increases. Use our Landed Cost Calculator to compare domestic procurement versus imports at current rerouted freight rates.</p>
+<p>The propane supply disruption creates a specific and severe risk for India\u2019s coated steel segment \u2014 galvanized steel, galvalume, and colour-coated products.</p>
 
-<p><strong>For plant engineers and fabricators:</strong> factor in the cost increases when preparing estimates and BOQs. A project estimated at pre-crisis rates could face a 3\u20135% material cost overrun if prices continue trending up.</p>
+<p><strong>Why propane matters to galvanizing:</strong> In continuous hot-dip galvanizing (HDG) lines, propane-fired burners maintain the zinc bath at a precise 450\u2013460\u00B0C. Stable, uniform heating is essential because:</p>
 
-<h2>How Long Will This Last?</h2>
+<p>\u2014 Temperature fluctuations of even 5\u201310\u00B0C affect zinc coating adhesion and uniformity<br/>
+\u2014 Rapid thermal cycling can damage the ceramic pot lining, requiring costly repairs<br/>
+\u2014 Inconsistent heating leads to coating defects that compromise corrosion resistance \u2014 the entire value proposition of galvanized steel</p>
 
-<p>The honest answer: nobody knows. The crisis depends entirely on the geopolitical situation between the US, Israel, and Iran. What we can say is that even after a diplomatic resolution, freight rates and insurance premiums typically take 4\u20138 weeks to normalise. The price hikes already announced by mills won\u2019t be reversed. And any further escalation \u2014 a tanker sinking, mine deployment, or extended military action \u2014 would push costs significantly higher.</p>
+<p>India\u2019s installed galvanizing and colour-coating capacity has expanded significantly in recent years. Major producers \u2014 including JSW Steel Coated Products, Tata Steel Colors, ArcelorMittal Nippon Steel India (AM/NS), and Jindal Stainless \u2014 operate large-scale HDG and colour-coating lines. Industry sources indicate that some facilities have already experienced disruptions due to reduced availability of industrial gases.</p>
 
-<p>SteelMath will continue publishing daily updates and keeping our crisis calculators updated with the latest rates. Subscribe to our daily brief to stay ahead of the market.</p>
+<p><strong>Scale of the risk:</strong> India\u2019s coated flat steel production is estimated at 12\u201314 million MT per annum, supporting critical sectors:</p>
+
+<p>\u2014 <strong>Construction and roofing:</strong> Galvanized and colour-coated roofing sheets account for a substantial share of India\u2019s roofing market, particularly in tier-2/3 cities and rural housing<br/>
+\u2014 <strong>Infrastructure:</strong> Highway guardrails, transmission towers, and solar mounting structures all require galvanized steel<br/>
+\u2014 <strong>Renewable energy:</strong> Solar module frames and wind turbine components use galvanized and galvalume substrates<br/>
+\u2014 <strong>Automotive:</strong> OEMs use galvannealed steel for body panels requiring corrosion resistance<br/>
+\u2014 <strong>Appliances:</strong> Refrigerators, washing machines, and air conditioner housings use pre-painted galvanized steel</p>
+
+<p>A sustained propane shortage that forces galvanizing line slowdowns or shutdowns would create supply shortages in all these downstream sectors within 3\u20134 weeks, given the limited buffer stocks that distributors typically carry.</p>
+
+<h2>Raw Material Routes: A Mixed Picture</h2>
+
+<p>Not all of India\u2019s steel raw material supply chains are equally affected:</p>
+
+<p><strong>Coking coal (Australia \u2192 India):</strong> India imports 55\u201360 million MT of coking coal annually, with 70\u201375% sourced from Australia. This route transits the Indian Ocean and is entirely unaffected by Hormuz. However, general freight market tightness has pushed rates on this route up by 5\u20138%, adding approximately $2\u20134 per MT.</p>
+
+<p><strong>Coking coal (Mozambique \u2192 India):</strong> India\u2019s second-largest source. The Mozambique Channel route is also unaffected. Supplies continue normally.</p>
+
+<p><strong>Coking coal (US East Coast \u2192 India):</strong> US coal shipments transit the Atlantic and Suez Canal or Cape route to reach India. While not directly affected by Hormuz, the general disruption to global shipping capacity has increased transit times by 2\u20133 days and costs by $3\u20135 per MT.</p>
+
+<p><strong>Steel scrap (UAE, Saudi Arabia \u2192 India):</strong> Severely impacted. India imports approximately 6\u20138 million MT of steel scrap annually, with a meaningful share from Gulf ports. Scrap shipments through Hormuz are either halted or being rerouted at substantial additional cost. Domestic scrap prices have already risen \u20B91,500\u20132,000 per MT as EAF and IF producers compete for limited local supply.</p>
+
+<p><strong>Iron ore:</strong> India is largely self-sufficient (production of 260\u2013280 million MT per year) and is a net exporter. Direct impact is minimal. Iran\u2019s roughly 3% share of global seaborne iron ore is now disrupted, which marginally tightens the global market but has negligible effect on Indian producers.</p>
+
+<h2>Mill Response: Price Hikes and Production Adjustments</h2>
+
+<p>Indian steel mills have responded aggressively:</p>
+
+<p>\u2014 <strong>Three consecutive price hike rounds</strong> since March 1, totalling approximately \u20B92,100 per MT on HRC base prices across major producers (JSW, Tata, SAIL, AM/NS)<br/>
+\u2014 <strong>TMT bar prices</strong> have been revised upward by \u20B91,000\u20131,500 per MT, with further increases expected as scrap costs feed through<br/>
+\u2014 <strong>Galvanized product premiums</strong> are being widened by \u20B9500\u2013800 per MT over base HR/CR prices, reflecting the propane cost pass-through and anticipated supply tightening<br/>
+\u2014 Some mills are reportedly <strong>adjusting product mix</strong> away from galvanized products toward non-coated flat and long products to manage the propane constraint</p>
+
+<p>The rupee\u2019s weakening against the dollar (it has depreciated approximately 1.5% since the crisis began) is compounding all dollar-denominated input costs, adding a further \u20B9300\u2013500 per MT across the board.</p>
+
+<h2>Actionable Strategy by Stakeholder</h2>
+
+<p><strong>Steel traders and stockholders:</strong> The price trajectory remains upward across all product segments. With oil above $90, freight elevated, and industrial gas supply constrained, there are multiple simultaneous cost drivers that have not yet fully transmitted into market prices. Inventory holders should evaluate their position carefully \u2014 the full cost pass-through is likely still 2\u20133 weeks away.</p>
+
+<p><strong>Purchase managers and project procurement teams:</strong> Evaluate locking in rates on fixed-price contracts for March\u2013April delivery where available. For coated steel specifically, secure supply commitments now \u2014 if galvanizing line shutdowns materialise, lead times could extend by 3\u20134 weeks and spot premiums could spike. Use SteelMath\u2019s Landed Cost Calculator to compare domestic vs. import economics at current freight and duty levels.</p>
+
+<p><strong>Plant engineers and fabricators:</strong> Revise BOQs and project estimates to reflect a 3\u20137% material cost increase depending on product mix. For projects with significant galvanized steel content (warehouses, PEB structures, solar installations), the increase could be higher. Build in contingency.</p>
+
+<p><strong>Coated steel producers:</strong> Evaluate multi-fuel capability of your galvanizing and colour-coating lines. Lines that can switch between propane, natural gas (PNG via pipeline), and LPG have a significant operational advantage. Companies with city gas distribution (CGD) access via GAIL or other pipeline operators should maximise PNG usage to reduce propane dependence. Investigate pre-procurement of propane stocks for 30\u201345 day buffer.</p>
+
+<h2>What Could Change the Outlook</h2>
+
+<p><strong>Escalation scenario:</strong> Any further military action \u2014 tanker incidents, mine deployment, or expanded naval blockades \u2014 would push crude above $100 and could completely halt Gulf-origin propane supply for an extended period. This would force galvanizing line shutdowns at multiple facilities within 2\u20133 weeks.</p>
+
+<p><strong>Resolution scenario:</strong> Even a diplomatic resolution would take 4\u20138 weeks to normalise freight rates and insurance premiums. Propane supply chains, which operate on tighter inventory cycles than crude oil, could take 6\u201310 weeks to fully recover. Mill price hikes already announced will not be reversed.</p>
+
+<p><strong>Policy intervention:</strong> The Indian government could accelerate relief by temporarily reducing import duties on propane and LPG for industrial use, prioritising industrial gas allocation alongside household needs, and expediting gas pipeline connectivity to large industrial clusters. Industry bodies have already made representations seeking such interventions.</p>
+
+<p>The Hormuz crisis is a stress test for India\u2019s steel value chain \u2014 not just on the primary production side, but across the entire downstream ecosystem. The propane-to-galvanizing vulnerability, in particular, exposes how deeply India\u2019s steel industry depends on imported energy inputs at every stage of the value chain, from blast furnace to finished coated product.</p>
+
+<p>SteelMath will continue tracking all cost channels and updating our calculators with the latest data as the situation evolves.</p>
 `,
   },
   {
@@ -944,6 +1001,124 @@ export const articles: Article[] = [
 <p><strong>75 \u00D7 50 \u00D7 6mm:</strong> 5.65 kg/m. <strong>100 \u00D7 65 \u00D7 8mm:</strong> 10.14 kg/m. <strong>100 \u00D7 75 \u00D7 8mm:</strong> 10.61 kg/m. <strong>125 \u00D7 75 \u00D7 8mm:</strong> 11.82 kg/m. <strong>150 \u00D7 75 \u00D7 10mm:</strong> 16.95 kg/m. <strong>150 \u00D7 115 \u00D7 10mm:</strong> 20.02 kg/m.</p>
 
 <p>Standard length for angles in India is 6 metres, 9 metres, or 12 metres depending on the supplier and mill. For the full calculation with any custom dimensions, use SteelMath\u2019s <a href="/calculator">Weight Calculator</a>.</p>
+`,
+  },
+  {
+    slug: "propane-shortage-coated-steel-india-2026",
+    title:
+      "India\u2019s Propane Crisis: How Industrial Gas Shortages Are Threatening Galvanized & Coated Steel Production",
+    category: "CRISIS",
+    categoryColor: "red",
+    date: "2026-03-15",
+    readTime: "10 min",
+    excerpt:
+      "Propane spot prices up 17%, West Asian cargoes delayed by 3 weeks, galvanizing lines facing temperature instability. Inside the industrial gas shortage that could disrupt India\u2019s \u20B960,000 crore coated steel sector.",
+    metaTitle:
+      "Propane Shortage Impact on Coated Steel India 2026 \u2014 Galvanizing, Colour Coating, Supply Crisis | SteelMath",
+    metaDescription:
+      "How the propane and LPG shortage from the Hormuz crisis is threatening India\u2019s galvanized and colour-coated steel production. Impact on JSW, Tata, AM/NS, downstream sectors, and what the government can do.",
+    relatedCalculators: ["landed-cost"],
+    content: `
+<p>While the Strait of Hormuz crisis has dominated headlines for its impact on crude oil prices and ocean freight, a quieter but potentially more disruptive consequence is unfolding in India\u2019s industrial gas supply chain. Propane \u2014 an unglamorous but operationally critical fuel \u2014 is becoming scarce, and the consequences for India\u2019s galvanized and colour-coated steel industry could be severe.</p>
+
+<p>This is not a hypothetical risk. Multiple industry sources confirm that plant-level disruptions have already begun at some facilities. If the shortage persists beyond the next 2\u20133 weeks, India faces potential production losses in a steel segment worth an estimated \u20B960,000\u201370,000 crore annually.</p>
+
+<h2>India\u2019s Propane Import Dependency: The Numbers</h2>
+
+<p>India consumed approximately 5.8 million MT of LPG and propane for industrial purposes in FY2025, separate from the roughly 30 million MT used for household cooking. Of the industrial portion, an estimated 35\u201340% is imported, with the majority originating from West Asian producers:</p>
+
+<p>\u2014 <strong>Saudi Arabia:</strong> Largest single supplier, accounting for roughly 40% of India\u2019s propane imports. Saudi Aramco\u2019s monthly Contract Price (CP) is the benchmark for Asian propane markets.<br/>
+\u2014 <strong>Qatar:</strong> Supplies approximately 20\u201325% of India\u2019s imported propane, primarily from the Ras Laffan terminal.<br/>
+\u2014 <strong>UAE:</strong> Accounts for 15\u201320% of imports, from the Jebel Ali and Ruwais terminals.<br/>
+\u2014 <strong>Kuwait, Bahrain, and others:</strong> Smaller but collectively significant at 10\u201315%.</p>
+
+<p>Nearly all of these cargoes transit the Strait of Hormuz. With the strait effectively closed since February 28, Indian importers face a supply bottleneck with no quick workaround.</p>
+
+<h2>What Has Happened to Prices and Availability</h2>
+
+<p>The disruption has manifested across three metrics simultaneously:</p>
+
+<p><strong>Spot prices:</strong> Far East propane spot has moved from approximately $580/MT in late February to $680\u2013700/MT by mid-March \u2014 a 17\u201320% increase. This is the steepest two-week propane rally since 2022. The Mont Belvieu (US Gulf) benchmark has risen more modestly (+8%), creating a widening East-West arbitrage that may eventually attract US cargoes to Asia, but not quickly enough to offset current shortages.</p>
+
+<p><strong>Cargo arrivals:</strong> Of the 12\u201315 propane/LPG tankers that were scheduled to arrive at Indian ports (Kandla, Mumbai, Mangalore, Vizag) during the first two weeks of March, industry sources estimate that 5\u20137 have been delayed, diverted, or cancelled. Rerouted cargoes via the Cape of Good Hope add 18\u201322 days to delivery schedules.</p>
+
+<p><strong>Inventory at terminals:</strong> Indian Oil Corporation (IOCL), Bharat Petroleum (BPCL), and Hindustan Petroleum (HPCL) operate propane/LPG import terminals with combined storage capacity of approximately 1.5\u20131.8 million MT. Current inventory levels are reported to be 15\u201320% below seasonal norms, with drawdown accelerating as imports lag consumption.</p>
+
+<h2>Why Propane Cannot Be Easily Substituted</h2>
+
+<p>A common question from those outside the steel coating industry: can\u2019t facilities simply switch to natural gas or electricity? The answer is nuanced:</p>
+
+<p><strong>Natural gas (PNG via pipeline):</strong> Technically feasible for many galvanizing lines, and some large producers (particularly in Gujarat, where city gas distribution networks are well-developed) already use PNG as a primary or backup fuel. However, switching requires compatible burner systems, and not all facilities are connected to gas pipelines. Expanding pipeline connectivity to industrial clusters in states like Maharashtra, Karnataka, or Tamil Nadu is a multi-year infrastructure project, not a crisis response.</p>
+
+<p><strong>LPG (butane-propane mix):</strong> Already used interchangeably with propane in some applications, but LPG faces the same import disruption since it originates from the same West Asian sources and transits the same strait. Domestic LPG production from refineries is largely allocated to household cylinders \u2014 a politically non-negotiable priority.</p>
+
+<p><strong>Electricity (induction or resistance heating):</strong> Electric heating systems for zinc baths do exist but are uncommon in India\u2019s installed base. Retrofitting a propane-fired galvanizing line to electric heating is a capital-intensive project (\u20B95\u201310 crore per line, depending on capacity) with a 6\u201312 month implementation timeline. It is a strategic long-term option, not a solution for the current crisis.</p>
+
+<p><strong>Hydrogen blending:</strong> Pilot-stage technology. Some European galvanizing facilities are experimenting with hydrogen-natural gas blends, but this is years away from commercial deployment in India.</p>
+
+<p>The reality is that for the majority of India\u2019s installed galvanizing and colour-coating capacity, propane (or LPG) is the only operationally available fuel in the near term.</p>
+
+<h2>What Happens Inside a Galvanizing Line When Propane Runs Short</h2>
+
+<p>For those unfamiliar with the process, here is why even a partial propane shortage creates operational problems far beyond a simple cost increase:</p>
+
+<p><strong>The zinc bath:</strong> In a continuous hot-dip galvanizing (HDG) line, steel strip passes through a bath of molten zinc maintained at 450\u2013460\u00B0C. The bath typically contains 150\u2013300 tonnes of molten zinc (depending on line capacity), heated by propane-fired burners positioned around the ceramic-lined pot.</p>
+
+<p><strong>Temperature precision is non-negotiable:</strong> The zinc bath temperature must be controlled within a \u00B15\u00B0C window. If temperature drops below 445\u00B0C, the zinc becomes too viscous for uniform coating. If it rises above 465\u00B0C, excessive zinc-iron alloy formation occurs at the steel surface, producing a dull, brittle coating that fails quality specifications.</p>
+
+<p><strong>Burner performance degrades with inconsistent supply:</strong> When propane supply pressure fluctuates (as it does when terminal operators ration deliveries), burner output becomes uneven. This creates thermal gradients across the zinc bath \u2014 one end may be at 455\u00B0C while the other drops to 440\u00B0C. The result is inconsistent coating thickness across the strip width, leading to edge defects and customer rejections.</p>
+
+<p><strong>Shutdown and restart costs are enormous:</strong> If a galvanizing line must shut down due to fuel unavailability, the zinc bath must either be kept molten (consuming fuel even while non-productive) or allowed to solidify. Resolidifying and remelting 200+ tonnes of zinc takes 3\u20135 days and risks cracking the ceramic pot lining \u2014 a repair that can cost \u20B91\u20132 crore and take 2\u20133 weeks. Most operators will choose to keep the bath molten at reduced temperature rather than risk a full shutdown, but this still consumes propane without producing saleable output.</p>
+
+<h2>Which Producers Are Most Exposed</h2>
+
+<p>India\u2019s coated flat steel capacity is concentrated among a handful of major producers:</p>
+
+<p><strong>JSW Steel Coated Products:</strong> Operates galvanizing and colour-coating lines at Vasind (Maharashtra), Tarapur (Maharashtra), Kalmeshwar (Maharashtra), and Salem (Tamil Nadu). Maharashtra facilities are particularly exposed due to limited PNG pipeline access for industrial users.</p>
+
+<p><strong>Tata Steel (including Tata Steel BSL):</strong> Operates HDG and colour-coating at Jamshedpur (Jharkhand), Sahibabad (UP), and through the erstwhile Bhushan Steel facilities. Jharkhand has moderate city gas coverage but not at industrial scale in the steel cluster.</p>
+
+<p><strong>ArcelorMittal Nippon Steel India (AM/NS):</strong> Operates large-scale HDG at Hazira (Gujarat). Gujarat\u2019s relatively well-developed gas grid provides some buffer, making AM/NS potentially less vulnerable than Maharashtra-based producers.</p>
+
+<p><strong>Jindal Stainless and other secondary producers:</strong> Multiple induction-furnace-based producers in Raipur (Chhattisgarh), Mandi Gobindgarh (Punjab), and other clusters operate smaller galvanizing units. These facilities typically have minimal fuel storage and rely on just-in-time propane delivery \u2014 making them the most immediately vulnerable to supply disruptions. Industry sources indicate some of these units have already experienced interruptions.</p>
+
+<h2>Downstream Impact: Who Gets Hurt</h2>
+
+<p>India\u2019s galvanized and colour-coated steel production (estimated at 12\u201314 million MT per annum) feeds into sectors where supply disruption has immediate, visible consequences:</p>
+
+<p><strong>Construction and roofing (\u223C40% of coated steel consumption):</strong> Galvanized corrugated sheets and colour-coated roofing panels are the dominant roofing material for residential construction in tier-2/3 cities and rural India. The ongoing spring construction season (March\u2013June) is peak demand period. Supply shortages would directly delay housing completion and push up costs for builders already operating on thin margins.</p>
+
+<p><strong>Infrastructure (\u223C20%):</strong> Highway guardrails (mandated to be galvanized under NHAI specifications), transmission tower components, solar mounting structures, and bridge components all require hot-dip galvanized steel. Government infrastructure timelines under Bharatmala, Sagarmala, and the National Infrastructure Pipeline could face material-driven delays.</p>
+
+<p><strong>Renewable energy (\u223C10%):</strong> India\u2019s solar installation target of 50 GW per year requires approximately 60,000\u201380,000 MT of galvanized mounting structures per GW. A coated steel shortage during Q1 FY2027 could delay solar commissioning targets and affect power purchase agreement (PPA) timelines.</p>
+
+<p><strong>Automotive and appliances (\u223C15%):</strong> OEMs use galvannealed and electrogalvanized steel for body panels, while appliance manufacturers use pre-painted galvanized steel (PPGI) for exterior panels. Automotive supply chains operate on 2\u20134 week inventory buffers; a sustained coated steel shortage would trigger production line stoppages at OEM plants.</p>
+
+<p><strong>Pre-engineered buildings (PEB) (\u223C10%):</strong> The PEB sector, growing at 15\u201320% annually in India, uses galvanized purlins, sheeting, and structural members. PEB contractors typically procure coated steel 4\u20136 weeks ahead of erection \u2014 those who have not yet secured April\u2013May material could face significant cost escalation or delivery delays.</p>
+
+<h2>What the Government Should Consider</h2>
+
+<p>The propane shortage is an industrial policy problem, not just an energy market event. Several measures could mitigate the damage:</p>
+
+<p><strong>1. Temporary import duty relief:</strong> India currently levies a 2.5% basic customs duty on propane imports (HS 2711.12). Temporarily suspending this duty for industrial-grade propane would reduce landed costs by $15\u201318 per MT and signal policy support for manufacturing continuity.</p>
+
+<p><strong>2. Industrial allocation guarantee:</strong> The Petroleum and Natural Gas Regulatory Board (PNGRB) could issue a directive ensuring that a minimum percentage of available propane/LPG stocks are reserved for critical industrial users, preventing complete diversion to the household segment. A 70:30 household-to-industrial split (vs. the current effective 85:15 during shortages) would meaningfully improve industrial availability.</p>
+
+<p><strong>3. Emergency procurement from non-Gulf sources:</strong> Government-facilitated term contracts for propane from the US Gulf Coast (Enterprise, Targa terminals), West Africa (Nigeria LPG), or Australia could begin delivering within 30\u201340 days. The price premium over Gulf propane would be $30\u201350/MT due to longer shipping, but this is far less costly than production shutdowns.</p>
+
+<p><strong>4. Accelerated PNG pipeline connectivity:</strong> GAIL operates approximately 22,000 km of gas pipeline across India, but many industrial clusters with galvanizing capacity are not connected. Expediting last-mile connectivity to major steel coating hubs \u2014 Vasind/Tarapur (Maharashtra), Raipur cluster (Chhattisgarh), Mandi Gobindgarh (Punjab) \u2014 would create structural resilience for future disruptions.</p>
+
+<p><strong>5. Strategic propane reserve:</strong> India maintains strategic petroleum reserves at Visakhapatnam, Mangalore, and Padur for crude oil. A similar concept for industrial LPG/propane \u2014 even a modest 15\u201320 day buffer stock at key import terminals \u2014 would prevent a logistics disruption from becoming an industrial crisis. The estimated cost of building such a reserve is \u20B9800\u20131,200 crore, modest relative to the \u20B960,000+ crore annual output of the coated steel sector it would protect.</p>
+
+<h2>The Bigger Picture: India\u2019s Industrial Energy Security</h2>
+
+<p>The propane-to-galvanizing vulnerability is a microcosm of a broader issue: India\u2019s steel industry, the world\u2019s second-largest, remains deeply dependent on imported energy inputs at every stage of the value chain. From coking coal for blast furnaces to propane for coating lines, critical industrial fuels are sourced from a small number of geographically concentrated suppliers and transported through a handful of maritime chokepoints.</p>
+
+<p>As India pursues its target of 300 million MT of annual steel capacity by 2030 (up from approximately 160 MT today), the volume of imported energy inputs will only grow. The Hormuz crisis has exposed the fragility of a supply chain that was optimised for cost and convenience but not for resilience.</p>
+
+<p>The steel industry\u2019s long-term answer lies in fuel diversification (electrification of heating, green hydrogen, domestic gas expansion), supply route diversification (reducing West Asian concentration), and strategic buffering (reserves for critical industrial inputs). These are multi-year investments. The immediate priority is ensuring that the current disruption does not shut down galvanizing lines that supply steel for India\u2019s housing, infrastructure, and energy transition.</p>
+
+<p>SteelMath will continue tracking propane availability, coated steel pricing, and downstream supply chain impacts as the situation develops.</p>
 `,
   },
 ];
