@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import LandingCalculator from "@/components/dashboard/LandingCalculator";
 import ArticleCard from "@/components/ArticleCard";
-import { articles, CATEGORY_STYLES } from "@/lib/data/articles";
+import { articles, articlesByDate, CATEGORY_STYLES } from "@/lib/data/articles";
 
 export const metadata: Metadata = {
   title:
@@ -54,10 +54,10 @@ export default function Home() {
     ],
   };
 
-  // Split articles by category for grouped display
-  const guides = articles.filter((a) => a.category === "GUIDE");
-  const analysis = articles.filter((a) => a.category === "ANALYSIS");
-  const crisis = articles.filter((a) => a.category === "CRISIS");
+  // Split articles by category for grouped display, sorted by recency
+  const guides = articlesByDate.filter((a) => a.category === "GUIDE");
+  const analysis = articlesByDate.filter((a) => a.category === "ANALYSIS");
+  const crisis = articlesByDate.filter((a) => a.category === "CRISIS");
 
   return (
     <>

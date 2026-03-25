@@ -2157,6 +2157,11 @@ export const articles: Article[] = [
   },
 ];
 
+/** Articles sorted by date, most recent first */
+export const articlesByDate = [...articles].sort(
+  (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+);
+
 export function getArticleBySlug(slug: string): Article | undefined {
   return articles.find((a) => a.slug === slug);
 }
