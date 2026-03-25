@@ -33,7 +33,7 @@ export async function generateMetadata({
       description: article.metaDescription,
       url: `https://steelmath.com/articles/${article.slug}`,
       publishedTime: article.date,
-      authors: ["SteelMath"],
+      authors: ["Special Correspondent"],
       tags: [
         article.category.toLowerCase(),
         "steel",
@@ -75,10 +75,10 @@ export default async function ArticlePage({ params }: PageProps) {
     headline: article.title,
     description: article.metaDescription,
     datePublished: article.date,
-    dateModified: article.date,
+    dateModified: article.lastUpdated || article.date,
     author: {
-      "@type": "Organization",
-      name: "SteelMath",
+      "@type": "Person",
+      name: "Special Correspondent",
       url: "https://steelmath.com",
     },
     publisher: {
@@ -181,11 +181,26 @@ export default async function ArticlePage({ params }: PageProps) {
                   day: "numeric",
                 })}
               </time>
+              {article.lastUpdated && article.lastUpdated !== article.date && (
+                <span className="text-accent/40 text-xs">
+                  Updated{" "}
+                  <time dateTime={article.lastUpdated}>
+                    {new Date(article.lastUpdated).toLocaleDateString("en-IN", {
+                      year: "numeric",
+                      month: "long",
+                      day: "numeric",
+                    })}
+                  </time>
+                </span>
+              )}
             </div>
 
-            <h1 className="text-white text-xl sm:text-2xl font-bold mb-8 leading-tight tracking-tight">
+            <h1 className="text-white text-xl sm:text-2xl font-bold mb-3 leading-tight tracking-tight">
               {article.title}
             </h1>
+            <p className="text-white/25 text-xs mb-8">
+              By <span className="text-white/40 font-medium">Special Correspondent</span> &middot; SteelMath
+            </p>
 
             <div
               className="prose max-w-none prose-glass prose-headings:font-semibold prose-h2:text-lg prose-h2:mt-8 prose-h2:mb-3 prose-h3:text-base prose-h3:mt-6 prose-h3:mb-2 prose-p:text-sm prose-p:leading-relaxed prose-li:text-sm prose-li:leading-relaxed prose-ul:my-3 prose-strong:text-white/80"

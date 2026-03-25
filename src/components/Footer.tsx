@@ -20,13 +20,19 @@ export default function Footer() {
               href="/"
               className="text-white/25 hover:text-white/50 no-underline text-xs transition-colors"
             >
-              Dashboard
+              Home
+            </Link>
+            <Link
+              href="/calculators"
+              className="text-white/25 hover:text-white/50 no-underline text-xs transition-colors"
+            >
+              Calculators
             </Link>
             <Link
               href="/calculator"
               className="text-white/25 hover:text-white/50 no-underline text-xs transition-colors"
             >
-              Calculator
+              Weight Calculator
             </Link>
             <Link
               href="/articles"
@@ -43,6 +49,18 @@ export default function Footer() {
             Popular Guides &amp; Tools
           </div>
           <div className="flex flex-wrap gap-x-5 gap-y-1.5">
+            <Link
+              href="/calculators/tmt"
+              className="text-white/20 hover:text-white/40 text-[11px] no-underline transition-colors"
+            >
+              TMT Bar Calculator
+            </Link>
+            <Link
+              href="/calculators/steel-plate"
+              className="text-white/20 hover:text-white/40 text-[11px] no-underline transition-colors"
+            >
+              Steel Plate Calculator
+            </Link>
             <Link
               href="/articles/tmt-bar-weight-per-metre-chart"
               className="text-white/20 hover:text-white/40 text-[11px] no-underline transition-colors"

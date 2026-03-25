@@ -51,19 +51,50 @@ export default function ArticlesPage() {
     },
   };
 
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://steelmath.com",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Insights & Reports",
+        item: "https://steelmath.com/articles",
+      },
+    ],
+  };
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <div className="relative z-10 max-w-[1400px] mx-auto px-4 sm:px-5 py-5">
-        <Link
-          href="/"
-          className="inline-flex items-center gap-1 text-white/25 hover:text-accent text-xs no-underline transition-colors mb-5"
+        {/* Breadcrumb navigation */}
+        <nav
+          aria-label="Breadcrumb"
+          className="flex items-center gap-1.5 text-white/25 text-xs mb-5"
         >
-          ← Back to Dashboard
-        </Link>
+          <Link
+            href="/"
+            className="hover:text-accent no-underline transition-colors"
+          >
+            Home
+          </Link>
+          <span>/</span>
+          <span className="text-white/35">Insights &amp; Reports</span>
+        </nav>
 
         <div className="mb-6">
           <h1 className="text-2xl sm:text-3xl font-bold text-white mb-1.5 tracking-tight">

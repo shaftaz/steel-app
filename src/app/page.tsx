@@ -6,20 +6,29 @@ import { articles, CATEGORY_STYLES } from "@/lib/data/articles";
 
 export const metadata: Metadata = {
   title:
-    "SteelMath — Free Steel Weight Calculator, Industry Analysis & Guides for India",
+    "SteelMath — Free Steel Weight Calculator for TMT Bar, Plate, Pipe & Angle | India",
   description:
-    "Free online steel weight calculator for TMT bar, plate, pipe, angle & beam. Expert analysis on Hormuz crisis impact, safeguard duty, CBAM, GST on steel, and mill price circulars. Built for Indian steel professionals.",
+    "Free online steel weight calculator for TMT bar, MS plate, pipe, angle, channel & beam. Instant weight per metre, d²/162 formula, weight charts & density tables. Expert steel industry analysis for Indian professionals.",
   keywords: [
     "steel weight calculator",
+    "steelmath",
+    "steel math",
     "steel calculator online free",
     "tmt bar weight calculator",
+    "tmt bar weight per metre",
     "steel plate weight calculator",
     "ms pipe weight calculator",
     "steel angle weight chart",
+    "steel beam weight calculator",
+    "d square by 162 formula",
+    "steel weight formula",
+    "steel density 7850",
+    "rebar weight calculator india",
     "steel yield calculator",
     "steel market analysis india",
     "hormuz crisis steel",
     "safeguard duty steel india",
+    "steel industry news india 2026",
   ],
   alternates: { canonical: "https://steelmath.com" },
 };
@@ -61,17 +70,23 @@ export default function Home() {
         {/* Hero Section */}
         <section className="text-center py-6 sm:py-10">
           <h1 className="text-2xl sm:text-4xl font-extrabold text-white tracking-tight mb-3">
-            Steel Calculations &amp; Industry Intelligence
+            Free Steel Weight Calculator &amp; Industry Analysis — India
           </h1>
           <p className="text-white/40 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
-            Free weight calculators, yield analysis tools, and expert insights for Indian steel professionals — TMT bar, plate, pipe, angle &amp; more.
+            Calculate steel weight instantly for TMT bar, MS plate, pipe, angle, channel &amp; beam. Expert industry analysis, weight charts &amp; guides for Indian steel professionals.
           </p>
-          <div className="flex items-center justify-center gap-3 mt-5">
+          <div className="flex flex-wrap items-center justify-center gap-3 mt-5">
             <Link
               href="/calculator"
               className="btn-glow px-6 py-2.5 text-sm no-underline"
             >
               Open Calculator
+            </Link>
+            <Link
+              href="/calculators"
+              className="px-6 py-2.5 text-sm rounded-lg border border-white/10 text-white/50 hover:text-white/80 hover:border-white/20 no-underline transition-all"
+            >
+              All Calculators
             </Link>
             <Link
               href="/articles"
@@ -80,6 +95,9 @@ export default function Home() {
               Browse Insights
             </Link>
           </div>
+          <p className="text-white/20 text-xs max-w-3xl mx-auto mt-6 leading-relaxed">
+            SteelMath is India&apos;s free steel weight calculator supporting all common sections — TMT bar (rebar), mild steel plate, MS pipe, angle, channel, I-beam, flat bar &amp; square tube. Use the d&sup2;/162 formula for round bars or enter dimensions for instant weight-per-metre results. Our tools support multiple steel grades including MS (7,850 kg/m&sup3;), SS 304, SS 316, Aluminium &amp; Copper with accurate density factors.
+          </p>
         </section>
 
         {/* Section 1: Calculators */}
@@ -143,7 +161,7 @@ export default function Home() {
         <section className="glass-panel overflow-hidden">
           <div className="p-6 sm:p-8 text-center">
             <h2 className="text-white font-bold text-lg sm:text-xl mb-2">
-              All 15 Articles &amp; Guides
+              All {articles.length} Articles &amp; Guides
             </h2>
             <p className="text-white/30 text-sm mb-4 max-w-xl mx-auto">
               From TMT bar weight charts to Hormuz crisis analysis — everything Indian steel professionals need in one place.
