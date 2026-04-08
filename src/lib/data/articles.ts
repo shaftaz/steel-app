@@ -2155,6 +2155,164 @@ export const articles: Article[] = [
 <p><strong>Related on SteelMath:</strong> See our <a href="/articles/freight-cost-rerouting-india">freight cost analysis</a>, <a href="/articles/eu-one-market-strategy-steel-competitiveness-2026">EU strategy assessment</a>, and use our <a href="/calculator">Weight Calculator</a> for production planning.</p>
 `,
   },
+  {
+    slug: "moil-manganese-ore-price-hike-april-2026-steel-impact",
+    title:
+      "MOIL\u2019s Sharpest Manganese Ore Price Hike in Two Years \u2014 What It Signals for Indian Steel Economics",
+    category: "ANALYSIS",
+    categoryColor: "blue",
+    date: "2026-04-08",
+    readTime: "9 min",
+    excerpt:
+      "MOIL raises manganese ore prices 15\u201317.5% from April 6, 2026 \u2014 the steepest revision in nearly two years. Full impact analysis for ferroalloy producers, steelmakers, and procurement teams.",
+    metaTitle:
+      "MOIL Manganese Ore Price Hike April 2026 \u2014 Steel Impact | SteelMath",
+    metaDescription:
+      "MOIL raises manganese ore prices 15\u201317.5% from April 6, 2026 \u2014 sharpest hike in 2 years. Full impact analysis for ferroalloy producers and steelmakers.",
+    relatedCalculators: ["calculator"],
+    content: `
+<div style="background:rgba(0,212,255,0.06);border:1px solid rgba(0,212,255,0.15);border-radius:12px;padding:1.5rem;margin-bottom:2rem;">
+<p style="color:rgba(0,212,255,0.9);font-weight:700;font-size:0.85rem;margin-bottom:0.75rem;letter-spacing:0.03em;">\ud83d\udcca MOIL PRICE REVISION SUMMARY \u2014 April 6, 2026</p>
+<pre style="color:rgba(255,255,255,0.6);font-size:0.8rem;line-height:1.8;margin:0;font-family:ui-monospace,monospace;">Ferro Grade (Mn \u226544%):      +15.0%
+Ferro Grade (Mn &lt;44%):      +17.5%
+SMGR (Mn 30% &amp; 25%):        +17.5%
+Fines Grades:                +17.5%
+Chemical Grades:             +17.5%
+EMD:                         Unchanged (\u20B91,80,000/MT)</pre>
+<p style="color:rgba(255,255,255,0.3);font-size:0.7rem;margin-top:0.75rem;margin-bottom:0;">Base: Rates prevailing since March 1, 2026 &middot; Effective: April 6, 2026 (immediate)</p>
+</div>
+
+<p>MOIL Limited, India\u2019s largest manganese ore producer with approximately 53% domestic market share, has increased prices across all grades of manganese ore with immediate effect from April 6, 2026. The increases \u2014 ranging from 15% to 17.5% \u2014 represent the steepest single revision by MOIL in nearly two years.</p>
+
+<p>This is not a routine quarterly adjustment. It\u2019s a market signal that the Hormuz crisis has breached yet another wall in the steel value chain, and procurement teams across India\u2019s ferroalloy and steel sector need to recalibrate their cost models immediately.</p>
+
+<h2>What Exactly Changed</h2>
+
+<p>MOIL has implemented a tiered pricing strategy, with higher percentage increases on lower-grade and speciality products. The structure reveals which segments of the market are under the most acute pressure.</p>
+
+<p>Ferro-grade manganese ore with manganese content of 44% and above \u2014 the premium grade used directly in steelmaking and high-grade ferroalloy production \u2014 has been increased by <strong>15%</strong>, applied over the base rates prevailing since March 1, 2026.</p>
+
+<p>All ferro grades with manganese content below 44% have seen a larger increase of <strong>17.5%</strong>. This differential is significant: it indicates that demand for mid-grade ore, often used by smaller ferroalloy smelters, is tightening faster than premium supply.</p>
+
+<p>Silico manganese grade raw (SMGR) with 30% and 25% manganese content, along with fines grades and all chemical grades, have also been raised by 17.5%.</p>
+
+<p>One notable exception: the price of Electrolytic Manganese Dioxide (EMD) remains unchanged at \u20B91,80,000 per metric tonne for April 2026. EMD is used primarily in battery applications and pharmaceuticals rather than steelmaking, and its stability suggests the demand-supply dynamics in that segment are fundamentally different from the metallurgical market.</p>
+
+<p>This revision follows a more modest 2% increase MOIL applied to select grades effective March 1, 2026. The leap from 2% to 15\u201317.5% within a single month underscores how rapidly global manganese markets have shifted.</p>
+
+<h2>Why Now: The 40% International Price Surge</h2>
+
+<p>The catalyst is straightforward. International manganese ore prices have surged approximately <strong>40%</strong> over the past month, driven primarily by supply chain disruptions linked to the ongoing <a href="/articles/hormuz-crisis-steel-impact-india">Hormuz crisis</a> and broader geopolitical instability in the Middle East.</p>
+
+<p>India imports a significant portion of its manganese ore requirements, particularly higher-grade material from South Africa, Australia, and Gabon. While India is a notable manganese producer itself \u2014 MOIL operates ten mines across Maharashtra and Madhya Pradesh \u2014 domestic production doesn\u2019t fully cover demand, especially for high-grade ferro and chemical specifications.</p>
+
+<p>The Hormuz-driven disruptions have compounded pre-existing fragilities in global manganese supply. The market was already sensitive entering 2026: the temporary shutdown of South32\u2019s Groote Eylandt mine in Australia in 2024, which accounted for roughly 15% of global high-grade supply, had demonstrated how quickly manganese prices could spike when concentrated supply sources falter. That episode saw 44% manganese oxide prices surge 22% in a single quarter.</p>
+
+<p>Now, with Middle East shipping lanes disrupted, freight costs elevated by 30\u201340%, and war risk insurance adding further premiums to seaborne cargoes, the cost of importing manganese ore into India has risen sharply. MOIL, as the domestic price setter, is aligning its pricing with the new global reality \u2014 but importantly, its 15\u201317.5% increase is still below the 40% international price surge, meaning domestic ore remains at a discount to imports. Indian buyers who can source from MOIL still have a cost advantage, but that advantage has narrowed considerably.</p>
+
+<h2>The Pricing Context: MOIL\u2019s Trajectory This Year</h2>
+
+<p>This hike didn\u2019t come from nowhere. Looking at MOIL\u2019s pricing actions across 2026 reveals an accelerating trend that maps directly onto the Hormuz crisis timeline.</p>
+
+<div style="background:rgba(255,255,255,0.03);border-radius:8px;padding:1.25rem;margin:1.5rem 0;">
+<p style="margin:0 0 0.5rem;"><strong>Jan 2026 (Quarterly):</strong> +3% on ferro grades \u2014 routine adjustment</p>
+<p style="margin:0 0 0.5rem;"><strong>Mar 1, 2026:</strong> +2% on select grades \u2014 measured response post-Hormuz</p>
+<p style="margin:0;"><strong>Apr 6, 2026:</strong> <span style="color:rgba(0,212,255,0.9);font-weight:700;">+15% to +17.5%</span> \u2014 structural repricing</p>
+</div>
+
+<p>The acceleration from 3% to 2% to 15\u201317.5% in the space of a single quarter is the data point that should command attention. MOIL doesn\u2019t move this aggressively without strong justification \u2014 as a Miniratna Category-I PSU under the Ministry of Steel, its pricing decisions carry policy weight and are disclosed under SEBI regulations.</p>
+
+<h2>Impact on India\u2019s Ferroalloy Producers</h2>
+
+<p>This is where the sharpest economic pain will be felt. India\u2019s ferroalloy sector \u2014 producers of ferro manganese, silico manganese, and related alloys \u2014 uses manganese ore as its primary feedstock. A 15\u201317.5% increase in ore prices translates almost directly into higher production costs.</p>
+
+<p>Silico manganese, which is used in virtually all steel production as a deoxidiser and alloying agent, is the most affected downstream product. The 17.5% increase on SMGR grades (Mn 30% and Mn 25%) directly raises the cost floor for silico manganese producers, who were already operating on compressed margins due to elevated power costs.</p>
+
+<p>The arithmetic is straightforward. Silico manganese production typically consumes 2.0\u20132.5 tonnes of manganese ore per tonne of alloy produced (varying by grade and process). A 17.5% increase on ore priced in the range of \u20B96,000\u201312,000 per MT (depending on grade) adds approximately <strong>\u20B92,000\u20135,000 per MT</strong> to the cost of producing one tonne of silico manganese.</p>
+
+<p>For ferro manganese producers, the economics are similar but with higher ore consumption ratios. The 15% increase on premium ferro-grade ore (Mn 44%+) is somewhat cushioned by the higher realisation prices for ferro manganese, but margins will still compress.</p>
+
+<p>The downstream consequence is inevitable: ferroalloy producers will push for price increases on their alloy sales to steelmakers. This means Indian steel mills face yet another layer of cost-push inflation on top of the energy, freight, and coking coal increases already working through the system from the Hormuz crisis.</p>
+
+<h2>Impact on Steel Production Costs</h2>
+
+<p>Manganese alloy consumption in steel production is relatively small on a per-tonne basis \u2014 typically 6\u201312 kg of manganese alloys per tonne of crude steel, depending on the grade being produced. However, at current elevated alloy prices, the cost contribution is not trivial.</p>
+
+<p>If silico manganese prices rise by \u20B93,000\u20135,000 per MT (passing through the ore price increase), and a steel mill consumes approximately 8\u201310 kg of silico manganese per tonne of steel, the direct cost increase to steel production is approximately <strong>\u20B925\u201350 per tonne of steel</strong>.</p>
+
+<p>In isolation, \u20B925\u201350 per tonne sounds modest. But this is additive to the approximately \u20B91,800\u20132,500 per tonne increase from energy costs, the approximately \u20B91,000\u20131,500 per tonne from coking coal, and \u20B9200\u2013500 from other consumables \u2014 all driven by the same underlying crisis. The MOIL hike is one more brick in a wall of cost inflation that makes further domestic <a href="/articles/steel-price-hike-tracker-march-2026">steel price hikes</a> increasingly likely.</p>
+
+<p>For steel procurement teams building cost models, the manganese input line item has moved from \u201cstable \u2014 low volatility\u201d to \u201cwatch closely \u2014 trending up.\u201d Update your models accordingly.</p>
+
+<div style="background:rgba(0,229,160,0.06);border:1px solid rgba(0,229,160,0.15);border-radius:12px;padding:1.5rem;margin:2rem 0;">
+<p style="color:rgba(0,229,160,0.9);font-weight:700;font-size:0.85rem;margin-bottom:0.5rem;">\ud83d\udcd0 MODEL THE IMPACT ON YOUR COSTS</p>
+<p style="color:rgba(255,255,255,0.5);font-size:0.8rem;margin-bottom:1rem;">Use SteelMath\u2019s Steel Weight Calculator to model production quantities, then combine with current input cost data to estimate your total production cost exposure from the manganese ore increase.</p>
+<a href="/calculator" style="display:inline-block;background:linear-gradient(135deg,#00d4ff,#00e5a0);color:#070e1b;padding:0.5rem 1.5rem;border-radius:8px;font-weight:700;font-size:0.8rem;text-decoration:none;">Try It Free \u2192</a>
+</div>
+
+<h2>The Bigger Picture: India\u2019s Raw Material Vulnerability</h2>
+
+<p>MOIL\u2019s hike is a case study in how global supply disruptions transmit through India\u2019s metallurgical value chain, even when the disrupted route (Hormuz) isn\u2019t the primary supply corridor for the specific commodity.</p>
+
+<p>India is the fifth-largest manganese ore producer globally, behind South Africa, Gabon, Australia, and China. MOIL alone produced 19.07 lakh MT (approximately 1.9 million tonnes) in FY2025-26 through March, and has announced ambitions to scale production to 3.5 million tonnes per annum by 2030.</p>
+
+<p>Yet domestic production doesn\u2019t fully satisfy domestic demand, particularly for higher grades. India imports manganese ore primarily from South Africa (which holds the world\u2019s largest reserves at 640 million tonnes) and Australia. These imports are now more expensive \u2014 not because the ore itself costs more at the mine gate, but because getting it to India costs more: elevated freight, higher insurance, longer transit times from rerouting, and currency depreciation. This mirrors the pattern we documented in our <a href="/articles/coking-coal-iron-ore-routes-open">analysis of raw material routes still open</a> for Indian steel buyers.</p>
+
+<p>The fact that MOIL can raise domestic prices by 15\u201317.5% and still remain competitive against imports tells you how dramatically the landed cost of imported ore has shifted. When the domestic monopoly producer is the cheaper option despite significant price increases, the global market has moved decisively against buyers.</p>
+
+<p>This also raises a strategic question for India\u2019s ferroalloy and steel industry: as the country targets 300 million tonnes per annum of steel capacity by 2030, how will manganese supply keep pace? MOIL\u2019s production targets of 3.5 MTPA by 2030 are necessary but may not be sufficient. The structural dependence on imports for high-grade material creates an ongoing vulnerability to the kind of supply shocks we\u2019re witnessing today.</p>
+
+<h2>What Should You Do Now</h2>
+
+<h3>If You\u2019re a Ferroalloy Producer</h3>
+<p>Your input costs just jumped. Don\u2019t absorb it \u2014 begin communicating price revisions to your steel mill customers immediately. The market understands cost-pass-through during a crisis, and delaying only erodes your margins. Use MOIL\u2019s official SEBI disclosure as supporting documentation in your pricing discussions.</p>
+
+<h3>If You\u2019re a Steel Mill Procurement Manager</h3>
+<p>Build the MOIL price increase into your alloy cost projections for Q1 FY27 (April\u2013June 2026). Your ferroalloy suppliers will be raising prices within the next 7\u201314 days. If you can lock in alloy purchases before those revisions hit, you gain a brief cost advantage. Refer to our detailed <a href="/articles/steel-production-cost-india-bf-bof-eaf-2026">steel production cost breakdown</a> for the full picture of how all inputs are moving simultaneously.</p>
+
+<h3>If You\u2019re a Steel Trader or Stockholder</h3>
+<p>This is another data point confirming the upward cost trajectory for Indian steel. Every major input \u2014 energy, coking coal, freight, and now manganese ore \u2014 is moving against producers simultaneously. The floor under domestic steel prices just got higher. Read our <a href="/articles/buy-steel-now-or-wait-hormuz-2026">buy now or wait framework</a> for guidance on procurement timing.</p>
+
+<h3>If You\u2019re Tracking the Hormuz Crisis Impact</h3>
+<p>Add manganese to your watchlist. It wasn\u2019t in most people\u2019s initial crisis impact assessments, which focused on oil, LNG, and coking coal. The 40% international price surge demonstrates how broadly the Hormuz disruption is radiating through commodity markets \u2014 even commodities that don\u2019t transit the Strait directly are affected through freight market tightness and general supply chain stress.</p>
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>How much has MOIL increased manganese ore prices in April 2026?</h3>
+<p>MOIL has increased ferro-grade manganese ore (Mn 44% and above) by 15%, and all other grades including ferro grades below 44% Mn, SMGR (Mn 30% and 25%), fines, and chemical grades by 17.5%. The increases are effective from April 6, 2026, applied over base rates prevailing since March 1, 2026. EMD prices remain unchanged at \u20B91,80,000 per MT.</p>
+
+<h3>Why did MOIL raise manganese ore prices so sharply?</h3>
+<p>International manganese ore prices have surged approximately 40% over the past month due to supply disruptions linked to the Hormuz crisis and geopolitical tensions in the Middle East. Higher freight costs, war risk insurance premiums, and general supply chain stress have significantly increased the landed cost of imported manganese ore into India, prompting MOIL to align domestic pricing upward.</p>
+
+<h3>How does the MOIL price hike affect steel production costs?</h3>
+<p>The increase adds approximately \u20B92,000\u20135,000 per MT to ferroalloy production costs (particularly silico manganese). For steelmakers consuming 8\u201310 kg of silico manganese per tonne of steel, the downstream impact is approximately \u20B925\u201350 per tonne of crude steel. This is additive to existing cost pressures from energy, coking coal, and freight.</p>
+
+<h3>What is MOIL\u2019s market share in India\u2019s manganese ore production?</h3>
+<p>MOIL holds approximately 53% of India\u2019s domestic manganese ore production. It is a Miniratna Category-I PSU under the Ministry of Steel, operates ten mines across Maharashtra and Madhya Pradesh, and is the country\u2019s only manufacturer of Electrolytic Manganese Dioxide (EMD). MOIL produced 19.07 lakh MT of manganese ore in FY2025-26 through March 2026.</p>
+
+<h3>Will manganese ore prices continue to rise?</h3>
+<p>This depends primarily on the duration and resolution of the Hormuz crisis. If geopolitical tensions persist and global supply chains remain disrupted, further increases are possible. MOIL\u2019s pricing trajectory in 2026 \u2014 from 3% in January to 15\u201317.5% in April \u2014 suggests the company expects the elevated price environment to persist in the near term.</p>
+
+<h2>Data Sources &amp; Verification</h2>
+
+<ul>
+<li>MOIL Limited SEBI disclosure under Regulation 30 (LODR), dated April 1 and April 6, 2026</li>
+<li>SteelOrbis India market report, April 6, 2026</li>
+<li>MOIL investor disclosures via NSE/BSE (MOIL: NSE, 533286: BSE)</li>
+<li>MOIL March 1, 2026 price revision: 2% increase on select ferro and SMGR grades</li>
+<li>MOIL January 2026 quarterly revision: 3% increase on ferro grades; EMD reduced to \u20B91,90,000/MT</li>
+<li>MOIL FY26 production: 19.07 lakh MT cumulative through March 2026; March single-month production 1.64 lakh MT</li>
+<li>MOIL market share: approximately 53% of India\u2019s domestic manganese ore production</li>
+<li>MOIL 2030 production target: 3.5 million tonnes per annum</li>
+<li>South Africa manganese reserves: 640 million tonnes (SFA Oxford)</li>
+<li>Groote Eylandt disruption (2024): 15% global high-grade supply impact, 22% price surge (SFA Oxford)</li>
+</ul>
+
+<p><em>Prices are indicative and based on publicly available market intelligence. Actual transaction prices may vary. Verify with your supplier before making procurement decisions. SteelMath is not a licensed price reporting agency.</em></p>
+
+<p><strong>Related on SteelMath:</strong> <a href="/articles/hormuz-crisis-steel-impact-india">Hormuz Crisis Impact on Indian Steel</a> &middot; <a href="/articles/steel-production-cost-india-bf-bof-eaf-2026">Steel Production Cost Breakdown 2026</a> &middot; <a href="/articles/steel-price-hike-tracker-march-2026">Steel Price Hike Tracker</a> &middot; <a href="/calculator">Steel Weight Calculator</a></p>
+`,
+  },
 ];
 
 /** Articles sorted by date, most recent first */
