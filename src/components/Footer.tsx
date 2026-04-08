@@ -109,6 +109,12 @@ export default function Footer() {
             >
               Mill Price Circular Guide
             </Link>
+            <Link
+              href="/articles/india-steel-demand-story-not-china-2026"
+              className="text-white/20 hover:text-white/40 text-[11px] no-underline transition-colors"
+            >
+              India Steel Demand Story
+            </Link>
           </div>
         </div>
 
