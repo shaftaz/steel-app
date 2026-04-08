@@ -10,11 +10,11 @@ export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: {
     default:
-      "SteelMath — Free Steel Weight Calculator, Industry Analysis & Guides for India",
+      "SteelMath — Free Steel Weight Calculator, Industry Analysis & Guides",
     template: "%s | SteelMath",
   },
   description:
-    "Free online steel weight calculator for TMT bar, plate, pipe, angle, channel & beam. Expert analysis on Hormuz crisis, safeguard duty, CBAM, GST on steel & more. Built for Indian steel professionals.",
+    "Free online steel weight calculator for TMT bar, plate, pipe, angle, channel & beam. Expert analysis on Hormuz crisis, safeguard duty, CBAM, GST on steel & more. Built for steel professionals worldwide.",
   keywords: [
     "steel weight calculator",
     "steel weight calculator india",
@@ -119,6 +119,45 @@ export const metadata: Metadata = {
     "EPC steel pipe India",
     "Tata Metaliks DI pipe",
     "Welspun Corp pipes",
+    "Jal Jeevan Mission steel pipe demand",
+    "JJM 2.0 steel demand",
+    "water infrastructure steel india 2026",
+    "DI pipe demand india 2026",
+    "MS ERW pipe demand india",
+    "jal jeevan mission extension 2028",
+    "rural water supply steel demand",
+    "pipe market india 2026",
+    "india infrastructure steel demand 2030",
+    "port expansion steel demand",
+    "renewable energy steel consumption",
+    "airport construction steel",
+    "india capex plan steel consumption",
+    "galvanised steel demand solar",
+    "structural steel demand infrastructure",
+    "telecom tower steel demand india",
+    "5G tower steel requirement",
+    "galvanised steel telecom tower",
+    "tower fabrication steel",
+    "digital infrastructure steel demand",
+    "BSNL tower programme steel",
+    "Iran steel capacity destroyed 2026",
+    "Hormuz ceasefire steel market",
+    "Jaisalmer limestone steel mills",
+    "RSMM limestone steel supply 2026",
+    "Gulf limestone imports stranded Hormuz",
+    "limestone flux blast furnace India",
+    "SAIL limestone UAE imports",
+    "Stevin Rock limestone India",
+    "domestic limestone steel India cost",
+    "limestone price India 2026",
+    "EGA Al Taweelah damage 2026",
+    "aluminium shortage GCC 2026",
+    "Iranian strikes UAE steel aluminium",
+    "Gulf construction material crisis",
+    "India steel export GCC opportunity",
+    "Alba Bahrain shutdown",
+    "aluminium supply disruption 2026",
+    "GCC industrial infrastructure war",
   ],
   authors: [{ name: "Special Correspondent", url: BASE_URL }],
   creator: "MetalX",
@@ -126,11 +165,11 @@ export const metadata: Metadata = {
   formatDetection: { telephone: true, email: true },
   openGraph: {
     type: "website",
-    locale: "en_IN",
+    locale: "en_US",
     url: BASE_URL,
     siteName: "SteelMath",
     title:
-      "SteelMath — Free Steel Weight Calculator & Industry Analysis India",
+      "SteelMath — Free Steel Weight Calculator & Industry Analysis",
     description:
       "Free steel weight calculator for TMT bar, pipe, plate, angle & beam. Expert industry analysis, weight charts & guides for steel professionals.",
     images: [
@@ -138,13 +177,13 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "SteelMath — Steel Calculator & Market Intelligence for India",
+        alt: "SteelMath — Steel Calculator & Market Intelligence",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "SteelMath — Steel Weight Calculator & Industry Analysis India",
+    title: "SteelMath — Steel Weight Calculator & Industry Analysis",
     description:
       "Free steel weight calculator. Expert industry analysis and weight charts. Built for steel professionals.",
     images: ["/og-image.png"],
@@ -181,7 +220,7 @@ export default function RootLayout({
     url: BASE_URL,
     logo: `${BASE_URL}/logo.png`,
     description:
-      "Free steel calculators, weight charts, and expert analysis for Indian steel professionals.",
+      "Free steel calculators, weight charts, and expert analysis for steel professionals.",
     sameAs: [],
   };
 
@@ -191,7 +230,7 @@ export default function RootLayout({
     name: "SteelMath",
     url: BASE_URL,
     description:
-      "Steel weight calculator, industry analysis, and expert guides for Indian steel professionals.",
+      "Steel weight calculator, industry analysis, and expert guides for steel professionals.",
     potentialAction: {
       "@type": "SearchAction",
       target: {

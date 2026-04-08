@@ -7,25 +7,25 @@ export const metadata: Metadata = {
   title:
     "Steel Industry Insights, Analysis & Guides — Hormuz Crisis, Pricing, Calculators",
   description:
-    "Expert analysis on Indian steel pricing, Hormuz crisis impact, safeguard duty, CBAM, TMT bar weight charts, MS pipe weight formula, steel plate calculator, GST on steel, and mill price circulars. Data-driven insights for steel professionals.",
+    "Expert analysis on steel pricing, Hormuz crisis impact, safeguard duty, CBAM, TMT bar weight charts, MS pipe weight formula, steel plate calculator, GST on steel, and mill price circulars. Data-driven insights for steel professionals.",
   keywords: [
-    "steel industry analysis india",
+    "steel industry analysis",
     "steel price analysis",
     "hormuz crisis steel",
     "steel weight chart",
     "tmt bar weight chart",
-    "steel import duty india",
-    "CBAM steel india",
+    "steel import duty",
+    "CBAM steel",
     "steel production cost",
     "gst on steel",
     "mill price circular",
-    "steel guides india",
+    "steel guides",
   ],
   alternates: { canonical: "https://steelmath.com/articles" },
   openGraph: {
     title: "Steel Industry Insights & Analysis | SteelMath",
     description:
-      "Expert analysis on steel pricing, supply chain disruptions, freight costs, and industry guides. Data-driven insights for Indian steel professionals.",
+      "Expert analysis on steel pricing, supply chain disruptions, freight costs, and industry guides. Data-driven insights for steel professionals.",
     url: "https://steelmath.com/articles",
     type: "website",
   },
@@ -42,7 +42,7 @@ export default function ArticlesPage() {
     "@type": "CollectionPage",
     name: "Steel Industry Insights & Analysis",
     description:
-      "Expert analysis on Indian steel pricing, market trends, and industry guides.",
+      "Expert analysis on steel pricing, market trends, and industry guides.",
     url: "https://steelmath.com/articles",
     mainEntity: {
       "@type": "ItemList",
@@ -106,7 +106,7 @@ export default function ArticlesPage() {
             Insights &amp; Reports
           </h1>
           <p className="text-white/30 text-sm">
-            Data-driven analysis for Indian steel professionals — pricing, supply chains, calculators &amp; guides
+            Data-driven analysis for steel professionals — pricing, supply chains, calculators &amp; guides
           </p>
         </div>
 

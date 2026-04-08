@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     title:
       "Free Steel Calculators — Weight, TMT Bar, Plate, Pipe & More | SteelMath",
     description:
-      "All-in-one steel calculator hub. Calculate weight for TMT bar, plate, pipe, angle, channel & beam instantly. Free, accurate, built for Indian construction.",
+      "All-in-one steel calculator hub. Calculate weight for TMT bar, plate, pipe, angle, channel & beam instantly. Free, accurate, built for construction professionals.",
     url: "https://steelmath.com/calculators",
     type: "website",
   },
@@ -74,9 +74,9 @@ const FAQS = [
       "Mild steel (MS) and TMT rebar have a density of 7,850 kg/m\u00B3 (7.85 g/cm\u00B3). Stainless steel SS 304 is slightly heavier at 8,000 kg/m\u00B3, and SS 316 is 8,027 kg/m\u00B3. Aluminium is much lighter at 2,700 kg/m\u00B3. SteelMath calculators automatically apply the correct density for the selected grade.",
   },
   {
-    question: "Why are steel weight calculators important for Indian construction?",
+    question: "Why are steel weight calculators important for construction?",
     answer:
-      "Accurate weight calculation is critical for estimating material costs, verifying supplier invoices, designing structural members, and planning transport logistics. In India, steel is typically purchased by weight (per kg or per tonne), so even small errors in calculation can lead to significant cost differences on large projects.",
+      "Accurate weight calculation is critical for estimating material costs, verifying supplier invoices, designing structural members, and planning transport logistics. Steel is typically purchased by weight (per kg or per tonne), so even small errors in calculation can lead to significant cost differences on large projects.",
   },
 ];
 
@@ -211,7 +211,7 @@ export default function CalculatorsPage() {
               accurate weight in kilograms or tonnes — instantly.
             </p>
             <p>
-              In Indian construction and fabrication, steel is bought and sold by
+              In construction and fabrication, steel is bought and sold by
               weight. A contractor estimating a residential slab needs to know
               the total TMT rebar weight to generate a Bill of Quantities. A
               fabricator cutting steel plates for a tank must calculate plate

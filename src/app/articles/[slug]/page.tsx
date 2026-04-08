@@ -61,6 +61,26 @@ function getRelatedArticles(currentSlug: string) {
   return [...sameCategory, ...otherCategory].slice(0, 3);
 }
 
+function extractFaqs(html: string): { question: string; answer: string }[] {
+  const faqSection = html.match(
+    /<h2>Frequently Asked Questions<\/h2>([\s\S]*?)(?=<h2>|$)/i
+  );
+  if (!faqSection) return [];
+  const faqs: { question: string; answer: string }[] = [];
+  const qaPairs = faqSection[1].matchAll(
+    /<h3>([^<]+)<\/h3>\s*<p>([\s\S]*?)(?=<h3>|$)/gi
+  );
+  for (const match of qaPairs) {
+    const question = match[1].trim();
+    const answer = match[2]
+      .replace(/<[^>]*>/g, "")
+      .replace(/\s+/g, " ")
+      .trim();
+    if (question && answer) faqs.push({ question, answer });
+  }
+  return faqs;
+}
+
 export default async function ArticlePage({ params }: PageProps) {
   const { slug } = await params;
   const article = getArticleBySlug(slug);
@@ -68,6 +88,7 @@ export default async function ArticlePage({ params }: PageProps) {
 
   const style = CATEGORY_STYLES[article.category];
   const related = getRelatedArticles(slug);
+  const faqs = extractFaqs(article.content);
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -135,6 +156,25 @@ export default async function ArticlePage({ params }: PageProps) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
+      {faqs.length > 0 && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              mainEntity: faqs.map((faq) => ({
+                "@type": "Question",
+                name: faq.question,
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: faq.answer,
+                },
+              })),
+            }),
+          }}
+        />
+      )}
       <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-5 py-5">
         {/* Breadcrumb navigation */}
         <nav

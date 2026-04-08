@@ -37,7 +37,7 @@ export default function ConsultingSection() {
 
             <div className="space-y-3 mt-4">
               {[
-                { icon: "📦", title: "Material Sourcing", desc: "Pan-India supplier network across 50+ cities" },
+                { icon: "📦", title: "Material Sourcing", desc: "Global supplier network across 50+ cities" },
                 { icon: "📊", title: "Cost Optimization", desc: "Reduce procurement costs by 8-15% on average" },
                 { icon: "🔬", title: "Grade Selection", desc: "Application-specific material recommendations" },
                 { icon: "🚚", title: "Logistics Advisory", desc: "Freight optimization & delivery scheduling" },

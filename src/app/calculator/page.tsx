@@ -163,7 +163,7 @@ export default function CalculatorPage() {
         name: "How much does a 12mm TMT bar weigh?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "A 12mm TMT bar weighs 0.889 kg per metre. A standard 12-metre length bar weighs approximately 10.67 kg. This is calculated using the formula: 12² ÷ 162.2 = 0.889 kg/m. For Fe500/Fe500D grade TMT bars commonly used in Indian construction, the weight remains the same as the grade affects strength, not density.",
+          text: "A 12mm TMT bar weighs 0.889 kg per metre. A standard 12-metre length bar weighs approximately 10.67 kg. This is calculated using the formula: 12² ÷ 162.2 = 0.889 kg/m. For Fe500/Fe500D grade TMT bars commonly used in construction, the weight remains the same as the grade affects strength, not density.",
         },
       },
       {
@@ -456,7 +456,7 @@ export default function CalculatorPage() {
               </p>
               <h3 className="text-white/60 font-semibold text-sm">Round Bar &amp; TMT Rebar: d&sup2;/162 Formula</h3>
               <p>
-                The most commonly used formula in Indian construction is <strong className="text-white/60">d&sup2; &divide; 162.2</strong>, where d is the bar diameter in mm. This gives weight in kg per metre. For example, a 16mm TMT bar: 16&sup2; &divide; 162.2 = <strong className="text-white/60">1.580 kg/m</strong>. A standard 12-metre bar weighs 18.96 kg. This formula is derived from the circular cross-section area (&pi;d&sup2;/4) multiplied by the density of steel.
+                The most commonly used formula in steel construction is <strong className="text-white/60">d&sup2; &divide; 162.2</strong>, where d is the bar diameter in mm. This gives weight in kg per metre. For example, a 16mm TMT bar: 16&sup2; &divide; 162.2 = <strong className="text-white/60">1.580 kg/m</strong>. A standard 12-metre bar weighs 18.96 kg. This formula is derived from the circular cross-section area (&pi;d&sup2;/4) multiplied by the density of steel.
               </p>
               <h3 className="text-white/60 font-semibold text-sm">Steel Plate &amp; Sheet</h3>
               <p>
