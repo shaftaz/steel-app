@@ -59,11 +59,28 @@ export default function Home() {
   const analysis = articlesByDate.filter((a) => a.category === "ANALYSIS");
   const crisis = articlesByDate.filter((a) => a.category === "CRISIS");
 
+  const breadcrumbLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://steelmath.com",
+      },
+    ],
+  };
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
       />
       <div className="relative z-10 max-w-[1400px] mx-auto px-4 sm:px-5 py-5 space-y-8">
 

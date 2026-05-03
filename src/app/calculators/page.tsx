@@ -55,6 +55,41 @@ const CALCULATORS = [
       "Calculate MS plate weight by length, width & thickness.",
     tag: "Plate / Sheet",
   },
+  {
+    href: "/calculators/metal-weight",
+    title: "Metal Weight Calculator",
+    description:
+      "Weight for 14 metals: steel, aluminium, copper, brass, titanium & more. 6 shapes.",
+    tag: "Multi-Metal",
+  },
+  {
+    href: "/calculators/gauge-to-mm",
+    title: "Gauge to MM Converter",
+    description:
+      "Convert sheet metal gauge (7\u201330) to mm, inches & weight per m\u00B2.",
+    tag: "Sheet Metal",
+  },
+  {
+    href: "/calculators/hardness-conversion",
+    title: "Hardness Conversion Calculator",
+    description:
+      "Convert between Brinell, Rockwell C/B, Vickers & tensile strength.",
+    tag: "Hardness",
+  },
+  {
+    href: "/calculators/credit-cost",
+    title: "Credit Cost Calculator",
+    description:
+      "Calculate true cost of buying steel on credit including interest charges.",
+    tag: "Finance",
+  },
+  {
+    href: "/calculators/rebar",
+    title: "Rebar Calculator",
+    description:
+      "Calculate rebar weight, number of bars & tonnes for TMT 6mm\u201340mm.",
+    tag: "Rebar / BBS",
+  },
 ];
 
 const FAQS = [

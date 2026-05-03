@@ -470,6 +470,184 @@ export default function CalculatorPage() {
           </div>
         </section>
 
+        {/* Comprehensive Steel Weight Guide — SEO content expansion */}
+        <section className="mt-8">
+          <div className="glass-panel p-6 sm:p-8">
+            <h2 className="text-white font-bold text-lg mb-4">
+              Complete Guide to Steel Weight Calculation
+            </h2>
+            <div className="space-y-5 text-white/40 text-sm leading-relaxed">
+              <p>
+                Accurate steel weight calculation is fundamental to every stage of the construction and manufacturing supply chain.
+                From initial project estimation to final invoice verification, knowing the exact weight of steel sections determines
+                material costs, transport logistics, crane capacities, and structural load calculations. This comprehensive guide
+                covers every formula, material grade, and section type used in modern steel construction.
+              </p>
+
+              <h3 className="text-white/60 font-semibold text-sm">Why Steel Weight Calculation Matters</h3>
+              <p>
+                Steel is purchased by weight — typically per kilogram or per metric tonne. Even a 2% error in weight estimation
+                on a 500-tonne project translates to 10 tonnes of material, which at current market rates can represent a significant
+                financial difference. Accurate weight calculations are critical for:
+              </p>
+              <ul className="list-disc list-inside space-y-1 text-white/35">
+                <li><strong className="text-white/50">Cost Estimation:</strong> Bill of Quantities (BOQ) and tender pricing depend on precise weight figures</li>
+                <li><strong className="text-white/50">Invoice Verification:</strong> Cross-checking supplier invoices against theoretical weight prevents overpayment</li>
+                <li><strong className="text-white/50">Transport Planning:</strong> Truck load limits (typically 20–25 tonnes) require accurate weight to optimise logistics</li>
+                <li><strong className="text-white/50">Structural Design:</strong> Dead load calculations for beams, columns, and foundations use section weights</li>
+                <li><strong className="text-white/50">Crane Selection:</strong> Lifting plans require exact piece weights for safe rigging</li>
+              </ul>
+
+              <h3 className="text-white/60 font-semibold text-sm">Steel Weight Formulas by Section Type</h3>
+
+              <h4 className="text-white/50 font-medium text-sm">1. Round Bar &amp; TMT Rebar (d&sup2;/162.2)</h4>
+              <p>
+                The d&sup2;/162.2 formula is the most widely used steel weight formula globally. It calculates the weight per metre
+                of any round steel bar — including TMT rebar, bright bar, and round sections. The formula is derived as follows:
+              </p>
+              <p className="text-white/50 font-mono text-xs bg-white/[0.03] p-3 rounded-lg">
+                Cross-section area = &pi;/4 &times; d&sup2; mm&sup2;<br />
+                Volume per metre = &pi;/4 &times; d&sup2; &times; 1000 mm&sup3;<br />
+                Weight per metre = Volume &times; Density = &pi;/4 &times; d&sup2; &times; 1000 &times; 7.85 &times; 10&sup6; kg<br />
+                Simplifies to: d&sup2; &divide; 162.2 kg/m
+              </p>
+              <p>
+                The constant 162.2 comes from: 4 &times; 10&sup6; &divide; (&pi; &times; 1000 &times; 7850) = 162.19. In practice,
+                162 is sometimes used as a rough approximation, but 162.2 gives results accurate to &lt;0.1%.
+                Common examples: 8mm TMT = 0.395 kg/m, 12mm = 0.889 kg/m, 16mm = 1.580 kg/m, 20mm = 2.469 kg/m,
+                25mm = 3.858 kg/m, 32mm = 6.316 kg/m.
+              </p>
+
+              <h4 className="text-white/50 font-medium text-sm">2. Steel Plate &amp; Sheet (L &times; W &times; T &times; 7.85)</h4>
+              <p>
+                Flat products — MS plates, HR sheets, chequered plates, and galvanised sheets — use the rectangular volume formula.
+                With all dimensions in millimetres: <strong className="text-white/50">Weight (kg) = L &times; W &times; T &times; 7.85 &divide; 1,000,000</strong>.
+                The shortcut for quick estimation is: <strong className="text-white/50">Thickness (mm) &times; 7.85 = weight per m&sup2;</strong>.
+                For example, a 10mm plate weighs 78.5 kg/m&sup2;. A standard 2500 &times; 1250 mm plate at 10mm thickness weighs
+                78.5 &times; 3.125 = 245.3 kg.
+              </p>
+
+              <h4 className="text-white/50 font-medium text-sm">3. MS Pipe &amp; Hollow Sections</h4>
+              <p>
+                For round pipes and tubes: <strong className="text-white/50">Weight (kg/m) = (OD &minus; WT) &times; WT &times; 0.02466</strong>,
+                where OD is outer diameter and WT is wall thickness in mm. The constant 0.02466 = &pi; &times; 7850 &divide; 10&sup6;.
+                For square and rectangular hollow sections (SHS/RHS), the formula adapts to:
+                <strong className="text-white/50"> Weight (kg/m) = (Perimeter &minus; 4 &times; WT) &times; WT &times; 0.00785</strong>.
+              </p>
+
+              <h4 className="text-white/50 font-medium text-sm">4. Angle Section (Equal &amp; Unequal)</h4>
+              <p>
+                Steel angles use: <strong className="text-white/50">Weight (kg/m) = (A + B &minus; T) &times; T &times; 0.00785</strong>,
+                where A and B are the leg lengths and T is the thickness, all in mm. For equal angles (e.g., 50 &times; 50 &times; 5mm),
+                A = B = 50 and T = 5, giving (50 + 50 &minus; 5) &times; 5 &times; 0.00785 = 3.73 kg/m.
+              </p>
+
+              <h4 className="text-white/50 font-medium text-sm">5. Channel Section (ISMC / ISLC)</h4>
+              <p>
+                Channel weight is best looked up from standard IS tables (IS 808) as the formula depends on exact fillet radii
+                and web/flange dimensions. As an approximation:
+                <strong className="text-white/50"> Weight &asymp; (2 &times; Flange + Web &minus; 2T) &times; T &times; 0.00785</strong>.
+                Common sizes: ISMC 75 = 6.8 kg/m, ISMC 100 = 9.56 kg/m, ISMC 150 = 16.4 kg/m, ISMC 200 = 22.2 kg/m.
+              </p>
+
+              <h4 className="text-white/50 font-medium text-sm">6. I-Beam / H-Beam (ISMB / ISHB)</h4>
+              <p>
+                Like channels, I-beam weights are standardised per IS 808 and should be referenced from tables.
+                Approximate formula: <strong className="text-white/50">Weight &asymp; (2 &times; B &times; tf + (H &minus; 2tf) &times; tw) &times; 0.00785</strong>,
+                where B = flange width, H = overall depth, tf = flange thickness, tw = web thickness.
+                Common sizes: ISMB 100 = 11.5 kg/m, ISMB 150 = 14.9 kg/m, ISMB 200 = 25.4 kg/m, ISMB 300 = 44.2 kg/m.
+              </p>
+
+              <h3 className="text-white/60 font-semibold text-sm">Material Grades &amp; Density Factors</h3>
+              <p>
+                Not all steel is the same density. While mild steel (MS) and carbon steel share a density of 7,850 kg/m&sup3;,
+                other materials differ significantly:
+              </p>
+              <ul className="list-disc list-inside space-y-1 text-white/35">
+                <li><strong className="text-white/50">Mild Steel / Carbon Steel:</strong> 7,850 kg/m&sup3; (factor 1.000) — the baseline for all formulas</li>
+                <li><strong className="text-white/50">Stainless Steel SS304:</strong> 8,000 kg/m&sup3; (factor 1.019) — approximately 2% heavier</li>
+                <li><strong className="text-white/50">Stainless Steel SS316:</strong> 8,027 kg/m&sup3; (factor 1.023) — slightly heavier than SS304 due to molybdenum</li>
+                <li><strong className="text-white/50">Aluminium:</strong> 2,700 kg/m&sup3; (factor 0.344) — roughly one-third the weight of steel</li>
+                <li><strong className="text-white/50">Copper:</strong> 8,940 kg/m&sup3; (factor 1.139) — approximately 14% heavier than steel</li>
+                <li><strong className="text-white/50">Brass:</strong> 8,500 kg/m&sup3; (factor 1.083) — heavier than steel, lighter than copper</li>
+                <li><strong className="text-white/50">Cast Iron:</strong> 7,200 kg/m&sup3; (factor 0.917) — slightly lighter than steel</li>
+              </ul>
+              <p>
+                To convert any mild steel weight to another material, multiply by the density factor. For example,
+                if a round bar weighs 3.858 kg/m in MS, the same bar in aluminium weighs 3.858 &times; 0.344 = 1.327 kg/m.
+              </p>
+
+              <h3 className="text-white/60 font-semibold text-sm">TMT Bar Grades: Fe500, Fe500D, Fe550D</h3>
+              <p>
+                TMT (Thermo-Mechanically Treated) bars come in several grades defined by IS 1786. The grade number
+                indicates the minimum yield strength in MPa. Common grades include:
+              </p>
+              <ul className="list-disc list-inside space-y-1 text-white/35">
+                <li><strong className="text-white/50">Fe415:</strong> 415 MPa yield — used in light residential construction</li>
+                <li><strong className="text-white/50">Fe500:</strong> 500 MPa yield — the most widely used grade for general construction</li>
+                <li><strong className="text-white/50">Fe500D:</strong> 500 MPa yield with superior ductility — preferred for earthquake-prone zones</li>
+                <li><strong className="text-white/50">Fe550:</strong> 550 MPa yield — used in high-rise buildings and heavy structures</li>
+                <li><strong className="text-white/50">Fe600:</strong> 600 MPa yield — for specialised applications requiring maximum strength</li>
+              </ul>
+              <p>
+                Importantly, <strong className="text-white/50">the grade does not affect weight</strong>. All TMT grades use the same base
+                steel density of 7,850 kg/m&sup3;. A 12mm Fe500 bar weighs exactly the same as a 12mm Fe550D bar — 0.889 kg/m.
+                The grade only affects mechanical properties (yield strength, elongation, UTS) and the cost per kg.
+              </p>
+
+              <h3 className="text-white/60 font-semibold text-sm">Theoretical vs Actual Weight</h3>
+              <p>
+                All calculator results show <strong className="text-white/50">theoretical weight</strong> based on nominal dimensions
+                and standard density. Actual weight may differ by &plusmn;2–5% due to:
+              </p>
+              <ul className="list-disc list-inside space-y-1 text-white/35">
+                <li><strong className="text-white/50">Manufacturing tolerances:</strong> IS standards allow diameter tolerances of &plusmn;0.5mm for TMT bars, which affects weight proportionally</li>
+                <li><strong className="text-white/50">Rib/deformation weight:</strong> TMT bars have surface ribs that add 3–5% to the smooth-bar theoretical weight</li>
+                <li><strong className="text-white/50">Section tolerances:</strong> Hot-rolled sections (angles, channels, beams) have rolling tolerances on all dimensions</li>
+                <li><strong className="text-white/50">Coating weight:</strong> Galvanised, painted, or epoxy-coated sections weigh more than bare steel</li>
+              </ul>
+              <p>
+                For commercial transactions, IS 1786 specifies that TMT bars should have a mass tolerance of &plusmn;5% for
+                individual bars (diameter &le;10mm) and &plusmn;3% (diameter &gt;10mm). For invoicing purposes, theoretical weight
+                is typically accepted unless the buyer and seller agree on actual (weigh-bridge) weight.
+              </p>
+
+              <h3 className="text-white/60 font-semibold text-sm">Common Applications by Section Type</h3>
+              <p>
+                Different steel sections serve different structural and construction purposes:
+              </p>
+              <ul className="list-disc list-inside space-y-1 text-white/35">
+                <li><strong className="text-white/50">TMT Rebar (6–40mm):</strong> Reinforced concrete — foundations, columns, beams, slabs, retaining walls</li>
+                <li><strong className="text-white/50">MS Plate (2–100mm):</strong> Base plates, gusset plates, tank fabrication, ship building, pressure vessels</li>
+                <li><strong className="text-white/50">HR Sheet (0.5–12mm):</strong> Automotive panels, roofing, general fabrication, cold forming</li>
+                <li><strong className="text-white/50">MS Pipe (NB 15–600mm):</strong> Water supply, gas distribution, structural columns, scaffolding, hand rails</li>
+                <li><strong className="text-white/50">Angle (20–200mm):</strong> Trusses, transmission towers, frames, brackets, lintels</li>
+                <li><strong className="text-white/50">Channel (ISMC 75–400):</strong> Purlins, door/window frames, conveyor structures, staircase stringers</li>
+                <li><strong className="text-white/50">I-Beam (ISMB 100–600):</strong> Main structural beams, crane girders, bridge sections, portal frames</li>
+                <li><strong className="text-white/50">Flat Bar (20–200mm):</strong> Earthing strips, grating, bracing, decorative work</li>
+              </ul>
+
+              <h3 className="text-white/60 font-semibold text-sm">Steel Weight Estimation for Construction Projects</h3>
+              <p>
+                For preliminary estimation before detailed design, engineers use thumb rules to estimate reinforcement steel requirements:
+              </p>
+              <ul className="list-disc list-inside space-y-1 text-white/35">
+                <li><strong className="text-white/50">Residential buildings:</strong> 4–6 kg of rebar per square foot of built-up area (typical for 2–4 storey construction)</li>
+                <li><strong className="text-white/50">Commercial buildings:</strong> 6–8 kg per square foot (higher due to larger spans and heavier loads)</li>
+                <li><strong className="text-white/50">Industrial sheds:</strong> 25–35 kg of structural steel per square metre of covered area</li>
+                <li><strong className="text-white/50">Footings:</strong> 50–80 kg of rebar per cubic metre of concrete</li>
+                <li><strong className="text-white/50">Columns:</strong> 100–150 kg of rebar per cubic metre of concrete</li>
+                <li><strong className="text-white/50">Beams:</strong> 120–180 kg of rebar per cubic metre of concrete</li>
+                <li><strong className="text-white/50">Slabs:</strong> 60–100 kg of rebar per cubic metre of concrete</li>
+              </ul>
+              <p>
+                These are rough estimates for initial budgeting. Actual quantities must be derived from structural drawings
+                and the Bar Bending Schedule (BBS) prepared by the structural engineer.
+              </p>
+            </div>
+          </div>
+        </section>
+
         {/* FAQ Section — visible on page for users */}
         <section className="mt-6">
           <div className="glass-panel p-6 sm:p-8">
@@ -486,13 +664,13 @@ export default function CalculatorPage() {
               <div>
                 <h3 className="text-white/60 font-semibold text-sm mb-1">What is the d&sup2;/162 formula?</h3>
                 <p className="text-white/35 text-sm leading-relaxed">
-                  The d&sup2;/162 formula (precisely d&sup2;/162.2) calculates TMT bar or round bar weight per metre. Square the diameter in mm, divide by 162.2, and you get kg/m. Example: 12mm bar = 144 &divide; 162.2 = 0.889 kg/m.
+                  The d&sup2;/162 formula (precisely d&sup2;/162.2) calculates TMT bar or round bar weight per metre. Square the diameter in mm, divide by 162.2, and you get kg/m. Example: 12mm bar = 144 &divide; 162.2 = 0.889 kg/m. The constant 162.2 is derived from 4 &times; 10&sup6; &divide; (&pi; &times; 1000 &times; 7850).
                 </p>
               </div>
               <div>
                 <h3 className="text-white/60 font-semibold text-sm mb-1">How much does a 12mm TMT bar weigh?</h3>
                 <p className="text-white/35 text-sm leading-relaxed">
-                  A 12mm TMT bar weighs 0.889 kg per metre. A standard 12-metre bar weighs approximately 10.67 kg. This applies to all grades (Fe500, Fe500D) as the grade affects strength, not weight.
+                  A 12mm TMT bar weighs 0.889 kg per metre. A standard 12-metre bar weighs approximately 10.67 kg. This applies to all grades (Fe500, Fe500D, Fe550D) as the grade affects strength, not weight.
                 </p>
               </div>
               <div>
@@ -507,6 +685,49 @@ export default function CalculatorPage() {
                   Multiply Length &times; Width &times; Thickness (all in mm), then multiply by 7.85 and divide by 1,000,000. Quick shortcut: thickness in mm &times; 7.85 gives you weight per square metre in kg.
                 </p>
               </div>
+              <div>
+                <h3 className="text-white/60 font-semibold text-sm mb-1">What is the difference between theoretical and actual steel weight?</h3>
+                <p className="text-white/35 text-sm leading-relaxed">
+                  Theoretical weight is calculated from nominal dimensions and standard density (7,850 kg/m&sup3;). Actual weight may differ by &plusmn;2–5% due to manufacturing tolerances, rib weight on TMT bars, and section rolling tolerances. IS 1786 allows &plusmn;5% for bars &le;10mm and &plusmn;3% for bars &gt;10mm.
+                </p>
+              </div>
+              <div>
+                <h3 className="text-white/60 font-semibold text-sm mb-1">How much rebar is needed per square foot?</h3>
+                <p className="text-white/35 text-sm leading-relaxed">
+                  As a rough estimate: residential buildings require 4–6 kg of rebar per square foot of built-up area, and commercial buildings require 6–8 kg/sqft. These are preliminary figures — actual quantities depend on structural design, span, load, and seismic zone.
+                </p>
+              </div>
+              <div>
+                <h3 className="text-white/60 font-semibold text-sm mb-1">Does steel grade affect weight?</h3>
+                <p className="text-white/35 text-sm leading-relaxed">
+                  No. Steel grade (Fe415, Fe500, Fe500D, Fe550D) affects mechanical properties (yield strength, elongation, ductility) but not weight. All grades of mild steel and TMT rebar have the same density of 7,850 kg/m&sup3;. A 16mm Fe500 bar weighs the same as a 16mm Fe550D bar — 1.580 kg/m.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* All Calculators CTA */}
+        <section className="mt-6">
+          <div className="glass-panel p-6 sm:p-8">
+            <h2 className="text-white font-bold text-lg mb-4">
+              Explore All SteelMath Calculators
+            </h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+              {[
+                { href: "/calculators/tmt", title: "TMT Bar Calculator", desc: "d\u00B2/162 per-metre chart, 6mm–40mm" },
+                { href: "/calculators/steel-plate", title: "Steel Plate Calculator", desc: "L \u00D7 W \u00D7 T \u00D7 7.85 formula" },
+                { href: "/calculators/metal-weight", title: "Metal Weight", desc: "14 metals, 6 shapes" },
+                { href: "/calculators/gauge-to-mm", title: "Gauge to MM", desc: "Sheet metal gauge chart" },
+                { href: "/calculators/hardness-conversion", title: "Hardness Converter", desc: "HB, HRC, HV & MPa" },
+                { href: "/calculators/credit-cost", title: "Credit Cost", desc: "True cost of buying on credit" },
+                { href: "/calculators/rebar", title: "Rebar Calculator", desc: "Weight, bars & tonnes" },
+              ].map((c) => (
+                <Link key={c.href} href={c.href} className="block p-3 rounded-lg bg-white/[0.03] border border-white/5 hover:border-accent/20 transition-colors no-underline group">
+                  <div className="text-white/80 font-semibold text-sm group-hover:text-accent transition-colors">{c.title}</div>
+                  <div className="text-white/30 text-xs mt-1">{c.desc}</div>
+                </Link>
+              ))}
             </div>
           </div>
         </section>

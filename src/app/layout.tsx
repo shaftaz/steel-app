@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import PriceTicker from "@/components/dashboard/PriceTicker";
 import "./globals.css";
 
 const BASE_URL = "https://steelmath.com";
@@ -265,6 +266,7 @@ gtag('config', 'G-V0FPXV02V5');`}
       </head>
       <body className="antialiased relative">
         <Header />
+        <PriceTicker />
         {children}
         <Footer />
       </body>
