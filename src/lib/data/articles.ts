@@ -4660,6 +4660,440 @@ Sulphur exports at risk: ~50% of global (Linesight)</p>
 <p><strong>Related on SteelMath:</strong> <a href="/articles/steel-production-cost-india-bf-bof-eaf-2026">India\u2019s Steel Production Cost Breakdown</a> &middot; <a href="/articles/steel-price-hike-tracker-march-2026">Steel Price Hike Tracker</a> &middot; <a href="/articles/hormuz-crisis-steel-impact-india">Hormuz Crisis Impact</a> &middot; <a href="/articles/moil-manganese-ore-price-hike-april-2026-steel-impact">MOIL Manganese Ore Price Hike</a> &middot; <a href="/articles/jaisalmer-limestone-steel-mills-gulf-imports-stranded-hormuz-2026">Jaisalmer Limestone Crisis</a> &middot; <a href="/articles/rinl-vizag-steel-plant-turnaround-2026">RINL Turnaround Overview</a> &middot; <a href="/calculator">Steel Weight Calculator</a></p>
 `,
   },
+  {
+    slug: "how-to-calculate-weight-of-steel-formula-guide",
+    title:
+      "How to Calculate Weight of Steel \u2014 The Definitive Formula Guide for Every Section Type",
+    category: "GUIDE" as Category,
+    categoryColor: "green",
+    date: "2026-05-06",
+    readTime: "16 min",
+    excerpt:
+      "Steel weight formulas for TMT bar, plate, pipe, angle, channel, beam, tube, flat bar. Worked examples with IS standard density values. Free online calculators.",
+    metaTitle:
+      "How to Calculate Weight of Steel \u2014 Every Formula & Section | SteelMath",
+    metaDescription:
+      "Steel weight formulas for TMT bar, plate, pipe, angle, channel, beam, tube, flat bar. Worked examples with IS standard density values. Free online calculators.",
+    relatedCalculators: ["weight", "tmt", "steel-plate", "pipe-weight", "angle-weight"],
+    content: `
+<div class="glass-panel p-4 sm:p-5 mb-6 text-sm font-mono leading-relaxed" style="border-left: 3px solid var(--color-accent);">
+<div class="text-accent font-bold text-base mb-3">STEEL WEIGHT FORMULAS \u2014 QUICK REFERENCE</div>
+<div class="text-white/70">TMT Bar / Round Bar: &nbsp;&nbsp;&nbsp; <strong class="text-white">Weight (kg/m) = d\u00B2 \u00F7 162</strong></div>
+<div class="text-white/70">Steel Plate / Sheet: &nbsp;&nbsp;&nbsp; <strong class="text-white">Weight (kg/m\u00B2) = thickness (mm) \u00D7 7.85</strong></div>
+<div class="text-white/70">MS Pipe: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong class="text-white">Weight (kg/m) = (OD \u2212 WT) \u00D7 WT \u00D7 0.02466</strong></div>
+<div class="text-white/70">Equal Angle: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong class="text-white">Weight (kg/m) = (A + B \u2212 T) \u00D7 T \u00D7 0.00785</strong></div>
+<div class="text-white/70">Flat Bar: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong class="text-white">Weight (kg/m) = Width \u00D7 Thickness \u00D7 0.00785</strong></div>
+<div class="text-white/70">Square Tube: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong class="text-white">Weight (kg/m) = 4 \u00D7 (Side \u2212 WT) \u00D7 WT \u00D7 0.00785</strong></div>
+<div class="text-white/70">Rectangular Tube: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong class="text-white">Weight (kg/m) = 2 \u00D7 (W + H \u2212 2WT) \u00D7 WT \u00D7 0.00785</strong></div>
+<div class="text-white/70">Chequered Plate: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong class="text-white">Weight (kg/m\u00B2) = thickness \u00D7 7.85 \u00D7 1.05</strong></div>
+<div class="text-white/70">I-Beam / Channel: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong class="text-white">Use IS 808 standard lookup tables</strong></div>
+<div class="mt-3 text-white/40 text-xs">All dimensions in mm. Mild steel density: 7,850 kg/m\u00B3. For SS 304: multiply by 1.019. For aluminium: multiply by 0.344.</div>
+</div>
+
+<p>If you work with steel in any capacity \u2014 trading, procurement, fabrication, construction, or engineering \u2014 calculating weight is something you do repeatedly. Every purchase order, every delivery verification, every project estimate, every BOQ depends on getting the weight right.</p>
+
+<p>This guide covers the weight formula for every common steel section type, with fully worked examples using real-world dimensions. Every formula has been verified against IS standard density values and cross-checked with industry references. Use this as your permanent reference, or use our free <a href="/calculator">Steel Weight Calculator</a> for instant results.</p>
+
+<h2>The One Principle Behind All Steel Weight Calculations</h2>
+
+<p>Every steel weight calculation follows one principle:</p>
+
+<p><strong>Weight = Volume \u00D7 Density</strong></p>
+
+<p>That\u2019s it. Whether you\u2019re calculating the weight of a TMT bar, a 40mm plate, a 6-inch pipe, or an ISMB 300 beam, you\u2019re always doing the same thing \u2014 calculating the volume of the steel shape and multiplying it by the density of the specific material.</p>
+
+<p>The reason different section types have different formulas is simply that they have different shapes. A round bar has a circular cross-section. A plate is rectangular. A pipe is a hollow cylinder. An angle is an L-shape. The volume calculation changes with the shape, but the principle never does.</p>
+
+<p>The density of mild steel \u2014 the number that converts volume into weight \u2014 is <strong>7,850 kg/m\u00B3</strong>. This is the standard value used globally for carbon steel and structural steel (IS 2062, ASTM A36, EN S275JR). When you see constants like 162, 7.85, or 0.00785 in steel weight formulas, they all derive from this single density value.</p>
+
+<h2>Steel Density: The Number You Need to Know</h2>
+
+<p>The density of mild steel is 7,850 kg per cubic metre. This can also be expressed as 7.85 grams per cubic centimetre, 78.5 kilonewtons per cubic metre, or 490 pounds per cubic foot.</p>
+
+<p>Different steel alloys and metals have different densities:</p>
+
+<ul>
+<li><strong>Mild Steel / Carbon Steel</strong> (IS 2062, Fe 500D): 7,850 kg/m\u00B3</li>
+<li><strong>Stainless Steel 304:</strong> 8,000 kg/m\u00B3</li>
+<li><strong>Stainless Steel 316:</strong> 8,027 kg/m\u00B3</li>
+<li><strong>Stainless Steel 202:</strong> 7,860 kg/m\u00B3</li>
+<li><strong>Galvanised Steel:</strong> 7,850 kg/m\u00B3 (zinc coating adds negligible density change)</li>
+<li><strong>Aluminium 6061:</strong> 2,700 kg/m\u00B3</li>
+<li><strong>Copper:</strong> 8,940 kg/m\u00B3</li>
+<li><strong>Brass:</strong> 8,500 kg/m\u00B3</li>
+<li><strong>Cast Iron (Grey):</strong> 7,200 kg/m\u00B3</li>
+<li><strong>Titanium Grade 2:</strong> 4,510 kg/m\u00B3</li>
+</ul>
+
+<p>All formulas in this guide assume mild steel at 7,850 kg/m\u00B3 unless stated otherwise. To calculate weight for other materials, use the <a href="/calculators/metal-weight">Metal Weight Calculator</a> or apply the correction factor explained in the materials section below.</p>
+
+<h2>TMT Bar / Round Bar \u2014 d\u00B2/162 Formula</h2>
+
+<p><strong>The formula:</strong> Weight (kg per metre) = d\u00B2 \u00F7 162</p>
+
+<p>Where d is the diameter of the bar in millimetres. This gives weight in kg per metre of length.</p>
+
+<p><strong>Where 162 comes from:</strong> The full formula is (\u03C0/4) \u00D7 d\u00B2 \u00D7 7850 / 10\u2076. When you work through the algebra: 4 \u00D7 10\u2076 \u00F7 (\u03C0 \u00D7 7850) = 162.20. The industry standard rounds this to 162 for practical use. The difference between 162 and 162.2 is less than 0.12%, which is well within manufacturing tolerances.</p>
+
+<div class="glass-panel p-4 my-4">
+<h3 class="text-white font-bold text-sm mb-2">Worked Example 1 \u2014 12mm TMT Bar</h3>
+<div class="space-y-1.5 font-mono text-xs">
+<p><span class="text-white/30">Given:</span> <span class="text-white/70">d = 12mm</span></p>
+<p><span class="text-white/30">Step 1:</span> <span class="text-white/70">Weight per metre = 12\u00B2 \u00F7 162 = 144 \u00F7 162 = <span class="text-accent">0.889 kg/m</span></span></p>
+<p><span class="text-white/30">Step 2:</span> <span class="text-white/70">Standard 12m bar: 0.889 \u00D7 12 = 10.67 kg per bar</span></p>
+<p><span class="text-white/30">Step 3:</span> <span class="text-white/70">100 bars: 10.67 \u00D7 100 = 1,067 kg = 1.067 MT</span></p>
+<p><span class="text-white/30">Step 4:</span> <span class="text-white/70">Bars per tonne: 1,000 \u00F7 10.67 = ~93 bars</span></p>
+<p><span class="text-white/30">Cost:</span> <span class="text-white/70">At \u20B949,500/MT: 1.067 \u00D7 49,500 = <span class="text-accent">\u20B952,817</span> for 100 bars</span></p>
+</div>
+</div>
+
+<div class="glass-panel p-4 my-4">
+<h3 class="text-white font-bold text-sm mb-2">Worked Example 2 \u2014 25mm TMT Bar</h3>
+<div class="space-y-1.5 font-mono text-xs">
+<p><span class="text-white/30">Given:</span> <span class="text-white/70">d = 25mm</span></p>
+<p><span class="text-white/30">Step 1:</span> <span class="text-white/70">Weight per metre = 25\u00B2 \u00F7 162 = 625 \u00F7 162 = <span class="text-accent">3.858 kg/m</span></span></p>
+<p><span class="text-white/30">Step 2:</span> <span class="text-white/70">Weight per 12m bar = 3.858 \u00D7 12 = 46.30 kg</span></p>
+<p><span class="text-white/30">Step 3:</span> <span class="text-white/70">Bars per tonne = 1,000 \u00F7 46.30 = ~21 bars</span></p>
+</div>
+</div>
+
+<p><strong>Quick reference \u2014 all standard TMT sizes:</strong></p>
+
+<p>6mm: 0.222 kg/m. 8mm: 0.395 kg/m. 10mm: 0.617 kg/m. 12mm: 0.889 kg/m. 16mm: 1.580 kg/m. 20mm: 2.469 kg/m. 25mm: 3.858 kg/m. 28mm: 4.840 kg/m. 32mm: 6.321 kg/m. 36mm: 8.000 kg/m. 40mm: 9.877 kg/m.</p>
+
+<p>For instant calculations with any diameter, length, and quantity, use the <a href="/calculators/tmt">TMT Bar Weight Calculator</a>. For the complete chart, see our <a href="/articles/tmt-bar-weight-per-metre-chart">TMT Bar Weight Per Metre Chart</a>.</p>
+
+<h2>Steel Plate / Sheet \u2014 Thickness \u00D7 7.85 Formula</h2>
+
+<p><strong>The formula:</strong> Weight (kg per square metre) = thickness (mm) \u00D7 7.85</p>
+
+<p>This gives weight per square metre. For a specific plate size, multiply by the area in square metres.</p>
+
+<p><strong>The full formula:</strong> Weight (kg) = length (mm) \u00D7 width (mm) \u00D7 thickness (mm) \u00D7 7.85 \u00F7 1,000,000</p>
+
+<p><strong>Where 7.85 comes from:</strong> The density 7,850 kg/m\u00B3 divided by 1,000 (to convert from per-cubic-metre to per-millimetre-of-thickness per-square-metre) equals 7.85.</p>
+
+<div class="glass-panel p-4 my-4">
+<h3 class="text-white font-bold text-sm mb-2">Worked Example 1 \u2014 10mm Plate, 1500 \u00D7 6000mm</h3>
+<div class="space-y-1.5 font-mono text-xs">
+<p><span class="text-white/30">Step 1:</span> <span class="text-white/70">Weight per m\u00B2 = 10 \u00D7 7.85 = 78.5 kg/m\u00B2</span></p>
+<p><span class="text-white/30">Step 2:</span> <span class="text-white/70">Plate area = 1.5m \u00D7 6.0m = 9.0 m\u00B2</span></p>
+<p><span class="text-white/30">Step 3:</span> <span class="text-white/70">Total weight = 78.5 \u00D7 9.0 = <span class="text-accent">706.5 kg</span></span></p>
+</div>
+</div>
+
+<div class="glass-panel p-4 my-4">
+<h3 class="text-white font-bold text-sm mb-2">Worked Example 2 \u2014 16mm Plate, 2000 \u00D7 6000mm</h3>
+<div class="space-y-1.5 font-mono text-xs">
+<p><span class="text-white/30">Step 1:</span> <span class="text-white/70">Weight per m\u00B2 = 16 \u00D7 7.85 = 125.6 kg/m\u00B2</span></p>
+<p><span class="text-white/30">Step 2:</span> <span class="text-white/70">Plate area = 2.0 \u00D7 6.0 = 12.0 m\u00B2</span></p>
+<p><span class="text-white/30">Step 3:</span> <span class="text-white/70">Total weight = 125.6 \u00D7 12.0 = <span class="text-accent">1,507.2 kg = 1.507 MT</span></span></p>
+</div>
+</div>
+
+<p><strong>Quick reference \u2014 common plate thicknesses:</strong></p>
+
+<p>1mm: 7.85 kg/m\u00B2. 2mm: 15.70 kg/m\u00B2. 3mm: 23.55 kg/m\u00B2. 5mm: 39.25 kg/m\u00B2. 6mm: 47.10 kg/m\u00B2. 8mm: 62.80 kg/m\u00B2. 10mm: 78.50 kg/m\u00B2. 12mm: 94.20 kg/m\u00B2. 16mm: 125.60 kg/m\u00B2. 20mm: 157.00 kg/m\u00B2. 25mm: 196.25 kg/m\u00B2. 32mm: 251.20 kg/m\u00B2. 40mm: 314.00 kg/m\u00B2. 50mm: 392.50 kg/m\u00B2.</p>
+
+<p>The pattern is simple: every 1mm of thickness adds 7.85 kg per square metre. Once you memorise \u201C10mm = 78.5 kg/m\u00B2,\u201D you can mentally estimate any plate weight.</p>
+
+<p>For detailed calculations, use the <a href="/calculators/steel-plate">Steel Plate Weight Calculator</a>. For the complete chart, see our <a href="/articles/steel-plate-weight-calculator-thickness-chart">Steel Plate Weight Chart</a>.</p>
+
+<h2>MS Pipe \u2014 (OD \u2212 WT) \u00D7 WT \u00D7 0.02466 Formula</h2>
+
+<p><strong>The formula:</strong> Weight (kg per metre) = (OD \u2212 WT) \u00D7 WT \u00D7 0.02466</p>
+
+<p>Where OD is the outer diameter in mm and WT is the wall thickness in mm.</p>
+
+<p><strong>Where 0.02466 comes from:</strong> The cross-sectional area of a thin-walled pipe is approximately \u03C0 \u00D7 (OD \u2212 WT) \u00D7 WT. Multiply by the density: \u03C0 \u00D7 7850 / 10\u2076 = 0.024662, which rounds to 0.02466.</p>
+
+<p><strong>Important note:</strong> Pipes in India are specified by Nominal Bore (NB), not by outer diameter. A \u201C50mm NB pipe\u201D has an OD of 60.3mm, not 50mm. Always verify the OD and WT from the IS 1239 standard tables before calculating.</p>
+
+<div class="glass-panel p-4 my-4">
+<h3 class="text-white font-bold text-sm mb-2">Worked Example \u2014 50mm NB (2 inch) Medium Class Pipe</h3>
+<div class="space-y-1.5 font-mono text-xs">
+<p><span class="text-white/30">Given:</span> <span class="text-white/70">OD = 60.3mm, WT = 3.6mm</span></p>
+<p><span class="text-white/30">Step 1:</span> <span class="text-white/70">(60.3 \u2212 3.6) = 56.7</span></p>
+<p><span class="text-white/30">Step 2:</span> <span class="text-white/70">56.7 \u00D7 3.6 \u00D7 0.02466 = <span class="text-accent">5.03 kg/m</span></span></p>
+<p><span class="text-white/30">Step 3:</span> <span class="text-white/70">6m length: 5.03 \u00D7 6 = 30.18 kg per pipe</span></p>
+</div>
+</div>
+
+<p><strong>Quick reference \u2014 standard MS pipe weights (IS 1239 medium class):</strong></p>
+
+<p>15mm NB (\u00BD\u201D): OD 21.3, WT 2.6 \u2192 1.20 kg/m. 20mm NB (\u00BE\u201D): OD 26.9, WT 2.6 \u2192 1.56 kg/m. 25mm NB (1\u201D): OD 33.7, WT 3.2 \u2192 2.41 kg/m. 32mm NB (1\u00BC\u201D): OD 42.4, WT 3.2 \u2192 3.10 kg/m. 40mm NB (1\u00BD\u201D): OD 48.3, WT 3.2 \u2192 3.56 kg/m. 50mm NB (2\u201D): OD 60.3, WT 3.6 \u2192 5.03 kg/m. 80mm NB (3\u201D): OD 88.9, WT 4.0 \u2192 8.38 kg/m. 100mm NB (4\u201D): OD 114.3, WT 4.5 \u2192 12.18 kg/m. 150mm NB (6\u201D): OD 168.3, WT 5.0 \u2192 20.14 kg/m. 200mm NB (8\u201D): OD 219.1, WT 6.3 \u2192 33.05 kg/m.</p>
+
+<p>Note: These are medium (Class B) weights. Light class (Class A) pipes have thinner walls and weigh less. Heavy class (Class C) pipes have thicker walls and weigh more.</p>
+
+<p>For instant pipe weight calculations, use the <a href="/calculators/pipe-weight">MS Pipe Weight Calculator</a>. For the full chart, see our <a href="/articles/ms-pipe-weight-calculator-chart">MS Pipe Weight Chart</a>.</p>
+
+<h2>Steel Angle \u2014 (A + B \u2212 T) \u00D7 T \u00D7 0.00785 Formula</h2>
+
+<p><strong>The formula:</strong> Weight (kg per metre) = (A + B \u2212 T) \u00D7 T \u00D7 0.00785</p>
+
+<p>Where A and B are the leg lengths in mm, and T is the thickness in mm. For equal angles, A = B.</p>
+
+<p><strong>Where 0.00785 comes from:</strong> This is simply 7850 / 1,000,000 = 0.00785. It converts the cross-section area (in mm\u00B2) directly to weight per metre (in kg/m).</p>
+
+<p><strong>Important caveat:</strong> This formula is a simplified approximation that assumes sharp corners. Real rolled angles have root radius and toe radius as specified in IS 808. For smaller angles (up to 65\u00D765mm), the formula is accurate within 1\u20132%. For larger angles (75mm and above), the root radius becomes significant and the formula may differ from IS 808 published values by 1\u20133%. For large angles, use the IS 808 published weights available in our <a href="/calculators/angle-weight">Steel Angle Weight Calculator</a>.</p>
+
+<div class="glass-panel p-4 my-4">
+<h3 class="text-white font-bold text-sm mb-2">Worked Example \u2014 50\u00D750\u00D75mm Equal Angle</h3>
+<div class="space-y-1.5 font-mono text-xs">
+<p><span class="text-white/30">Given:</span> <span class="text-white/70">A = 50, B = 50, T = 5</span></p>
+<p><span class="text-white/30">Step 1:</span> <span class="text-white/70">(50 + 50 \u2212 5) = 95</span></p>
+<p><span class="text-white/30">Step 2:</span> <span class="text-white/70">95 \u00D7 5 \u00D7 0.00785 = <span class="text-accent">3.73 kg/m</span></span></p>
+<p><span class="text-white/30">Step 3:</span> <span class="text-white/70">6m length: 3.73 \u00D7 6 = 22.38 kg</span></p>
+</div>
+</div>
+
+<p><strong>Quick reference \u2014 common equal angle weights:</strong></p>
+
+<p>25\u00D725\u00D73: 1.11 kg/m. 25\u00D725\u00D75: 1.77 kg/m. 40\u00D740\u00D75: 2.95 kg/m. 40\u00D740\u00D76: 3.48 kg/m. 50\u00D750\u00D75: 3.73 kg/m. 50\u00D750\u00D76: 4.43 kg/m. 65\u00D765\u00D76: 5.84 kg/m. 75\u00D775\u00D76: 6.77 kg/m. 75\u00D775\u00D78: 8.90 kg/m. 100\u00D7100\u00D78: 11.98 kg/m (IS 808). 100\u00D7100\u00D710: 14.73 kg/m (IS 808). 150\u00D7150\u00D712: 26.87 kg/m (IS 808).</p>
+
+<h2>Flat Bar \u2014 Width \u00D7 Thickness \u00D7 0.00785 Formula</h2>
+
+<p><strong>The formula:</strong> Weight (kg per metre) = Width (mm) \u00D7 Thickness (mm) \u00D7 0.00785</p>
+
+<p>This is the simplest formula because a flat bar has a rectangular cross-section \u2014 just width times thickness.</p>
+
+<div class="glass-panel p-4 my-4">
+<h3 class="text-white font-bold text-sm mb-2">Worked Example \u2014 50\u00D76mm Flat Bar</h3>
+<div class="space-y-1.5 font-mono text-xs">
+<p><span class="text-white/30">Step 1:</span> <span class="text-white/70">50 \u00D7 6 \u00D7 0.00785 = <span class="text-accent">2.355 kg/m</span></span></p>
+<p><span class="text-white/30">Step 2:</span> <span class="text-white/70">6m length: 2.355 \u00D7 6 = 14.13 kg</span></p>
+</div>
+</div>
+
+<p><strong>Useful mental check:</strong> A 100mm wide, 10mm thick flat bar weighs exactly 7.85 kg/m \u2014 directly reflecting the density of steel (7.85 g/cm\u00B3). Memorise this: <strong>100\u00D710 = 7.85</strong>.</p>
+
+<p>For instant calculations, use the <a href="/calculators/flat-bar-weight">Flat Bar Weight Calculator</a>.</p>
+
+<h2>Square Tube \u2014 4 \u00D7 (Side \u2212 WT) \u00D7 WT \u00D7 0.00785 Formula</h2>
+
+<p><strong>The formula:</strong> Weight (kg per metre) = 4 \u00D7 (Side \u2212 WT) \u00D7 WT \u00D7 0.00785</p>
+
+<p>Where Side is the outer dimension in mm and WT is the wall thickness in mm. The factor 4 accounts for the four walls of the square cross-section.</p>
+
+<div class="glass-panel p-4 my-4">
+<h3 class="text-white font-bold text-sm mb-2">Worked Example \u2014 50\u00D750\u00D73mm Square Tube</h3>
+<div class="space-y-1.5 font-mono text-xs">
+<p><span class="text-white/30">Step 1:</span> <span class="text-white/70">4 \u00D7 (50 \u2212 3) \u00D7 3 \u00D7 0.00785</span></p>
+<p><span class="text-white/30">Step 2:</span> <span class="text-white/70">4 \u00D7 47 \u00D7 3 \u00D7 0.00785 = <span class="text-accent">4.43 kg/m</span></span></p>
+<p><span class="text-white/30">Step 3:</span> <span class="text-white/70">6m length: 4.43 \u00D7 6 = 26.58 kg</span></p>
+</div>
+</div>
+
+<p>For all sizes, use the <a href="/calculators/square-tube-weight">Square Tube Weight Calculator</a>.</p>
+
+<h2>Rectangular Tube \u2014 2 \u00D7 (W + H \u2212 2WT) \u00D7 WT \u00D7 0.00785 Formula</h2>
+
+<p><strong>The formula:</strong> Weight (kg per metre) = 2 \u00D7 (Width + Height \u2212 2 \u00D7 WT) \u00D7 WT \u00D7 0.00785</p>
+
+<p>Where Width and Height are the outer dimensions in mm and WT is the wall thickness in mm.</p>
+
+<div class="glass-panel p-4 my-4">
+<h3 class="text-white font-bold text-sm mb-2">Worked Example \u2014 75\u00D750\u00D73mm Rectangular Tube</h3>
+<div class="space-y-1.5 font-mono text-xs">
+<p><span class="text-white/30">Step 1:</span> <span class="text-white/70">2 \u00D7 (75 + 50 \u2212 6) \u00D7 3 \u00D7 0.00785</span></p>
+<p><span class="text-white/30">Step 2:</span> <span class="text-white/70">2 \u00D7 119 \u00D7 3 \u00D7 0.00785 = <span class="text-accent">5.61 kg/m</span></span></p>
+<p><span class="text-white/30">Step 3:</span> <span class="text-white/70">6m length: 5.61 \u00D7 6 = 33.66 kg</span></p>
+</div>
+</div>
+
+<p>For instant calculations, use the <a href="/calculators/rect-tube-weight">Rectangular Tube Weight Calculator</a>.</p>
+
+<h2>I-Beam (ISMB) and Channel (ISMC) \u2014 IS 808 Standard Lookup</h2>
+
+<p>I-beams and channels have complex cross-sectional profiles with flanges, webs, and fillets (root radius). Calculating their weight from first principles requires knowing the exact profile dimensions including the fillet radius \u2014 which is impractical for everyday use.</p>
+
+<p>Instead, use the IS 808 published standard weight per metre. These values are calculated from the actual rolled section geometry and account for all radii and tapers.</p>
+
+<p><strong>ISMB (Indian Standard Medium Weight Beam) \u2014 common sizes:</strong></p>
+
+<p>ISMB 100: 11.5 kg/m. ISMB 150: 14.9 kg/m. ISMB 200: 25.4 kg/m. ISMB 250: 37.3 kg/m. ISMB 300: 46.1 kg/m. ISMB 350: 52.4 kg/m. ISMB 400: 61.6 kg/m. ISMB 450: 72.4 kg/m. ISMB 500: 86.9 kg/m. ISMB 600: 122.6 kg/m.</p>
+
+<p><strong>ISMC (Indian Standard Medium Weight Channel) \u2014 common sizes:</strong></p>
+
+<p>ISMC 75: 6.8 kg/m. ISMC 100: 9.2 kg/m. ISMC 125: 12.7 kg/m. ISMC 150: 16.4 kg/m. ISMC 200: 22.1 kg/m. ISMC 250: 30.4 kg/m. ISMC 300: 36.3 kg/m. ISMC 400: 49.4 kg/m.</p>
+
+<p>For the complete database with section properties (moment of inertia, section modulus), use the <a href="/calculators/beam-weight">I-Beam Weight Calculator</a> and <a href="/calculators/channel-weight">Channel Weight Calculator</a>.</p>
+
+<h2>Chequered Plate \u2014 Base Weight + 5% Pattern Allowance</h2>
+
+<p><strong>The formula:</strong> Weight (kg per m\u00B2) = thickness (mm) \u00D7 7.85 \u00D7 1.05</p>
+
+<p>Chequered (checker) plates have a raised diamond pattern on one surface. The 5% addition accounts for the extra metal in this pattern.</p>
+
+<p><strong>Important note:</strong> The 5% is an industry standard approximation. Actual pattern weight varies between 4.5\u20135.5% depending on the manufacturer. Enter the base plate thickness (excluding the pattern height), and the 5% is added automatically.</p>
+
+<div class="glass-panel p-4 my-4">
+<h3 class="text-white font-bold text-sm mb-2">Worked Example \u2014 6mm Chequered Plate, 1500\u00D76000mm</h3>
+<div class="space-y-1.5 font-mono text-xs">
+<p><span class="text-white/30">Step 1:</span> <span class="text-white/70">Weight per m\u00B2 = 6 \u00D7 7.85 \u00D7 1.05 = 49.46 kg/m\u00B2</span></p>
+<p><span class="text-white/30">Step 2:</span> <span class="text-white/70">Area = 1.5 \u00D7 6.0 = 9.0 m\u00B2</span></p>
+<p><span class="text-white/30">Step 3:</span> <span class="text-white/70">Total = 49.46 \u00D7 9.0 = <span class="text-accent">445.1 kg</span></span></p>
+<p><span class="text-white/30">Compare:</span> <span class="text-white/50">Plain 6mm plate: 47.10 \u00D7 9.0 = 423.9 kg. Pattern adds 21.2 kg (5%).</span></p>
+</div>
+</div>
+
+<h2>How to Adjust for Different Materials</h2>
+
+<p>All formulas above assume mild steel at 7,850 kg/m\u00B3. For other materials, multiply the mild steel result by a correction factor:</p>
+
+<ul>
+<li><strong>Stainless Steel 304</strong> (8,000 kg/m\u00B3): multiply by <strong>1.019</strong></li>
+<li><strong>Stainless Steel 316</strong> (8,027 kg/m\u00B3): multiply by <strong>1.023</strong></li>
+<li><strong>Stainless Steel 202</strong> (7,860 kg/m\u00B3): multiply by <strong>1.001</strong> (negligible difference)</li>
+<li><strong>Aluminium 6061</strong> (2,700 kg/m\u00B3): multiply by <strong>0.344</strong></li>
+<li><strong>Copper</strong> (8,940 kg/m\u00B3): multiply by <strong>1.139</strong></li>
+<li><strong>Brass</strong> (8,500 kg/m\u00B3): multiply by <strong>1.083</strong></li>
+<li><strong>Cast Iron Grey</strong> (7,200 kg/m\u00B3): multiply by <strong>0.917</strong></li>
+<li><strong>Titanium Grade 2</strong> (4,510 kg/m\u00B3): multiply by <strong>0.574</strong></li>
+</ul>
+
+<div class="glass-panel p-4 my-4">
+<h3 class="text-white font-bold text-sm mb-2">Example \u2014 SS 304 Plate, 10mm Thick</h3>
+<div class="space-y-1.5 font-mono text-xs">
+<p><span class="text-white/30">MS weight:</span> <span class="text-white/70">78.5 kg/m\u00B2</span></p>
+<p><span class="text-white/30">SS 304:</span> <span class="text-white/70">78.5 \u00D7 1.019 = <span class="text-accent">79.99 \u2248 80.0 kg/m\u00B2</span></span></p>
+<p><span class="text-white/30">Or directly:</span> <span class="text-white/50">10 \u00D7 8.00 = 80.0 kg/m\u00B2 (since SS 304 density = 8.00 g/cm\u00B3)</span></p>
+</div>
+</div>
+
+<p>For multi-material calculations, use the <a href="/calculators/metal-weight">Metal Weight Calculator</a> which supports 19 materials.</p>
+
+<h2>Quick Reference: The 20 Most Common Steel Weights</h2>
+
+<p>These are the weights that steel professionals look up most frequently. Memorising even a few of these saves significant time.</p>
+
+<div class="glass-panel p-4 my-4">
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm">
+<div>
+<div class="text-white/40 text-[10px] uppercase tracking-wider mb-2">TMT Bar (kg/m)</div>
+<div class="space-y-1 font-mono text-xs text-white/70">
+<div>8mm: <strong class="text-white">0.395</strong></div>
+<div>10mm: <strong class="text-white">0.617</strong></div>
+<div>12mm: <strong class="text-white">0.889</strong></div>
+<div>16mm: <strong class="text-white">1.580</strong></div>
+<div>20mm: <strong class="text-white">2.469</strong></div>
+<div>25mm: <strong class="text-white">3.858</strong></div>
+<div>32mm: <strong class="text-white">6.321</strong></div>
+</div>
+</div>
+<div>
+<div class="text-white/40 text-[10px] uppercase tracking-wider mb-2">Plate (kg/m\u00B2)</div>
+<div class="space-y-1 font-mono text-xs text-white/70">
+<div>6mm: <strong class="text-white">47.10</strong></div>
+<div>8mm: <strong class="text-white">62.80</strong></div>
+<div>10mm: <strong class="text-white">78.50</strong></div>
+<div>12mm: <strong class="text-white">94.20</strong></div>
+<div>16mm: <strong class="text-white">125.60</strong></div>
+<div>20mm: <strong class="text-white">157.00</strong></div>
+</div>
+</div>
+<div>
+<div class="text-white/40 text-[10px] uppercase tracking-wider mb-2">Pipe &amp; Angle (kg/m)</div>
+<div class="space-y-1 font-mono text-xs text-white/70">
+<div>Pipe 25NB: <strong class="text-white">2.41</strong></div>
+<div>Pipe 50NB: <strong class="text-white">5.03</strong></div>
+<div>Pipe 80NB: <strong class="text-white">8.38</strong></div>
+<div>Pipe 100NB: <strong class="text-white">12.18</strong></div>
+<div>Pipe 150NB: <strong class="text-white">20.14</strong></div>
+<div>Angle 50\u00D750\u00D75: <strong class="text-white">3.73</strong></div>
+<div>ISMB 200: <strong class="text-white">25.4</strong></div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="glass-panel p-4 sm:p-5 my-6" style="border-left: 3px solid var(--color-accent);">
+<div class="text-accent font-bold text-sm mb-2">SKIP THE FORMULAS \u2014 CALCULATE INSTANTLY</div>
+<p class="text-white/50 text-sm mb-3">Every formula in this guide is built into SteelMath\u2019s free calculators. Select your section type, enter dimensions, get weight in real-time. No signup needed.</p>
+<a href="/calculator" class="btn-glow inline-block px-5 py-2 no-underline text-xs font-semibold">Open Steel Weight Calculator \u2192</a>
+</div>
+
+<h2>Where the Constants Come From \u2014 Formula Derivations</h2>
+
+<p>Understanding where the constants come from helps you verify formulas and adapt them for non-standard situations.</p>
+
+<p><strong>The constant 162 (TMT/Round bar):</strong></p>
+
+<div class="glass-panel p-4 my-3 font-mono text-xs text-white/70 space-y-1">
+<p>Starting from: Weight/m = (\u03C0/4) \u00D7 d\u00B2 \u00D7 \u03C1 / 10\u2076</p>
+<p>Where d is in mm, \u03C1 = 7850 kg/m\u00B3</p>
+<p>= d\u00B2 \u00D7 \u03C0 \u00D7 7850 / (4 \u00D7 10\u2076)</p>
+<p>= d\u00B2 \u00D7 24,662 / 4,000,000</p>
+<p>= d\u00B2 / (4,000,000 / 24,662)</p>
+<p>= <span class="text-accent">d\u00B2 / 162.20</span></p>
+</div>
+
+<p><strong>The constant 7.85 (Plate/Sheet):</strong></p>
+
+<div class="glass-panel p-4 my-3 font-mono text-xs text-white/70 space-y-1">
+<p>Weight per m\u00B2 = thickness(m) \u00D7 density = thickness(mm)/1000 \u00D7 7850</p>
+<p>= <span class="text-accent">thickness \u00D7 7.85</span></p>
+<p>The number 7.85 is simply the density in g/cm\u00B3.</p>
+</div>
+
+<p><strong>The constant 0.02466 (Pipe):</strong></p>
+
+<div class="glass-panel p-4 my-3 font-mono text-xs text-white/70 space-y-1">
+<p>Pipe cross-section \u2248 \u03C0 \u00D7 (OD \u2212 WT) \u00D7 WT</p>
+<p>Weight/m = \u03C0 \u00D7 (OD \u2212 WT) \u00D7 WT \u00D7 7850 / 10\u2076</p>
+<p>= (OD \u2212 WT) \u00D7 WT \u00D7 (\u03C0 \u00D7 7850 / 10\u2076)</p>
+<p>= (OD \u2212 WT) \u00D7 WT \u00D7 <span class="text-accent">0.02466</span></p>
+</div>
+
+<p><strong>The constant 0.00785 (Angle, Flat bar, Tube):</strong></p>
+
+<div class="glass-panel p-4 my-3 font-mono text-xs text-white/70">
+<p>Area (mm\u00B2) \u00D7 7850 / 10\u2076 = area \u00D7 <span class="text-accent">0.00785</span></p>
+<p>Universal multiplier: converts cross-section area in mm\u00B2 to weight per metre in kg/m for mild steel.</p>
+</div>
+
+<h2>Common Mistakes and How to Avoid Them</h2>
+
+<p><strong>Mistake 1: Confusing NB with OD for pipes.</strong> A \u201C50mm pipe\u201D in India means 50mm Nominal Bore, which has an OD of 60.3mm. Using 50 as the OD in the formula gives a completely wrong result. Always look up the actual OD and WT from IS 1239 tables.</p>
+
+<p><strong>Mistake 2: Forgetting to account for gauge thickness.</strong> Sheet metal is often specified by gauge number (18 gauge, 20 gauge) rather than mm. 18 gauge is 1.214mm (MSG), not 18mm. Use a <a href="/calculators/gauge-to-mm">Gauge to MM Converter</a> to get the actual thickness before calculating.</p>
+
+<p><strong>Mistake 3: Using the wrong density for stainless steel.</strong> SS 304 is 8,000 kg/m\u00B3, not 7,850. A 10mm SS 304 plate weighs 80.0 kg/m\u00B2, not 78.5. The 2% difference adds up on large orders.</p>
+
+<p><strong>Mistake 4: Not accounting for chequered plate pattern.</strong> A 10mm chequered plate weighs 82.4 kg/m\u00B2, not 78.5. The 5% pattern allowance is easy to forget when estimating.</p>
+
+<p><strong>Mistake 5: Using the simplified angle formula for large sections.</strong> The formula (A + B \u2212 T) \u00D7 T \u00D7 0.00785 underestimates weight for angles 75mm and above because it ignores root radius. Use IS 808 published values for large angles.</p>
+
+<p><strong>Mistake 6: Confusing weight per metre with weight per piece.</strong> Always multiply weight per metre by the actual length to get piece weight. A standard TMT bar is 12m, a standard pipe is 6m, and a standard angle is 6m \u2014 but non-standard lengths are common.</p>
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>What is the formula to calculate weight of steel?</h3>
+<p>The universal formula is Weight = Volume \u00D7 Density. For mild steel, density is 7,850 kg/m\u00B3. Simplified formulas for each section type: TMT bar: d\u00B2 \u00F7 162 \u00D7 length. Plate: length(mm) \u00D7 width(mm) \u00D7 thickness(mm) \u00D7 7.85 / 1,000,000. Pipe: (OD \u2212 WT) \u00D7 WT \u00D7 0.02466 \u00D7 length. Angle: (A + B \u2212 T) \u00D7 T \u00D7 0.00785 \u00D7 length. All dimensions in mm, lengths in metres, results in kg.</p>
+
+<h3>What is the unit weight of steel?</h3>
+<p>The unit weight (density) of mild steel is 7,850 kg per cubic metre. This equals 7.85 g/cm\u00B3, 78.5 kN/m\u00B3, or 490 lb/ft\u00B3. For stainless steel 304, it is 8,000 kg/m\u00B3. For aluminium, it is 2,700 kg/m\u00B3.</p>
+
+<h3>How much does a 12mm TMT bar weigh per metre?</h3>
+<p>A 12mm TMT bar weighs 0.889 kg per metre. Calculation: 12\u00B2 \u00F7 162 = 144 \u00F7 162 = 0.889 kg/m. A standard 12m bar weighs 10.67 kg. Approximately 93 bars make one tonne.</p>
+
+<h3>What is the weight of a 10mm MS plate per square metre?</h3>
+<p>A 10mm MS plate weighs 78.5 kg per square metre. The formula is simply: thickness in mm \u00D7 7.85 = kg/m\u00B2. A standard 1500\u00D76000mm plate at 10mm weighs 706.5 kg.</p>
+
+<h3>How do you calculate MS pipe weight?</h3>
+<p>Use the formula: Weight (kg/m) = (OD \u2212 Wall Thickness) \u00D7 Wall Thickness \u00D7 0.02466. All dimensions in mm. For a 50mm NB pipe (OD 60.3mm, WT 3.6mm): (60.3 \u2212 3.6) \u00D7 3.6 \u00D7 0.02466 = 5.03 kg/m. Always use OD, not NB, in the formula.</p>
+
+<h3>What is the constant 162 in the steel weight formula?</h3>
+<p>The constant 162 (precisely 162.2) is derived from: 4 \u00D7 10\u2076 \u00F7 (\u03C0 \u00D7 7850) = 162.20. It simplifies the expression (\u03C0/4) \u00D7 d\u00B2 \u00D7 7850 / 10\u2076 into the quick formula d\u00B2/162. Some references use 162, others 162.2 \u2014 the difference is less than 0.12%.</p>
+
+<h3>How to calculate weight of steel angle?</h3>
+<p>For equal angles: Weight (kg/m) = (Leg A + Leg B \u2212 Thickness) \u00D7 Thickness \u00D7 0.00785. For a 50\u00D750\u00D75mm angle: (50 + 50 \u2212 5) \u00D7 5 \u00D7 0.00785 = 3.73 kg/m. For angles 75mm and larger, use IS 808 published standard weights for better accuracy, as the simplified formula doesn\u2019t account for root radius.</p>
+
+<p><em>All formulas in this guide use mild steel density of 7,850 kg/m\u00B3 unless stated otherwise. Values are calculated to 2\u20133 decimal places. Minor variations (typically under 1%) may exist compared to other references due to rounding differences in the density constant. IS 808 standard values are used for I-beams, channels, and large angles. For instant calculations, use SteelMath\u2019s free <a href="/calculator">Steel Weight Calculator</a>.</em></p>
+
+<p><strong>Related on SteelMath:</strong> <a href="/articles/steel-weight-calculator-guide">Steel Weight Calculator \u2014 Complete Guide</a> &middot; <a href="/articles/tmt-bar-weight-per-metre-chart">TMT Bar Weight Per Metre Chart</a> &middot; <a href="/articles/steel-plate-weight-calculator-thickness-chart">Steel Plate Weight Chart</a> &middot; <a href="/articles/ms-pipe-weight-calculator-chart">MS Pipe Weight Chart</a> &middot; <a href="/articles/steel-angle-weight-chart-sizes-formula">Steel Angle Weight Chart</a> &middot; <a href="/calculator">Steel Weight Calculator</a></p>
+`,
+  },
 ];
 
 /** Articles sorted by date, most recent first */
