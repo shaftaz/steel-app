@@ -32,8 +32,12 @@ export async function generateMetadata({
       title: article.metaTitle,
       description: article.metaDescription,
       url: `https://steelmath.com/articles/${article.slug}`,
+      siteName: "SteelMath",
+      locale: "en_IN",
       publishedTime: article.date,
-      authors: ["Special Correspondent"],
+      modifiedTime: article.lastUpdated || article.date,
+      section: article.category,
+      authors: ["SteelMath Research"],
       tags: [
         article.category.toLowerCase(),
         "steel",

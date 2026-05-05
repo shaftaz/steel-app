@@ -90,6 +90,76 @@ const CALCULATORS = [
       "Calculate rebar weight, number of bars & tonnes for TMT 6mm\u201340mm.",
     tag: "Rebar / BBS",
   },
+  {
+    href: "/calculators/pipe-weight",
+    title: "MS Pipe Weight Calculator",
+    description:
+      "All NB sizes 15mm to 200mm. Formula: (OD \u2212 WT) \u00D7 WT \u00D7 0.02466.",
+    tag: "Pipe",
+  },
+  {
+    href: "/calculators/angle-weight",
+    title: "Steel Angle Weight Calculator",
+    description:
+      "Equal & unequal angles as per IS 808. Formula: (A + B \u2212 T) \u00D7 T \u00D7 0.00785.",
+    tag: "Angle",
+  },
+  {
+    href: "/calculators/beam-weight",
+    title: "I-Beam (ISMB) Weight Calculator",
+    description:
+      "All ISMB sizes 100\u2013600 with section modulus Zxx & moment of inertia Ixx.",
+    tag: "I-Beam",
+  },
+  {
+    href: "/calculators/channel-weight",
+    title: "Channel (ISMC) Weight Calculator",
+    description:
+      "All ISMC channel sizes 75\u2013400 with section dimensions per IS 808.",
+    tag: "Channel",
+  },
+  {
+    href: "/calculators/flat-bar-weight",
+    title: "Flat Bar Weight Calculator",
+    description:
+      "All MS flat bar sizes. Formula: Width \u00D7 Thickness \u00D7 0.00785.",
+    tag: "Flat Bar",
+  },
+  {
+    href: "/calculators/square-tube-weight",
+    title: "Square Tube (SHS) Weight Calculator",
+    description:
+      "All SHS sizes 20\u2013100mm. Formula: (Side \u2212 WT) \u00D7 WT \u00D7 4 \u00D7 0.00785.",
+    tag: "Square Tube",
+  },
+  {
+    href: "/calculators/rect-tube-weight",
+    title: "Rectangular Tube (RHS) Weight Calculator",
+    description:
+      "All RHS sizes 40\u00D720 to 200\u00D7100. Formula: 2\u00D7(W+H\u22122\u00D7WT)\u00D7WT\u00D70.00785.",
+    tag: "Rect Tube",
+  },
+  {
+    href: "/calculators/round-bar-weight",
+    title: "Round Bar Weight Calculator",
+    description:
+      "MS, SS 304/316, EN24, aluminium & brass. Formula: d\u00B2/162.2.",
+    tag: "Round Bar",
+  },
+  {
+    href: "/calculators/stainless-steel-weight",
+    title: "Stainless Steel Weight Calculator",
+    description:
+      "SS 304, 316 & 202 grades. Round bar, plate/sheet & pipe sections.",
+    tag: "Stainless Steel",
+  },
+  {
+    href: "/calculators/chequered-plate-weight",
+    title: "Chequered Plate Weight Calculator",
+    description:
+      "Diamond pattern plate 3\u201325mm. Formula: T \u00D7 7.85 \u00D7 1.05 (5% pattern).",
+    tag: "Chequered Plate",
+  },
 ];
 
 const FAQS = [
