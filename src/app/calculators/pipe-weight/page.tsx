@@ -76,6 +76,7 @@ export default function PipeWeightPage() {
               </div>
             </div>
             <p>GI pipes weigh approximately 3-5% more than MS pipes due to the zinc coating. Multiply MS weight by 1.04 for GI pipe weight.</p>
+            <p className="mt-3">Want to understand <em>why</em> hollow pipes are structurally superior to solid bars at equal weight? Read our engineering deep-dive: <Link href="/articles/hollow-vs-solid-steel-sections-structural-efficiency" className="text-accent hover:text-accent/80 transition-colors">Why Hollow Steel Sections Are Stronger Than Solid &mdash; The Math</Link>.</p>
           </div>
         </section>
 

@@ -115,6 +115,30 @@ export default function Footer() {
             >
               India Steel Demand Story
             </Link>
+            <Link
+              href="/calculators/scrap-yield"
+              className="text-white/20 hover:text-white/40 text-[11px] no-underline transition-colors"
+            >
+              Scrap Yield Calculator
+            </Link>
+            <Link
+              href="/calculators/scrap-production-cost"
+              className="text-white/20 hover:text-white/40 text-[11px] no-underline transition-colors"
+            >
+              Steel Production Cost Calculator
+            </Link>
+            <Link
+              href="/articles/steel-scrap-grades-classification-guide"
+              className="text-white/20 hover:text-white/40 text-[11px] no-underline transition-colors"
+            >
+              Steel Scrap Grades Guide
+            </Link>
+            <Link
+              href="/articles/hollow-vs-solid-steel-sections-structural-efficiency"
+              className="text-white/20 hover:text-white/40 text-[11px] no-underline transition-colors"
+            >
+              Hollow vs Solid Steel Sections
+            </Link>
           </div>
         </div>
 

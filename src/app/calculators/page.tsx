@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title:
     "Free Steel Calculators — Weight, TMT Bar, Plate, Pipe & More | SteelMath",
   description:
-    "Free online steel calculators for weight, TMT bar (d²/162), steel plate, MS pipe, angle, channel & beam. Instant results with formulas, charts and all Indian standard sizes. Built for engineers, contractors & fabricators.",
+    "Free online steel calculators for weight, TMT bar (d²/162), steel plate, MS pipe, angle, channel, beam, scrap yield & production cost. Instant results with formulas, charts and all standard sizes. Built for engineers, traders & fabricators.",
   keywords: [
     "steel calculator",
     "steel weight calculator",
@@ -21,6 +21,10 @@ export const metadata: Metadata = {
     "construction calculator india",
     "fabrication calculator",
     "steel section weight",
+    "scrap yield calculator",
+    "steel production cost calculator",
+    "scrap to steel cost",
+    "HMS scrap yield",
   ],
   alternates: { canonical: "https://steelmath.com/calculators" },
   openGraph: {
@@ -159,6 +163,20 @@ const CALCULATORS = [
     description:
       "Diamond pattern plate 3\u201325mm. Formula: T \u00D7 7.85 \u00D7 1.05 (5% pattern).",
     tag: "Chequered Plate",
+  },
+  {
+    href: "/calculators/scrap-yield",
+    title: "Scrap Yield Calculator",
+    description:
+      "Model scrap-to-steel yield by grade and furnace type. HMS 1, shredded, turnings & more.",
+    tag: "Scrap & Melting",
+  },
+  {
+    href: "/calculators/scrap-production-cost",
+    title: "Scrap-to-Steel Production Cost",
+    description:
+      "Full cost waterfall from scrap to finished steel. Enter your own prices for every input.",
+    tag: "Scrap & Melting",
   },
 ];
 
@@ -406,6 +424,12 @@ export default function CalculatorsPage() {
               className="block text-white/40 hover:text-accent text-xs no-underline transition-colors"
             >
               Steel Angle Weight Chart — All Sizes &amp; Formula &rarr;
+            </Link>
+            <Link
+              href="/articles/steel-scrap-grades-classification-guide"
+              className="block text-white/40 hover:text-accent text-xs no-underline transition-colors"
+            >
+              Steel Scrap Grades — Complete Classification Guide &rarr;
             </Link>
           </div>
         </div>

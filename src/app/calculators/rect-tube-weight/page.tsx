@@ -64,7 +64,7 @@ export default function RectTubeWeightPage() {
           <h2 className="text-white font-bold text-lg sm:text-xl mb-4">Rectangular Tube Weight Formula &amp; Examples</h2>
           <div className="text-white/50 text-sm space-y-4 leading-relaxed">
             <div className="glass-panel p-4 font-mono text-accent text-center text-base">Weight (kg/m) = 2 × (W + H − 2×WT) × WT × 0.00785</div>
-            <p>Where <strong className="text-white/70">W</strong> = width, <strong className="text-white/70">H</strong> = height, <strong className="text-white/70">WT</strong> = wall thickness, all in mm.</p>
+            <p>Where <strong className="text-white/70">W</strong> = width, <strong className="text-white/70">H</strong> = height, <strong className="text-white/70">WT</strong> = wall thickness, all in mm. Hollow sections like RHS are structurally more efficient than solid bars of equal weight &mdash; see our <Link href="/articles/hollow-vs-solid-steel-sections-structural-efficiency" className="text-accent hover:text-accent/80 transition-colors">engineering analysis proving the math</Link>.</p>
             <div className="glass-panel p-4 mt-4">
               <h3 className="text-white font-bold text-sm mb-2">Example — 100×50×4mm RHS</h3>
               <div className="space-y-1.5 font-mono text-xs">

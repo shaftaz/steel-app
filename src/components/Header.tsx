@@ -37,6 +37,13 @@ const CALC_CATEGORIES = [
     ],
   },
   {
+    label: "Scrap & Melting",
+    items: [
+      { href: "/calculators/scrap-yield", label: "Scrap Yield Calculator" },
+      { href: "/calculators/scrap-production-cost", label: "Scrap-to-Steel Production Cost" },
+    ],
+  },
+  {
     label: "Specialty",
     items: [
       { href: "/calculators/stainless-steel-weight", label: "Stainless Steel Calculator" },
@@ -87,7 +94,7 @@ export default function Header() {
               <svg className={`w-3 h-3 transition-transform ${calcOpen ? "rotate-180" : ""}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path d="M19 9l-7 7-7-7" /></svg>
             </button>
             {calcOpen && (
-              <div className="absolute top-full left-0 mt-1 bg-[rgba(7,14,27,0.97)] backdrop-blur-xl border border-white/10 rounded-lg shadow-2xl p-4 min-w-[540px] grid grid-cols-2 gap-x-6 gap-y-4 z-50">
+              <div className="absolute top-full left-0 mt-1 bg-[rgba(7,14,27,0.97)] backdrop-blur-xl border border-white/10 rounded-lg shadow-2xl p-4 min-w-[640px] grid grid-cols-3 gap-x-5 gap-y-4 z-50">
                 {CALC_CATEGORIES.map((cat) => (
                   <div key={cat.label}>
                     <div className="text-white/25 text-[10px] uppercase tracking-wider font-semibold mb-1.5">{cat.label}</div>
@@ -99,7 +106,7 @@ export default function Header() {
                     ))}
                   </div>
                 ))}
-                <div className="col-span-2 border-t border-white/[0.06] pt-2 mt-1">
+                <div className="col-span-3 border-t border-white/[0.06] pt-2 mt-1">
                   <Link href="/calculators" onClick={() => setCalcOpen(false)}
                     className="block px-2 py-1.5 rounded text-xs text-accent/70 hover:text-accent hover:bg-white/[0.04] no-underline transition-all font-medium">
                     View All Calculators &rarr;
