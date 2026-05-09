@@ -20,6 +20,10 @@ export const metadata: Metadata = {
     "gst on steel",
     "mill price circular",
     "steel guides",
+    "BIS certification steel",
+    "anti-dumping duty steel India",
+    "steel QCO 2024",
+    "DGTR investigations steel",
   ],
   alternates: { canonical: "https://steelmath.com/articles" },
   openGraph: {

@@ -605,7 +605,7 @@ export const articles: Article[] = [
 
 <p><strong>If you\u2019re a buyer of speciality grades not covered by the duty</strong> (stainless, electrical steel, tinplate), your import economics are largely unaffected \u2014 though freight and insurance costs are still elevated due to Hormuz.</p>
 
-<p><strong>Related on SteelMath:</strong> <a href="/articles/india-steel-demand-story-not-china-2026">India\u2019s Steel Demand Story \u2014 Why It\u2019s Not China</a> &middot; <a href="/articles/hormuz-crisis-steel-impact-india">Hormuz Crisis Impact</a> &middot; <a href="/calculator">Steel Weight Calculator</a></p>
+<p><strong>Related on SteelMath:</strong> <a href="/articles/india-steel-demand-story-not-china-2026">India\u2019s Steel Demand Story \u2014 Why It\u2019s Not China</a> &middot; <a href="/articles/hormuz-crisis-steel-impact-india">Hormuz Crisis Impact</a> &middot; <a href="/articles/bis-certification-steel-imports-india-2026-complete-guide">BIS Certification Guide</a> &middot; <a href="/articles/anti-dumping-duty-steel-imports-india-2026-active-cases">Anti-Dumping Duty Tracker</a> &middot; <a href="/calculator">Steel Weight Calculator</a></p>
 `,
   },
   {
@@ -5593,6 +5593,286 @@ At k = 0.95: D/t = 40.0 \u2014 very thin, buckling is the primary failure mode.<
 <p><em>All mathematical derivations in this article can be verified by substitution into the master formula. The author invites readers to confirm any result using SteelMath\u2019s calculators or by hand computation.</em></p>
 
 <p><strong>Related on SteelMath:</strong> <a href="/articles/how-to-calculate-weight-of-steel-formula-guide">How to Calculate Weight of Steel \u2014 Every Formula</a> &middot; <a href="/articles/ms-pipe-weight-calculator-chart">MS Pipe Weight Chart \u2014 All NB Sizes</a> &middot; <a href="/calculators/pipe-weight">Pipe Weight Calculator</a> &middot; <a href="/calculators/square-tube-weight">Square Tube Calculator</a> &middot; <a href="/calculators/rect-tube-weight">Rect Tube Calculator</a> &middot; <a href="/calculators/beam-weight">I-Beam Calculator</a></p>
+`,
+  },
+  {
+    slug: "bis-certification-steel-imports-india-2026-complete-guide",
+    title: "The Complete BIS Certification Guide for Steel Imports Into India: 151 Mandatory Standards, QCO 2024, and What Every Importer Must Know",
+    category: "GUIDE" as Category,
+    categoryColor: "green",
+    date: "2026-05-05",
+    readTime: "12 min",
+    excerpt:
+      "151 Indian Standards now mandatory for all steel imports under QCO 2024. BIS certification process, timeline, cost, penalties \u2014 essential for every importer.",
+    metaTitle:
+      "BIS Certification for Steel Imports India 2026 \u2014 151 Standards Guide | SteelMath",
+    metaDescription:
+      "151 Indian Standards now mandatory for all steel imports under QCO 2024. BIS certification process, timeline, cost, penalties. Essential guide for importers.",
+    relatedCalculators: ["weight"],
+    content: `
+<p>If you import steel into India \u2014 or you\u2019re considering it \u2014 this is the most important compliance document you\u2019ll read this year. As of June 16, 2025, no steel or steel product falling under Chapters 72 and 73 of the ITC(HS) code can enter India without conforming to one of 151 specified Indian Standards, bearing the BIS Standard Mark under a valid license. No exceptions. No grace period. No workarounds.</p>
+
+<p>The regulatory framework has tightened dramatically over the past 18 months. The Steel and Steel Products (Quality Control) Order, 2024 \u2014 notified via S.O. 3716(E) dated August 29, 2024 \u2014 consolidates and expands decades of piecemeal quality control measures into a single, comprehensive mandate. In parallel, the CBIC has issued enforcement instructions to all customs authorities, and registration on the Steel Import Monitoring System (SIMS) portal remains compulsory for every consignment.</p>
+
+<p>This guide covers everything a procurement manager, importer, or foreign manufacturer needs to know: which products are covered, which standards apply, how the certification process works, what it costs, how long it takes, what happens if you\u2019re not compliant, and how all of this interacts with the Hormuz crisis and current trade environment.</p>
+
+<h2>The Regulatory Framework: QCO 2024</h2>
+
+<p>The Steel and Steel Products (Quality Control) Order, 2024 is the legal instrument that makes BIS certification mandatory for steel imports. Issued under Section 16 of the BIS Act, 2016, it represents the most comprehensive quality control intervention in Indian steel history.</p>
+
+<p>The QCO incorporates 151 Indian Standards covering steel and steel products classified under Chapters 72 (iron and steel) and 73 (articles of iron or steel) of the ITC(HS) codes. These 151 standards encompass all major product categories: plain carbon steel, alloy steel, and stainless steel across every product form \u2014 flat products, long products, tubes and pipes, wire, forgings, and castings.</p>
+
+<p>The earlier regulatory framework, built through multiple separate QCOs notified over the years by the Ministry of Steel (starting with 145 standards as announced in December 2023), has been consolidated into this single order. The QCO 2024 applies equally to domestic manufacturers and foreign manufacturers exporting to India. No steel product can be sold, distributed, or imported into India without conforming to the relevant Indian Standard and bearing the BIS Standard Mark.</p>
+
+<p>A critical expansion effective June 16, 2025 requires not just the finished product to comply, but also the input materials used in manufacturing those products. The CBIC instruction dated June 13, 2025 mandates that importers verify their steel products\u2019 input materials against a mapped list of Indian Standards. This means a foreign mill producing IS 2062 grade HR coil must also demonstrate that its steelmaking inputs (iron ore specifications, ferro alloy grades, etc.) conform to the corresponding Indian Standards.</p>
+
+<h2>Which Products Need BIS Certification?</h2>
+
+<p>The short answer: virtually everything made of steel that crosses India\u2019s borders under Chapters 72 and 73.</p>
+
+<h3>Flat Products</h3>
+<p>IS 2062 covers hot rolled structural steel \u2014 the most widely traded flat product in India. This includes plates, sheets, strips, and sections in grades E250, E350, E410, E450, and speciality grades. IS 10748 covers hot rolled steel strip for welded tubes and pipes. IS 513 covers cold rolled low carbon steel sheets and strips. IS 277 covers galvanised steel sheets (GP/GC). IS 15911 covers stainless steel plates, sheets, and strips.</p>
+
+<h3>Long Products</h3>
+<p>IS 1786 covers high strength deformed steel bars (TMT bars) for concrete reinforcement \u2014 the single most consumed steel product in Indian construction. IS 2830 covers carbon steel billets, blooms, and slabs for re-rolling. IS 7887 covers structural steel for ship building and bridges. IS 1977 covers structural steel for general construction.</p>
+
+<h3>Tubes and Pipes</h3>
+<p>IS 1239 covers mild steel tubes (ERW) \u2014 used extensively in water supply, gas distribution, and structural applications. IS 3589 covers electrically welded steel pipes for water, gas, and sewage. IS 4923 covers hollow steel sections for structural use. IS 1161 covers steel tubes for structural purposes.</p>
+
+<h3>Wire and Wire Products</h3>
+<p>IS 1785 covers plain hard-drawn steel wire for pre-stressed concrete. IS 280 covers mild steel wire. IS 4454 covers steel wire ropes.</p>
+
+<h3>Stainless Steel</h3>
+<p>IS 6911 covers stainless steel bars and flats. IS 6528 covers stainless steel bars for machining. The DGTR also initiated an anti-dumping investigation in September 2025 on cold-rolled stainless steel products of grade 300-400 from China, Indonesia, and Vietnam, adding another layer of trade defence to the regulatory environment \u2014 see our <a href="/articles/anti-dumping-duty-steel-imports-india-2026-active-cases">Anti-Dumping Duty Tracker</a> for full details.</p>
+
+<h3>Forgings, Castings, and Fasteners</h3>
+<p>Multiple IS standards cover steel castings, forgings, bolts, nuts, and washers used in structural, automotive, and general engineering applications.</p>
+
+<h2>The Certification Process: Step by Step</h2>
+
+<p><strong>Step 1: Identify the applicable Indian Standard.</strong> Determine which IS standard your product falls under. The QCO 2024 Schedule 1 lists all 151 standards with their corresponding product descriptions and HS codes. If your product maps to multiple standards (e.g., a stainless steel plate might fall under both IS 15911 and IS 6911), you must certify under the most specific applicable standard.</p>
+
+<p><strong>Step 2: Prepare documentation.</strong> The manufacturer (not the importer \u2014 this is critical) must compile: a completed BIS application form, the manufacturing process flow chart from raw material receipt to final packing, a list of testing equipment with calibration certificates, details of quality control personnel qualifications, raw material specifications and test certificates, product test reports from recognised laboratories, and factory layout and capacity documentation.</p>
+
+<p><strong>Step 3: Submit application and pay fees.</strong> Applications are submitted through the BIS online portal (manakonline.bis.gov.in). Fees include the application fee (varies by product category), the audit fee (covers BIS inspector travel and man-days), and the initial marking fee. For foreign manufacturers, additional costs include auditor travel expenses (flights, accommodation for BIS inspectors visiting the factory).</p>
+
+<p><strong>Step 4: BIS document review.</strong> BIS reviews the application and supporting documents. This phase typically takes 4\u20138 weeks. BIS may request clarifications, additional test reports, or supplementary documentation. Responses must be submitted within the stipulated timeframe or the application lapses.</p>
+
+<p><strong>Step 5: Factory inspection and audit.</strong> BIS auditors visit the manufacturing facility to verify: the production process matches the submitted flow chart, testing equipment is adequate and calibrated, quality control systems are in place, product samples meet IS standard requirements, and the facility has the capability to consistently produce conforming product. For Indian manufacturers, this typically takes 2\u20133 weeks to schedule and complete. For foreign manufacturers, scheduling depends on BIS auditor availability for international travel and can take 4\u20138 weeks.</p>
+
+<p><strong>Step 6: Sample testing.</strong> Product samples collected during the factory inspection are tested at BIS-recognised laboratories. Testing covers chemical composition, mechanical properties (tensile strength, yield strength, elongation), dimensional tolerances, surface quality, and any product-specific tests required by the relevant IS standard. Results typically take 2\u20134 weeks.</p>
+
+<p><strong>Step 7: License grant.</strong> Upon satisfactory completion of all steps, BIS grants the license to use the Standard Mark (ISI Mark) on the certified product. The license specifies the product, IS standard, manufacturing facility, and validity period. The license must be renewed periodically, and BIS conducts regular surveillance inspections.</p>
+
+<p><strong>Total timeline: 3\u20136 months for domestic manufacturers, 4\u20138 months for foreign manufacturers.</strong></p>
+
+<h2>The Cost of Compliance</h2>
+
+<p>BIS certification involves several cost components. Application fees and marking fees are set by BIS and are relatively modest (\u20B91,000\u201310,000 depending on product category). The audit fee covers BIS inspector travel and inspection time. For domestic audits, this is typically \u20B920,000\u201350,000. For foreign manufacturers, auditor travel costs (international flights, hotels, per diem) can add \u20B92\u20135 lakh per audit. Testing fees at recognised laboratories range from \u20B910,000\u201350,000 depending on the number of tests and product complexity. Ongoing costs include annual surveillance inspection fees and marking fee payments based on production volume.</p>
+
+<p>For a foreign steel mill seeking BIS certification for the first time, the total first-year cost is typically \u20B95\u201315 lakh (approximately $6,000\u201318,000), depending on the number of products and the mill\u2019s location. While not prohibitive for large international mills, this cost \u2014 combined with the time investment \u2014 acts as a meaningful barrier for smaller suppliers and opportunistic exporters, which is precisely the policy intent.</p>
+
+<h2>What Happens If You\u2019re Not Compliant</h2>
+
+<p>The penalties for non-compliance are severe and have been strengthened under the BIS Act, 2016.</p>
+
+<p>Goods arriving at Indian ports without valid BIS certification will be held by customs. The consignment cannot be cleared for domestic sale. Options are limited to re-export (at the importer\u2019s cost), destruction under customs supervision, or conversion to scrap (sold as melting scrap, not as conforming steel product, at a substantial financial loss).</p>
+
+<p>Under Section 29 of the BIS Act, 2016, violations can attract imprisonment for a term up to two years, a fine up to \u20B95 lakh, or both for a first offence. Repeat offences carry higher penalties. BIS also conducts market surveillance and enforcement activities to detect non-conforming products that have entered the market. Products found without valid BIS marks are seized, and the supplier/importer faces legal action.</p>
+
+<p>The financial impact of non-compliance extends beyond penalties. A rejected consignment represents stranded working capital (the steel is paid for but unsaleable), port storage charges (demurrage accumulates daily), potential loss of the full consignment value if re-export is impractical, and reputational damage with suppliers and customers.</p>
+
+<h2>How BIS Works Alongside Other Trade Measures</h2>
+
+<p>BIS certification is one layer in a multi-layered regulatory framework for steel imports into India. Understanding how these layers interact is essential for accurate landed cost calculation.</p>
+
+<p>The first layer is BIS/QCO certification (quality compliance). The second is the <a href="/articles/safeguard-duty-steel-imports-india-2026">Safeguard Duty</a> at 12% on flat products (trade protection). The third is <a href="/articles/anti-dumping-duty-steel-imports-india-2026-active-cases">anti-dumping duties</a> on specific products from specific countries (price fairness). The fourth is basic customs duty at 7.5% for most steel products (revenue). The fifth is IGST at 18% on the cumulative value (tax). The sixth is SIMS registration (monitoring and transparency).</p>
+
+<p>A steel importer must navigate all six layers simultaneously. Missing any one can result in the consignment being held at port. Use SteelMath\u2019s <a href="/calculator">Steel Weight Calculator</a> for weight calculations, and refer to our <a href="/articles/gst-steel-products-india-rates-itc">GST on Steel guide</a> for the tax component.</p>
+
+<h2>The Hormuz Crisis Dimension</h2>
+
+<p>The current Hormuz crisis adds urgency to BIS compliance planning. With freight costs elevated 30\u201340%, transit times extended by 20+ days for rerouted shipments, and war risk insurance adding further premiums, the cost of getting a consignment rejected at an Indian port for BIS non-compliance is significantly higher than under normal conditions.</p>
+
+<p>If your imported steel is rerouted via the Cape of Good Hope, spending 25 extra days at sea, and then held at port for BIS documentation issues \u2014 the combined working capital cost, demurrage, and opportunity cost can exceed the value of the steel itself.</p>
+
+<p>For importers: verify BIS compliance for every consignment BEFORE it ships, not after it arrives. Confirm your foreign supplier\u2019s BIS license number, check that it covers the specific IS standard and product grade you\u2019re importing, and ensure the BIS Standard Mark is physically present on the product.</p>
+
+<p>For foreign manufacturers: if you don\u2019t yet have BIS certification for the Indian market, the 4\u20138 month certification timeline means starting the process today would give you market access by late 2026. With the Hormuz crisis redirecting global steel trade flows, the Indian market is becoming more attractive for suppliers who can meet compliance requirements.</p>
+
+<h2>Practical Checklist for Steel Importers</h2>
+
+<p>Before placing any import order, verify: Is the supplier\u2019s BIS license valid and current? Does the license cover the specific IS standard for your product? Does the license cover the specific product grade and dimensions? Is the BIS Standard Mark physically present on each piece or bundle? Have you registered the consignment on the SIMS portal? Have you calculated all applicable duties (BCD, safeguard, anti-dumping, IGST)? Do you have the test certificates conforming to the relevant IS standard?</p>
+
+<p>If any answer is \u201Cno\u201D or \u201Cnot sure,\u201D resolve it before the shipment sails. Resolving compliance issues at the port is exponentially more expensive and time-consuming than resolving them at the source.</p>
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>How many Indian Standards are mandatory for steel imports?</h3>
+<p>151 Indian Standards covering steel and steel products under Chapters 72 and 73 of ITC(HS) codes are now mandatory under the Steel and Steel Products (Quality Control) Order, 2024. This was notified via S.O. 3716(E) dated August 29, 2024, and enforced for imports with Bills of Lading dated on or after June 16, 2025.</p>
+
+<h3>Can steel be imported into India without BIS certification?</h3>
+<p>No. Under Section 17 of the BIS Act, 2016 and the Steel QCO 2024, no steel or steel product falling under Chapters 72 and 73 can enter the Indian market without bearing the BIS Standard Mark under a valid BIS license. Violations attract penalties including seizure of goods, fines, and potential imprisonment.</p>
+
+<h3>How long does BIS certification for steel take?</h3>
+<p>The typical timeline is 3\u20136 months for domestic manufacturers, 4\u20138 months for foreign manufacturers. This includes application, document review, factory inspection, sample testing, and license issuance.</p>
+
+<h3>What is the Steel Import Monitoring System (SIMS)?</h3>
+<p>SIMS is a mandatory online registration system requiring all steel importers to register their import consignments before shipment arrives in India. It provides advance information about incoming steel imports and is a prerequisite alongside BIS certification for customs clearance.</p>
+
+<h3>Which key IS standards apply to commonly imported steel products?</h3>
+<p>The most commonly applicable standards include IS 2062 (hot rolled structural steel), IS 1786 (TMT bars), IS 10748 (hot rolled strip), IS 513 (cold rolled sheets), IS 277 (galvanised sheets), IS 15911 (stainless steel plates), IS 6911 (stainless steel bars), and IS 4923 (hollow steel sections).</p>
+
+<h2>Data Sources &amp; Verification</h2>
+<ul>
+<li>Steel and Steel Products (Quality Control) Order, 2024 \u2014 S.O. 3716(E) dated August 29, 2024 (Ministry of Steel, Government of India)</li>
+<li>CBIC Instruction dated June 13, 2025 \u2014 enforcement for B/L dated on or after June 16, 2025; compliance of input materials mandated</li>
+<li>Ministry of Steel, PIB press release dated December 11, 2023 \u2014 QCO on 145 Indian Standards (subsequently expanded to 151)</li>
+<li>BIS Act, 2016 \u2014 Section 16 (QCO powers), Section 17 (Standard Mark), Section 29 (penalties)</li>
+<li>BIS online portal: manakonline.bis.gov.in</li>
+<li>SIMS portal: sims.gov.in</li>
+<li>China-Briefing (Dezan Shira &amp; Associates): as of March 2025, India had issued 187 QCOs covering over 679 product categories across all sectors</li>
+</ul>
+
+<p><em>This guide is for informational purposes. BIS regulations are subject to change. Always verify current requirements at bis.gov.in and steel.gov.in before making compliance decisions. SteelMath is not a legal advisor or BIS consultant.</em></p>
+
+<p><strong>Related on SteelMath:</strong> <a href="/articles/safeguard-duty-steel-imports-india-2026">Safeguard Duty Guide</a> &middot; <a href="/articles/anti-dumping-duty-steel-imports-india-2026-active-cases">Anti-Dumping Duty Tracker</a> &middot; <a href="/articles/gst-steel-products-india-rates-itc">GST on Steel</a> &middot; <a href="/calculator">Steel Weight Calculator</a></p>
+`,
+  },
+  {
+    slug: "anti-dumping-duty-steel-imports-india-2026-active-cases",
+    title: "Anti-Dumping Duty on Steel Imports Into India: Every Active Case, Every Rate, Every Expiry Date (May 2026)",
+    category: "GUIDE" as Category,
+    categoryColor: "green",
+    date: "2026-05-05",
+    readTime: "10 min",
+    excerpt:
+      "Every active anti-dumping duty on steel imports into India. Products, countries, duty rates, expiry dates. DGTR cases on stainless, seamless, flat products.",
+    metaTitle:
+      "Anti-Dumping Duty on Steel India 2026 \u2014 Active Cases & Rates Guide | SteelMath",
+    metaDescription:
+      "Every active anti-dumping duty on steel imports into India. Products, countries, duty rates, expiry dates. DGTR cases on stainless, seamless, flat products.",
+    relatedCalculators: ["weight"],
+    content: `
+<p>India maintains one of the most active trade defence regimes in the world for steel products. The Directorate General of Trade Remedies has investigated, recommended, and secured anti-dumping duties on steel imports from China, Korea, Japan, Indonesia, Vietnam, and over a dozen other countries across product categories ranging from seamless tubes to flat rolled stainless steel.</p>
+
+<p>For procurement managers sourcing steel internationally, knowing which products from which countries carry anti-dumping duties \u2014 and at what rate \u2014 is essential for accurate landed cost calculation. Getting this wrong means unexpected duty demands at the port, eroded margins, and potential consignment delays.</p>
+
+<p>This page is designed to be bookmarked and checked before every import purchase order. We update it whenever DGTR issues new findings or CBIC publishes new duty notifications.</p>
+
+<h2>How Anti-Dumping Works in India</h2>
+
+<p>Anti-dumping duty is a trade remedy mechanism permitted under WTO rules. It allows a country to impose additional customs duty on imports that are being \u201Cdumped\u201D \u2014 sold at prices below their normal value in the exporter\u2019s home market (or below their cost of production).</p>
+
+<p>In India, the process works through a defined institutional framework. The domestic industry (or DGTR itself) files a petition alleging that imports from a specific country are being dumped and causing material injury. DGTR initiates an investigation, which typically takes 12\u201318 months. During the investigation, DGTR collects data from domestic producers, foreign exporters, and importers. If the investigation finds dumping and injury, DGTR issues \u201Cfinal findings\u201D recommending a specific duty rate. The Ministry of Finance (through CBIC) then imposes the duty via a customs notification, typically for a period of 5 years.</p>
+
+<p>The duty rates are producer-specific. A Chinese mill that cooperates fully with the investigation and demonstrates lower dumping margins will receive a lower duty rate than one that doesn\u2019t cooperate. Non-cooperating producers are assigned the highest \u201Cresidual\u201D duty rate, which serves as a penalty for non-participation.</p>
+
+<h2>Active Anti-Dumping Duties on Steel Products (As of May 2026)</h2>
+
+<h3>Stainless Steel Seamless Tubes and Pipes from China</h3>
+
+<p>This is one of the most clearly defined active anti-dumping orders on steel products in India. CBIC Notification No. 31/2022-Customs (ADD), dated December 20, 2022, imposed duty on stainless steel seamless tubes and pipes with diameter up to and including 6 NPS, originating from China PR. The duty applies to products manufactured using either hot extrusion or hot piercing processes, whether sold as hot finished or cold finished. Defective, non-prime, or secondary grades are also covered.</p>
+
+<p>The duty amount varies by producer. Cooperating Chinese producers received individually assessed rates. Non-cooperating producers face the highest residual rate of <strong>$3,801 per MT</strong>. The duty is payable in Indian currency at the exchange rate applicable on the date of presentation of the bill of entry.</p>
+
+<p>This order is valid for 5 years from December 20, 2022, meaning it remains in force until approximately December 2027 unless revoked or amended.</p>
+
+<p>In March 2026, DGTR initiated a sunset review investigation on seamless tubes of iron, alloy or non-alloy steel (not stainless) from China PR, indicating that the broader seamless tube trade continues to be monitored actively.</p>
+
+<h3>Flat Rolled Products of Stainless Steel \u2014 Investigation from 15 Countries</h3>
+
+<p>This is one of the most sweeping anti-dumping investigations in Indian steel trade history. DGTR initiated an investigation (File No. 6/12/2019-DGTR) on flat rolled products of stainless steel from fifteen countries: China PR, Korea RP, European Union, Japan, Taiwan, Indonesia, USA, Thailand, South Africa, UAE, Hong Kong, Singapore, Mexico, Vietnam, and Malaysia.</p>
+
+<p>The investigation covered a broad range of stainless steel flat products. Given the number of countries and the complexity of the product scope, this investigation has been proceeding through multiple stages. Importers of stainless steel flat products from any of these fifteen countries should verify the current status of this case on DGTR\u2019s website before placing orders, as provisional or final duties could be imposed at any stage.</p>
+
+<h3>Cold-Rolled Stainless Steel Grades 300-400 from China, Indonesia, and Vietnam</h3>
+
+<p>On September 29, 2025, DGTR announced the initiation of a new anti-dumping investigation on cold-rolled stainless steel products of grade 300-400 originating from or imported from China, Indonesia, and Vietnam. This investigation covers austenitic steels (300 series, minimum 6% nickel content) and ferritic/martensitic steels (400 series), including products that have been further processed after cold rolling \u2014 annealing, quenching, polishing, coating, and other surface treatments.</p>
+
+<p>The HS codes covered include 721990, 721911\u2013721935, 722011\u2013722090. This is a broad product scope that could affect significant import volumes, particularly from China and Vietnam which have been major sources of cold-rolled stainless steel for Indian buyers.</p>
+
+<p>This investigation is ongoing as of May 2026. If DGTR\u2019s preliminary findings are affirmative, provisional anti-dumping duties could be imposed before the final determination.</p>
+
+<h3>Seamless Tubes of Iron, Alloy or Non-Alloy Steel from China (Sunset Review 2026)</h3>
+
+<p>On March 20, 2026, DGTR initiated a sunset review investigation on seamless tubes, pipes, and hollow profiles of iron, alloy or non-alloy steel (other than cast iron and stainless steel) from China PR. These products have external diameters not exceeding 355.6mm and may be hot finished, cold drawn, or cold rolled.</p>
+
+<p>Anti-dumping duties on this product category from China have been in place for approximately a decade, having been first imposed in 2016 and subsequently extended through sunset reviews. The current investigation will determine whether the duty should be continued for another five years.</p>
+
+<h2>Ongoing DGTR Investigations Relevant to Steel and Metals</h2>
+
+<p>Beyond the cases directly involving steel products, DGTR is simultaneously conducting several investigations on products closely related to the steel value chain.</p>
+
+<p>Aluminium foil (80 micron and below) from China, Indonesia, Malaysia, and Thailand is under investigation, with an oral hearing scheduled for April 28, 2026. This reflects the broader metals trade defence activity that accelerated during the Hormuz crisis as Gulf aluminium production was disrupted.</p>
+
+<p>Ferro alloy investigations are also active, reflecting the interlinked nature of the steelmaking input chain. Anti-dumping investigations on upstream inputs can affect steel production costs even for domestically produced steel.</p>
+
+<h2>How Anti-Dumping Duty Interacts with Other Import Levies</h2>
+
+<p>Anti-dumping duty does not replace other duties \u2014 it is charged in addition to the standard duty stack. A typical calculation for a steel product that carries anti-dumping duty looks like this:</p>
+
+<p>Start with the assessable value (CIF price in INR). Add basic customs duty at 7.5% on the assessable value. Add <a href="/articles/safeguard-duty-steel-imports-india-2026">safeguard duty</a> at 12% where applicable (currently on flat steel products). Add social welfare surcharge at 10% on the customs duty component. Add anti-dumping duty (the ADD amount, either fixed per tonne or percentage). Calculate IGST at 18% on the cumulative value (assessable value + all duties above).</p>
+
+<p>The compounding effect is significant. On a product with a CIF price of $500/MT, the total landed cost including anti-dumping duty can exceed the CIF price by 45\u201360%, depending on the specific ADD rate. This often makes imports uncompetitive against domestic steel, which is the policy intent.</p>
+
+<p>Use SteelMath\u2019s <a href="/calculator">Steel Weight Calculator</a> to model product weights, and refer to our <a href="/articles/gst-steel-products-india-rates-itc">GST on Steel guide</a> for the tax calculations.</p>
+
+<h2>What Importers Should Do</h2>
+
+<p><strong>Before placing any import order:</strong> Check DGTR\u2019s website (dgtr.gov.in) for active anti-dumping orders and ongoing investigations relevant to your product and source country. DGTR maintains a searchable database of all cases. Cross-reference the product description and HS code \u2014 anti-dumping orders are product-specific and country-specific, so a product that attracts duty from China may be duty-free from an alternative source.</p>
+
+<p><strong>When evaluating alternative sources:</strong> If your traditional Chinese or Vietnamese supplier\u2019s products carry anti-dumping duty, evaluate alternative countries that are not subject to orders. Turkey, Brazil, Ukraine (where operational), and domestic Indian producers are common alternatives. However, verify that no anti-circumvention investigation has been initiated \u2014 DGTR watches for trade diversion through third countries.</p>
+
+<p><strong>When negotiating with suppliers:</strong> Some foreign producers are individually assessed at lower duty rates than the residual rate. If your supplier cooperated with the DGTR investigation and received an individual rate, verify their name and rate in the CBIC notification. The difference between an individually assessed rate and the residual rate can be thousands of dollars per tonne.</p>
+
+<p><strong>When budgeting for imports:</strong> Build anti-dumping duty into your landed cost model from the start. Do not treat it as an unexpected charge. The duty is known, published, and predictable \u2014 failing to account for it in your quotations or project estimates is a planning error, not a regulatory surprise.</p>
+
+<h2>The Compliance Stack for Steel Imports</h2>
+
+<p>Anti-dumping duty is one part of a comprehensive regulatory framework. Every steel import into India must also comply with <a href="/articles/bis-certification-steel-imports-india-2026-complete-guide">BIS certification requirements</a> (151 mandatory Indian Standards under QCO 2024), SIMS registration, basic customs duty, and <a href="/articles/gst-steel-products-india-rates-itc">GST</a>. Missing any single layer can result in consignment delays or rejection at port.</p>
+
+<h2>The Hormuz Dimension</h2>
+
+<p>The <a href="/articles/hormuz-crisis-steel-impact-india">Hormuz crisis</a> has created an unusual dynamic for anti-dumping enforcement. With Iranian steel production offline and Chinese exports constrained by freight disruptions, some product categories that were previously oversupplied with dumped imports are now experiencing genuine shortage. This may reduce the economic injury to domestic industry \u2014 one of the prerequisites for maintaining anti-dumping duties.</p>
+
+<p>However, India\u2019s domestic steel producers are likely to argue that the structural risk of dumped imports returning once the crisis resolves justifies maintaining existing duties and investigating new cases. The sunset review on seamless tubes from China, initiated just three weeks after the Hormuz crisis began, suggests DGTR is maintaining its protective posture regardless of short-term supply dynamics.</p>
+
+<p>For importers, the practical implication is clear: do not assume that the crisis environment will lead to relaxation of anti-dumping enforcement. If anything, expect DGTR to initiate additional investigations as it positions to protect domestic capacity that is currently being expanded (RINL revival, JSW Dolvi, Tata Kalinganagar Phase 2) against the eventual normalisation of global trade flows.</p>
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>What anti-dumping duties are active on steel imports into India in 2026?</h3>
+<p>Key active duties include: stainless steel seamless tubes and pipes from China PR (December 2022, 5 years, up to $3,801/MT residual); flat rolled stainless steel from 15 countries (investigation ongoing); cold-rolled stainless steel grades 300-400 from China, Indonesia, Vietnam (investigation initiated September 2025); and seamless tubes from China (sunset review March 2026).</p>
+
+<h3>How is anti-dumping duty calculated on steel?</h3>
+<p>Anti-dumping duty equals the difference between normal value (exporter\u2019s domestic price or constructed cost) and export price to India. It is expressed as a fixed amount per tonne or a percentage. Rates are producer-specific \u2014 cooperating producers get lower rates than non-cooperating ones.</p>
+
+<h3>Who investigates anti-dumping cases in India?</h3>
+<p>The Directorate General of Trade Remedies (DGTR), under the Ministry of Commerce and Industry. DGTR investigates dumping and injury; based on its final findings, the Ministry of Finance (CBIC) imposes the duty via customs notification.</p>
+
+<h3>How long do anti-dumping duties last?</h3>
+<p>Typically 5 years from the customs notification date. Before expiry, sunset reviews can extend the duty for another 5 years. There is no limit on the number of extensions.</p>
+
+<h3>Does anti-dumping duty apply on top of other import duties?</h3>
+<p>Yes. Anti-dumping duty is levied in addition to basic customs duty (7.5%), safeguard duty (12% on flat products), social welfare surcharge, and IGST (18%). The cumulative stack can make imports 45\u201360% more expensive than CIF price.</p>
+
+<h2>Data Sources &amp; Verification</h2>
+<ul>
+<li>DGTR website (dgtr.gov.in): active anti-dumping investigations database, case file lists, initiation notifications</li>
+<li>CBIC Notification No. 31/2022-Customs (ADD), December 20, 2022: stainless steel seamless tubes and pipes from China PR, 5-year duty, residual rate $3,801/MT</li>
+<li>CBIC Notification No. 06/2023-Customs (ADD), June 9, 2023: amendment regarding company name change</li>
+<li>DGTR File No. 6/12/2019-DGTR: flat rolled stainless steel products investigation from 15 countries</li>
+<li>DGTR initiation notification September 29, 2025: cold-rolled stainless steel grades 300-400 from China, Indonesia, Vietnam; HS codes 7219xx, 7220xx</li>
+<li>DGTR initiation notification March 20, 2026: sunset review on seamless tubes from China PR</li>
+<li>DGTR oral hearing schedule April 28, 2026: aluminium foil investigation</li>
+<li>Customs Tariff Act, 1975: legal basis for anti-dumping duty imposition (Section 9A)</li>
+<li>WTO Anti-Dumping Agreement (Article VI of GATT 1994)</li>
+</ul>
+
+<p><em>This tracker is updated when new DGTR findings or CBIC notifications are published. Anti-dumping duty rates and case statuses are subject to change. Always verify current rates against the latest CBIC notification before clearing imports. SteelMath is not a customs broker or legal advisor.</em></p>
+
+<p><strong>Related on SteelMath:</strong> <a href="/articles/bis-certification-steel-imports-india-2026-complete-guide">BIS Certification Guide</a> &middot; <a href="/articles/safeguard-duty-steel-imports-india-2026">Safeguard Duty Guide</a> &middot; <a href="/articles/gst-steel-products-india-rates-itc">GST on Steel</a> &middot; <a href="/articles/hormuz-crisis-steel-impact-india">Hormuz Crisis Impact</a> &middot; <a href="/calculator">Steel Weight Calculator</a></p>
 `,
   },
 ];

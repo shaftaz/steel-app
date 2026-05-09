@@ -139,6 +139,18 @@ export default function Footer() {
             >
               Hollow vs Solid Steel Sections
             </Link>
+            <Link
+              href="/articles/bis-certification-steel-imports-india-2026-complete-guide"
+              className="text-white/20 hover:text-white/40 text-[11px] no-underline transition-colors"
+            >
+              BIS Certification Guide
+            </Link>
+            <Link
+              href="/articles/anti-dumping-duty-steel-imports-india-2026-active-cases"
+              className="text-white/20 hover:text-white/40 text-[11px] no-underline transition-colors"
+            >
+              Anti-Dumping Duty Tracker
+            </Link>
           </div>
         </div>
 
