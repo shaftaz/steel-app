@@ -147,7 +147,7 @@ export default function EmailCapture({
       return (
         <div className="glass-panel p-4 bg-gradient-to-br from-accent/[0.04] to-transparent">
           <div className="flex items-center gap-2 text-emerald-400 text-xs font-semibold">
-            <span>\u2713</span> Subscribed
+            {"✓"} Successfully Subscribed
           </div>
           <button
             onClick={resetForm}
@@ -164,7 +164,7 @@ export default function EmailCapture({
     return (
       <div className={variant === "banner" ? "text-center py-4" : "py-3"}>
         <div className="flex items-center justify-center gap-2 text-emerald-400 text-xs font-semibold">
-          <span>\u2713</span> Subscribed
+          {"✓"} Successfully Subscribed
         </div>
         <button
           onClick={resetForm}
@@ -247,8 +247,7 @@ export default function EmailCapture({
               </button>
             </form>
             <p className="text-white/15 text-[11px] mt-3">
-              \u2713 No spam &nbsp; \u2713 Unsubscribe anytime &nbsp; \u2713
-              Used across 7+ countries
+              No spam &middot; Unsubscribe anytime &middot; Used across 7+ countries
             </p>
           </div>
         </section>
