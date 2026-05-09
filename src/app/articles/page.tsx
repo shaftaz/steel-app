@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { articlesByDate, CATEGORY_STYLES } from "@/lib/data/articles";
-import ArticleCard from "@/components/ArticleCard";
+import { articlesByDate } from "@/lib/data/articles";
+import ArticlesClient from "@/components/blog/ArticlesClient";
 
 export const metadata: Metadata = {
   title:
@@ -33,9 +33,6 @@ export const metadata: Metadata = {
 
 export default function ArticlesPage() {
   const sorted = articlesByDate;
-  const featured = sorted[0];
-  const rest = sorted.slice(1);
-  const featuredStyle = CATEGORY_STYLES[featured.category];
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -106,48 +103,13 @@ export default function ArticlesPage() {
             Insights &amp; Reports
           </h1>
           <p className="text-white/30 text-sm">
-            Data-driven analysis for steel professionals — pricing, supply chains, calculators &amp; guides
+            Data-driven analysis for steel professionals — pricing, supply
+            chains, calculators &amp; guides
           </p>
         </div>
 
-        {/* Featured / most recent article */}
-        <Link
-          href={`/articles/${featured.slug}`}
-          className="group block glass-panel glass-panel-hover overflow-hidden no-underline mb-5"
-        >
-          <div className="p-5 sm:p-8">
-            <div className="flex items-center gap-2.5 mb-3">
-              <span className="bg-accent/15 text-accent text-[10px] font-bold px-2.5 py-0.5 rounded-full uppercase tracking-wider">
-                Latest
-              </span>
-              <span className={`${featuredStyle.bg} ${featuredStyle.text} text-[10px] font-bold px-2.5 py-0.5 rounded-full uppercase tracking-wider`}>
-                {featured.category}
-              </span>
-              <span className="text-white/20 text-xs">{featured.readTime}</span>
-            </div>
-            <h2 className="text-white text-lg sm:text-xl font-bold mb-2 leading-snug group-hover:text-accent transition-colors">
-              {featured.title}
-            </h2>
-            <p className="text-white/30 text-sm leading-relaxed mb-3 max-w-3xl">
-              {featured.excerpt}
-            </p>
-            <div className="flex items-center gap-3">
-              <span className="text-white/15 text-xs">
-                {new Date(featured.date).toLocaleDateString("en-IN", { year: "numeric", month: "long", day: "numeric" })}
-              </span>
-              <span className="text-accent/50 text-xs font-semibold">
-                Read Article →
-              </span>
-            </div>
-          </div>
-        </Link>
-
-        {/* Remaining articles */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-          {rest.map((article) => (
-            <ArticleCard key={article.slug} article={article} />
-          ))}
-        </div>
+        {/* Client-side interactive listing with filters, search, sidebar */}
+        <ArticlesClient articles={sorted} />
       </div>
     </>
   );
