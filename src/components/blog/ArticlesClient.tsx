@@ -4,6 +4,7 @@ import { useState, useMemo } from "react";
 import Link from "next/link";
 import type { Article, Category } from "@/lib/data/articles";
 import { CATEGORY_STYLES } from "@/lib/data/articles";
+import EmailCapture from "@/components/shared/EmailCapture";
 
 /* ── helpers ── */
 function fmtDate(d: string) {
@@ -158,30 +159,7 @@ export default function ArticlesClient({ articles }: { articles: Article[] }) {
           </div>
 
           {/* Newsletter Signup */}
-          <div className="glass-panel p-4 bg-gradient-to-br from-accent/[0.04] to-transparent">
-            <h3 className="text-white/60 font-bold text-xs uppercase tracking-wider mb-1.5">
-              Steel Intelligence
-            </h3>
-            <p className="text-white/25 text-[11px] mb-3 leading-relaxed">
-              Weekly pricing moves, policy changes &amp; technical guides. Free for steel professionals.
-            </p>
-            <form
-              onSubmit={(e) => e.preventDefault()}
-              className="flex gap-2"
-            >
-              <input
-                type="email"
-                placeholder="you@company.com"
-                className="flex-1 bg-white/[0.04] border border-white/5 rounded-md px-2.5 py-1.5 text-xs text-white/60 placeholder:text-white/15 focus:outline-none focus:border-accent/30 transition-colors"
-              />
-              <button
-                type="submit"
-                className="px-3 py-1.5 bg-accent/15 text-accent border border-accent/20 rounded-md text-xs font-semibold hover:bg-accent/25 transition-colors shrink-0"
-              >
-                Subscribe
-              </button>
-            </form>
-          </div>
+          <EmailCapture variant="sidebar" />
 
           {/* Calculator Quick Links */}
           <div className="glass-panel p-4">

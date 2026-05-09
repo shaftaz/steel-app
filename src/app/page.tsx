@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import LandingCalculator from "@/components/dashboard/LandingCalculator";
 import ArticleCard from "@/components/ArticleCard";
+import EmailCapture from "@/components/shared/EmailCapture";
 import { articles, articlesByDate, CATEGORY_STYLES } from "@/lib/data/articles";
 
 export const metadata: Metadata = {
@@ -191,6 +192,9 @@ export default function Home() {
             </Link>
           </div>
         </section>
+
+        {/* Newsletter Signup */}
+        <EmailCapture variant="banner" />
       </div>
     </>
   );
