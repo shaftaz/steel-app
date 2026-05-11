@@ -154,7 +154,7 @@ export const articles: Article[] = [
 
 <p>SteelMath will continue tracking all cost channels and updating our calculators with the latest data as the situation evolves.</p>
 
-<p><strong>Related on SteelMath:</strong> <a href="/articles/india-steel-demand-story-not-china-2026">India\u2019s Steel Demand Story \u2014 Why Demand Will Outrun Supply</a> &middot; <a href="/articles/safeguard-duty-steel-imports-india-2026">Safeguard Duty Guide</a> &middot; <a href="/articles/steel-production-cost-india-bf-bof-eaf-2026">Steel Production Cost Breakdown</a> &middot; <a href="/articles/jaisalmer-limestone-steel-mills-gulf-imports-stranded-hormuz-2026">Jaisalmer Limestone Crisis</a> &middot; <a href="/articles/gcc-industrial-infrastructure-under-fire-steel-aluminium-crisis-2026">GCC Industrial War</a> &middot; <a href="/articles/jal-jeevan-mission-2-steel-pipe-demand-infrastructure-2026">JJM 2.0 Steel Pipe Demand</a> &middot; <a href="/calculator">Steel Weight Calculator</a></p>
+<p><strong>Related on SteelMath:</strong> <a href="/articles/india-steel-demand-story-not-china-2026">India\u2019s Steel Demand Story \u2014 Why Demand Will Outrun Supply</a> &middot; <a href="/articles/safeguard-duty-steel-imports-india-2026">Safeguard Duty Guide</a> &middot; <a href="/articles/steel-production-cost-india-bf-bof-eaf-2026">Steel Production Cost Breakdown</a> &middot; <a href="/articles/jaisalmer-limestone-steel-mills-gulf-imports-stranded-hormuz-2026">Jaisalmer Limestone Crisis</a> &middot; <a href="/articles/gcc-industrial-infrastructure-under-fire-steel-aluminium-crisis-2026">GCC Industrial War</a> &middot; <a href="/articles/jal-jeevan-mission-2-steel-pipe-demand-infrastructure-2026">JJM 2.0 Steel Pipe Demand</a> &middot; <a href="/articles/india-steel-scrap-deficit-47-million-tonnes-fy26-analysis">India\u2019s 47 MT Scrap Deficit</a> &middot; <a href="/calculator">Steel Weight Calculator</a></p>
 `,
   },
   {
@@ -717,7 +717,7 @@ export const articles: Article[] = [
 
 <p>SteelMath\u2019s Energy \u2192 Production Cost Calculator now includes an option to model CBAM impact on export realisations. Try it with your production parameters.</p>
 
-<p><strong>Related on SteelMath:</strong> <a href="/articles/steelwatch-scorecard-2026-green-steel-transition-gap">SteelWatch Scorecard 2026: Green Steel Transition Gap</a> &middot; <a href="/articles/can-india-control-global-steel-pricing-2030">Can India Control Global Steel Pricing?</a> &middot; <a href="/articles/steel-production-cost-india-bf-bof-eaf-2026">Steel Production Cost Breakdown</a> &middot; <a href="/calculator">Steel Weight Calculator</a></p>
+<p><strong>Related on SteelMath:</strong> <a href="/articles/steelwatch-scorecard-2026-green-steel-transition-gap">SteelWatch Scorecard 2026: Green Steel Transition Gap</a> &middot; <a href="/articles/can-india-control-global-steel-pricing-2030">Can India Control Global Steel Pricing?</a> &middot; <a href="/articles/steel-production-cost-india-bf-bof-eaf-2026">Steel Production Cost Breakdown</a> &middot; <a href="/articles/india-steel-scrap-deficit-47-million-tonnes-fy26-analysis">India\u2019s 47 MT Scrap Deficit</a> &middot; <a href="/calculator">Steel Weight Calculator</a></p>
 `,
   },
   {
@@ -833,7 +833,7 @@ export const articles: Article[] = [
 
 <p>Try our Energy \u2192 Production Cost Calculator to model these numbers with your own specific input prices.</p>
 
-<p><strong>Related on SteelMath:</strong> <a href="/articles/hormuz-crisis-steel-impact-india">Hormuz Crisis Impact</a> &middot; <a href="/articles/jaisalmer-limestone-steel-mills-gulf-imports-stranded-hormuz-2026">Jaisalmer Limestone Crisis</a> &middot; <a href="/articles/moil-manganese-ore-price-hike-april-2026-steel-impact">MOIL Manganese Ore Price Hike</a> &middot; <a href="/articles/rinl-vizag-steel-plant-revival-2026-complete-story">RINL Vizag Steel Revival</a> &middot; <a href="/calculator">Steel Weight Calculator</a></p>
+<p><strong>Related on SteelMath:</strong> <a href="/articles/hormuz-crisis-steel-impact-india">Hormuz Crisis Impact</a> &middot; <a href="/articles/jaisalmer-limestone-steel-mills-gulf-imports-stranded-hormuz-2026">Jaisalmer Limestone Crisis</a> &middot; <a href="/articles/moil-manganese-ore-price-hike-april-2026-steel-impact">MOIL Manganese Ore Price Hike</a> &middot; <a href="/articles/rinl-vizag-steel-plant-revival-2026-complete-story">RINL Vizag Steel Revival</a> &middot; <a href="/articles/india-steel-scrap-deficit-47-million-tonnes-fy26-analysis">India\u2019s 47 MT Scrap Deficit</a> &middot; <a href="/calculator">Steel Weight Calculator</a></p>
 `,
   },
   {
@@ -5873,6 +5873,216 @@ At k = 0.95: D/t = 40.0 \u2014 very thin, buckling is the primary failure mode.<
 <p><em>This tracker is updated when new DGTR findings or CBIC notifications are published. Anti-dumping duty rates and case statuses are subject to change. Always verify current rates against the latest CBIC notification before clearing imports. SteelMath is not a customs broker or legal advisor.</em></p>
 
 <p><strong>Related on SteelMath:</strong> <a href="/articles/bis-certification-steel-imports-india-2026-complete-guide">BIS Certification Guide</a> &middot; <a href="/articles/safeguard-duty-steel-imports-india-2026">Safeguard Duty Guide</a> &middot; <a href="/articles/gst-steel-products-india-rates-itc">GST on Steel</a> &middot; <a href="/articles/hormuz-crisis-steel-impact-india">Hormuz Crisis Impact</a> &middot; <a href="/calculator">Steel Weight Calculator</a></p>
+`,
+  },
+  {
+    slug: "india-steel-scrap-deficit-47-million-tonnes-fy26-analysis",
+    title: "India\u2019s 47 Million Tonne Scrap Equation: The Structural Deficit That Will Define How India Makes Steel for the Next Decade",
+    category: "ANALYSIS" as Category,
+    categoryColor: "blue",
+    date: "2026-05-11",
+    readTime: "14 min",
+    excerpt:
+      "India consumed ~45\u201347 MT of steel scrap in FY26 \u2014 28% of 169.2 MT crude steel. Only 84% domestic. Why India can\u2019t copy the EU/US scrap playbook. JPC data.",
+    metaTitle:
+      "India\u2019s 47 MT Steel Scrap Deficit \u2014 The Number Shaping Steel\u2019s Future | SteelMath",
+    metaDescription:
+      "India consumed ~45-47 MT of steel scrap in FY26 \u2014 28% of 169.2 MT crude steel. Only 84% domestic. Why India can\u2019t copy the EU/US scrap playbook. JPC data.",
+    relatedCalculators: ["scrap-yield", "scrap-production-cost"],
+    content: `
+<p>Somewhere between the quarterly earnings calls and the mill price circulars, the Indian steel industry quietly consumed approximately 45\u201347 million tonnes of steel scrap in FY2025-26. That figure \u2014 roughly 27.8% of India\u2019s 169.2 million tonne crude steel output \u2014 doesn\u2019t generate headlines. It should. Because buried inside this number is the most consequential strategic challenge facing India\u2019s steel sector over the next decade: where the metallics will come from as we attempt to double production to 300 million tonnes by 2030.</p>
+
+<p>The scrap deficit is not a logistics problem. It is not a policy failure. It is a structural feature of a fast-growing steel economy with a young in-use steel stock \u2014 and understanding it properly is essential for anyone making technology, capacity, procurement, or carbon compliance decisions in Indian steel.</p>
+
+<h2>The FY26 Production Picture: 169.2 Million Tonnes, Three Routes, One Uncomfortable Truth</h2>
+
+<p>India produced 169.2 million tonnes of crude steel in FY2025-26, a 10.7% increase over the previous year, according to provisional data released by the Joint Plant Committee (JPC) on April 8, 2026. The country regained its position as a net exporter of steel, with finished steel exports surging 35.9% to reach 6.6 million tonnes while imports fell 31.7%. Finished steel consumption reached approximately 164 million tonnes, reflecting 8% year-on-year growth driven by infrastructure, construction, and manufacturing demand.</p>
+
+<p>But India\u2019s steel industry is not one industry. It is three parallel industries, each with distinct economics, technology, and raw material dependencies \u2014 and the aggregate production number conceals a structural split that defines everything about India\u2019s scrap equation.</p>
+
+<p>The <strong>BOF (Basic Oxygen Furnace) route</strong> \u2014 the integrated mills operated by Tata Steel, JSW Steel, SAIL, AMNS India, and a handful of other large producers \u2014 accounted for approximately 72.8 million tonnes, roughly 43% of national output. This route starts with iron ore and coking coal in blast furnaces, producing hot metal (pig iron) that is then refined to steel. Scrap is used in BOF operations, but as a supplementary coolant \u2014 typically 10\u201315% of the metallic charge.</p>
+
+<p>The <strong>EAF (Electric Arc Furnace) route</strong> accounted for approximately 32.2 million tonnes, about 19% of output. EAFs melt scrap and DRI using electric power, and are the primary vehicle for scrap consumption in India\u2019s organised sector. However, unlike US and EU EAFs that run on 90\u2013100% scrap, most Indian EAFs operate on mixed charges of 40\u201360% scrap and 40\u201360% DRI.</p>
+
+<p>The <strong>IF (Induction Furnace) route</strong> \u2014 India\u2019s vast, geographically dispersed secondary steel ecosystem \u2014 produced approximately 64.3 million tonnes, a remarkable 38% of national output. This is the sector that most policy discussions underappreciate. Induction furnaces operate across hundreds of clusters \u2014 Raipur, Mandi Gobindgarh, Muzaffarnagar, Jalna, Bhavnagar, Salem, and more \u2014 employing millions and producing the TMT bars, wire rods, and structural steel that build India\u2019s houses, bridges, and roads.</p>
+
+<p>The IF sector, along with smaller EAF producers, is where India\u2019s scrap story truly plays out. These producers don\u2019t operate blast furnaces. They don\u2019t have captive iron ore mines. Their metallics \u2014 the raw material they melt to make steel \u2014 come from two sources only: steel scrap and sponge iron (DRI). And the balance between these two inputs is the axis on which India\u2019s entire metallics economy rotates.</p>
+
+<div class="glass-panel p-5 my-6">
+<h3 class="text-white font-bold text-sm mb-3">INDIA STEEL PRODUCTION \u2014 FY2025-26 (JPC Data)</h3>
+<div class="overflow-x-auto">
+<table class="w-full text-sm border-collapse">
+<thead><tr class="border-b border-white/10">
+<th class="text-left text-white/50 font-semibold py-2 px-3"></th>
+<th class="text-right text-white/50 font-semibold py-2 px-3">Crude Steel</th>
+<th class="text-right text-white/50 font-semibold py-2 px-3">Hot Metal</th>
+<th class="text-right text-white/50 font-semibold py-2 px-3">DRI</th>
+</tr></thead>
+<tbody>
+<tr class="border-b border-white/5"><td class="text-white/70 py-2 px-3 font-semibold">Steel Majors</td><td class="text-right text-white/50 py-2 px-3 font-mono">96,469 (57%)</td><td class="text-right text-white/50 py-2 px-3 font-mono">89,753</td><td class="text-right text-accent/80 py-2 px-3 font-mono">15,270 (25%)</td></tr>
+<tr class="border-b border-white/5"><td class="text-white/70 py-2 px-3 font-semibold">Other Producers</td><td class="text-right text-white/50 py-2 px-3 font-mono">72,758 (43%)</td><td class="text-right text-white/50 py-2 px-3 font-mono">6,756</td><td class="text-right text-accent/80 py-2 px-3 font-mono">45,034 (75%)</td></tr>
+<tr class="border-t border-white/10"><td class="text-white font-bold py-2 px-3">TOTAL</td><td class="text-right text-white font-bold py-2 px-3 font-mono">1,69,227</td><td class="text-right text-white font-bold py-2 px-3 font-mono">96,509</td><td class="text-right text-white font-bold py-2 px-3 font-mono">60,304</td></tr>
+</tbody>
+</table>
+</div>
+<p class="text-white/30 text-xs mt-3">All figures in \u2018000 tonnes. Finished steel: 1,61,735. Secondary sector produces 43% of crude steel but 75% of all DRI.</p>
+</div>
+
+<h2>Mapping the Scrap Balance: Where 45\u201347 Million Tonnes Comes From</h2>
+
+<p>Estimating India\u2019s total scrap consumption requires assembling data across all three production routes, each with different scrap intensities. The 45\u201347 million tonne estimate is derived from JPC production figures cross-referenced with typical metallic charge compositions reported by manufacturing companies across routes.</p>
+
+<p><strong>BOF operations</strong> typically use scrap as approximately 10\u201315% of the metallic charge, primarily as a coolant in the oxygen converter. At roughly 72.8 MT of BOF crude steel and an average 12% scrap charge, BOF scrap consumption is approximately 8\u20139 MT.</p>
+
+<p><strong>EAF operations</strong> in India run approximately 40\u201360% scrap with the balance as DRI. At 32.2 MT crude steel and roughly 50% scrap in the average charge, EAF scrap consumption comes to approximately 14\u201316 MT.</p>
+
+<p><strong>Induction furnaces</strong> operate with varying scrap-to-DRI ratios driven by relative pricing \u2014 when scrap is cheap relative to sponge iron, IFs increase their scrap proportion and vice versa. At 64.3 MT crude steel and roughly 35\u201340% scrap in the charge, IF scrap consumption is approximately 20\u201324 MT.</p>
+
+<p>The aggregate across all three routes: approximately <strong>45\u201347 million tonnes</strong> of total scrap consumption.</p>
+
+<div class="glass-panel p-5 my-6">
+<h3 class="text-white font-bold text-sm mb-3">INDIA STEEL SCRAP BALANCE \u2014 FY2025-26</h3>
+<div class="space-y-2 text-sm">
+<div class="flex justify-between"><span class="text-white/50">Total scrap consumed</span><span class="text-accent font-mono font-semibold">~45\u201347 MT</span></div>
+<div class="flex justify-between"><span class="text-white/50">Scrap-to-crude-steel ratio</span><span class="text-white/70 font-mono">~27.8%</span></div>
+<div class="flex justify-between"><span class="text-white/50">Domestic scrap generation</span><span class="text-white/70 font-mono">~38\u201339 MT (84%)</span></div>
+<div class="flex justify-between"><span class="text-white/50">Net scrap imports (JPC actual)</span><span class="text-white/70 font-mono">7.7 MT (16%)</span></div>
+<div class="border-t border-white/10 pt-2 mt-2"></div>
+<div class="text-white/30 text-xs font-semibold uppercase tracking-wider mb-1">Global Comparison</div>
+<div class="flex justify-between"><span class="text-white/50">India</span><span class="text-white/70 font-mono">~28%</span></div>
+<div class="flex justify-between"><span class="text-white/50">World average</span><span class="text-white/70 font-mono">~32%</span></div>
+<div class="flex justify-between"><span class="text-white/50">EU</span><span class="text-white/70 font-mono">~56%</span></div>
+<div class="flex justify-between"><span class="text-white/50">US</span><span class="text-white/70 font-mono">~70%</span></div>
+<div class="border-t border-white/10 pt-2 mt-2"></div>
+<div class="flex justify-between"><span class="text-white/50">DRI-to-crude-steel ratio</span><span class="text-accent font-mono font-semibold">35.6% (highest in the world)</span></div>
+<div class="flex justify-between"><span class="text-white/50">NSP 2030 scrap target</span><span class="text-white/70 font-mono">70\u201380 MT</span></div>
+</div>
+</div>
+
+<p>The cross-verification through apparent consumption confirms this range. JPC FY26 data records net scrap imports of 7.7 million tonnes. If total consumption was 45\u201347 MT and imports were 7.7 MT, then domestic scrap generation was approximately 38\u201339 MT. This implies a domestic generation-to-crude-steel ratio of approximately 23% \u2014 meaning India generates about 23 kg of recoverable steel scrap for every 100 kg of crude steel it produces. Approximately 84% of India\u2019s scrap requirement is currently met domestically. The remaining 16% is imported, primarily from the UAE (approximately 26% of imports), UK (17%), USA (14%), and Saudi Arabia (9%).</p>
+
+<h2>The JPC Data That Reveals Everything: Why the Secondary Sector Is the Story</h2>
+
+<p>The JPC FY26 production data contains a breakdown that every steel professional should study closely, because it reveals the structural dependency that defines India\u2019s scrap economics.</p>
+
+<p><strong>Steel Majors</strong> \u2014 the integrated producers \u2014 accounted for 96,469 thousand tonnes (57%) of crude steel, produced 89,753 thousand tonnes of hot metal, but generated only 15,270 thousand tonnes of DRI. They are overwhelmingly blast furnace operators. Their metallics are dominated by hot metal from iron ore, supplemented by purchased scrap and modest captive DRI.</p>
+
+<p><strong>The remaining producers</strong> \u2014 the secondary sector \u2014 accounted for 72,758 thousand tonnes (43%) of crude steel but produced only 6,756 thousand tonnes of hot metal (a fraction of the majors) while generating 45,034 thousand tonnes of DRI. This means the secondary sector produces <strong>75% of India\u2019s total DRI output</strong>.</p>
+
+<p>This is the structural reality beneath the aggregate numbers: India\u2019s secondary steel sector \u2014 which produces 43% of the nation\u2019s steel and employs the vast majority of the industry\u2019s workforce \u2014 runs almost entirely on scrap and DRI. It has negligible access to hot metal. Its entire business model depends on the availability and affordability of these two metallics.</p>
+
+<p>When scrap prices spike (as they did during the <a href="/articles/hormuz-crisis-steel-impact-india">Hormuz crisis</a>, with domestic HMS prices rising \u20B91,500\u20132,000 per MT), the secondary sector feels it first and hardest. When DRI prices rise (as they have with the <a href="/articles/moil-manganese-ore-price-hike-april-2026-steel-impact">MOIL manganese ore hike</a> feeding into ferroalloy costs), the pressure compounds. The major integrated producers, insulated by their hot metal self-sufficiency, can absorb these cost swings far more easily.</p>
+
+<p>This asymmetry \u2014 57% of production insulated from scrap economics, 43% fully exposed to it \u2014 is the defining structural feature of India\u2019s steel industry. And it is getting more pronounced, not less, as the secondary sector grows to meet India\u2019s construction and infrastructure demand.</p>
+
+<h2>Three Structural Realities the Industry Must Confront</h2>
+
+<h3>1. India\u2019s Scrap Intensity Trails the World \u2014 and Physics Explains Why</h3>
+
+<p>India\u2019s scrap-to-crude-steel ratio of approximately 28% trails the global average of roughly 32% and stands at barely half the levels achieved in the EU (approximately 56%) and US (approximately 70%).</p>
+
+<p>The explanation is not policy failure. It is physics \u2014 specifically, the physics of the steel lifecycle.</p>
+
+<p>Every tonne of steel ever produced exists in one of three states: in active use (buildings, vehicles, machinery, infrastructure), in transition (being recycled or processed), or lost (corrosion, landfill, unrecoverable waste). Steel generates scrap only when it reaches end-of-life \u2014 when a building is demolished, a vehicle is retired, a pipeline is decommissioned, or an appliance is discarded.</p>
+
+<p>Developed economies have been industrialising and accumulating steel for 100\u2013150+ years. The US has an estimated in-use steel stock of approximately 90\u2013100 tonnes per capita. The EU is similar. These massive, mature stocks generate abundant obsolete scrap every year because buildings constructed 50 years ago are now being demolished, vehicles manufactured 15 years ago are being scrapped, and industrial equipment installed decades ago is being replaced.</p>
+
+<p>India\u2019s in-use steel stock is estimated at only 7\u20138 tonnes per capita. We have simply not been consuming steel at meaningful scale for long enough. India\u2019s steel consumption inflection began in the early 2000s \u2014 meaning the bulk of steel ever consumed in this country is locked inside structures less than 25 years old. Buildings built in 2005 will not be demolished for another 30\u201350 years. Vehicles purchased in 2015 still have 10\u201315 years of road life. Railway tracks laid in 2010 are designed for 50-year service lives.</p>
+
+<p>This is not a gap that policy can close in the near term. It is a physical reality that will evolve slowly over the coming decades as India\u2019s in-use stock matures and begins generating the volumes of obsolete scrap that developed economies enjoy. Until then, India\u2019s domestic scrap generation will grow \u2014 but incrementally, perhaps 3\u20135% per year, constrained by the age profile of the national steel stock.</p>
+
+<h3>2. Scrap Imports Will Balloon to \u20B945,000\u201368,000 Crore by FY30</h3>
+
+<p>If India reaches the National Steel Policy\u2019s target of 255 MT crude steel production by 2030, and scrap intensity holds at approximately 28%, total scrap demand would reach roughly 70 MT. Even with optimistic assumptions about domestic generation growing to 50\u201355 MT (implying a significant acceleration from current levels), the import gap reaches 15\u201320 MT \u2014 roughly double to triple FY26\u2019s 7.7 MT.</p>
+
+<p>At current international scrap prices of approximately $350\u2013400 per tonne CIF India, annual imports of 15\u201320 MT would represent a foreign exchange outflow of $5.3\u20138.0 billion \u2014 approximately \u20B945,000\u201368,000 crore at current exchange rates.</p>
+
+<p>This is a balance-of-payments story that will eventually demand policy attention. India already spends over $150 billion annually on crude oil imports. Adding $5\u20138 billion for steel scrap \u2014 a raw material that, unlike oil, India could theoretically generate domestically \u2014 would be a significant and growing line item in the current account deficit.</p>
+
+<p>The <a href="/articles/hormuz-crisis-steel-impact-india">Hormuz crisis</a> has already demonstrated the supply vulnerability of this import dependence. The UAE \u2014 India\u2019s largest scrap supplier at 26% of imports \u2014 ships through the very Gulf routes that were disrupted. Business Standard reported that India\u2019s ferrous scrap imports during April\u2013October 2025 climbed 45% year-on-year to 5.7 million tonnes, reflecting pre-crisis restocking, but the February\u2013March 2026 disruption likely constrained full-year volumes. Any extended disruption to Gulf shipping directly threatens the metallics supply to thousands of Indian induction furnaces.</p>
+
+<p>The Vehicle Scrappage Policy and Steel Scrap Recycling Policy 2019 were designed to address part of this gap. Their implementation has been inadequate. As of 2025, fewer than 50 authorised vehicle scrapping centres were operational nationwide. India has approximately 300 million registered vehicles, with an estimated 30\u201340 million beyond their useful life. At 800\u20131,200 kg of recoverable steel per vehicle, this represents 24\u201348 MT of scrap locked in vehicles that should have been retired.</p>
+
+<h3>3. The DRI Ratio Is India\u2019s Bridge \u2014 and Its Carbon Burden</h3>
+
+<p>Here is the number that makes India\u2019s steel industry unique in the world: the DRI-to-crude-steel ratio of <strong>35.6%</strong>.</p>
+
+<p>The JPC data confirms that India produced 60,304 thousand tonnes (60.3 MT) of sponge iron/DRI in FY26 \u2014 the highest in the world by a wide margin. The secondary sector alone produced 45,034 thousand tonnes (45.0 MT) of this DRI, confirming that sponge iron is the primary metallic for India\u2019s IF and smaller EAF operations.</p>
+
+<p>This DRI is predominantly coal-based \u2014 produced in coal-based rotary kilns spread across Chhattisgarh, Odisha, Jharkhand, Karnataka, and other states with accessible coal and iron ore. Coal-based DRI is one of the more carbon-intensive metallics in steelmaking. While gas-based DRI (as produced by Essar/AMNS and some other units) has a significantly lower carbon footprint, the vast majority of India\u2019s DRI output is coal-based.</p>
+
+<p>The DRI ratio is both India\u2019s salvation and its burden. It is what keeps the metallics balance closed despite insufficient domestic scrap \u2014 every tonne of DRI substitutes for scrap that doesn\u2019t exist in sufficient quantities. Without 60 MT of DRI, India\u2019s secondary sector would face a raw material crisis that would cripple 43% of national steel production.</p>
+
+<p>But the carbon implications are severe. India\u2019s average steel sector emission intensity is approximately 2.0\u20132.5 tonnes of CO\u2082 per tonne of crude steel \u2014 significantly higher than the EU average of 1.4\u20131.8 tonnes. A substantial portion of this gap is attributable to coal-based DRI. As <a href="/articles/cbam-indian-steel-exports-2026">CBAM</a> begins imposing carbon costs on Indian steel exports to Europe, and as domestic climate commitments tighten, the coal-DRI model faces an increasingly hostile regulatory environment.</p>
+
+<h2>Why India Cannot Copy the EU/US Decarbonisation Playbook</h2>
+
+<p>The global narrative for steel decarbonisation \u2014 driven by EU policy and exemplified by projects like H2 Green Steel in Sweden \u2014 centres on the \u201Cshift to scrap-EAF\u201D pathway. The logic is elegant: replace carbon-intensive blast furnaces with electric arc furnaces running on recycled scrap, powered by renewable electricity. Scrap-based EAF steelmaking produces approximately 0.4 tonnes of CO\u2082 per tonne of steel \u2014 roughly 75% less than the BF-BOF route.</p>
+
+<p>This pathway works in the EU and US because of their scrap abundance. With 55\u201370% scrap intensity, these economies have more scrap available than they can consume domestically \u2014 the US exports approximately 15 MT of scrap annually. Their EAFs can run on nearly 100% scrap, and their electrical grids have sufficient renewable capacity (or credible pathways to it) to power the furnaces.</p>
+
+<p>India\u2019s situation is the inverse. Our scrap intensity of 28% is less than half the level needed to support a full EAF transition. Doubling it to 56% (EU levels) would require generating approximately 95 MT of domestic scrap annually \u2014 a physical impossibility given our in-use stock age profile. Even the National Steel Policy\u2019s ambitious target of 70\u201380 MT total scrap supply by 2030 (domestic + imports) falls short of what a full EAF transition would require.</p>
+
+<p>India\u2019s decarbonisation pathway must therefore be fundamentally different. It will likely proceed through three overlapping phases. In the <strong>near term</strong> over the next 5 years, maximising scrap utilisation from every available source (vehicle scrappage, construction demolition, industrial end-of-life) while transitioning coal-based DRI to gas-based DRI where natural gas infrastructure exists. In the <strong>medium term</strong> over 5 to 15 years, scaling hydrogen-based DRI as green hydrogen costs decline with renewable energy expansion and electrolyser manufacturing scale-up. In the <strong>long term</strong> beyond 15 years, approaching EU/US scrap intensities as India\u2019s in-use steel stock matures and begins generating 60\u201380 MT of obsolete scrap annually.</p>
+
+<p>This is a 20\u201330 year transition, not a 5-year sprint. And it requires India to develop technology, policy, and infrastructure pathways that don\u2019t yet exist at the required scale in any country.</p>
+
+<h2>Five Levers for Closing the Gap by 2030</h2>
+
+<p><strong>Lever 1: Transform the Vehicle Scrappage Policy from announcement to execution.</strong> India\u2019s 30\u201340 million end-of-life vehicles represent the single largest untapped scrap reservoir. The policy needs mandatory scrappage for commercial vehicles beyond 15 years (not just fitness testing), financial incentives substantial enough to override the resale value that keeps old vehicles on the road, and a scaled-up network of authorised scrapping centres \u2014 500 minimum nationwide, not the current 50. At full execution, this could generate 4\u20135 MT of additional annual scrap by FY28-29.</p>
+
+<p><strong>Lever 2: Organise the construction and demolition waste stream.</strong> India demolished and rebuilt more floor space in the last decade than most countries build in a generation. Every demolished structure contains recoverable steel \u2014 rebar, structural sections, roofing sheets, pipes. Currently, most flows through informal channels with poor recovery rates. Integrating steel scrap recovery requirements into municipal demolition permits and mandating C&amp;D waste processing at designated facilities could add 3\u20135 MT of high-quality domestic scrap annually.</p>
+
+<p><strong>Lever 3: Transition coal-based DRI to gas-based DRI, then to hydrogen.</strong> Since India\u2019s DRI dependence is structural and unavoidable, making DRI cleaner is as important as increasing scrap supply. Gas-based DRI reduces CO\u2082 emissions by approximately 60% versus coal-based. Hydrogen-based DRI, the ultimate goal, eliminates process CO\u2082 entirely. JSW, Tata Steel, and AMNS India are all piloting green hydrogen for steelmaking \u2014 but commercial-scale deployment is 5\u201310 years away and depends on green hydrogen reaching $2 per kg (current costs are $4\u20136). Use SteelMath\u2019s <a href="/calculators/scrap-production-cost">Scrap-to-Steel Production Cost Calculator</a> to model how input changes affect <a href="/articles/steel-production-cost-india-bf-bof-eaf-2026">production economics</a>.</p>
+
+<p><strong>Lever 4: Build strategic scrap import infrastructure.</strong> If 15\u201320 MT of imports are inevitable by FY30, India needs dedicated scrap handling infrastructure at major ports, long-term supply agreements with scrap-surplus economies (US, EU, Australia, Japan), and quality-grading and environmental compliance systems that prevent contaminated or hazardous scrap from entering the country. The <a href="/articles/hormuz-crisis-steel-impact-india">Hormuz crisis</a> demonstrated how quickly Gulf-origin scrap supply can be disrupted \u2014 diversification across geographies is essential.</p>
+
+<p><strong>Lever 5: Develop a secondary sector technology upgrade programme.</strong> India\u2019s 64.3 MT IF sector is the largest consumer of scrap and DRI, yet operates on technology that is 20\u201330 years behind the best available. Energy-efficient induction furnace designs, improved slag practices, and better scrap preparation (shredding, sorting, impurity removal) can increase yield and reduce the total metallics required per tonne of output. A government-supported technology upgrade scheme \u2014 similar to the PLI for specialty steel \u2014 could improve the sector\u2019s resource efficiency by 5\u201310%, effectively \u201Ccreating\u201D 3\u20135 MT of metallics capacity without additional raw material.</p>
+
+<h2>What This Means for Every Steel Professional in India</h2>
+
+<p><strong>For secondary steel producers (EAF/IF operators):</strong> The scrap deficit is your most important strategic risk. It determines your raw material cost, your operating margins, and ultimately your viability. Diversify your metallics sourcing \u2014 don\u2019t depend solely on one scrap supplier or one DRI source. Build inventory buffers during periods of lower prices. Monitor Gulf shipping conditions (the Hormuz crisis disrupted your scrap supply chain) and domestic DRI pricing (the <a href="/articles/moil-manganese-ore-price-hike-april-2026-steel-impact">MOIL manganese ore hike</a> flows through to sponge iron costs via ferroalloy prices). Use our <a href="/calculators/scrap-yield">Scrap Yield Calculator</a> to optimise your charge mix.</p>
+
+<p><strong>For integrated steel majors:</strong> The scrap deficit creates opportunity. Captive scrap processing capacity \u2014 investing in collection, shredding, and preparation infrastructure \u2014 gives you preferential access to a tightening resource. Several global majors (Nucor, Steel Dynamics, Gerdau) have built competitive advantages through backward integration into scrap. Indian majors who do the same will have a structural cost advantage as scrap prices trend higher.</p>
+
+<p><strong>For steel traders and scrap dealers:</strong> The 15\u201320 MT import requirement by FY30 is a massive business opportunity. Building reliable supply channels with overseas scrap sources, investing in quality assurance and logistics, and positioning yourself as a bridge between international scrap markets and Indian IF/EAF consumers is a decade-long growth story. Our <a href="/articles/steel-scrap-grades-classification-guide">Scrap Grades Guide</a> covers the classification system you need to master.</p>
+
+<p><strong>For policy makers and industry bodies:</strong> The scrap deficit is the binding constraint on India\u2019s steel growth trajectory. Without addressing it through aggressive vehicle scrappage implementation, organised C&amp;D waste recovery, and strategic import infrastructure, the 300 MTPA capacity target will face a raw material bottleneck that no amount of iron ore or DRI alone can resolve.</p>
+
+<p><strong>For sustainability and carbon professionals:</strong> India\u2019s decarbonisation pathway runs through the scrap question. More scrap means less DRI, which means less coal consumption, which means lower emissions per tonne. Every additional million tonnes of domestic scrap generated saves approximately 1.5 million tonnes of CO\u2082 (by displacing coal-based DRI). The scrap gap is a carbon gap \u2014 and closing it is the single most impactful near-term decarbonisation lever available to the Indian steel industry.</p>
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>How much steel scrap does India consume annually?</h3>
+<p>India consumed approximately 45\u201347 million tonnes of steel scrap in FY2025-26, representing roughly 27\u201328% of its 169.2 million tonne crude steel output. Approximately 38\u201339 million tonnes (84%) was generated domestically, while 7.7 million tonnes was imported (JPC FY26 actual data). India is the world\u2019s fourth-largest scrap consumer after China, the EU, and the US.</p>
+
+<h3>Why can\u2019t India follow the EU/US model of scrap-based EAF steelmaking?</h3>
+<p>India\u2019s scrap intensity of approximately 28% is less than half the EU level (56%) and well below the US (70%). This gap is structural, not cyclical \u2014 India\u2019s in-use steel stock is only 7\u20138 tonnes per capita versus 90\u2013100 tonnes in developed economies. Most steel ever consumed in India is still in active use in buildings, vehicles, and infrastructure less than 25 years old. Domestic scrap generation cannot scale fast enough to support a full EAF transition. India\u2019s DRI ratio of 35.6% \u2014 the highest globally \u2014 bridges the gap, but creates a different decarbonisation challenge.</p>
+
+<h3>How much steel scrap will India need by 2030?</h3>
+<p>The National Steel Policy 2017 targets 70\u201380 million tonnes of total scrap supply by 2030 to support the 255 MT crude steel production target. If domestic generation reaches 50\u201355 MT (optimistic), annual imports would need to reach 15\u201320 MT \u2014 roughly double to triple FY26 levels. At current international prices, this represents a foreign exchange outflow of \u20B945,000\u201368,000 crore annually.</p>
+
+<h3>What is the split between major and secondary producers in India?</h3>
+<p>JPC FY26 data shows Steel Majors produced 96,469 thousand tonnes of crude steel (57%) with 89,753 thousand tonnes of hot metal and 15,270 thousand tonnes of DRI. The remaining producers (secondary sector) produced 72,758 thousand tonnes (43%) with only 6,756 thousand tonnes of hot metal but 45,034 thousand tonnes of DRI \u2014 75% of national DRI output. The secondary sector is near-totally dependent on scrap and DRI as metallics.</p>
+
+<h3>What is India\u2019s DRI-to-crude-steel ratio and why does it matter?</h3>
+<p>India produced 60,304 thousand tonnes of DRI/sponge iron in FY26, giving a DRI-to-crude-steel ratio of approximately 35.6% \u2014 the highest in the world. This high DRI usage is what keeps India\u2019s metallics balance closed despite insufficient scrap. However, the DRI is predominantly coal-based, making it carbon-intensive. India\u2019s decarbonisation pathway requires transitioning this DRI from coal to natural gas and eventually to green hydrogen \u2014 a fundamentally different approach from the EU/US scrap-EAF model.</p>
+
+<h2>Data Sources &amp; Verification</h2>
+<ul>
+<li><strong>JPC (Joint Plant Committee) FY26 production data:</strong> Total crude steel 1,69,227 thousand tonnes; Steel Majors 96,469 (57%), Remaining Producers 72,758 (43%); Hot metal 96,509; Sponge iron/DRI 60,304; Finished steel 1,61,735. Released via Ministry of Steel, April 8, 2026.</li>
+<li><strong>Ministry of Steel press release, April 8, 2026:</strong> Crude steel production up 10.7% YoY to ~168.4 MT. Finished steel exports +35.9% to 6.6 MT. Imports -31.7%. India regained net exporter status.</li>
+<li><strong>Angel One, April 2026:</strong> India crude steel 169.2 MT, +11.2% YoY. Finished steel consumption 164.2 MT, +8%.</li>
+<li><strong>Business Standard, December 22, 2025:</strong> India ferrous scrap imports April-October FY26 climbed to 5.695 MT (+45% YoY). India consumed ~42 MT scrap in FY25 \u2014 33 MT domestic, 9 MT imported. Fourth-largest scrap consumer globally.</li>
+<li><strong>Markintel, October 2025:</strong> JPC data \u2014 India imported 6.8 MT scrap in FY24 (+24% YoY). UAE 26%, UK 17%, USA 14%, Saudi Arabia 9% of imports. Vehicle Scrappage Policy target 4-5 MT annual scrap by FY28; fewer than 50 authorised centres operational.</li>
+<li><strong>National Steel Policy 2017:</strong> Targets 300 MTPA capacity, 255 MT production, 70-80 MT scrap supply by 2030. Per capita consumption target: 160 kg by FY31.</li>
+<li><strong>Scrap intensity benchmarks:</strong> Global average ~32%, EU ~56%, US ~70% \u2014 World Steel Association and BIR (Bureau of International Recycling) publications.</li>
+<li><strong>India in-use steel stock ~7-8 tonnes per capita:</strong> Estimated from cumulative apparent consumption data and assumed 1% annual loss rate \u2014 consistent with World Steel Association methodology.</li>
+</ul>
+
+<p><em>This analysis uses estimates and industry-standard ratios where exact figures are not publicly available. Scrap consumption by production route is derived from typical charge compositions and may vary between individual plants. All JPC data is provisional and subject to revision. SteelMath is not a licensed financial or commodity advisor.</em></p>
+
+<p><strong>Related on SteelMath:</strong> <a href="/articles/steel-production-cost-india-bf-bof-eaf-2026">Steel Production Cost Breakdown</a> &middot; <a href="/articles/cbam-indian-steel-exports-2026">CBAM Impact on Indian Steel</a> &middot; <a href="/articles/hormuz-crisis-steel-impact-india">Hormuz Crisis Impact</a> &middot; <a href="/articles/steel-scrap-grades-classification-guide">Steel Scrap Grades Guide</a> &middot; <a href="/calculators/scrap-yield">Scrap Yield Calculator</a> &middot; <a href="/calculators/scrap-production-cost">Production Cost Calculator</a></p>
 `,
   },
 ];

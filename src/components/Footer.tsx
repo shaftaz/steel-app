@@ -151,6 +151,12 @@ export default function Footer() {
             >
               Anti-Dumping Duty Tracker
             </Link>
+            <Link
+              href="/articles/india-steel-scrap-deficit-47-million-tonnes-fy26-analysis"
+              className="text-white/20 hover:text-white/40 text-[11px] no-underline transition-colors"
+            >
+              India&apos;s Scrap Deficit Analysis
+            </Link>
           </div>
         </div>
 
