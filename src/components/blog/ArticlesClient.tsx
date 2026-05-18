@@ -4,7 +4,7 @@ import { useState, useMemo } from "react";
 import Link from "next/link";
 import type { Article, Category } from "@/lib/data/articles";
 import { CATEGORY_STYLES } from "@/lib/data/articles";
-import EmailCapture from "@/components/shared/EmailCapture";
+
 
 /* ── helpers ── */
 function fmtDate(d: string) {
@@ -157,9 +157,6 @@ export default function ArticlesClient({ articles }: { articles: Article[] }) {
               ))}
             </ol>
           </div>
-
-          {/* Newsletter Signup */}
-          <EmailCapture variant="sidebar" />
 
           {/* Calculator Quick Links */}
           <div className="glass-panel p-4">
