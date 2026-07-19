@@ -114,6 +114,8 @@ export default function AngleWeightCalc() {
               <option value="€">€ EUR</option>
               <option value="$">$ USD</option>
               <option value="£">£ GBP</option>
+              <option value="S$">S$ SGD</option>
+              <option value="¥">¥ JPY</option>
             </SelectField>
           </div>
 
@@ -133,7 +135,7 @@ export default function AngleWeightCalc() {
                 : "Custom size — sharp-corner approximation (IS 808 tabulated values differ slightly)",
               "Constant 0.00785 = 7,850 kg/m³ ÷ 10⁶ (steel density per mm²·m)",
             ]}
-            source="SOURCE: IS 808 · LAST VERIFIED 18 JUL 2026"
+            source="SOURCE: IS 808 · ASTM A6 · JIS G3192 · LAST VERIFIED 18 JUL 2026"
           />
         </>
       }

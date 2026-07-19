@@ -81,6 +81,8 @@ export default function FlatBarWeightCalc() {
                 <option value="€">€ EUR</option>
                 <option value="$">$ USD</option>
                 <option value="£">£ GBP</option>
+                <option value="S$">S$ SGD</option>
+                <option value="¥">¥ JPY</option>
               </SelectField>
             </div>
             <ShowMaths
@@ -91,7 +93,7 @@ export default function FlatBarWeightCalc() {
                   : "Custom size — calculated from W × T × 0.00785",
                 "Constant 0.00785 = MS density 7,850 kg/m³ ÷ 10⁶",
               ]}
-              source="SOURCE: IS 2062 / IS 1732 · LAST VERIFIED 18 JUL 2026"
+              source="SOURCE: IS 2062 / IS 1732 · ASTM A36 · JIS G3101 · EN 10025 · LAST VERIFIED 18 JUL 2026"
             />
           </>
         }

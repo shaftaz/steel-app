@@ -41,7 +41,7 @@ export default function GaugeToMmCalc() {
                 "Direct table lookup — SWG number → mm, inches, kg/m²",
                 "Sheet weight: kg/m² = thickness (mm) × 7.85 (MS density)",
               ]}
-              source="SOURCE: IS 1956 SWG TABLE · LAST VERIFIED 18 JUL 2026"
+              source="SOURCE: IS 1956 / BS 3737 SWG TABLE — US AWG DIFFERS · LAST VERIFIED 18 JUL 2026"
             />
           </>
         }

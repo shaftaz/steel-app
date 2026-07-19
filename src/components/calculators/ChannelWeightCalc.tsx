@@ -71,6 +71,8 @@ export default function ChannelWeightCalc() {
                 <option value="€">€ EUR</option>
                 <option value="$">$ USD</option>
                 <option value="£">£ GBP</option>
+                <option value="S$">S$ SGD</option>
+                <option value="¥">¥ JPY</option>
               </SelectField>
             </div>
             <ShowMaths
@@ -81,7 +83,7 @@ export default function ChannelWeightCalc() {
                   ? `Section — depth ${channel.depth} mm · flange ${channel.flangeWidth} mm · web ${channel.webThickness} mm · flange t ${channel.flangeThickness} mm`
                   : "",
               ]}
-              source="SOURCE: IS 808 (ISMB/ISMC) · LAST VERIFIED 18 JUL 2026"
+              source="SOURCE: IS 808 (ISMB/ISMC) · ASTM A6 / A36 · JIS G3192 · LAST VERIFIED 18 JUL 2026"
             />
           </>
         }

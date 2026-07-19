@@ -168,6 +168,8 @@ export default function StainlessSteelWeightCalc() {
               <option value="€">€ EUR</option>
               <option value="$">$ USD</option>
               <option value="£">£ GBP</option>
+              <option value="S$">S$ SGD</option>
+              <option value="¥">¥ JPY</option>
             </SelectField>
           </div>
           <ShowMaths

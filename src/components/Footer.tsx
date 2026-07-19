@@ -72,8 +72,11 @@ export default function Footer() {
             </span>
             <span className="font-mono text-[10px] text-muted-3 tracking-[0.08em]">.COM</span>
           </div>
-          <p className="text-[12.5px] leading-relaxed text-muted-2 mb-4 max-w-[220px]">
+          <p className="text-[12.5px] leading-relaxed text-muted-2 mb-2 max-w-[220px]">
             SteelMath — Steel calculations &amp; market intelligence for professionals
+          </p>
+          <p className="font-mono text-[10px] tracking-[0.08em] text-muted-3 mb-4">
+            INDIA · SEA · JAPAN · US · EU
           </p>
           <div className="flex flex-col gap-2 text-[13px]">
             <Link href="/" className="text-muted hover:text-accent no-underline transition-colors">Home</Link>

@@ -73,6 +73,8 @@ export default function RebarCalc() {
               <option value="€">€ EUR</option>
               <option value="$">$ USD</option>
               <option value="£">£ GBP</option>
+              <option value="S$">S$ SGD</option>
+              <option value="¥">¥ JPY</option>
             </SelectField>
           </div>
           <ShowMaths
@@ -82,7 +84,7 @@ export default function RebarCalc() {
               `kg/m for ${size.diameter} mm TMT = ${size.diameter}² ÷ 162.2 (cross-section ${size.area} mm²)`,
               "Constant 162.2 = 10⁶ ÷ (π/4 × 7,850)",
             ]}
-            source="SOURCE: IS 1786 · LAST VERIFIED 18 JUL 2026"
+            source="SOURCE: IS 1786 · ASTM A615 · JIS G3112 · BS 4449 · LAST VERIFIED 18 JUL 2026"
           />
         </>
       }

@@ -29,6 +29,12 @@ export const metadata: Metadata = {
     "hormuz crisis steel",
     "safeguard duty steel",
     "steel industry news 2026",
+    "astm a36 steel weight calculator",
+    "jis ss400 unit weight",
+    "steel weight calculator usa",
+    "steel weight calculator singapore",
+    "steel weight calculator japan",
+    "en 10025 steel weight",
   ],
   alternates: { canonical: "https://steelmath.com" },
 };
@@ -144,7 +150,7 @@ export default function Home() {
         <div className="flex items-end justify-between gap-4 lg:gap-10 mb-7 flex-wrap">
           <div>
             <div className="font-mono text-[11px] tracking-[0.14em] text-muted-3 mb-3">
-              FREE · NO SIGNUP · IS-STANDARD FORMULAS
+              FREE · NO SIGNUP · IS · ASTM · JIS · EN STANDARDS
             </div>
             <h1 className="text-[clamp(28px,4.5vw,36px)] leading-[1.08] font-extrabold tracking-[-0.02em] max-w-[720px] [text-wrap:balance]">
               Free Steel Weight Calculator &amp; Industry Analysis
@@ -236,6 +242,39 @@ export default function Home() {
               <a href="#insights" className="font-bold text-ink no-underline">Buy and sell with the full picture.</a>{" "}
               {articles.length} articles &amp; guides — pricing, policy &amp; supply chains, every claim sourced and dated.
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Global coverage — regions & standards */}
+      <section className="max-w-[1320px] mx-auto px-4 sm:px-6 pb-16">
+        <div className="border border-rule bg-[#FFFFFF]">
+          <div className="px-5 py-3 border-b border-rule-faint flex justify-between items-baseline flex-wrap gap-2">
+            <span className="font-mono text-[10.5px] tracking-[0.12em] text-muted-3">
+              BUILT FOR THE GLOBAL STEEL TRADE — REGIONAL STANDARDS CALLED OUT WHERE THEY DIFFER
+            </span>
+            <span className="font-mono text-[10.5px] tracking-[0.1em] text-muted-3">
+              ₹ · S$ · ¥ · $ · € · £
+            </span>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5">
+            {[
+              { region: "INDIA", detail: "IS 1786 / 2062 · TMT & saria sizes · BIS, GST, safeguard & anti-dumping guides", href: "/calculators/tmt", label: "TMT tools →" },
+              { region: "SINGAPORE / SEA", detail: "EN 10025 & BS grades · SEA import pricing — the marginal market for Chinese exports", href: "/articles/china-hrc-export-prices-validation-gap", label: "SEA price signals →" },
+              { region: "JAPAN", detail: "JIS G3101 (SS400) / G3112 / G3192 grades in every weight tool", href: "/calculator", label: "JIS grades →" },
+              { region: "UNITED STATES", detail: "ASTM A36 / A615 / A500 · lb-ft conversions · Section 232 trade coverage", href: "/articles/anti-dumping-chinese-steel-barrier-cascade", label: "US trade watch →" },
+              { region: "EU / UK", detail: "EN standards · CBAM compliance hub — deadlines, prices, country playbooks", href: "/cbam", label: "CBAM hub →" },
+            ].map((r, i) => (
+              <Link
+                key={r.region}
+                href={r.href}
+                className={`px-5 py-4 text-ink no-underline hover:bg-paper transition-colors border-b sm:border-b-0 border-rule-faint ${i < 4 ? "lg:border-r" : ""}`}
+              >
+                <div className="font-mono text-[10.5px] tracking-[0.12em] text-accent mb-1.5">{r.region}</div>
+                <div className="text-[12.5px] leading-normal text-muted-2">{r.detail}</div>
+                <div className="font-mono text-[10.5px] tracking-[0.06em] text-muted-3 mt-2">{r.label}</div>
+              </Link>
+            ))}
           </div>
         </div>
       </section>

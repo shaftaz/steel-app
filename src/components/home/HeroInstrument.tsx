@@ -5,13 +5,15 @@ import { useEffect, useState } from "react";
 type Shape = "round" | "square" | "flat" | "plate";
 
 const DENSITIES: Record<string, number> = {
-  MS: 7850, Fe500: 7850, SS304: 8000, SS316: 8027,
+  MS: 7850, Fe500: 7850, A36: 7850, SS400: 7850, SS304: 8000, SS316: 8027,
   EN8: 7850, EN24: 7850, Aluminium: 2700, Copper: 8940,
 };
 
 const GRADE_OPTS = [
   { key: "Fe500", label: "Fe500 TMT — 7,850 kg/m³" },
   { key: "MS", label: "MS (Mild Steel) — 7,850 kg/m³" },
+  { key: "A36", label: "A36 (ASTM, US) — 7,850 kg/m³" },
+  { key: "SS400", label: "SS400 (JIS, Japan) — 7,850 kg/m³" },
   { key: "SS304", label: "SS 304 — 8,000 kg/m³" },
   { key: "SS316", label: "SS 316 — 8,027 kg/m³" },
   { key: "EN8", label: "EN8 — 7,850 kg/m³" },
@@ -73,7 +75,7 @@ export default function HeroInstrument() {
   if (shape === "round") {
     perUnit = (Math.PI / 4) * d * d * rho / 1e6;
     total = perUnit * len;
-    formulaText = grade === "MS" || grade === "Fe500"
+    formulaText = rho === 7850
       ? `${d}² ÷ 162.2 = ${fmt(perUnit, 3)} kg/m`
       : `π/4 × ${d}² × ${rho.toLocaleString("en-IN")} ÷ 10⁶ = ${fmt(perUnit, 3)} kg/m`;
   } else if (shape === "square") {
@@ -236,8 +238,9 @@ export default function HeroInstrument() {
               <div className="font-mono text-xs leading-[1.8] text-muted bg-paper border border-rule px-4 py-3.5">
                 <div className="text-ink">{formulaText}</div>
                 <div>Constant 162.2 = 10⁶ ÷ (π/4 × 7,850) — from steel density 7,850 kg/m³</div>
-                <div>ρ — MS/Fe500 7,850 · SS304 8,000 · SS316 8,027 · Al 2,700 · Cu 8,940 kg/m³</div>
-                <div className="text-muted-3 mt-1.5">SOURCE: IS 1786 / IS 2062 · LAST VERIFIED 18 JUL 2026</div>
+                <div>ρ — MS/Fe500/A36/SS400 7,850 · SS304 8,000 · SS316 8,027 · Al 2,700 · Cu 8,940 kg/m³</div>
+                <div>Imperial — 1 kg/m = 0.672 lb/ft · 1 t = 2,204.6 lb</div>
+                <div className="text-muted-3 mt-1.5">SOURCE: IS 1786 / IS 2062 · ASTM A615 / A36 · JIS G3112 / G3101 · EN 10025 · LAST VERIFIED 18 JUL 2026</div>
               </div>
             )}
           </div>
