@@ -1,11 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import {
-  articles,
-  getArticleBySlug,
-  CATEGORY_STYLES,
-} from "@/lib/data/articles";
+import { articles, getArticleBySlug } from "@/lib/data/articles";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -90,7 +86,6 @@ export default async function ArticlePage({ params }: PageProps) {
   const article = getArticleBySlug(slug);
   if (!article) notFound();
 
-  const style = CATEGORY_STYLES[article.category];
   const related = getRelatedArticles(slug);
   const faqs = extractFaqs(article.content);
 
@@ -179,45 +174,45 @@ export default async function ArticlePage({ params }: PageProps) {
           }}
         />
       )}
-      <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-5 py-5">
+      <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 py-5">
         {/* Breadcrumb navigation */}
         <nav
           aria-label="Breadcrumb"
-          className="flex items-center gap-1.5 text-white/25 text-xs mb-5"
+          className="flex items-center gap-1.5 font-mono text-[11px] tracking-[0.08em] text-muted-3 mb-5 uppercase"
         >
           <Link
             href="/"
-            className="hover:text-accent no-underline transition-colors"
+            className="hover:text-ink no-underline transition-colors"
           >
             Home
           </Link>
           <span>/</span>
           <Link
             href="/articles"
-            className="hover:text-accent no-underline transition-colors"
+            className="hover:text-ink no-underline transition-colors"
           >
             Insights
           </Link>
           <span>/</span>
-          <span className="text-white/35 truncate max-w-[250px]">
+          <span className="text-ink truncate max-w-[250px] normal-case">
             {article.title}
           </span>
         </nav>
 
         <article className="glass-panel overflow-hidden">
           <div className="p-6 sm:p-10">
-            <div className="flex flex-wrap items-center gap-2.5 mb-5">
-              <span
-                className={`${style.bg} ${style.text} text-[10px] font-bold px-2.5 py-0.5 rounded-full uppercase tracking-wider`}
-              >
+            <div className="flex flex-wrap items-center gap-x-2.5 gap-y-1.5 mb-5 font-mono text-[10.5px] tracking-[0.1em] uppercase">
+              <span className={`font-semibold ${article.category === "GUIDE" ? "text-accent" : article.category === "CRISIS" ? "text-red-down" : "text-cbam"}`}>
                 {article.category}
               </span>
-              <span className="text-white/20 text-xs">
+              <span className="text-muted-3">·</span>
+              <span className="text-muted-3">
                 {article.readTime} read
               </span>
+              <span className="text-muted-3">·</span>
               <time
                 dateTime={article.date}
-                className="text-white/20 text-xs"
+                className="text-muted-3"
               >
                 {new Date(article.date).toLocaleDateString("en-IN", {
                   year: "numeric",
@@ -225,29 +220,28 @@ export default async function ArticlePage({ params }: PageProps) {
                   day: "numeric",
                 })}
               </time>
-              {article.lastUpdated && article.lastUpdated !== article.date && (
-                <span className="text-accent/40 text-xs">
-                  Updated{" "}
-                  <time dateTime={article.lastUpdated}>
-                    {new Date(article.lastUpdated).toLocaleDateString("en-IN", {
-                      year: "numeric",
-                      month: "long",
-                      day: "numeric",
-                    })}
-                  </time>
-                </span>
-              )}
+              <span className="text-muted-3">·</span>
+              <span className="text-muted-3">
+                Last verified{" "}
+                <time dateTime={article.lastUpdated || article.date}>
+                  {new Date(article.lastUpdated || article.date).toLocaleDateString("en-IN", {
+                    year: "numeric",
+                    month: "long",
+                    day: "numeric",
+                  })}
+                </time>
+              </span>
             </div>
 
-            <h1 className="text-white text-xl sm:text-2xl font-bold mb-3 leading-tight tracking-tight">
+            <h1 className="text-ink text-2xl sm:text-[28px] font-extrabold mb-3 leading-tight tracking-[-0.02em]">
               {article.title}
             </h1>
-            <p className="text-white/25 text-xs mb-8">
-              By <span className="text-white/40 font-medium">Special Correspondent</span> &middot; SteelMath
+            <p className="font-mono text-[11px] tracking-[0.06em] text-muted-3 mb-8 uppercase">
+              By <span className="text-muted font-medium">Special Correspondent</span> &middot; SteelMath
             </p>
 
             <div
-              className="prose max-w-none prose-glass prose-headings:font-semibold prose-h2:text-lg prose-h2:mt-8 prose-h2:mb-3 prose-h3:text-base prose-h3:mt-6 prose-h3:mb-2 prose-p:text-sm prose-p:leading-relaxed prose-li:text-sm prose-li:leading-relaxed prose-ul:my-3 prose-strong:text-white/80"
+              className="prose max-w-none prose-glass prose-headings:font-semibold prose-h2:text-lg prose-h2:mt-8 prose-h2:mb-3 prose-h3:text-base prose-h3:mt-6 prose-h3:mb-2 prose-p:text-sm prose-p:leading-relaxed prose-li:text-sm prose-li:leading-relaxed prose-ul:my-3 prose-strong:text-ink"
               dangerouslySetInnerHTML={{ __html: article.content }}
             />
 
@@ -267,7 +261,7 @@ export default async function ArticlePage({ params }: PageProps) {
               </Link>
               <Link
                 href="/articles"
-                className="text-white/30 hover:text-white/55 text-xs no-underline transition-colors"
+                className="text-muted-2 hover:text-ink text-xs no-underline transition-colors"
               >
                 More Insights →
               </Link>
@@ -277,35 +271,28 @@ export default async function ArticlePage({ params }: PageProps) {
 
         {/* Related Articles — critical for internal linking & SEO */}
         {related.length > 0 && (
-          <section className="mt-5">
-            <h2 className="text-white/40 text-sm font-semibold mb-3 uppercase tracking-wider">
+          <section className="mt-8">
+            <h2 className="font-mono text-[11px] tracking-[0.14em] text-accent font-medium mb-0 uppercase pb-3">
               Related Articles
             </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-              {related.map((rel) => {
-                const relStyle = CATEGORY_STYLES[rel.category];
-                return (
-                  <Link
-                    key={rel.slug}
-                    href={`/articles/${rel.slug}`}
-                    className="group block glass-panel glass-panel-hover overflow-hidden no-underline"
-                  >
-                    <div className="p-4">
-                      <span
-                        className={`${relStyle.bg} ${relStyle.text} text-[9px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider`}
-                      >
-                        {rel.category}
-                      </span>
-                      <h3 className="text-white/60 text-xs font-semibold mt-2 leading-snug group-hover:text-accent transition-colors line-clamp-2">
-                        {rel.title}
-                      </h3>
-                      <span className="text-white/20 text-[11px] mt-1 block">
-                        {rel.readTime}
-                      </span>
-                    </div>
-                  </Link>
-                );
-              })}
+            <div className="border-t border-ink">
+              {related.map((rel) => (
+                <Link
+                  key={rel.slug}
+                  href={`/articles/${rel.slug}`}
+                  className="group grid grid-cols-[84px_1fr_70px] gap-4 items-baseline py-3.5 px-1 border-b border-rule text-ink no-underline hover:bg-[#FFFFFF] transition-colors"
+                >
+                  <span className="font-mono text-[10.5px] tracking-[0.08em] text-muted-3 uppercase">
+                    {rel.category}
+                  </span>
+                  <h3 className="text-[13.5px] font-bold leading-snug group-hover:text-accent transition-colors line-clamp-2 m-0">
+                    {rel.title}
+                  </h3>
+                  <span className="font-mono text-[10.5px] text-muted-3 text-right">
+                    {rel.readTime}
+                  </span>
+                </Link>
+              ))}
             </div>
           </section>
         )}

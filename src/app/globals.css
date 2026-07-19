@@ -305,6 +305,20 @@ input[type="number"] {
   font-family: var(--font-plex-mono), monospace;
 }
 
+/* Legacy inline-styled CTA buttons inside article body HTML —
+   content strings must stay byte-identical, so reskin via CSS. */
+.prose-glass a[style] {
+  background: var(--accent) !important;
+  color: #FFFFFF !important;
+  border-radius: 0 !important;
+  border-bottom: none !important;
+  font-weight: 700;
+  transition: background 0.15s ease;
+}
+.prose-glass a[style]:hover {
+  background: var(--ink) !important;
+}
+
 /* ============================================================
    Print — one clean page per calculator result
    ============================================================ */
