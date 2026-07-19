@@ -17,6 +17,10 @@ export async function generateMetadata({
   const { slug } = await params;
   const article = getArticleBySlug(slug);
   if (!article) return {};
+  const ogImage = article.ogImage ?? {
+    url: `/og?title=${encodeURIComponent(article.metaTitle)}&accent=orange`,
+    alt: article.title,
+  };
   return {
     title: article.metaTitle,
     description: article.metaDescription,
@@ -27,6 +31,7 @@ export async function generateMetadata({
       type: "article",
       title: article.metaTitle,
       description: article.metaDescription,
+      images: [{ url: ogImage.url, width: 1200, height: 630, alt: ogImage.alt }],
       url: `https://steelmath.com/articles/${article.slug}`,
       siteName: "SteelMath",
       locale: "en_IN",
@@ -45,6 +50,7 @@ export async function generateMetadata({
       card: "summary_large_image",
       title: article.metaTitle,
       description: article.metaDescription,
+      images: [ogImage.url],
     },
   };
 }

@@ -12,6 +12,7 @@ export interface Article {
   metaTitle: string;
   metaDescription: string;
   relatedCalculators: string[];
+  ogImage?: { url: string; alt: string };
   content: string;
 }
 
@@ -22,6 +23,87 @@ export const CATEGORY_STYLES: Record<Category, { bg: string; text: string }> = {
 };
 
 export const articles: Article[] = [
+  {
+    slug: "india-data-centre-boom-steel-demand-2030",
+    title:
+      "5x in Five Years: The Construction Wave Hiding Inside India\u2019s Data Centre Boom",
+    category: "ANALYSIS",
+    categoryColor: "blue",
+    date: "2026-07-19",
+    readTime: "4 min",
+    excerpt:
+      "India\u2019s data centre capacity is set to grow from 1.7 GW to 8\u201310 GW by 2030. What the $180B build-out \u2014 and its constraints \u2014 means for steel buyers.",
+    metaTitle: "India\u2019s Data Centre Boom: The Steel Demand Story to 2030",
+    metaDescription:
+      "India\u2019s data centre capacity is set to grow from 1.7 GW to 8\u201310 GW by 2030. What the $180B build-out \u2014 and its constraints \u2014 means for steel buyers.",
+    relatedCalculators: ["beam-weight", "rebar"],
+    ogImage: {
+      url: "/og?chart=dc-india",
+      alt: "Bar chart of India data centre capacity growing from 1.7 GW in 2025 to 8\u201310 GW by 2030, annotated with four constraints: power, water, talent, regulation",
+    },
+    content: `
+<p>India\u2019s data centre capacity is projected to grow from 1.7 GW at end-2025 to 8\u201310 GW by 2030 \u2014 a roughly fivefold build-out compressed into five years, backed by a $180B investment pipeline. For steel buyers and traders, the headline isn\u2019t the digital economy. It\u2019s a concentrated, capital-locked construction cycle landing in a handful of metros \u2014 one whose pace will be set less by demand than by power, water, talent, and regulation.</p>
+
+<h2>The build-out is real, funded, and front-loaded</h2>
+
+<p>Three numbers anchor the case. Capacity stands at 1.7 GW today, with roughly 30% growth expected in 2026 alone (~2.2 GW). The investment pipeline is projected at $180B by 2026. And the 2030 target of 8\u201310 GW implies a build rate of well over 1 GW of new capacity per year, every year, through the decade\u2019s end.</p>
+
+<p>Each gigawatt of data centre capacity is a construction project first and a compute asset second: heavy foundations, long-span structural frames, raised flooring systems, racking, cable management, chiller plants \u2014 plus the substations and transmission connections that feed it. The mechanism matters more than any single tonnage estimate: capacity targets of this scale translate directly into multi-year demand for <a href="/calculators/rebar">rebar</a>, <a href="/calculators/beam-weight">structural sections</a>, and fabricated steel, clustered around Mumbai, Chennai, Hyderabad, Pune, and Delhi NCR rather than spread evenly across the country.</p>
+
+<p><strong>Implication:</strong> regional buyers in these clusters should expect data centre and allied power projects to compete for the same fabrication capacity, logistics, and material that general construction draws on \u2014 and to do so on compressed timelines.</p>
+
+<h2>The cost advantage means capital stays committed</h2>
+
+<p>India builds data centre capacity at $6\u20137M per MW, against $12\u201315M in Singapore and $13\u201316M in Japan \u2014 a 40\u201350% cost advantage. That gap does two things. It explains why the pipeline is this large. And it makes the pipeline sticky: hyperscalers and operators choosing India on cost economics don\u2019t reverse those decisions on a soft quarter.</p>
+
+<p><strong>Implication:</strong> treat this as structural, not cyclical, demand. A cost-driven capex wave with committed capital behaves differently from speculative construction \u2014 projects slip, but they rarely die. Plan for a demand floor, not a boom-bust.</p>
+
+<h2>The constraints make demand lumpy, not linear</h2>
+
+<p>Here\u2019s where the na\u00efve extrapolation fails. Four bottlenecks sit between 1.7 GW and 10 GW:</p>
+
+<p><strong>Power.</strong> Data centres run 24/7 and cannot throttle. Their share of national electricity demand could rise from 0.5% to ~3% by 2030 \u2014 which means <a href="/articles/india-infrastructure-capex-steel-demand-2030-adani-ports-energy">grid and transmission build-out</a> (itself steel-intensive) becomes a gating factor for site timelines.</p>
+
+<p><strong>Water.</strong> A 1 MW facility consumes ~70,000 litres daily; sector-wide consumption is projected to rise from 150 billion litres (2025) to 358 billion litres (2030) \u2014 in a country holding 18% of global population but 4% of global freshwater. Expect water availability to shape site selection and permitting speed.</p>
+
+<p><strong>Talent and regulation.</strong> Shortages in cooling, cybersecurity, and network operations slow commissioning; regulatory uncertainty \u2014 including the powers of the yet-to-be-constituted Data Protection Board \u2014 injects timing risk into investment decisions.</p>
+
+<p><strong>Implication:</strong> steel demand from this sector will arrive in surges tied to project clearances and grid connections, not as a smooth curve. Buyers who track project milestones \u2014 not announcements \u2014 will see the demand before the market prices it.</p>
+
+<h2>The honest limit</h2>
+
+<p>Public, India-specific data on steel intensity per MW of data centre capacity is thin, and this analysis deliberately avoids inventing a tonnage figure. Directionally, the demand pull is real; sized against India\u2019s total steel consumption, data centres alone will not move national <a href="/articles/steel-price-hike-tracker-march-2026">HRC or rebar benchmarks</a>. Their significance is regional and sectoral \u2014 fabrication capacity, structural sections, and metro-cluster logistics \u2014 not macro. Anyone quoting a precise \u201cmillion tonnes of steel from data centres\u201d number should be asked for their source.</p>
+
+<h2>What to watch</h2>
+
+<ul>
+<li><strong>Grid connection approvals</strong> in Mumbai, Chennai, and Hyderabad clusters \u2014 the truest leading indicator of construction starts.</li>
+<li><strong>The 2026 growth print</strong>: does capacity actually reach ~2.2 GW? A miss signals the constraints are binding earlier than expected.</li>
+<li><strong>Water-linked permitting decisions</strong> in stressed regions \u2014 a proxy for which announced projects convert to steel orders.</li>
+<li><strong>Structural section and fabrication lead times</strong> in the five metro clusters, versus national averages.</li>
+<li><strong>Data Protection Board constitution and early rulings</strong> \u2014 the regulatory trigger that could accelerate or stall committed capital.</li>
+</ul>
+
+<h2>Frequently asked questions</h2>
+
+<h3>How much will India\u2019s data centre capacity grow by 2030?</h3>
+<p>From 1.7 GW at end-2025 to a projected 8\u201310 GW by 2030 \u2014 roughly fivefold, backed by a $180B investment pipeline.</p>
+
+<h3>Why is data centre construction cheaper in India?</h3>
+<p>Build costs run $6\u20137M per MW versus $12\u201315M in Singapore and $13\u201316M in Japan \u2014 a 40\u201350% advantage from lower land and labour costs, tax incentives, and large domestic demand.</p>
+
+<h3>What could slow the build-out?</h3>
+<p>Power (share of national electricity rising from 0.5% to ~3% by 2030), water (150 \u2192 358 billion litres annually by 2030), specialist talent shortages, and regulatory uncertainty.</p>
+
+<h3>What does this mean for steel demand?</h3>
+<p>Concentrated, multi-year demand for rebar, structural sections, and fabricated steel in the Mumbai, Chennai, Hyderabad, Pune, and Delhi NCR clusters \u2014 arriving in surges tied to clearances and grid connections, not a smooth curve.</p>
+
+<h2>Close</h2>
+
+<p>The next 6\u201312 months will show whether India\u2019s data centre pipeline converts to poured concrete and erected steel at the promised pace \u2014 or queues behind its own grid. For buyers, the edge lies in tracking conversion, not announcements; platforms like SteelMath exist to turn exactly that kind of forward signal into <a href="/articles/buy-steel-now-or-wait-hormuz-2026">procurement timing</a>.</p>
+`,
+  },
+
   {
     slug: "hormuz-crisis-steel-impact-india",
     title:

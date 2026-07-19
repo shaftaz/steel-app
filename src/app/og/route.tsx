@@ -8,8 +8,91 @@ const ACCENTS: Record<string, string> = {
   blue: "#8FA3E8",
 };
 
+/* Bar chart card: India data centre capacity 2025 → 2030 with constraint gates */
+function dcIndiaChart() {
+  const bars = [
+    { label: "2025", value: "1.7 GW", h: 42 },
+    { label: "2026", value: "~2.2 GW", h: 55 },
+    { label: "2030", value: "8–10 GW", h: 225 },
+  ];
+  return new ImageResponse(
+    (
+      <div
+        style={{
+          width: "100%",
+          height: "100%",
+          display: "flex",
+          flexDirection: "column",
+          background: "#17181A",
+          padding: "52px 64px",
+          fontFamily: "sans-serif",
+        }}
+      >
+        <div
+          style={{
+            display: "flex",
+            alignItems: "baseline",
+            justifyContent: "space-between",
+            borderBottom: "1px solid #2E2F33",
+            paddingBottom: 20,
+          }}
+        >
+          <div style={{ display: "flex", alignItems: "baseline" }}>
+            <span style={{ color: "#F6F5F2", fontSize: 32, fontWeight: 800 }}>Steel</span>
+            <span style={{ color: "#FF5C1F", fontSize: 32, fontWeight: 800 }}>Math</span>
+            <span style={{ color: "#8B8981", fontSize: 16, marginLeft: 8 }}>.COM</span>
+          </div>
+          <span style={{ color: "#7E8085", fontSize: 17, letterSpacing: 3 }}>
+            ANALYSIS · MARKET INTELLIGENCE
+          </span>
+        </div>
+
+        <div style={{ display: "flex", flex: 1, alignItems: "flex-end", gap: 48, paddingTop: 36 }}>
+          <div style={{ display: "flex", flexDirection: "column", flex: 1 }}>
+            <span style={{ color: "#F6F5F2", fontSize: 42, fontWeight: 800, lineHeight: 1.15, letterSpacing: -1 }}>
+              India&apos;s data centre boom: 5x capacity by 2030
+            </span>
+            <span style={{ color: "#7E8085", fontSize: 20, marginTop: 18, letterSpacing: 2 }}>
+              GATED BY — POWER · WATER · TALENT · REGULATION
+            </span>
+            <span style={{ color: "#FF5C1F", fontSize: 20, marginTop: 26, letterSpacing: 2 }}>
+              $180B PIPELINE · THE STEEL BUYER&apos;S READ
+            </span>
+          </div>
+          <div style={{ display: "flex", alignItems: "flex-end", gap: 30 }}>
+            {bars.map((b) => (
+              <div key={b.label} style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 8 }}>
+                <span style={{ color: "#8FA3E8", fontSize: 19, fontWeight: 700 }}>{b.value}</span>
+                <div style={{ width: 88, height: b.h, background: b.label === "2030" ? "#FF5C1F" : "#8FA3E8", display: "flex" }} />
+                <span style={{ color: "#7E8085", fontSize: 18 }}>{b.label}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            borderTop: "1px solid #2E2F33",
+            paddingTop: 18,
+            marginTop: 24,
+          }}
+        >
+          <span style={{ color: "#7E8085", fontSize: 16, letterSpacing: 2 }}>
+            1.7 GW (2025) → 8–10 GW (2030) · SOURCES VERIFIED
+          </span>
+          <span style={{ color: "#FF5C1F", fontSize: 16, letterSpacing: 2 }}>steelmath.com</span>
+        </div>
+      </div>
+    ),
+    { width: 1200, height: 630 }
+  );
+}
+
 export async function GET(req: NextRequest) {
   const { searchParams } = new URL(req.url);
+  if (searchParams.get("chart") === "dc-india") return dcIndiaChart();
   const title = (searchParams.get("title") || "SteelMath — Steel Calculators & Market Intelligence").slice(0, 120);
   const value = (searchParams.get("value") || "").slice(0, 24);
   const label = (searchParams.get("label") || "").slice(0, 60);
