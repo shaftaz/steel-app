@@ -1,9 +1,24 @@
 import type { Metadata } from "next";
 import Script from "next/script";
+import { Archivo, IBM_Plex_Mono } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 // import PriceTicker from "@/components/dashboard/PriceTicker";
 import "./globals.css";
+
+const archivo = Archivo({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
+  variable: "--font-archivo",
+  display: "swap",
+});
+
+const plexMono = IBM_Plex_Mono({
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  variable: "--font-plex-mono",
+  display: "swap",
+});
 
 const BASE_URL = "https://steelmath.com";
 
@@ -291,7 +306,7 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en">
+    <html lang="en" className={`${archivo.variable} ${plexMono.variable}`}>
       <head>
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-V0FPXV02V5"
