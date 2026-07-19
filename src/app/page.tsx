@@ -175,54 +175,66 @@ export default function Home() {
           </Link>
         </div>
 
-        <p className="text-[13px] leading-[1.65] text-muted-3 mt-5 mx-auto max-w-[880px] text-center">
-          SteelMath is a free steel weight calculator supporting all common sections — TMT bar (rebar), mild steel plate, MS pipe, angle, channel, I-beam, flat bar &amp; square tube. Use the d&sup2;/162 formula for round bars or enter dimensions for instant weight-per-metre results. Our tools support multiple steel grades including MS (7,850 kg/m&sup3;), SS 304, SS 316, Aluminium &amp; Copper with accurate density factors.
-        </p>
       </section>
 
-      {/* CBAM strip */}
+      {/* CBAM strip — the one market number that changes what you quote */}
       <section className="max-w-[1320px] mx-auto px-4 sm:px-6 pt-10">
-        <div className="flex flex-wrap items-center gap-x-5 gap-y-2.5 bg-[#FFFFFF] border border-cbam-rule px-5 py-3.5">
-          <span className="font-mono text-[10.5px] tracking-[0.12em] text-[#7A8094]">CERT PRICE — Q2 2026</span>
-          <span className="font-mono text-xl font-semibold text-cbam">
-            €75.28<span className="text-xs text-[#7A8094]"> /tCO₂e</span>
-          </span>
-          <span className="font-mono text-[11.5px] text-[#5A6070]">Q1 — €75.36</span>
-          <span className="w-px h-[22px] bg-cbam-rule hidden sm:block" />
-          <span className="font-mono text-[11.5px] text-[#5A6070]">
-            NEXT — Q3 PRICE 5 OCT 2026 · SALES OPEN 1 FEB 2027 · FIRST SURRENDER 30 SEP 2027
-          </span>
-          <Link
-            href="/cbam"
-            className="sm:ml-auto font-mono text-[11.5px] tracking-[0.06em] text-cbam border-b border-cbam pb-px no-underline hover:text-ink hover:border-ink transition-colors"
-          >
-            FULL TIMELINE &amp; COUNTDOWN →
-          </Link>
+        <div className="grid grid-cols-1 md:grid-cols-[auto_1fr_auto] items-center bg-[#FFFFFF] border border-cbam-rule">
+          <div className="px-5 py-4 md:border-r border-cbam-rule border-b md:border-b-0">
+            <div className="font-mono text-[10.5px] tracking-[0.12em] text-[#7A8094] mb-1">
+              EU CARBON BORDER PRICE — Q2 2026
+            </div>
+            <div className="font-mono text-[26px] font-semibold text-cbam leading-none">
+              €75.28<span className="text-xs text-[#7A8094]"> /tCO₂e</span>
+            </div>
+          </div>
+          <div className="px-5 py-4 border-b md:border-b-0">
+            <p className="text-[13.5px] leading-normal text-[#2A2D35] m-0">
+              Every tonne of steel entering the EU now carries this price on its embedded carbon.
+            </p>
+            <div className="font-mono text-[11px] text-[#7A8094] mt-1.5">
+              Q3 PRICE — 5 OCT 2026 · CERTIFICATE SALES OPEN — 1 FEB 2027
+            </div>
+          </div>
+          <div className="px-5 py-4 flex flex-col gap-2 items-start md:items-end">
+            <Link
+              href="/cbam/calculator"
+              className="btn-cbam text-[13px] px-4 py-2.5 no-underline"
+            >
+              Estimate your cargo&apos;s cost →
+            </Link>
+            <Link
+              href="/cbam"
+              className="font-mono text-[10.5px] tracking-[0.06em] text-[#5A6070] no-underline hover:text-cbam transition-colors"
+            >
+              HUB · TIMELINE · COUNTDOWN →
+            </Link>
+          </div>
         </div>
       </section>
 
-      {/* Pillars */}
+      {/* Pillars — what you get, in one line each */}
       <section className="max-w-[1320px] mx-auto px-4 sm:px-6 pt-12 pb-16">
         <div className="grid grid-cols-1 md:grid-cols-3 border-t border-ink">
           <div className="pt-5 md:pr-6">
             <div className="font-mono text-[11px] tracking-[0.12em] text-accent mb-2.5">01 — CALCULATE</div>
             <div className="text-[15px] leading-normal text-muted">
-              <a href="#tools" className="font-bold text-ink no-underline">Twenty free calculators.</a>{" "}
-              Weight, yield &amp; production cost for every section type. The answer before you scroll.
+              <a href="#tools" className="font-bold text-ink no-underline">Quote any section in seconds.</a>{" "}
+              Twenty free calculators — weight, yield &amp; production cost. No signup, works offline on site.
             </div>
           </div>
           <div className="pt-5 md:px-6 md:border-l border-rule mt-5 md:mt-0">
             <div className="font-mono text-[11px] tracking-[0.12em] text-cbam mb-2.5">02 — COMPLY</div>
             <div className="text-[15px] leading-normal text-muted">
-              <Link href="/cbam" className="font-bold text-ink no-underline">The CBAM compliance hub.</Link>{" "}
-              Deadlines, certificate prices &amp; checklists for exporters and EU importers.
+              <Link href="/cbam" className="font-bold text-ink no-underline">Know your CBAM cost before your buyer asks.</Link>{" "}
+              Deadlines, certificate prices &amp; checklists for both sides of the border.
             </div>
           </div>
           <div className="pt-5 md:pl-6 md:border-l border-rule mt-5 md:mt-0">
             <div className="font-mono text-[11px] tracking-[0.12em] text-accent mb-2.5">03 — UNDERSTAND</div>
             <div className="text-[15px] leading-normal text-muted">
-              <a href="#insights" className="font-bold text-ink no-underline">{articles.length} articles &amp; guides.</a>{" "}
-              Pricing, policy &amp; supply-chain analysis with sources and verification dates.
+              <a href="#insights" className="font-bold text-ink no-underline">Buy and sell with the full picture.</a>{" "}
+              {articles.length} articles &amp; guides — pricing, policy &amp; supply chains, every claim sourced and dated.
             </div>
           </div>
         </div>
@@ -331,6 +343,10 @@ export default function Home() {
             Explore All Insights →
           </Link>
         </div>
+
+        <p className="text-[12.5px] leading-[1.65] text-muted-3 mt-8 mx-auto max-w-[880px] text-center">
+          SteelMath is a free steel weight calculator supporting all common sections — TMT bar (rebar), mild steel plate, MS pipe, angle, channel, I-beam, flat bar &amp; square tube. Use the d&sup2;/162 formula for round bars or enter dimensions for instant weight-per-metre results. Our tools support multiple steel grades including MS (7,850 kg/m&sup3;), SS 304, SS 316, Aluminium &amp; Copper with accurate density factors.
+        </p>
       </section>
     </>
   );
