@@ -10,7 +10,8 @@ export const metadata: Metadata = {
   description: "Free MS flat bar weight calculator for all standard sizes. Uses formula W × T × 0.00785 to calculate weight per metre. Complete chart from 20×3 to 100×12 with weight per 6m length.",
   keywords: ["flat bar weight calculator", "ms flat bar weight chart", "flat bar weight per metre", "steel flat bar weight formula", "flat bar weight per foot", "ms flat weight chart", "50x6 flat bar weight", "75x8 flat bar weight", "100x10 flat bar weight", "mild steel flat bar sizes"],
   alternates: { canonical: "https://steelmath.com/calculators/flat-bar-weight" },
-  openGraph: { title: "Flat Bar Weight Calculator — All MS Sizes | SteelMath", description: "Calculate MS flat bar weight for all sizes. Complete chart with weight per metre and per 6m.", url: "https://steelmath.com/calculators/flat-bar-weight", type: "website" },
+  openGraph: {
+    images: [{ url: "/og?title=Flat%20Bar%20Weight%20Calculator%20%E2%80%94%20All%20MS%20Flat%20Bar%20Sizes&accent=orange", width: 1200, height: 630 }], title: "Flat Bar Weight Calculator — All MS Sizes | SteelMath", description: "Calculate MS flat bar weight for all sizes. Complete chart with weight per metre and per 6m.", url: "https://steelmath.com/calculators/flat-bar-weight", type: "website" },
 };
 
 const FAQS = [

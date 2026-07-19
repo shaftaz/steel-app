@@ -10,6 +10,7 @@ export const metadata: Metadata = {
     "The EU carbon border levy is live. Every CBAM deadline, certificate price and obligation for the steel trade — plain language, verified against the Official Journal, for exporters and EU importers.",
   alternates: { canonical: "https://steelmath.com/cbam" },
   openGraph: {
+    images: [{ url: "/og?title=CBAM%20Compliance%20Hub%20%E2%80%94%20Deadlines%2C%20Prices%2C%20Country%20Playbooks&accent=blue", width: 1200, height: 630 }],
     title: "CBAM Compliance Hub — Deadlines, Prices, Country Playbooks | SteelMath",
     description:
       "Every CBAM deadline, certificate price and obligation for the steel trade — verified against the Official Journal.",

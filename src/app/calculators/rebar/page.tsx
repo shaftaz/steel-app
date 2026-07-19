@@ -26,6 +26,7 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "https://steelmath.com/calculators/rebar" },
   openGraph: {
+    images: [{ url: "/og?title=Rebar%20Calculator%20%E2%80%94%20Weight%2C%20Quantity%20%26%20Bars%20Needed%20for%20TMT%206mm%20to%2040mm&accent=orange", width: 1200, height: 630 }],
     title: "Rebar Calculator — Weight, Quantity & Bars Needed | SteelMath",
     description:
       "Calculate rebar weight, number of bars and tonnes for TMT 6mm to 40mm. Free instant calculator for construction procurement.",

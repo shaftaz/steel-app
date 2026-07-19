@@ -10,7 +10,8 @@ export const metadata: Metadata = {
   description: "Free steel angle weight calculator for all equal and unequal angle sizes as per IS 808. Calculate weight using (A + B − T) × T × 0.00785. Complete chart from 25×25×3 to 200×200×16.",
   keywords: ["steel angle weight calculator", "ms angle weight chart", "angle weight per metre", "steel angle weight formula", "equal angle weight chart", "is 808 angle sizes", "50x50x5 angle weight", "75x75x6 angle weight", "100x100x10 angle weight", "l angle weight chart"],
   alternates: { canonical: "https://steelmath.com/calculators/angle-weight" },
-  openGraph: { title: "Steel Angle Weight Calculator — Equal & Unequal IS 808 | SteelMath", description: "Calculate steel angle weight for all IS 808 sizes. Complete chart from 25×25 to 200×200.", url: "https://steelmath.com/calculators/angle-weight", type: "website" },
+  openGraph: {
+    images: [{ url: "/og?title=Steel%20Angle%20Weight%20Calculator%20%E2%80%94%20Equal%20%26%20Unequal%20IS%20808%20Chart&accent=orange", width: 1200, height: 630 }], title: "Steel Angle Weight Calculator — Equal & Unequal IS 808 | SteelMath", description: "Calculate steel angle weight for all IS 808 sizes. Complete chart from 25×25 to 200×200.", url: "https://steelmath.com/calculators/angle-weight", type: "website" },
 };
 
 const FAQS = [

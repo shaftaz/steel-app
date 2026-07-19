@@ -10,7 +10,8 @@ export const metadata: Metadata = {
   description: "Free ISMB beam weight calculator for all Indian Standard Medium Beam sizes. Complete chart with depth, flange width, web thickness, weight per metre, section modulus (Zxx) and moment of inertia (Ixx).",
   keywords: ["ismb weight calculator", "i beam weight chart", "ismb beam weight per metre", "steel beam weight calculator", "ismb 200 weight", "ismb 300 weight per metre", "ismb section properties", "i beam weight formula", "ismb moment of inertia", "steel beam sizes india"],
   alternates: { canonical: "https://steelmath.com/calculators/beam-weight" },
-  openGraph: { title: "I-Beam (ISMB) Weight Calculator — All Sizes | SteelMath", description: "Calculate ISMB beam weight for all sizes. Complete chart with section properties Zxx & Ixx.", url: "https://steelmath.com/calculators/beam-weight", type: "website" },
+  openGraph: {
+    images: [{ url: "/og?title=I-Beam%20%28ISMB%29%20Weight%20Calculator%20%E2%80%94%20All%20Sizes%20with%20Section%20Properties&accent=orange", width: 1200, height: 630 }], title: "I-Beam (ISMB) Weight Calculator — All Sizes | SteelMath", description: "Calculate ISMB beam weight for all sizes. Complete chart with section properties Zxx & Ixx.", url: "https://steelmath.com/calculators/beam-weight", type: "website" },
 };
 
 const FAQS = [

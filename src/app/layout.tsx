@@ -3,6 +3,7 @@ import Script from "next/script";
 import { Archivo, IBM_Plex_Mono } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SwRegister from "@/components/SwRegister";
 // import PriceTicker from "@/components/dashboard/PriceTicker";
 import "./globals.css";
 
@@ -238,7 +239,7 @@ export const metadata: Metadata = {
       "Free steel weight calculator for TMT bar, pipe, plate, angle & beam. Expert industry analysis, weight charts & guides for steel professionals.",
     images: [
       {
-        url: "/og-image.png",
+        url: "/og?title=Free%20Steel%20Weight%20Calculator%20%26%20Industry%20Analysis&accent=orange",
         width: 1200,
         height: 630,
         alt: "SteelMath — Steel Calculator & Market Intelligence",
@@ -250,7 +251,7 @@ export const metadata: Metadata = {
     title: "SteelMath — Steel Weight Calculator & Industry Analysis",
     description:
       "Free steel weight calculator. Expert industry analysis and weight charts. Built for steel professionals.",
-    images: ["/og-image.png"],
+    images: ["/og?title=Free%20Steel%20Weight%20Calculator%20%26%20Industry%20Analysis&accent=orange"],
   },
   robots: {
     index: true,
@@ -332,6 +333,7 @@ gtag('config', 'G-V0FPXV02V5');`}
         {/* <PriceTicker /> */}
         {children}
         <Footer />
+        <SwRegister />
       </body>
     </html>
   );

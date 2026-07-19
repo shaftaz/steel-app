@@ -10,7 +10,8 @@ export const metadata: Metadata = {
   description: "Free chequered plate weight calculator for all thicknesses from 3mm to 25mm. Uses formula thickness × 7.85 × 1.05 (5% extra for diamond pattern). Complete weight chart.",
   keywords: ["chequered plate weight calculator", "checkered plate weight", "diamond plate weight", "chequered plate weight chart", "chequered plate weight per sqm", "ms chequered plate weight", "pattern plate weight", "anti slip plate weight", "tear plate weight", "chequered plate 6mm weight"],
   alternates: { canonical: "https://steelmath.com/calculators/chequered-plate-weight" },
-  openGraph: { title: "Chequered Plate Weight Calculator — All Thicknesses | SteelMath", description: "Calculate chequered plate weight with 5% pattern factor. Chart from 3mm to 25mm.", url: "https://steelmath.com/calculators/chequered-plate-weight", type: "website" },
+  openGraph: {
+    images: [{ url: "/og?title=Chequered%20Plate%20Weight%20Calculator%20%E2%80%94%20All%20Thicknesses%203mm%20to%2025mm&accent=orange", width: 1200, height: 630 }], title: "Chequered Plate Weight Calculator — All Thicknesses | SteelMath", description: "Calculate chequered plate weight with 5% pattern factor. Chart from 3mm to 25mm.", url: "https://steelmath.com/calculators/chequered-plate-weight", type: "website" },
 };
 
 const FAQS = [

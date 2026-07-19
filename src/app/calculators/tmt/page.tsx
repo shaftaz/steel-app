@@ -28,6 +28,7 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "https://steelmath.com/calculators/tmt" },
   openGraph: {
+    images: [{ url: "/og?title=TMT%20Bar%20Weight%20Calculator%20%E2%80%94%20Per%20Metre%20Chart%20for%208mm%20to%2040mm&accent=orange", width: 1200, height: 630 }],
     title:
       "TMT Bar Weight Calculator — Per Metre Chart for 8mm to 40mm | SteelMath",
     description:

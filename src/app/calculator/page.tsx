@@ -28,6 +28,7 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "https://steelmath.com/calculator" },
   openGraph: {
+    images: [{ url: "/og?title=Free%20Steel%20Weight%20Calculator%20%E2%80%94%20TMT%20Bar%2C%20Plate%2C%20Pipe%2C%20Angle%2C%20Beam&accent=orange", width: 1200, height: 630 }],
     title: "Free Steel Weight Calculator — All Sections & Grades | SteelMath",
     description:
       "Calculate steel weight for TMT bar, plate, pipe, angle & beam. Free, instant, accurate. Supports all common steel grades.",

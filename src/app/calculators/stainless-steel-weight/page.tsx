@@ -9,7 +9,8 @@ export const metadata: Metadata = {
   description: "Free stainless steel weight calculator for SS 304, SS 316 & SS 202 grades. Calculate weight for round bars, plates/sheets, and pipes with correct density values.",
   keywords: ["stainless steel weight calculator", "ss 304 weight calculator", "ss 316 weight calculator", "ss plate weight", "ss pipe weight", "ss round bar weight", "stainless steel density", "ss 202 weight", "ss sheet weight calculator", "stainless steel weight per metre"],
   alternates: { canonical: "https://steelmath.com/calculators/stainless-steel-weight" },
-  openGraph: { title: "Stainless Steel Weight Calculator — SS 304/316/202 | SteelMath", description: "Calculate SS weight for round bars, plates & pipes. Correct density for 304, 316 & 202.", url: "https://steelmath.com/calculators/stainless-steel-weight", type: "website" },
+  openGraph: {
+    images: [{ url: "/og?title=Stainless%20Steel%20Weight%20Calculator%20%E2%80%94%20SS%20304%2C%20316%2C%20202&accent=orange", width: 1200, height: 630 }], title: "Stainless Steel Weight Calculator — SS 304/316/202 | SteelMath", description: "Calculate SS weight for round bars, plates & pipes. Correct density for 304, 316 & 202.", url: "https://steelmath.com/calculators/stainless-steel-weight", type: "website" },
 };
 
 const SS_DENSITIES = [

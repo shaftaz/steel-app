@@ -27,6 +27,7 @@ export const metadata: Metadata = {
     canonical: "https://steelmath.com/calculators/scrap-production-cost",
   },
   openGraph: {
+    images: [{ url: "/og?title=Scrap%20to%20Steel%20Production%20Cost%20Calculator%20%E2%80%94%20IF/EAF%20Full%20Cost%20Breakdown&accent=orange", width: 1200, height: 630 }],
     title:
       "Scrap to Steel Production Cost Calculator — Full Breakdown | SteelMath",
     description:

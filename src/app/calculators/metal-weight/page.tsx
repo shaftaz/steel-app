@@ -26,6 +26,7 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "https://steelmath.com/calculators/metal-weight" },
   openGraph: {
+    images: [{ url: "/og?title=Metal%20Weight%20Calculator%20%E2%80%94%20Steel%2C%20Aluminium%2C%20Copper%2C%20Brass%20%26%2014%20Metals&accent=orange", width: 1200, height: 630 }],
     title: "Metal Weight Calculator — 14 Metals, All Shapes | SteelMath",
     description:
       "Calculate weight for round, square, rectangular, pipe, sheet & hex bar in steel, aluminium, copper, brass, titanium & more. Free instant calculator.",

@@ -25,6 +25,7 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "https://steelmath.com/calculators/steel-plate" },
   openGraph: {
+    images: [{ url: "/og?title=Steel%20Plate%20Weight%20Calculator%20%E2%80%94%20MS%20Plate%20by%20Thickness%2C%20Length%20%26%20Width&accent=orange", width: 1200, height: 630 }],
     title:
       "Steel Plate Weight Calculator — MS Plate by Thickness, Length & Width | SteelMath",
     description:

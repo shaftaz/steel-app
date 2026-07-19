@@ -25,6 +25,7 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "https://steelmath.com/calculators/credit-cost" },
   openGraph: {
+    images: [{ url: "/og?title=Steel%20Credit%20Cost%20Calculator%20%E2%80%94%20Interest%20on%20Deferred%20Payment&accent=orange", width: 1200, height: 630 }],
     title: "Steel Credit Cost Calculator — True Cost of Buying on Credit | SteelMath",
     description:
       "Calculate effective steel cost including credit interest. Enter quantity, price, credit days & interest rate. Free tool for traders & procurement.",

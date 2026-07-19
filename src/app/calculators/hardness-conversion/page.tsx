@@ -26,6 +26,7 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "https://steelmath.com/calculators/hardness-conversion" },
   openGraph: {
+    images: [{ url: "/og?title=Hardness%20Conversion%20Calculator%20%E2%80%94%20Brinell%2C%20Rockwell%2C%20Vickers%20%26%20Tensile&accent=orange", width: 1200, height: 630 }],
     title: "Hardness Conversion Calculator — HB, HRC, HRB, HV & MPa | SteelMath",
     description:
       "Convert between Brinell, Rockwell C/B, Vickers hardness scales and tensile strength. Free instant converter with full reference chart.",

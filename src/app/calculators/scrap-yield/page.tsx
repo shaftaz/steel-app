@@ -25,6 +25,7 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "https://steelmath.com/calculators/scrap-yield" },
   openGraph: {
+    images: [{ url: "/og?title=Scrap%20Yield%20Calculator%20%E2%80%94%20Liquid%20Steel%20Recovery%20by%20Grade%20%26%20Furnace&accent=orange", width: 1200, height: 630 }],
     title:
       "Scrap Yield Calculator — Liquid Steel Recovery by Grade & Furnace | SteelMath",
     description:

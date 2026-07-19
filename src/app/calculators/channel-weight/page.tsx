@@ -10,7 +10,8 @@ export const metadata: Metadata = {
   description: "Free ISMC channel weight calculator for all Indian Standard Medium Channel sizes from ISMC 75 to ISMC 400. Complete chart with depth, flange width, web & flange thickness, and weight per metre.",
   keywords: ["ismc weight calculator", "channel weight chart", "ismc channel weight per metre", "steel channel weight calculator", "ismc 150 weight", "ismc 200 weight per metre", "c channel weight chart", "ismc section properties", "steel channel sizes india", "ismc weight per foot"],
   alternates: { canonical: "https://steelmath.com/calculators/channel-weight" },
-  openGraph: { title: "Channel (ISMC) Weight Calculator — All Sizes | SteelMath", description: "Calculate ISMC channel weight for all sizes. Complete chart with section dimensions.", url: "https://steelmath.com/calculators/channel-weight", type: "website" },
+  openGraph: {
+    images: [{ url: "/og?title=Channel%20%28ISMC%29%20Weight%20Calculator%20%E2%80%94%20All%20Sizes%2075%20to%20400&accent=orange", width: 1200, height: 630 }], title: "Channel (ISMC) Weight Calculator — All Sizes | SteelMath", description: "Calculate ISMC channel weight for all sizes. Complete chart with section dimensions.", url: "https://steelmath.com/calculators/channel-weight", type: "website" },
 };
 
 const FAQS = [

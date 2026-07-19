@@ -10,7 +10,8 @@ export const metadata: Metadata = {
   description: "Free rectangular tube weight calculator for all RHS (Rectangular Hollow Section) sizes. Uses formula 2 × (W + H − 2×WT) × WT × 0.00785. Complete chart from 40×20 to 200×100.",
   keywords: ["rectangular tube weight calculator", "rhs weight chart", "rectangular hollow section weight", "ms rectangular tube weight", "rectangular pipe weight calculator", "rect tube weight formula", "80x40 rect tube weight", "100x50 rect tube weight", "200x100 rect tube weight", "steel rectangular tube sizes"],
   alternates: { canonical: "https://steelmath.com/calculators/rect-tube-weight" },
-  openGraph: { title: "Rectangular Tube (RHS) Weight Calculator — All Sizes | SteelMath", description: "Calculate RHS rectangular tube weight for all sizes. Complete chart with weight per metre.", url: "https://steelmath.com/calculators/rect-tube-weight", type: "website" },
+  openGraph: {
+    images: [{ url: "/og?title=Rectangular%20Tube%20%28RHS%29%20Weight%20Calculator%20%E2%80%94%20All%20Sizes&accent=orange", width: 1200, height: 630 }], title: "Rectangular Tube (RHS) Weight Calculator — All Sizes | SteelMath", description: "Calculate RHS rectangular tube weight for all sizes. Complete chart with weight per metre.", url: "https://steelmath.com/calculators/rect-tube-weight", type: "website" },
 };
 
 const FAQS = [

@@ -10,7 +10,8 @@ export const metadata: Metadata = {
   description: "Free square tube weight calculator for all SHS (Square Hollow Section) sizes. Uses formula (Side − WT) × WT × 4 × 0.00785. Complete chart from 20×20 to 100×100 with weight per metre.",
   keywords: ["square tube weight calculator", "shs weight chart", "square hollow section weight", "ms square tube weight per metre", "square pipe weight calculator", "square tube weight formula", "50x50 square tube weight", "75x75 square tube weight", "100x100 square tube weight", "steel square tube sizes"],
   alternates: { canonical: "https://steelmath.com/calculators/square-tube-weight" },
-  openGraph: { title: "Square Tube (SHS) Weight Calculator — All Sizes | SteelMath", description: "Calculate SHS square tube weight for all sizes. Complete chart with weight per metre.", url: "https://steelmath.com/calculators/square-tube-weight", type: "website" },
+  openGraph: {
+    images: [{ url: "/og?title=Square%20Tube%20%28SHS%29%20Weight%20Calculator%20%E2%80%94%20All%20Sizes&accent=orange", width: 1200, height: 630 }], title: "Square Tube (SHS) Weight Calculator — All Sizes | SteelMath", description: "Calculate SHS square tube weight for all sizes. Complete chart with weight per metre.", url: "https://steelmath.com/calculators/square-tube-weight", type: "website" },
 };
 
 const FAQS = [

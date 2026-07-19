@@ -10,7 +10,8 @@ export const metadata: Metadata = {
   description: "Free MS pipe weight calculator for all Nominal Bore sizes from 15mm to 200mm. Uses formula (OD − WT) × WT × 0.02466. Covers IS 1239 Light, Medium & Heavy classes with complete weight chart.",
   keywords: ["ms pipe weight calculator", "pipe weight calculator", "ms pipe weight per metre", "gi pipe weight chart", "steel pipe weight formula", "pipe weight per foot", "is 1239 pipe weight", "ms pipe weight chart", "pipe od wt weight", "nominal bore pipe size"],
   alternates: { canonical: "https://steelmath.com/calculators/pipe-weight" },
-  openGraph: { title: "MS Pipe Weight Calculator — All NB Sizes | SteelMath", description: "Calculate MS pipe weight for all NB sizes. Complete chart with OD, wall thickness & weight per metre.", url: "https://steelmath.com/calculators/pipe-weight", type: "website" },
+  openGraph: {
+    images: [{ url: "/og?title=MS%20Pipe%20Weight%20Calculator%20%E2%80%94%20All%20NB%20Sizes%2015mm%20to%20200mm&accent=orange", width: 1200, height: 630 }], title: "MS Pipe Weight Calculator — All NB Sizes | SteelMath", description: "Calculate MS pipe weight for all NB sizes. Complete chart with OD, wall thickness & weight per metre.", url: "https://steelmath.com/calculators/pipe-weight", type: "website" },
 };
 
 const FAQS = [
