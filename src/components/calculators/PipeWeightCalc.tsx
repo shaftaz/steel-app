@@ -2,14 +2,29 @@
 
 import { useState } from "react";
 import { pipes } from "@/lib/data/section-weights";
+import {
+  InstrumentShell,
+  ResultPanel,
+  Field,
+  SelectField,
+  Chip,
+  ModeTab,
+  ShowMaths,
+  LABEL_CLS,
+  fmt,
+  num,
+  useCurrency,
+} from "@/components/instrument";
 
 export default function PipeWeightCalc() {
   const [selectedNB, setSelectedNB] = useState(50);
-  const [customOD, setCustomOD] = useState("");
-  const [customWT, setCustomWT] = useState("");
+  const [customOD, setCustomOD] = useState("60.3");
+  const [customWT, setCustomWT] = useState("3.6");
   const [length, setLength] = useState("6");
   const [quantity, setQuantity] = useState("1");
   const [useCustom, setUseCustom] = useState(false);
+  const [rate, setRate] = useState("");
+  const [currency, setCurrency] = useCurrency();
 
   const selectedPipe = pipes.find((p) => p.nbSize === selectedNB);
 
@@ -24,101 +39,156 @@ export default function PipeWeightCalc() {
 
   const l = parseFloat(length) || 0;
   const q = parseInt(quantity) || 1;
+  const r = num(rate);
+
+  const perPiece = weightPerMetre * l;
   const totalWeight = weightPerMetre * l * q;
+  const cost = totalWeight * r;
+  const perTonne = perPiece > 0 ? 1000 / perPiece : 0;
+
+  const od = useCustom ? parseFloat(customOD) || 0 : selectedPipe?.od || 0;
+  const wt = useCustom
+    ? parseFloat(customWT) || 0
+    : selectedPipe?.wallThickness || 0;
+
+  const name = useCustom
+    ? `PIPE ${customOD || 0} × ${customWT || 0}`
+    : `PIPE ${selectedNB} NB`;
+  const shareUrl = "https://steelmath.com/calculators/pipe-weight";
+  const copyText = `${name} — ${fmt(weightPerMetre, 2)} kg/m · ${q} pcs = ${fmt(
+    totalWeight,
+    2
+  )} kg${r > 0 ? ` · ${currency}${fmt(cost, 0)}` : ""} — via steelmath.com`;
+  const formulaLine = `(${od} − ${wt}) × ${wt} × 0.02466 = ${fmt(
+    weightPerMetre,
+    2
+  )} kg/m`;
 
   return (
-    <div className="glass-panel p-5 sm:p-6">
-      <div className="flex items-center gap-3 mb-5">
-        <button
-          onClick={() => setUseCustom(false)}
-          className={`px-3 py-1.5 rounded-md text-xs font-medium transition-all cursor-pointer ${!useCustom ? "bg-accent/20 text-accent border border-accent/30" : "text-white/40 border border-white/10 hover:border-white/20"}`}
-        >
-          Standard NB Size
-        </button>
-        <button
-          onClick={() => setUseCustom(true)}
-          className={`px-3 py-1.5 rounded-md text-xs font-medium transition-all cursor-pointer ${useCustom ? "bg-accent/20 text-accent border border-accent/30" : "text-white/40 border border-white/10 hover:border-white/20"}`}
-        >
-          Custom OD &times; WT
-        </button>
-      </div>
-
-      {!useCustom ? (
-        <div className="mb-4">
-          <label className="block text-white/40 text-xs mb-1.5">Nominal Bore Size</label>
-          <div className="flex flex-wrap gap-2">
-            {pipes.map((p) => (
-              <button
-                key={p.nbSize}
-                onClick={() => setSelectedNB(p.nbSize)}
-                className={`px-3 py-1.5 rounded-md text-xs font-mono transition-all cursor-pointer ${selectedNB === p.nbSize ? "bg-accent/20 text-accent border border-accent/30" : "text-white/50 border border-white/10 hover:border-white/20"}`}
-              >
-                {p.nbSize}mm ({p.nbInch})
-              </button>
-            ))}
-          </div>
+    <InstrumentShell
+      header={
+        <div className="flex border-b border-rule">
+          <ModeTab active={!useCustom} onClick={() => setUseCustom(false)}>
+            Standard NB Size
+          </ModeTab>
+          <ModeTab active={useCustom} onClick={() => setUseCustom(true)}>
+            Custom OD × WT
+          </ModeTab>
         </div>
-      ) : (
-        <div className="grid grid-cols-2 gap-4 mb-4">
-          <div>
-            <label className="block text-white/40 text-xs mb-1.5">Outer Diameter (mm)</label>
-            <input
-              type="number"
-              value={customOD}
-              onChange={(e) => setCustomOD(e.target.value)}
-              placeholder="e.g. 60.3"
-              className="w-full bg-white/[0.04] border border-white/10 rounded-lg px-3 py-2.5 text-white text-sm focus:outline-none focus:border-accent/50"
+      }
+      inputs={
+        <>
+          {!useCustom ? (
+            <div className="flex flex-col gap-1.5">
+              <span className={LABEL_CLS}>NOMINAL BORE SIZE</span>
+              <div className="flex flex-wrap gap-1.5">
+                {pipes.map((p) => (
+                  <Chip
+                    key={p.nbSize}
+                    active={selectedNB === p.nbSize}
+                    onClick={() => setSelectedNB(p.nbSize)}
+                  >
+                    {p.nbSize}mm ({p.nbInch})
+                  </Chip>
+                ))}
+              </div>
+            </div>
+          ) : (
+            <div className="grid grid-cols-2 gap-3">
+              <Field
+                label="OUTER DIAMETER (MM)"
+                value={customOD}
+                onChange={setCustomOD}
+                step={0.1}
+                placeholder="e.g. 60.3"
+              />
+              <Field
+                label="WALL THICKNESS (MM)"
+                value={customWT}
+                onChange={setCustomWT}
+                step={0.1}
+                placeholder="e.g. 3.6"
+              />
+            </div>
+          )}
+
+          <div className="grid grid-cols-2 gap-3">
+            <Field label="LENGTH (METRES)" value={length} onChange={setLength} />
+            <Field
+              label="PIECES (PCS)"
+              value={quantity}
+              onChange={setQuantity}
+              step={1}
             />
           </div>
-          <div>
-            <label className="block text-white/40 text-xs mb-1.5">Wall Thickness (mm)</label>
-            <input
-              type="number"
-              value={customWT}
-              onChange={(e) => setCustomWT(e.target.value)}
-              placeholder="e.g. 3.6"
-              className="w-full bg-white/[0.04] border border-white/10 rounded-lg px-3 py-2.5 text-white text-sm focus:outline-none focus:border-accent/50"
+          <div className="grid grid-cols-2 gap-3">
+            <Field
+              label="RATE / KG (OPTIONAL)"
+              value={rate}
+              onChange={setRate}
+              placeholder="e.g. 62"
             />
+            <SelectField label="CURRENCY" value={currency} onChange={setCurrency}>
+              <option value="₹">₹ INR</option>
+              <option value="€">€ EUR</option>
+              <option value="$">$ USD</option>
+              <option value="£">£ GBP</option>
+            </SelectField>
           </div>
-        </div>
-      )}
 
-      <div className="grid grid-cols-2 gap-4 mb-5">
-        <div>
-          <label className="block text-white/40 text-xs mb-1.5">Length (metres)</label>
-          <input type="number" value={length} onChange={(e) => setLength(e.target.value)}
-            className="w-full bg-white/[0.04] border border-white/10 rounded-lg px-3 py-2.5 text-white text-sm focus:outline-none focus:border-accent/50" />
-        </div>
-        <div>
-          <label className="block text-white/40 text-xs mb-1.5">Quantity (pieces)</label>
-          <input type="number" value={quantity} onChange={(e) => setQuantity(e.target.value)}
-            className="w-full bg-white/[0.04] border border-white/10 rounded-lg px-3 py-2.5 text-white text-sm focus:outline-none focus:border-accent/50" />
-        </div>
-      </div>
+          {!useCustom && selectedPipe && (
+            <div className="font-mono text-[11px] text-muted-3">
+              OD: {selectedPipe.od}mm | WT: {selectedPipe.wallThickness}mm |
+              Formula: (OD − WT) × WT × 0.02466
+            </div>
+          )}
 
-      <div className="glass-panel p-4 grid grid-cols-3 gap-4 text-center">
-        <div>
-          <div className="text-white/30 text-[10px] uppercase tracking-wider mb-1">Weight/m</div>
-          <div className="text-accent font-bold text-lg font-mono">{weightPerMetre.toFixed(2)}</div>
-          <div className="text-white/20 text-[10px]">kg/m</div>
-        </div>
-        <div>
-          <div className="text-white/30 text-[10px] uppercase tracking-wider mb-1">Per Piece</div>
-          <div className="text-white font-bold text-lg font-mono">{(weightPerMetre * l).toFixed(2)}</div>
-          <div className="text-white/20 text-[10px]">kg</div>
-        </div>
-        <div>
-          <div className="text-white/30 text-[10px] uppercase tracking-wider mb-1">Total</div>
-          <div className="text-white font-bold text-lg font-mono">{totalWeight.toFixed(2)}</div>
-          <div className="text-white/20 text-[10px]">kg ({(totalWeight / 1000).toFixed(3)} MT)</div>
-        </div>
-      </div>
-
-      {!useCustom && selectedPipe && (
-        <div className="mt-3 text-white/20 text-[10px] text-center">
-          OD: {selectedPipe.od}mm | WT: {selectedPipe.wallThickness}mm | Formula: (OD − WT) × WT × 0.02466
-        </div>
-      )}
-    </div>
+          <ShowMaths
+            lines={[
+              formulaLine,
+              useCustom
+                ? "Custom mode — weight from (OD − WT) × WT × 0.02466"
+                : `IS 1239 medium class table — ${selectedNB} NB (${
+                    selectedPipe?.nbInch ?? ""
+                  }) = ${fmt(weightPerMetre, 2)} kg/m`,
+              "Constant 0.02466 = π × 7,850 ÷ 10⁶ (steel density 7,850 kg/m³)",
+            ]}
+            source="SOURCE: IS 1239 · LAST VERIFIED 18 JUL 2026"
+          />
+        </>
+      }
+      result={
+        <ResultPanel
+          context={name}
+          headlineLabel="WEIGHT / METRE — KG/M"
+          headlineValue={fmt(weightPerMetre, 2)}
+          stats={[
+            {
+              label: `PER PIECE · ${l} M`,
+              value: `${fmt(perPiece, 2)} kg`,
+            },
+            {
+              label: `TOTAL — ${q} PCS`,
+              value:
+                totalWeight >= 1000
+                  ? `${fmt(totalWeight / 1000, 3)} t`
+                  : `${fmt(totalWeight, 2)} kg`,
+            },
+            {
+              label: "PIECES PER TONNE",
+              value: perTonne > 0 ? `≈ ${fmt(perTonne, 1)}` : "—",
+            },
+            {
+              label: "TOTAL COST",
+              value: r > 0 ? `${currency}${fmt(cost, 0)}` : "— enter rate",
+              accent: true,
+            },
+          ]}
+          formulaLine={formulaLine}
+          copyText={copyText}
+          shareUrl={shareUrl}
+        />
+      }
+    />
   );
 }

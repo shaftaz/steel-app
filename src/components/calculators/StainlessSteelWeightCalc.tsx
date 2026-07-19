@@ -1,6 +1,18 @@
 "use client";
 
 import { useState } from "react";
+import {
+  InstrumentShell,
+  ResultPanel,
+  Field,
+  SelectField,
+  Chip,
+  ModeTab,
+  ShowMaths,
+  fmt,
+  num,
+  useCurrency,
+} from "@/components/instrument";
 
 const SS_GRADES = [
   { id: "ss304", label: "SS 304", density: 8.0 },
@@ -14,6 +26,13 @@ const SECTION_TYPES = [
   { id: "pipe", label: "Pipe" },
 ];
 
+// Prefilled defaults per section so a result shows immediately
+const SECTION_DEFAULTS: Record<string, { d1: string; d2: string; d3: string }> = {
+  round: { d1: "25", d2: "", d3: "" },
+  plate: { d1: "2500", d2: "1250", d3: "3" },
+  pipe: { d1: "60", d2: "3", d3: "" },
+};
+
 export default function StainlessSteelWeightCalc() {
   const [grade, setGrade] = useState("ss304");
   const [section, setSection] = useState("round");
@@ -22,6 +41,8 @@ export default function StainlessSteelWeightCalc() {
   const [dim3, setDim3] = useState("");
   const [length, setLength] = useState("1");
   const [quantity, setQuantity] = useState("1");
+  const [rate, setRate] = useState("");
+  const [currency, setCurrency] = useCurrency();
 
   const g = SS_GRADES.find((gr) => gr.id === grade) || SS_GRADES[0];
   const d1 = parseFloat(dim1) || 0;
@@ -30,128 +51,164 @@ export default function StainlessSteelWeightCalc() {
   const l = parseFloat(length) || 0;
   const q = parseInt(quantity) || 1;
 
+  const selectSection = (id: string) => {
+    setSection(id);
+    const def = SECTION_DEFAULTS[id];
+    if (def) {
+      setDim1(def.d1);
+      setDim2(def.d2);
+      setDim3(def.d3);
+    }
+  };
+
   let weightPerUnit = 0;
   let formulaText = "";
 
   if (section === "round" && d1 > 0) {
-    weightPerUnit = (d1 * d1 * Math.PI * g.density) / (4 * 1000000) * 1000;
+    weightPerUnit = ((d1 * d1 * Math.PI * g.density) / (4 * 1000000)) * 1000;
     formulaText = `d²/162.2 × (${g.density}/7.85)`;
   } else if (section === "plate" && d1 > 0 && d2 > 0 && d3 > 0) {
     weightPerUnit = (d1 * d2 * d3 * g.density) / 1000000;
     formulaText = `L × W × T × ${g.density} / 1,000,000`;
   } else if (section === "pipe" && d1 > 0 && d2 > 0) {
-    weightPerUnit = (d1 - d2) * d2 * Math.PI * g.density / 1000;
+    weightPerUnit = ((d1 - d2) * d2 * Math.PI * g.density) / 1000;
     formulaText = `(OD − WT) × WT × π × ${g.density} / 1000`;
   }
 
   const isPlate = section === "plate";
+  const perPiece = isPlate ? weightPerUnit : weightPerUnit * l;
   const totalWeight = isPlate ? weightPerUnit * q : weightPerUnit * l * q;
+  const r = num(rate);
+  const cost = totalWeight * r;
+
+  const sectionLabel =
+    SECTION_TYPES.find((st) => st.id === section)?.label.toUpperCase() ?? "";
+  const copyText = `${g.label.toUpperCase()} ${sectionLabel} — ${fmt(weightPerUnit, 3)} ${isPlate ? "kg/pc" : "kg/m"} · ${q} pcs = ${fmt(totalWeight, 2)} kg${r > 0 ? ` · ${currency}${fmt(cost, 0)}` : ""} — via steelmath.com`;
+
+  const mathsLines: string[] = [];
+  if (section === "round") {
+    mathsLines.push(
+      `π/4 × ${d1}² × ${g.density} ÷ 1,000 = ${fmt(weightPerUnit, 3)} kg/m`,
+      `Equivalent: d²/162.2 × (${g.density}/7.85)`
+    );
+  } else if (section === "plate") {
+    mathsLines.push(
+      `${d1} × ${d2} × ${d3} × ${g.density} ÷ 10⁶ = ${fmt(weightPerUnit, 3)} kg per sheet`
+    );
+  } else {
+    mathsLines.push(
+      `(${d1} − ${d2}) × ${d2} × π × ${g.density} ÷ 1,000 = ${fmt(weightPerUnit, 3)} kg/m`
+    );
+  }
+  mathsLines.push("ρ — SS 304: 8.0 · SS 316: 8.027 · SS 202: 7.86 g/cm³");
 
   return (
-    <div className="glass-panel p-5 sm:p-6">
-      <div className="mb-4">
-        <label className="block text-white/40 text-xs mb-1.5">SS Grade</label>
-        <div className="flex flex-wrap gap-2">
-          {SS_GRADES.map((gr) => (
-            <button
-              key={gr.id}
-              onClick={() => setGrade(gr.id)}
-              className={`px-3 py-1.5 rounded-md text-xs transition-all cursor-pointer ${grade === gr.id ? "bg-accent/20 text-accent border border-accent/30" : "text-white/50 border border-white/10 hover:border-white/20"}`}
-            >
-              {gr.label} ({gr.density} g/cm³)
-            </button>
-          ))}
-        </div>
-      </div>
-
-      <div className="mb-4">
-        <label className="block text-white/40 text-xs mb-1.5">Section Type</label>
-        <div className="flex flex-wrap gap-2">
+    <InstrumentShell
+      header={
+        <div className="flex flex-wrap border-b border-rule">
           {SECTION_TYPES.map((st) => (
-            <button
+            <ModeTab
               key={st.id}
-              onClick={() => setSection(st.id)}
-              className={`px-3 py-1.5 rounded-md text-xs transition-all cursor-pointer ${section === st.id ? "bg-accent/20 text-accent border border-accent/30" : "text-white/50 border border-white/10 hover:border-white/20"}`}
+              active={section === st.id}
+              onClick={() => selectSection(st.id)}
             >
               {st.label}
-            </button>
+            </ModeTab>
           ))}
         </div>
-      </div>
-
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-5">
-        {section === "round" && (
-          <div>
-            <label className="block text-white/40 text-xs mb-1.5">Diameter (mm)</label>
-            <input type="number" value={dim1} onChange={(e) => setDim1(e.target.value)}
-              className="w-full bg-white/[0.04] border border-white/10 rounded-lg px-3 py-2.5 text-white text-sm focus:outline-none focus:border-accent/50" />
+      }
+      inputs={
+        <>
+          <div className="flex flex-col gap-1.5">
+            <span className="font-mono text-[10.5px] tracking-[0.1em] text-muted-3 uppercase">
+              SS GRADE — ρ {g.density} G/CM³
+            </span>
+            <div className="flex flex-wrap gap-1.5">
+              {SS_GRADES.map((gr) => (
+                <Chip key={gr.id} active={grade === gr.id} onClick={() => setGrade(gr.id)}>
+                  {gr.label} ({gr.density} g/cm³)
+                </Chip>
+              ))}
+            </div>
           </div>
-        )}
-        {section === "plate" && (
-          <>
-            <div>
-              <label className="block text-white/40 text-xs mb-1.5">Length (mm)</label>
-              <input type="number" value={dim1} onChange={(e) => setDim1(e.target.value)}
-                className="w-full bg-white/[0.04] border border-white/10 rounded-lg px-3 py-2.5 text-white text-sm focus:outline-none focus:border-accent/50" />
-            </div>
-            <div>
-              <label className="block text-white/40 text-xs mb-1.5">Width (mm)</label>
-              <input type="number" value={dim2} onChange={(e) => setDim2(e.target.value)}
-                className="w-full bg-white/[0.04] border border-white/10 rounded-lg px-3 py-2.5 text-white text-sm focus:outline-none focus:border-accent/50" />
-            </div>
-            <div>
-              <label className="block text-white/40 text-xs mb-1.5">Thickness (mm)</label>
-              <input type="number" value={dim3} onChange={(e) => setDim3(e.target.value)}
-                className="w-full bg-white/[0.04] border border-white/10 rounded-lg px-3 py-2.5 text-white text-sm focus:outline-none focus:border-accent/50" />
-            </div>
-          </>
-        )}
-        {section === "pipe" && (
-          <>
-            <div>
-              <label className="block text-white/40 text-xs mb-1.5">OD (mm)</label>
-              <input type="number" value={dim1} onChange={(e) => setDim1(e.target.value)}
-                className="w-full bg-white/[0.04] border border-white/10 rounded-lg px-3 py-2.5 text-white text-sm focus:outline-none focus:border-accent/50" />
-            </div>
-            <div>
-              <label className="block text-white/40 text-xs mb-1.5">Wall Thickness (mm)</label>
-              <input type="number" value={dim2} onChange={(e) => setDim2(e.target.value)}
-                className="w-full bg-white/[0.04] border border-white/10 rounded-lg px-3 py-2.5 text-white text-sm focus:outline-none focus:border-accent/50" />
-            </div>
-          </>
-        )}
-        {!isPlate && (
-          <div>
-            <label className="block text-white/40 text-xs mb-1.5">Length (m)</label>
-            <input type="number" value={length} onChange={(e) => setLength(e.target.value)}
-              className="w-full bg-white/[0.04] border border-white/10 rounded-lg px-3 py-2.5 text-white text-sm focus:outline-none focus:border-accent/50" />
+          <div className="grid grid-cols-[repeat(auto-fit,minmax(130px,1fr))] gap-3">
+            {section === "round" && (
+              <Field label="DIAMETER (MM)" value={dim1} onChange={setDim1} />
+            )}
+            {section === "plate" && (
+              <>
+                <Field label="LENGTH (MM)" value={dim1} onChange={setDim1} />
+                <Field label="WIDTH (MM)" value={dim2} onChange={setDim2} />
+                <Field label="THICKNESS (MM)" value={dim3} onChange={setDim3} />
+              </>
+            )}
+            {section === "pipe" && (
+              <>
+                <Field label="OD (MM)" value={dim1} onChange={setDim1} />
+                <Field label="WALL THICKNESS (MM)" value={dim2} onChange={setDim2} />
+              </>
+            )}
+            {!isPlate && <Field label="LENGTH (M)" value={length} onChange={setLength} />}
+            <Field
+              label="PIECES (PCS)"
+              value={quantity}
+              onChange={(v) => setQuantity(v)}
+              step={1}
+            />
           </div>
-        )}
-        <div>
-          <label className="block text-white/40 text-xs mb-1.5">Quantity</label>
-          <input type="number" value={quantity} onChange={(e) => setQuantity(e.target.value)}
-            className="w-full bg-white/[0.04] border border-white/10 rounded-lg px-3 py-2.5 text-white text-sm focus:outline-none focus:border-accent/50" />
-        </div>
-      </div>
-
-      <div className="glass-panel p-4 grid grid-cols-2 gap-4 text-center">
-        <div>
-          <div className="text-white/30 text-[10px] uppercase tracking-wider mb-1">{isPlate ? "Per Piece" : "Weight/m"}</div>
-          <div className="text-accent font-bold text-lg font-mono">{weightPerUnit.toFixed(3)}</div>
-          <div className="text-white/20 text-[10px]">kg</div>
-        </div>
-        <div>
-          <div className="text-white/30 text-[10px] uppercase tracking-wider mb-1">Total</div>
-          <div className="text-white font-bold text-lg font-mono">{totalWeight.toFixed(2)}</div>
-          <div className="text-white/20 text-[10px]">kg ({(totalWeight / 1000).toFixed(3)} MT)</div>
-        </div>
-      </div>
-
-      {formulaText && (
-        <div className="mt-3 text-white/20 text-[10px] text-center">
-          {formulaText} | {g.label} density: {g.density} g/cm³
-        </div>
-      )}
-    </div>
+          <div className="grid grid-cols-[repeat(auto-fit,minmax(130px,1fr))] gap-3">
+            <Field
+              label="RATE / KG (OPTIONAL)"
+              value={rate}
+              onChange={setRate}
+              placeholder="0"
+            />
+            <SelectField label="CURRENCY" value={currency} onChange={setCurrency}>
+              <option value="₹">₹ INR</option>
+              <option value="€">€ EUR</option>
+              <option value="$">$ USD</option>
+              <option value="£">£ GBP</option>
+            </SelectField>
+          </div>
+          <ShowMaths
+            lines={mathsLines}
+            source="SOURCE: ASTM A240 / IS 6911 DENSITIES · LAST VERIFIED 18 JUL 2026"
+          />
+        </>
+      }
+      result={
+        <ResultPanel
+          context={`${g.label} · ${sectionLabel}`}
+          headlineLabel={isPlate ? "WEIGHT / PIECE — KG" : "WEIGHT / METRE — KG/M"}
+          headlineValue={fmt(weightPerUnit, 3)}
+          stats={[
+            {
+              label: isPlate ? "PER SHEET" : `PER PIECE · ${l} M`,
+              value: `${fmt(perPiece, 3)} kg`,
+            },
+            {
+              label: `TOTAL — ${q} PCS`,
+              value:
+                totalWeight >= 1000
+                  ? `${fmt(totalWeight / 1000, 3)} t`
+                  : `${fmt(totalWeight, 2)} kg`,
+            },
+            { label: "GRADE DENSITY", value: `${g.density} g/cm³` },
+            {
+              label: "TOTAL COST",
+              value: r > 0 ? `${currency}${fmt(cost, 0)}` : "— enter rate",
+              accent: true,
+            },
+          ]}
+          formulaLine={
+            formulaText
+              ? `${formulaText} · ${g.label} density ${g.density} g/cm³`
+              : undefined
+          }
+          copyText={copyText}
+          shareUrl="https://steelmath.com/calculators/stainless-steel-weight"
+        />
+      }
+    />
   );
 }

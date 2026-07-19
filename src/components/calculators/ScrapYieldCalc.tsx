@@ -1,6 +1,17 @@
 "use client";
 
 import { useState } from "react";
+import {
+  InstrumentShell,
+  ResultPanel,
+  Field,
+  SelectField,
+  ModeTab,
+  ShowMaths,
+  fmt,
+  LABEL_CLS,
+  Stat,
+} from "@/components/instrument";
 
 const MATERIALS = [
   { value: "hms1", label: "HMS 1" },
@@ -54,42 +65,16 @@ interface ChargeRow {
   price: string;
 }
 
-interface YieldResult {
-  totalCharge: number;
-  weightedYieldMid: number;
-  weightedYieldLow: number;
-  weightedYieldHigh: number;
-  liquidSteelMid: number;
-  liquidSteelLow: number;
-  liquidSteelHigh: number;
-  totalLoss: number;
-  slagLoss: number;
-  fumesLoss: number;
-  materialYields: { label: string; qty: number; mid: number }[];
-  totalMaterialCost: number | null;
-  effectiveCostPerTonne: number | null;
-  electricityCostPerTonne: number | null;
-  totalMeltCostPerTonne: number | null;
-}
-
 export default function ScrapYieldCalc() {
   const [furnace, setFurnace] = useState<"induction_furnace" | "eaf">("induction_furnace");
-  const [rows, setRows] = useState<ChargeRow[]>([{ material: "hms1", qty: "", price: "" }]);
+  const [rows, setRows] = useState<ChargeRow[]>([{ material: "hms1", qty: "10", price: "" }]);
   const [showElectricity, setShowElectricity] = useState(false);
   const [elecRate, setElecRate] = useState("");
   const [elecConsumption, setElecConsumption] = useState("625");
-  const [result, setResult] = useState<YieldResult | null>(null);
-
-  const inputClass =
-    "w-full bg-white/5 border border-white/10 rounded-lg px-3 py-2.5 text-white text-sm focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/25 transition-colors";
-
-  const fmt = (n: number) =>
-    n.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 
   function handleFurnaceToggle(type: "induction_furnace" | "eaf") {
     setFurnace(type);
     setElecConsumption(type === "induction_furnace" ? "625" : "450");
-    setResult(null);
   }
 
   function updateRow(index: number, field: keyof ChargeRow, value: string) {
@@ -104,388 +89,277 @@ export default function ScrapYieldCalc() {
     setRows((prev) => prev.filter((_, i) => i !== index));
   }
 
-  function handleCalc() {
-    const yieldTable = YIELD_RATES[furnace];
-    let totalCharge = 0;
-    let weightedSumMid = 0;
-    let weightedSumLow = 0;
-    let weightedSumHigh = 0;
-    let totalCost = 0;
-    let hasCost = false;
-    const materialYields: YieldResult["materialYields"] = [];
+  // ---- Instant recalc (same maths as before, derived every render) ----
+  const yieldTable = YIELD_RATES[furnace];
+  let totalCharge = 0;
+  let weightedSumMid = 0;
+  let weightedSumLow = 0;
+  let weightedSumHigh = 0;
+  let totalCost = 0;
+  let hasCost = false;
+  const materialYields: { label: string; qty: number; mid: number }[] = [];
 
-    for (const row of rows) {
-      const qty = parseFloat(row.qty) || 0;
-      if (qty <= 0) continue;
-      const rates = yieldTable[row.material];
-      if (!rates) continue;
+  for (const row of rows) {
+    const qty = parseFloat(row.qty) || 0;
+    if (qty <= 0) continue;
+    const rates = yieldTable[row.material];
+    if (!rates) continue;
 
-      totalCharge += qty;
-      weightedSumMid += qty * rates.mid;
-      weightedSumLow += qty * rates.low;
-      weightedSumHigh += qty * rates.high;
+    totalCharge += qty;
+    weightedSumMid += qty * rates.mid;
+    weightedSumLow += qty * rates.low;
+    weightedSumHigh += qty * rates.high;
 
-      const label = MATERIALS.find((m) => m.value === row.material)?.label || row.material;
-      materialYields.push({ label, qty, mid: rates.mid });
+    const label = MATERIALS.find((m) => m.value === row.material)?.label || row.material;
+    materialYields.push({ label, qty, mid: rates.mid });
 
-      const price = parseFloat(row.price) || 0;
-      if (price > 0) {
-        totalCost += qty * price;
-        hasCost = true;
-      }
+    const price = parseFloat(row.price) || 0;
+    if (price > 0) {
+      totalCost += qty * price;
+      hasCost = true;
     }
+  }
 
-    if (totalCharge <= 0) return;
+  const hasCharge = totalCharge > 0;
+  const weightedYieldMid = hasCharge ? weightedSumMid / totalCharge : 0;
+  const weightedYieldLow = hasCharge ? weightedSumLow / totalCharge : 0;
+  const weightedYieldHigh = hasCharge ? weightedSumHigh / totalCharge : 0;
+  const liquidSteelMid = (totalCharge * weightedYieldMid) / 100;
+  const liquidSteelLow = (totalCharge * weightedYieldLow) / 100;
+  const liquidSteelHigh = (totalCharge * weightedYieldHigh) / 100;
+  const totalLoss = totalCharge - liquidSteelMid;
+  const slagLoss = totalLoss * 0.65;
+  const fumesLoss = totalLoss * 0.35;
 
-    const weightedYieldMid = weightedSumMid / totalCharge;
-    const weightedYieldLow = weightedSumLow / totalCharge;
-    const weightedYieldHigh = weightedSumHigh / totalCharge;
-    const liquidSteelMid = (totalCharge * weightedYieldMid) / 100;
-    const liquidSteelLow = (totalCharge * weightedYieldLow) / 100;
-    const liquidSteelHigh = (totalCharge * weightedYieldHigh) / 100;
-    const totalLoss = totalCharge - liquidSteelMid;
-    const slagLoss = totalLoss * 0.65;
-    const fumesLoss = totalLoss * 0.35;
+  let totalMaterialCost: number | null = null;
+  let effectiveCostPerTonne: number | null = null;
+  let electricityCostPerTonne: number | null = null;
+  let totalMeltCostPerTonne: number | null = null;
 
-    let totalMaterialCost: number | null = null;
-    let effectiveCostPerTonne: number | null = null;
-    let electricityCostPerTonne: number | null = null;
-    let totalMeltCostPerTonne: number | null = null;
+  if (hasCharge && hasCost) {
+    totalMaterialCost = totalCost;
+    effectiveCostPerTonne = totalCost / liquidSteelMid;
+  }
 
-    if (hasCost) {
-      totalMaterialCost = totalCost;
-      effectiveCostPerTonne = totalCost / liquidSteelMid;
+  const eRate = parseFloat(elecRate) || 0;
+  const eCons = parseFloat(elecConsumption) || 0;
+  if (showElectricity && eRate > 0 && eCons > 0) {
+    electricityCostPerTonne = eRate * eCons;
+    if (effectiveCostPerTonne !== null) {
+      totalMeltCostPerTonne = effectiveCostPerTonne + electricityCostPerTonne;
     }
+  }
 
-    const eRate = parseFloat(elecRate) || 0;
-    const eCons = parseFloat(elecConsumption) || 0;
-    if (showElectricity && eRate > 0 && eCons > 0) {
-      electricityCostPerTonne = eRate * eCons;
-      if (effectiveCostPerTonne !== null) {
-        totalMeltCostPerTonne = effectiveCostPerTonne + electricityCostPerTonne;
-      }
-    }
+  const furnaceLabel = furnace === "induction_furnace" ? "IF" : "EAF";
 
-    setResult({
-      totalCharge,
-      weightedYieldMid,
-      weightedYieldLow,
-      weightedYieldHigh,
-      liquidSteelMid,
-      liquidSteelLow,
-      liquidSteelHigh,
-      totalLoss,
-      slagLoss,
-      fumesLoss,
-      materialYields,
-      totalMaterialCost,
-      effectiveCostPerTonne,
-      electricityCostPerTonne,
-      totalMeltCostPerTonne,
+  const stats: Stat[] = [
+    {
+      label: "WEIGHTED AVG YIELD",
+      value: hasCharge ? `${weightedYieldMid.toFixed(1)}%` : "—",
+      accent: true,
+    },
+    { label: "TOTAL CHARGE", value: hasCharge ? `${fmt(totalCharge, 2)} MT` : "—" },
+    {
+      label: hasCharge
+        ? `YIELD RANGE — ${weightedYieldLow.toFixed(1)}–${weightedYieldHigh.toFixed(1)}%`
+        : "YIELD RANGE",
+      value: hasCharge ? `${fmt(liquidSteelLow, 2)}–${fmt(liquidSteelHigh, 2)} MT` : "—",
+    },
+    { label: "PROCESS LOSSES", value: hasCharge ? `${fmt(totalLoss, 2)} MT` : "—" },
+  ];
+  if (totalMaterialCost !== null) {
+    stats.push(
+      { label: "TOTAL MATERIAL COST", value: fmt(totalMaterialCost, 2) },
+      { label: "COST / T LIQUID STEEL", value: fmt(effectiveCostPerTonne!, 2) }
+    );
+  }
+  if (electricityCostPerTonne !== null) {
+    stats.push({ label: "ELECTRICITY COST / T", value: fmt(electricityCostPerTonne, 2) });
+  }
+  if (totalMeltCostPerTonne !== null) {
+    stats.push({
+      label: "TOTAL MELT COST / T",
+      value: fmt(totalMeltCostPerTonne, 2),
+      accent: true,
     });
   }
 
-  function handleShare() {
-    if (!result) return;
-
-    let text = `*Scrap Yield Calculator*\n`;
-    text += `Furnace: ${furnace === "induction_furnace" ? "Induction Furnace" : "Electric Arc Furnace"}\n\n`;
-    text += `*Charge Mix:*\n`;
-    for (const m of result.materialYields) {
-      text += `- ${m.label}: ${fmt(m.qty)} MT (Yield: ${m.mid.toFixed(1)}%)\n`;
-    }
-    text += `\n*Results:*\n`;
-    text += `Total Charge: ${fmt(result.totalCharge)} MT\n`;
-    text += `Weighted Avg Yield: ${result.weightedYieldMid.toFixed(1)}%\n`;
-    text += `Expected Liquid Steel: ${fmt(result.liquidSteelMid)} MT\n`;
-    text += `Yield Range: ${fmt(result.liquidSteelLow)} - ${fmt(result.liquidSteelHigh)} MT\n`;
-    text += `Process Losses: ${fmt(result.totalLoss)} MT\n`;
-
-    if (result.totalMaterialCost !== null) {
-      text += `\n*Cost Analysis:*\n`;
-      text += `Total Material Cost: ${fmt(result.totalMaterialCost)}\n`;
-      text += `Cost/Tonne Liquid Steel: ${fmt(result.effectiveCostPerTonne!)}\n`;
-    }
-    if (result.electricityCostPerTonne !== null) {
-      text += `Electricity Cost/Tonne: ${fmt(result.electricityCostPerTonne)}\n`;
-    }
-    if (result.totalMeltCostPerTonne !== null) {
-      text += `Total Melt Cost/Tonne: ${fmt(result.totalMeltCostPerTonne)}\n`;
-    }
-
-    const url = `https://wa.me/?text=${encodeURIComponent(text)}`;
-    window.open(url, "_blank");
-  }
+  const copyText = hasCharge
+    ? `Scrap yield (${furnaceLabel}) — ${fmt(totalCharge, 2)} MT charge · ${weightedYieldMid.toFixed(1)}% yield → ${fmt(liquidSteelMid, 2)} MT liquid steel (${fmt(liquidSteelLow, 2)}–${fmt(liquidSteelHigh, 2)} MT)${totalMeltCostPerTonne !== null ? ` · melt cost ${fmt(totalMeltCostPerTonne, 2)}/t` : effectiveCostPerTonne !== null ? ` · ${fmt(effectiveCostPerTonne, 2)}/t liquid` : ""} — via steelmath.com`
+    : "Scrap yield calculator — via steelmath.com";
 
   return (
-    <div className="glass-panel p-5 sm:p-6">
-      {/* Furnace Type Toggle */}
-      <div className="mb-5">
-        <label className="block text-white/40 text-xs mb-1.5">Furnace Type</label>
-        <div className="flex gap-2">
-          <button
-            onClick={() => handleFurnaceToggle("induction_furnace")}
-            className={`flex-1 px-4 py-2.5 rounded-lg border text-sm font-medium transition-colors ${
-              furnace === "induction_furnace"
-                ? "bg-accent/20 border-accent/40 text-accent"
-                : "bg-white/5 border-white/10 text-white/60 hover:text-white/80"
-            }`}
-          >
-            Induction Furnace (IF)
-          </button>
-          <button
-            onClick={() => handleFurnaceToggle("eaf")}
-            className={`flex-1 px-4 py-2.5 rounded-lg border text-sm font-medium transition-colors ${
-              furnace === "eaf"
-                ? "bg-accent/20 border-accent/40 text-accent"
-                : "bg-white/5 border-white/10 text-white/60 hover:text-white/80"
-            }`}
-          >
-            Electric Arc Furnace (EAF)
-          </button>
-        </div>
-      </div>
-
-      {/* Charge Mix Builder */}
-      <div className="mb-5">
-        <label className="block text-white/40 text-xs mb-1.5">Charge Mix</label>
-        <div className="space-y-3">
-          {rows.map((row, i) => (
-            <div key={i} className="grid grid-cols-[1fr_0.6fr_0.8fr_auto] gap-2 items-end">
-              <div>
-                {i === 0 && <div className="text-white/30 text-[10px] mb-1">Material</div>}
-                <select
-                  className={inputClass}
-                  value={row.material}
-                  onChange={(e) => updateRow(i, "material", e.target.value)}
-                >
-                  {MATERIALS.map((m) => (
-                    <option key={m.value} value={m.value} className="bg-[#0d1929]">
-                      {m.label}
-                    </option>
-                  ))}
-                </select>
-              </div>
-              <div>
-                {i === 0 && <div className="text-white/30 text-[10px] mb-1">Qty (MT)</div>}
-                <input
-                  type="number"
-                  className={inputClass}
-                  placeholder="MT"
-                  value={row.qty}
-                  onChange={(e) => updateRow(i, "qty", e.target.value)}
-                />
-              </div>
-              <div>
-                {i === 0 && <div className="text-white/30 text-[10px] mb-1">Price/MT</div>}
-                <input
-                  type="number"
-                  className={inputClass}
-                  placeholder="Optional - for cost analysis"
-                  value={row.price}
-                  onChange={(e) => updateRow(i, "price", e.target.value)}
-                />
-              </div>
-              <div>
-                {i === 0 && <div className="text-white/30 text-[10px] mb-1">&nbsp;</div>}
-                <button
-                  onClick={() => removeRow(i)}
-                  disabled={rows.length <= 1}
-                  className="p-2.5 rounded-lg border border-white/10 text-red-400/60 hover:text-red-400 hover:border-red-400/30 transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
-                >
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
-                    <path
-                      fillRule="evenodd"
-                      d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                </button>
-              </div>
-            </div>
-          ))}
-        </div>
-        <button
-          onClick={addRow}
-          className="mt-3 text-accent/70 hover:text-accent text-sm transition-colors"
-        >
-          + Add Material
-        </button>
-      </div>
-
-      {/* Electricity Section */}
-      <div className="mb-5">
-        {!showElectricity ? (
-          <button
-            onClick={() => setShowElectricity(true)}
-            className="text-accent/60 hover:text-accent text-sm transition-colors"
-          >
-            + Add Electricity Cost
-          </button>
-        ) : (
-          <div className="rounded-lg bg-white/[0.02] border border-white/10 p-4">
-            <div className="flex items-center justify-between mb-3">
-              <span className="text-white/40 text-xs">Electricity Cost</span>
-              <button
-                onClick={() => setShowElectricity(false)}
-                className="text-white/30 hover:text-white/60 text-xs transition-colors"
-              >
-                Remove
-              </button>
-            </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div>
-                <label className="block text-white/40 text-xs mb-1.5">Rate (per kWh)</label>
-                <input
-                  type="number"
-                  className={inputClass}
-                  placeholder="e.g. 8"
-                  value={elecRate}
-                  onChange={(e) => setElecRate(e.target.value)}
-                />
-              </div>
-              <div>
-                <label className="block text-white/40 text-xs mb-1.5">Consumption (kWh/t)</label>
-                <input
-                  type="number"
-                  className={inputClass}
-                  value={elecConsumption}
-                  onChange={(e) => setElecConsumption(e.target.value)}
-                />
-              </div>
-            </div>
+    <div>
+      <InstrumentShell
+        header={
+          <div className="flex border-b border-rule">
+            <ModeTab
+              active={furnace === "induction_furnace"}
+              onClick={() => handleFurnaceToggle("induction_furnace")}
+            >
+              Induction Furnace (IF)
+            </ModeTab>
+            <ModeTab active={furnace === "eaf"} onClick={() => handleFurnaceToggle("eaf")}>
+              Electric Arc Furnace (EAF)
+            </ModeTab>
           </div>
-        )}
-      </div>
-
-      {/* Calculate Button */}
-      <button onClick={handleCalc} className="btn-glow px-6 py-2.5 text-sm w-full sm:w-auto">
-        Calculate Yield
-      </button>
-
-      {/* Results */}
-      {result && (
-        <div className="mt-5 space-y-4">
-          {/* Yield Analysis */}
-          <div className="p-4 rounded-lg bg-accent/5 border border-accent/20">
-            <h3 className="text-white/60 text-xs uppercase tracking-wider mb-4">Yield Analysis</h3>
-
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-4">
-              <div>
-                <div className="text-white/40 text-xs">Total Charge Weight</div>
-                <div className="text-accent font-mono font-semibold text-lg">{fmt(result.totalCharge)} MT</div>
-              </div>
-              <div>
-                <div className="text-white/40 text-xs">Weighted Avg Yield</div>
-                <div className="text-white font-mono font-semibold">{result.weightedYieldMid.toFixed(1)}%</div>
-              </div>
-              <div className="col-span-2 sm:col-span-1">
-                <div className="text-white/40 text-xs">Expected Liquid Steel</div>
-                <div className="text-2xl text-accent font-bold font-mono">{fmt(result.liquidSteelMid)} MT</div>
-              </div>
-            </div>
-
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-4">
-              <div>
-                <div className="text-white/40 text-xs">Yield Range</div>
-                <div className="text-white/70 font-mono text-sm">
-                  {fmt(result.liquidSteelLow)} &ndash; {fmt(result.liquidSteelHigh)} MT
-                </div>
-                <div className="text-white/30 text-[10px] font-mono">
-                  ({result.weightedYieldLow.toFixed(1)}% &ndash; {result.weightedYieldHigh.toFixed(1)}%)
-                </div>
-              </div>
-            </div>
-
-            {/* Process Losses */}
-            <div className="border-t border-white/10 pt-3 mb-4">
-              <div className="text-white/40 text-xs mb-2">Process Losses</div>
-              <div className="grid grid-cols-3 gap-4">
-                <div>
-                  <div className="text-white/30 text-[10px]">Total Loss</div>
-                  <div className="text-white/70 font-mono text-sm">{fmt(result.totalLoss)} MT</div>
-                </div>
-                <div>
-                  <div className="text-white/30 text-[10px]">Slag (est. 65%)</div>
-                  <div className="text-white/70 font-mono text-sm">{fmt(result.slagLoss)} MT</div>
-                </div>
-                <div>
-                  <div className="text-white/30 text-[10px]">Fumes &amp; Oxidation (35%)</div>
-                  <div className="text-white/70 font-mono text-sm">{fmt(result.fumesLoss)} MT</div>
-                </div>
-              </div>
-            </div>
-
-            {/* Material Yield Bars */}
-            <div className="border-t border-white/10 pt-3">
-              <div className="text-white/40 text-xs mb-3">Individual Material Yields</div>
-              <div className="space-y-2">
-                {result.materialYields.map((m, i) => (
-                  <div key={i}>
-                    <div className="flex items-center justify-between mb-1">
-                      <span className="text-white/60 text-xs">{m.label} ({fmt(m.qty)} MT)</span>
-                      <span className="text-white font-mono text-xs">{m.mid.toFixed(1)}%</span>
-                    </div>
-                    <div className="w-full h-2 rounded-full bg-white/5 overflow-hidden">
-                      <div
-                        className="h-full rounded-full bg-accent/30"
-                        style={{ width: `${m.mid}%` }}
-                      />
-                    </div>
+        }
+        inputs={
+          <>
+            <div className="flex flex-col gap-1.5">
+              <span className={LABEL_CLS}>CHARGE MIX</span>
+              <div className="flex flex-col gap-3">
+                {rows.map((row, i) => (
+                  <div key={i} className="grid grid-cols-[1fr_0.6fr_0.8fr_auto] gap-2 items-end">
+                    <SelectField
+                      label="MATERIAL"
+                      value={row.material}
+                      onChange={(v) => updateRow(i, "material", v)}
+                    >
+                      {MATERIALS.map((m) => (
+                        <option key={m.value} value={m.value}>
+                          {m.label}
+                        </option>
+                      ))}
+                    </SelectField>
+                    <Field
+                      label="QTY (MT)"
+                      value={row.qty}
+                      onChange={(v) => updateRow(i, "qty", v)}
+                      placeholder="MT"
+                    />
+                    <Field
+                      label="PRICE / MT (OPT)"
+                      value={row.price}
+                      onChange={(v) => updateRow(i, "price", v)}
+                      placeholder="For cost analysis"
+                    />
+                    <button
+                      onClick={() => removeRow(i)}
+                      disabled={rows.length <= 1}
+                      aria-label="Remove material row"
+                      className="font-mono text-[13px] border border-input-border text-muted px-3 py-2.5 cursor-pointer hover:border-ink hover:text-ink disabled:opacity-30 disabled:cursor-not-allowed"
+                    >
+                      ×
+                    </button>
                   </div>
                 ))}
               </div>
+              <button
+                onClick={addRow}
+                className="self-start font-mono text-[11px] tracking-[0.06em] text-accent hover:text-ink cursor-pointer mt-1"
+              >
+                + ADD MATERIAL
+              </button>
             </div>
+
+            {!showElectricity ? (
+              <button
+                onClick={() => setShowElectricity(true)}
+                aria-pressed={false}
+                className="self-start font-mono text-[11px] tracking-[0.06em] text-accent hover:text-ink cursor-pointer"
+              >
+                + ADD ELECTRICITY COST
+              </button>
+            ) : (
+              <div className="border border-rule p-3.5 flex flex-col gap-3">
+                <div className="flex items-baseline justify-between">
+                  <span className={LABEL_CLS}>ELECTRICITY COST</span>
+                  <button
+                    onClick={() => setShowElectricity(false)}
+                    aria-pressed={true}
+                    className="font-mono text-[10.5px] tracking-[0.06em] text-muted-3 hover:text-ink cursor-pointer"
+                  >
+                    REMOVE
+                  </button>
+                </div>
+                <div className="grid grid-cols-2 gap-3">
+                  <Field
+                    label="RATE (PER KWH)"
+                    value={elecRate}
+                    onChange={setElecRate}
+                    placeholder="e.g. 8"
+                  />
+                  <Field
+                    label="CONSUMPTION (KWH/T)"
+                    value={elecConsumption}
+                    onChange={setElecConsumption}
+                  />
+                </div>
+              </div>
+            )}
+
+            <ShowMaths
+              lines={[
+                hasCharge
+                  ? `Weighted yield = Σ(qty × yield) ÷ Σqty = ${weightedYieldMid.toFixed(1)}%`
+                  : "Weighted yield = Σ(qty × yield) ÷ Σqty",
+                hasCharge
+                  ? `Liquid steel = ${fmt(totalCharge, 2)} MT × ${weightedYieldMid.toFixed(1)}% = ${fmt(liquidSteelMid, 2)} MT`
+                  : "Liquid steel = charge × weighted yield",
+                `Loss split — slag est. 65% (${hasCharge ? fmt(slagLoss, 2) : "—"} MT) · fumes & oxidation 35% (${hasCharge ? fmt(fumesLoss, 2) : "—"} MT)`,
+              ]}
+              source={`BASIS: TYPICAL ${furnaceLabel} YIELD RANGES BY SCRAP GRADE · SLAG 65% / FUMES 35% OF LOSS (EST.) · LAST VERIFIED 18 JUL 2026`}
+            />
+          </>
+        }
+        result={
+          <ResultPanel
+            context={furnace === "induction_furnace" ? "INDUCTION FURNACE" : "ELECTRIC ARC FURNACE"}
+            headlineLabel="EXPECTED LIQUID STEEL — MT"
+            headlineValue={hasCharge ? fmt(liquidSteelMid, 2) : "—"}
+            subline={
+              hasCharge
+                ? `range ${fmt(liquidSteelLow, 2)} – ${fmt(liquidSteelHigh, 2)} MT at ${weightedYieldLow.toFixed(1)}–${weightedYieldHigh.toFixed(1)}% yield`
+                : "enter charge quantities to see yield"
+            }
+            stats={stats}
+            formulaLine={
+              hasCharge
+                ? `${fmt(totalCharge, 2)} MT × ${weightedYieldMid.toFixed(1)}% = ${fmt(liquidSteelMid, 2)} MT liquid steel`
+                : undefined
+            }
+            copyText={copyText}
+            shareUrl="https://steelmath.com/calculators/scrap-yield"
+          />
+        }
+      />
+
+      {/* Individual material yields */}
+      {materialYields.length > 0 && (
+        <div className="border border-rule border-t-0 bg-[#FFFFFF]">
+          <div className="px-5 py-3.5 border-b border-rule-faint">
+            <span className="font-mono text-[10.5px] tracking-[0.12em] text-muted-3 uppercase">
+              INDIVIDUAL MATERIAL YIELDS — {furnaceLabel} MID ESTIMATE
+            </span>
           </div>
-
-          {/* Cost Analysis (only if any price entered) */}
-          {result.totalMaterialCost !== null && (
-            <div className="p-4 rounded-lg bg-accent/5 border border-accent/20">
-              <h3 className="text-white/60 text-xs uppercase tracking-wider mb-4">Cost Analysis</h3>
-              <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-                <div>
-                  <div className="text-white/40 text-xs">Total Material Cost</div>
-                  <div className="text-white font-mono font-semibold">{fmt(result.totalMaterialCost)}</div>
-                </div>
-                <div>
-                  <div className="text-white/40 text-xs">Cost/Tonne Liquid Steel</div>
-                  <div className="text-accent font-mono font-semibold">{fmt(result.effectiveCostPerTonne!)}</div>
-                </div>
-                {result.electricityCostPerTonne !== null && (
-                  <div>
-                    <div className="text-white/40 text-xs">Electricity Cost/Tonne</div>
-                    <div className="text-white/70 font-mono">{fmt(result.electricityCostPerTonne)}</div>
-                  </div>
-                )}
-                {result.totalMeltCostPerTonne !== null && (
-                  <div>
-                    <div className="text-white/40 text-xs">Total Melt Cost/Tonne</div>
-                    <div className="text-accent font-mono font-bold text-lg">{fmt(result.totalMeltCostPerTonne)}</div>
-                  </div>
-                )}
+          <div className="px-5 py-2">
+            {materialYields.map((m, i) => (
+              <div
+                key={i}
+                className="flex items-baseline justify-between gap-3 py-2 border-b border-rule-faint last:border-b-0"
+              >
+                <span className="font-mono text-[11.5px] text-muted">
+                  {m.label} — {fmt(m.qty, 2)} MT
+                </span>
+                <span className="font-mono text-[12.5px] text-ink">{m.mid.toFixed(1)}%</span>
               </div>
-            </div>
-          )}
-
-          {/* Electricity cost shown even without material cost */}
-          {result.totalMaterialCost === null && result.electricityCostPerTonne !== null && (
-            <div className="p-4 rounded-lg bg-accent/5 border border-accent/20">
-              <h3 className="text-white/60 text-xs uppercase tracking-wider mb-4">Electricity Cost</h3>
-              <div>
-                <div className="text-white/40 text-xs">Electricity Cost/Tonne</div>
-                <div className="text-white/70 font-mono">{fmt(result.electricityCostPerTonne)}</div>
-              </div>
-            </div>
-          )}
-
-          {/* WhatsApp Share */}
-          <button
-            onClick={handleShare}
-            className="w-full sm:w-auto px-6 py-2.5 rounded-lg text-sm font-medium text-white transition-colors"
-            style={{ backgroundColor: "#25D366" }}
-          >
-            Share via WhatsApp
-          </button>
+            ))}
+            {hasCharge && (
+              <>
+                <div className="flex items-baseline justify-between gap-3 py-2 border-t border-rule">
+                  <span className="font-mono text-[11.5px] text-muted">SLAG (EST. 65%)</span>
+                  <span className="font-mono text-[12.5px] text-ink">{fmt(slagLoss, 2)} MT</span>
+                </div>
+                <div className="flex items-baseline justify-between gap-3 py-2 border-t border-rule-faint">
+                  <span className="font-mono text-[11.5px] text-muted">
+                    FUMES &amp; OXIDATION (35%)
+                  </span>
+                  <span className="font-mono text-[12.5px] text-ink">{fmt(fumesLoss, 2)} MT</span>
+                </div>
+              </>
+            )}
+          </div>
         </div>
       )}
     </div>

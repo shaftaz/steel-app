@@ -2,14 +2,21 @@
 
 import { useState } from "react";
 import { HARDNESS_TABLE, type HardnessEntry } from "@/lib/calculators/materials";
+import {
+  InstrumentShell,
+  ResultPanel,
+  Field,
+  ModeTab,
+  ShowMaths,
+} from "@/components/instrument";
 
 type Scale = "brinell" | "rockwellC" | "rockwellB" | "vickers";
 
-const SCALES: { value: Scale; label: string; unit: string }[] = [
-  { value: "brinell", label: "Brinell (HB)", unit: "HB" },
-  { value: "rockwellC", label: "Rockwell C (HRC)", unit: "HRC" },
-  { value: "rockwellB", label: "Rockwell B (HRB)", unit: "HRB" },
-  { value: "vickers", label: "Vickers (HV)", unit: "HV" },
+const SCALES: { value: Scale; label: string; unit: string; example: string }[] = [
+  { value: "brinell", label: "Brinell (HB)", unit: "HB", example: "300" },
+  { value: "rockwellC", label: "Rockwell C (HRC)", unit: "HRC", example: "45" },
+  { value: "rockwellB", label: "Rockwell B (HRB)", unit: "HRB", example: "85" },
+  { value: "vickers", label: "Vickers (HV)", unit: "HV", example: "350" },
 ];
 
 function findClosest(scale: Scale, value: number): HardnessEntry | null {
@@ -30,87 +37,102 @@ function findClosest(scale: Scale, value: number): HardnessEntry | null {
 
 export default function HardnessCalc() {
   const [scale, setScale] = useState<Scale>("brinell");
-  const [input, setInput] = useState("");
-  const [result, setResult] = useState<HardnessEntry | null>(null);
-
-  function handleConvert() {
-    const val = parseFloat(input);
-    if (isNaN(val) || val <= 0) {
-      setResult(null);
-      return;
-    }
-    setResult(findClosest(scale, val));
-  }
-
-  const inputClass =
-    "w-full bg-white/5 border border-white/10 rounded-lg px-3 py-2.5 text-white text-sm focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/25 transition-colors";
+  const [input, setInput] = useState("300");
 
   const scaleInfo = SCALES.find((s) => s.value === scale)!;
+  const val = parseFloat(input);
+  const result = isNaN(val) || val <= 0 ? null : findClosest(scale, val);
+
+  const copyText = result
+    ? `Hardness ≈ HB ${result.brinell} · HRC ${result.rockwellC ?? "—"} · HRB ${result.rockwellB ?? "—"} · HV ${result.vickers} · ~${result.tensileApproxMPa} MPa (closest match to ${val} ${scaleInfo.unit}) — via steelmath.com`
+    : "Hardness conversion — enter a value — via steelmath.com";
 
   return (
-    <div className="glass-panel p-5 sm:p-6">
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-5">
-        <div>
-          <label className="block text-white/40 text-xs mb-1.5">From Scale</label>
-          <select
-            className={inputClass}
-            value={scale}
-            onChange={(e) => {
-              setScale(e.target.value as Scale);
-              setResult(null);
-            }}
-          >
-            {SCALES.map((s) => (
-              <option key={s.value} value={s.value} className="bg-[#0d1929]">
-                {s.label}
-              </option>
-            ))}
-          </select>
+    <InstrumentShell
+      header={
+        <div className="flex flex-wrap border-b border-rule">
+          {SCALES.map((s) => (
+            <ModeTab
+              key={s.value}
+              active={scale === s.value}
+              onClick={() => {
+                setScale(s.value);
+                setInput(s.example);
+              }}
+            >
+              {s.label}
+            </ModeTab>
+          ))}
         </div>
-        <div>
-          <label className="block text-white/40 text-xs mb-1.5">Value ({scaleInfo.unit})</label>
-          <input
-            type="number"
-            className={inputClass}
-            placeholder={`e.g. ${scale === "brinell" ? "300" : scale === "rockwellC" ? "45" : scale === "rockwellB" ? "85" : "350"}`}
+      }
+      inputs={
+        <>
+          <Field
+            label={`VALUE (${scaleInfo.unit})`}
             value={input}
-            onChange={(e) => setInput(e.target.value)}
+            onChange={setInput}
+            step={1}
+            placeholder={`e.g. ${scaleInfo.example}`}
           />
-        </div>
-        <div className="flex items-end">
-          <button onClick={handleConvert} className="btn-glow px-6 py-2.5 text-sm w-full">
-            Convert
-          </button>
-        </div>
-      </div>
-
-      {result && (
-        <div className="p-4 rounded-lg bg-accent/5 border border-accent/20">
-          <div className="text-accent text-lg font-bold mb-2">Conversion Result (closest match)</div>
-          <div className="grid grid-cols-2 sm:grid-cols-5 gap-3">
-            <div>
-              <div className="text-white/40 text-xs">Brinell (HB)</div>
-              <div className="text-white font-mono font-semibold">{result.brinell}</div>
-            </div>
-            <div>
-              <div className="text-white/40 text-xs">Rockwell C (HRC)</div>
-              <div className="text-white font-mono font-semibold">{result.rockwellC ?? "—"}</div>
-            </div>
-            <div>
-              <div className="text-white/40 text-xs">Rockwell B (HRB)</div>
-              <div className="text-white font-mono font-semibold">{result.rockwellB ?? "—"}</div>
-            </div>
-            <div>
-              <div className="text-white/40 text-xs">Vickers (HV)</div>
-              <div className="text-white font-mono font-semibold">{result.vickers}</div>
-            </div>
-            <div>
-              <div className="text-white/40 text-xs">Tensile (MPa)</div>
-              <div className="text-white font-mono font-semibold">{result.tensileApproxMPa}</div>
-            </div>
-          </div>
-        </div>
-      )}
-    </div>
+          <p className="font-mono text-[11.5px] text-muted-3">
+            Conversion result is the closest match in the reference table — hardness
+            scale conversions are approximate.
+          </p>
+          <ShowMaths
+            lines={[
+              `Nearest-row lookup: table row with the smallest |row ${scaleInfo.unit} − ${isNaN(val) ? "input" : val}|`,
+              "There is no exact algebraic relation between hardness scales — table values are approximate correlations.",
+              "Tensile strength (MPa) is an approximation for steel only.",
+            ]}
+            source="SOURCE: APPROXIMATE CONVERSION TABLE · LAST VERIFIED 18 JUL 2026"
+          />
+        </>
+      }
+      result={
+        <ResultPanel
+          kicker="RESULT — CLOSEST MATCH, RECALCULATES AS YOU TYPE"
+          context={scaleInfo.label.toUpperCase()}
+          headlineLabel={
+            result
+              ? `CLOSEST MATCH — ${scaleInfo.unit}`
+              : "CLOSEST MATCH"
+          }
+          headlineValue={result ? `${result[scale]}` : "—"}
+          subline={
+            result
+              ? `nearest table row to ${val} ${scaleInfo.unit}`
+              : "Enter a hardness value greater than zero."
+          }
+          stats={
+            result
+              ? [
+                  { label: "BRINELL (HB)", value: `${result.brinell}` },
+                  {
+                    label: "ROCKWELL C (HRC)",
+                    value: result.rockwellC !== null ? `${result.rockwellC}` : "—",
+                  },
+                  {
+                    label: "ROCKWELL B (HRB)",
+                    value: result.rockwellB !== null ? `${result.rockwellB}` : "—",
+                  },
+                  { label: "VICKERS (HV)", value: `${result.vickers}` },
+                  {
+                    label: "TENSILE ≈ (MPA)",
+                    value: `${result.tensileApproxMPa}`,
+                    accent: true,
+                  },
+                ]
+              : undefined
+          }
+          formulaLine={
+            result
+              ? `closest row to ${val} ${scaleInfo.unit} — approximate conversion`
+              : undefined
+          }
+          copyText={copyText}
+          shareUrl="https://steelmath.com/calculators/hardness-conversion"
+        />
+      }
+    />
   );
 }

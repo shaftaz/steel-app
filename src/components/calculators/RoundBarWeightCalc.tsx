@@ -1,6 +1,17 @@
 "use client";
 
 import { useState } from "react";
+import {
+  InstrumentShell,
+  ResultPanel,
+  Field,
+  SelectField,
+  Chip,
+  ShowMaths,
+  fmt,
+  num,
+  useCurrency,
+} from "@/components/instrument";
 
 const MATERIALS = [
   { id: "ms", label: "Mild Steel (MS/EN8)", density: 7.85 },
@@ -11,11 +22,17 @@ const MATERIALS = [
   { id: "brass", label: "Brass", density: 8.5 },
 ];
 
+const COMMON_DIAMETERS = [
+  6, 8, 10, 12, 16, 20, 25, 28, 30, 32, 36, 40, 45, 50, 55, 60, 65, 70, 75, 80, 90, 100,
+];
+
 export default function RoundBarWeightCalc() {
   const [diameter, setDiameter] = useState("25");
   const [material, setMaterial] = useState("ms");
   const [length, setLength] = useState("1");
   const [quantity, setQuantity] = useState("1");
+  const [rate, setRate] = useState("");
+  const [currency, setCurrency] = useCurrency();
 
   const d = parseFloat(diameter) || 0;
   const l = parseFloat(length) || 0;
@@ -24,80 +41,134 @@ export default function RoundBarWeightCalc() {
 
   const weightPerMetreMS = (d * d) / 162.2;
   const weightPerMetre = weightPerMetreMS * (mat.density / 7.85);
-  const totalWeight = weightPerMetre * l * q;
+  const perPiece = weightPerMetre * l;
+  const totalWeight = perPiece * q;
+  const r = num(rate);
+  const cost = totalWeight * r;
+  const perTonne = perPiece > 0 ? 1000 / perPiece : 0;
 
-  const commonDiameters = [6, 8, 10, 12, 16, 20, 25, 28, 30, 32, 36, 40, 45, 50, 55, 60, 65, 70, 75, 80, 90, 100];
+  const formulaLine = `${d}² ÷ 162.2 × (${mat.density}/7.85) = ${fmt(weightPerMetre, 3)} kg/m`;
+  const copyText = `ROUND BAR ${d}MM ${mat.label.toUpperCase()} — ${fmt(weightPerMetre, 3)} kg/m · ${q} pcs = ${fmt(totalWeight, 2)} kg${r > 0 ? ` · ${currency}${fmt(cost, 0)}` : ""} — via steelmath.com`;
 
   return (
-    <div className="glass-panel p-5 sm:p-6">
-      <div className="mb-4">
-        <label className="block text-white/40 text-xs mb-1.5">Material</label>
-        <div className="flex flex-wrap gap-2">
-          {MATERIALS.map((m) => (
-            <button
-              key={m.id}
-              onClick={() => setMaterial(m.id)}
-              className={`px-3 py-1.5 rounded-md text-xs transition-all cursor-pointer ${material === m.id ? "bg-accent/20 text-accent border border-accent/30" : "text-white/50 border border-white/10 hover:border-white/20"}`}
-            >
-              {m.label}
-            </button>
-          ))}
-        </div>
-      </div>
+    <div>
+      <InstrumentShell
+        inputs={
+          <>
+            <div className="flex flex-col gap-1.5">
+              <span className="font-mono text-[10.5px] tracking-[0.1em] text-muted-3 uppercase">
+                MATERIAL — ρ {fmt(mat.density * 1000)} KG/M³
+              </span>
+              <div className="flex flex-wrap gap-1.5">
+                {MATERIALS.map((m) => (
+                  <Chip key={m.id} active={material === m.id} onClick={() => setMaterial(m.id)}>
+                    {m.label}
+                  </Chip>
+                ))}
+              </div>
+            </div>
+            <div className="grid grid-cols-[repeat(auto-fit,minmax(130px,1fr))] gap-3">
+              <Field label="DIAMETER (MM)" value={diameter} onChange={setDiameter} />
+              <Field label="LENGTH (M)" value={length} onChange={setLength} />
+              <Field
+                label="PIECES (PCS)"
+                value={quantity}
+                onChange={(v) => setQuantity(v)}
+                step={1}
+              />
+            </div>
+            <div className="grid grid-cols-[repeat(auto-fit,minmax(130px,1fr))] gap-3">
+              <Field
+                label="RATE / KG (OPTIONAL)"
+                value={rate}
+                onChange={setRate}
+                placeholder="0"
+              />
+              <SelectField label="CURRENCY" value={currency} onChange={setCurrency}>
+                <option value="₹">₹ INR</option>
+                <option value="€">€ EUR</option>
+                <option value="$">$ USD</option>
+                <option value="£">£ GBP</option>
+              </SelectField>
+            </div>
+            <ShowMaths
+              lines={[
+                `${d}² ÷ 162.2 = ${fmt(weightPerMetreMS, 3)} kg/m (MS basis)`,
+                `× (${mat.density} ÷ 7.85) = ${fmt(weightPerMetre, 3)} kg/m — ${mat.label}`,
+                "Constant 162.2 = 10⁶ ÷ (π/4 × 7,850)",
+                "ρ — MS/EN8/EN24 7.85 · SS304 8.0 · SS316 8.027 · Al 2.7 · Brass 8.5 g/cm³",
+              ]}
+              source="SOURCE: IS 1786 / IS 2062 · LAST VERIFIED 18 JUL 2026"
+            />
+          </>
+        }
+        result={
+          <ResultPanel
+            context={`ROUND ${d} MM · ${mat.label}`}
+            headlineLabel="WEIGHT / METRE — KG/M"
+            headlineValue={fmt(weightPerMetre, 3)}
+            stats={[
+              { label: `PER PIECE · ${l} M`, value: `${fmt(perPiece, 3)} kg` },
+              {
+                label: `TOTAL — ${q} PCS`,
+                value:
+                  totalWeight >= 1000
+                    ? `${fmt(totalWeight / 1000, 3)} t`
+                    : `${fmt(totalWeight, 2)} kg`,
+              },
+              {
+                label: "PIECES PER TONNE",
+                value: perTonne > 0 ? `≈ ${fmt(perTonne, 1)}` : "—",
+              },
+              {
+                label: "TOTAL COST",
+                value: r > 0 ? `${currency}${fmt(cost, 0)}` : "— enter rate",
+                accent: true,
+              },
+            ]}
+            formulaLine={formulaLine}
+            copyText={copyText}
+            shareUrl="https://steelmath.com/calculators/round-bar-weight"
+          />
+        }
+      />
 
-      <div className="mb-4">
-        <label className="block text-white/40 text-xs mb-1.5">Diameter (mm) — Quick Select</label>
-        <div className="flex flex-wrap gap-1.5">
-          {commonDiameters.map((dia) => (
-            <button
-              key={dia}
-              onClick={() => setDiameter(String(dia))}
-              className={`px-2 py-1 rounded text-[11px] font-mono transition-all cursor-pointer ${d === dia ? "bg-accent/20 text-accent border border-accent/30" : "text-white/40 border border-white/[0.06] hover:border-white/20"}`}
-            >
-              {dia}
-            </button>
-          ))}
+      <div className="border border-rule border-t-0 bg-[#FFFFFF] no-print">
+        <div className="px-5 py-3.5 border-b border-rule-faint">
+          <span className="font-mono text-[10.5px] tracking-[0.12em] text-muted-3">
+            DIAMETER (MM) — QUICK SELECT · {mat.label.toUpperCase()}
+          </span>
         </div>
-      </div>
-
-      <div className="grid grid-cols-3 gap-4 mb-5">
-        <div>
-          <label className="block text-white/40 text-xs mb-1.5">Diameter (mm)</label>
-          <input type="number" value={diameter} onChange={(e) => setDiameter(e.target.value)}
-            className="w-full bg-white/[0.04] border border-white/10 rounded-lg px-3 py-2.5 text-white text-sm focus:outline-none focus:border-accent/50" />
+        <div className="grid grid-cols-[repeat(auto-fit,minmax(90px,1fr))]">
+          {COMMON_DIAMETERS.map((dia) => {
+            const w = ((dia * dia) / 162.2) * (mat.density / 7.85);
+            return (
+              <button
+                key={dia}
+                onClick={() => setDiameter(String(dia))}
+                aria-pressed={d === dia}
+                className={`border-r border-t border-rule-faint px-2.5 py-3 cursor-pointer text-left transition-colors ${
+                  d === dia ? "bg-ink text-[#FFFFFF]" : "bg-transparent hover:bg-paper"
+                }`}
+              >
+                <div
+                  className={`font-mono text-[12.5px] font-semibold ${
+                    d === dia ? "text-[#FFFFFF]" : "text-ink"
+                  }`}
+                >
+                  {dia} mm
+                </div>
+                <div
+                  className={`font-mono text-[11px] mt-0.5 ${
+                    d === dia ? "text-[#FFFFFF]" : "text-muted-3"
+                  }`}
+                >
+                  {fmt(w, 3)} kg/m
+                </div>
+              </button>
+            );
+          })}
         </div>
-        <div>
-          <label className="block text-white/40 text-xs mb-1.5">Length (metres)</label>
-          <input type="number" value={length} onChange={(e) => setLength(e.target.value)}
-            className="w-full bg-white/[0.04] border border-white/10 rounded-lg px-3 py-2.5 text-white text-sm focus:outline-none focus:border-accent/50" />
-        </div>
-        <div>
-          <label className="block text-white/40 text-xs mb-1.5">Quantity</label>
-          <input type="number" value={quantity} onChange={(e) => setQuantity(e.target.value)}
-            className="w-full bg-white/[0.04] border border-white/10 rounded-lg px-3 py-2.5 text-white text-sm focus:outline-none focus:border-accent/50" />
-        </div>
-      </div>
-
-      <div className="glass-panel p-4 grid grid-cols-3 gap-4 text-center">
-        <div>
-          <div className="text-white/30 text-[10px] uppercase tracking-wider mb-1">Weight/m</div>
-          <div className="text-accent font-bold text-lg font-mono">{weightPerMetre.toFixed(3)}</div>
-          <div className="text-white/20 text-[10px]">kg/m</div>
-        </div>
-        <div>
-          <div className="text-white/30 text-[10px] uppercase tracking-wider mb-1">Per Piece</div>
-          <div className="text-white font-bold text-lg font-mono">{(weightPerMetre * l).toFixed(3)}</div>
-          <div className="text-white/20 text-[10px]">kg</div>
-        </div>
-        <div>
-          <div className="text-white/30 text-[10px] uppercase tracking-wider mb-1">Total</div>
-          <div className="text-white font-bold text-lg font-mono">{totalWeight.toFixed(2)}</div>
-          <div className="text-white/20 text-[10px]">kg ({(totalWeight / 1000).toFixed(3)} MT)</div>
-        </div>
-      </div>
-
-      <div className="mt-3 text-white/20 text-[10px] text-center">
-        Formula: d²/162.2 × (density/7.85) | Material: {mat.label} ({mat.density} g/cm³)
       </div>
     </div>
   );
