@@ -243,6 +243,10 @@ export default function MetalWeightCalc() {
               <option value="£">£ GBP</option>
               <option value="S$">S$ SGD</option>
               <option value="¥">¥ JPY</option>
+              <option value="CN¥">CN¥ CNY</option>
+              <option value="A$">A$ AUD</option>
+              <option value="C$">C$ CAD</option>
+              <option value="₫">₫ VND</option>
             </SelectField>
           </div>
           <ShowMaths
@@ -253,7 +257,7 @@ export default function MetalWeightCalc() {
               `ρ — ${material.name}: ${material.density} g/cm³ (${fmt(material.density * 1000)} kg/m³)`,
               "Volume in cm³ (mm ÷ 10, m × 100) · weight = volume × ρ ÷ 1,000",
             ]}
-            source="SOURCE: IS 1786 / IS 2062 · ASTM A615 / A36 · JIS G3112 / G3101 · EN 10025 · LAST VERIFIED 18 JUL 2026"
+            source="SOURCE: IS 1786 / IS 2062 · ASTM A615 / A36 · JIS G3112 / G3101 · GB/T 1499 / 700 · EN 10025 · LAST VERIFIED 18 JUL 2026"
           />
         </>
       }

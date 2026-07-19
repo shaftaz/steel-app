@@ -170,6 +170,10 @@ export default function StainlessSteelWeightCalc() {
               <option value="£">£ GBP</option>
               <option value="S$">S$ SGD</option>
               <option value="¥">¥ JPY</option>
+              <option value="CN¥">CN¥ CNY</option>
+              <option value="A$">A$ AUD</option>
+              <option value="C$">C$ CAD</option>
+              <option value="₫">₫ VND</option>
             </SelectField>
           </div>
           <ShowMaths

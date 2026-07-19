@@ -76,7 +76,7 @@ export default function Footer() {
             SteelMath — Steel calculations &amp; market intelligence for professionals
           </p>
           <p className="font-mono text-[10px] tracking-[0.08em] text-muted-3 mb-4">
-            INDIA · SEA · JAPAN · US · EU
+            ASIA · AMERICAS · EUROPE · OCEANIA — WHEREVER STEEL TRADES
           </p>
           <div className="flex flex-col gap-2 text-[13px]">
             <Link href="/" className="text-muted hover:text-accent no-underline transition-colors">Home</Link>

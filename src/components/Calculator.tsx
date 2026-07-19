@@ -25,7 +25,7 @@ type Shape =
   | "plate";
 
 const DENSITIES: Record<string, number> = {
-  MS: 7850, Fe500: 7850, A36: 7850, SS400: 7850, SS304: 8000, SS316: 8027,
+  MS: 7850, Fe500: 7850, A36: 7850, SS400: 7850, Q235: 7850, SS304: 8000, SS316: 8027,
   EN8: 7850, EN24: 7850, Aluminium: 2700, Copper: 8940,
 };
 
@@ -34,6 +34,7 @@ const GRADE_OPTS = [
   { key: "MS", label: "MS (Mild Steel) — 7,850 kg/m³" },
   { key: "A36", label: "A36 (ASTM, US) — 7,850 kg/m³" },
   { key: "SS400", label: "SS400 (JIS, Japan) — 7,850 kg/m³" },
+  { key: "Q235", label: "Q235 (GB, China) — 7,850 kg/m³" },
   { key: "SS304", label: "SS 304 — 8,000 kg/m³" },
   { key: "SS316", label: "SS 316 — 8,027 kg/m³" },
   { key: "EN8", label: "EN8 — 7,850 kg/m³" },
@@ -256,6 +257,10 @@ export default function Calculator() {
                 <option value="£">£ GBP</option>
                 <option value="S$">S$ SGD</option>
                 <option value="¥">¥ JPY</option>
+                <option value="CN¥">CN¥ CNY</option>
+                <option value="A$">A$ AUD</option>
+                <option value="C$">C$ CAD</option>
+                <option value="₫">₫ VND</option>
               </SelectField>
             </div>
             <ShowMaths
@@ -265,7 +270,7 @@ export default function Calculator() {
                 "ρ — MS/Fe500/A36/SS400 7,850 · SS304 8,000 · SS316 8,027 · Al 2,700 · Cu 8,940 kg/m³",
                 "Imperial — 1 kg/m = 0.672 lb/ft · 1 t = 2,204.6 lb",
               ]}
-              source="SOURCE: IS 1786 / 2062 / 1239 · ASTM A615 / A36 / A53 · JIS G3112 / G3101 · EN 10025 · LAST VERIFIED 18 JUL 2026"
+              source="SOURCE: IS 1786 / 2062 / 1239 · ASTM A615 / A36 / A53 · JIS G3112 / G3101 · GB/T 1499 / 700 · EN 10025 · LAST VERIFIED 18 JUL 2026"
             />
           </>
         }

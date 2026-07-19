@@ -35,6 +35,11 @@ export const metadata: Metadata = {
     "steel weight calculator singapore",
     "steel weight calculator japan",
     "en 10025 steel weight",
+    "gb q235 unit weight",
+    "steel weight calculator australia",
+    "steel weight calculator canada",
+    "steel weight calculator vietnam",
+    "steel weight calculator uk",
   ],
   alternates: { canonical: "https://steelmath.com" },
 };
@@ -150,7 +155,7 @@ export default function Home() {
         <div className="flex items-end justify-between gap-4 lg:gap-10 mb-7 flex-wrap">
           <div>
             <div className="font-mono text-[11px] tracking-[0.14em] text-muted-3 mb-3">
-              FREE · NO SIGNUP · IS · ASTM · JIS · EN STANDARDS
+              FREE · NO SIGNUP · GLOBAL GRADE STANDARDS — IS · ASTM · JIS · EN · GB
             </div>
             <h1 className="text-[clamp(28px,4.5vw,36px)] leading-[1.08] font-extrabold tracking-[-0.02em] max-w-[720px] [text-wrap:balance]">
               Free Steel Weight Calculator &amp; Industry Analysis
@@ -251,26 +256,28 @@ export default function Home() {
         <div className="border border-rule bg-[#FFFFFF]">
           <div className="px-5 py-3 border-b border-rule-faint flex justify-between items-baseline flex-wrap gap-2">
             <span className="font-mono text-[10.5px] tracking-[0.12em] text-muted-3">
-              BUILT FOR THE GLOBAL STEEL TRADE — REGIONAL STANDARDS CALLED OUT WHERE THEY DIFFER
+              BUILT FOR THE GLOBAL STEEL TRADE — WHEREVER YOU BUY OR SELL
             </span>
             <span className="font-mono text-[10.5px] tracking-[0.1em] text-muted-3">
-              ₹ · S$ · ¥ · $ · € · £
+              ₹ · CN¥ · S$ · ¥ · $ · € · £ · A$ · C$ · ₫
             </span>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
             {[
-              { region: "INDIA", detail: "IS 1786 / 2062 · TMT & saria sizes · BIS, GST, safeguard & anti-dumping guides", href: "/calculators/tmt", label: "TMT tools →" },
-              { region: "SINGAPORE / SEA", detail: "EN 10025 & BS grades · SEA import pricing — the marginal market for Chinese exports", href: "/articles/china-hrc-export-prices-validation-gap", label: "SEA price signals →" },
-              { region: "JAPAN", detail: "JIS G3101 (SS400) / G3112 / G3192 grades in every weight tool", href: "/calculator", label: "JIS grades →" },
-              { region: "UNITED STATES", detail: "ASTM A36 / A615 / A500 · lb-ft conversions · Section 232 trade coverage", href: "/articles/anti-dumping-chinese-steel-barrier-cascade", label: "US trade watch →" },
-              { region: "EU / UK", detail: "EN standards · CBAM compliance hub — deadlines, prices, country playbooks", href: "/cbam", label: "CBAM hub →" },
+              { region: "SOUTH ASIA", who: "India · Bangladesh · Pakistan", detail: "IS 1786 / 2062 · TMT & saria sizes · BIS, GST, safeguard guides", href: "/calculators/tmt", label: "TMT & IS tools →" },
+              { region: "EAST ASIA", who: "China · Japan · Korea", detail: "GB Q235 & JIS SS400 grades · China export price coverage", href: "/calculator", label: "GB · JIS grades →" },
+              { region: "SOUTHEAST ASIA", who: "Singapore · Vietnam · Malaysia", detail: "EN & BS grades · SEA import pricing — the marginal market", href: "/articles/china-hrc-export-prices-validation-gap", label: "SEA price signals →" },
+              { region: "AMERICAS", who: "United States · Canada", detail: "ASTM A36 / A615 / A500 · lb-ft conversions · trade-measure tracking", href: "/articles/anti-dumping-chinese-steel-barrier-cascade", label: "Trade watch →" },
+              { region: "EUROPE & UK", who: "EU · United Kingdom", detail: "EN standards · CBAM compliance hub — deadlines, prices, playbooks", href: "/cbam", label: "CBAM hub →" },
+              { region: "OCEANIA & BEYOND", who: "Australia · NZ · everywhere else", detail: "Metric-first tools, universal density constants — no region locked out", href: "/calculators", label: "All calculators →" },
             ].map((r, i) => (
               <Link
                 key={r.region}
                 href={r.href}
-                className={`px-5 py-4 text-ink no-underline hover:bg-paper transition-colors border-b sm:border-b-0 border-rule-faint ${i < 4 ? "lg:border-r" : ""}`}
+                className={`px-5 py-4 text-ink no-underline hover:bg-paper transition-colors border-b lg:border-b-0 border-rule-faint ${i < 5 ? "xl:border-r" : ""}`}
               >
-                <div className="font-mono text-[10.5px] tracking-[0.12em] text-accent mb-1.5">{r.region}</div>
+                <div className="font-mono text-[10.5px] tracking-[0.12em] text-accent mb-0.5">{r.region}</div>
+                <div className="font-mono text-[10px] tracking-[0.04em] text-muted-3 mb-1.5">{r.who}</div>
                 <div className="text-[12.5px] leading-normal text-muted-2">{r.detail}</div>
                 <div className="font-mono text-[10.5px] tracking-[0.06em] text-muted-3 mt-2">{r.label}</div>
               </Link>
