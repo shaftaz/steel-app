@@ -1,10 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180">
-  <defs>
-    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#00d4ff" />
-      <stop offset="100%" style="stop-color:#00e5a0" />
-    </linearGradient>
-  </defs>
-  <rect width="180" height="180" rx="36" fill="#070e1b"/>
-  <text x="90" y="112" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-weight="800" font-size="82" fill="url(#g)">SM</text>
+  <rect width="180" height="180" fill="#17181A"/>
+  <text x="93" y="112" text-anchor="middle" font-family="'Helvetica Neue',Helvetica,system-ui,sans-serif" font-weight="800" font-size="78" letter-spacing="-4" fill="#F6F5F2">S<tspan fill="#FF5C1F">M</tspan></text>
+  <rect x="0" y="168" width="180" height="12" fill="#FF5C1F"/>
 </svg>
