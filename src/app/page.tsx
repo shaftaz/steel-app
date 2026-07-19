@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import HeroInstrument from "@/components/home/HeroInstrument";
-import YieldMini from "@/components/home/YieldMini";
+import Scenarios from "@/components/home/Scenarios";
 import { articles, articlesByDate, Article } from "@/lib/data/articles";
 
 export const metadata: Metadata = {
@@ -224,65 +224,60 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Pillars — what you get, in one line each */}
-      <section className="max-w-[1320px] mx-auto px-4 sm:px-6 pt-12 pb-16">
+      {/* What you can do here — concrete tasks, not slogans */}
+      <section className="max-w-[1320px] mx-auto px-4 sm:px-6 pt-12 pb-14">
         <div className="grid grid-cols-1 md:grid-cols-3 border-t border-ink">
           <div className="pt-5 md:pr-6">
-            <div className="font-mono text-[11px] tracking-[0.12em] text-accent mb-2.5">01 — CALCULATE</div>
-            <div className="text-[15px] leading-normal text-muted">
-              <a href="#tools" className="font-bold text-ink no-underline">Quote any section in seconds.</a>{" "}
-              Twenty free calculators — weight, yield &amp; production cost. No signup, works offline on site.
-            </div>
-          </div>
-          <div className="pt-5 md:px-6 md:border-l border-rule mt-5 md:mt-0">
-            <div className="font-mono text-[11px] tracking-[0.12em] text-cbam mb-2.5">02 — COMPLY</div>
-            <div className="text-[15px] leading-normal text-muted">
-              <Link href="/cbam" className="font-bold text-ink no-underline">Know your CBAM cost before your buyer asks.</Link>{" "}
-              Deadlines, certificate prices &amp; checklists for both sides of the border.
-            </div>
-          </div>
-          <div className="pt-5 md:pl-6 md:border-l border-rule mt-5 md:mt-0">
-            <div className="font-mono text-[11px] tracking-[0.12em] text-accent mb-2.5">03 — UNDERSTAND</div>
-            <div className="text-[15px] leading-normal text-muted">
-              <a href="#insights" className="font-bold text-ink no-underline">Buy and sell with the full picture.</a>{" "}
-              {articles.length} articles &amp; guides — pricing, policy &amp; supply chains, every claim sourced and dated.
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Global coverage — regions & standards */}
-      <section className="max-w-[1320px] mx-auto px-4 sm:px-6 pb-16">
-        <div className="border border-rule bg-[#FFFFFF]">
-          <div className="px-5 py-3 border-b border-rule-faint flex justify-between items-baseline flex-wrap gap-2">
-            <span className="font-mono text-[10.5px] tracking-[0.12em] text-muted-3">
-              BUILT FOR THE GLOBAL STEEL TRADE — WHEREVER YOU BUY OR SELL
-            </span>
-            <span className="font-mono text-[10.5px] tracking-[0.1em] text-muted-3">
-              ₹ · CN¥ · S$ · ¥ · $ · € · £ · A$ · C$ · ₫
-            </span>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
+            <div className="font-mono text-[11px] tracking-[0.12em] text-accent mb-3">01 — CALCULATE</div>
             {[
-              { region: "SOUTH ASIA", who: "India · Bangladesh · Pakistan", detail: "IS 1786 / 2062 · TMT & saria sizes · BIS, GST, safeguard guides", href: "/calculators/tmt", label: "TMT & IS tools →" },
-              { region: "EAST ASIA", who: "China · Japan · Korea", detail: "GB Q235 & JIS SS400 grades · China export price coverage", href: "/calculator", label: "GB · JIS grades →" },
-              { region: "SOUTHEAST ASIA", who: "Singapore · Vietnam · Malaysia", detail: "EN & BS grades · SEA import pricing — the marginal market", href: "/articles/china-hrc-export-prices-validation-gap", label: "SEA price signals →" },
-              { region: "AMERICAS", who: "United States · Canada", detail: "ASTM A36 / A615 / A500 · lb-ft conversions · trade-measure tracking", href: "/articles/anti-dumping-chinese-steel-barrier-cascade", label: "Trade watch →" },
-              { region: "EUROPE & UK", who: "EU · United Kingdom", detail: "EN standards · CBAM compliance hub — deadlines, prices, playbooks", href: "/cbam", label: "CBAM hub →" },
-              { region: "OCEANIA & BEYOND", who: "Australia · NZ · everywhere else", detail: "Metric-first tools, universal density constants — no region locked out", href: "/calculators", label: "All calculators →" },
-            ].map((r, i) => (
-              <Link
-                key={r.region}
-                href={r.href}
-                className={`px-5 py-4 text-ink no-underline hover:bg-paper transition-colors border-b lg:border-b-0 border-rule-faint ${i < 5 ? "xl:border-r" : ""}`}
-              >
-                <div className="font-mono text-[10.5px] tracking-[0.12em] text-accent mb-0.5">{r.region}</div>
-                <div className="font-mono text-[10px] tracking-[0.04em] text-muted-3 mb-1.5">{r.who}</div>
-                <div className="text-[12.5px] leading-normal text-muted-2">{r.detail}</div>
-                <div className="font-mono text-[10.5px] tracking-[0.06em] text-muted-3 mt-2">{r.label}</div>
+              { label: "Weight of any section, any grade", href: "/calculator" },
+              { label: "TMT site orders — per bar, per tonne", href: "/calculators/tmt" },
+              { label: "Scrap → finished steel cost waterfall", href: "/calculators/scrap-production-cost" },
+            ].map((t) => (
+              <Link key={t.href} href={t.href}
+                className="flex justify-between items-baseline gap-3 py-2.5 border-b border-rule text-[13.5px] font-semibold text-ink no-underline hover:text-accent transition-colors">
+                <span>{t.label}</span>
+                <span className="font-mono text-[11px] text-accent">→</span>
               </Link>
             ))}
           </div>
+          <div className="pt-5 md:px-6 md:border-l border-rule mt-4 md:mt-0">
+            <div className="font-mono text-[11px] tracking-[0.12em] text-cbam mb-3">02 — COMPLY</div>
+            {[
+              { label: "CBAM cost for your exact cargo", href: "/cbam/calculator" },
+              { label: "Deadlines, prices & country playbooks", href: "/cbam" },
+              { label: "India import duties — active cases", href: "/articles/anti-dumping-duty-steel-imports-india-2026-active-cases" },
+            ].map((t) => (
+              <Link key={t.href} href={t.href}
+                className="flex justify-between items-baseline gap-3 py-2.5 border-b border-rule text-[13.5px] font-semibold text-ink no-underline hover:text-cbam transition-colors">
+                <span>{t.label}</span>
+                <span className="font-mono text-[11px] text-cbam">→</span>
+              </Link>
+            ))}
+          </div>
+          <div className="pt-5 md:pl-6 md:border-l border-rule mt-4 md:mt-0">
+            <div className="font-mono text-[11px] tracking-[0.12em] text-accent mb-3">03 — UNDERSTAND</div>
+            {[
+              { label: "Is the China HRC rally real? Read the gap", href: "/articles/china-hrc-export-prices-validation-gap" },
+              { label: "Where trade barriers reroute steel next", href: "/articles/anti-dumping-chinese-steel-barrier-cascade" },
+              { label: `All ${articles.length} sourced articles & guides`, href: "/articles" },
+            ].map((t) => (
+              <Link key={t.href} href={t.href}
+                className="flex justify-between items-baseline gap-3 py-2.5 border-b border-rule text-[13.5px] font-semibold text-ink no-underline hover:text-accent transition-colors">
+                <span>{t.label}</span>
+                <span className="font-mono text-[11px] text-accent">→</span>
+              </Link>
+            ))}
+          </div>
+        </div>
+        {/* Slim global bar — inclusive, one line */}
+        <div className="flex justify-between items-baseline flex-wrap gap-x-6 gap-y-1.5 border-b border-rule py-2.5">
+          <span className="font-mono text-[10.5px] tracking-[0.1em] text-muted-3">
+            GLOBAL — IS · ASTM · JIS · EN · GB GRADES · 10 CURRENCIES · WHEREVER STEEL TRADES
+          </span>
+          <span className="font-mono text-[10.5px] tracking-[0.1em] text-muted-3">
+            ₹ · CN¥ · S$ · ¥ · $ · € · £ · A$ · C$ · ₫
+          </span>
         </div>
       </section>
 
@@ -323,7 +318,7 @@ export default function Home() {
               ALL 20 CALCULATORS →
             </Link>
           </div>
-          <YieldMini />
+          <Scenarios />
         </div>
       </section>
 
