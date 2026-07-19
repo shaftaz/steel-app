@@ -24,6 +24,205 @@ export const CATEGORY_STYLES: Record<Category, { bg: string; text: string }> = {
 
 export const articles: Article[] = [
   {
+    slug: "anti-dumping-chinese-steel-barrier-cascade",
+    title:
+      "207 Trade Barriers Later, Chinese Steel Still Finds a Way Out",
+    category: "ANALYSIS",
+    categoryColor: "blue",
+    date: "2026-07-19",
+    readTime: "6 min",
+    excerpt:
+      "62 countries now run 207 restrictions on Chinese steel \u2014 yet exports keep hitting records. How the barrier cascade works, and what buyers should watch.",
+    metaTitle: "Anti-Dumping on Chinese Steel: The Barrier Cascade",
+    metaDescription:
+      "62 countries now run 207 restrictions on Chinese steel \u2014 yet exports keep hitting records. How the barrier cascade works, and what buyers should watch.",
+    relatedCalculators: ["scrap-production-cost", "tmt"],
+    ogImage: {
+      url: "/og?title=Chinese%20steel%20still%20finds%20a%20way%20out&value=207&label=TRADE%20RESTRICTIONS%20%C2%B7%2062%20COUNTRIES%20%C2%B7%20RECORD%20395%20MEASURES&accent=orange",
+      alt: "Chart of trade restrictions against Chinese steel by country versus China's rising export volumes.",
+    },
+    content: `
+<p><strong>Executive summary:</strong> The trade wall against Chinese steel is going up faster than at any point in a decade \u2014 62 countries now maintain 207 restrictions, and cumulative measures hit a record 395 in 2025. Yet Chinese exports doubled since 2020 to 118 million tonnes and kept climbing. The explanation is a predictable three-step pattern we call the barrier cascade: blocked steel hops products, hops markets, and hops down the value chain to semi-finished forms. For steel buyers, the cascade \u2014 not any single duty \u2014 is what now moves prices.</p>
+
+<p>Anti-dumping duties on Chinese steel are multiplying across every continent at once. In a single recent stretch, the US imposed a 72.94% countervailing duty on Algerian rebar, Korea opened an anti-dumping probe into Chinese tinplate, Brazil launched an investigation into Chinese welded carbon steel pipes, and Turkey began a sunset review of its hot-rolled wire rod safeguards. Four jurisdictions, four products, one week \u2014 and one direction of travel.</p>
+
+<h2>The wall, measured</h2>
+
+<p>The numbers describe a structural shift, not a skirmish. As of late 2025, 62 countries had implemented <a href="https://gmk.center/en/infographic/62-countries-implemented-207-restrictions-against-steel-products-from-china/" target="_blank" rel="noopener">207 restrictions against Chinese steel</a>, covering nearly every category \u2014 rebar, wire rod, coils, pipes, and coated sheet. The OECD counts cumulative trade measures at <a href="https://www.indexbox.io/blog/oecd-steel-outlook-2026-anti-dumping-cases-remain-high-global-overcapacity-looms/" target="_blank" rel="noopener">a record 395 in 2025</a>, up from 321 a year earlier, with China the target of 113 of them. The US (77 measures), Canada (64), Australia (46), and the EU (32) account for roughly half the global total. The blunter instruments escalated too: Washington doubled Section 232 tariffs from 25% to 50% in June 2025, and Brussels moved to halve import quotas while raising out-of-quota tariffs to 50%.</p>
+
+<p>The pace is accelerating into 2026. Seventeen anti-dumping and safeguard duties were imposed in the first months of this year \u2014 more than in all of 2025 \u2014 with <a href="https://www.spglobal.com/energy/en/news-research/latest-news/metals/050826-chinas-semi-finished-steel-exports-surge-as-trade-barriers-hit-finished-products0" target="_blank" rel="noopener">another seventeen cases under investigation</a>. Regulators are also getting faster: preliminary determinations that took 200 days now average 144.</p>
+
+<p>The underlying grievance is not mysterious. OECD estimates put Chinese steelmaker subsidies at roughly five times the average of other economies, and global overcapacity is projected to reach 745 million tonnes by 2028. And yet through all of it, Chinese exports doubled from 2020 to reach 118 million tonnes in 2024, with 2025 volumes running about 10% higher again.</p>
+
+<h2>The barrier cascade: how blocked steel finds the exit</h2>
+
+<p>That contradiction \u2014 record walls, record flows \u2014 resolves into a repeatable three-step pattern. Call it the barrier cascade.</p>
+
+<p><strong>Step one: the product hop.</strong> When finished products get blocked, flows shift to categories the duties don\u2019t cover. The clearest evidence is in semi-finished steel: in the first quarter of 2026, Chinese slab exports surged 182% year-on-year and billet exports rose 14.8% to 2.66 million tonnes \u2014 precisely as finished-product exports to Brazil, South Korea, and Vietnam fell 30%, and cold-rolled and coated exports to Turkey collapsed 42%. The steel did not stop moving. It changed form.</p>
+
+<p><strong>Step two: the market hop.</strong> Volumes displaced from protected markets flow toward open ones, which then experience the import surge that triggers their own investigations \u2014 which is exactly why probes are now appearing in Korea, Brazil, and Turkey in the same season. Each new barrier redirects pressure to whoever hasn\u2019t built one yet.</p>
+
+<p><strong>Step three: the origin hop.</strong> Trade defense increasingly targets third countries suspected of channeling or substituting for Chinese material \u2014 the US duty on Algerian rebar at 72.94% shows enforcement reaching well beyond China itself. Meanwhile, supply gaps elsewhere get filled opportunistically: Iran\u2019s absence from global markets opened the slab shortfall that Chinese exporters moved into.</p>
+
+<p>The cascade is why the OECD\u2019s own conclusion deserves attention: trade measures address specific products but \u201Cfall short of resolving global overcapacity.\u201D A wall changes the route. It does not change the volume looking for a route.</p>
+
+<h2>What the cascade means for steel buyers</h2>
+
+<p>For procurement teams, the actionable insight is that duty announcements are lagging indicators \u2014 the price effect arrives through the cascade, often in a different product or port than the headline. Watch four things. First, semi-finished flows: surging billet and slab volumes signal where the next round of finished-product pressure (and the next investigations) will land. Second, <a href="/articles/anti-dumping-duty-steel-imports-india-2026-active-cases">sunset reviews</a>, like Turkey\u2019s on wire rod \u2014 expiries and renewals shift regional price floors with little warning. Third, the open-market map: whichever significant importing market lacks measures is the pressure-release valve, and its domestic prices will feel it first. Fourth, determination speed: at 144 days and falling, the window between probe and provisional duty is now short enough to strand cargoes booked on old assumptions.</p>
+
+<h2>The honest limit</h2>
+
+<p>Restriction counts measure activity, not effect: a sunset review and a 72.94% duty are very different events, and aggregate tallies blur them. And the 2026 case-count comparison covers a partial year against a full one \u2014 the acceleration is real, but its final magnitude isn\u2019t settled yet.</p>
+
+<h2>The bottom line</h2>
+
+<p>The trade wall will keep rising \u2014 the overcapacity behind it, projected at 745 million tonnes by 2028, guarantees the pressure doesn\u2019t relent. For buyers, that makes origin risk a permanent input cost, and it makes anticipating the cascade \u2014 which product, which port, which quarter \u2014 worth real money on every contract. That anticipation is <a href="/articles/steel-price-hike-tracker-march-2026">a forecasting problem</a>, the kind SteelMath exists to solve. The single duty in the headline is rarely the event that moves your price. The rerouting it triggers is.</p>
+
+<p>Related reading: how China\u2019s export prices are behaving under <a href="/articles/china-hrc-export-prices-validation-gap">this pressure</a>, and why protected markets like India still feel <a href="/articles/indian-metal-stocks-protection-paradox">the global squeeze</a>.</p>
+
+<h2>Frequently asked questions</h2>
+
+<h3>How many countries have trade restrictions on Chinese steel?</h3>
+<p>As of late 2025, 62 countries maintained 207 restrictions on Chinese steel products, and the OECD counted a record 395 cumulative trade measures \u2014 113 of them targeting China, the most of any nation.</p>
+
+<h3>Why do Chinese steel exports keep rising despite anti-dumping duties?</h3>
+<p>Blocked flows reroute rather than stop: exports shift into uncovered products (Q1 2026 slab exports rose 182% as finished-product duties bit), into markets without measures, and through third-country channels. Duties address specific products; they don\u2019t remove the overcapacity \u2014 projected at 745 million tonnes by 2028 \u2014 that drives the flows.</p>
+
+<h3>What was the US duty on Algerian rebar?</h3>
+<p>The US imposed a 72.94% countervailing duty on rebar from Algeria \u2014 a sign that trade enforcement is widening beyond China to third-country origins.</p>
+
+<h3>What should steel buyers monitor amid rising trade barriers?</h3>
+<p>Semi-finished (billet/slab) flow data, sunset-review calendars, which major importing markets remain measure-free, and the shrinking gap between probe launch and provisional duties \u2014 now averaging 144 days.</p>
+`,
+  },
+  {
+    slug: "china-hrc-export-prices-validation-gap",
+    title:
+      "A Rally Without Buyers: What China\u2019s HRC Export Prices Are Really Signaling",
+    category: "ANALYSIS",
+    categoryColor: "blue",
+    date: "2026-07-19",
+    readTime: "5 min",
+    excerpt:
+      "Chinese HRC export prices rose to $488\u2013494/t FOB on futures strength \u2014 but buyers didn\u2019t follow. How to read a rally the physical market won\u2019t validate.",
+    metaTitle: "China HRC Export Prices: Rally Without Buyers",
+    metaDescription:
+      "Chinese HRC export prices rose to $488\u2013494/t FOB on futures strength \u2014 but buyers didn\u2019t follow. How to read a rally the physical market won\u2019t validate.",
+    relatedCalculators: ["metal-weight", "credit-cost"],
+    ogImage: {
+      url: "/og?title=A%20rally%20without%20buyers&value=%24488-494&label=HRC%20FOB%20CHINA%20%E2%80%94%20OFFERS%20UP%2C%20INQUIRIES%20FLAT&accent=orange",
+      alt: "Chart showing Chinese HRC export offer prices rising while overseas buyer price levels stay flat.",
+    },
+    content: `
+<p><strong>Executive summary:</strong> On 15 July, Chinese HRC export prices edged up $1\u20132 to $488\u2013494/tonne FOB as domestic futures rallied for a second session \u2014 but overseas buyers didn\u2019t move, foreign price ideas stayed flat, and few deals closed. That gap between paper-led offers and physical demand is the single most useful signal in the market right now. Rallies the order book refuses to validate tend to retrace \u2014 and chasing them is how procurement teams overpay at the top of small cycles.</p>
+
+<p>China HRC export prices tell two stories at once this week, and steel buyers need to read both. The first story is the tape: offers up $1\u20132/tonne to $488\u2013494 FOB, the second consecutive session of gains, pulled upward by <a href="https://news.metal.com/newscontent/104006716-715-smm-global-steel-daily" target="_blank" rel="noopener">a domestic futures rally</a>. The second story is the order book: overseas inquiries did not increase, foreign prices held flat, and reported deals stayed thin. Billet from Jiangyin moved up in sympathy to $458\u2013460 FOB, and rebar offers rose $1 \u2014 with, in SMM\u2019s words, \u201Cno clear improvement\u201D in actual inquiries and transactions.</p>
+
+<h2>The validation gap</h2>
+
+<p>When an export offer rises because domestic futures rallied \u2014 rather than because buyers bid it up \u2014 the move opens what we call the validation gap: the distance between where sellers mark the market and where demand is actually willing to transact. The gap resolves one of two ways. Either physical buyers step in within a handful of sessions and confirm the new level, or offers drift back to where the bids live. What it almost never does is stay open for long.</p>
+
+<p>Right now the gap is wide and the confirming evidence is absent. Southeast Asia \u2014 the marginal buyer that sets the tone for Chinese export pricing \u2014 is in its seasonal demand lull, and importers there are pressing hard on billet prices while Chinese mills hold firm on production-cost grounds. That standoff, mills\u2019 cost floor against buyers\u2019 seasonal patience, is the actual price discovery happening beneath the headline uptick.</p>
+
+<h2>The recent precedent</h2>
+
+<p>This exact pattern played out three months ago. Chinese export prices firmed in mid-April on domestic strength \u2014 and the follow-through wasn\u2019t more orders, it was fewer: rising offers reportedly triggered <a href="https://www.spglobal.com/energy/en/news-research/latest-news/metals/050826-chinas-semi-finished-steel-exports-surge-as-trade-barriers-hit-finished-products0" target="_blank" rel="noopener">a decline in export bookings</a>, pointing to contraction in early-summer shipment volumes. In a buyers\u2019 market, sellers raising prices don\u2019t capture margin; they donate market share to whichever origin didn\u2019t raise.</p>
+
+<p>And it remains emphatically a buyers\u2019 market. April\u2019s combined finished and semi-finished loadings ran 12.8 million tonnes \u2014 up 20% year-on-year \u2014 while <a href="/articles/anti-dumping-chinese-steel-barrier-cascade">a widening wall of trade measures</a> redirects ever more of that volume toward the remaining open markets. Supply pressure of that scale does not disappear because futures had two good sessions.</p>
+
+<h2>How buyers should trade the gap</h2>
+
+<p>Three practical rules follow. First, don\u2019t chase paper-led offers. A futures-driven markup with flat bids is an invitation to wait, not to cover \u2014 the burden of proof is on the rally. Second, watch the inquiry follow-through, not the offer level. The signal that matters is whether overseas inquiry volumes pick up within roughly a week of the futures move; if they don\u2019t, the offer retraces toward the bid. Third, respect the seasonal clock. Off-season Southeast Asian demand means the physical validation, if it comes, likely arrives with the post-monsoon restocking window \u2014 buyers with <a href="/articles/buy-steel-now-or-wait-hormuz-2026">flexibility on timing</a> hold the leverage until then, and mills know it, which is why the cost-floor standoff on billet is where the real negotiation is happening.</p>
+
+<h2>The honest limit</h2>
+
+<p>Daily export assessments capture offers more reliably than concluded business, so thin-deal environments overstate the firmness of any move. And a genuine supply-side shock \u2014 a policy-driven production cut in China, for instance \u2014 could validate the rally from the sellers\u2019 side rather than the demand side. The gap tells you tension exists; it doesn\u2019t tell you which side breaks first, only that one of them has to.</p>
+
+<h2>The bottom line</h2>
+
+<p>At $488\u2013494 FOB, Chinese HRC is marking a price the world hasn\u2019t yet agreed to pay. For procurement teams, weeks like this are precisely when a day of patience is worth several dollars a tonne \u2014 and when telling <a href="/articles/steel-price-hike-tracker-march-2026">a real inflection</a> from a paper rally is the entire game. Reading that difference systematically, rather than anecdotally, is what price intelligence platforms like SteelMath are built for. Watch the inquiries, not the offers. Prices follow buyers eventually \u2014 in both directions.</p>
+
+<h2>Frequently asked questions</h2>
+
+<h3>What are Chinese HRC export prices right now?</h3>
+<p>As of 15 July, Chinese HRC export offers stood at $488\u2013494/tonne FOB, up $1\u20132 on the day, with export billet from Jiangyin at $458\u2013460/tonne FOB. Deal activity remained thin despite the higher offers.</p>
+
+<h3>Why are Chinese steel export prices rising if demand is weak?</h3>
+<p>The uptick was driven by a two-session rally in Chinese domestic futures, not by buying interest \u2014 overseas inquiries didn\u2019t improve and foreign price ideas held flat. Offer prices tracking futures rather than orders is a paper-led move, not demand-led strength.</p>
+
+<h3>Should steel buyers purchase before prices rise further?</h3>
+<p>The recent precedent argues for patience: a similar offer rally in mid-April was followed by falling export orders, not rising ones. Until overseas inquiry volumes visibly pick up, the pressure on a futures-led offer is downward. Buying decisions should track physical validation signals, not offer sheets. (This is market analysis, not financial advice.)</p>
+
+<h3>When could Southeast Asian steel demand recover?</h3>
+<p>The region is currently in its seasonal lull, which is weighing on sentiment. The natural validation window is the post-monsoon restocking period \u2014 until then, importers are pressing on price, particularly in billet.</p>
+`,
+  },
+  {
+    slug: "indian-metal-stocks-protection-paradox",
+    title:
+      "The Protection Paradox: Why Metal Stocks Sat Out a 965-Point Sensex Rally",
+    category: "ANALYSIS",
+    categoryColor: "blue",
+    date: "2026-07-19",
+    readTime: "5 min",
+    excerpt:
+      "The Sensex jumped 965 points but metal stocks stayed under pressure \u2014 despite India\u2019s 12% safeguard duty. Why tariffs protect volumes, not margins.",
+    metaTitle: "Why Indian Metal Stocks Lag Despite Safeguard Duty",
+    metaDescription:
+      "The Sensex jumped 965 points but metal stocks stayed under pressure \u2014 despite India\u2019s 12% safeguard duty. Why tariffs protect volumes, not margins.",
+    relatedCalculators: ["tmt", "scrap-production-cost"],
+    ogImage: {
+      url: "/og?title=The%20protection%20paradox&value=965%20pts&label=SENSEX%20RALLY%20%E2%80%94%20METAL%20STOCKS%20SAT%20IT%20OUT&accent=orange",
+      alt: "Chart showing Indian benchmark indices rallying while metal sector stocks stay under pressure.",
+    },
+    content: `
+<p><strong>Executive summary:</strong> Indian benchmarks surged on Friday \u2014 the Sensex up 965 points, the Nifty above 24,300, led by banking and IT \u2014 while metal stocks stayed under pressure. That divergence is not noise. India\u2019s steel industry sits behind one of the world\u2019s more effective safeguard duties, yet equity markets are pricing what tariffs cannot fix: a global long steel market that IREPAS says is worsening, with high supply, stagnant demand, and fresh Iranian and Russian billet availability threatening rebar prices. Protection defends volumes. It does not defend margins from a global downcycle.</p>
+
+<p>The Friday session told the story in one screen. Banking and IT drove <a href="https://telanganatoday.com/sensex-jumps-965-points-nifty-tops-24300-led-by-banking-and-it-stocks" target="_blank" rel="noopener">the Sensex up 965 points and the Nifty past 24,300</a> \u2014 and the metals pack sat the rally out, held down by global steel headwinds that domestic optimism couldn\u2019t offset.</p>
+
+<h2>The paradox, stated</h2>
+
+<p>On paper, Indian steelmakers are among the world\u2019s better-defended. Since April 2025, a <a href="/articles/safeguard-duty-steel-imports-india-2026">safeguard duty</a> \u2014 12% in year one, tapering to 11% by April 2028 \u2014 has covered hot-rolled coils, plates, cold-rolled and coated flat products, with <a href="https://www.business-standard.com/economy/news/govt-imposes-up-to-12-safeguard-duty-on-steel-flat-product-imports-125123100448_1.html" target="_blank" rel="noopener">a price floor that exempts only imports above thresholds</a> like $675/tonne CIF for HRC. It worked as designed: under the provisional duty, monthly import volumes fell roughly 33% year-on-year.</p>
+
+<p>So why the pressure on metal equities? Because a tariff changes who supplies the Indian market \u2014 it does not change the global price environment in which every Indian producer\u2019s realizations, spreads, and export economics are set. Call it the protection paradox: the more global steel weakens, the more the safeguard protects market share while doing progressively less for profitability. Equity markets price profitability.</p>
+
+<h2>What the market is actually pricing</h2>
+
+<p>The global backdrop is deteriorating on exactly the axis that matters for Indian mills. <a href="/articles/global-long-steel-market-hormuz-crisis-irepas-march-2026">IREPAS</a> \u2014 the international association of long product producers and traders \u2014 reports <a href="https://eurometal.net/irepas-global-long-steel-market-weakens-further-on-subdued-demand-oversupply/" target="_blank" rel="noopener">the long steel market has worsened further</a>, with high supply and stagnant demand squeezing margins worldwide. Two incremental supply threats sharpen the picture: additional Iranian and Russian billet availability, which could push rebar prices lower still.</p>
+
+<p>The billet detail deserves emphasis. Iran\u2019s earlier absence from global markets created a gap that Chinese slab rushed to fill; its return adds tonnes to a market already absorbing <a href="/articles/anti-dumping-chinese-steel-barrier-cascade">surging Chinese semi-finished exports</a>. Meanwhile Chinese HRC export offers \u2014 the de facto global price anchor \u2014 are managing only <a href="/articles/china-hrc-export-prices-validation-gap">futures-led upticks that physical buyers decline to validate</a>. When the global price anchor is soft, Indian mill realizations feel it through import-parity pricing pressure and shrinking export headroom \u2014 duty or no duty.</p>
+
+<p>There is a second-order effect too: the safeguard\u2019s price thresholds mean that if global prices fall far enough, the duty\u2019s bite changes character \u2014 and the sunset clock (April 2028, with annual tapers) is always running. Protection in steel is a lease, not a freehold.</p>
+
+<h2>Signals for the months ahead</h2>
+
+<p>For anyone positioned in Indian metals \u2014 as producers, buyers, or investors \u2014 the divergence resolves through a short list of watchables. Iranian and Russian billet offer volumes into Asia, the most direct threat to rebar pricing. Chinese export offer levels and, more importantly, whether physical buyers start validating them \u2014 that\u2019s the global floor moving, or not. Domestic demand execution against <a href="/articles/india-infrastructure-capex-steel-demand-2030-adani-ports-energy">India\u2019s infrastructure pipeline</a>, which determines how much the home market can outrun the global cycle. And the safeguard calendar: the taper steps and eventual sunset will be priced in well before they arrive.</p>
+
+<h2>The honest limit</h2>
+
+<p>One session\u2019s sector divergence is a data point, not a trend \u2014 metal stocks respond to global cues with volatility in both directions, and a single Friday proves nothing on its own. The IREPAS assessment is directional, not quantified; how much of the billet threat translates into realized rebar price declines depends on volumes that haven\u2019t shipped yet.</p>
+
+<h2>The bottom line</h2>
+
+<p>India\u2019s domestic steel story \u2014 infrastructure spending, capacity additions, import protection \u2014 remains one of the strongest in the world. But Friday\u2019s tape was a reminder that steel is a globally priced business, and no duty firewalls a P&amp;L from the world price. The gap between a protected market and a protected margin is exactly where forward visibility on prices earns its keep \u2014 the discipline SteelMath brings to steel market intelligence. The equity market watches the global cycle even when the tariff schedule says it doesn\u2019t have to. Producers and buyers should watch it the same way.</p>
+
+<h2>Frequently asked questions</h2>
+
+<h3>Why are Indian metal stocks falling when the Sensex is rising?</h3>
+<p>Metal stocks are pricing global steel conditions \u2014 a weakening long steel market, oversupply, and soft Chinese export prices \u2014 rather than domestic market sentiment. Banking and IT led Friday\u2019s 965-point rally; metals lagged because their earnings are set by globally-linked prices.</p>
+
+<h3>Does India\u2019s safeguard duty protect steel companies?</h3>
+<p>It protects volumes effectively \u2014 monthly imports fell about 33% year-on-year under the provisional 12% duty \u2014 but it cannot insulate margins from a global downcycle, since realizations track import-parity and world prices. The duty also tapers: 12% to 11.5% to 11%, ending April 2028.</p>
+
+<h3>What is happening in the global long steel market?</h3>
+<p>IREPAS reports the market has worsened further, with high supply and stagnant demand squeezing margins, and additional Iranian and Russian billet availability threatening further rebar price declines.</p>
+
+<h3>What should steel market participants in India watch next?</h3>
+<p>Iranian/Russian billet flows into Asia, Chinese HRC export price validation by physical buyers, execution of India\u2019s domestic infrastructure demand, and the safeguard duty\u2019s taper-and-sunset calendar through April 2028.</p>
+`,
+  },
+
+  {
     slug: "gigafactory-delivery-delays",
     title:
       "Late Capacity Is Worthless Capacity: The New Economics of Gigafactory Delivery",
@@ -757,7 +956,7 @@ export const articles: Article[] = [
 
 <p>The safeguard duty has been highly effective. Steel imports into India dropped by approximately 39% year-on-year in the first half of fiscal year 2025\u201326 after the provisional duty was imposed. This reduction in import competition has provided a floor for domestic prices and supported mill profitability.</p>
 
-<p>For buyers, this means domestic prices will remain at a premium to what they would have been without the duty. The protection effectively adds \u20B93,000\u20135,000 per MT to the cost floor for flat steel in India (depending on the product and prevailing global price).</p>
+<p>For buyers, this means domestic prices will remain at a premium to what they would have been without the duty. The <a href="/articles/indian-metal-stocks-protection-paradox">protection</a> effectively adds \u20B93,000\u20135,000 per MT to the cost floor for flat steel in India (depending on the product and prevailing global price).</p>
 
 <h2>How to Calculate Your Import Cost With the Duty</h2>
 
@@ -2316,7 +2515,7 @@ export const articles: Article[] = [
 
 <p>The backdrop to all of this is China. The IREPAS February outlook noted that Chinese steel production fell to 960 million tonnes in 2025, dropping below one billion tonnes for the first time since 2019. But paradoxically, Chinese steel exports surged to a record 119 million tonnes in the same year. China is producing less but exporting more \u2014 a reflection of weak domestic demand from the continuing property sector crisis and deliberate efforts by Chinese mills to maintain utilisation rates by pushing surplus steel into global markets.</p>
 
-<p>This flood of Chinese exports is the single largest source of supply pressure on the global long steel market. It is the reason why countries from India to Europe to the US are erecting trade barriers. India\u2019s own <a href="/articles/safeguard-duty-steel-imports-india-2026">safeguard duty of 12%</a> on flat steel products (though not directly covering long products) is part of this defensive response.</p>
+<p>This flood of <a href="/articles/china-hrc-export-prices-validation-gap">Chinese exports</a> is the single largest source of supply pressure on the global long steel market. It is the reason why countries from India to Europe to the US are erecting trade barriers. India\u2019s own <a href="/articles/safeguard-duty-steel-imports-india-2026">safeguard duty of 12%</a> on flat steel products (though not directly covering long products) is part of this defensive response.</p>
 
 <p>For Indian long product producers, the Chinese export wave has a mixed impact. On one hand, Chinese rebar and wire rod exports into Southeast Asian and African markets that India also targets create price competition that compresses margins. On the other hand, the global reaction against Chinese dumping \u2014 including new safeguard measures in the EU and continued Section 232 protection in the US \u2014 is fragmenting global trade in ways that can benefit Indian exporters with access to markets that are restricting Chinese steel.</p>
 
@@ -5990,7 +6189,7 @@ At k = 0.95: D/t = 40.0 \u2014 very thin, buckling is the primary failure mode.<
 
 <p><strong>Before placing any import order:</strong> Check DGTR\u2019s website (dgtr.gov.in) for active anti-dumping orders and ongoing investigations relevant to your product and source country. DGTR maintains a searchable database of all cases. Cross-reference the product description and HS code \u2014 anti-dumping orders are product-specific and country-specific, so a product that attracts duty from China may be duty-free from an alternative source.</p>
 
-<p><strong>When evaluating alternative sources:</strong> If your traditional Chinese or Vietnamese supplier\u2019s products carry anti-dumping duty, evaluate alternative countries that are not subject to orders. Turkey, Brazil, Ukraine (where operational), and domestic Indian producers are common alternatives. However, verify that no anti-circumvention investigation has been initiated \u2014 DGTR watches for trade diversion through third countries.</p>
+<p><strong>When evaluating alternative sources:</strong> If your traditional Chinese or Vietnamese supplier\u2019s products carry anti-dumping duty, evaluate alternative countries that are not subject to orders. Turkey, Brazil, Ukraine (where operational), and domestic Indian producers are common alternatives. However, verify that no <a href="/articles/anti-dumping-chinese-steel-barrier-cascade">anti-circumvention investigation</a> has been initiated \u2014 DGTR watches for trade diversion through third countries.</p>
 
 <p><strong>When negotiating with suppliers:</strong> Some foreign producers are individually assessed at lower duty rates than the residual rate. If your supplier cooperated with the DGTR investigation and received an individual rate, verify their name and rate in the CBIC notification. The difference between an individually assessed rate and the residual rate can be thousands of dollars per tonne.</p>
 
