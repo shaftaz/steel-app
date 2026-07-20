@@ -5,22 +5,22 @@ import TwoDoor from "@/components/cbam/TwoDoor";
 import CiteButton from "@/components/cbam/CiteButton";
 
 export const metadata: Metadata = {
-  title: "CBAM Compliance Hub — Deadlines, Prices, Country Playbooks | SteelMath",
+  title: "CBAM Compliance Hub: Deadlines, Prices, Country Playbooks | SteelMath",
   description:
-    "The EU carbon border levy is live. Every CBAM deadline, certificate price and obligation for the steel trade — plain language, verified against the Official Journal, for exporters and EU importers.",
+    "The EU carbon border levy is live. Every CBAM deadline, certificate price and obligation for the steel trade: plain language, verified against the Official Journal, for exporters and EU importers.",
   alternates: { canonical: "https://steelmath.com/cbam" },
   openGraph: {
     images: [{ url: "/og?title=CBAM%20Compliance%20Hub%20%E2%80%94%20Deadlines%2C%20Prices%2C%20Country%20Playbooks&accent=blue", width: 1200, height: 630 }],
-    title: "CBAM Compliance Hub — Deadlines, Prices, Country Playbooks | SteelMath",
+    title: "CBAM Compliance Hub: Deadlines, Prices, Country Playbooks | SteelMath",
     description:
-      "Every CBAM deadline, certificate price and obligation for the steel trade — verified against the Official Journal.",
+      "Every CBAM deadline, certificate price and obligation for the steel trade, verified against the Official Journal.",
     url: "https://steelmath.com/cbam",
     type: "website",
   },
 };
 
 const EXPLAINER = [
-  { n: "01", head: "Europe prices carbon at its border.", body: "Importers of iron & steel (plus cement, aluminium, fertilisers, hydrogen, electricity) pay for the CO₂ embedded in the goods — same price EU mills pay under the ETS." },
+  { n: "01", head: "Europe prices carbon at its border.", body: "Importers of iron & steel (plus cement, aluminium, fertilisers, hydrogen, electricity) pay for the CO₂ embedded in the goods, same price EU mills pay under the ETS." },
   { n: "02", head: "Only authorised declarants can import.", body: "Since 1 Jan 2026, CBAM goods above 50 t/year clear EU customs only for authorised CBAM declarants. No status, no entry." },
   { n: "03", head: "Emissions data flows from the mill.", body: "The producer measures emissions per tonne (verified by an accredited verifier); the importer declares them. No data → punitive default values." },
   { n: "04", head: "Money moves in 2027.", body: "Certificates (1 tCO₂e each, ETS-linked price) go on sale 1 Feb 2027. First declaration & surrender for 2026 imports: 30 Sep 2027." },
@@ -40,27 +40,27 @@ const PRICES = [
 ];
 
 const COUNTRIES = [
-  { name: "India", badge: "NO DEDUCTION YET", badgeColor: "#B4540A", carbon: "CCTS compliance market phasing in for steel; no effective carbon price paid yet → nothing to deduct today.", route: "BF-BOF heavy (~55%) + coal-DRI — high intensity; defaults punitive.", action: "Verified actual values + precursor data are your price weapon. Track CCTS for future deductions." },
-  { name: "Turkey", badge: "ETS PILOT", badgeColor: "#2447C9", carbon: "TR-ETS pilot live (aligning to CBAM); free allocation heavy → effective price paid ≈ 0 for now.", route: "~70% EAF scrap — among the lowest embedded emissions of major exporters.", action: "Lead with verified actuals; your EAF route is a genuine CBAM cost advantage into the EU." },
-  { name: "China", badge: "PARTIAL DEDUCTION", badgeColor: "#2447C9", carbon: "National ETS covers steel since 2024/25; price low (≈ €8–12) → small but real deduction.", route: "BF-BOF ~90% — high intensity; data sharing can face state constraints.", action: "Document ETS payments per installation; expect verifier scrutiny on data provenance." },
-  { name: "Vietnam", badge: "DEFAULTS RISK", badgeColor: "#B4540A", carbon: "Pilot ETS scheduled (2025–28), no effective price yet → no deduction.", route: "New BF capacity + EAF mix; fast-growing HRC exporter to the EU.", action: "Move early on verified actuals — defaults set from worst emitters erase your margin." },
-  { name: "South Korea", badge: "K-ETS DEDUCTION", badgeColor: "#2447C9", carbon: "K-ETS since 2015 (≈ €6–9 recent); generous free allocation cuts the deductible “price effectively paid”.", route: "BF-BOF majors + EAF; strong MRV culture — verification is straightforward.", action: "Compute deduction net of free allocation — claiming gross K-ETS price will fail review." },
+  { name: "India", badge: "NO DEDUCTION YET", badgeColor: "#B4540A", carbon: "CCTS compliance market phasing in for steel; no effective carbon price paid yet → nothing to deduct today.", route: "BF-BOF heavy (~55%) + coal-DRI, high intensity; defaults punitive.", action: "Verified actual values + precursor data are your price weapon. Track CCTS for future deductions." },
+  { name: "Turkey", badge: "ETS PILOT", badgeColor: "#2447C9", carbon: "TR-ETS pilot live (aligning to CBAM); free allocation heavy → effective price paid ≈ 0 for now.", route: "~70% EAF scrap, among the lowest embedded emissions of major exporters.", action: "Lead with verified actuals; your EAF route is a genuine CBAM cost advantage into the EU." },
+  { name: "China", badge: "PARTIAL DEDUCTION", badgeColor: "#2447C9", carbon: "National ETS covers steel since 2024/25; price low (≈ €8–12) → small but real deduction.", route: "BF-BOF ~90%, high intensity; data sharing can face state constraints.", action: "Document ETS payments per installation; expect verifier scrutiny on data provenance." },
+  { name: "Vietnam", badge: "DEFAULTS RISK", badgeColor: "#B4540A", carbon: "Pilot ETS scheduled (2025–28), no effective price yet → no deduction.", route: "New BF capacity + EAF mix; fast-growing HRC exporter to the EU.", action: "Move early on verified actuals, defaults set from worst emitters erase your margin." },
+  { name: "South Korea", badge: "K-ETS DEDUCTION", badgeColor: "#2447C9", carbon: "K-ETS since 2015 (≈ €6–9 recent); generous free allocation cuts the deductible “price effectively paid”.", route: "BF-BOF majors + EAF; strong MRV culture (verification is straightforward.", action: "Compute deduction net of free allocation) claiming gross K-ETS price will fail review." },
   { name: "Japan", badge: "GX TRANSITION", badgeColor: "#5A6070", carbon: "GX-ETS turning mandatory FY2026; carbon levy from 2028 → deductions emerging, small at first.", route: "BF-BOF heavy; high-grade products with strong data systems.", action: "Prepare installation-level actuals now; deduction paperwork matures with GX pricing." },
-  { name: "United Kingdom", badge: "LINKING PATH", badgeColor: "#2447C9", carbon: "UK ETS ≈ EU levels; UK–EU linkage agreed in principle — linked ETS would exempt UK goods from EU CBAM.", route: "EAF transition underway (Port Talbot, Scunthorpe plans).", action: "Track linkage timing; also prepare for the UK’s own CBAM on your imports from 1 Jan 2027." },
-  { name: "EU (domestic)", badge: "REFERENCE", badgeColor: "#5A6070", carbon: "Full EU ETS price (~€75); free allocation phasing out 2026–34 in step with CBAM.", route: "All routes; benchmark for the “level playing field”.", action: "Buyers: your imported and domestic carbon costs now converge — compare total landed cost, not base price." },
+  { name: "United Kingdom", badge: "LINKING PATH", badgeColor: "#2447C9", carbon: "UK ETS ≈ EU levels; UK–EU linkage agreed in principle. A linked ETS would exempt UK goods from EU CBAM.", route: "EAF transition underway (Port Talbot, Scunthorpe plans).", action: "Track linkage timing; also prepare for the UK’s own CBAM on your imports from 1 Jan 2027." },
+  { name: "EU (domestic)", badge: "REFERENCE", badgeColor: "#5A6070", carbon: "Full EU ETS price (~€75); free allocation phasing out 2026–34 in step with CBAM.", route: "All routes; benchmark for the “level playing field”.", action: "Buyers: your imported and domestic carbon costs now converge, compare total landed cost, not base price." },
 ];
 
 const FINISHED = [
-  { n: "01", text: "Exporters of finished goods: compute the steel/aluminium mass share per product now — the levy will follow the embedded metal." },
+  { n: "01", text: "Exporters of finished goods: compute the steel/aluminium mass share per product now. The levy will follow the embedded metal." },
   { n: "02", text: "Importers: screen your catalogue against the proposed downstream CN list (Ch. 73 articles, mountings, cylinders, radiators, selected appliances)." },
-  { n: "03", text: "Anti-circumvention is tightening in parallel — minimal processing outside the EU will not strip goods of CBAM exposure." },
+  { n: "03", text: "Anti-circumvention is tightening in parallel. Minimal processing outside the EU will not strip goods of CBAM exposure." },
   { n: "04", text: "Contracts signed today for 2028 delivery should already allocate who bears the CBAM cost. Put it in writing." },
 ];
 
 const MILESTONES = [
   { date: "31 DEC 2025", label: "Transitional phase & quarterly reporting end", status: "DONE", done: true },
-  { date: "1 JAN 2026", label: "Definitive regime live — declarant status required at the border", status: "DONE", done: true },
-  { date: "6 JUL 2026", label: "Q2 2026 certificate price published — €75.28", status: "DONE", done: true },
+  { date: "1 JAN 2026", label: "Definitive regime live: declarant status required at the border", status: "DONE", done: true },
+  { date: "6 JUL 2026", label: "Q2 2026 certificate price published: €75.28", status: "DONE", done: true },
   { date: "5 OCT 2026", label: "Q3 2026 certificate price publication", status: "NEXT", done: false },
   { date: "1 FEB 2027", label: "Certificate sales open on EU central platform", status: "AHEAD", done: false },
   { date: "30 SEP 2027", label: "First annual declaration & certificate surrender (2026 imports)", status: "AHEAD", done: false },
@@ -69,11 +69,11 @@ const MILESTONES = [
 
 const FAQS = [
   { q: "I sell FOB to an EU trader. Is CBAM my problem?", a: "Legally the obligation sits with the EU importer of record. Commercially it is yours: buyers now compare offers on landed cost including CBAM, and they need your verified emissions data to avoid punitive defaults. Mills that supply clean data win the order." },
-  { q: "What if I import less than 50 tonnes a year?", a: "You are exempt under the de minimis threshold (cumulative net mass of all CBAM goods, per importer, per year). Hydrogen and electricity are excluded from the exemption. Cross the line and full obligations apply — the Commission monitors for artificial splitting." },
-  { q: "What actually happens if we just use default values?", a: "Defaults are set from the highest-emitting producers with a mark-up, so they nearly always overstate your real emissions — analyses of Q1 2026 showed default-based HRC costs up to 5× higher than verified actuals. They are a fallback, not a strategy." },
-  { q: "Can we deduct the carbon price already paid at home?", a: "Yes — a carbon price effectively paid in the country of production (net of any rebates or free allocation) reduces certificates owed. From 2027 the Commission publishes default carbon-price references per country. Keep installation-level proof of payment." },
+  { q: "What if I import less than 50 tonnes a year?", a: "You are exempt under the de minimis threshold (cumulative net mass of all CBAM goods, per importer, per year). Hydrogen and electricity are excluded from the exemption. Cross the line and full obligations apply, the Commission monitors for artificial splitting." },
+  { q: "What actually happens if we just use default values?", a: "Defaults are set from the highest-emitting producers with a mark-up, so they nearly always overstate your real emissions, analyses of Q1 2026 showed default-based HRC costs up to 5× higher than verified actuals. They are a fallback, not a strategy." },
+  { q: "Can we deduct the carbon price already paid at home?", a: "Yes, a carbon price effectively paid in the country of production (net of any rebates or free allocation) reduces certificates owed. From 2027 the Commission publishes default carbon-price references per country. Keep installation-level proof of payment." },
   { q: "When does money actually leave our account?", a: "Not before 1 February 2027. That is when certificate sales open, covering 2026 imports retroactively at each quarter’s published price. The first declaration and surrender fall due 30 September 2027; from 2027 you must also hold 50% of the year-to-date obligation at each quarter end." },
-  { q: "Are finished steel products covered?", a: "Today only the listed iron & steel goods and precursors are in scope. The December 2025 proposal extends CBAM to steel- and aluminium-intensive downstream products from 1 January 2028 — fasteners, structures, mountings and selected appliances. If you trade finished goods, start mapping metal content now." },
+  { q: "Are finished steel products covered?", a: "Today only the listed iron & steel goods and precursors are in scope. The December 2025 proposal extends CBAM to steel- and aluminium-intensive downstream products from 1 January 2028, fasteners, structures, mountings and selected appliances. If you trade finished goods, start mapping metal content now." },
 ];
 
 const kicker = "font-mono text-[11px] tracking-[0.14em] text-cbam";
@@ -127,7 +127,7 @@ export default function CbamHubPage() {
               CBAM Compliance Hub
             </h1>
             <p className="text-[15.5px] leading-relaxed text-muted max-w-[560px]">
-              Europe now charges for the carbon inside imported steel. This hub gives you every deadline, price and obligation — in plain language, verified against the Official Journal, for both sides of the border.
+              Europe now charges for the carbon inside imported steel. This hub gives you every deadline, price and obligation in plain language, verified against the Official Journal, for both sides of the border.
             </p>
             <div className="flex gap-2.5 mt-5 flex-wrap">
               <Link href="/cbam/calculator" className="btn-cbam text-sm px-5 py-3 no-underline">
@@ -192,7 +192,7 @@ export default function CbamHubPage() {
             Which side of the border are you on?
           </h2>
           <p className="text-sm text-[#5A6070] mb-6">
-            Pick once — the hub remembers and tailors everything below.
+            Pick once. The hub remembers and tailors everything below.
           </p>
           <TwoDoor />
         </div>
@@ -204,7 +204,7 @@ export default function CbamHubPage() {
           <div>
             <div className={`${kicker} mb-3`}>THE MONEY MATHS</div>
             <h2 className="text-[clamp(24px,3vw,30px)] font-extrabold tracking-[-0.02em]">
-              Why 2026 feels cheap — and 2034 won&apos;t
+              Why 2026 feels cheap and 2034 won&apos;t
             </h2>
           </div>
           <p className="text-[13.5px] text-muted-2 max-w-[380px]">
@@ -275,7 +275,7 @@ export default function CbamHubPage() {
                 </span>
               </div>
               <div className="mt-auto text-[13px] leading-relaxed text-muted-2 border-t border-dashed border-rule pt-3">
-                Same cargo, 40× the levy by 2034 — at a flat carbon price. Cleaner routes and verified actual values are the only levers that shrink it.
+                Same cargo carries 40× the levy by 2034 at a flat carbon price. Cleaner routes and verified actual values are the only levers that shrink it.
               </div>
               <Link
                 href="/cbam/calculator"
@@ -371,7 +371,7 @@ export default function CbamHubPage() {
                 Downstream products are next
               </h2>
               <p className="text-[14.5px] leading-[1.65] text-[#B9BABD]">
-                The Commission&apos;s December 2025 proposal extends CBAM to steel- and aluminium-intensive downstream goods — fasteners, structures, mountings, cylinders, radiators and selected appliances — targeted from <b className="text-paper">1 January 2028</b>, alongside tighter anti-circumvention rules. If you trade finished goods, the clock started for you too.
+                The Commission&apos;s December 2025 proposal extends CBAM to steel- and aluminium-intensive downstream goods (fasteners, structures, mountings, cylinders, radiators and selected appliances) targeted from <b className="text-paper">1 January 2028</b>, alongside tighter anti-circumvention rules. If you trade finished goods, the clock started for you too.
               </p>
             </div>
             <div className="flex flex-col border-t border-ink-border">
@@ -415,7 +415,7 @@ export default function CbamHubPage() {
           ))}
         </div>
         <div className="font-mono text-[11px] tracking-[0.04em] text-[#7A8094] mt-4 border-t border-rule pt-3.5 leading-[1.8]">
-          CHANGELOG — 06 JUL 2026: Q2 price €75.28 published · 17 DEC 2025: implementing acts package + downstream proposal · 20 OCT 2025: Omnibus (EU) 2025/2083 in force — 50 t threshold, surrender → 30 SEP, sales → 1 FEB 2027
+          CHANGELOG — 06 JUL 2026: Q2 price €75.28 published · 17 DEC 2025: implementing acts package + downstream proposal · 20 OCT 2025: Omnibus (EU) 2025/2083 in force. 50 t threshold, surrender → 30 SEP, sales → 1 FEB 2027
         </div>
       </section>
 
@@ -442,7 +442,7 @@ export default function CbamHubPage() {
           <div>
             <h2 className="text-[21px] font-extrabold tracking-[-0.01em] mb-1.5">Put a number on it</h2>
             <p className="text-[13.5px] text-muted-2">
-              The CBAM calculator models your exact cargo — route, country, actual vs default values, deductions, phase-in — in under a minute.
+              The CBAM calculator models your exact cargo (route, country, actual vs default values, deductions, phase-in) in under a minute.
             </p>
           </div>
           <Link

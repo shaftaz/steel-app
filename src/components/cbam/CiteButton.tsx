@@ -12,7 +12,7 @@ export default function CiteButton({ anchor, label }: { anchor: string; label: s
       month: "short",
       year: "numeric",
     });
-    const text = `${label} — SteelMath CBAM Hub, ${url} (retrieved ${date})`;
+    const text = `${label}. SteelMath CBAM Hub, ${url} (retrieved ${date})`;
     const done = () => {
       setCopied(true);
       setTimeout(() => setCopied(false), 1600);

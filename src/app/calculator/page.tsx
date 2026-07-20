@@ -4,7 +4,7 @@ import Calculator from "@/components/Calculator";
 
 export const metadata: Metadata = {
   title:
-    "Free Steel Weight Calculator — TMT Bar, Plate, Pipe, Angle, Beam | All Grades",
+    "Free Steel Weight Calculator: TMT Bar, Plate, Pipe, Angle, Beam | All Grades",
   description:
     "Calculate steel weight instantly for TMT bar (d²/162), plate, MS pipe, angle, channel, I-beam & flat bar. Supports MS, Fe500, SS304, SS316, Aluminium, Copper. Free online calculator with formulas, quick reference charts, and material density factors.",
   keywords: [
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://steelmath.com/calculator" },
   openGraph: {
     images: [{ url: "/og?title=Free%20Steel%20Weight%20Calculator%20%E2%80%94%20TMT%20Bar%2C%20Plate%2C%20Pipe%2C%20Angle%2C%20Beam&accent=orange", width: 1200, height: 630 }],
-    title: "Free Steel Weight Calculator — All Sections & Grades | SteelMath",
+    title: "Free Steel Weight Calculator: All Sections & Grades | SteelMath",
     description:
       "Calculate steel weight for TMT bar, plate, pipe, angle & beam. Free, instant, accurate. Supports all common steel grades.",
     url: "https://steelmath.com/calculator",
@@ -218,17 +218,17 @@ export default function CalculatorPage() {
         <h1 className="text-white text-2xl sm:text-3xl font-bold mb-5 tracking-tight">
           Steel Weight Calculator
           <span className="block text-white/30 text-sm font-normal mt-1.5">
-            Free online calculator for TMT bar, plate, pipe, angle, channel &amp; beam — all grades
+            Free online calculator for TMT bar, plate, pipe, angle, channel &amp; beam, all grades
           </span>
         </h1>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-3">
-          {/* Calculator — 2/3 width */}
+          {/* Calculator. 2/3 width */}
           <div className="lg:col-span-2">
             <Calculator />
           </div>
 
-          {/* Sidebar — 1/3 width */}
+          {/* Sidebar. 1/3 width */}
           <div className="space-y-3">
             {/* Quick reference */}
             <div className="glass-panel glass-panel-hover p-5">
@@ -319,13 +319,13 @@ export default function CalculatorPage() {
                   href="/calculators/tmt"
                   className="block text-white/40 hover:text-accent text-xs no-underline transition-colors"
                 >
-                  TMT Bar Weight Calculator — Per Metre Chart →
+                  TMT Bar Weight Calculator. Per Metre Chart →
                 </Link>
                 <Link
                   href="/calculators/steel-plate"
                   className="block text-white/40 hover:text-accent text-xs no-underline transition-colors"
                 >
-                  Steel Plate Weight Calculator — Thickness Chart →
+                  Steel Plate Weight Calculator. Thickness Chart →
                 </Link>
                 <Link
                   href="/calculators"
@@ -346,31 +346,31 @@ export default function CalculatorPage() {
                   href="/articles/steel-weight-calculator-guide"
                   className="block text-white/40 hover:text-accent text-xs no-underline transition-colors"
                 >
-                  Steel Weight Calculator — Complete Guide With Formulas →
+                  Steel Weight Calculator. Complete Guide With Formulas →
                 </Link>
                 <Link
                   href="/articles/tmt-bar-weight-per-metre-chart"
                   className="block text-white/40 hover:text-accent text-xs no-underline transition-colors"
                 >
-                  TMT Bar Weight Per Metre — Chart for All Sizes →
+                  TMT Bar Weight Per Metre. Chart for All Sizes →
                 </Link>
                 <Link
                   href="/articles/ms-pipe-weight-calculator-chart"
                   className="block text-white/40 hover:text-accent text-xs no-underline transition-colors"
                 >
-                  MS Pipe Weight Calculator — Formula &amp; All Sizes →
+                  MS Pipe Weight Calculator. Formula &amp; All Sizes →
                 </Link>
                 <Link
                   href="/articles/steel-plate-weight-calculator-thickness-chart"
                   className="block text-white/40 hover:text-accent text-xs no-underline transition-colors"
                 >
-                  Steel Plate Weight — Formula &amp; Thickness Chart →
+                  Steel Plate Weight. Formula &amp; Thickness Chart →
                 </Link>
                 <Link
                   href="/articles/steel-angle-weight-chart-sizes-formula"
                   className="block text-white/40 hover:text-accent text-xs no-underline transition-colors"
                 >
-                  Steel Angle Weight Chart — All Sizes &amp; Formula →
+                  Steel Angle Weight Chart. All Sizes &amp; Formula →
                 </Link>
               </div>
             </div>
@@ -380,7 +380,7 @@ export default function CalculatorPage() {
         {/* Full TMT Weight Reference Table */}
         <section className="mt-8">
           <h2 className="text-white font-bold text-lg sm:text-xl mb-4 tracking-tight">
-            TMT Bar Weight Chart — All Standard Sizes
+            TMT Bar Weight Chart. All Standard Sizes
           </h2>
           <div className="glass-panel overflow-hidden">
             <div className="overflow-x-auto">
@@ -414,7 +414,7 @@ export default function CalculatorPage() {
         {/* Steel Plate Weight Reference Table */}
         <section className="mt-6">
           <h2 className="text-white font-bold text-lg sm:text-xl mb-4 tracking-tight">
-            Steel Plate Weight Chart — By Thickness
+            Steel Plate Weight Chart. By Thickness
           </h2>
           <div className="glass-panel overflow-hidden">
             <div className="overflow-x-auto">
@@ -445,7 +445,7 @@ export default function CalculatorPage() {
           </div>
         </section>
 
-        {/* How Steel Weight Calculation Works — SEO content */}
+        {/* How Steel Weight Calculation Works. SEO content */}
         <section className="mt-8">
           <div className="glass-panel p-6 sm:p-8">
             <h2 className="text-white font-bold text-lg mb-4">
@@ -471,7 +471,7 @@ export default function CalculatorPage() {
           </div>
         </section>
 
-        {/* Comprehensive Steel Weight Guide — SEO content expansion */}
+        {/* Comprehensive Steel Weight Guide. SEO content expansion */}
         <section className="mt-8">
           <div className="glass-panel p-6 sm:p-8">
             <h2 className="text-white font-bold text-lg mb-4">
@@ -487,7 +487,7 @@ export default function CalculatorPage() {
 
               <h3 className="text-white/60 font-semibold text-sm">Why Steel Weight Calculation Matters</h3>
               <p>
-                Steel is purchased by weight — typically per kilogram or per metric tonne. Even a 2% error in weight estimation
+                Steel is purchased by weight, typically per kilogram or per metric tonne. Even a 2% error in weight estimation
                 on a 500-tonne project translates to 10 tonnes of material, which at current market rates can represent a significant
                 financial difference. Accurate weight calculations are critical for:
               </p>
@@ -504,7 +504,7 @@ export default function CalculatorPage() {
               <h4 className="text-white/50 font-medium text-sm">1. Round Bar &amp; TMT Rebar (d&sup2;/162.2)</h4>
               <p>
                 The d&sup2;/162.2 formula is the most widely used steel weight formula globally. It calculates the weight per metre
-                of any round steel bar — including TMT rebar, bright bar, and round sections. The formula is derived as follows:
+                of any round steel bar, including TMT rebar, bright bar, and round sections. The formula is derived as follows:
               </p>
               <p className="text-white/50 font-mono text-xs bg-white/[0.03] p-3 rounded-lg">
                 Cross-section area = &pi;/4 &times; d&sup2; mm&sup2;<br />
@@ -521,7 +521,7 @@ export default function CalculatorPage() {
 
               <h4 className="text-white/50 font-medium text-sm">2. Steel Plate &amp; Sheet (L &times; W &times; T &times; 7.85)</h4>
               <p>
-                Flat products — MS plates, HR sheets, chequered plates, and galvanised sheets — use the rectangular volume formula.
+                Flat products (MS plates, HR sheets, chequered plates, and galvanised sheets) use the rectangular volume formula.
                 With all dimensions in millimetres: <strong className="text-white/50">Weight (kg) = L &times; W &times; T &times; 7.85 &divide; 1,000,000</strong>.
                 The shortcut for quick estimation is: <strong className="text-white/50">Thickness (mm) &times; 7.85 = weight per m&sup2;</strong>.
                 For example, a 10mm plate weighs 78.5 kg/m&sup2;. A standard 2500 &times; 1250 mm plate at 10mm thickness weighs
@@ -565,13 +565,13 @@ export default function CalculatorPage() {
                 other materials differ significantly:
               </p>
               <ul className="list-disc list-inside space-y-1 text-white/35">
-                <li><strong className="text-white/50">Mild Steel / Carbon Steel:</strong> 7,850 kg/m&sup3; (factor 1.000) — the baseline for all formulas</li>
-                <li><strong className="text-white/50">Stainless Steel SS304:</strong> 8,000 kg/m&sup3; (factor 1.019) — approximately 2% heavier</li>
-                <li><strong className="text-white/50">Stainless Steel SS316:</strong> 8,027 kg/m&sup3; (factor 1.023) — slightly heavier than SS304 due to molybdenum</li>
-                <li><strong className="text-white/50">Aluminium:</strong> 2,700 kg/m&sup3; (factor 0.344) — roughly one-third the weight of steel</li>
-                <li><strong className="text-white/50">Copper:</strong> 8,940 kg/m&sup3; (factor 1.139) — approximately 14% heavier than steel</li>
-                <li><strong className="text-white/50">Brass:</strong> 8,500 kg/m&sup3; (factor 1.083) — heavier than steel, lighter than copper</li>
-                <li><strong className="text-white/50">Cast Iron:</strong> 7,200 kg/m&sup3; (factor 0.917) — slightly lighter than steel</li>
+                <li><strong className="text-white/50">Mild Steel / Carbon Steel:</strong> 7,850 kg/m&sup3; (factor 1.000), the baseline for all formulas</li>
+                <li><strong className="text-white/50">Stainless Steel SS304:</strong> 8,000 kg/m&sup3; (factor 1.019), approximately 2% heavier</li>
+                <li><strong className="text-white/50">Stainless Steel SS316:</strong> 8,027 kg/m&sup3; (factor 1.023), slightly heavier than SS304 due to molybdenum</li>
+                <li><strong className="text-white/50">Aluminium:</strong> 2,700 kg/m&sup3; (factor 0.344), roughly one-third the weight of steel</li>
+                <li><strong className="text-white/50">Copper:</strong> 8,940 kg/m&sup3; (factor 1.139), approximately 14% heavier than steel</li>
+                <li><strong className="text-white/50">Brass:</strong> 8,500 kg/m&sup3; (factor 1.083), heavier than steel, lighter than copper</li>
+                <li><strong className="text-white/50">Cast Iron:</strong> 7,200 kg/m&sup3; (factor 0.917), slightly lighter than steel</li>
               </ul>
               <p>
                 To convert any mild steel weight to another material, multiply by the density factor. For example,
@@ -584,15 +584,15 @@ export default function CalculatorPage() {
                 indicates the minimum yield strength in MPa. Common grades include:
               </p>
               <ul className="list-disc list-inside space-y-1 text-white/35">
-                <li><strong className="text-white/50">Fe415:</strong> 415 MPa yield — used in light residential construction</li>
-                <li><strong className="text-white/50">Fe500:</strong> 500 MPa yield — the most widely used grade for general construction</li>
-                <li><strong className="text-white/50">Fe500D:</strong> 500 MPa yield with superior ductility — preferred for earthquake-prone zones</li>
-                <li><strong className="text-white/50">Fe550:</strong> 550 MPa yield — used in high-rise buildings and heavy structures</li>
-                <li><strong className="text-white/50">Fe600:</strong> 600 MPa yield — for specialised applications requiring maximum strength</li>
+                <li><strong className="text-white/50">Fe415:</strong> 415 MPa yield, used in light residential construction</li>
+                <li><strong className="text-white/50">Fe500:</strong> 500 MPa yield, the most widely used grade for general construction</li>
+                <li><strong className="text-white/50">Fe500D:</strong> 500 MPa yield with superior ductility, preferred for earthquake-prone zones</li>
+                <li><strong className="text-white/50">Fe550:</strong> 550 MPa yield, used in high-rise buildings and heavy structures</li>
+                <li><strong className="text-white/50">Fe600:</strong> 600 MPa yield, for specialised applications requiring maximum strength</li>
               </ul>
               <p>
                 Importantly, <strong className="text-white/50">the grade does not affect weight</strong>. All TMT grades use the same base
-                steel density of 7,850 kg/m&sup3;. A 12mm Fe500 bar weighs exactly the same as a 12mm Fe550D bar — 0.889 kg/m.
+                steel density of 7,850 kg/m&sup3;. A 12mm Fe500 bar weighs exactly the same as a 12mm Fe550D bar. 0.889 kg/m.
                 The grade only affects mechanical properties (yield strength, elongation, UTS) and the cost per kg.
               </p>
 
@@ -618,7 +618,7 @@ export default function CalculatorPage() {
                 Different steel sections serve different structural and construction purposes:
               </p>
               <ul className="list-disc list-inside space-y-1 text-white/35">
-                <li><strong className="text-white/50">TMT Rebar (6–40mm):</strong> Reinforced concrete — foundations, columns, beams, slabs, retaining walls</li>
+                <li><strong className="text-white/50">TMT Rebar (6–40mm):</strong> Reinforced concrete, foundations, columns, beams, slabs, retaining walls</li>
                 <li><strong className="text-white/50">MS Plate (2–100mm):</strong> Base plates, gusset plates, tank fabrication, ship building, pressure vessels</li>
                 <li><strong className="text-white/50">HR Sheet (0.5–12mm):</strong> Automotive panels, roofing, general fabrication, cold forming</li>
                 <li><strong className="text-white/50">MS Pipe (NB 15–600mm):</strong> Water supply, gas distribution, structural columns, scaffolding, hand rails</li>
@@ -649,7 +649,7 @@ export default function CalculatorPage() {
           </div>
         </section>
 
-        {/* FAQ Section — visible on page for users */}
+        {/* FAQ Section, visible on page for users */}
         <section className="mt-6">
           <div className="glass-panel p-6 sm:p-8">
             <h2 className="text-white font-bold text-lg mb-4">
@@ -695,13 +695,13 @@ export default function CalculatorPage() {
               <div>
                 <h3 className="text-white/60 font-semibold text-sm mb-1">How much rebar is needed per square foot?</h3>
                 <p className="text-white/35 text-sm leading-relaxed">
-                  As a rough estimate: residential buildings require 4–6 kg of rebar per square foot of built-up area, and commercial buildings require 6–8 kg/sqft. These are preliminary figures — actual quantities depend on structural design, span, load, and seismic zone.
+                  As a rough estimate: residential buildings require 4–6 kg of rebar per square foot of built-up area, and commercial buildings require 6–8 kg/sqft. These are preliminary figures, actual quantities depend on structural design, span, load, and seismic zone.
                 </p>
               </div>
               <div>
                 <h3 className="text-white/60 font-semibold text-sm mb-1">Does steel grade affect weight?</h3>
                 <p className="text-white/35 text-sm leading-relaxed">
-                  No. Steel grade (Fe415, Fe500, Fe500D, Fe550D) affects mechanical properties (yield strength, elongation, ductility) but not weight. All grades of mild steel and TMT rebar have the same density of 7,850 kg/m&sup3;. A 16mm Fe500 bar weighs the same as a 16mm Fe550D bar — 1.580 kg/m.
+                  No. Steel grade (Fe415, Fe500, Fe500D, Fe550D) affects mechanical properties (yield strength, elongation, ductility) but not weight. All grades of mild steel and TMT rebar have the same density of 7,850 kg/m&sup3;. A 16mm Fe500 bar weighs the same as a 16mm Fe550D bar. 1.580 kg/m.
                 </p>
               </div>
             </div>

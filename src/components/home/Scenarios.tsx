@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-/* Real jobs, precomputed — each row opens the tool prefilled with
+/* Real jobs, precomputed, each row opens the tool prefilled with
    these exact inputs (shareable URL state), so the number on the
    right is the number the user lands on. */
 const SCENARIOS = [
@@ -34,7 +34,7 @@ const SCENARIOS = [
   },
   {
     kicker: "SPEC CHECK",
-    job: "18 SWG sheet — how thick is that?",
+    job: "18 SWG sheet, how thick is that?",
     result: "1.219 mm",
     sub: "IS 1956 / BS 3737 · US AWG differs",
     href: "/calculators/gauge-to-mm",

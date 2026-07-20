@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 
 /* ============================================================
-   CBAM cost model — constants and formulas ported verbatim from
+   CBAM cost model, constants and formulas ported verbatim from
    the verified reference implementation (CBAM Calculator v2).
    MODEL & FACTORS LAST VERIFIED — 19 JUL 2026.
    ============================================================ */
@@ -39,7 +39,7 @@ const COMMODITIES: Record<
       { key: "pipe", label: "Pipe / tube", cn: "CN 7304–7306", bf: 2.6, eaf: 1.0, dri: 1.7, def: 3.1 },
       { key: "billet", label: "Billet / slab", cn: "CN 7207", bf: 1.9, eaf: 0.55, dri: 1.15, def: 2.4 },
       { key: "pig", label: "Pig iron", cn: "CN 7201 (precursor)", bf: 1.9, eaf: 1.9, dri: 1.9, def: 2.2 },
-      { key: "dwn", label: "Fasteners / downstream", cn: "CN 7318 — EU proposed scope from 2028", bf: 2.8, eaf: 1.2, dri: 1.9, def: 3.3 },
+      { key: "dwn", label: "Fasteners / downstream", cn: "CN 7318 (EU proposed scope from 2028)", bf: 2.8, eaf: 1.2, dri: 1.9, def: 3.3 },
     ],
   },
   alu: {
@@ -84,15 +84,15 @@ const COUNTRIES: Record<
   string,
   { label: string; mult: number; paid: number; note: string }
 > = {
-  IN: { label: "India", mult: 1.15, paid: 0, note: "INDIA — CCTS phasing in; no effective carbon price paid yet → 0 deductible today. Verified actuals are the lever against defaults." },
-  TR: { label: "Turkey", mult: 0.55, paid: 0, note: "TURKEY — TR-ETS pilot live, free allocation heavy → effective price ≈ 0 for now. EAF-heavy route mix is a real advantage." },
-  CN: { label: "China", mult: 1.05, paid: 9, note: "CHINA — national ETS covers steel & aluminium; ≈ €9/tCO₂e indicative effective price → small deduction. Expect scrutiny on data provenance." },
-  VN: { label: "Vietnam", mult: 1.0, paid: 0, note: "VIETNAM — pilot ETS scheduled, no effective price yet → 0 deductible. Move early on verified actuals." },
-  KR: { label: "South Korea", mult: 1.0, paid: 7, note: "SOUTH KOREA — K-ETS since 2015; deduct the price net of free allocation (≈ €7 indicative), not the gross ETS price." },
-  JP: { label: "Japan", mult: 0.95, paid: 2, note: "JAPAN — GX-ETS turning mandatory FY2026; small deductions emerging (≈ €2 indicative)." },
-  UK: { label: "United Kingdom", mult: 0.8, paid: 60, note: "UK — UK ETS ≈ EU levels (≈ €60 indicative net). UK–EU ETS linkage, once in force, is expected to exempt UK goods from EU CBAM." },
-  EU: { label: "European Union", mult: 0.85, paid: 64, note: "EU — full EU ETS carbon price paid (≈ €75 gross; ≈ €64 indicative net of residual free allocation)." },
-  OT: { label: "Other / rest of world", mult: 1.0, paid: 0, note: "OTHER ORIGIN — no carbon price assumed. Only a price effectively paid (net of rebates) is deductible." },
+  IN: { label: "India", mult: 1.15, paid: 0, note: "INDIA. CCTS phasing in; no effective carbon price paid yet → 0 deductible today. Verified actuals are the lever against defaults." },
+  TR: { label: "Turkey", mult: 0.55, paid: 0, note: "TURKEY. TR-ETS pilot live, free allocation heavy → effective price ≈ 0 for now. EAF-heavy route mix is a real advantage." },
+  CN: { label: "China", mult: 1.05, paid: 9, note: "CHINA, national ETS covers steel & aluminium; ≈ €9/tCO₂e indicative effective price → small deduction. Expect scrutiny on data provenance." },
+  VN: { label: "Vietnam", mult: 1.0, paid: 0, note: "VIETNAM, pilot ETS scheduled, no effective price yet → 0 deductible. Move early on verified actuals." },
+  KR: { label: "South Korea", mult: 1.0, paid: 7, note: "SOUTH KOREA. K-ETS since 2015; deduct the price net of free allocation (≈ €7 indicative), not the gross ETS price." },
+  JP: { label: "Japan", mult: 0.95, paid: 2, note: "JAPAN. GX-ETS turning mandatory FY2026; small deductions emerging (≈ €2 indicative)." },
+  UK: { label: "United Kingdom", mult: 0.8, paid: 60, note: "UK. UK ETS ≈ EU levels (≈ €60 indicative net). UK–EU ETS linkage, once in force, is expected to exempt UK goods from EU CBAM." },
+  EU: { label: "European Union", mult: 0.85, paid: 64, note: "EU, full EU ETS carbon price paid (≈ €75 gross; ≈ €64 indicative net of residual free allocation)." },
+  OT: { label: "Other / rest of world", mult: 1.0, paid: 0, note: "OTHER ORIGIN, no carbon price assumed. Only a price effectively paid (net of rebates) is deductible." },
 };
 
 const EU_FACTORS: Record<string, number> = {
@@ -366,7 +366,7 @@ export default function CbamCalculator() {
     { label: "Emissions basis", value: isDefault ? "Default values" : "Verified actual" + (isSteel ? ` (${route.toUpperCase()})` : ""), ref: isEu ? "ART. 7" : "VERIFIED / DEFAULT" },
     { label: "Emissions intensity", value: `${fmt(intensity, 2)} tCO₂e/t`, ref: isDefault ? "DEFAULT (INDICATIVE)" : "MILL MRV" },
     { label: "Embedded emissions", value: `${fmt(r.embedded, 0)} tCO₂e`, ref: isEu ? "ANNEX IV" : "DIRECT ONLY TO 2029" },
-    { label: isEu ? `CBAM factor ${year}` : "Charge basis", value: isEu ? `${r.factor * 100}% (free-allocation phase-out)` : "100% from day one — rate already reflects UK free allocation", ref: isEu ? "ART. 31" : "RATE MECHANISM" },
+    { label: isEu ? `CBAM factor ${year}` : "Charge basis", value: isEu ? `${r.factor * 100}% (free-allocation phase-out)` : "100% from day one, rate already reflects UK free allocation", ref: isEu ? "ART. 31" : "RATE MECHANISM" },
     { label: isEu ? "Certificate price" : "CBAM rate", value: `${sym}${fmt(r.p, 2)}/tCO₂e` + (isEu && year === "2026" ? " (Q2 2026 published)" : ` (${SCENARIOS[scenario].label.toLowerCase()} assumption)`), ref: isEu ? "ART. 21" : "PRIOR-QTR UK ETS AVG" },
     { label: "Carbon price deduction", value: `−${sym}${fmt(r.paidEff, 2)}/tCO₂e (${C.label})`, ref: isEu ? "ART. 9" : "CARBON PRICE RELIEF" },
     isEu
@@ -378,9 +378,9 @@ export default function CbamCalculator() {
   const plainSentence = zero
     ? domestic
       ? isEu
-        ? "EU-origin goods carry no EU CBAM cost — the mechanism applies to imports from outside the EU."
-        : "UK-origin goods carry no UK CBAM cost — the tax applies to imported CBAM goods."
-      : `At ${fmt(qty)} t/year you are under the EU 50 t de minimis — no declarant status, no certificates, no declaration.`
+        ? "EU-origin goods carry no EU CBAM cost, the mechanism applies to imports from outside the EU."
+        : "UK-origin goods carry no UK CBAM cost, the tax applies to imported CBAM goods."
+      : `At ${fmt(qty)} t/year you are under the EU 50 t de minimis, no declarant status, no certificates, no declaration.`
     : view === "importer"
     ? `For ${fmt(qty)} t of ${V.label} from ${C.label} in ${year}, budget ≈ ${money(net, sym)} (${sym}${fmt(perT, 1)}/t). ` +
       (isEu
@@ -390,11 +390,11 @@ export default function CbamCalculator() {
         : "Quarterly UK returns apply from 2028.")
     : `Your ${isEu ? "EU" : "UK"} buyer faces ≈ ${money(net, sym)} (${sym}${fmt(perT, 1)}/t) on this cargo in ${year}. ` +
       (isDefault
-        ? "Supplying verified actuals could cut it — open the saving figure above."
-        : `Your verified data saves them ${money(saving, sym)} vs defaults — price accordingly.`);
+        ? "Supplying verified actuals could cut it, open the saving figure above."
+        : `Your verified data saves them ${money(saving, sym)} vs defaults, price accordingly.`);
 
-  const resultText = `${isEu ? "EU" : "UK"} CBAM ${year} — ${fmt(qty)} t ${V.label} ex ${C.label}: net ${money(net, sym)} (${sym}${fmt(perT, 1)}/t) @ ${sym}${fmt(r.p, 2)}/tCO₂e — via steelmath.com`;
-  const bdText = breakdown.map((b) => `${b.label}: ${b.value}`).join("\n") + "\n— steelmath.com/cbam";
+  const resultText = `${isEu ? "EU" : "UK"} CBAM ${year} (${fmt(qty)} t ${V.label} ex ${C.label}: net ${money(net, sym)} (${sym}${fmt(perT, 1)}/t) @ ${sym}${fmt(r.p, 2)}/tCO₂e) via steelmath.com`;
+  const bdText = breakdown.map((b) => `${b.label}: ${b.value}`).join("\n") + "\n, steelmath.com/cbam";
   const shareUrl = `https://steelmath.com/cbam/calculator?regime=${regime}&commodity=${commodity}&variant=${variantKey}&origin=${country}&qty=${qty}&year=${year}&basis=${basis}${isSteel && !isDefault ? `&route=${route}` : ""}`;
 
   const carbonPaidDisplay = isEu ? carbonPaidEur : +(carbonPaidEur * FX).toFixed(1);
@@ -536,7 +536,7 @@ export default function CbamCalculator() {
                   >
                     {yearsList.map((y) => (
                       <option key={y} value={y}>
-                        {isEu ? `${y} — factor ${EU_FACTORS[y] * 100}%` : y}
+                        {isEu ? `${y}, factor ${EU_FACTORS[y] * 100}%` : y}
                       </option>
                     ))}
                   </select>
@@ -595,8 +595,8 @@ export default function CbamCalculator() {
               )}
               <div className="font-mono text-[11px] leading-[1.7] text-[#7A8094] border-t border-dashed border-rule pt-3">
                 {isDefault
-                  ? `DEFAULT APPLIED — ${fmt(defIntensity, 2)} tCO₂e/t (indicative, set from high emitters${isSteel ? ", regional adjustment" : ""}). Switch to VERIFIED ACTUAL — typical ${fmt(typActual, 2)} — to see your saving.`
-                  : `TYPICAL ${isSteel ? route.toUpperCase() + " " : ""}VALUE — ${fmt(typActual, 2)} tCO₂e/t. Edit to your verified figure. Verification: ${isEu ? "accredited verifier (EU)" : "IAF-member-accredited body (UK)"}.`}
+                  ? `DEFAULT APPLIED, ${fmt(defIntensity, 2)} tCO₂e/t (indicative, set from high emitters${isSteel ? ", regional adjustment" : ""}). Switch to VERIFIED ACTUAL (typical ${fmt(typActual, 2)}) to see your saving.`
+                  : `TYPICAL ${isSteel ? route.toUpperCase() + " " : ""}VALUE, ${fmt(typActual, 2)} tCO₂e/t. Edit to your verified figure. Verification: ${isEu ? "accredited verifier (EU)" : "IAF-member-accredited body (UK)"}.`}
               </div>
             </div>
           </div>
@@ -630,7 +630,7 @@ export default function CbamCalculator() {
             <div className="px-5 pt-5 pb-3.5">
               <div className="font-mono text-[10.5px] tracking-[0.12em] text-[#7E8085] mb-2">
                 {(view === "importer" ? "YOUR NET COST" : "YOUR BUYER'S NET COST") +
-                  (zero ? ` — ${domestic ? "NOT IN SCOPE" : "EXEMPT"}` : ` · ${year}`)}
+                  (zero ? `, ${domestic ? "NOT IN SCOPE" : "EXEMPT"}` : ` · ${year}`)}
               </div>
               <div className="font-mono text-[clamp(38px,5vw,52px)] font-semibold text-cbam-bright leading-none tracking-[-0.01em]">
                 {zero ? sym + "0" : money(net, sym)}
@@ -797,7 +797,7 @@ export default function CbamCalculator() {
         </Accordion>
 
         <Accordion
-          title={isEu ? "This cargo, every year — free-allocation phase-out" : "This cargo under rate scenarios"}
+          title={isEu ? "This cargo, every year, free-allocation phase-out" : "This cargo under rate scenarios"}
           open={a2}
           onToggle={() => setA2(!a2)}
         >
@@ -823,12 +823,12 @@ export default function CbamCalculator() {
           </div>
           <div className="px-4.5 py-3 text-[12.5px] leading-relaxed text-muted-2">
             {isEu
-              ? `Same inputs at ${sym}${fmt(r.p, 2)}/tCO₂e. The payable share of emissions climbs from 2.5% (2026) to 100% (2034) as EU free allocation phases out — cleaner routes and verified actuals are the only levers.`
+              ? `Same inputs at ${sym}${fmt(r.p, 2)}/tCO₂e. The payable share of emissions climbs from 2.5% (2026) to 100% (2034) as EU free allocation phases out, cleaner routes and verified actuals are the only levers.`
               : "UK CBAM has no phase-in: 100% of direct emissions are chargeable from 1 Jan 2027. The per-product rate moves quarterly with the UK ETS (free allocation already netted off). £55 is the planning proxy; HMRC publishes actual rates from Q1 2027."}
           </div>
         </Accordion>
 
-        <Accordion title="Calculation detail — every step, cited" open={a3} onToggle={() => setA3(!a3)}>
+        <Accordion title="Calculation detail, every step, cited" open={a3} onToggle={() => setA3(!a3)}>
           <div className="px-4.5 pb-2.5">
             {breakdown.map((b) => (
               <div
@@ -843,7 +843,7 @@ export default function CbamCalculator() {
           </div>
         </Accordion>
 
-        <Accordion title="Show the maths — full formula chain" open={a4} onToggle={() => setA4(!a4)}>
+        <Accordion title="Show the maths, full formula chain" open={a4} onToggle={() => setA4(!a4)}>
           <div className="font-mono text-xs leading-[1.9] text-muted bg-cbam-bg px-4.5 py-4">
             <div>1 · Embedded = quantity × intensity = {fmt(qty)} t × {fmt(intensity, 2)} = {fmt(r.embedded, 0)} tCO₂e</div>
             <div>2 · Chargeable = embedded × {isEu ? `CBAM factor ${r.factor * 100}%` : "factor 100% (UK)"} = {fmt(r.chargeable, 0)} tCO₂e</div>
@@ -851,8 +851,8 @@ export default function CbamCalculator() {
             <div>4 · Net cost = chargeable × net rate = {zero ? `${sym}0 (${domestic ? "not in scope" : "exempt"})` : `${sym}${fmt(net, 0)}`}</div>
             <div className="text-muted-3 mt-2">
               {isEu
-                ? "SIMPLIFICATIONS — 2026 modelled at the Q2 price (€75.28); strictly each quarter’s imports use that quarter’s price (Q1 €75.36). Deduction pro-rata to the payable share; certificates rounded up; precursor & verification detail per Reg. (EU) 2023/956. Defaults indicative until final EC tables."
-                : `SIMPLIFICATIONS — £55 planning rate (UK ETS proxy); HMRC publishes per-product quarterly rates from Q1 2027, net of sector free allocation. Direct emissions only until 2029 at earliest; scrap excluded from scope; CPR capped at the liability; FX €→£ ${FX} indicative. Weight net of packing.`}
+                ? "SIMPLIFICATIONS. 2026 modelled at the Q2 price (€75.28); strictly each quarter’s imports use that quarter’s price (Q1 €75.36). Deduction pro-rata to the payable share; certificates rounded up; precursor & verification detail per Reg. (EU) 2023/956. Defaults indicative until final EC tables."
+                : `SIMPLIFICATIONS, £55 planning rate (UK ETS proxy); HMRC publishes per-product quarterly rates from Q1 2027, net of sector free allocation. Direct emissions only until 2029 at earliest; scrap excluded from scope; CPR capped at the liability; FX €→£ ${FX} indicative. Weight net of packing.`}
             </div>
           </div>
         </Accordion>

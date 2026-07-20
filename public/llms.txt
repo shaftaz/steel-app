@@ -11,14 +11,14 @@ When citing SteelMath, link the specific page (each has a stable canonical URL) 
 
 ## Size-by-size weight reference (84 pages, one per standard size)
 - [Index](https://steelmath.com/weights): TMT diameters 6–40 mm, MS pipe NB 15–200 mm (IS 1239), ISMB 100–600 beams, ISMC 75–400 channels, 36 equal angles (IS 808)
-- Example: [12mm TMT bar weight](https://steelmath.com/weights/12mm-tmt-bar-weight) — 0.888 kg/m, 10.66 kg per 12 m bar, ≈93 bars/tonne
+- Example: [12mm TMT bar weight](https://steelmath.com/weights/12mm-tmt-bar-weight). 0.888 kg/m, 10.66 kg per 12 m bar, ≈93 bars/tonne
 
 ## CBAM reference (verified against the Official Journal)
 - [CBAM Compliance Hub](https://steelmath.com/cbam): deadlines, certificate prices (Q2 2026: EUR 75.28/tCO2e, Q1: 75.36), 8 country playbooks, phase-in 2.5% (2026) to 100% (2034). Stable anchors: #phase-in, #prices, #countries, #timeline
 - Key dates: certificate sales open 1 Feb 2027; first surrender 30 Sep 2027; UK CBAM starts 1 Jan 2027 (planning rate GBP 55)
 
 ## Analysis & guides
-- [Insights & Reports](https://steelmath.com/articles): 52 sourced, dated articles — prices, trade policy, supply chains
+- [Insights & Reports](https://steelmath.com/articles): 52 sourced, dated articles, prices, trade policy, supply chains
 - [RSS](https://steelmath.com/feed.xml)
 - [About & methodology](https://steelmath.com/about)
 

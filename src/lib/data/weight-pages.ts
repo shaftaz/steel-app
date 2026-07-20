@@ -67,9 +67,9 @@ for (const b of tmtBars) {
     slug: tmtSlug(b.diameter),
     family: "tmt",
     familyLabel: "TMT / Rebar",
-    h1: `${b.diameter}mm TMT Bar Weight — Per Metre, Per Foot & Per Bar`,
-    metaTitle: `${b.diameter}mm TMT Bar Weight — Per Metre, Per Foot & Per Bar`,
-    metaDescription: `A ${b.diameter}mm TMT bar weighs ${f(b.weightPerMetre)} kg per metre and ${f(b.weightPer12m, 2)} kg per standard 12 m bar — about ${b.barsPerTonne} bars per tonne. Formula, full size chart and free calculator (IS 1786).`,
+    h1: `${b.diameter}mm TMT Bar Weight: Per Metre, Per Foot and Per Bar`,
+    metaTitle: `${b.diameter}mm TMT Bar Weight: Per Metre, Per Foot and Per Bar`,
+    metaDescription: `A ${b.diameter}mm TMT bar weighs ${f(b.weightPerMetre)} kg per metre and ${f(b.weightPer12m, 2)} kg per standard 12 m bar, about ${b.barsPerTonne} bars per tonne. Formula, full size chart and free calculator (IS 1786).`,
     kicker: `TMT / REBAR · d² ÷ 162.2 · IS 1786 · ASTM A615 · JIS G3112`,
     answerLabel: "WEIGHT PER METRE",
     answerValue: `${f(b.weightPerMetre)} kg/m`,
@@ -81,7 +81,7 @@ for (const b of tmtBars) {
     ],
     formula: `${b.diameter}² ÷ 162.2 = ${f(b.weightPerMetre)} kg/m`,
     formulaNote:
-      "Constant 162.2 = 10⁶ ÷ (π/4 × 7,850) — from mild-steel density 7,850 kg/m³",
+      "Constant 162.2 = 10⁶ ÷ (π/4 × 7,850), from mild-steel density 7,850 kg/m³",
     source: "SOURCE: IS 1786 · ASTM A615 · JIS G3112 · BS 4449 · LAST VERIFIED 18 JUL 2026",
     faqs: [
       {
@@ -97,7 +97,7 @@ for (const b of tmtBars) {
         a: `Approximately ${b.barsPerTonne} standard 12 m bars of ${b.diameter}mm TMT make one tonne (1,000 ÷ ${f(b.weightPer12m, 2)} kg per bar). Actual counts vary with rolling tolerance under IS 1786.`,
       },
     ],
-    tableCaption: "TMT bar weight — all standard sizes (12 m bars)",
+    tableCaption: "TMT bar weight, all standard sizes (12 m bars)",
     tableHeaders: ["Size", "kg/m", "kg per 12 m bar", "Bars/tonne"],
     rows: tmtBars.map((r) => ({
       label: `${r.diameter}mm`,
@@ -109,7 +109,7 @@ for (const b of tmtBars) {
     calcLabel: `Open the calculator prefilled with ${b.diameter}mm × 12 m →`,
     related: [
       { label: "TMT Bar Weight Calculator", href: "/calculators/tmt" },
-      { label: "TMT Bar Weight Chart — All Sizes", href: "/articles/tmt-bar-weight-per-metre-chart" },
+      { label: "TMT Bar Weight Chart (All Sizes)", href: "/articles/tmt-bar-weight-per-metre-chart" },
       { label: "How to Calculate Weight of Steel", href: "/articles/how-to-calculate-weight-of-steel-formula-guide" },
     ],
     ogValue: `${f(b.weightPerMetre)} kg/m`,
@@ -125,8 +125,8 @@ for (const p of pipes) {
     family: "pipe",
     familyLabel: "MS Pipe (IS 1239)",
     h1: `${p.nbSize}mm (${p.nbInch}) MS Pipe Weight Per Metre`,
-    metaTitle: `${p.nbSize}mm (${p.nbInch}) MS Pipe Weight Per Metre — IS 1239`,
-    metaDescription: `A ${p.nbSize} NB (${p.nbInch}) MS pipe weighs ${f(p.weightPerMetre, 2)} kg per metre — ${f(p.weightPer6m, 2)} kg per 6 m length (OD ${p.od} mm, wall ${p.wallThickness} mm, IS 1239 medium). Formula, chart and free calculator.`,
+    metaTitle: `${p.nbSize}mm (${p.nbInch}) MS Pipe Weight Per Metre (IS 1239)`,
+    metaDescription: `A ${p.nbSize} NB (${p.nbInch}) MS pipe weighs ${f(p.weightPerMetre, 2)} kg per metre, ${f(p.weightPer6m, 2)} kg per 6 m length (OD ${p.od} mm, wall ${p.wallThickness} mm, IS 1239 medium). Formula, chart and free calculator.`,
     kicker: `MS PIPE · (OD − WT) × WT × 0.02466 · IS 1239 · ASTM A53 · JIS G3452`,
     answerLabel: "WEIGHT PER METRE",
     answerValue: `${f(p.weightPerMetre, 2)} kg/m`,
@@ -137,7 +137,7 @@ for (const p of pipes) {
       { label: "LENGTHS PER TONNE", value: `≈ ${f(1000 / p.weightPer6m, 1)}` },
     ],
     formula: `(${p.od} − ${p.wallThickness}) × ${p.wallThickness} × 0.02466 = ${f(p.weightPerMetre, 2)} kg/m`,
-    formulaNote: "0.02466 = π × 7,850 ÷ 10⁶ — steel density 7,850 kg/m³",
+    formulaNote: "0.02466 = π × 7,850 ÷ 10⁶, steel density 7,850 kg/m³",
     source: "SOURCE: IS 1239 (MEDIUM) · ASTM A53 · JIS G3452 · EN 10255 · LAST VERIFIED 18 JUL 2026",
     faqs: [
       {
@@ -146,14 +146,14 @@ for (const p of pipes) {
       },
       {
         q: `How much does a 6-metre length of ${p.nbSize} NB pipe weigh?`,
-        a: `A standard 6 m length weighs ${f(p.weightPer6m, 2)} kg (${f(p.weightPerMetre, 2)} kg/m × 6 m) — roughly ${f(1000 / p.weightPer6m, 1)} lengths per tonne.`,
+        a: `A standard 6 m length weighs ${f(p.weightPer6m, 2)} kg (${f(p.weightPerMetre, 2)} kg/m × 6 m), roughly ${f(1000 / p.weightPer6m, 1)} lengths per tonne.`,
       },
       {
         q: `What are the dimensions of a ${p.nbSize}mm NB pipe?`,
         a: `Under IS 1239 medium class, ${p.nbSize} NB corresponds to an outer diameter of ${p.od} mm with a ${p.wallThickness} mm wall. Light and heavy classes use the same OD with thinner or thicker walls.`,
       },
     ],
-    tableCaption: "MS pipe weight — all NB sizes (IS 1239 medium, 6 m lengths)",
+    tableCaption: "MS pipe weight, all NB sizes (IS 1239 medium, 6 m lengths)",
     tableHeaders: ["NB size", "kg/m", "kg per 6 m", "OD × WT (mm)"],
     rows: pipes.map((r) => ({
       label: `${r.nbSize}mm (${r.nbInch})`,
@@ -182,7 +182,7 @@ for (const bm of ismbBeams) {
     familyLabel: "ISMB Beams (IS 808)",
     h1: `${bm.designation} Weight Per Metre & Section Properties`,
     metaTitle: `${bm.designation} Weight Per Metre & Section Properties`,
-    metaDescription: `${bm.designation} weighs ${f(bm.weightPerMetre, 1)} kg per metre — ${f(bm.weightPerMetre * 12, 1)} kg per 12 m length. Depth ${bm.depth} mm, flange ${bm.flangeWidth} mm, Zxx ${f(bm.sectionModulusZxx, 1)} cm³ (IS 808). Chart and free calculator.`,
+    metaDescription: `${bm.designation} weighs ${f(bm.weightPerMetre, 1)} kg per metre, ${f(bm.weightPerMetre * 12, 1)} kg per 12 m length. Depth ${bm.depth} mm, flange ${bm.flangeWidth} mm, Zxx ${f(bm.sectionModulusZxx, 1)} cm³ (IS 808). Chart and free calculator.`,
     kicker: `I-BEAM · IS 808 TABLE VALUES · ASTM A6 · JIS G3192`,
     answerLabel: "WEIGHT PER METRE",
     answerValue: `${f(bm.weightPerMetre, 1)} kg/m`,
@@ -193,7 +193,7 @@ for (const bm of ismbBeams) {
       { label: "Zxx · Ixx", value: `${f(bm.sectionModulusZxx, 1)} cm³ · ${f(bm.momentOfInertiaIxx, 0)} cm⁴` },
     ],
     formula: `${bm.designation}: ${f(bm.weightPerMetre, 1)} kg/m (IS 808 tabulated)`,
-    formulaNote: "Rolled-section weights are standardised in IS 808 — not derived from a simple area formula",
+    formulaNote: "Rolled-section weights are standardised in IS 808, not derived from a simple area formula",
     source: "SOURCE: IS 808 · ASTM A6 / A36 · JIS G3192 · LAST VERIFIED 18 JUL 2026",
     faqs: [
       {
@@ -209,7 +209,7 @@ for (const bm of ismbBeams) {
         a: `${bm.designation} has an elastic section modulus (Zxx) of ${f(bm.sectionModulusZxx, 1)} cm³ and a moment of inertia (Ixx) of ${f(bm.momentOfInertiaIxx, 1)} cm⁴ about its major axis.`,
       },
     ],
-    tableCaption: "ISMB beam weights — IS 808 (12 m lengths)",
+    tableCaption: "ISMB beam weights. IS 808 (12 m lengths)",
     tableHeaders: ["Designation", "kg/m", "kg per 12 m", "Depth × flange (mm)"],
     rows: ismbBeams.map((r) => ({
       label: r.designation,
@@ -238,7 +238,7 @@ for (const ch of ismcChannels) {
     familyLabel: "ISMC Channels (IS 808)",
     h1: `${ch.designation} Weight Per Metre & Dimensions`,
     metaTitle: `${ch.designation} Weight Per Metre & Dimensions`,
-    metaDescription: `${ch.designation} weighs ${f(ch.weightPerMetre, 1)} kg per metre — ${f(ch.weightPerMetre * 12, 1)} kg per 12 m length. Depth ${ch.depth} mm, flange ${ch.flangeWidth} mm (IS 808). Full channel chart and free calculator.`,
+    metaDescription: `${ch.designation} weighs ${f(ch.weightPerMetre, 1)} kg per metre, ${f(ch.weightPerMetre * 12, 1)} kg per 12 m length. Depth ${ch.depth} mm, flange ${ch.flangeWidth} mm (IS 808). Full channel chart and free calculator.`,
     kicker: `CHANNEL · IS 808 TABLE VALUES · ASTM A6 · JIS G3192`,
     answerLabel: "WEIGHT PER METRE",
     answerValue: `${f(ch.weightPerMetre, 1)} kg/m`,
@@ -249,7 +249,7 @@ for (const ch of ismcChannels) {
       { label: "LENGTHS PER TONNE", value: `≈ ${f(1000 / (ch.weightPerMetre * 12), 1)}` },
     ],
     formula: `${ch.designation}: ${f(ch.weightPerMetre, 1)} kg/m (IS 808 tabulated)`,
-    formulaNote: "Rolled-section weights are standardised in IS 808 — not derived from a simple area formula",
+    formulaNote: "Rolled-section weights are standardised in IS 808, not derived from a simple area formula",
     source: "SOURCE: IS 808 · ASTM A6 / A36 · JIS G3192 · LAST VERIFIED 18 JUL 2026",
     faqs: [
       {
@@ -265,7 +265,7 @@ for (const ch of ismcChannels) {
         a: `Approximately ${f(1000 / (ch.weightPerMetre * 12), 1)} twelve-metre lengths of ${ch.designation} weigh one tonne.`,
       },
     ],
-    tableCaption: "ISMC channel weights — IS 808 (12 m lengths)",
+    tableCaption: "ISMC channel weights. IS 808 (12 m lengths)",
     tableHeaders: ["Designation", "kg/m", "kg per 12 m", "Depth × flange (mm)"],
     rows: ismcChannels.map((r) => ({
       label: r.designation,
@@ -295,7 +295,7 @@ for (const an of equalAngles) {
     familyLabel: "Equal Angles (IS 808)",
     h1: `${name} mm MS Angle Weight Per Metre`,
     metaTitle: `${name} MS Angle Weight Per Metre`,
-    metaDescription: `A ${name} mm mild-steel equal angle weighs ${f(an.weightPerMetre, 2)} kg per metre — ${f(an.weightPer6m, 2)} kg per 6 m length. Formula, full angle chart and free calculator (IS 808).`,
+    metaDescription: `A ${name} mm mild-steel equal angle weighs ${f(an.weightPerMetre, 2)} kg per metre, ${f(an.weightPer6m, 2)} kg per 6 m length. Formula, full angle chart and free calculator (IS 808).`,
     kicker: `EQUAL ANGLE · (A + B − T) × T × 0.00785 · IS 808 · ASTM A6 · JIS G3192`,
     answerLabel: "WEIGHT PER METRE",
     answerValue: `${f(an.weightPerMetre, 2)} kg/m`,
@@ -306,12 +306,12 @@ for (const an of equalAngles) {
       { label: "LENGTHS PER TONNE", value: `≈ ${f(1000 / an.weightPer6m, 1)}` },
     ],
     formula: `(${an.legA} + ${an.legB} − ${an.thickness}) × ${an.thickness} × 0.00785 = ${f(an.weightPerMetre, 2)} kg/m`,
-    formulaNote: "0.00785 = 7,850 ÷ 10⁶ — sharp-corner approximation; IS 808 tabulated values differ slightly",
+    formulaNote: "0.00785 = 7,850 ÷ 10⁶, sharp-corner approximation; IS 808 tabulated values differ slightly",
     source: "SOURCE: IS 808 · ASTM A6 · JIS G3192 · LAST VERIFIED 18 JUL 2026",
     faqs: [
       {
         q: `What is the weight of a ${name} mm angle per metre?`,
-        a: `A ${name} mm mild-steel equal angle weighs ${f(an.weightPerMetre, 2)} kg per metre — from (${an.legA} + ${an.legB} − ${an.thickness}) × ${an.thickness} × 0.00785.`,
+        a: `A ${name} mm mild-steel equal angle weighs ${f(an.weightPerMetre, 2)} kg per metre, from (${an.legA} + ${an.legB} − ${an.thickness}) × ${an.thickness} × 0.00785.`,
       },
       {
         q: `How much does a 6-metre length of ${name} angle weigh?`,
@@ -322,7 +322,7 @@ for (const an of equalAngles) {
         a: `Approximately ${f(1000 / an.weightPer6m, 1)} six-metre lengths of ${name} mm angle weigh one tonne.`,
       },
     ],
-    tableCaption: "Equal angle weights — common sizes (6 m lengths)",
+    tableCaption: "Equal angle weights, common sizes (6 m lengths)",
     tableHeaders: ["Size (mm)", "kg/m", "kg per 6 m"],
     rows: equalAngles.map((r) => ({
       label: `${r.legA}×${r.legB}×${r.thickness}`,

@@ -3,14 +3,14 @@ import Link from "next/link";
 import { weightPages, weightFamilies } from "@/lib/data/weight-pages";
 
 export const metadata: Metadata = {
-  title: "Steel Weight Charts by Size — TMT, Pipe, Beam, Channel & Angle",
+  title: "Steel Weight Charts by Size: TMT, Pipe, Beam, Channel & Angle",
   description:
-    "Size-by-size steel weight reference: every TMT bar diameter, MS pipe NB size, ISMB beam, ISMC channel and equal angle — weight per metre, per length and per tonne, with formulas and calculators.",
+    "Size-by-size steel weight reference: every TMT bar diameter, MS pipe NB size, ISMB beam, ISMC channel and equal angle, weight per metre, per length and per tonne, with formulas and calculators.",
   alternates: { canonical: "https://steelmath.com/weights" },
   openGraph: {
-    title: "Steel Weight Charts by Size — TMT, Pipe, Beam, Channel & Angle | SteelMath",
+    title: "Steel Weight Charts by Size: TMT, Pipe, Beam, Channel & Angle | SteelMath",
     description:
-      "Every standard size, one page each: weight per metre, per length, per tonne — with formulas, standards and prefilled calculators.",
+      "Every standard size, one page each: weight per metre, per length, per tonne, with formulas, standards and prefilled calculators.",
     url: "https://steelmath.com/weights",
     type: "website",
     images: [
@@ -27,7 +27,7 @@ export default function WeightsIndexPage() {
   const datasetJsonLd = {
     "@context": "https://schema.org",
     "@type": "Dataset",
-    name: "Steel section weights by size — TMT, MS pipe, ISMB, ISMC, equal angles",
+    name: "Steel section weights by size. TMT, MS pipe, ISMB, ISMC, equal angles",
     description:
       "Unit weights (kg/m), per-length weights and per-tonne counts for standard steel sections: TMT bar diameters 6-40 mm (IS 1786), MS pipe NB 15-200 mm (IS 1239 medium), ISMB 100-600 beams and ISMC 75-400 channels (IS 808), and 36 equal angle sizes. Derived from published standards; density basis 7,850 kg/m3.",
     url: "https://steelmath.com/weights",
@@ -73,7 +73,7 @@ export default function WeightsIndexPage() {
           Steel Weight Charts by Size
         </h1>
         <p className="text-sm leading-relaxed text-muted-2 max-w-[640px] mb-9">
-          One page per standard size — weight per metre, per length and per tonne, with the
+          One page per standard size, weight per metre, per length and per tonne, with the
           formula, the governing standard and a prefilled calculator. {weightPages.length} sizes
           across five product families.
         </p>

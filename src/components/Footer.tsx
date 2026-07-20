@@ -33,7 +33,7 @@ const FOOTER_COLS: { heading: string; links: { href: string; label: string }[] }
       { href: "/articles/steel-plate-weight-calculator-thickness-chart", label: "Steel Plate Weight Chart" },
       { href: "/articles/steel-angle-weight-chart-sizes-formula", label: "Steel Angle Weight Chart" },
       { href: "/articles/steel-weight-calculator-guide", label: "Weight Calculator Guide" },
-      { href: "/articles/how-to-calculate-weight-of-steel-formula-guide", label: "Formula Guide — All Sections" },
+      { href: "/articles/how-to-calculate-weight-of-steel-formula-guide", label: "Formula Guide (All Sections)" },
       { href: "/articles/hollow-vs-solid-steel-sections-structural-efficiency", label: "Hollow vs Solid Steel Sections" },
     ],
   },
@@ -74,7 +74,7 @@ export default function Footer() {
             <span className="font-mono text-[10px] text-muted-3 tracking-[0.08em]">.COM</span>
           </div>
           <p className="text-[12.5px] leading-relaxed text-muted-2 mb-2 max-w-[220px]">
-            SteelMath — Steel calculations &amp; market intelligence for professionals
+            Steel calculations &amp; market intelligence for professionals
           </p>
           <p className="font-mono text-[10px] tracking-[0.08em] text-muted-3 mb-4">
             ASIA · AMERICAS · EUROPE · OCEANIA — WHEREVER STEEL TRADES

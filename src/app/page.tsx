@@ -6,7 +6,7 @@ import { articles, articlesByDate, Article } from "@/lib/data/articles";
 
 export const metadata: Metadata = {
   title:
-    "SteelMath — Free Steel Weight Calculator for TMT Bar, Plate, Pipe & Angle",
+    "SteelMath: Free Steel Weight Calculator for TMT Bar, Plate, Pipe & Angle",
   description:
     "Free online steel weight calculator for TMT bar, MS plate, pipe, angle, channel & beam. Instant weight per metre, d²/162 formula, weight charts & density tables. Expert steel industry analysis for professionals worldwide.",
   keywords: [
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
 };
 
 const TOOL_ROWS = [
-  { idx: "01", title: "Steel Weight Calculator", desc: "All sections, all grades — the advanced tool.", formula: "A × L × ρ", href: "/calculator" },
+  { idx: "01", title: "Steel Weight Calculator", desc: "All sections, all grades, the advanced tool.", formula: "A × L × ρ", href: "/calculator" },
   { idx: "02", title: "TMT Bar Calculator", desc: "Per metre, per foot & per bar, 8–40 mm.", formula: "d² ÷ 162.2", href: "/calculators/tmt" },
   { idx: "03", title: "Steel Plate Calculator", desc: "MS & chequered plate by thickness.", formula: "T × 7.85 kg/m²", href: "/calculators/steel-plate" },
   { idx: "04", title: "Scrap Yield Calculator", desc: "Liquid steel recovery by grade & furnace.", formula: "HMS1 90–93%", href: "/calculators/scrap-yield" },
@@ -150,7 +150,7 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
       />
 
-      {/* Hero — the answer above the fold */}
+      {/* Hero, the answer above the fold */}
       <section className="max-w-[1320px] mx-auto px-4 sm:px-6 pt-10">
         <div className="flex items-end justify-between gap-4 lg:gap-10 mb-7 flex-wrap">
           <div>
@@ -188,7 +188,7 @@ export default function Home() {
 
       </section>
 
-      {/* CBAM strip — the one market number that changes what you quote */}
+      {/* CBAM strip, the one market number that changes what you quote */}
       <section className="max-w-[1320px] mx-auto px-4 sm:px-6 pt-10">
         <div className="grid grid-cols-1 md:grid-cols-[auto_1fr_auto] items-center bg-[#FFFFFF] border border-cbam-rule">
           <div className="px-5 py-4 md:border-r border-cbam-rule border-b md:border-b-0">
@@ -224,14 +224,14 @@ export default function Home() {
         </div>
       </section>
 
-      {/* What you can do here — concrete tasks, not slogans */}
+      {/* What you can do here, concrete tasks, not slogans */}
       <section className="max-w-[1320px] mx-auto px-4 sm:px-6 pt-12 pb-14">
         <div className="grid grid-cols-1 md:grid-cols-3 border-t border-ink">
           <div className="pt-5 md:pr-6">
-            <div className="font-mono text-[11px] tracking-[0.12em] text-accent mb-3">01 — CALCULATE</div>
+            <div className="font-mono text-[11px] tracking-[0.12em] text-accent mb-3">01. CALCULATE</div>
             {[
               { label: "Weight of any section, any grade", href: "/calculator" },
-              { label: "TMT site orders — per bar, per tonne", href: "/calculators/tmt" },
+              { label: "TMT site orders, per bar, per tonne", href: "/calculators/tmt" },
               { label: "Scrap → finished steel cost waterfall", href: "/calculators/scrap-production-cost" },
             ].map((t) => (
               <Link key={t.href} href={t.href}
@@ -242,11 +242,11 @@ export default function Home() {
             ))}
           </div>
           <div className="pt-5 md:px-6 md:border-l border-rule mt-4 md:mt-0">
-            <div className="font-mono text-[11px] tracking-[0.12em] text-cbam mb-3">02 — COMPLY</div>
+            <div className="font-mono text-[11px] tracking-[0.12em] text-cbam mb-3">02. COMPLY</div>
             {[
               { label: "CBAM cost for your exact cargo", href: "/cbam/calculator" },
               { label: "Deadlines, prices & country playbooks", href: "/cbam" },
-              { label: "India import duties — active cases", href: "/articles/anti-dumping-duty-steel-imports-india-2026-active-cases" },
+              { label: "India import duties, active cases", href: "/articles/anti-dumping-duty-steel-imports-india-2026-active-cases" },
             ].map((t) => (
               <Link key={t.href} href={t.href}
                 className="flex justify-between items-baseline gap-3 py-2.5 border-b border-rule text-[13.5px] font-semibold text-ink no-underline hover:text-cbam transition-colors">
@@ -256,7 +256,7 @@ export default function Home() {
             ))}
           </div>
           <div className="pt-5 md:pl-6 md:border-l border-rule mt-4 md:mt-0">
-            <div className="font-mono text-[11px] tracking-[0.12em] text-accent mb-3">03 — UNDERSTAND</div>
+            <div className="font-mono text-[11px] tracking-[0.12em] text-accent mb-3">03. UNDERSTAND</div>
             {[
               { label: "Is the China HRC rally real? Read the gap", href: "/articles/china-hrc-export-prices-validation-gap" },
               { label: "Where trade barriers reroute steel next", href: "/articles/anti-dumping-chinese-steel-barrier-cascade" },
@@ -270,7 +270,7 @@ export default function Home() {
             ))}
           </div>
         </div>
-        {/* Slim global bar — inclusive, one line */}
+        {/* Slim global bar, inclusive, one line */}
         <div className="flex justify-between items-baseline flex-wrap gap-x-6 gap-y-1.5 border-b border-rule py-2.5">
           <span className="font-mono text-[10.5px] tracking-[0.1em] text-muted-3">
             GLOBAL — IS · ASTM · JIS · EN · GB GRADES · 10 CURRENCIES · WHEREVER STEEL TRADES
@@ -281,17 +281,17 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 01 — Tools */}
+      {/* 01. Tools */}
       <section id="tools" className="max-w-[1320px] mx-auto px-4 sm:px-6 pb-18">
         <div className="flex items-end justify-between gap-4 lg:gap-8 mb-8 flex-wrap">
           <div>
-            <div className="font-mono text-[11px] tracking-[0.14em] text-accent mb-3">01 — TOOLS</div>
+            <div className="font-mono text-[11px] tracking-[0.14em] text-accent mb-3">01. TOOLS</div>
             <h2 className="text-[clamp(24px,3.5vw,32px)] font-extrabold tracking-[-0.02em]">
               Essential Calculators
             </h2>
           </div>
           <p className="text-sm text-muted-2 mb-1 lg:text-right">
-            Steel weight &amp; yield — instant results for every section type
+            Steel weight &amp; yield, instant results for every section type
           </p>
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-7 items-start">
@@ -322,11 +322,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 02 — Guides */}
+      {/* 02. Guides */}
       <section id="insights" className="max-w-[1320px] mx-auto px-4 sm:px-6 pb-16">
         <div className="flex items-end justify-between gap-4 lg:gap-8 mb-8 flex-wrap">
           <div>
-            <div className="font-mono text-[11px] tracking-[0.14em] text-accent mb-3">02 — REFERENCE</div>
+            <div className="font-mono text-[11px] tracking-[0.14em] text-accent mb-3">02. REFERENCE</div>
             <h2 className="text-[clamp(24px,3.5vw,32px)] font-extrabold tracking-[-0.02em]">
               Guides &amp; Weight Charts
             </h2>
@@ -348,11 +348,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 03 — Analysis */}
+      {/* 03. Analysis */}
       <section className="max-w-[1320px] mx-auto px-4 sm:px-6 pb-18">
         <div className="flex items-end justify-between gap-4 lg:gap-8 mb-8 flex-wrap">
           <div>
-            <div className="font-mono text-[11px] tracking-[0.14em] text-accent mb-3">03 — INTELLIGENCE</div>
+            <div className="font-mono text-[11px] tracking-[0.14em] text-accent mb-3">03. INTELLIGENCE</div>
             <h2 className="text-[clamp(24px,3.5vw,32px)] font-extrabold tracking-[-0.02em]">
               Industry Analysis
             </h2>
@@ -374,7 +374,7 @@ export default function Home() {
               All {articles.length} Articles &amp; Guides
             </h2>
             <p className="text-[13px] text-muted-2 max-w-xl">
-              From TMT bar weight charts to Hormuz crisis analysis — everything steel professionals need in one place.
+              From TMT bar weight charts to Hormuz crisis analysis, everything steel professionals need in one place.
             </p>
           </div>
           <Link
@@ -386,7 +386,7 @@ export default function Home() {
         </div>
 
         <p className="text-[12.5px] leading-[1.65] text-muted-3 mt-8 mx-auto max-w-[880px] text-center">
-          SteelMath is a free steel weight calculator supporting all common sections — TMT bar (rebar), mild steel plate, MS pipe, angle, channel, I-beam, flat bar &amp; square tube. Use the d&sup2;/162 formula for round bars or enter dimensions for instant weight-per-metre results. Our tools support multiple steel grades including MS (7,850 kg/m&sup3;), SS 304, SS 316, Aluminium &amp; Copper with accurate density factors.
+          SteelMath is a free steel weight calculator supporting all common sections. TMT bar (rebar), mild steel plate, MS pipe, angle, channel, I-beam, flat bar &amp; square tube. Use the d&sup2;/162 formula for round bars or enter dimensions for instant weight-per-metre results. Our tools support multiple steel grades including MS (7,850 kg/m&sup3;), SS 304, SS 316, Aluminium &amp; Copper with accurate density factors.
         </p>
       </section>
     </>

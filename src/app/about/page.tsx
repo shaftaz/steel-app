@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "About SteelMath — Methodology & Verification",
+  title: "About SteelMath: Methodology & Verification",
   description:
     "What SteelMath is, where its numbers come from, and how they are verified: formulas from IS/ASTM/JIS/EN/GB standards, CBAM figures checked against the Official Journal, and LAST VERIFIED dates on every data surface.",
   alternates: { canonical: "https://steelmath.com/about" },
   openGraph: {
-    title: "About SteelMath — Methodology & Verification",
+    title: "About SteelMath: Methodology & Verification",
     description:
       "Where SteelMath's numbers come from and how they are verified.",
     url: "https://steelmath.com/about",
@@ -31,7 +31,7 @@ const SECTIONS = [
   {
     kicker: "02 — WHERE THE NUMBERS COME FROM",
     title: "Standards first, always cited",
-    body: "Weight formulas derive from published standards: IS 1786/2062/1239/4923/808 (India), ASTM A615/A36/A53/A500/A6 (US), JIS G3112/G3101/G3452/G3466/G3192 (Japan), EN 10025/10255/10219 (Europe), GB/T 1499/700 (China) and BS 4449/3737 (UK). The carbon-steel density basis is 7,850 kg/m³; the round-bar shortcut d²/162.2 is derived, not assumed — the derivation is shown in every calculator's 'Show the maths' panel. Rolled-section weights (ISMB/ISMC) are IS 808 tabulated values, not approximations.",
+    body: "Weight formulas derive from published standards: IS 1786/2062/1239/4923/808 (India), ASTM A615/A36/A53/A500/A6 (US), JIS G3112/G3101/G3452/G3466/G3192 (Japan), EN 10025/10255/10219 (Europe), GB/T 1499/700 (China) and BS 4449/3737 (UK). The carbon-steel density basis is 7,850 kg/m³; the round-bar shortcut d²/162.2 is derived, not assumed. The derivation is shown in every calculator's 'Show the maths' panel. Rolled-section weights (ISMB/ISMC) are IS 808 tabulated values, not approximations.",
   },
   {
     kicker: "03 — CBAM FIGURES",
@@ -41,12 +41,12 @@ const SECTIONS = [
   {
     kicker: "04 — VERIFICATION DISCIPLINE",
     title: "Every data surface carries a LAST VERIFIED date",
-    body: "Calculators, reference tables, country playbooks and market figures each state when they were last checked. Market analysis articles cite their sources inline and separate verified figures from directional judgment — where a number cannot be verified, the article says so rather than inventing one. When regulations or prices change, the affected pages and their dates are updated together.",
+    body: "Calculators, reference tables, country playbooks and market figures each state when they were last checked. Market analysis articles cite their sources inline and separate verified figures from directional judgment. Where a number cannot be verified, the article says so rather than inventing one. When regulations or prices change, the affected pages and their dates are updated together.",
   },
   {
     kicker: "05 — CITING STEELMATH",
     title: "How to reference this site",
-    body: "Cite the specific page rather than the homepage — every page has a stable canonical URL, and key reference blocks (CBAM phase-in table, certificate price schedule, country playbooks) have stable anchors with one-click citation buttons that include the retrieval date. Attribution as 'SteelMath (steelmath.com)' with the page URL and its LAST VERIFIED date is appreciated.",
+    body: "Cite the specific page rather than the homepage. Every page has a stable canonical URL, and key reference blocks (CBAM phase-in table, certificate price schedule, country playbooks) have stable anchors with one-click citation buttons that include the retrieval date. Attribution as 'SteelMath (steelmath.com)' with the page URL and its LAST VERIFIED date is appreciated.",
   },
 ];
 
@@ -54,7 +54,7 @@ export default function AboutPage() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "AboutPage",
-    name: "About SteelMath — Methodology & Verification",
+    name: "About SteelMath: Methodology & Verification",
     url: "https://steelmath.com/about",
     mainEntity: {
       "@type": "Organization",
@@ -108,7 +108,7 @@ export default function AboutPage() {
 
         <div className="border border-rule bg-[#FFFFFF] px-6 py-5 flex items-center justify-between gap-4 flex-wrap">
           <p className="text-[13.5px] text-muted-2 m-0">
-            Questions, corrections or data requests — we treat reported errors as
+            Questions, corrections or data requests are welcome. We treat reported errors as
             priority fixes.
           </p>
           <div className="flex gap-3">

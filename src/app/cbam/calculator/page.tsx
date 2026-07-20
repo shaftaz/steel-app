@@ -4,15 +4,15 @@ import CbamCalculator from "@/components/cbam/CbamCalculator";
 
 export const metadata: Metadata = {
   title:
-    "CBAM Calculator — EU & UK Carbon Border Cost | SteelMath",
+    "CBAM Calculator: EU & UK Carbon Border Cost | SteelMath",
   description:
-    "Free CBAM cost calculator for EU and UK regimes — iron & steel, aluminium, cement, fertilisers and hydrogen. Country default intensities, carbon-price deductions, certificate counts and the full phase-in to 2034. Q2 2026 price €75.28/tCO₂e.",
+    "Free CBAM cost calculator for EU and UK regimes, iron & steel, aluminium, cement, fertilisers and hydrogen. Country default intensities, carbon-price deductions, certificate counts and the full phase-in to 2034. Q2 2026 price €75.28/tCO₂e.",
   alternates: { canonical: "https://steelmath.com/cbam/calculator" },
   openGraph: {
     images: [{ url: "/og?title=CBAM%20Calculator%20%E2%80%94%20EU%20%26%20UK%20Carbon%20Border%20Cost&accent=blue", width: 1200, height: 630 }],
-    title: "CBAM Calculator — EU & UK Carbon Border Cost | SteelMath",
+    title: "CBAM Calculator: EU & UK Carbon Border Cost | SteelMath",
     description:
-      "Model your exact CBAM cargo — route, origin, actual vs default values, deductions, phase-in — in under a minute.",
+      "Model your exact CBAM cargo (route, origin, actual vs default values, deductions, phase-in) in under a minute.",
     url: "https://steelmath.com/cbam/calculator",
     type: "website",
   },
@@ -28,7 +28,7 @@ export default function CbamCalculatorPage() {
     operatingSystem: "Any",
     offers: { "@type": "Offer", price: "0", priceCurrency: "EUR" },
     description:
-      "Free CBAM liability calculator covering the EU definitive regime and UK CBAM — five commodity groups, nine origins, defaults vs verified actuals, carbon-price deductions and certificate counts.",
+      "Free CBAM liability calculator covering the EU definitive regime and UK CBAM, five commodity groups, nine origins, defaults vs verified actuals, carbon-price deductions and certificate counts.",
     featureList: [
       "EU and UK CBAM regimes",
       "Iron & steel, aluminium, cement, fertilisers, hydrogen",
@@ -80,7 +80,7 @@ export default function CbamCalculatorPage() {
             </h1>
           </div>
           <p className="text-[13.5px] text-muted-2 max-w-[330px] mb-1">
-            Pick a border, a commodity and a cargo — the answer appears instantly. Open the detail panels only if you need them.
+            Pick a border, a commodity and a cargo, the answer appears instantly. Open the detail panels only if you need them.
           </p>
         </div>
       </section>

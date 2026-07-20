@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "SteelMath — Steel Weight Calculator & CBAM Hub",
+    name: "SteelMath: Steel Weight Calculator & CBAM Hub",
     short_name: "SteelMath",
     description:
       "Free steel weight calculators, CBAM compliance hub and industry analysis for steel professionals. Works offline.",

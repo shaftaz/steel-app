@@ -92,7 +92,7 @@ export default async function WeightPage({ params }: PageProps) {
           {page.h1}
         </h1>
 
-        {/* Answer panel — the number above the fold */}
+        {/* Answer panel, the number above the fold */}
         <div className="print-block border border-ink">
           <div className="bg-ink text-paper px-5 sm:px-6 pt-5 pb-5">
             <div className="font-mono text-[10.5px] tracking-[0.12em] text-[#7E8085] mb-2">
@@ -123,7 +123,7 @@ export default async function WeightPage({ params }: PageProps) {
           </Link>
         </div>
 
-        {/* Family table — every row links to its size page */}
+        {/* Family table, every row links to its size page */}
         <section className="mt-10">
           <h2 className="font-mono text-[11px] tracking-[0.14em] text-accent uppercase mb-3">
             {page.tableCaption}
@@ -174,7 +174,7 @@ export default async function WeightPage({ params }: PageProps) {
           </div>
         </section>
 
-        {/* FAQ — visible content, mirrored in FAQPage JSON-LD above */}
+        {/* FAQ, visible content, mirrored in FAQPage JSON-LD above */}
         <section className="mt-10">
           <h2 className="font-mono text-[11px] tracking-[0.14em] text-accent uppercase mb-1">
             Frequently asked questions

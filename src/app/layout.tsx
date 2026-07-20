@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: {
     default:
-      "SteelMath — Free Steel Weight Calculator, Industry Analysis & Guides",
+      "SteelMath: Free Steel Weight Calculator, Industry Analysis & Guides",
     template: "%s | SteelMath",
   },
   description:
@@ -234,7 +234,7 @@ export const metadata: Metadata = {
     url: BASE_URL,
     siteName: "SteelMath",
     title:
-      "SteelMath — Free Steel Weight Calculator & Industry Analysis",
+      "SteelMath: Free Steel Weight Calculator & Industry Analysis",
     description:
       "Free steel weight calculator for TMT bar, pipe, plate, angle & beam. Expert industry analysis, weight charts & guides for steel professionals.",
     images: [
@@ -242,13 +242,13 @@ export const metadata: Metadata = {
         url: "/og?title=Free%20Steel%20Weight%20Calculator%20%26%20Industry%20Analysis&accent=orange",
         width: 1200,
         height: 630,
-        alt: "SteelMath — Steel Calculator & Market Intelligence",
+        alt: "SteelMath: Steel Calculator & Market Intelligence",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "SteelMath — Steel Weight Calculator & Industry Analysis",
+    title: "SteelMath: Steel Weight Calculator & Industry Analysis",
     description:
       "Free steel weight calculator. Expert industry analysis and weight charts. Built for steel professionals.",
     images: ["/og?title=Free%20Steel%20Weight%20Calculator%20%26%20Industry%20Analysis&accent=orange"],
@@ -313,7 +313,7 @@ export default function RootLayout({
         <link
           rel="alternate"
           type="application/rss+xml"
-          title="SteelMath — Insights & Reports"
+          title="SteelMath: Insights & Reports"
           href="https://steelmath.com/feed.xml"
         />
         <Script

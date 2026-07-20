@@ -69,7 +69,7 @@ export default function HeroInstrument() {
   const rho = DENSITIES[grade];
   let perUnit = 0;
   let total = 0;
-  let unitLabel = "WEIGHT / METRE — KG/M";
+  let unitLabel = "WEIGHT / METRE. KG/M";
   let totalLabel = `TOTAL · ${len} M`;
   let formulaText = "";
 
@@ -90,7 +90,7 @@ export default function HeroInstrument() {
   } else {
     perUnit = (pt / 1000) * rho;
     total = pl * pw * (pt / 1000) * rho;
-    unitLabel = "WEIGHT / M² — KG/M²";
+    unitLabel = "WEIGHT / M². KG/M²";
     totalLabel = `TOTAL · ${pl} × ${pw} M`;
     formulaText = `${pl} × ${pw} × ${pt} × ${rho / 1000} = ${fmt(total, 1)} kg`;
   }
@@ -105,7 +105,7 @@ export default function HeroInstrument() {
     plate: `l=${pl}&w=${pw}&t=${pt}`,
   };
   const shareUrl = `https://steelmath.com/calculator?shape=${shape}&grade=${grade}&${shapeParams[shape]}`;
-  const resultText = `${grade} ${shape} — ${fmt(perUnit, 3)} ${shape === "plate" ? "kg/m²" : "kg/m"} · total ${totalDisplay} — via steelmath.com`;
+  const resultText = `${grade} ${shape}, ${fmt(perUnit, 3)} ${shape === "plate" ? "kg/m²" : "kg/m"} · total ${totalDisplay}, via steelmath.com`;
 
   const copyText = (text: string, done: (v: boolean) => void) => {
     const finish = () => { done(true); setTimeout(() => done(false), 1600); };
@@ -144,7 +144,7 @@ export default function HeroInstrument() {
           </div>
           <div className="p-5 flex flex-col gap-3.5">
             <label className="flex flex-col gap-1.5">
-              <span className={labelCls}>GRADE — ρ {rho.toLocaleString("en-IN")} KG/M³</span>
+              <span className={labelCls}>GRADE, ρ {rho.toLocaleString("en-IN")} KG/M³</span>
               <select
                 value={grade}
                 onChange={(e) => setGrade(e.target.value)}
@@ -169,7 +169,7 @@ export default function HeroInstrument() {
                   </label>
                 </div>
                 <div className="flex gap-2 items-center flex-wrap">
-                  <span className={labelCls}>COMMON —</span>
+                  <span className={labelCls}>COMMON, </span>
                   {QUICK_DIAS.map((q) => (
                     <button
                       key={q}
@@ -238,7 +238,7 @@ export default function HeroInstrument() {
             {mathsOpen && (
               <div className="font-mono text-xs leading-[1.8] text-muted bg-paper border border-rule px-4 py-3.5">
                 <div className="text-ink">{formulaText}</div>
-                <div>Constant 162.2 = 10⁶ ÷ (π/4 × 7,850) — from steel density 7,850 kg/m³</div>
+                <div>Constant 162.2 = 10⁶ ÷ (π/4 × 7,850), from steel density 7,850 kg/m³</div>
                 <div>ρ — MS/Fe500/A36/SS400 7,850 · SS304 8,000 · SS316 8,027 · Al 2,700 · Cu 8,940 kg/m³</div>
                 <div>Imperial — 1 kg/m = 0.672 lb/ft · 1 t = 2,204.6 lb</div>
                 <div className="text-muted-3 mt-1.5">SOURCE: IS 1786 / IS 2062 · ASTM A615 / A36 · JIS G3112 / G3101 · GB/T 1499 / 700 · EN 10025 · LAST VERIFIED 18 JUL 2026</div>
@@ -278,7 +278,7 @@ export default function HeroInstrument() {
             </div>
             <div className="flex justify-between items-baseline mt-3">
               <span className="font-mono text-[10.5px] tracking-[0.12em] text-[#7E8085]">
-                {shape === "plate" ? `AREA — ${fmt(pl * pw, 2)} M²` : "PER FOOT"}
+                {shape === "plate" ? `AREA, ${fmt(pl * pw, 2)} M²` : "PER FOOT"}
               </span>
               <span className="font-mono text-[15px] text-[#C9CACC]">
                 {shape === "plate" ? `${fmt(pl * pw, 2)} m²` : perFoot}
