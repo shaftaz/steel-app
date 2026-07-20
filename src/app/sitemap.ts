@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { weightPages } from "@/lib/data/weight-pages";
 import { articles } from "@/lib/data/articles";
 
 const BASE_URL = "https://steelmath.com";
@@ -33,6 +34,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 0.95,
     },
+    {
+      url: `${BASE_URL}/weights`,
+      lastModified: TOOLS_VERIFIED,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    ...weightPages.map((w) => ({
+      url: `${BASE_URL}/weights/${w.slug}`,
+      lastModified: TOOLS_VERIFIED,
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    })),
     {
       url: `${BASE_URL}/calculator`,
       lastModified: TOOLS_VERIFIED,

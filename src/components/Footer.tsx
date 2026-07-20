@@ -27,6 +27,7 @@ const FOOTER_COLS: { heading: string; links: { href: string; label: string }[] }
   {
     heading: "WEIGHT CHARTS",
     links: [
+      { href: "/weights", label: "Size-by-Size Weight Index" },
       { href: "/articles/tmt-bar-weight-per-metre-chart", label: "TMT Bar Weight Chart" },
       { href: "/articles/ms-pipe-weight-calculator-chart", label: "MS Pipe Weight Chart" },
       { href: "/articles/steel-plate-weight-calculator-thickness-chart", label: "Steel Plate Weight Chart" },
