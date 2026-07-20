@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { FORMSUBMIT_ALIAS } from "@/lib/report-config";
 
 const LABEL = "font-mono text-[10.5px] tracking-[0.1em] text-muted-3 uppercase";
 const INPUT =
@@ -30,29 +31,55 @@ export default function ReportDialog() {
   const submit = async () => {
     setState("sending");
     setError("");
+    if (website) {
+      // honeypot tripped: pretend success
+      setState("sent");
+      return;
+    }
+    const page = typeof window !== "undefined" ? window.location.href : "";
+
+    // Preferred path: browser-direct via FormSubmit's privacy alias.
+    // Real browsers pass FormSubmit's bot protection; the alias never
+    // reveals the destination address.
+    if (FORMSUBMIT_ALIAS) {
+      try {
+        const res = await fetch(`https://formsubmit.co/ajax/${FORMSUBMIT_ALIAS}`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json", Accept: "application/json" },
+          body: JSON.stringify({
+            name: name || "SteelMath visitor",
+            email: email || "noreply@steelmath.com",
+            _subject: `SteelMath report: ${type}`,
+            message: `Type: ${type}\nPage: ${page}\nFrom: ${name || "(not given)"} <${email || "no email"}>\n\n${message}`,
+          }),
+        });
+        const data = await res.json().catch(() => null);
+        if (res.ok && data && String(data.success) !== "false") {
+          setState("sent");
+          return;
+        }
+      } catch {
+        /* fall through to relay */
+      }
+    }
+
+    // Fallback: server relay
     try {
       const res = await fetch("/api/report", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          name,
-          email,
-          type,
-          message,
-          website,
-          page: typeof window !== "undefined" ? window.location.href : "",
-        }),
+        body: JSON.stringify({ name, email, type, message, website, page }),
       });
-      const data = await res.json();
-      if (data.ok) {
+      const data = await res.json().catch(() => null);
+      if (data?.ok) {
         setState("sent");
       } else {
         setState("error");
-        setError(data.error || "Something went wrong.");
+        setError(data?.error || "The reporting service is briefly unavailable. Please try again shortly.");
       }
     } catch {
       setState("error");
-      setError("Could not send right now. Please try again in a minute.");
+      setError("Could not reach the reporting service. Please try again shortly.");
     }
   };
 

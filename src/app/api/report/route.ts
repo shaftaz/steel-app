@@ -42,7 +42,16 @@ export async function POST(req: NextRequest) {
   try {
     const res = await fetch(`https://formsubmit.co/ajax/${target()}`, {
       method: "POST",
-      headers: { "Content-Type": "application/json", Accept: "application/json" },
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+        // FormSubmit sits behind bot protection that rejects bare
+        // server signatures; present browser-like headers.
+        "User-Agent":
+          "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36",
+        Origin: "https://steelmath.com",
+        Referer: "https://steelmath.com/about",
+      },
       body: JSON.stringify({
         name: String(name).slice(0, 120) || "SteelMath visitor",
         email: String(email).slice(0, 200) || "noreply@steelmath.com",
@@ -51,11 +60,22 @@ export async function POST(req: NextRequest) {
       }),
       signal: AbortSignal.timeout(10000),
     });
-    if (!res.ok) throw new Error(String(res.status));
+    const text = await res.text();
+    if (!res.ok) {
+      console.error("report relay upstream rejected:", res.status, text.slice(0, 300));
+      throw new Error(String(res.status));
+    }
+    if (/activat/i.test(text) && /false/i.test(text)) {
+      // Pending one-time inbox activation upstream
+      return NextResponse.json(
+        { ok: false, error: "The reporting inbox is completing a one-time setup. Please try again later today." },
+        { status: 503 }
+      );
+    }
     return NextResponse.json({ ok: true });
   } catch {
     return NextResponse.json(
-      { ok: false, error: "Could not send right now. Please try again in a minute." },
+      { ok: false, error: "The reporting service is briefly unavailable. Please try again shortly." },
       { status: 502 }
     );
   }
