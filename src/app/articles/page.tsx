@@ -107,7 +107,7 @@ export default function ArticlesPage() {
             Insights &amp; Reports
           </h1>
           <p className="text-white/30 text-sm">
-            Data-driven analysis for steel professionals — pricing, supply
+            Data-driven analysis for steel professionals: pricing, supply
             chains, calculators &amp; guides
           </p>
         </div>
