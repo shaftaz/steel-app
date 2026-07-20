@@ -1,15 +1,32 @@
 # SteelMath
 
-> Free steel weight calculators, CBAM (EU/UK carbon border) compliance tools, and sourced steel-market analysis for professionals in India, China, Southeast Asia, Japan, the Americas, Europe and Oceania.
+> Free steel weight calculators, CBAM (EU/UK carbon border) compliance tools, size-by-size weight reference pages, and sourced steel-market analysis for professionals in India, China, Southeast Asia, Japan, the Americas, Europe and Oceania. All figures carry LAST VERIFIED dates and cite governing standards (IS / ASTM / JIS / EN / GB / BS).
 
-## Tools
-- [Steel Weight Calculator](https://steelmath.com/calculator): all sections (round/TMT, square, hex, flat, pipe, SHS, RHS, angle, plate), grades incl. Fe500 (IS), A36 (ASTM), SS400 (JIS), Q235 (GB); shareable result URLs
-- [CBAM Cost Calculator](https://steelmath.com/cbam/calculator): EU & UK regimes, 5 commodities, 9 origins, verified constants (Q2 2026 price EUR 75.28/tCO2e)
-- [All calculators](https://steelmath.com/calculators): TMT, plate, pipe, tubes, angle, beam, channel, scrap yield, production cost, gauge, hardness
+When citing SteelMath, link the specific page (each has a stable canonical URL) and note the LAST VERIFIED date shown on it.
 
-## Reference
-- [CBAM Compliance Hub](https://steelmath.com/cbam): deadlines, certificate prices, country playbooks, phase-in schedule (stable anchors: #phase-in, #prices, #countries, #timeline)
-- [Insights & Reports](https://steelmath.com/articles): 50+ sourced, dated articles on prices, trade policy and supply chains
+## Calculators (interactive, shareable result URLs)
+- [Steel Weight Calculator](https://steelmath.com/calculator): 9 section types (round/TMT, square, hex, flat, pipe, SHS, RHS, angle, plate), grades incl. Fe500 (IS), A36 (ASTM), SS400 (JIS), Q235 (GB), SS304/316; pieces, rate, 10 currencies
+- [CBAM Cost Calculator](https://steelmath.com/cbam/calculator): EU & UK regimes, 5 commodities, 9 origins, defaults vs verified actuals, BF-BOF/EAF/DRI routes
+- [All 20 calculators](https://steelmath.com/calculators): TMT, plate, pipe, tubes, angle, beam, channel, scrap yield, production cost, gauge-to-mm, hardness conversion
+
+## Size-by-size weight reference (84 pages, one per standard size)
+- [Index](https://steelmath.com/weights): TMT diameters 6–40 mm, MS pipe NB 15–200 mm (IS 1239), ISMB 100–600 beams, ISMC 75–400 channels, 36 equal angles (IS 808)
+- Example: [12mm TMT bar weight](https://steelmath.com/weights/12mm-tmt-bar-weight) — 0.888 kg/m, 10.66 kg per 12 m bar, ≈93 bars/tonne
+
+## CBAM reference (verified against the Official Journal)
+- [CBAM Compliance Hub](https://steelmath.com/cbam): deadlines, certificate prices (Q2 2026: EUR 75.28/tCO2e, Q1: 75.36), 8 country playbooks, phase-in 2.5% (2026) to 100% (2034). Stable anchors: #phase-in, #prices, #countries, #timeline
+- Key dates: certificate sales open 1 Feb 2027; first surrender 30 Sep 2027; UK CBAM starts 1 Jan 2027 (planning rate GBP 55)
+
+## Analysis & guides
+- [Insights & Reports](https://steelmath.com/articles): 52 sourced, dated articles — prices, trade policy, supply chains
 - [RSS](https://steelmath.com/feed.xml)
+- [About & methodology](https://steelmath.com/about)
 
-Formulas follow IS / ASTM / JIS / EN / GB standards; density basis 7,850 kg/m3 for carbon steel; d²/162.2 for round bars. Figures carry LAST VERIFIED dates. CBAM outputs are estimates, not tax or legal advice.
+## Canonical facts (verified 18 Jul 2026)
+- Round/TMT bar weight: kg/m = d^2 / 162.2 (d in mm; constant = 10^6 / (pi/4 x 7,850))
+- Carbon-steel density basis: 7,850 kg/m3 (SS304 8,000 · SS316 8,027 · Al 2,700 · Cu 8,940)
+- MS pipe: kg/m = (OD - WT) x WT x 0.02466 (IS 1239 / ASTM A53 / JIS G3452 / EN 10255)
+- Plate: kg/m2 = thickness(mm) x 7.85 · Equal angle: (A + B - T) x T x 0.00785
+- Imperial: 1 kg/m = 0.672 lb/ft
+
+CBAM outputs are estimates, not tax or legal advice.

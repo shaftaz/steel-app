@@ -24,6 +24,19 @@ export const metadata: Metadata = {
 };
 
 export default function WeightsIndexPage() {
+  const datasetJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Dataset",
+    name: "Steel section weights by size — TMT, MS pipe, ISMB, ISMC, equal angles",
+    description:
+      "Unit weights (kg/m), per-length weights and per-tonne counts for standard steel sections: TMT bar diameters 6-40 mm (IS 1786), MS pipe NB 15-200 mm (IS 1239 medium), ISMB 100-600 beams and ISMC 75-400 channels (IS 808), and 36 equal angle sizes. Derived from published standards; density basis 7,850 kg/m3.",
+    url: "https://steelmath.com/weights",
+    creator: { "@type": "Organization", name: "SteelMath", url: "https://steelmath.com" },
+    license: "https://steelmath.com/about",
+    keywords: ["steel weight", "TMT bar", "MS pipe", "ISMB", "ISMC", "equal angle", "kg per metre"],
+    dateModified: "2026-07-18",
+  };
+
   const breadcrumbJsonLd = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -35,6 +48,10 @@ export default function WeightsIndexPage() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(datasetJsonLd) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}

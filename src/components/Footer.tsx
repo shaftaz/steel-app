@@ -84,6 +84,7 @@ export default function Footer() {
             <Link href="/calculators" className="text-muted hover:text-accent no-underline transition-colors">All Calculators</Link>
             <Link href="/cbam" className="text-muted hover:text-accent no-underline transition-colors">CBAM Hub</Link>
             <Link href="/articles" className="text-muted hover:text-accent no-underline transition-colors">Insights &amp; Reports</Link>
+            <Link href="/about" className="text-muted hover:text-accent no-underline transition-colors">About &amp; Methodology</Link>
           </div>
         </div>
 

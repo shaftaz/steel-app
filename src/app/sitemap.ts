@@ -35,6 +35,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.95,
     },
     {
+      url: `${BASE_URL}/about`,
+      lastModified: CBAM_VERIFIED,
+      changeFrequency: "monthly",
+      priority: 0.5,
+    },
+    {
       url: `${BASE_URL}/weights`,
       lastModified: TOOLS_VERIFIED,
       changeFrequency: "monthly",
