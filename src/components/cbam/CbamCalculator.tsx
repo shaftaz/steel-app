@@ -260,7 +260,14 @@ export default function CbamCalculator() {
     } catch {}
   };
 
-  const copyTextFn = (text: string, done: (v: boolean) => void) => {
+  const trackEv = (event: string) => {
+    try {
+      (window as unknown as { gtag?: (...a: unknown[]) => void }).gtag?.("event", event, { page: "/cbam/calculator" });
+    } catch {}
+  };
+
+  const copyTextFn = (text: string, done: (v: boolean) => void, event?: string) => {
+    if (event) trackEv(event);
     const finish = () => {
       done(true);
       setTimeout(() => done(false), 1600);
@@ -673,25 +680,25 @@ export default function CbamCalculator() {
             </div>
             <div className="mt-auto grid grid-cols-2 sm:grid-cols-4 border-t border-ink-border no-print">
               <button
-                onClick={() => copyTextFn(resultText, setCopied)}
+                onClick={() => copyTextFn(resultText, setCopied, "copy_result")}
                 className="bg-transparent border-r border-ink-border text-paper font-mono text-[10.5px] tracking-[0.04em] py-3 px-1 cursor-pointer hover:bg-panel-dark"
               >
                 {copied ? "COPIED ✓" : "COPY RESULT"}
               </button>
               <button
-                onClick={() => copyTextFn(bdText, setCopiedBd)}
+                onClick={() => copyTextFn(bdText, setCopiedBd, "copy_breakdown")}
                 className="bg-transparent sm:border-r border-ink-border text-paper font-mono text-[10.5px] tracking-[0.04em] py-3 px-1 cursor-pointer hover:bg-panel-dark"
               >
                 {copiedBd ? "COPIED ✓" : "COPY BREAKDOWN"}
               </button>
               <button
-                onClick={() => copyTextFn(shareUrl, setShared)}
+                onClick={() => copyTextFn(shareUrl, setShared, "share_link")}
                 className="bg-transparent border-r border-t sm:border-t-0 border-ink-border text-paper font-mono text-[10.5px] tracking-[0.04em] py-3 px-1 cursor-pointer hover:bg-panel-dark"
               >
                 {shared ? "LINK COPIED ✓" : "SHARE LINK"}
               </button>
               <button
-                onClick={() => window.print()}
+                onClick={() => { trackEv("download_pdf"); window.print(); }}
                 className="bg-transparent border-t sm:border-t-0 border-ink-border text-paper font-mono text-[10.5px] tracking-[0.04em] py-3 px-1 cursor-pointer hover:bg-panel-dark"
               >
                 DOWNLOAD PDF

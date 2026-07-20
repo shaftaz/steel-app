@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useEffect, useState, useMemo } from "react";
 import Link from "next/link";
 import type { Article, Category } from "@/lib/data/articles";
 import { CATEGORY_STYLES } from "@/lib/data/articles";
@@ -43,6 +43,13 @@ const CALC_LINKS = [
 export default function ArticlesClient({ articles }: { articles: Article[] }) {
   const [activeFilter, setActiveFilter] = useState<Category | "ALL">("ALL");
   const [search, setSearch] = useState("");
+
+  useEffect(() => {
+    try {
+      const q = new URLSearchParams(window.location.search).get("q");
+      if (q) setSearch(q);
+    } catch {}
+  }, []);
 
   const filtered = useMemo(() => {
     let list = articles;

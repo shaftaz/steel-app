@@ -15,6 +15,12 @@ export function fmt(n: number, dp?: number) {
   });
 }
 
+export function track(event: string, params?: Record<string, string>) {
+  try {
+    (window as unknown as { gtag?: (...a: unknown[]) => void }).gtag?.("event", event, params);
+  } catch {}
+}
+
 export function num(v: string) {
   const n = parseFloat(v);
   return isFinite(n) && n >= 0 ? n : 0;
@@ -221,7 +227,8 @@ export function ResultPanel({
   const [copied, setCopied] = useState(false);
   const [shared, setShared] = useState(false);
 
-  const doCopy = (text: string, done: (v: boolean) => void) => {
+  const doCopy = (text: string, done: (v: boolean) => void, event?: string) => {
+    if (event) track(event, { page: typeof window !== "undefined" ? window.location.pathname : "" });
     const finish = () => {
       done(true);
       setTimeout(() => done(false), 1600);
@@ -278,7 +285,7 @@ export function ResultPanel({
       )}
       <div className="mt-auto grid grid-cols-3 border-t border-ink-border no-print">
         <button
-          onClick={() => doCopy(copyText, setCopied)}
+          onClick={() => doCopy(copyText, setCopied, "copy_result")}
           className="bg-transparent border-r border-ink-border text-paper font-mono text-[11px] tracking-[0.06em] py-3 px-1.5 cursor-pointer hover:bg-panel-dark"
         >
           {copied ? "COPIED ✓" : "COPY RESULT"}
@@ -287,7 +294,8 @@ export function ResultPanel({
           onClick={() =>
             doCopy(
               shareUrl ?? (typeof window !== "undefined" ? window.location.href : ""),
-              setShared
+              setShared,
+              "share_link"
             )
           }
           className="bg-transparent border-r border-ink-border text-paper font-mono text-[11px] tracking-[0.06em] py-3 px-1.5 cursor-pointer hover:bg-panel-dark"
@@ -295,7 +303,7 @@ export function ResultPanel({
           {shared ? "LINK COPIED ✓" : "SHARE LINK"}
         </button>
         <button
-          onClick={() => window.print()}
+          onClick={() => { track("download_pdf"); window.print(); }}
           className="bg-transparent text-paper font-mono text-[11px] tracking-[0.06em] py-3 px-1.5 cursor-pointer hover:bg-panel-dark"
         >
           DOWNLOAD PDF

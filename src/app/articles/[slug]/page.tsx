@@ -100,6 +100,9 @@ export default async function ArticlePage({ params }: PageProps) {
     "@type": "Article",
     headline: article.title,
     description: article.metaDescription,
+    image: [
+      `https://steelmath.com${(article.ogImage ?? { url: `/og?title=${encodeURIComponent(article.metaTitle)}&accent=orange` }).url}`,
+    ],
     datePublished: article.date,
     dateModified: article.lastUpdated || article.date,
     author: {

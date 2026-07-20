@@ -1,0 +1,15 @@
+# SteelMath
+
+> Free steel weight calculators, CBAM (EU/UK carbon border) compliance tools, and sourced steel-market analysis for professionals in India, China, Southeast Asia, Japan, the Americas, Europe and Oceania.
+
+## Tools
+- [Steel Weight Calculator](https://steelmath.com/calculator): all sections (round/TMT, square, hex, flat, pipe, SHS, RHS, angle, plate), grades incl. Fe500 (IS), A36 (ASTM), SS400 (JIS), Q235 (GB); shareable result URLs
+- [CBAM Cost Calculator](https://steelmath.com/cbam/calculator): EU & UK regimes, 5 commodities, 9 origins, verified constants (Q2 2026 price EUR 75.28/tCO2e)
+- [All calculators](https://steelmath.com/calculators): TMT, plate, pipe, tubes, angle, beam, channel, scrap yield, production cost, gauge, hardness
+
+## Reference
+- [CBAM Compliance Hub](https://steelmath.com/cbam): deadlines, certificate prices, country playbooks, phase-in schedule (stable anchors: #phase-in, #prices, #countries, #timeline)
+- [Insights & Reports](https://steelmath.com/articles): 50+ sourced, dated articles on prices, trade policy and supply chains
+- [RSS](https://steelmath.com/feed.xml)
+
+Formulas follow IS / ASTM / JIS / EN / GB standards; density basis 7,850 kg/m3 for carbon steel; d²/162.2 for round bars. Figures carry LAST VERIFIED dates. CBAM outputs are estimates, not tax or legal advice.

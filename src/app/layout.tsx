@@ -266,6 +266,7 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: BASE_URL,
+    types: { "application/rss+xml": `${BASE_URL}/feed.xml` },
   },
   verification: {
     // Add Google Search Console verification when available
@@ -309,6 +310,12 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${archivo.variable} ${plexMono.variable}`}>
       <head>
+        <link
+          rel="alternate"
+          type="application/rss+xml"
+          title="SteelMath — Insights & Reports"
+          href="https://steelmath.com/feed.xml"
+        />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-V0FPXV02V5"
           strategy="afterInteractive"

@@ -6,6 +6,7 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
+        disallow: ["/og"],
       },
     ],
     sitemap: "https://steelmath.com/sitemap.xml",
