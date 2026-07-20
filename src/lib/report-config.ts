@@ -5,4 +5,4 @@
    The alias is safe to ship to browsers: it does not reveal the email
    address. While empty, the form falls back to the server relay. */
 export const FORMSUBMIT_ALIAS =
-  process.env.NEXT_PUBLIC_FORMSUBMIT_ALIAS || "";
+  process.env.NEXT_PUBLIC_FORMSUBMIT_ALIAS || "4c9c800ba838827ae1b5be00e0f81760";

@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { FORMSUBMIT_ALIAS } from "@/lib/report-config";
 
 /* Server-only relay for the About-page report form.
    The destination address is never sent to the client, never rendered
@@ -6,6 +7,9 @@ import { NextRequest, NextResponse } from "next/server";
    environment to override the encoded default. */
 
 function target(): string {
+  // Prefer the activated FormSubmit alias; the address itself is only a
+  // last-resort fallback and never leaves the server.
+  if (FORMSUBMIT_ALIAS) return FORMSUBMIT_ALIAS;
   if (process.env.REPORT_EMAIL) return process.env.REPORT_EMAIL;
   return Buffer.from("aW5ub3ZhdGlvbm1ldHNAZ21haWwuY29t", "base64").toString("utf-8");
 }
