@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import ReportDialog from "@/components/ReportDialog";
 
 export const metadata: Metadata = {
   title: "About SteelMath: Methodology & Verification",
@@ -111,8 +112,12 @@ export default function AboutPage() {
             Questions, corrections or data requests are welcome. We treat reported errors as
             priority fixes.
           </p>
-          <div className="flex gap-3">
-            <Link href="/calculator" className="btn-glow px-5 py-2.5 text-[13px] no-underline shrink-0">
+          <div className="flex gap-3 flex-wrap">
+            <ReportDialog />
+            <Link
+              href="/calculator"
+              className="border border-input-border text-ink font-semibold px-5 py-2.5 text-[13px] no-underline shrink-0 hover:border-ink transition-colors"
+            >
               Open the calculator →
             </Link>
           </div>

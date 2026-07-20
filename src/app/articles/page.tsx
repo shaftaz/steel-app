@@ -5,7 +5,7 @@ import ArticlesClient from "@/components/blog/ArticlesClient";
 
 export const metadata: Metadata = {
   title:
-    "Steel Industry Insights, Analysis & Guides — Hormuz Crisis, Pricing, Calculators",
+    "Steel Industry Insights, Analysis & Guides: Hormuz Crisis, Pricing, Calculators",
   description:
     "Expert analysis on steel pricing, Hormuz crisis impact, safeguard duty, CBAM, TMT bar weight charts, MS pipe weight formula, steel plate calculator, GST on steel, and mill price circulars. Data-driven insights for steel professionals.",
   keywords: [

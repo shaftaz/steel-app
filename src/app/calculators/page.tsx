@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import CalculatorDirectory from "@/components/CalculatorDirectory";
 
 export const metadata: Metadata = {
   title:
@@ -284,42 +285,30 @@ export default function CalculatorsPage() {
         </nav>
 
         {/* Hero */}
-        <div className="mb-8">
-          <h1 className="text-2xl sm:text-3xl font-bold text-white mb-2 tracking-tight">
-            Free Steel Calculators for Every Section Type
-          </h1>
-          <p className="text-white/30 text-sm max-w-2xl">
-            Instant, accurate weight calculations for TMT bar, steel plate, MS
-            pipe, angle, channel &amp; beam. Pick a calculator below or use the
-            all-in-one tool.
-          </p>
+        <div className="mb-7 flex items-end justify-between gap-4 lg:gap-8 flex-wrap">
+          <div>
+            <div className="font-mono text-[11px] tracking-[0.14em] text-accent mb-2.5">
+              20 FREE TOOLS · INSTANT RECALC · IS · ASTM · JIS · EN · GB STANDARDS
+            </div>
+            <h1 className="text-[clamp(26px,4vw,36px)] font-extrabold text-ink mb-2 tracking-[-0.02em] [text-wrap:balance]">
+              Free Steel Calculators for Every Section Type
+            </h1>
+            <p className="text-muted-2 text-sm max-w-2xl">
+              Instant, accurate weight calculations for TMT bar, steel plate, MS
+              pipe, angle, channel &amp; beam. Pick a calculator below or use the
+              all-in-one tool.
+            </p>
+          </div>
+          <Link href="/calculator" className="btn-glow px-5 py-2.5 text-[13px] no-underline shrink-0 no-print">
+            Open the all-in-one tool →
+          </Link>
         </div>
 
-        {/* Calculator cards grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 mb-12">
-          {CALCULATORS.map((calc) => (
-            <Link
-              key={calc.href}
-              href={calc.href}
-              className="glass-panel glass-panel-hover p-5 no-underline group transition-all block"
-            >
-              <span className="inline-block text-[10px] uppercase tracking-wider font-semibold text-accent/70 mb-2">
-                {calc.tag}
-              </span>
-              <h2 className="text-white font-bold text-base mb-1.5 group-hover:text-accent transition-colors">
-                {calc.title}
-              </h2>
-              <p className="text-white/30 text-xs leading-relaxed mb-4">
-                {calc.description}
-              </p>
-              <span className="btn-glow inline-flex items-center gap-1.5 text-xs px-3 py-1.5 rounded-md font-medium">
-                Open Calculator &rarr;
-              </span>
-            </Link>
-          ))}
-        </div>
+        <CalculatorDirectory items={CALCULATORS} />
 
         {/* SEO content section */}
+
+
         <div className="glass-panel p-6 sm:p-8 mb-8">
           <h2 className="text-white font-bold text-lg mb-4">
             What Are Steel Weight Calculators?
