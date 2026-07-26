@@ -4,6 +4,7 @@ import { Archivo, IBM_Plex_Mono } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SwRegister from "@/components/SwRegister";
+import GaRouteTracker from "@/components/GaRouteTracker";
 // import PriceTicker from "@/components/dashboard/PriceTicker";
 import "./globals.css";
 
@@ -341,6 +342,7 @@ gtag('config', 'G-V0FPXV02V5');`}
         {children}
         <Footer />
         <SwRegister />
+        <GaRouteTracker />
       </body>
     </html>
   );

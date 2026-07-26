@@ -4,7 +4,7 @@ import Calculator from "@/components/Calculator";
 
 export const metadata: Metadata = {
   title:
-    "Free Steel Weight Calculator: TMT Bar, Plate, Pipe, Angle, Beam | All Grades",
+    "Free Steel Weight Calculator — TMT Bar, Plate, Pipe, Angle, Beam | All Grades",
   description:
     "Calculate steel weight instantly for TMT bar (d²/162), plate, MS pipe, angle, channel, I-beam & flat bar. Supports MS, Fe500, SS304, SS316, Aluminium, Copper. Free online calculator with formulas, quick reference charts, and material density factors.",
   keywords: [
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://steelmath.com/calculator" },
   openGraph: {
     images: [{ url: "/og?title=Free%20Steel%20Weight%20Calculator%20%E2%80%94%20TMT%20Bar%2C%20Plate%2C%20Pipe%2C%20Angle%2C%20Beam&accent=orange", width: 1200, height: 630 }],
-    title: "Free Steel Weight Calculator: All Sections & Grades | SteelMath",
+    title: "Free Steel Weight Calculator — All Sections & Grades | SteelMath",
     description:
       "Calculate steel weight for TMT bar, plate, pipe, angle & beam. Free, instant, accurate. Supports all common steel grades.",
     url: "https://steelmath.com/calculator",
