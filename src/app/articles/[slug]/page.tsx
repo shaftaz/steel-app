@@ -281,6 +281,27 @@ export default async function ArticlePage({ params }: PageProps) {
           </div>
         </article>
 
+        {/* Related tools — contextual calculator links from article data */}
+        {article.relatedCalculators.length > 0 && (
+          <section className="mt-8">
+            <h2 className="font-mono text-[11px] tracking-[0.14em] text-accent font-medium mb-0 uppercase pb-3">
+              Related tools
+            </h2>
+            <div className="border-t border-ink">
+              {article.relatedCalculators.map((calc) => (
+                <Link
+                  key={calc}
+                  href={calc === "calculator" ? "/calculator" : `/calculators/${calc}`}
+                  className="flex justify-between items-baseline gap-3 py-3 px-1 border-b border-rule text-[13.5px] font-semibold text-ink no-underline hover:text-accent transition-colors"
+                >
+                  <span className="capitalize">{calc.replace(/-/g, " ")} calculator</span>
+                  <span className="font-mono text-[11px] text-accent">OPEN →</span>
+                </Link>
+              ))}
+            </div>
+          </section>
+        )}
+
         <NewsletterCta />
 
         {/* Related Articles — critical for internal linking & SEO */}
