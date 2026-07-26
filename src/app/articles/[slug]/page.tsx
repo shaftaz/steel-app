@@ -57,6 +57,26 @@ export async function generateMetadata({
   };
 }
 
+const VALID_CALCS = new Set([
+  "tmt", "steel-plate", "pipe-weight", "angle-weight", "beam-weight",
+  "channel-weight", "flat-bar-weight", "round-bar-weight", "rebar",
+  "square-tube-weight", "rect-tube-weight", "chequered-plate-weight",
+  "stainless-steel-weight", "metal-weight", "gauge-to-mm",
+  "hardness-conversion", "credit-cost", "scrap-yield",
+  "scrap-production-cost",
+]);
+const CALC_ALIASES: Record<string, string> = {
+  weight: "calculator",
+  calculator: "calculator",
+  "Steel Weight Calculator": "calculator",
+};
+
+function resolveCalc(slug: string): string | null {
+  if (VALID_CALCS.has(slug)) return `/calculators/${slug}`;
+  if (CALC_ALIASES[slug]) return "/calculator";
+  return null;
+}
+
 function getRelatedArticles(currentSlug: string) {
   const current = getArticleBySlug(currentSlug);
   if (!current) return [];
@@ -282,22 +302,27 @@ export default async function ArticlePage({ params }: PageProps) {
         </article>
 
         {/* Related tools — contextual calculator links from article data */}
-        {article.relatedCalculators.length > 0 && (
+        {article.relatedCalculators.some((c) => resolveCalc(c)) && (
           <section className="mt-8">
             <h2 className="font-mono text-[11px] tracking-[0.14em] text-accent font-medium mb-0 uppercase pb-3">
               Related tools
             </h2>
             <div className="border-t border-ink">
-              {article.relatedCalculators.map((calc) => (
-                <Link
-                  key={calc}
-                  href={calc === "calculator" ? "/calculator" : `/calculators/${calc}`}
-                  className="flex justify-between items-baseline gap-3 py-3 px-1 border-b border-rule text-[13.5px] font-semibold text-ink no-underline hover:text-accent transition-colors"
-                >
-                  <span className="capitalize">{calc.replace(/-/g, " ")} calculator</span>
-                  <span className="font-mono text-[11px] text-accent">OPEN →</span>
-                </Link>
-              ))}
+              {article.relatedCalculators
+                .map((calc) => ({ calc, href: resolveCalc(calc) }))
+                .filter((x): x is { calc: string; href: string } => !!x.href)
+                .map(({ calc, href }) => (
+                  <Link
+                    key={calc}
+                    href={href}
+                    className="flex justify-between items-baseline gap-3 py-3 px-1 border-b border-rule text-[13.5px] font-semibold text-ink no-underline hover:text-accent transition-colors"
+                  >
+                    <span className="capitalize">
+                      {href === "/calculator" ? "Steel weight calculator" : `${calc.replace(/-/g, " ")} calculator`}
+                    </span>
+                    <span className="font-mono text-[11px] text-accent">OPEN →</span>
+                  </Link>
+                ))}
             </div>
           </section>
         )}
