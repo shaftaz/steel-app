@@ -4,6 +4,8 @@ import {
   ismbBeams,
   ismcChannels,
   equalAngles,
+  plates,
+  flatBars,
 } from "@/lib/data/section-weights";
 
 /* ============================================================
@@ -345,6 +347,119 @@ for (const an of equalAngles) {
   });
 }
 
+/* ---------------- MS plates (per thickness) ---------------- */
+const plateSlug = (t: number) => `${t}mm-ms-plate-weight`;
+for (const pl of plates) {
+  pagesList.push({
+    slug: plateSlug(pl.thickness),
+    family: "plate",
+    familyLabel: "MS Plate (IS 2062)",
+    h1: `${pl.thickness}mm MS Plate Weight Per Square Metre & Per Sheet`,
+    metaTitle: `${pl.thickness}mm MS Plate Weight: Per m² & Standard Sheets`,
+    metaDescription: `A ${pl.thickness}mm MS plate weighs ${f(pl.weightPerSqm, 2)} kg per square metre. A 1500×6000 sheet weighs ${f(pl.weight1500x6000, 1)} kg and a 2000×6000 sheet ${f(pl.weight2000x6000, 1)} kg. Formula, chart and free calculator.`,
+    kicker: `MS PLATE · T × 7.85 = KG/M² · IS 2062 · ASTM A36 · JIS G3101 · EN 10025`,
+    answerLabel: "WEIGHT PER SQUARE METRE",
+    answerValue: `${f(pl.weightPerSqm, 2)} kg/m²`,
+    stats: [
+      { label: "1500 × 6000 SHEET", value: `${f(pl.weight1500x6000, 1)} kg` },
+      { label: "2000 × 6000 SHEET", value: `${f(pl.weight2000x6000, 1)} kg` },
+      { label: "THICKNESS", value: `${pl.thickness} mm` },
+      { label: "SHEETS (1.5×6) / TONNE", value: `≈ ${f(1000 / pl.weight1500x6000, 1)}` },
+    ],
+    formula: `${pl.thickness} × 7.85 = ${f(pl.weightPerSqm, 2)} kg/m²`,
+    formulaNote: "7.85 = density 7,850 kg/m³ expressed per mm of thickness per m²",
+    source: "SOURCE: IS 2062 · ASTM A36 · JIS G3101 · EN 10025 · LAST VERIFIED 18 JUL 2026",
+    faqs: [
+      {
+        q: `What is the weight of ${pl.thickness}mm MS plate per square metre?`,
+        a: `A ${pl.thickness}mm mild-steel plate weighs ${f(pl.weightPerSqm, 2)} kg per square metre, from thickness × 7.85 (${pl.thickness} × 7.85 = ${f(pl.weightPerSqm, 2)}).`,
+      },
+      {
+        q: `How much does a standard ${pl.thickness}mm plate sheet weigh?`,
+        a: `A 1500 × 6000 mm sheet of ${pl.thickness}mm plate weighs ${f(pl.weight1500x6000, 1)} kg; a 2000 × 6000 mm sheet weighs ${f(pl.weight2000x6000, 1)} kg.`,
+      },
+      {
+        q: `How many ${pl.thickness}mm plate sheets make one tonne?`,
+        a: `Approximately ${f(1000 / pl.weight1500x6000, 1)} sheets of 1500 × 6000 mm ${pl.thickness}mm plate weigh one tonne (1,000 ÷ ${f(pl.weight1500x6000, 1)} kg per sheet).`,
+      },
+    ],
+    tableCaption: "MS plate weight by thickness (kg/m² and standard sheets)",
+    tableHeaders: ["Thickness", "kg/m²", "1500×6000 (kg)", "2000×6000 (kg)"],
+    rows: plates.map((r) => ({
+      label: `${r.thickness}mm`,
+      cells: [f(r.weightPerSqm, 2), f(r.weight1500x6000, 1), f(r.weight2000x6000, 1)],
+      href: `/weights/${plateSlug(r.thickness)}`,
+      active: r.thickness === pl.thickness,
+    })),
+    calcHref: `/calculator?shape=plate&grade=MS&pl=6&pw=1.5&pt=${pl.thickness}`,
+    calcLabel: `Open the calculator prefilled with a ${pl.thickness}mm sheet →`,
+    related: [
+      { label: "Steel Plate Weight Calculator", href: "/calculators/steel-plate" },
+      { label: "Steel Plate Weight Chart", href: "/articles/steel-plate-weight-calculator-thickness-chart" },
+      { label: "Chequered Plate Calculator", href: "/calculators/chequered-plate-weight" },
+    ],
+    ogValue: `${f(pl.weightPerSqm, 2)} kg/m²`,
+    ogLabel: `${pl.thickness}MM MS PLATE · IS 2062`,
+  });
+}
+
+/* ---------------- Flat bars ---------------- */
+const flatSlug = (w: number, t: number) => `${w}x${t}-flat-bar-weight`;
+for (const fb of flatBars) {
+  const name = `${fb.width}×${fb.thickness}`;
+  pagesList.push({
+    slug: flatSlug(fb.width, fb.thickness),
+    family: "flat",
+    familyLabel: "Flat Bars (IS 2062)",
+    h1: `${name} mm MS Flat Bar Weight Per Metre`,
+    metaTitle: `${name} MS Flat Bar Weight Per Metre`,
+    metaDescription: `A ${name} mm mild-steel flat bar weighs ${f(fb.weightPerMetre, 2)} kg per metre, ${f(fb.weightPer6m, 2)} kg per 6 m length. Formula (W × T × 0.00785), full flat chart and free calculator.`,
+    kicker: `FLAT BAR · W × T × 0.00785 · IS 2062 · ASTM A36 · JIS G3101`,
+    answerLabel: "WEIGHT PER METRE",
+    answerValue: `${f(fb.weightPerMetre, 2)} kg/m`,
+    stats: [
+      { label: "PER 6 M LENGTH", value: `${f(fb.weightPer6m, 2)} kg` },
+      { label: "WIDTH × THICK", value: `${fb.width} × ${fb.thickness} mm` },
+      { label: "SECTION AREA", value: `${f(fb.width * fb.thickness, 0)} mm²` },
+      { label: "LENGTHS PER TONNE", value: `≈ ${f(1000 / fb.weightPer6m, 1)}` },
+    ],
+    formula: `${fb.width} × ${fb.thickness} × 0.00785 = ${f(fb.weightPerMetre, 2)} kg/m`,
+    formulaNote: "0.00785 = 7,850 ÷ 10⁶, steel density 7,850 kg/m³",
+    source: "SOURCE: IS 2062 · ASTM A36 · JIS G3101 · LAST VERIFIED 18 JUL 2026",
+    faqs: [
+      {
+        q: `What is the weight of a ${name} mm flat bar per metre?`,
+        a: `A ${name} mm mild-steel flat weighs ${f(fb.weightPerMetre, 2)} kg per metre, from width × thickness × 0.00785 (${fb.width} × ${fb.thickness} × 0.00785).`,
+      },
+      {
+        q: `How much does a 6-metre ${name} flat bar weigh?`,
+        a: `A standard 6 m length of ${name} mm flat weighs ${f(fb.weightPer6m, 2)} kg (${f(fb.weightPerMetre, 2)} kg/m × 6 m).`,
+      },
+      {
+        q: `How many ${name} flat lengths make one tonne?`,
+        a: `Approximately ${f(1000 / fb.weightPer6m, 1)} six-metre lengths of ${name} mm flat bar weigh one tonne.`,
+      },
+    ],
+    tableCaption: "Flat bar weight, common sizes (6 m lengths)",
+    tableHeaders: ["Size (mm)", "kg/m", "kg per 6 m"],
+    rows: flatBars.map((r) => ({
+      label: `${r.width}×${r.thickness}`,
+      cells: [f(r.weightPerMetre, 2), f(r.weightPer6m, 2)],
+      href: `/weights/${flatSlug(r.width, r.thickness)}`,
+      active: r.width === fb.width && r.thickness === fb.thickness,
+    })),
+    calcHref: `/calculator?shape=flat&grade=MS&w=${fb.width}&t=${fb.thickness}&l=6`,
+    calcLabel: `Open the calculator prefilled with ${name} × 6 m →`,
+    related: [
+      { label: "Flat Bar Weight Calculator", href: "/calculators/flat-bar-weight" },
+      { label: "Formula Guide (All Sections)", href: "/articles/how-to-calculate-weight-of-steel-formula-guide" },
+      { label: "Advanced Steel Weight Calculator", href: "/calculator" },
+    ],
+    ogValue: `${f(fb.weightPerMetre, 2)} kg/m`,
+    ogLabel: `${name} MM FLAT BAR · IS 2062`,
+  });
+}
+
 export const weightPages: WeightPage[] = pagesList;
 
 export function getWeightPage(slug: string): WeightPage | undefined {
@@ -357,4 +472,6 @@ export const weightFamilies = [
   { key: "ismb", label: "ISMB Beams", intro: "IS 808 rolled sections" },
   { key: "ismc", label: "ISMC Channels", intro: "IS 808 rolled sections" },
   { key: "angle", label: "Equal Angles", intro: "(A + B − T) × T × 0.00785" },
+  { key: "plate", label: "MS Plate", intro: "T × 7.85 = kg/m² · IS 2062" },
+  { key: "flat", label: "Flat Bars", intro: "W × T × 0.00785" },
 ];
