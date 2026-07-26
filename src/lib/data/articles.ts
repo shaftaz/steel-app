@@ -24,6 +24,55 @@ export const CATEGORY_STYLES: Record<Category, { bg: string; text: string }> = {
 
 export const articles: Article[] = [
   {
+    slug: "cbam-cost-steel-importers",
+    title:
+      "What CBAM Actually Costs Steel Importers: Price Per Tonne, Certificates and the 2026\u20132034 Ramp",
+    category: "GUIDE",
+    categoryColor: "green",
+    date: "2026-07-26",
+    readTime: "5 min",
+    excerpt:
+      "CBAM certificates cost \u20AC75.28/tCO\u2082e in Q2 2026, but the 2.5% phase-in factor keeps 2026 bills small. What importers pay per tonne now, and by 2034.",
+    metaTitle: "CBAM Cost for Steel Importers: Price Per Tonne & Certificates",
+    metaDescription:
+      "CBAM certificates cost \u20AC75.28/tCO\u2082e in Q2 2026. With the 2.5% phase-in factor, HRC costs roughly \u20AC5/t today, rising toward \u20AC200/t by 2034. Worked numbers and a free CBAM calculator.",
+    relatedCalculators: ["steel-plate", "tmt"],
+    ogImage: {
+      url: "/og?title=What%20CBAM%20Costs%20Steel%20Importers&value=%E2%82%AC75.28&label=PER%20tCO%E2%82%82e%20%C2%B7%20Q2%202026%20%C2%B7%20FACTOR%202.5%25&accent=blue",
+      alt: "CBAM certificate price of 75.28 euros per tonne of CO2 with the 2026 phase-in factor of 2.5 percent",
+    },
+    content: `
+<p>Every tonne of steel entering the EU now carries a carbon charge. The mechanics are simple to state and easy to misjudge: importers surrender CBAM certificates priced from EU ETS auctions (\u20AC75.28/tCO\u2082e in Q2 2026, \u20AC75.36 in Q1), but only on the share of embedded emissions the phase-in factor makes chargeable, 2.5% in 2026, climbing to 100% by 2034. The result is a cost that feels trivial today and compounds into a major line item within a few years.</p>
+
+<h2>The price per tonne, worked out</h2>
+
+<p>Take hot-rolled coil at the default emissions intensity of 2.8 tCO\u2082e per tonne of steel. In 2026: 2.8 \u00D7 2.5% \u00D7 \u20AC75.28 = roughly \u20AC5.3 per tonne of steel. The same cargo at the 2030 factor (48.5%) costs about \u20AC102/t, and at the 2034 factor (100%) about \u20AC211/t at a flat certificate price. Origin matters: verified actual emissions from an EAF route can cut the intensity to under 1 tCO\u2082e/t, and a carbon price already paid in the country of production is deductible. Our <a href="/cbam/calculator">CBAM calculator</a> runs your exact cargo, product, origin, tonnage, year and emissions basis, in seconds.</p>
+
+<h2>What a certificate actually costs</h2>
+
+<p>One certificate covers one tonne of CO\u2082e and is priced as the quarterly average of EU ETS auctions (weekly from 2027). Certificates go on sale 1 February 2027, retroactively covering 2026 imports; the first surrender deadline is 30 September 2027. The UK runs its own regime from 1 January 2027 at a planning rate of \u00A355/tCO\u2082e with no phase-in. The full deadline and price history lives on our <a href="/cbam">CBAM hub</a>.</p>
+
+<h2>Why the small 2026 number is misleading</h2>
+
+<p>Three reasons. First, the factor ramps steeply: what costs \u20AC5/t today is on a published schedule toward forty times that. Second, default values are set from the worst emitters, importers who fail to obtain verified supplier data systematically overpay. Third, trade flows are already shifting as exporters reroute around <a href="/articles/anti-dumping-chinese-steel-barrier-cascade">a rising wall of trade measures</a>, which changes which origins, and therefore which emission intensities, show up in your supply chain. Buyers pricing landed cost, from <a href="/calculators/steel-plate">plate</a> to coil, should be quoting CBAM-inclusive numbers for any EU-bound material from this year onward.</p>
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>How much does CBAM cost per tonne of steel in 2026?</h3>
+<p>At default HRC intensity (2.8 tCO\u2082e/t), the 2.5% phase-in factor and the Q2 2026 certificate price of \u20AC75.28, roughly \u20AC5.3 per tonne of steel. Cleaner routes and deductible home carbon prices reduce it.</p>
+
+<h3>What is the CBAM certificate price?</h3>
+<p>\u20AC75.28 per tonne of CO\u2082e for Q2 2026 (Q1 was \u20AC75.36). The price tracks quarterly EU ETS auction averages and moves to weekly pricing from 2027. Certificates go on sale 1 February 2027.</p>
+
+<h3>Is there a free CBAM calculator?</h3>
+<p>Yes. SteelMath's free <a href="/cbam/calculator">CBAM cost calculator</a> covers EU and UK regimes, five commodity groups, nine origins, default versus verified-actual emissions and the full 2026\u20132034 phase-in. Estimates only, certificate prices vary quarterly and figures are not tax or legal advice.</p>
+
+<h3>How much will CBAM cost by 2030 and 2034?</h3>
+<p>The same default HRC cargo rises to roughly \u20AC102 per tonne of steel at the 2030 factor (48.5%) and about \u20AC211/t at 100% in 2034, assuming a \u20AC75 certificate. Verified low-emission routes are the main lever against that curve.</p>
+`,
+  },
+
+  {
     slug: "anti-dumping-chinese-steel-barrier-cascade",
     title:
       "207 Trade Barriers Later, Chinese Steel Still Finds a Way Out",
@@ -78,7 +127,7 @@ export const articles: Article[] = [
 
 <p>The trade wall will keep rising, the overcapacity behind it, projected at 745 million tonnes by 2028, guarantees the pressure doesn\u2019t relent. For buyers, that makes origin risk a permanent input cost, and it makes anticipating the cascade (which product, which port, which quarter) worth real money on every contract. That anticipation is <a href="/articles/steel-price-hike-tracker-march-2026">a forecasting problem</a>, the kind SteelMath exists to solve. The single duty in the headline is rarely the event that moves your price. The rerouting it triggers is.</p>
 
-<p>Related reading: how China\u2019s export prices are behaving under <a href="/articles/china-hrc-export-prices-validation-gap">this pressure</a>, and why protected markets like India still feel <a href="/articles/indian-metal-stocks-protection-paradox">the global squeeze</a>.</p>
+<p>Related reading: how China\u2019s export prices are behaving under <a href="/articles/china-hrc-export-prices-validation-gap">this pressure</a>, and why protected markets like India still feel <a href="/articles/indian-metal-stocks-protection-paradox">the global squeeze</a>. For EU-bound cargo, see <a href="/articles/cbam-cost-steel-importers">what CBAM costs importers per tonne</a>.</p>
 
 <h2>Frequently asked questions</h2>
 
