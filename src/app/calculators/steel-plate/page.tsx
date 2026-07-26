@@ -4,9 +4,9 @@ import Calculator from "@/components/Calculator";
 
 export const metadata: Metadata = {
   title:
-    "Steel Plate Weight Calculator — MS Plate by Thickness, Length & Width | SteelMath",
+    "Steel Plate Weight Calculator: Instant, Free, All Sizes",
   description:
-    "Calculate steel plate and sheet weight instantly using the L × W × T × 7.85 formula. Supports MS plate, chequered plate, and all standard thicknesses from 2mm to 50mm. Free online plate weight calculator with reference charts.",
+    "Get MS plate weight in seconds: enter thickness, length and width for instant kg and tonnes. Free, all sizes and grades, with formula and full thickness chart.",
   keywords: [
     "steel plate weight calculator",
     "ms plate weight calculator",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   openGraph: {
     images: [{ url: "/og?title=Steel%20Plate%20Weight%20Calculator%20%E2%80%94%20MS%20Plate%20by%20Thickness%2C%20Length%20%26%20Width&accent=orange", width: 1200, height: 630 }],
     title:
-      "Steel Plate Weight Calculator — MS Plate by Thickness, Length & Width | SteelMath",
+      "Steel Plate Weight Calculator: Instant, Free, All Sizes",
     description:
       "Calculate steel plate and sheet weight instantly. Covers MS plate, chequered plate, all thicknesses. Free online calculator with formula L × W × T × 7.85 and reference charts.",
     url: "https://steelmath.com/calculators/steel-plate",

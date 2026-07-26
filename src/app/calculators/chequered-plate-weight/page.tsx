@@ -6,8 +6,8 @@ import CalculatorSchema from "@/components/seo/CalculatorSchema";
 import { chequeredPlates } from "@/lib/data/section-weights";
 
 export const metadata: Metadata = {
-  title: "Chequered Plate Weight Calculator — All Thicknesses 3mm to 25mm | SteelMath",
-  description: "Free chequered plate weight calculator for all thicknesses from 3mm to 25mm. Uses formula thickness × 7.85 × 1.05 (5% extra for diamond pattern). Complete weight chart.",
+  title: "Chequered Plate Weight Calculator: Instant & Free",
+  description: "Instant chequered plate weight for every thickness, 3 mm to 25 mm. Free calculator with the diamond-pattern formula (T × 7.85 × 1.05) and a full weight chart.",
   keywords: ["chequered plate weight calculator", "checkered plate weight", "diamond plate weight", "chequered plate weight chart", "chequered plate weight per sqm", "ms chequered plate weight", "pattern plate weight", "anti slip plate weight", "tear plate weight", "chequered plate 6mm weight"],
   alternates: { canonical: "https://steelmath.com/calculators/chequered-plate-weight" },
   openGraph: {

@@ -181,7 +181,10 @@ for (const bm of ismbBeams) {
     family: "ismb",
     familyLabel: "ISMB Beams (IS 808)",
     h1: `${bm.designation} Weight Per Metre & Section Properties`,
-    metaTitle: `${bm.designation} Weight Per Metre & Section Properties`,
+    metaTitle:
+      bm.designation === "ISMB 300"
+        ? "ISMB 300 Weight Per Metre: Instant Answer, Chart & Zxx"
+        : `${bm.designation} Weight Per Metre & Section Properties`,
     metaDescription: `${bm.designation} weighs ${f(bm.weightPerMetre, 1)} kg per metre, ${f(bm.weightPerMetre * 12, 1)} kg per 12 m length. Depth ${bm.depth} mm, flange ${bm.flangeWidth} mm, Zxx ${f(bm.sectionModulusZxx, 1)} cm³ (IS 808). Chart and free calculator.`,
     kicker: `I-BEAM · IS 808 TABLE VALUES · ASTM A6 · JIS G3192`,
     answerLabel: "WEIGHT PER METRE",
