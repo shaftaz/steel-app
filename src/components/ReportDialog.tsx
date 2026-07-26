@@ -56,6 +56,9 @@ export default function ReportDialog() {
         const data = await res.json().catch(() => null);
         if (res.ok && data && String(data.success) !== "false") {
           setState("sent");
+          try {
+            (window as unknown as { gtag?: (...a: unknown[]) => void }).gtag?.("event", "lead_contact_click", { method: "report_form" });
+          } catch {}
           return;
         }
       } catch {
@@ -73,6 +76,9 @@ export default function ReportDialog() {
       const data = await res.json().catch(() => null);
       if (data?.ok) {
         setState("sent");
+        try {
+          (window as unknown as { gtag?: (...a: unknown[]) => void }).gtag?.("event", "lead_contact_click", { method: "report_form" });
+        } catch {}
       } else {
         setState("error");
         setError(data?.error || "The reporting service is briefly unavailable. Please try again shortly.");

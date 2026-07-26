@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { articles, getArticleBySlug } from "@/lib/data/articles";
+import NewsletterCta from "@/components/NewsletterCta";
+import OutboundTracker from "@/components/OutboundTracker";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -183,6 +185,7 @@ export default async function ArticlePage({ params }: PageProps) {
           }}
         />
       )}
+      <OutboundTracker />
       <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 py-5">
         {/* Breadcrumb navigation */}
         <nav
@@ -277,6 +280,8 @@ export default async function ArticlePage({ params }: PageProps) {
             </div>
           </div>
         </article>
+
+        <NewsletterCta />
 
         {/* Related Articles — critical for internal linking & SEO */}
         {related.length > 0 && (

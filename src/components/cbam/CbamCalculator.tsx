@@ -208,6 +208,21 @@ export default function CbamCalculator() {
   const [copiedBd, setCopiedBd] = useState(false);
   const [shared, setShared] = useState(false);
 
+  const interacted = useState(() => ({ fired: false }))[0];
+  useEffect(() => {
+    if (interacted.fired) return;
+    interacted.fired = true; // skip initial mount; re-arm below
+    const arm = setTimeout(() => { interacted.fired = false; }, 400);
+    return () => clearTimeout(arm);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+  useEffect(() => {
+    if (interacted.fired) return;
+    trackEv("cbam_tool_use");
+    interacted.fired = true;
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [regime, commodity, variantKey, country, qty, year, basis, route]);
+
   // Persisted prefs (shared keys with the hub) + shareable URL restore
   useEffect(() => {
     try {

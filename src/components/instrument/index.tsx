@@ -227,6 +227,18 @@ export function ResultPanel({
   const [copied, setCopied] = useState(false);
   const [shared, setShared] = useState(false);
 
+  useEffect(() => {
+    try {
+      const w = window as unknown as { __smCalcFired?: Set<string> };
+      const fired = (w.__smCalcFired = w.__smCalcFired ?? new Set());
+      const tool = window.location.pathname;
+      if (!fired.has(tool)) {
+        fired.add(tool);
+        track("calculator_result", { tool_name: tool });
+      }
+    } catch {}
+  }, []);
+
   const doCopy = (text: string, done: (v: boolean) => void, event?: string) => {
     if (event) track(event, { page: typeof window !== "undefined" ? window.location.pathname : "" });
     const finish = () => {
