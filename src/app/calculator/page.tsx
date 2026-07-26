@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Calculator from "@/components/Calculator";
+import NewsletterCta from "@/components/NewsletterCta";
 
 export const metadata: Metadata = {
   title:
@@ -732,6 +733,7 @@ export default function CalculatorPage() {
             </div>
           </div>
         </section>
+        <NewsletterCta />
       </div>
     </>
   );

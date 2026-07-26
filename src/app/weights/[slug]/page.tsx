@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { weightPages, getWeightPage } from "@/lib/data/weight-pages";
+import NewsletterCta from "@/components/NewsletterCta";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -208,6 +209,8 @@ export default async function WeightPage({ params }: PageProps) {
             ← ALL SIZE-BY-SIZE WEIGHT PAGES
           </Link>
         </section>
+
+        <NewsletterCta />
       </div>
     </>
   );
