@@ -105,7 +105,7 @@ export const articles: Article[] = [
 
 <h2>The barrier cascade: how blocked steel finds the exit</h2>
 
-<p>That contradiction) record walls, record flows) resolves into a repeatable three-step pattern. Call it the barrier cascade.</p>
+<p>That contradiction (record walls, record flows) resolves into a repeatable three-step pattern. Call it the barrier cascade.</p>
 
 <p><strong>Step one: the product hop.</strong> When finished products get blocked, flows shift to categories the duties don\u2019t cover. The clearest evidence is in semi-finished steel: in the first quarter of 2026, Chinese slab exports surged 182% year-on-year and billet exports rose 14.8% to 2.66 million tonnes, precisely as finished-product exports to Brazil, South Korea, and Vietnam fell 30%, and cold-rolled and coated exports to Turkey collapsed 42%. The steel did not stop moving. It changed form.</p>
 
@@ -171,7 +171,7 @@ export const articles: Article[] = [
 
 <p>When an export offer rises because domestic futures rallied (rather than because buyers bid it up) the move opens what we call the validation gap: the distance between where sellers mark the market and where demand is actually willing to transact. The gap resolves one of two ways. Either physical buyers step in within a handful of sessions and confirm the new level, or offers drift back to where the bids live. What it almost never does is stay open for long.</p>
 
-<p>Right now the gap is wide and the confirming evidence is absent. Southeast Asia) the marginal buyer that sets the tone for Chinese export pricing) is in its seasonal demand lull, and importers there are pressing hard on billet prices while Chinese mills hold firm on production-cost grounds. That standoff, mills\u2019 cost floor against buyers\u2019 seasonal patience, is the actual price discovery happening beneath the headline uptick.</p>
+<p>Right now the gap is wide and the confirming evidence is absent. Southeast Asia (the marginal buyer that sets the tone for Chinese export pricing) is in its seasonal demand lull, and importers there are pressing hard on billet prices while Chinese mills hold firm on production-cost grounds. That standoff, mills\u2019 cost floor against buyers\u2019 seasonal patience, is the actual price discovery happening beneath the headline uptick.</p>
 
 <h2>The recent precedent</h2>
 
@@ -239,7 +239,7 @@ export const articles: Article[] = [
 
 <p>The global backdrop is deteriorating on exactly the axis that matters for Indian mills. <a href="/articles/global-long-steel-market-hormuz-crisis-irepas-march-2026">IREPAS</a> (the international association of long product producers and traders) reports <a href="https://eurometal.net/irepas-global-long-steel-market-weakens-further-on-subdued-demand-oversupply/" target="_blank" rel="noopener">the long steel market has worsened further</a>, with high supply and stagnant demand squeezing margins worldwide. Two incremental supply threats sharpen the picture: additional Iranian and Russian billet availability, which could push rebar prices lower still.</p>
 
-<p>The billet detail deserves emphasis. Iran\u2019s earlier absence from global markets created a gap that Chinese slab rushed to fill; its return adds tonnes to a market already absorbing <a href="/articles/anti-dumping-chinese-steel-barrier-cascade">surging Chinese semi-finished exports</a>. Meanwhile Chinese HRC export offers) the de facto global price anchor) are managing only <a href="/articles/china-hrc-export-prices-validation-gap">futures-led upticks that physical buyers decline to validate</a>. When the global price anchor is soft, Indian mill realizations feel it through import-parity pricing pressure and shrinking export headroom, duty or no duty.</p>
+<p>The billet detail deserves emphasis. Iran\u2019s earlier absence from global markets created a gap that Chinese slab rushed to fill; its return adds tonnes to a market already absorbing <a href="/articles/anti-dumping-chinese-steel-barrier-cascade">surging Chinese semi-finished exports</a>. Meanwhile Chinese HRC export offers (the de facto global price anchor) are managing only <a href="/articles/china-hrc-export-prices-validation-gap">futures-led upticks that physical buyers decline to validate</a>. When the global price anchor is soft, Indian mill realizations feel it through import-parity pricing pressure and shrinking export headroom, duty or no duty.</p>
 
 <p>There is a second-order effect too: the safeguard\u2019s price thresholds mean that if global prices fall far enough, the duty\u2019s bite changes character, and the sunset clock (April 2028, with annual tapers) is always running. Protection in steel is a lease, not a freehold.</p>
 
@@ -261,7 +261,7 @@ export const articles: Article[] = [
 <p>Metal stocks are pricing global steel conditions (a weakening long steel market, oversupply, and soft Chinese export prices) rather than domestic market sentiment. Banking and IT led Friday\u2019s 965-point rally; metals lagged because their earnings are set by globally-linked prices.</p>
 
 <h3>Does India\u2019s safeguard duty protect steel companies?</h3>
-<p>It protects volumes effectively) monthly imports fell about 33% year-on-year under the provisional 12% duty) but it cannot insulate margins from a global downcycle, since realizations track import-parity and world prices. The duty also tapers: 12% to 11.5% to 11%, ending April 2028.</p>
+<p>It protects volumes effectively (monthly imports fell about 33% year-on-year under the provisional 12% duty) but it cannot insulate margins from a global downcycle, since realizations track import-parity and world prices. The duty also tapers: 12% to 11.5% to 11%, ending April 2028.</p>
 
 <h3>What is happening in the global long steel market?</h3>
 <p>IREPAS reports the market has worsened further, with high supply and stagnant demand squeezing margins, and additional Iranian and Russian billet availability threatening further rebar price declines.</p>
@@ -290,7 +290,7 @@ export const articles: Article[] = [
       alt: "Chart comparing gigafactory delivery timelines: 18\u201324 months for leaders versus average projects slipping 6\u20139 months past start of production.",
     },
     content: `
-<p><strong>Executive summary:</strong> The battery cell market has tipped into global overcapacity) installed capacity passed 2,500 GWh in 2025 against demand of roughly 1.6 TWh) yet gigafactories still miss their start-of-production dates by six to nine months on average. At a single 40 GWh plant, a six-month slip can put roughly $250 million of value at risk. The winners of the next decade will be decided less by who announces capacity and more by who ramps it on time.</p>
+<p><strong>Executive summary:</strong> The battery cell market has tipped into global overcapacity (installed capacity passed 2,500 GWh in 2025 against demand of roughly 1.6 TWh) yet gigafactories still miss their start-of-production dates by six to nine months on average. At a single 40 GWh plant, a six-month slip can put roughly $250 million of value at risk. The winners of the next decade will be decided less by who announces capacity and more by who ramps it on time.</p>
 
 <p>Gigafactory delivery delays are now the defining execution risk in the battery industry: the average plant misses start of production (SOP) by six to nine months, ramps below planned yield, and does so in a market where oversupply means late output may never find the buyer its business case assumed.</p>
 
@@ -402,11 +402,11 @@ export const articles: Article[] = [
 
 <p><strong>Talent and regulation.</strong> Shortages in cooling, cybersecurity, and network operations slow commissioning; regulatory uncertainty (including the powers of the yet-to-be-constituted Data Protection Board) injects timing risk into investment decisions.</p>
 
-<p><strong>Implication:</strong> steel demand from this sector will arrive in surges tied to project clearances and grid connections, not as a smooth curve. Buyers who track project milestones) not announcements) will see the demand before the market prices it.</p>
+<p><strong>Implication:</strong> steel demand from this sector will arrive in surges tied to project clearances and grid connections, not as a smooth curve. Buyers who track project milestones (not announcements) will see the demand before the market prices it.</p>
 
 <h2>The honest limit</h2>
 
-<p>Public, India-specific data on steel intensity per MW of data centre capacity is thin, and this analysis deliberately avoids inventing a tonnage figure. Directionally, the demand pull is real; sized against India\u2019s total steel consumption, data centres alone will not move national <a href="/articles/steel-price-hike-tracker-march-2026">HRC or rebar benchmarks</a>. Their significance is regional and sectoral) fabrication capacity, structural sections, and metro-cluster logistics) not macro. Anyone quoting a precise \u201cmillion tonnes of steel from data centres\u201d number should be asked for their source.</p>
+<p>Public, India-specific data on steel intensity per MW of data centre capacity is thin, and this analysis deliberately avoids inventing a tonnage figure. Directionally, the demand pull is real; sized against India\u2019s total steel consumption, data centres alone will not move national <a href="/articles/steel-price-hike-tracker-march-2026">HRC or rebar benchmarks</a>. Their significance is regional and sectoral (fabrication capacity, structural sections, and metro-cluster logistics) not macro. Anyone quoting a precise \u201cmillion tonnes of steel from data centres\u201d number should be asked for their source.</p>
 
 <h2>What to watch</h2>
 
@@ -509,7 +509,7 @@ export const articles: Article[] = [
 
 <p> (Temperature fluctuations of even 5\u201310\u00B0C affect zinc coating adhesion and uniformity<br/>• Rapid thermal cycling can damage the ceramic pot lining, requiring costly repairs<br/>• Inconsistent heating leads to coating defects that compromise corrosion resistance) the entire value proposition of galvanized steel</p>
 
-<p>India\u2019s installed galvanizing and colour-coating capacity has expanded significantly in recent years. Major producers) including JSW Steel Coated Products, Tata Steel Colors, ArcelorMittal Nippon Steel India (AM/NS), and Jindal Stainless) operate large-scale HDG and colour-coating lines. Industry sources indicate that some facilities have already experienced disruptions due to reduced availability of industrial gases.</p>
+<p>India\u2019s installed galvanizing and colour-coating capacity has expanded significantly in recent years. Major producers (including JSW Steel Coated Products, Tata Steel Colors, ArcelorMittal Nippon Steel India (AM/NS), and Jindal Stainless) operate large-scale HDG and colour-coating lines. Industry sources indicate that some facilities have already experienced disruptions due to reduced availability of industrial gases.</p>
 
 <p><strong>Scale of the risk:</strong> India\u2019s coated flat steel production is estimated at 12\u201314 million MT per annum, supporting critical sectors:</p>
 
@@ -618,7 +618,7 @@ export const articles: Article[] = [
 
 <h2>What\u2019s Coming Next?</h2>
 
-<p>Based on the trajectory of oil prices, freight rates, and the unresolved geopolitical situation, we expect at least one more round of hikes in the second half of March. If oil crosses $100 per barrel) a scenario many analysts consider possible) the cumulative increase from pre-crisis levels could reach \u20B93,000\u20134,000 per MT for flat products.</p>
+<p>Based on the trajectory of oil prices, freight rates, and the unresolved geopolitical situation, we expect at least one more round of hikes in the second half of March. If oil crosses $100 per barrel (a scenario many analysts consider possible) the cumulative increase from pre-crisis levels could reach \u20B93,000\u20134,000 per MT for flat products.</p>
 
 <p>The key variable to watch is demand response. If construction and manufacturing buyers resist the new prices by deferring purchases, mills may pause further hikes. But in a supply-constrained environment with rising input costs, meaningful price corrections are unlikely until the crisis de-escalates.</p>
 
@@ -1450,7 +1450,7 @@ export const articles: Article[] = [
       "How the propane and LPG shortage from the Hormuz crisis is threatening India\u2019s galvanized and colour-coated steel production. Impact on JSW, Tata, AM/NS, downstream sectors, and what the government can do.",
     relatedCalculators: ["landed-cost"],
     content: `
-<p>While the Strait of Hormuz crisis has dominated headlines for its impact on crude oil prices and ocean freight, a quieter but potentially more disruptive consequence is unfolding in India\u2019s industrial gas supply chain. Propane) an unglamorous but operationally critical fuel) is becoming scarce, and the consequences for India\u2019s galvanized and colour-coated steel industry could be severe.</p>
+<p>While the Strait of Hormuz crisis has dominated headlines for its impact on crude oil prices and ocean freight, a quieter but potentially more disruptive consequence is unfolding in India\u2019s industrial gas supply chain. Propane (an unglamorous but operationally critical fuel) is becoming scarce, and the consequences for India\u2019s galvanized and colour-coated steel industry could be severe.</p>
 
 <p>This is not a hypothetical risk. Multiple industry sources confirm that plant-level disruptions have already begun at some facilities. If the shortage persists beyond the next 2\u20133 weeks, India faces potential production losses in a steel segment worth an estimated \u20B960,000\u201370,000 crore annually.</p>
 
@@ -1536,7 +1536,7 @@ export const articles: Article[] = [
 
 <p><strong>4. Accelerated PNG pipeline connectivity:</strong> GAIL operates approximately 22,000 km of gas pipeline across India, but many industrial clusters with galvanizing capacity are not connected. Expediting last-mile connectivity to major steel coating hubs (Vasind/Tarapur (Maharashtra), Raipur cluster (Chhattisgarh), Mandi Gobindgarh (Punjab)) would create structural resilience for future disruptions.</p>
 
-<p><strong>5. Strategic propane reserve:</strong> India maintains strategic petroleum reserves at Visakhapatnam, Mangalore, and Padur for crude oil. A similar concept for industrial LPG/propane) even a modest 15\u201320 day buffer stock at key import terminals) would prevent a logistics disruption from becoming an industrial crisis. The estimated cost of building such a reserve is \u20B9800\u20131,200 crore, modest relative to the \u20B960,000+ crore annual output of the coated steel sector it would protect.</p>
+<p><strong>5. Strategic propane reserve:</strong> India maintains strategic petroleum reserves at Visakhapatnam, Mangalore, and Padur for crude oil. A similar concept for industrial LPG/propane (even a modest 15\u201320 day buffer stock at key import terminals) would prevent a logistics disruption from becoming an industrial crisis. The estimated cost of building such a reserve is \u20B9800\u20131,200 crore, modest relative to the \u20B960,000+ crore annual output of the coated steel sector it would protect.</p>
 
 <h2>The Bigger Picture: India\u2019s Industrial Energy Security</h2>
 
@@ -1699,7 +1699,7 @@ export const articles: Article[] = [
       "Small steel producers in Gujarat face 50% production cuts as the Hormuz crisis chokes LNG supplies. Gujarat Gas declares force majeure. Coal costs surge 10\u201313%. Impact analysis.",
     relatedCalculators: ["energy-cost", "landed-cost"],
     content: `
-<p>While the week\u2019s headlines celebrated mega-investments and green technology milestones, an urgent crisis is unfolding at the other end of India\u2019s steel ecosystem. Scores of small and medium steel producers) the backbone of India\u2019s secondary steel sector) are warning of production cuts as severe as 50%, with some facing complete shutdowns if gas supplies don\u2019t recover within days.</p>
+<p>While the week\u2019s headlines celebrated mega-investments and green technology milestones, an urgent crisis is unfolding at the other end of India\u2019s steel ecosystem. Scores of small and medium steel producers (the backbone of India\u2019s secondary steel sector) are warning of production cuts as severe as 50%, with some facing complete shutdowns if gas supplies don\u2019t recover within days.</p>
 
 <h2>The Ground Reality</h2>
 
@@ -1729,13 +1729,13 @@ export const articles: Article[] = [
 
 <p>Reports from other industrial hubs paint a broader picture of distress. Manufacturers in Mandi Gobindgarh, Punjab (one of India\u2019s most important secondary steel clusters) are reportedly meeting only about 50% of customer demand. In Gujarat, smaller mills are fulfilling roughly 70% of their orders. Even coal-dependent units that don\u2019t directly use natural gas still need LPG for essential processes such as cutting, lancing, and maintenance operations.</p>
 
-<p>The government has responded with the Natural Gas (Supply Regulation) Order, 2026, which aims to regulate gas distribution across sectors to ensure essential services continue. But for industrial consumers) steel mills among them) the practical effect has been rationing, not relief.</p>
+<p>The government has responded with the Natural Gas (Supply Regulation) Order, 2026, which aims to regulate gas distribution across sectors to ensure essential services continue. But for industrial consumers (steel mills among them) the practical effect has been rationing, not relief.</p>
 
 <p>The Indian Steel Association has warned of a \u201Chuge adverse impact\u201D on MSMEs in the steel sector, which collectively employ a large workforce and produce a significant share of India\u2019s long products (TMT, rebar, wire rod, structural sections).</p>
 
 <h2>What This Means for Steel Prices</h2>
 
-<p>Supply disruption at the production level translates directly into price support) and ultimately price increases) at the market level. Here\u2019s the transmission mechanism:</p>
+<p>Supply disruption at the production level translates directly into price support (and ultimately price increases) at the market level. Here\u2019s the transmission mechanism:</p>
 
 <p>When secondary producers cut output by 30\u201350%, the supply of TMT bars, rebar, and structural steel in regional markets tightens. Buyers who previously sourced from local IF/EAF mills must either wait for supply to resume or turn to larger producers (Tata Steel, JSW, SAIL) whose products command a premium. This tightening effect has already contributed to the \u20B92,000\u20132,500 per MT price increase in finished steel since the crisis began.</p>
 
@@ -1871,9 +1871,9 @@ export const articles: Article[] = [
 
 <p>The Japan Bank for International Cooperation is not a commercial lender. It\u2019s a government-backed policy bank whose mandate is to support Japanese companies in strategically important overseas ventures. Its participation as the lead financier (providing more than 60% of this latest tranche) carries an implicit endorsement from the Japanese government that this acquisition serves national economic interests.</p>
 
-<p>This is significant for two reasons. First, it provides Nippon Steel with access to financing at terms that purely commercial lenders might not offer for an acquisition of this scale in the current rate environment. Second, it signals to the market) including regulators, customers, and competitors) that Japan\u2019s industrial policy apparatus is backing this transaction for the long term.</p>
+<p>This is significant for two reasons. First, it provides Nippon Steel with access to financing at terms that purely commercial lenders might not offer for an acquisition of this scale in the current rate environment. Second, it signals to the market (including regulators, customers, and competitors) that Japan\u2019s industrial policy apparatus is backing this transaction for the long term.</p>
 
-<p>For context, JBIC has historically supported Japanese steelmakers in overseas expansion, including investments in India, Southeast Asia, and Brazil. But the scale of this particular commitment) over \u00A5550 billion for a single transaction) is exceptional and reflects the strategic weight Japan places on maintaining a competitive presence in the US steel market.</p>
+<p>For context, JBIC has historically supported Japanese steelmakers in overseas expansion, including investments in India, Southeast Asia, and Brazil. But the scale of this particular commitment (over \u00A5550 billion for a single transaction) is exceptional and reflects the strategic weight Japan places on maintaining a competitive presence in the US steel market.</p>
 
 <h2>The $11 Billion Investment Plan: Technology Transfer at Scale</h2>
 
@@ -1994,7 +1994,7 @@ export const articles: Article[] = [
 
 <p>The plant has approximately 13,500 regular employees. Over 1,000 opted for voluntary retirement under VRS phases in 2025. However, VRS-related dues remain partially unpaid, with former employees reporting non-payment of earned leave encashment and pending salaries. Former BJP MP GVL Narasimha Rao formally wrote to Minister Kumaraswamy in February 2026 urging intervention on this matter.</p>
 
-<p>The government\u2019s ability to settle these pending obligations) relatively modest in the context of a \u20B911,440 crore revival package) will directly impact the workforce\u2019s trust in the turnaround narrative. Employees who see their retired colleagues struggling for dues owed to them are unlikely to bring the discretionary effort that a 94% capacity utilization rate demands.</p>
+<p>The government\u2019s ability to settle these pending obligations (relatively modest in the context of a \u20B911,440 crore revival package) will directly impact the workforce\u2019s trust in the turnaround narrative. Employees who see their retired colleagues struggling for dues owed to them are unlikely to bring the discretionary effort that a 94% capacity utilization rate demands.</p>
 
 <h2>What This Means for the Market</h2>
 
@@ -2055,7 +2055,7 @@ export const articles: Article[] = [
 
 <p>For a coastal plant like Dolvi, the economics are compelling. When seaborne iron ore trades below $100 per tonne (as it did for much of 2025) imported Brazilian ore delivered to a port-adjacent mill can match or even undercut the cost of domestic ore transported by rail from Odisha or Chhattisgarh over a thousand kilometres inland.</p>
 
-<p>In a telling development, a rare cargo of BHP\u2019s Jimblebar Fines) approximately 172,000 tonnes aboard the vessel True Champion) is currently en route to JSW\u2019s Jaigarh port. This Australian product, diverted from China amid Beijing\u2019s restrictions on it, reflects how Indian buyers are capitalising on opportunistic arbitrage windows that didn\u2019t exist a few years ago.</p>
+<p>In a telling development, a rare cargo of BHP\u2019s Jimblebar Fines (approximately 172,000 tonnes aboard the vessel True Champion) is currently en route to JSW\u2019s Jaigarh port. This Australian product, diverted from China amid Beijing\u2019s restrictions on it, reflects how Indian buyers are capitalising on opportunistic arbitrage windows that didn\u2019t exist a few years ago.</p>
 
 <h2>Brazil and Oman Dominate the Supply</h2>
 
@@ -2126,7 +2126,7 @@ export const articles: Article[] = [
 
 <p><strong>Pune:</strong> One of India\u2019s major automobile manufacturing centres, the crisis has hit the supply chain feeding vehicle production. Nearly 30% of the city\u2019s auto component MSMEs (particularly those involved in plating, coating, and fabrication) rely on LPG for furnace operations. Over the past two weeks, limited supply has crippled their production. Industry sources report that approximately half of the units in the supply chain have already exhausted their LPG stocks, with no immediate replenishment available. At coating units, black market LPG cylinder prices have reportedly surged to approximately \u20B96,000, compared to the normal commercial price of around \u20B91,400\u20131,900. Enlight Metals\u2019 facility in the region has remained shut for over ten days.</p>
 
-<p><strong>Ghaziabad:</strong> The stainless steel processing hub of northern India. An estimated 40\u201350% of smaller units are either completely shut or operating intermittently. Stainless steel production relies heavily on industrial gases) propane, LPG, and natural gas) for annealing, pickling, and heat treatment. Without these inputs, the production process simply cannot be completed. Jindal Stainless, India\u2019s largest stainless steel producer, confirmed that its own plants are running at reduced capacity due to fuel shortages.</p>
+<p><strong>Ghaziabad:</strong> The stainless steel processing hub of northern India. An estimated 40\u201350% of smaller units are either completely shut or operating intermittently. Stainless steel production relies heavily on industrial gases (propane, LPG, and natural gas) for annealing, pickling, and heat treatment. Without these inputs, the production process simply cannot be completed. Jindal Stainless, India\u2019s largest stainless steel producer, confirmed that its own plants are running at reduced capacity due to fuel shortages.</p>
 
 <p><strong>Gujarat\u2019s Mundra cluster:</strong> Home to a significant concentration of cold rolling units, operating at roughly 50% of capacity. These mills, which convert hot-rolled coils into higher-value cold-rolled products, depend on gas for annealing furnaces. Without consistent supply, they are unable to run continuously, resulting in quality inconsistencies and delivery delays even when they do operate.</p>
 
@@ -2142,7 +2142,7 @@ export const articles: Article[] = [
 
 <h2>The Workforce Exodus Nobody Is Counting</h2>
 
-<p>The Pune situation illustrates a secondary crisis that could outlast the gas shortage itself. Lakhs of workers employed in the MSME supply chain) many of them migrants from North India) depend on small 5 kg LPG cylinders for cooking. With disruptions in cylinder distribution, many have started returning to their home states. This reverse migration, eerily reminiscent of the COVID-19 exodus of 2020, threatens to create a labour shortage that persists long after gas supply normalises.</p>
+<p>The Pune situation illustrates a secondary crisis that could outlast the gas shortage itself. Lakhs of workers employed in the MSME supply chain (many of them migrants from North India) depend on small 5 kg LPG cylinders for cooking. With disruptions in cylinder distribution, many have started returning to their home states. This reverse migration, eerily reminiscent of the COVID-19 exodus of 2020, threatens to create a labour shortage that persists long after gas supply normalises.</p>
 
 <p>When a fabrication unit shuts down for two weeks, it doesn\u2019t simply restart on Day 15 when gas arrives. The skilled workers have dispersed. The customers have found alternative suppliers or deferred their projects. The working capital has been consumed by overheads during the idle period. The restart is slow, costly, and uncertain. Some units will not restart at all.</p>
 
@@ -2158,11 +2158,11 @@ export const articles: Article[] = [
 
 <p>IREPAS noted that the Middle East conflict has driven energy prices sharply higher, disrupted supply chains, and pushed up bunker fuel and freight rates. Inventories have declined, but demand remains weak amid uncertainty over the conflict\u2019s duration and potential expansion.</p>
 
-<p>In Turkey) historically a major competitor and price-setter in the global longs market) construction activity remains slow and steel exports have fallen approximately 20% compared to the same period last year. Turkish mills are adjusting production to match weakened demand.</p>
+<p>In Turkey (historically a major competitor and price-setter in the global longs market) construction activity remains slow and steel exports have fallen approximately 20% compared to the same period last year. Turkish mills are adjusting production to match weakened demand.</p>
 
 <p>European mills have attempted price increases, but the market\u2019s slow post-winter recovery has limited buying activity. CBAM uncertainty continues to make EU imports a risky proposition for non-European suppliers. IREPAS concluded that it is \u201Cvery difficult to talk about competition under the current levels of protectionism, geopolitical issues and uncertainty.\u201D</p>
 
-<p>For Indian long product exporters) already squeezed by domestic gas shortages) the weak global market means they cannot easily redirect excess capacity (if they had any) to export markets. They face cost pressure at home and demand weakness abroad simultaneously.</p>
+<p>For Indian long product exporters (already squeezed by domestic gas shortages) the weak global market means they cannot easily redirect excess capacity (if they had any) to export markets. They face cost pressure at home and demand weakness abroad simultaneously.</p>
 
 <h2>What Government and Industry Responses Look Like</h2>
 
@@ -2178,9 +2178,9 @@ export const articles: Article[] = [
 
 <p>On the other side: MSMEs that employ far more people per tonne of steel produced, serve the last mile of India\u2019s manufacturing economy, and are now facing an existential fuel crisis with no savings buffer, no energy diversification, and no political leverage to redirect supply allocations.</p>
 
-<p>Leaders in this industry) whether they run integrated mills, trade steel, or set policy) must navigate this duality. The survival of vulnerable supply chains requires immediate intervention: emergency gas allocation protocols for industrial users, temporary duty relief on alternative fuels, and working capital support for units forced to idle. The capacity super-cycle will mean nothing if the downstream processing ecosystem that makes India\u2019s steel usable has been hollowed out by the time it arrives.</p>
+<p>Leaders in this industry (whether they run integrated mills, trade steel, or set policy) must navigate this duality. The survival of vulnerable supply chains requires immediate intervention: emergency gas allocation protocols for industrial users, temporary duty relief on alternative fuels, and working capital support for units forced to idle. The capacity super-cycle will mean nothing if the downstream processing ecosystem that makes India\u2019s steel usable has been hollowed out by the time it arrives.</p>
 
-<p>The broader lesson is one of energy security. India\u2019s steel industry cannot continue to build capacity that depends) directly or indirectly) on fuel supplies passing through a single maritime chokepoint. The Hormuz crisis has exposed this vulnerability with painful clarity. Whether industry leaders act on this lesson or merely wait for the crisis to pass will determine the sector\u2019s resilience for the next decade.</p>
+<p>The broader lesson is one of energy security. India\u2019s steel industry cannot continue to build capacity that depends (directly or indirectly) on fuel supplies passing through a single maritime chokepoint. The Hormuz crisis has exposed this vulnerability with painful clarity. Whether industry leaders act on this lesson or merely wait for the crisis to pass will determine the sector\u2019s resilience for the next decade.</p>
 
 <p><strong>Related on SteelMath:</strong> Track the crisis across our <a href="/articles/hormuz-crisis-steel-impact-india">Hormuz Impact Assessment</a>, <a href="/articles/propane-shortage-coated-steel-india-2026">Propane Crisis Analysis</a>, and <a href="/articles/gujarat-small-steel-mills-production-cuts-gas-shortage-hormuz">Gujarat Production Cuts</a> coverage. Use our <a href="/calculator">Weight Calculator</a> for production planning.</p>
 `,
@@ -2201,7 +2201,7 @@ export const articles: Article[] = [
       "200 Punjab steel mills face 70% gas cut. PNG prices up \u20B96/SCM. Middle East freight at $50\u201360/MT. Hadeed raises May HRC to $640/t. Complete analysis for steel leaders.",
     relatedCalculators: ["energy-cost"],
     content: `
-<p>India\u2019s steel industry is splitting into two realities. At one end, multi-billion-dollar capacity expansion announcements signal long-term confidence. At the other, hundreds of MSME steel mills in Punjab can barely keep their furnaces lit. The gas supply crisis at Mandi Gobindgarh) India\u2019s oldest and most concentrated secondary steel cluster) encapsulates this divergence with painful clarity.</p>
+<p>India\u2019s steel industry is splitting into two realities. At one end, multi-billion-dollar capacity expansion announcements signal long-term confidence. At the other, hundreds of MSME steel mills in Punjab can barely keep their furnaces lit. The gas supply crisis at Mandi Gobindgarh (India\u2019s oldest and most concentrated secondary steel cluster) encapsulates this divergence with painful clarity.</p>
 
 <p>Here is what is happening, why it matters beyond Punjab, and what steel industry leaders should be watching.</p>
 
@@ -2241,9 +2241,9 @@ export const articles: Article[] = [
 
 <p>Analysis from SMM (Shanghai Metals Market) confirms that ocean freight rates for steel shipments to the Middle East have surged to $50\u201360 per tonne, up from $20\u201330 in the pre-crisis period. But the headline rate understates the real problem. Shipowners are simply refusing to commit tonnage amid market instability. Vessels that would normally ply the Asia\u2013Gulf route are either anchored, rerouted around Africa, or demanding freight premiums that make deals unworkable.</p>
 
-<p>For Chinese steel exporters) who shipped over 10 million tonnes annually to the GCC region) the situation has been described by market sources as \u201Cthere were offers but no market, making shipments difficult.\u201D Orders exist on paper, but physical delivery has become nearly impossible through the Strait of Hormuz. Cargoes previously booked from China and other origins are being rerouted to Saudi Arabia\u2019s west coast, primarily Jeddah port, which adds substantial inland transportation costs for east coast\u2013based industrial consumers.</p>
+<p>For Chinese steel exporters (who shipped over 10 million tonnes annually to the GCC region) the situation has been described by market sources as \u201Cthere were offers but no market, making shipments difficult.\u201D Orders exist on paper, but physical delivery has become nearly impossible through the Strait of Hormuz. Cargoes previously booked from China and other origins are being rerouted to Saudi Arabia\u2019s west coast, primarily Jeddah port, which adds substantial inland transportation costs for east coast\u2013based industrial consumers.</p>
 
-<p>In this environment, Hadeed) the Saudi Iron and Steel Company, and the GCC\u2019s only flat-rolled steel producer) announced an increase in its May-rolling HRC price to SAR 2,400 per tonne (approximately $640 per tonne delivered), up from SAR 2,310 per tonne previously. The announcement, made on March 15, reflects Hadeed\u2019s pricing power as the sole domestic flat steel source in a region where imports have effectively frozen.</p>
+<p>In this environment, Hadeed (the Saudi Iron and Steel Company, and the GCC\u2019s only flat-rolled steel producer) announced an increase in its May-rolling HRC price to SAR 2,400 per tonne (approximately $640 per tonne delivered), up from SAR 2,310 per tonne previously. The announcement, made on March 15, reflects Hadeed\u2019s pricing power as the sole domestic flat steel source in a region where imports have effectively frozen.</p>
 
 <p>For Indian steel exporters, this creates a complex dynamic. Gulf demand for flat products is elevated because of the import vacuum, but delivering into that market requires navigating the same freight and insurance challenges. Those who can secure viable shipping (potentially through overland routes via the International North-South Transport Corridor, or through Oman\u2019s ports outside the Strait) may find premium pricing. Those who cannot are watching a lucrative export market slip out of reach.</p>
 
@@ -2251,9 +2251,9 @@ export const articles: Article[] = [
 
 <p>What emerges from these simultaneous developments is a picture of an industry polarising at unprecedented speed.</p>
 
-<p>On one side, India\u2019s largest integrated producers) Tata Steel, JSW Steel, SAIL, AM/NS India) have the scale, fuel diversity, and balance sheets to weather the crisis. Their blast furnace operations run on domestically sourced iron ore and imported coking coal (which, as we have <a href="/articles/coking-coal-iron-ore-routes-open">previously analysed</a>, flows primarily from Australia via routes unaffected by Hormuz). They are passing through cost increases via mill price hikes and maintaining profitability.</p>
+<p>On one side, India\u2019s largest integrated producers (Tata Steel, JSW Steel, SAIL, AM/NS India) have the scale, fuel diversity, and balance sheets to weather the crisis. Their blast furnace operations run on domestically sourced iron ore and imported coking coal (which, as we have <a href="/articles/coking-coal-iron-ore-routes-open">previously analysed</a>, flows primarily from Australia via routes unaffected by Hormuz). They are passing through cost increases via mill price hikes and maintaining profitability.</p>
 
-<p>On the other side, the MSME secondary steel sector) which accounts for roughly 55\u201360% of India\u2019s total crude steel capacity) faces an existential squeeze. These producers depend on gas or LPG for furnace operations, imported scrap (which has become expensive and unreliable), and electricity (which is rising with oil-correlated power costs). They have no pricing power to pass through costs to construction buyers already resistant to elevated TMT prices.</p>
+<p>On the other side, the MSME secondary steel sector (which accounts for roughly 55\u201360% of India\u2019s total crude steel capacity) faces an existential squeeze. These producers depend on gas or LPG for furnace operations, imported scrap (which has become expensive and unreliable), and electricity (which is rising with oil-correlated power costs). They have no pricing power to pass through costs to construction buyers already resistant to elevated TMT prices.</p>
 
 <p>The gap between these two realities is widening with every week the Hormuz crisis continues.</p>
 
@@ -2324,7 +2324,7 @@ export const articles: Article[] = [
 
 <h2>The Energy Problem: Why It\u2019s the Hardest Nut to Crack</h2>
 
-<p>Every other element of the \u201COne Europe, One Market\u201D strategy) regulatory simplification, capital markets union, industrial procurement preferences) is difficult but tractable. Energy pricing is different. It\u2019s a structural problem rooted in how European electricity markets are designed.</p>
+<p>Every other element of the \u201COne Europe, One Market\u201D strategy (regulatory simplification, capital markets union, industrial procurement preferences) is difficult but tractable. Energy pricing is different. It\u2019s a structural problem rooted in how European electricity markets are designed.</p>
 
 <p>The EU\u2019s electricity pricing mechanism is based on a marginal cost model where the most expensive power plant needed to meet demand in any given hour sets the price for all electricity sold in that hour. Because natural gas plants are often the marginal producer, electricity prices remain tightly coupled to gas prices, even when the vast majority of power in a given market comes from cheaper renewables, nuclear, or hydro.</p>
 
@@ -2362,7 +2362,7 @@ export const articles: Article[] = [
 
 <p>The direction of the EU\u2019s \u201COne Europe, One Market\u201D strategy is correct. The diagnosis (regulatory fragmentation, energy cost disadvantage, underinvestment in industrial capacity) is accurate and backed by extensive data. The political commitment, with a formal European Council endorsement and time-bound implementation deadlines, is stronger than any previous effort.</p>
 
-<p>But diagnosis and prescription are not the same as treatment and cure. The steel industry\u2019s reaction) welcoming the intent while sharply warning about execution) captures the core tension. European steelmakers have heard ambitious commitments before. What they need now is electricity they can afford, regulations they can navigate, and trade protection that works until they\u2019ve completed the green transition.</p>
+<p>But diagnosis and prescription are not the same as treatment and cure. The steel industry\u2019s reaction (welcoming the intent while sharply warning about execution) captures the core tension. European steelmakers have heard ambitious commitments before. What they need now is electricity they can afford, regulations they can navigate, and trade protection that works until they\u2019ve completed the green transition.</p>
 
 <p>The next 18 months will tell whether \u201COne Europe, One Market\u201D becomes the blueprint for resilient, green industrial growth, or another well-intended strategy with limited real-world impact.</p>
 
@@ -2512,9 +2512,9 @@ export const articles: Article[] = [
 
 <p>But the more insidious effect is on confidence. IREPAS notes that while concerns over cargo deliveries from eastern regions have helped push prices upward in Western markets, demand has not followed. Buyers across Europe and the developing world are adopting a wait-and-watch stance, unwilling to commit to medium or long-term purchases when nobody can predict whether the conflict will last weeks or months, or whether it might spread further into the Gulf.</p>
 
-<p>The scrap market) the lifeblood of electric arc furnace long steel production) adds another layer of uncertainty. Scrap prices have risen by approximately $30 per tonne in recent weeks, driven both by seasonal supply tightness and logistical disruptions. IREPAS observes that this surge is making semi-finished steel imports a more attractive option for EAF mills, particularly from Asian origins. As the association puts it plainly, it is a battle of costs right now, and nothing else matters.</p>
+<p>The scrap market (the lifeblood of electric arc furnace long steel production) adds another layer of uncertainty. Scrap prices have risen by approximately $30 per tonne in recent weeks, driven both by seasonal supply tightness and logistical disruptions. IREPAS observes that this surge is making semi-finished steel imports a more attractive option for EAF mills, particularly from Asian origins. As the association puts it plainly, it is a battle of costs right now, and nothing else matters.</p>
 
-<p>For Indian producers, this scrap dynamic is particularly relevant. India\u2019s induction furnace and EAF sector) which produces the majority of the country\u2019s TMT bars and rebar) relies heavily on both domestic and imported scrap. With <a href="/articles/hormuz-crisis-steel-impact-india">Gulf-origin scrap shipments disrupted by the Hormuz closure</a> and global scrap prices firming, Indian IF and EAF mills are facing input cost pressures that will inevitably feed through to finished long product prices.</p>
+<p>For Indian producers, this scrap dynamic is particularly relevant. India\u2019s induction furnace and EAF sector (which produces the majority of the country\u2019s TMT bars and rebar) relies heavily on both domestic and imported scrap. With <a href="/articles/hormuz-crisis-steel-impact-india">Gulf-origin scrap shipments disrupted by the Hormuz closure</a> and global scrap prices firming, Indian IF and EAF mills are facing input cost pressures that will inevitably feed through to finished long product prices.</p>
 
 <h2>Europe: Mills Hike Prices Into a Cautious Market</h2>
 
@@ -2564,7 +2564,7 @@ export const articles: Article[] = [
 
 <p><strong>Second, the demand problem is structural, not just cyclical.</strong> Even without the Hormuz crisis, long steel demand in Europe was weak, US construction was softening, and Turkey was contracting. The war has made a bad situation worse, but the underlying demand environment was already challenging. A resolution of the Hormuz crisis will ease cost pressures but will not, by itself, restore demand.</p>
 
-<p><strong>Third, the cost-price squeeze is intensifying.</strong> With scrap and energy costs rising while buyers resist higher prices, mill margins) particularly for EAF long product producers) are being compressed. IREPAS notes that scrap prices continue to rise, making semi-finished imports more attractive. This signals that some producers are approaching the point where production becomes marginal at current selling prices. If the crisis persists another 4\u20138 weeks, expect capacity shutdowns beyond Turkey.</p>
+<p><strong>Third, the cost-price squeeze is intensifying.</strong> With scrap and energy costs rising while buyers resist higher prices, mill margins (particularly for EAF long product producers) are being compressed. IREPAS notes that scrap prices continue to rise, making semi-finished imports more attractive. This signals that some producers are approaching the point where production becomes marginal at current selling prices. If the crisis persists another 4\u20138 weeks, expect capacity shutdowns beyond Turkey.</p>
 
 <h2>Implications for Indian Steel Professionals</h2>
 
@@ -2572,7 +2572,7 @@ export const articles: Article[] = [
 
 <p><strong>For purchase managers:</strong> Input cost volatility makes fixed-price forward contracts more valuable than spot purchasing in this environment. Lock in coking coal and scrap prices where possible.</p>
 
-<p><strong>For plant engineers and production heads:</strong> If you operate EAF or IF mills, monitor your scrap sourcing mix carefully. The Gulf scrap disruption may persist for weeks. Explore alternative sources) domestic ship-breaking, European origins, or increased sponge iron usage) and model the cost impact.</p>
+<p><strong>For plant engineers and production heads:</strong> If you operate EAF or IF mills, monitor your scrap sourcing mix carefully. The Gulf scrap disruption may persist for weeks. Explore alternative sources (domestic ship-breaking, European origins, or increased sponge iron usage) and model the cost impact.</p>
 
 <p>The months ahead will reward caution, preparation, and intelligence. The steel professionals who navigate this period successfully will be those who see the data clearly, act on it quickly, and avoid the twin traps of panic buying at the top and complacent inaction at the bottom.</p>
 
@@ -2616,7 +2616,7 @@ EMD:                         Unchanged (\u20B91,80,000/MT)</pre>
 
 <p>MOIL has implemented a tiered pricing strategy, with higher percentage increases on lower-grade and speciality products. The structure reveals which segments of the market are under the most acute pressure.</p>
 
-<p>Ferro-grade manganese ore with manganese content of 44% and above) the premium grade used directly in steelmaking and high-grade ferroalloy production) has been increased by <strong>15%</strong>, applied over the base rates prevailing since March 1, 2026.</p>
+<p>Ferro-grade manganese ore with manganese content of 44% and above (the premium grade used directly in steelmaking and high-grade ferroalloy production) has been increased by <strong>15%</strong>, applied over the base rates prevailing since March 1, 2026.</p>
 
 <p>All ferro grades with manganese content below 44% have seen a larger increase of <strong>17.5%</strong>. This differential is significant: it indicates that demand for mid-grade ore, often used by smaller ferroalloy smelters, is tightening faster than premium supply.</p>
 
@@ -2630,7 +2630,7 @@ EMD:                         Unchanged (\u20B91,80,000/MT)</pre>
 
 <p>The catalyst is straightforward. International manganese ore prices have surged approximately <strong>40%</strong> over the past month, driven primarily by supply chain disruptions linked to the ongoing <a href="/articles/hormuz-crisis-steel-impact-india">Hormuz crisis</a> and broader geopolitical instability in the Middle East.</p>
 
-<p>India imports a significant portion of its manganese ore requirements, particularly higher-grade material from South Africa, Australia, and Gabon. While India is a notable manganese producer itself) MOIL operates ten mines across Maharashtra and Madhya Pradesh) domestic production doesn\u2019t fully cover demand, especially for high-grade ferro and chemical specifications.</p>
+<p>India imports a significant portion of its manganese ore requirements, particularly higher-grade material from South Africa, Australia, and Gabon. While India is a notable manganese producer itself (MOIL operates ten mines across Maharashtra and Madhya Pradesh) domestic production doesn\u2019t fully cover demand, especially for high-grade ferro and chemical specifications.</p>
 
 <p>The Hormuz-driven disruptions have compounded pre-existing fragilities in global manganese supply. The market was already sensitive entering 2026: the temporary shutdown of South32\u2019s Groote Eylandt mine in Australia in 2024, which accounted for roughly 15% of global high-grade supply, had demonstrated how quickly manganese prices could spike when concentrated supply sources falter. That episode saw 44% manganese oxide prices surge 22% in a single quarter.</p>
 
@@ -2777,7 +2777,7 @@ Market Sources (April 6, ex-pithead):
 
 <p>The official SEBI filing dated April 5, 2026 sets the Free on Rail (FOR) price for <strong>Baila Lump (65.5% Fe, 10\u201340 mm) at \u20B95,300 per tonne</strong>, and <strong>Baila Fines (64% Fe, below 10 mm) at \u20B94,500 per tonne</strong>. This represents a 10.4% increase on lumps and an 11.1% increase on fines compared to the previous rates. The Baila products are NMDC\u2019s flagship grades, sourced from the Bailadila mines in Chhattisgarh.</p>
 
-<p>Separately, market sources confirmed on April 6 that NMDC increased its higher-grade ore) <strong>lumps with 67% Fe content) by \u20B9550 per MT to \u20B95,900 per MT</strong> on an ex-pithead basis, while fines (64% Fe) were raised by \u20B9450 per MT to \u20B94,500 per MT ex-pithead.</p>
+<p>Separately, market sources confirmed on April 6 that NMDC increased its higher-grade ore (<strong>lumps with 67% Fe content) by \u20B9550 per MT to \u20B95,900 per MT</strong> on an ex-pithead basis, while fines (64% Fe) were raised by \u20B9450 per MT to \u20B94,500 per MT ex-pithead.</p>
 
 <p>These are not conflicting numbers. They represent different grades (65.5% vs 67% Fe) and different pricing bases (FOR vs ex-pithead). The distinction matters for procurement: FOR pricing includes loading onto rail wagons at the mine site, while ex-pithead is the price at the mine gate before any transport. Steel mills must add freight from the mine to their plant on top of either base.</p>
 
@@ -3059,7 +3059,7 @@ March 2026 Sales:      5.90 MT</pre>
 
 <h3>Manufacturing and PLI: The Factory Floor Effect</h3>
 
-<p>The Production Linked Incentive (PLI) schemes) including \u20B96,322 crore specifically for specialty steel) are designed to expand India\u2019s manufacturing base. As global supply chains diversify away from China, India is positioned to capture manufacturing investment in electronics, automotive, defence, and capital goods. Every factory requires structural steel, every production line uses steel components, and every warehouse storing finished goods is a steel structure.</p>
+<p>The Production Linked Incentive (PLI) schemes (including \u20B96,322 crore specifically for specialty steel) are designed to expand India\u2019s manufacturing base. As global supply chains diversify away from China, India is positioned to capture manufacturing investment in electronics, automotive, defence, and capital goods. Every factory requires structural steel, every production line uses steel components, and every warehouse storing finished goods is a steel structure.</p>
 
 <h3>Housing: 100 Million Homes and Counting</h3>
 
@@ -3067,13 +3067,13 @@ March 2026 Sales:      5.90 MT</pre>
 
 <h3>Energy Transition: Green Steel as Demand and Opportunity</h3>
 
-<p>India\u2019s renewable energy buildout) targeting 500 GW by 2030) is itself steel-intensive. Wind turbine towers, solar panel mounting structures, grid transmission infrastructure, and energy storage facilities all require steel. Simultaneously, the global push toward green steel (via hydrogen-based DRI, scrap-based EAF, and renewable energy-powered mills) creates a premium market opportunity for Indian producers who invest early. The <a href="/articles/cbam-indian-steel-exports-2026">EU\u2019s CBAM</a> adds urgency but also strategic value for mills that decarbonise ahead of competitors.</p>
+<p>India\u2019s renewable energy buildout (targeting 500 GW by 2030) is itself steel-intensive. Wind turbine towers, solar panel mounting structures, grid transmission infrastructure, and energy storage facilities all require steel. Simultaneously, the global push toward green steel (via hydrogen-based DRI, scrap-based EAF, and renewable energy-powered mills) creates a premium market opportunity for Indian producers who invest early. The <a href="/articles/cbam-indian-steel-exports-2026">EU\u2019s CBAM</a> adds urgency but also strategic value for mills that decarbonise ahead of competitors.</p>
 
 <h2>The Risks That Could Slow the Story</h2>
 
 <p>No structural thesis is without risks. Several factors could moderate India\u2019s steel demand trajectory, and professionals should monitor them honestly.</p>
 
-<p><strong>Global commodity shocks</strong>) such as the ongoing <a href="/articles/hormuz-crisis-steel-impact-india">Hormuz crisis</a>) can spike input costs and compress margins, potentially slowing capacity investment even as demand remains strong. The crisis has added approximately \u20B92,000\u20133,000 per MT to production costs across multiple inputs simultaneously.</p>
+<p><strong>Global commodity shocks</strong> (such as the ongoing <a href="/articles/hormuz-crisis-steel-impact-india">Hormuz crisis</a>) can spike input costs and compress margins, potentially slowing capacity investment even as demand remains strong. The crisis has added approximately \u20B92,000\u20133,000 per MT to production costs across multiple inputs simultaneously.</p>
 
 <p><strong>Import dependence on coking coal</strong> (85% imported) remains a structural vulnerability. A sustained disruption to Australian or US coal supply could constrain production regardless of demand levels.</p>
 
@@ -3085,7 +3085,7 @@ March 2026 Sales:      5.90 MT</pre>
 
 <h2>What This Means for Steel Professionals Today</h2>
 
-<p>If you are making decisions in India\u2019s steel sector) whether as a mill operator, a trader, a fabricator, or a procurement manager) the structural demand story provides a strategic backdrop that should inform your medium-term thinking.</p>
+<p>If you are making decisions in India\u2019s steel sector (whether as a mill operator, a trader, a fabricator, or a procurement manager) the structural demand story provides a strategic backdrop that should inform your medium-term thinking.</p>
 
 <p><strong>For mill operators and investors:</strong> Capacity investment in India remains fundamentally justified by demand arithmetic. The risks are execution and timing, not demand exhaustion. India is not China in 2015. It is not building capacity into a declining demand environment. It is building capacity to serve a market that is growing 8\u201310% annually and has at least two decades of headroom before approaching global-average per capita consumption.</p>
 
@@ -3216,9 +3216,9 @@ March 2026 Sales:      5.90 MT</pre>
 
 <h3>The Value Capture Plays</h3>
 
-<p>The more strategically significant development) and the one that Indian steel leadership should be watching most carefully) is the arrival of global players who are not building volume capacity at all. They are building value ecosystems.</p>
+<p>The more strategically significant development (and the one that Indian steel leadership should be watching most carefully) is the arrival of global players who are not building volume capacity at all. They are building value ecosystems.</p>
 
-<p>Global specialty steel companies have been steadily establishing processing, distribution, and service centre operations in India. These operations focus on high-value steel segments) electrical steel, tool and die steel, advanced engineering steel, automotive-grade alloys) where margins are multiples of what commodity flat or long products command.</p>
+<p>Global specialty steel companies have been steadily establishing processing, distribution, and service centre operations in India. These operations focus on high-value steel segments (electrical steel, tool and die steel, advanced engineering steel, automotive-grade alloys) where margins are multiples of what commodity flat or long products command.</p>
 
 <p>This pattern matters because it reveals what global steel capital sees in India: not just a market to sell into, but a market where high-end applications are growing rapidly enough to justify localising sophisticated steel processing. India\u2019s automotive sector, defence manufacturing ambitions, renewable energy buildout, and railway modernisation all require steel grades that the domestic industry has historically imported.</p>
 
@@ -3260,7 +3260,7 @@ March 2026 Sales:      5.90 MT</pre>
 
 <p>India\u2019s steel industry has historically been optimised for volume in commodity grades: TMT bar for construction, HRC for general manufacturing, CRC for downstream processing. These are essential products that serve a massive domestic market. But they are also products where margins are thin, cyclical, and largely determined by input costs and competitive intensity rather than by proprietary technology or irreplaceable market position.</p>
 
-<p>The distinction matters because it determines who captures value. In the global steel economy, a tonne of HRC sold at $500 carries a fundamentally different margin structure than a tonne of grain-oriented electrical steel sold at $2,500, or a tonne of aerospace-grade titanium-alloy steel sold at $15,000. The raw material cost might differ by 20\u201330%, but the value added) through metallurgical expertise, precision processing, quality certification, and customer application engineering) differs by orders of magnitude.</p>
+<p>The distinction matters because it determines who captures value. In the global steel economy, a tonne of HRC sold at $500 carries a fundamentally different margin structure than a tonne of grain-oriented electrical steel sold at $2,500, or a tonne of aerospace-grade titanium-alloy steel sold at $15,000. The raw material cost might differ by 20\u201330%, but the value added (through metallurgical expertise, precision processing, quality certification, and customer application engineering) differs by orders of magnitude.</p>
 
 <p>India\u2019s challenge is that its domestic production is overwhelmingly concentrated in the commodity segment. The PLI scheme for specialty steel is designed to change this, and progress is being made. But building deep capability in electrical steel, tool steel, defence-grade armour plate, and nuclear-grade alloys takes time, accumulated technical know-how, and sustained R&amp;D investment, not just government incentives.</p>
 
@@ -3288,7 +3288,7 @@ March 2026 Sales:      5.90 MT</pre>
 
 <p><strong>Second, value chain depth must be built systematically</strong> in electrical steel, tool steel, alloy steel, and specialty grades. The PLI scheme has created the incentive structure. But capability takes time. India needs to pair financial incentives with technology transfer arrangements, R&amp;D collaboration with global metallurgical institutes, and domestic training infrastructure that can produce the metallurgists and process engineers required for high-value production.</p>
 
-<p><strong>Third, an outward-facing steel footprint must be established.</strong> Countries that influence global pricing) Japan, South Korea, Germany) do so partly because their steel companies operate across multiple geographies, giving them both market intelligence and supply flexibility. India\u2019s steel majors remain overwhelmingly domestic in their production footprint. Tata Steel\u2019s European operations are a notable exception, but they have been more of a legacy burden than a strategic asset. A deliberate strategy to establish Indian steel manufacturing or processing capacity in Africa, the Middle East, and Southeast Asia would expand India\u2019s influence over regional pricing and trade flows.</p>
+<p><strong>Third, an outward-facing steel footprint must be established.</strong> Countries that influence global pricing (Japan, South Korea, Germany) do so partly because their steel companies operate across multiple geographies, giving them both market intelligence and supply flexibility. India\u2019s steel majors remain overwhelmingly domestic in their production footprint. Tata Steel\u2019s European operations are a notable exception, but they have been more of a legacy burden than a strategic asset. A deliberate strategy to establish Indian steel manufacturing or processing capacity in Africa, the Middle East, and Southeast Asia would expand India\u2019s influence over regional pricing and trade flows.</p>
 
 <p><strong>Fourth, the industry must transcend commodity thinking.</strong> This is cultural as much as commercial. When Indian steel industry discourse focuses primarily on production tonnage, domestic price parity with imports, and capacity utilisation percentages, it is operating within a commodity mindset. The companies that set global prices operate in a different paradigm, one defined by proprietary grades, locked-in automotive and aerospace supply contracts, and application engineering that makes their products irreplaceable. Moving from \u201csteel is a tonnage business\u201d to \u201csteel is a technology business\u201d is the fundamental mindset shift required.</p>
 
@@ -3302,7 +3302,7 @@ March 2026 Sales:      5.90 MT</pre>
 
 <p>Volume will give India scale. Only value chain control (over resources, technology, specialty production, and global market presence) will give India power.</p>
 
-<p>The next four years will determine which kind of steel nation India becomes. The investments being made today) in capacity, in raw material security, in specialty capability, in green steel technology) will echo through the industry for decades. The question for every steel professional, executive, and policymaker reading this is whether the current trajectory is sufficient, or whether something more ambitious is required.</p>
+<p>The next four years will determine which kind of steel nation India becomes. The investments being made today (in capacity, in raw material security, in specialty capability, in green steel technology) will echo through the industry for decades. The question for every steel professional, executive, and policymaker reading this is whether the current trajectory is sufficient, or whether something more ambitious is required.</p>
 
 <p>Use SteelMath\u2019s <a href="/calculator">calculators</a> to model the economics, read our <a href="/articles">market intelligence</a> to track the developments, and draw your own conclusions. The data is here. The opportunity is real. The gap is measurable. What happens next is a choice.</p>
 
@@ -3484,7 +3484,7 @@ March 2026 Sales:      5.90 MT</pre>
 
 <h3>Transparency Deficit</h3>
 
-<p>Several companies) particularly those in China, Russia, and South Korea) scored poorly on data availability and disclosure quality. Without consistent, verifiable emissions reporting, it is impossible for any external assessment to fully capture operational reality. The scorecard notes this as both a methodological limitation and a finding in itself: companies that do not disclose are, by definition, not demonstrating transition readiness.</p>
+<p>Several companies (particularly those in China, Russia, and South Korea) scored poorly on data availability and disclosure quality. Without consistent, verifiable emissions reporting, it is impossible for any external assessment to fully capture operational reality. The scorecard notes this as both a methodological limitation and a finding in itself: companies that do not disclose are, by definition, not demonstrating transition readiness.</p>
 
 <h3>The Social Dimension</h3>
 
@@ -3614,7 +3614,7 @@ March 2026 Sales:      5.90 MT</pre>
 
 <p>Total national iron ore production reached approximately 305 million tonnes, up from 289 MT in the prior year, according to BigMint estimates. But the headline numbers only tell half the story. The distribution of that growth (who produced it, where, and at what grade) reveals the structural shifts underway.</p>
 
-<p>NMDC Limited, India\u2019s largest iron ore producer and a Miniratna PSU under the Ministry of Steel, achieved record annual production of 53.15 million tonnes, a 21% increase year-on-year. This makes NMDC the first company in Indian mining history to surpass the 50 MT mark in a single fiscal year. March 2026 alone contributed 5.35 MT, a 51% year-on-year jump, with total FY26 sales reaching 50.23 MT. The record was powered by exceptional performance at its Kirandul and Bacheli mines in Chhattisgarh\u2019s Bailadila region) known for producing some of the highest-grade iron ore in India, with Fe content reaching 65.5%) and the Donimalai mines in Karnataka.</p>
+<p>NMDC Limited, India\u2019s largest iron ore producer and a Miniratna PSU under the Ministry of Steel, achieved record annual production of 53.15 million tonnes, a 21% increase year-on-year. This makes NMDC the first company in Indian mining history to surpass the 50 MT mark in a single fiscal year. March 2026 alone contributed 5.35 MT, a 51% year-on-year jump, with total FY26 sales reaching 50.23 MT. The record was powered by exceptional performance at its Kirandul and Bacheli mines in Chhattisgarh\u2019s Bailadila region (known for producing some of the highest-grade iron ore in India, with Fe content reaching 65.5%) and the Donimalai mines in Karnataka.</p>
 
 <p>Odisha Mining Corporation recorded its highest-ever mineral production in FY26 at 44.82 MT across all minerals, with iron ore output reaching 40.02 MT, a 12% year-on-year increase. Revenue reached a record \u20B925,300 crore.</p>
 
@@ -3644,11 +3644,11 @@ March 2026 Sales:      5.90 MT</pre>
 
 <p>India\u2019s steel production rose 11% year-on-year in FY26, reaching 168 million tonnes. Steel consumption increased approximately 7% to 162 MT. This demand growth, combined with the expansion of captive mining by major steelmakers, is systematically pulling iron ore away from the export market and toward domestic consumption.</p>
 
-<p>The pellet export decline is particularly telling. DRI production in India has increased by approximately 9% since early 2025, directly increasing domestic pellet consumption. India\u2019s induction furnace and EAF sector) hundreds of smaller steel producers) relies heavily on pellets and sponge iron. As this sector grows, pellets that previously went to China are being consumed at home, at domestic price realisations that increasingly exceed what the export market offers.</p>
+<p>The pellet export decline is particularly telling. DRI production in India has increased by approximately 9% since early 2025, directly increasing domestic pellet consumption. India\u2019s induction furnace and EAF sector (hundreds of smaller steel producers) relies heavily on pellets and sponge iron. As this sector grows, pellets that previously went to China are being consumed at home, at domestic price realisations that increasingly exceed what the export market offers.</p>
 
 <p>This is the second structural shift: India is transitioning from a \u201cmine-and-export\u201d model to a \u201cmine-and-consume\u201d model. Iron ore is increasingly being retained within the domestic value chain, processed into pellets and fed to Indian steel mills rather than shipped overseas as low-grade fines. The government\u2019s 30% export duty on high-grade ore (above 58% Fe) reinforces this direction at the policy level.</p>
 
-<p>For the global seaborne market, this has implications. India has historically been a swing supplier, particularly of lower-grade fines to China. As domestic absorption rises and exports decline, India\u2019s role as a marginal supplier diminishes. For Indian miners, this means domestic steel demand) not Chinese import appetite) increasingly sets the pricing anchor.</p>
+<p>For the global seaborne market, this has implications. India has historically been a swing supplier, particularly of lower-grade fines to China. As domestic absorption rises and exports decline, India\u2019s role as a marginal supplier diminishes. For Indian miners, this means domestic steel demand (not Chinese import appetite) increasingly sets the pricing anchor.</p>
 
 <h2>Shift Three: Geographic Consolidation. And a New Frontier</h2>
 
@@ -3721,7 +3721,7 @@ March 2026 Sales:      5.90 MT</pre>
 
 <p>Where does the additional ore come from? NMDC\u2019s expansion to 100 MTPA contributes roughly 47 MT of incremental supply. Operationalising auctioned but idle mine blocks (India has auctioned approximately 125 iron ore mines since 2016, but many remain non-operational) is critical. Capacity expansion at existing mines adds further.</p>
 
-<p>But the grade challenge persists. As BigMint noted, \u201cthe depletion of high-grade ore and the tightening in supplies of lumps will be acutely felt by the domestic industry.\u201d This means that even as total ore production grows, the gap between what is produced and what steelmakers need) in terms of grade, not just volume) may actually widen. Beneficiation technology, pelletisation capacity, and slurry pipeline infrastructure become the bridge.</p>
+<p>But the grade challenge persists. As BigMint noted, \u201cthe depletion of high-grade ore and the tightening in supplies of lumps will be acutely felt by the domestic industry.\u201d This means that even as total ore production grows, the gap between what is produced and what steelmakers need (in terms of grade, not just volume) may actually widen. Beneficiation technology, pelletisation capacity, and slurry pipeline infrastructure become the bridge.</p>
 
 <p>For India\u2019s green steel aspirations, the grade question is existential. Hydrogen-based DRI requires high-grade pellets (66\u201367% Fe) that India cannot yet supply at scale from domestic sources. If India is serious about <a href="/articles/cbam-indian-steel-exports-2026">producing green steel for CBAM-compliant export markets</a>, it must solve the high-grade feedstock problem, either through aggressive beneficiation of domestic ore or through strategic imports. See our <a href="/articles/steel-production-cost-india-bf-bof-eaf-2026">steel production cost breakdown</a> for how ore grade affects the full cost equation.</p>
 
@@ -3733,9 +3733,9 @@ March 2026 Sales:      5.90 MT</pre>
 
 <p>But self-sufficiency in volume is not the same as self-sufficiency in quality. India\u2019s reserves include vast quantities of low-grade ore and BHQ that require beneficiation before they can be used in modern steelmaking. The investment in beneficiation plants, pelletisation capacity, and the logistics infrastructure to connect mines to processing facilities and then to steel mills is the unglamorous but essential work that will determine whether India\u2019s iron ore abundance actually translates into steel competitiveness.</p>
 
-<p>The three shifts documented in this analysis) grade improvement, export contraction, and geographic consolidation) are not independent trends. They are facets of a single transformation: India is moving from treating iron ore as a bulk commodity to be mined and sold, to treating it as a strategic resource to be processed, upgraded, and consumed domestically in pursuit of value-added steel production.</p>
+<p>The three shifts documented in this analysis (grade improvement, export contraction, and geographic consolidation) are not independent trends. They are facets of a single transformation: India is moving from treating iron ore as a bulk commodity to be mined and sold, to treating it as a strategic resource to be processed, upgraded, and consumed domestically in pursuit of value-added steel production.</p>
 
-<p>This is the transition from volume mining to value-driven resource strategy. The companies that understand and position for it) NMDC with its expansion and grade focus, Lloyds with its vertically integrated model, Tata Steel with its captive mine efficiency) are the ones that will define India\u2019s steel competitiveness in the next decade.</p>
+<p>This is the transition from volume mining to value-driven resource strategy. The companies that understand and position for it (NMDC with its expansion and grade focus, Lloyds with its vertically integrated model, Tata Steel with its captive mine efficiency) are the ones that will define India\u2019s steel competitiveness in the next decade.</p>
 
 <p>Use SteelMath\u2019s <a href="/calculator">Energy \u2192 Production Cost Calculator</a> to model how iron ore grade, alongside current energy and coking coal prices, affects your total production cost per tonne.</p>
 
@@ -4029,7 +4029,7 @@ March 2026 Sales:      5.90 MT</pre>
 
 <h3>Fittings, Flanges, and Valves: The High-Value Niche</h3>
 
-<p>The connecting hardware) DI fittings, flanged joints, sluice valves, butterfly valves, air valves, and specials) represents a smaller volume but high-value segment. These are precision-manufactured steel and iron products often sourced from specialised foundries and fabricators. JJM has created a sustained order pipeline for this niche segment, supporting hundreds of small and medium manufacturers across India\u2019s industrial clusters.</p>
+<p>The connecting hardware (DI fittings, flanged joints, sluice valves, butterfly valves, air valves, and specials) represents a smaller volume but high-value segment. These are precision-manufactured steel and iron products often sourced from specialised foundries and fabricators. JJM has created a sustained order pipeline for this niche segment, supporting hundreds of small and medium manufacturers across India\u2019s industrial clusters.</p>
 
 <h2>The Market Is Already Responding</h2>
 
@@ -4077,23 +4077,23 @@ March 2026 Sales:      5.90 MT</pre>
 
 <h3>Pipe Manufacturers</h3>
 
-<p>The most direct beneficiaries. DI pipe manufacturers (Jindal SAW, Electrosteel Castings, Srikalahasthi Pipes, Tata Metaliks) are seeing sustained order book growth. MS ERW pipe producers) APL Apollo Tubes, Maharashtra Seamless, Hi-Tech Pipes, Surya Roshni) benefit from distribution network demand. GI pipe manufacturers see steady demand for corrosion-resistant specifications. Large-diameter pipe specialists like Welspun Corp and Man Industries capture the high-value bulk transmission contracts.</p>
+<p>The most direct beneficiaries. DI pipe manufacturers (Jindal SAW, Electrosteel Castings, Srikalahasthi Pipes, Tata Metaliks) are seeing sustained order book growth. MS ERW pipe producers (APL Apollo Tubes, Maharashtra Seamless, Hi-Tech Pipes, Surya Roshni) benefit from distribution network demand. GI pipe manufacturers see steady demand for corrosion-resistant specifications. Large-diameter pipe specialists like Welspun Corp and Man Industries capture the high-value bulk transmission contracts.</p>
 
 <h3>Pump and Equipment Makers</h3>
 
-<p>Every water supply scheme requires submersible pumps, booster pumps, and surface pump sets. Shakti Pumps, Kirloskar Brothers, KSB, and Grundfos (India) are primary beneficiaries. While pumps aren\u2019t steel products, the pump station structures, foundations, and housing consume structural steel and fabricated components. Valve manufacturers) Kirloskar Ferrous, Indian Valve, and dozens of regional foundries) supply the sluice valves, butterfly valves, and air valves essential for network operation.</p>
+<p>Every water supply scheme requires submersible pumps, booster pumps, and surface pump sets. Shakti Pumps, Kirloskar Brothers, KSB, and Grundfos (India) are primary beneficiaries. While pumps aren\u2019t steel products, the pump station structures, foundations, and housing consume structural steel and fabricated components. Valve manufacturers (Kirloskar Ferrous, Indian Valve, and dozens of regional foundries) supply the sluice valves, butterfly valves, and air valves essential for network operation.</p>
 
 <h3>EPC Contractors</h3>
 
-<p>The companies that actually build the water supply schemes drive the steel procurement pipeline. NCC Ltd, Welspun Enterprises, L&T Water and Effluent Treatment, VA Tech Wabag, SPML Infra, and Ion Exchange are among the major EPC players in the water infrastructure segment. Their order books) and their material procurement schedules) are the leading indicators for steel demand timing. When an EPC contractor wins a \u20B9500 crore water supply scheme, the steel procurement typically begins 2\u20133 months before construction starts.</p>
+<p>The companies that actually build the water supply schemes drive the steel procurement pipeline. NCC Ltd, Welspun Enterprises, L&T Water and Effluent Treatment, VA Tech Wabag, SPML Infra, and Ion Exchange are among the major EPC players in the water infrastructure segment. Their order books (and their material procurement schedules) are the leading indicators for steel demand timing. When an EPC contractor wins a \u20B9500 crore water supply scheme, the steel procurement typically begins 2\u20133 months before construction starts.</p>
 
 <h3>Steel Mills and Distributors</h3>
 
-<p>Flat steel producers (JSW, Tata, SAIL) supply the HRC that becomes ERW pipe. Long product producers supply TMT and structural sections for civil works. Pig iron producers (Tata Metaliks, SAIL) supply DI pipe foundries. Regional steel distributors in every state capital serve as the procurement bridge between EPC contractors and steel mills. The geographic distribution of JJM projects) across every state and union territory) means this demand supports local steel distribution networks nationwide.</p>
+<p>Flat steel producers (JSW, Tata, SAIL) supply the HRC that becomes ERW pipe. Long product producers supply TMT and structural sections for civil works. Pig iron producers (Tata Metaliks, SAIL) supply DI pipe foundries. Regional steel distributors in every state capital serve as the procurement bridge between EPC contractors and steel mills. The geographic distribution of JJM projects (across every state and union territory) means this demand supports local steel distribution networks nationwide.</p>
 
 <h2>The Procurement Playbook: How to Position for JJM 2.0</h2>
 
-<p><strong>If you\u2019re a pipe manufacturer:</strong> This is a multi-year demand runway. Invest in capacity) both DI and MS ERW) to capture the accelerated tendering cycle. Your order book visibility has just extended by 33 months (to December 2028) with enhanced funding. Build relationships with EPC contractors who hold the master contracts.</p>
+<p><strong>If you\u2019re a pipe manufacturer:</strong> This is a multi-year demand runway. Invest in capacity (both DI and MS ERW) to capture the accelerated tendering cycle. Your order book visibility has just extended by 33 months (to December 2028) with enhanced funding. Build relationships with EPC contractors who hold the master contracts.</p>
 
 <p><strong>If you\u2019re a steel mill or HRC producer:</strong> The water infrastructure segment is consuming more HRC than most procurement teams realise. Pipe manufacturers are your fastest-growing customer segment right now. Offer annual supply agreements with price variation clauses, the EPC contractors behind the pipe demand have government-backed payment security, making this one of the lowest-risk segments for steel supply.</p>
 
@@ -4337,7 +4337,7 @@ March 2026 Sales:      5.90 MT</pre>
     content: `
 <p>Every steel industry conference talks about construction, automotive, railways, and infrastructure. Almost nobody talks about telecom towers. Yet India\u2019s 730,000-plus tower network (the second largest in the world) represents one of the most consistent, geographically distributed, and crisis-resilient sources of structural steel demand in the country. And unlike construction, which cycles with monsoons and budgets, telecom infrastructure demand is driven by data consumption growth that shows no sign of slowing.</p>
 
-<p>When Bondada Engineering\u2019s subsidiary recently secured a \u20B935.40 crore order from Pratap Technocrats for 40-metre self-supported towers with hardware, foundation bolts, and templates) one contract among many in the company\u2019s \u20B97,385 crore order book) it barely registered as news. Yet orders like these, multiplied across dozens of tower fabricators and EPC companies nationwide, add up to hundreds of thousands of tonnes of galvanised structural steel consumed annually. This is the steel segment that steel professionals should be tracking more carefully.</p>
+<p>When Bondada Engineering\u2019s subsidiary recently secured a \u20B935.40 crore order from Pratap Technocrats for 40-metre self-supported towers with hardware, foundation bolts, and templates (one contract among many in the company\u2019s \u20B97,385 crore order book) it barely registered as news. Yet orders like these, multiplied across dozens of tower fabricators and EPC companies nationwide, add up to hundreds of thousands of tonnes of galvanised structural steel consumed annually. This is the steel segment that steel professionals should be tracking more carefully.</p>
 
 <div style="background: linear-gradient(135deg, #0a1628, #132244); border: 1px solid rgba(0, 212, 255, 0.3); border-radius: 12px; padding: 24px; margin: 24px 0;">
 <h4 style="color: #00d4ff; margin: 0 0 16px 0; font-size: 1.1rem;">\uD83D\uDCCA INDIA\u2019S TELECOM TOWER STEEL DEMAND \u2014 KEY NUMBERS</h4>
@@ -4368,7 +4368,7 @@ March 2026 Sales:      5.90 MT</pre>
 
 <p>For taller structures (60 metres and above) and heavy-duty towers designed to carry multiple operators\u2019 equipment plus 5G antennas, the steel consumption can reach 12\u201315 tonnes per tower. These heavier towers require larger angle sections, thicker base plates, and more substantial foundations.</p>
 
-<p>The total weight of a tower installation) including the tower body, foundation reinforcement, and all hardware) can be verified using SteelMath\u2019s <a href="/calculator">Steel Weight Calculator</a>, which supports angle sections, plates, round bars, and pipe sections used in tower construction. For <a href="/articles/steel-angle-weight-chart-sizes-formula">angle section weights specifically</a>, the calculator covers all IS 808 standard sizes commonly used in tower fabrication.</p>
+<p>The total weight of a tower installation (including the tower body, foundation reinforcement, and all hardware) can be verified using SteelMath\u2019s <a href="/calculator">Steel Weight Calculator</a>, which supports angle sections, plates, round bars, and pipe sections used in tower construction. For <a href="/articles/steel-angle-weight-chart-sizes-formula">angle section weights specifically</a>, the calculator covers all IS 808 standard sizes commonly used in tower fabrication.</p>
 
 <div style="background: linear-gradient(135deg, #0a1628, #132244); border: 1px solid rgba(0, 229, 160, 0.3); border-radius: 12px; padding: 24px; margin: 24px 0; text-align: center;">
 <h4 style="color: #00e5a0; margin: 0 0 8px 0; font-size: 1.1rem;">\uD83D\uDCD0 CALCULATE TOWER COMPONENT WEIGHTS</h4>
@@ -4386,7 +4386,7 @@ March 2026 Sales:      5.90 MT</pre>
 
 <h2>Three Demand Drivers Sustaining Tower Steel Consumption</h2>
 
-<p>The narrative that India\u2019s tower demand is \u201Cslowing down\u201D requires nuance. While the major 5G macro-tower rollout phase by Reliance Jio and Bharti Airtel is largely complete) 5G BTS additions dropped to approximately 8,000 in FY2025 from 141,000 in FY2023) three factors sustain meaningful ongoing steel demand.</p>
+<p>The narrative that India\u2019s tower demand is \u201Cslowing down\u201D requires nuance. While the major 5G macro-tower rollout phase by Reliance Jio and Bharti Airtel is largely complete (5G BTS additions dropped to approximately 8,000 in FY2025 from 141,000 in FY2023) three factors sustain meaningful ongoing steel demand.</p>
 
 <h3>1. BSNL\u2019s 100,000-Tower Programme</h3>
 
@@ -4501,7 +4501,7 @@ March 2026 Sales:      5.90 MT</pre>
 
 <p>Approximately 60 million tonnes of annual limestone imports from the Gulf (primarily the ultra-low-silica material that India\u2019s blast furnaces require as flux) are effectively stranded as Hormuz shipping remains paralysed. Indian integrated steel producers, led by SAIL, Tata Steel, and JSW, are urgently redirecting procurement to domestic sources, and one mining operation in the Thar Desert has suddenly become India\u2019s most strategically important quarry: RSMM\u2019s Sanu Limestone Unit in Jaisalmer, Rajasthan.</p>
 
-<p>March 2026 dispatches from Jaisalmer surged to 86 rakes) a 43% jump from the normal 60) as mills raced to secure flux supply. But this emergency pivot comes at a cost: domestic limestone lands at approximately \u20B93,900 per tonne at steel plant gates, compared to \u20B93,100 per tonne for Gulf-origin material under normal conditions. That \u20B9800 per tonne premium, multiplied across millions of tonnes of annual consumption, adds yet another layer of cost inflation to an industry already reeling from elevated energy, coking coal, manganese, and freight costs.</p>
+<p>March 2026 dispatches from Jaisalmer surged to 86 rakes (a 43% jump from the normal 60) as mills raced to secure flux supply. But this emergency pivot comes at a cost: domestic limestone lands at approximately \u20B93,900 per tonne at steel plant gates, compared to \u20B93,100 per tonne for Gulf-origin material under normal conditions. That \u20B9800 per tonne premium, multiplied across millions of tonnes of annual consumption, adds yet another layer of cost inflation to an industry already reeling from elevated energy, coking coal, manganese, and freight costs.</p>
 
 <div style="background: linear-gradient(135deg, rgba(0, 212, 255, 0.08), rgba(0, 229, 160, 0.08)); border: 1px solid rgba(0, 212, 255, 0.25); border-radius: 12px; padding: 24px; margin: 28px 0;">
 <p style="color: #00d4ff; font-weight: 700; font-size: 1.1em; margin-bottom: 16px;">\uD83D\uDCCA LIMESTONE SUPPLY SNAPSHOT. April 2026</p>
@@ -4520,9 +4520,9 @@ March 2026 Sales:      5.90 MT</pre>
 
 <p>Limestone\u2019s role in steelmaking is fundamental and irreplaceable. In a blast furnace, iron ore is reduced to molten iron using coke as both a fuel and a reducing agent. But iron ore contains impurities (primarily silica (SiO\u2082) and alumina (Al\u2082O\u2083)) that must be removed for the steel to meet quality specifications.</p>
 
-<p>This is where limestone enters. When limestone (calcium carbonate, CaCO\u2083) is charged into the blast furnace along with iron ore and coke, it decomposes at high temperature into calcium oxide (CaO)) known as quicklime) and carbon dioxide. The calcium oxide then reacts chemically with silica and alumina impurities to form a molten slag that separates from the iron and is tapped off.</p>
+<p>This is where limestone enters. When limestone (calcium carbonate, CaCO\u2083) is charged into the blast furnace along with iron ore and coke, it decomposes at high temperature into calcium oxide (CaO) (known as quicklime) and carbon dioxide. The calcium oxide then reacts chemically with silica and alumina impurities to form a molten slag that separates from the iron and is tapped off.</p>
 
-<p>Without adequate flux, impurities remain in the metal, producing off-grade steel with inferior mechanical properties. The quality of the limestone) specifically its silica content, calcium content, and decrepitation index (resistance to breakage during heating)) directly affects blast furnace efficiency, coke consumption rates, and final steel quality.</p>
+<p>Without adequate flux, impurities remain in the metal, producing off-grade steel with inferior mechanical properties. The quality of the limestone (specifically its silica content, calcium content, and decrepitation index (resistance to breakage during heating)) directly affects blast furnace efficiency, coke consumption rates, and final steel quality.</p>
 
 <p>This is why steel-grade limestone is a specialised commodity. Not all limestone will do. Indian blast furnace operators require limestone with very low silica content (typically below 2\u20134%) and high calcium carbonate content (above 90%). Such specifications narrow the field of acceptable sources dramatically, which is exactly why India developed a dependence on Gulf imports in the first place.</p>
 
@@ -4647,7 +4647,7 @@ March 2026 Sales:      5.90 MT</pre>
 <h2>Frequently Asked Questions</h2>
 
 <h3>Why do steel mills need limestone?</h3>
-<p>Limestone (calcium carbonate) is an essential flux material in blast furnace steelmaking. It chemically removes impurities) silica and alumina) from iron ore during the smelting process by forming slag. Low-silica limestone is critical for efficient blast furnace operations and high-quality steel output. Indian integrated mills consume millions of tonnes of flux-grade limestone annually.</p>
+<p>Limestone (calcium carbonate) is an essential flux material in blast furnace steelmaking. It chemically removes impurities (silica and alumina) from iron ore during the smelting process by forming slag. Low-silica limestone is critical for efficient blast furnace operations and high-quality steel output. Indian integrated mills consume millions of tonnes of flux-grade limestone annually.</p>
 
 <h3>How much limestone does India import from the Gulf?</h3>
 <p>India imports approximately 60 million tonnes of limestone annually, with a substantial portion sourced from the Gulf, particularly from Stevin Rock LLC\u2019s quarries in Ras Al Khaimah, UAE. SAIL alone procures approximately 2.5 million tonnes of low-silica limestone from the UAE each year, according to the Ministry of Steel. Other integrated producers including Tata Steel and JSW also source from the Gulf.</p>
@@ -4761,19 +4761,19 @@ Sulphur exports at risk: ~50% of global (Linesight)</p>
 
 <p>Global construction consultancy Linesight has issued a blunt assessment of the crisis\u2019s impact on construction material markets. In its analysis, Linesight noted that this crisis \u201Cis not about a single event, it is the accumulation of energy volatility, constrained logistics and geopolitical risk across multiple routes.\u201D</p>
 
-<p>Linesight specifically flagged aluminium as facing especially large impact, given that Gulf countries produce approximately 9% of global supply predominantly for export while relying on imports of bauxite and alumina to produce it. The entire Gulf aluminium value chain) from imported raw materials to exported finished metal) runs through the same disrupted logistics corridors.</p>
+<p>Linesight specifically flagged aluminium as facing especially large impact, given that Gulf countries produce approximately 9% of global supply predominantly for export while relying on imports of bauxite and alumina to produce it. The entire Gulf aluminium value chain (from imported raw materials to exported finished metal) runs through the same disrupted logistics corridors.</p>
 
 <p>But the warning extends beyond aluminium. Linesight noted that the war has put \u201Cnearly half of global sulphur exports at risk.\u201D Sulphur is a critical input for copper smelting, copper smelters require sulphuric acid for the leaching process. If sulphur supply is constrained, copper production faces potential shortages, creating a tertiary supply chain impact that extends well beyond the primary metals directly involved in the conflict.</p>
 
 <p>The most operationally urgent takeaway from Linesight\u2019s assessment is the compression of price validity periods. Under normal market conditions, material suppliers provide price quotes valid for 30 days. In the current environment, validity periods have compressed dramatically (some as short as 7 days) because suppliers cannot guarantee input costs, freight rates, or even physical availability beyond the very near term. For construction procurement teams accustomed to planning on monthly or quarterly procurement cycles, this compression fundamentally changes how projects are managed.</p>
 
-<p>Travis Perkins, one of the UK\u2019s largest building material suppliers, has confirmed that manufacturing suppliers are implementing energy surcharges and price increases to offset energy cost rises. If construction material cost escalation is reaching the UK) thousands of miles from the conflict zone) the impact on GCC construction, situated at the epicentre, is orders of magnitude more severe.</p>
+<p>Travis Perkins, one of the UK\u2019s largest building material suppliers, has confirmed that manufacturing suppliers are implementing energy surcharges and price increases to offset energy cost rises. If construction material cost escalation is reaching the UK (thousands of miles from the conflict zone) the impact on GCC construction, situated at the epicentre, is orders of magnitude more severe.</p>
 
 <h2>The Cascading Impact: Energy, Freight, and Materials Simultaneously</h2>
 
 <p>What makes this crisis uniquely destructive for construction supply chains is the simultaneity of three disruptions that typically occur independently:</p>
 
-<p><strong>Energy costs</strong> have surged because the Strait of Hormuz carries one-fifth of global oil and LNG supply. Brent crude has risen over 30% since February. Natural gas prices in Europe doubled in the first week of the crisis. Every energy-intensive production process) steel, aluminium, cement, glass) is more expensive to operate. This feeds into the <a href="/articles/hormuz-crisis-steel-impact-india">cumulative cost pressure on steel production</a> that has driven four rounds of mill price hikes since March 1.</p>
+<p><strong>Energy costs</strong> have surged because the Strait of Hormuz carries one-fifth of global oil and LNG supply. Brent crude has risen over 30% since February. Natural gas prices in Europe doubled in the first week of the crisis. Every energy-intensive production process (steel, aluminium, cement, glass) is more expensive to operate. This feeds into the <a href="/articles/hormuz-crisis-steel-impact-india">cumulative cost pressure on steel production</a> that has driven four rounds of mill price hikes since March 1.</p>
 
 <p><strong>Freight and logistics</strong> are disrupted because the primary shipping route for Gulf-sourced materials is closed. The <a href="/articles/freight-cost-rerouting-india">rerouting via the Cape of Good Hope</a> adds 20+ days and $15\u201325 per tonne. War risk insurance premiums have made direct Gulf transit economically unviable for most commercial operators. Materials that are physically available in Gulf warehouses cannot be moved efficiently to either domestic construction sites or export customers.</p>
 
@@ -4803,7 +4803,7 @@ Sulphur exports at risk: ~50% of global (Linesight)</p>
 
 <p>This means the global metals industry is operating with structurally reduced capacity for at least the next 12\u201318 months. The supply gap will support elevated prices for aluminium, semi-finished steel, and downstream construction materials throughout this period. Projects budgeted at pre-crisis material costs face significant overruns.</p>
 
-<p>The insurance and investment implications are equally lasting. The precedent of targeting industrial infrastructure) smelters, steel plants, refineries) in interstate conflict changes the risk calculus for every metal production facility in the Middle East. Future investment in Gulf industrial capacity will carry a geopolitical risk premium that didn\u2019t exist six months ago. Diversification of production) towards India, Southeast Asia, Africa) becomes a strategic imperative for the global metals industry.</p>
+<p>The insurance and investment implications are equally lasting. The precedent of targeting industrial infrastructure (smelters, steel plants, refineries) in interstate conflict changes the risk calculus for every metal production facility in the Middle East. Future investment in Gulf industrial capacity will carry a geopolitical risk premium that didn\u2019t exist six months ago. Diversification of production (towards India, Southeast Asia, Africa) becomes a strategic imperative for the global metals industry.</p>
 
 <h2>What Procurement Leaders Should Do Now</h2>
 
@@ -4921,7 +4921,7 @@ Sulphur exports at risk: ~50% of global (Linesight)</p>
 
 <p>As of March 31, 2024, RINL\u2019s balance sheet showed a negative net worth of \u20B94,538 crore. For a company that had once been a Navratna (one of the Government of India\u2019s most prestigious public sector designations) this was a devastating financial position. Current liabilities far exceeded current assets. The company had exhausted its bank borrowing limits entirely. It had defaulted on certain loan repayments and interest obligations, triggering a cascade of credit rating downgrades and further restricting access to working capital.</p>
 
-<p>The operational situation was equally dire. Without working capital to purchase coking coal) the most expensive input for an integrated steel plant) RINL couldn\u2019t keep its blast furnaces running. Since February 2022, the plant had been operating with only one or two of its three blast furnaces, with BF #1 and BF #3 periodically shut down due to raw material shortages. Production plunged. Revenue fell. Losses mounted. The fixed costs of maintaining a 33,000-acre industrial complex with over 18,000 direct employees continued regardless.</p>
+<p>The operational situation was equally dire. Without working capital to purchase coking coal (the most expensive input for an integrated steel plant) RINL couldn\u2019t keep its blast furnaces running. Since February 2022, the plant had been operating with only one or two of its three blast furnaces, with BF #1 and BF #3 periodically shut down due to raw material shortages. Production plunged. Revenue fell. Losses mounted. The fixed costs of maintaining a 33,000-acre industrial complex with over 18,000 direct employees continued regardless.</p>
 
 <p>The total outstanding bank loans exceeded \u20B920,000 crore, with SBI alone having extended \u20B96,400 crore. Interest rates on the company\u2019s borrowings had climbed to 14\u201315%, reflecting the banks\u2019 assessment of credit risk. At those rates, RINL\u2019s annual interest burden alone was approximately \u20B92,800\u20133,000 crore, a sum that no steel plant operating at 45% capacity could hope to service.</p>
 
@@ -4957,7 +4957,7 @@ Sulphur exports at risk: ~50% of global (Linesight)</p>
 
 <p>Getting blast furnaces back to optimal performance after extended shutdowns is not simply a matter of turning them on. The refractory linings deteriorate during banking periods. Cooling systems need inspection and repair. Auxiliary systems (gas cleaning, stock house, cast house, hot blast stoves) all require recommissioning. The fact that RINL achieved this across all three furnaces within approximately 12 months of the funding release reflects competent execution by the plant\u2019s technical teams.</p>
 
-<p>The production ramp-up was rapid. Daily hot metal production climbed from 9,215 tonnes in Q2 FY25 to 19,401 tonnes by January 2026. The capacity utilisation trajectory) from roughly 45% to 94%) exceeded even the original revival plan\u2019s target of 92.5% within 18\u201324 months. RINL achieved it in approximately 12 months. Track the pricing environment driving RINL\u2019s improved margins in our <a href="/articles/steel-price-hike-tracker-march-2026">Steel Price Hike Tracker</a>.</p>
+<p>The production ramp-up was rapid. Daily hot metal production climbed from 9,215 tonnes in Q2 FY25 to 19,401 tonnes by January 2026. The capacity utilisation trajectory (from roughly 45% to 94%) exceeded even the original revival plan\u2019s target of 92.5% within 18\u201324 months. RINL achieved it in approximately 12 months. Track the pricing environment driving RINL\u2019s improved margins in our <a href="/articles/steel-price-hike-tracker-march-2026">Steel Price Hike Tracker</a>.</p>
 
 <p>Support from other PSU entities played a role. NMDC provided raw material supply support (iron ore), and SAIL contributed marketing and sales assistance. SBI, which took over as lead lender from Union Bank of India in January 2025, approved a restructuring plan that lowered margin money requirements and reduced interest rates from 14\u201315% towards below 9%. This reduced RINL\u2019s annual interest burden by several hundred crore, directly improving operating cash flow.</p>
 
@@ -4985,7 +4985,7 @@ Sulphur exports at risk: ~50% of global (Linesight)</p>
 
 <p>This structural challenge intersects with the broader <a href="/articles/jaisalmer-limestone-steel-mills-gulf-imports-stranded-hormuz-2026">raw material supply chain disruptions</a> and the <a href="/articles/steel-production-cost-india-bf-bof-eaf-2026">India\u2019s steel production cost breakdown</a>. While RINL\u2019s iron ore comes domestically (unaffected by Hormuz), its coking coal is partially imported and subject to the same freight and cost pressures affecting all Indian integrated mills. The <a href="/articles/moil-manganese-ore-price-hike-april-2026-steel-impact">MOIL manganese ore price hike</a> of 15\u201317.5% also adds to RINL\u2019s input costs.</p>
 
-<p>For RINL to achieve long-term sustainability) not just crisis-funded survival) securing captive iron ore is essential. Whether through mine allocation, a joint venture with NMDC, or acquisition of mining rights, this is the single most important strategic issue for the company\u2019s future.</p>
+<p>For RINL to achieve long-term sustainability (not just crisis-funded survival) securing captive iron ore is essential. Whether through mine allocation, a joint venture with NMDC, or acquisition of mining rights, this is the single most important strategic issue for the company\u2019s future.</p>
 
 <h2>What RINL\u2019s Revival Means for India\u2019s 300 MTPA Steel Target</h2>
 
@@ -5017,7 +5017,7 @@ Sulphur exports at risk: ~50% of global (Linesight)</p>
 
 <p><strong>For procurement managers:</strong> RINL\u2019s improving credit rating and stable production make it a more reliable supplier than it has been in recent years. If you had moved away from RINL sourcing during the crisis, this may be the time to re-evaluate. Government-backed capacity with stable production offers supply security that purely private sources may not during volatile market conditions.</p>
 
-<p><strong>For policy analysts and industry strategists:</strong> the RINL model) government equity support combined with debt restructuring and operational management improvement) is a template that could be applied to other stressed PSU industrial assets. The political economy of the revival (Centre-State coordination, coalition dynamics, regional identity) is as instructive as the financial mechanics.</p>
+<p><strong>For policy analysts and industry strategists:</strong> the RINL model (government equity support combined with debt restructuring and operational management improvement) is a template that could be applied to other stressed PSU industrial assets. The political economy of the revival (Centre-State coordination, coalition dynamics, regional identity) is as instructive as the financial mechanics.</p>
 
 <p><strong>For Vizag\u2019s steel community:</strong> this turnaround is your victory. The protests that stopped privatisation, the workers who kept the plant operational during the darkest months, and the political pressure that secured \u20B919,537 crore in funding, these are the inputs that don\u2019t appear on any balance sheet but without which no financial package would have mattered.</p>
 
@@ -5983,7 +5983,7 @@ At k = 0.95: D/t = 40.0, very thin, buckling is the primary failure mode.</p>
 <li><strong>J ratio derivation at equal mass:</strong> (1+k\u00B2)/(1\u2212k\u00B2), algebraic derivation verified by hand calculation at k = 0.5, 0.7, 0.8, 0.9</li>
 <li><strong>Specific values:</strong> k=0.7 \u2192 2.922\u00D7, k=0.8 \u2192 4.556\u00D7, verified to 3 decimal places</li>
 <li><strong>OD ratio:</strong> 1/\u221A(1\u2212k\u00B2) (k=0.7 \u2192 1.400\u00D7, k=0.8 \u2192 1.667\u00D7) verified</li>
-<li><strong>D/t ratio:</strong> 2/(1\u2212k)) k=0.7 \u2192 6.67, k=0.8 \u2192 10.0) verified</li>
+<li><strong>D/t ratio:</strong> 2/(1\u2212k) (k=0.7 \u2192 6.67, k=0.8 \u2192 10.0) verified</li>
 <li><strong>Cross-section area at r=0.1R:</strong> \u03C0r\u00B2/\u03C0R\u00B2 = 0.01 = 1%, verified</li>
 <li><strong>Shear stress distribution:</strong> \u03C4 = T\u03C1/J, standard torsion formula (Timoshenko)</li>
 <li><strong>IS 800:2007 CHS classification:</strong> D/t \u2264 44\u03B5\u00B2 for Class 1 (plastic) sections</li>
@@ -6308,9 +6308,9 @@ At k = 0.95: D/t = 40.0, very thin, buckling is the primary failure mode.</p>
 
 <p>The <strong>EAF (Electric Arc Furnace) route</strong> accounted for approximately 32.2 million tonnes, about 19% of output. EAFs melt scrap and DRI using electric power, and are the primary vehicle for scrap consumption in India\u2019s organised sector. However, unlike US and EU EAFs that run on 90\u2013100% scrap, most Indian EAFs operate on mixed charges of 40\u201360% scrap and 40\u201360% DRI.</p>
 
-<p>The <strong>IF (Induction Furnace) route</strong> (India\u2019s vast, geographically dispersed secondary steel ecosystem) produced approximately 64.3 million tonnes, a remarkable 38% of national output. This is the sector that most policy discussions underappreciate. Induction furnaces operate across hundreds of clusters) Raipur, Mandi Gobindgarh, Muzaffarnagar, Jalna, Bhavnagar, Salem, and more) employing millions and producing the TMT bars, wire rods, and structural steel that build India\u2019s houses, bridges, and roads.</p>
+<p>The <strong>IF (Induction Furnace) route</strong> (India\u2019s vast, geographically dispersed secondary steel ecosystem) produced approximately 64.3 million tonnes, a remarkable 38% of national output. This is the sector that most policy discussions underappreciate. Induction furnaces operate across hundreds of clusters (Raipur, Mandi Gobindgarh, Muzaffarnagar, Jalna, Bhavnagar, Salem, and more) employing millions and producing the TMT bars, wire rods, and structural steel that build India\u2019s houses, bridges, and roads.</p>
 
-<p>The IF sector, along with smaller EAF producers, is where India\u2019s scrap story truly plays out. These producers don\u2019t operate blast furnaces. They don\u2019t have captive iron ore mines. Their metallics) the raw material they melt to make steel) come from two sources only: steel scrap and sponge iron (DRI). And the balance between these two inputs is the axis on which India\u2019s entire metallics economy rotates.</p>
+<p>The IF sector, along with smaller EAF producers, is where India\u2019s scrap story truly plays out. These producers don\u2019t operate blast furnaces. They don\u2019t have captive iron ore mines. Their metallics (the raw material they melt to make steel) come from two sources only: steel scrap and sponge iron (DRI). And the balance between these two inputs is the axis on which India\u2019s entire metallics economy rotates.</p>
 
 <div class="glass-panel p-5 my-6">
 <h3 class="text-white font-bold text-sm mb-3">INDIA STEEL PRODUCTION \u2014 FY2025-26 (JPC Data)</h3>
@@ -6371,13 +6371,13 @@ At k = 0.95: D/t = 40.0, very thin, buckling is the primary failure mode.</p>
 
 <p><strong>Steel Majors</strong> (the integrated producers) accounted for 96,469 thousand tonnes (57%) of crude steel, produced 89,753 thousand tonnes of hot metal, but generated only 15,270 thousand tonnes of DRI. They are overwhelmingly blast furnace operators. Their metallics are dominated by hot metal from iron ore, supplemented by purchased scrap and modest captive DRI.</p>
 
-<p><strong>The remaining producers</strong>) the secondary sector) accounted for 72,758 thousand tonnes (43%) of crude steel but produced only 6,756 thousand tonnes of hot metal (a fraction of the majors) while generating 45,034 thousand tonnes of DRI. This means the secondary sector produces <strong>75% of India\u2019s total DRI output</strong>.</p>
+<p><strong>The remaining producers</strong> (the secondary sector) accounted for 72,758 thousand tonnes (43%) of crude steel but produced only 6,756 thousand tonnes of hot metal (a fraction of the majors) while generating 45,034 thousand tonnes of DRI. This means the secondary sector produces <strong>75% of India\u2019s total DRI output</strong>.</p>
 
-<p>This is the structural reality beneath the aggregate numbers: India\u2019s secondary steel sector) which produces 43% of the nation\u2019s steel and employs the vast majority of the industry\u2019s workforce) runs almost entirely on scrap and DRI. It has negligible access to hot metal. Its entire business model depends on the availability and affordability of these two metallics.</p>
+<p>This is the structural reality beneath the aggregate numbers: India\u2019s secondary steel sector (which produces 43% of the nation\u2019s steel and employs the vast majority of the industry\u2019s workforce) runs almost entirely on scrap and DRI. It has negligible access to hot metal. Its entire business model depends on the availability and affordability of these two metallics.</p>
 
 <p>When scrap prices spike (as they did during the <a href="/articles/hormuz-crisis-steel-impact-india">Hormuz crisis</a>, with domestic HMS prices rising \u20B91,500\u20132,000 per MT), the secondary sector feels it first and hardest. When DRI prices rise (as they have with the <a href="/articles/moil-manganese-ore-price-hike-april-2026-steel-impact">MOIL manganese ore hike</a> feeding into ferroalloy costs), the pressure compounds. The major integrated producers, insulated by their hot metal self-sufficiency, can absorb these cost swings far more easily.</p>
 
-<p>This asymmetry) 57% of production insulated from scrap economics, 43% fully exposed to it) is the defining structural feature of India\u2019s steel industry. And it is getting more pronounced, not less, as the secondary sector grows to meet India\u2019s construction and infrastructure demand.</p>
+<p>This asymmetry (57% of production insulated from scrap economics, 43% fully exposed to it) is the defining structural feature of India\u2019s steel industry. And it is getting more pronounced, not less, as the secondary sector grows to meet India\u2019s construction and infrastructure demand.</p>
 
 <h2>Three Structural Realities the Industry Must Confront</h2>
 
@@ -6403,7 +6403,7 @@ At k = 0.95: D/t = 40.0, very thin, buckling is the primary failure mode.</p>
 
 <p>This is a balance-of-payments story that will eventually demand policy attention. India already spends over $150 billion annually on crude oil imports. Adding $5\u20138 billion for steel scrap (a raw material that, unlike oil, India could theoretically generate domestically) would be a significant and growing line item in the current account deficit.</p>
 
-<p>The <a href="/articles/hormuz-crisis-steel-impact-india">Hormuz crisis</a> has already demonstrated the supply vulnerability of this import dependence. The UAE) India\u2019s largest scrap supplier at 26% of imports) ships through the very Gulf routes that were disrupted. Business Standard reported that India\u2019s ferrous scrap imports during April\u2013October 2025 climbed 45% year-on-year to 5.7 million tonnes, reflecting pre-crisis restocking, but the February\u2013March 2026 disruption likely constrained full-year volumes. Any extended disruption to Gulf shipping directly threatens the metallics supply to thousands of Indian induction furnaces.</p>
+<p>The <a href="/articles/hormuz-crisis-steel-impact-india">Hormuz crisis</a> has already demonstrated the supply vulnerability of this import dependence. The UAE (India\u2019s largest scrap supplier at 26% of imports) ships through the very Gulf routes that were disrupted. Business Standard reported that India\u2019s ferrous scrap imports during April\u2013October 2025 climbed 45% year-on-year to 5.7 million tonnes, reflecting pre-crisis restocking, but the February\u2013March 2026 disruption likely constrained full-year volumes. Any extended disruption to Gulf shipping directly threatens the metallics supply to thousands of Indian induction furnaces.</p>
 
 <p>The Vehicle Scrappage Policy and Steel Scrap Recycling Policy 2019 were designed to address part of this gap. Their implementation has been inadequate. As of 2025, fewer than 50 authorised vehicle scrapping centres were operational nationwide. India has approximately 300 million registered vehicles, with an estimated 30\u201340 million beyond their useful life. At 800\u20131,200 kg of recoverable steel per vehicle, this represents 24\u201348 MT of scrap locked in vehicles that should have been retired.</p>
 
