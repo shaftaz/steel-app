@@ -6489,6 +6489,70 @@ At k = 0.95: D/t = 40.0, very thin, buckling is the primary failure mode.</p>
 <p><strong>Related on SteelMath:</strong> <a href="/articles/steel-production-cost-india-bf-bof-eaf-2026">Steel Production Cost Breakdown</a> &middot; <a href="/articles/cbam-indian-steel-exports-2026">CBAM Impact on Indian Steel</a> &middot; <a href="/articles/hormuz-crisis-steel-impact-india">Hormuz Crisis Impact</a> &middot; <a href="/articles/steel-scrap-grades-classification-guide">Steel Scrap Grades Guide</a> &middot; <a href="/calculators/scrap-yield">Scrap Yield Calculator</a> &middot; <a href="/calculators/scrap-production-cost">Production Cost Calculator</a></p>
 `,
   },
+  {
+    slug: "indian-steel-industry-challenges",
+    title:
+      "India Can Build the Capacity. Can It Build the Competitiveness?",
+    category: "ANALYSIS",
+    categoryColor: "blue",
+    date: "2026-08-02",
+    readTime: "6 min",
+    excerpt:
+      "India’s steel output is growing ~9% a year, but ore quality, coking coal imports and low R&D threaten the 230 MT goal. The nine constraints, explained.",
+    metaTitle: "Challenges for the Indian Steel Industry: The Road to 2030",
+    metaDescription:
+      "India’s steel output is growing ~9% a year, but ore quality, coking coal imports and low R&D threaten the 230 MT goal. The nine constraints, explained.",
+    relatedCalculators: ["scrap-yield", "scrap-production-cost"],
+    content: `
+<p><strong>Executive summary:</strong> Between FY22 and FY26, India grew crude steel capacity at 9.5% CAGR, production at 8.9%, and finished steel consumption at 11.6%, a scale-up few economies have ever matched. Yet specific energy consumption and CO₂ intensity showed no visible improvement over the same period. That contrast defines the decade ahead: the targets of 230 million tonnes of finished steel production by 2030 and over 400 MT by 2047 are not primarily construction problems, but competitiveness problems. Nine structural constraints stand between today’s momentum and those goals, and they cluster into three gates: inputs, structure, and markets.</p>
+
+<p>The headline numbers read like an unqualified success story. Capacity compounding at 9.5% a year, consumption growing even faster at 11.6%, and a <a href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2258028&amp;reg=3&amp;lang=1" target="_blank" rel="noopener">national trajectory toward 300 MT of capacity</a> that would make India a clear and growing second in world steel. The uncomfortable subtext: energy consumed per tonne and CO₂ emitted per tonne have not visibly improved. India is adding scale faster than it is adding efficiency, and in a world of <a href="/cbam">carbon border taxes</a> and cost-driven trade wars, efficiency is where competitiveness now lives.</p>
+
+<p>The nine widely recognized constraints on the industry sort into three gates. A gate, unlike a hurdle, does not care how fast you are running when you reach it.</p>
+
+<h2>Gate 1: Inputs, the raw-material squeeze</h2>
+
+<p><strong>Iron ore is getting worse, and dearer.</strong> High-grade ore accounted for only about 11% of production in FY26, and average quality continues to deteriorate. Lower ore grades feed directly into higher coke rates and lower blast-furnace productivity, a chemistry problem that becomes a cost problem. Layer on aggressive auction premiums, royalties, and taxes, and Indian mills pay more for progressively poorer ore in a country that was long assumed to be ore-secure. Lately, India has even begun importing iron ore units it once exported.</p>
+
+<p><strong>Coking coal is a strategic exposure, not a procurement line.</strong> India imports 85–90% of its coking coal requirement, and with blast furnaces expected to operate well past 2050, this dependence is a multi-decade fact. Every disruption channel runs through it: freight volatility, geopolitical risk, and violently cyclical international prices. The domestic alternative is limited by geology: the ash content of domestic washed coking coal runs nearly double that of imported coal, which means more slag, more energy, less metal.</p>
+
+<p><strong>Scrap is scarce exactly when it is needed most.</strong> The <a href="/calculators/scrap-yield">scrap-based route</a> is the fastest lever for cutting emissions intensity, but domestic scrap availability is limited by India’s young capital stock, and a growing list of countries has banned or restricted scrap exports. The practical consequence: Indian EAFs typically charge 40–50% hot metal, importing the blast furnace’s carbon footprint into the “cleaner” route.</p>
+
+<p><strong>The alloy basket is import-dependent too.</strong> High-grade limestone, <a href="/articles/moil-manganese-ore-price-hike-april-2026-steel-impact">manganese ore</a>, fluorspar, magnesite, chromite, nickel (the inputs that make special steels possible) are substantially imported, with both availability and price exposed to the same geopolitical fault lines as coal.</p>
+
+<h2>Gate 2: Structure, how India makes steel, and moves it</h2>
+
+<p>India’s process mix is unique: a heavy reliance on coal-based DRI and induction furnaces, a configuration that constrains both product quality and emissions intensity at once. It exists for rational reasons (capital-light entry, distributed ore and coal) but it hard-wires a quality ceiling and a carbon floor into a large share of national output.</p>
+
+<p>Three compounding structural drags sit alongside it. Logistics costs run high because road transport carries a larger share of steel than in peer economies, and steel is exactly the cargo roads punish. Technology adoption is slow and labour productivity low relative to global leaders. And the R&amp;D gap is stark: Indian steelmakers spend roughly 0.2–0.3% of revenue on R&amp;D against 1–3% in Japan, Korea, and the EU, a gap partly caused by <a href="/calculators/scrap-production-cost">high production costs</a> squeezing margins, which then perpetuates the cost disadvantage it stems from. That is the definition of a trap: the constraint funds its own persistence.</p>
+
+<h2>Gate 3: Markets, what India still can’t make, and where it must sell</h2>
+
+<p>At the product frontier, India remains import-dependent for electrical steel, several stainless grades, shipbuilding plate, and other special grades (the highest-margin, fastest-growing segments of demand). At the volume end, Indian exporters face relentless competition from China, Japan, and Korea, in a global market where <a href="/articles/anti-dumping-chinese-steel-barrier-cascade">trade barriers are multiplying</a> and <a href="/articles/india-steel-eu-quota-china-pincer">Europe’s tightened quotas are actively shrinking India’s traditional export outlet</a>.</p>
+
+<h2>What it means</h2>
+
+<p>Read together, the three gates say something specific: the 2030 and 2047 targets will not be missed for lack of announced capacity. They will be tested at the gates: whether ore beneficiation, coking-coal diversification, and scrap ecosystems can fix inputs; whether logistics, technology, and R&amp;D can fix structure; and whether special-steel capability can fix markets. Government and industry are acting on all three fronts, but progress is slower than the targets demand, held back by heavy capital requirements and unresolved policy questions.</p>
+
+<p>The honest caveat: aggregate CAGRs and intensity trends mask enormous variance between India’s best integrated plants (some globally competitive) and the long tail of small producers. The national averages are a portfolio statement, not a verdict on any plant.</p>
+
+<p>For steel buyers and investors, the three gates are a monitoring framework. Ore-grade trends and auction premiums signal domestic cost floors; coking-coal spreads signal margin risk quarters ahead; scrap policy and special-steel capacity announcements signal where import substitution will bite. Tracking those signals systematically (the discipline SteelMath applies to steel price and market intelligence) is how the 2030 story becomes tradable rather than just quotable. India’s steel decade will be decided less by how much is built, and more by what each tonne costs the day it ships.</p>
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>What are the biggest challenges facing the Indian steel industry?</h3>
+<p>Nine structural constraints, grouped in three areas: raw-material insecurity (deteriorating iron ore quality, 85–90% imported coking coal, scarce scrap, imported alloys), structural drags (coal-DRI/induction-furnace reliance, high road-logistics costs, low R&amp;D at 0.2–0.3% of revenue, low labour productivity), and market gaps (import dependence in electrical and special steels, fierce export competition from China, Japan, and Korea).</p>
+
+<h3>How fast is India’s steel industry growing?</h3>
+<p>Between FY22 and FY26, crude steel capacity grew at 9.5% CAGR, production at 8.9%, and finished steel consumption at 11.6%, with national targets of 230 MT finished steel production by 2030 and over 400 MT by 2047.</p>
+
+<h3>Why does India import coking coal?</h3>
+<p>Domestic coking coal is limited and geologically disadvantaged (ash content of domestic washed coal is nearly double that of imported coal) so India imports 85–90% of its needs, an exposure that will persist as long as blast furnaces dominate, likely beyond 2050.</p>
+
+<h3>Is Indian steel becoming greener?</h3>
+<p>Not measurably yet: despite rapid growth from FY22–FY26, specific energy consumption and CO₂ emissions intensity showed no visible improvement, held back by the coal-DRI and induction-furnace share of production and limited scrap availability.</p>
+`,
+  },
 ];
 
 /** Articles sorted by date, most recent first */
