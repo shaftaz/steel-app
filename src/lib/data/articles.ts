@@ -6553,6 +6553,63 @@ At k = 0.95: D/t = 40.0, very thin, buckling is the primary failure mode.</p>
 <p>Not measurably yet: despite rapid growth from FY22–FY26, specific energy consumption and CO₂ emissions intensity showed no visible improvement, held back by the coal-DRI and induction-furnace share of production and limited scrap availability.</p>
 `,
   },
+  {
+    slug: "financing-steel-decarbonisation-value-chain",
+    title: "Green Steel Won’t Be Financed One Plant at a Time",
+    category: "ANALYSIS",
+    categoryColor: "blue",
+    date: "2026-08-02",
+    readTime: "5 min",
+    excerpt:
+      "The Climate Bonds Initiative’s new report reframes steel decarbonisation: fund the whole value chain, fix demand first. What it means for the industry.",
+    metaTitle: "Financing Green Steel: Why the Value Chain Is the Project",
+    metaDescription:
+      "The Climate Bonds Initiative’s new report reframes steel decarbonisation: fund the whole value chain, fix demand first. What it means for the industry.",
+    relatedCalculators: ["scrap-yield", "scrap-production-cost"],
+    content: `
+<p><strong>Executive summary:</strong> A new Climate Bonds Initiative report, <em>Financing Decarbonisation Across the Steel Value Chain</em>, marks a quiet but consequential shift in how industrial decarbonisation is being planned: away from financing individual steel plants and toward financing entire value chains, from high-grade iron ore and renewable power to scrap systems and, critically, buyers. Its sharpest finding is that demand, not technology, is now the binding constraint on green steel. For producers, financiers, and large steel buyers, the competitive implication is the same: value-chain finance is becoming an advantage, not a sustainability gesture.</p>
+
+<p>For a decade, the green steel conversation has centred on the mill: which furnace, which reduction technology, which plant gets funded. <a href="https://www.climatebonds.net/data-insights/publications" target="_blank" rel="noopener">The Climate Bonds Initiative’s report</a> argues this framing is now the problem. Deep decarbonisation of steel cannot be bought one facility at a time, because a low-carbon plant is only as bankable as the chain around it.</p>
+
+<h2>The bottleneck moved downstream</h2>
+
+<p>The report’s central finding deserves to be stated plainly: the biggest bottleneck for scaling low-carbon steel is weak demand. High production costs meet a market with no common procurement standards, so buyers hesitate, offtake stays uncommitted, and projects that are technologically ready struggle to reach bankability. The industry spent years de-risking the technology; the unfinished work is de-risking the customer.</p>
+
+<p>This inverts the usual project logic. A green steel plant’s feasibility study now depends less on its flowsheet than on three external guarantees: reliable low-carbon inputs, credible transition finance, and stable demand at a price that clears the green premium. Remove any one, and the equity doesn’t move.</p>
+
+<h2>Financing the chain, node by node</h2>
+
+<p>The report’s prescription follows from its diagnosis: transition finance must extend well beyond steelmaking itself. The investable chain runs through renewable electricity and green hydrogen at scale; <a href="/articles/indian-steel-industry-challenges">high-grade iron ore</a> and green iron, since hydrogen-based routes are unforgiving of poor ore; and <a href="/calculators/scrap-yield">scrap collection and processing systems</a>, the fastest existing route to lower-intensity steel. Each node needs its own capital stack, and a weak node starves the nodes downstream of it.</p>
+
+<p>The financing toolkit is assembling. Labelled bonds, green loans, blended finance, and risk guarantees are emerging as the workhorse instruments of industrial decarbonisation, and momentum is visible in practice: in China, transition-finance frameworks and labelled bonds are increasingly funding EAF projects, scrap processing, and related low-carbon initiatives. The direction of travel is clear even where volumes remain early.</p>
+
+<h2>The demand-side lever governments actually hold</h2>
+
+<p>If demand is the bottleneck, the report identifies the actor best placed to break it: the public buyer. Governments purchase enormous quantities of steel-intensive infrastructure, and integrating low-carbon steel into public procurement (with standards interoperable across international markets rather than fragmented by jurisdiction) creates exactly the strong, credible demand signal private buyers can anchor to. Add long-term offtake agreements, and project bankability improves while the green premium shrinks. Procurement policy, in other words, is industrial policy conducted by other means.</p>
+
+<h2>What this means competitively</h2>
+
+<p>The strategic reading, for anyone in the steel economy: as <a href="/cbam/calculator">carbon pricing</a>, green procurement, and climate-disclosure frameworks mature, the winners will be the players who assemble the full stack: a credible transition plan, innovative finance, secured low-carbon inputs, and long-dated customer demand. Producers who treat this as a compliance exercise will find capital progressively more expensive; those who treat the value chain as the unit of strategy will find it progressively cheaper. The same logic reaches buyers: procurement teams that learn to contract for low-carbon steel early (standards, verification, price mechanisms) will hold options their competitors must buy later at a premium.</p>
+
+<p>The honest limit: value-chain finance is a framework being built in real time. Instrument volumes for steel-specific transition finance remain modest relative to the capital the transition requires, and the report’s thesis will ultimately be tested by whether offtake actually materialises at scale, a demand question no financing structure can answer alone.</p>
+
+<p>Steel’s cost curve is about to acquire a carbon axis, and the interaction between the two (who pays the green premium, where, and when) will <a href="/articles/anti-dumping-chinese-steel-barrier-cascade">move prices in ways that reward foresight</a>. Tracking that intersection of policy, finance, and price is precisely the intelligence layer SteelMath is built to provide. The mill was never the whole story. Now the financing world has said so too.</p>
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>What is the Climate Bonds Initiative’s steel report about?</h3>
+<p><em>Financing Decarbonisation Across the Steel Value Chain</em> argues that deep decarbonisation requires coordinated investment across the entire chain (raw materials, renewable electricity, green hydrogen, production facilities, scrap systems, and downstream demand) rather than financing steel plants in isolation.</p>
+
+<h3>What is the biggest obstacle to green steel today?</h3>
+<p>Demand. High production costs and the absence of common procurement standards slow adoption of low-carbon steel, making weak demand, not technology, the binding constraint on scale.</p>
+
+<h3>Which financial instruments fund steel decarbonisation?</h3>
+<p>Labelled bonds, green loans, blended finance, and risk guarantees are the emerging core instruments, with transition-finance frameworks (notably in China) already supporting EAF projects and scrap processing.</p>
+
+<h3>How can governments accelerate green steel?</h3>
+<p>By integrating low-carbon steel into public infrastructure procurement, aligning standards with international markets, and supporting long-term offtake agreements: measures that strengthen demand signals, improve bankability, and reduce the green premium.</p>
+`,
+  },
 ];
 
 /** Articles sorted by date, most recent first */
