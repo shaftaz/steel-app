@@ -6610,6 +6610,62 @@ At k = 0.95: D/t = 40.0, very thin, buckling is the primary failure mode.</p>
 <p>By integrating low-carbon steel into public infrastructure procurement, aligning standards with international markets, and supporting long-term offtake agreements: measures that strengthen demand signals, improve bankability, and reduce the green premium.</p>
 `,
   },
+  {
+    slug: "south-korea-steel-squeeze-china-imports",
+    title:
+      "The Middle-Power Squeeze: How Korea’s Steel Industry Got Caught Between China and America",
+    category: "ANALYSIS",
+    categoryColor: "blue",
+    date: "2026-08-02",
+    readTime: "6 min",
+    excerpt:
+      "Chinese imports up 20%, a 7.71% US duty on POSCO, the won past 1,500 and oil above $105: inside the four-sided squeeze on South Korea’s steelmakers.",
+    metaTitle: "South Korea’s Steel Squeeze: China Below, Tariffs Above",
+    metaDescription:
+      "Chinese imports up 20%, a 7.71% US duty on POSCO, the won past 1,500 and oil above $105: inside the four-sided squeeze on South Korea’s steelmakers.",
+    relatedCalculators: ["steel-plate", "credit-cost"],
+    content: `
+<p><strong>Executive summary:</strong> In the space of weeks, South Korean steel absorbed pressure from every direction: Chinese steel imports surged 20% year-on-year to 3.8 million tonnes in H1 2026 (45% of all steel imports, up from 38%), prompting the Korea Trade Commission to open an anti-dumping probe into Chinese hot-rolled plate on Hyundai Steel’s petition, while the US finalized a 7.71% countervailing duty on POSCO’s plate exports, more than double the preliminary rate, and the macro backdrop turned hostile with the won past 1,500 to the dollar and WTI crude up 61.6% to $105.41. Korea’s position (squeezed between Chinese volume below and American trade walls above) is the clearest case study of what mid-sized exporters face in the new steel trade order.</p>
+
+<p>Trade wars are usually narrated as two-player games: China floods, the West walls. The most instructive story in steel right now belongs to neither: it belongs to the country caught between them.</p>
+
+<h2>The flood from below</h2>
+
+<p>Korea Iron &amp; Steel Association data show Chinese steel exports to South Korea reached 3.8 million tonnes in the first half of 2026, up 20% year-on-year. The share statistic is the sharper one: Chinese material now accounts for roughly 45% of Korea’s total steel imports, up from 38% a year earlier. This is the <a href="/articles/anti-dumping-chinese-steel-barrier-cascade">barrier cascade operating exactly as predicted</a>: as larger markets wall off Chinese steel, displaced volume concentrates on the significant markets that remain open, and Korea has been among the most open.</p>
+
+<p>The response arrived on schedule. Acting on Hyundai Steel’s petition, the Korea Trade Commission has initiated an anti-dumping investigation into Chinese <a href="/calculators/steel-plate">hot-rolled steel plate</a> (the workhorse product of shipbuilding, construction machinery, and pipe manufacturing) covering imports from July 2025 to June 2026. The investigation is expected to run about three months, with provisional duties possible. For shipbuilders and machinery makers buying plate, the clock is now running: provisional measures, if they come, arrive fast and reprice inventories faster.</p>
+
+<h2>The wall from above</h2>
+
+<p>While Korea builds defences against Chinese steel, it is simultaneously on the receiving end of American ones. The US Department of Commerce finalized a 7.71% countervailing duty on POSCO’s steel plate exports, concluding that Korea’s industrial electricity rate system, its emissions trading system, and key material supply regulations amount to countervailable subsidies. Two details make this decision reverberate beyond POSCO. First, the trajectory: the final rate more than doubled from the 3.70% preliminary announced in May; the process moved against the exporter as it matured. Second, the logic: if industrial power pricing and an emissions trading scheme can be construed as subsidies, then instruments that most industrial economies use (including <a href="/cbam">tools of decarbonisation policy</a>) are now potential tariff triggers. POSCO says it is reviewing the determination and weighing all legal options; Korean steel equities fell sharply on the news, which suggests the market read the precedent, not just the rate.</p>
+
+<h2>The macro vice</h2>
+
+<p>The third jaw of the squeeze is macroeconomic. The won has crossed 1,500 to the dollar, weakening markedly since the Middle East conflict began, while WTI crude has surged 61.6% to $105.41 a barrel. For Korean mills the combination is asymmetric pain: a weak won inflates the cost of <a href="/articles/indian-steel-industry-challenges">dollar-priced raw materials</a> and energy on the way in, while the competitiveness benefit on the way out runs straight into duty walls in the very market (the US) where price advantage would matter most. Currency depreciation is a subsidy you receive only where tariffs don’t confiscate it.</p>
+
+<h2>Why this case matters beyond Korea</h2>
+
+<p>Korea’s position generalises. Every mid-sized exporting steel industry (Japan, Taiwan, Vietnam, Turkey, <a href="/articles/india-steel-eu-quota-china-pincer">India</a>) now faces some version of the same geometry: Chinese volume compressing margins at home, Western trade measures capping the premium markets abroad, and macro volatility amplifying both. The middle-power squeeze also produces a policy irony worth watching: the same government defending its mills with anti-dumping duties against China is contesting anti-subsidy duties imposed on those mills by the US. The instruments are identical; only the direction changes.</p>
+
+<p>The honest limits: the KTC probe is an investigation, not a determination; provisional duties are possible, not certain. And single-session stock moves reflect sentiment, not measured earnings impact; the 7.71% duty’s real cost depends on POSCO’s US plate volumes and pass-through, which public data doesn’t fully reveal.</p>
+
+<p>For buyers, three watchables: the KTC’s provisional-duty decision (a plate repricing event for Asian shipbuilding supply chains), whether the US subsidy logic spreads to other Korean products or other countries’ utility-pricing regimes, and the won, because a Korean mill squeezed at 1,500 has less room to discount than its list prices suggest. Positioning ahead of decisions like these, rather than reacting after them, is the entire value of systematic trade-policy monitoring (the kind SteelMath builds into its market intelligence). The squeeze on Korea is not a Korean story. It is a preview.</p>
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>Why did South Korea launch an anti-dumping probe into Chinese steel plate?</h3>
+<p>Chinese steel exports to Korea rose 20% year-on-year to 3.8 million tonnes in H1 2026 (about 45% of all Korean steel imports, up from 38%), pressuring domestic producers. On Hyundai Steel’s petition, the Korea Trade Commission opened an anti-dumping investigation into Chinese hot-rolled plate covering July 2025–June 2026, with provisional duties possible after a roughly three-month probe.</p>
+
+<h3>What is the US countervailing duty on POSCO?</h3>
+<p>The US Department of Commerce finalized a 7.71% countervailing duty on POSCO steel plate, up from a 3.70% preliminary rate in May, ruling that Korea’s industrial electricity rates, emissions trading system, and material supply regulations constitute subsidies. POSCO is reviewing legal options.</p>
+
+<h3>What pressures do Korean steelmakers face in 2026?</h3>
+<p>A four-sided squeeze: surging low-priced Chinese imports, rising US trade duties, a won beyond 1,500 per dollar inflating dollar-priced input costs, and oil up 61.6% to $105.41 raising energy and freight costs.</p>
+
+<h3>What does the POSCO ruling mean for other countries?</h3>
+<p>Its logic (treating industrial power pricing and emissions trading as countervailable subsidies) creates a precedent that could expose other exporters’ standard industrial and climate policy tools to similar duties.</p>
+`,
+  },
 ];
 
 /** Articles sorted by date, most recent first */
