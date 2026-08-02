@@ -109,7 +109,7 @@ export const articles: Article[] = [
 
 <p><strong>Step one: the product hop.</strong> When finished products get blocked, flows shift to categories the duties don\u2019t cover. The clearest evidence is in semi-finished steel: in the first quarter of 2026, Chinese slab exports surged 182% year-on-year and billet exports rose 14.8% to 2.66 million tonnes, precisely as finished-product exports to Brazil, South Korea, and Vietnam fell 30%, and cold-rolled and coated exports to Turkey collapsed 42%. The steel did not stop moving. It changed form.</p>
 
-<p><strong>Step two: the market hop.</strong> Volumes displaced from protected markets flow toward open ones, which then experience the import surge that triggers their own investigations, which is exactly why probes are now appearing in Korea, Brazil, and Turkey in the same season. Each new barrier redirects pressure to whoever hasn\u2019t built one yet.</p>
+<p><strong>Step two: the market hop.</strong> Volumes displaced from protected markets flow toward open ones, which then experience the import surge that triggers their own investigations, which is exactly why probes are now appearing in Korea, Brazil, and Turkey in the same season. <a href="/articles/south-korea-steel-squeeze-china-imports">Each new barrier redirects pressure to whoever hasn\u2019t built one yet</a>.</p>
 
 <p><strong>Step three: the origin hop.</strong> Trade defense increasingly targets third countries suspected of channeling or substituting for Chinese material, the US duty on Algerian rebar at 72.94% shows enforcement reaching well beyond China itself. Meanwhile, supply gaps elsewhere get filled opportunistically: Iran\u2019s absence from global markets opened the slab shortfall that Chinese exporters moved into.</p>
 
@@ -261,7 +261,7 @@ export const articles: Article[] = [
 <p>Metal stocks are pricing global steel conditions (a weakening long steel market, oversupply, and soft Chinese export prices) rather than domestic market sentiment. Banking and IT led Friday\u2019s 965-point rally; metals lagged because their earnings are set by globally-linked prices.</p>
 
 <h3>Does India\u2019s safeguard duty protect steel companies?</h3>
-<p>It protects volumes effectively (monthly imports fell about 33% year-on-year under the provisional 12% duty) but it cannot insulate margins from a global downcycle, since realizations track import-parity and world prices. The duty also tapers: 12% to 11.5% to 11%, ending April 2028.</p>
+<p>It protects volumes effectively (monthly imports fell about 33% year-on-year under the provisional 12% duty) but it cannot insulate margins from a global downcycle, since <a href="/articles/india-steel-eu-quota-china-pincer">realizations track import-parity and world prices</a>. The duty also tapers: 12% to 11.5% to 11%, ending April 2028.</p>
 
 <h3>What is happening in the global long steel market?</h3>
 <p>IREPAS reports the market has worsened further, with high supply and stagnant demand squeezing margins, and additional Iranian and Russian billet availability threatening further rebar price declines.</p>
@@ -3524,7 +3524,7 @@ March 2026 Sales:      5.90 MT</pre>
 
 <h2>What This Means for Steel Procurement and Investment</h2>
 
-<p><strong>For procurement leaders:</strong> Green steel premiums are emerging as a real feature of international markets, particularly for exports to Europe. As CBAM costs phase in, the gap between conventionally produced steel and near-zero emissions steel will narrow, and may reverse for some trade flows. Forward-looking procurement strategies should begin tracking the carbon intensity of your steel supply chain, even if you\u2019re not yet paying a carbon price. Use our <a href="/calculator">Energy \u2192 Production Cost Calculator</a> to model how different energy and technology scenarios affect landed costs.</p>
+<p><strong>For procurement leaders:</strong> Green steel premiums are emerging as a real feature of international markets, particularly for exports to Europe. As CBAM costs phase in, the gap between conventionally produced steel and near-zero emissions steel will narrow, and may reverse for some trade flows. Forward-looking <a href="/articles/financing-steel-decarbonisation-value-chain">procurement strategies</a> should begin tracking the carbon intensity of your steel supply chain, even if you\u2019re not yet paying a carbon price. Use our <a href="/calculator">Energy \u2192 Production Cost Calculator</a> to model how different energy and technology scenarios affect landed costs.</p>
 
 <p><strong>For investors:</strong> The scorecard provides a framework for assessing transition risk in steel company valuations. Companies scoring below 25 (particularly those actively reinvesting in blast furnaces) face compounding regulatory, reputational, and market-access risks over the next decade. The gap between announced targets and actual progress, as documented in this scorecard, is a material disclosure concern.</p>
 
@@ -4155,7 +4155,7 @@ March 2026 Sales:      5.90 MT</pre>
       "India\u2019s largest private infrastructure buildout: ports doubling to 1,200 MMT, renewables to 50 GW, airports to 200M passengers. What it means for steel demand.",
     relatedCalculators: ["Steel Weight Calculator"],
     content: `
-<p>India\u2019s steel demand story over the next five years will be written substantially in concrete and steel at port berths, solar farms, airport terminals, transmission corridors, and logistics parks. The announcement of a \u20B92 lakh crore annual greenfield infrastructure investment programme (totalling \u20B910 lakh crore by approximately 2031) from one of India\u2019s largest conglomerates represents the single most concentrated private-sector commitment to steel-intensive construction in the country\u2019s history.</p>
+<p>India\u2019s steel demand story over the next five years will be written substantially in concrete and steel at <a href="/articles/mumbai-trans-harbour-link-steel-deck-inspection">port berths, solar farms, airport terminals, transmission corridors, and logistics parks</a>. The announcement of a \u20B92 lakh crore annual greenfield infrastructure investment programme (totalling \u20B910 lakh crore by approximately 2031) from one of India\u2019s largest conglomerates represents the single most concentrated private-sector commitment to steel-intensive construction in the country\u2019s history.</p>
 
 <p>This analysis breaks down the steel demand implications sector by sector, product by product, and timeline, offering procurement teams, mill operators, and traders a forward-looking demand map for the next five years.</p>
 
