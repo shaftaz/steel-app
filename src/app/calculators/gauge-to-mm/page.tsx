@@ -7,7 +7,7 @@ import { GAUGE_TABLE } from "@/lib/calculators/materials";
 
 export const metadata: Metadata = {
   title:
-    "Sheet Metal Gauge to MM Converter — Thickness Chart 7 to 30 Gauge | SteelMath",
+    "Sheet Metal Gauge to MM Converter — Thickness Chart 7 to 30 Gauge",
   description:
     "Convert sheet metal gauge to millimetres and inches instantly. Complete gauge chart from 7 to 30 gauge with thickness in mm, inches, and weight per square metre. Standard steel gauge (MSG) reference for fabricators and engineers.",
   keywords: [
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://steelmath.com/calculators/gauge-to-mm" },
   openGraph: {
     images: [{ url: "/og?title=Sheet%20Metal%20Gauge%20to%20MM%20Converter%20%E2%80%94%20Thickness%20Chart%207%20to%2030%20Gauge&accent=orange", width: 1200, height: 630 }],
-    title: "Sheet Metal Gauge to MM Converter — Full Chart | SteelMath",
+    title: "Sheet Metal Gauge to MM Converter — Full Chart",
     description:
       "Convert any sheet metal gauge (7–30) to mm and inches. Free chart with weight per sq metre. Instant lookup tool.",
     url: "https://steelmath.com/calculators/gauge-to-mm",

@@ -4,7 +4,7 @@ import Calculator from "@/components/Calculator";
 
 export const metadata: Metadata = {
   title:
-    "TMT Bar Weight Calculator — Per Metre Chart for 8mm to 40mm | SteelMath",
+    "TMT Bar Weight Calculator — Per Metre Chart for 8mm to 40mm",
   description:
     "Calculate TMT bar weight per metre, per foot & per bar using the d²/162 formula. Instant rebar weight calculator for 8mm, 10mm, 12mm, 16mm, 20mm, 25mm, 32mm & 40mm TMT bars. Free online tool with reference chart.",
   keywords: [
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   openGraph: {
     images: [{ url: "/og?title=TMT%20Bar%20Weight%20Calculator%20%E2%80%94%20Per%20Metre%20Chart%20for%208mm%20to%2040mm&accent=orange", width: 1200, height: 630 }],
     title:
-      "TMT Bar Weight Calculator — Per Metre Chart for 8mm to 40mm | SteelMath",
+      "TMT Bar Weight Calculator — Per Metre Chart for 8mm to 40mm",
     description:
       "Calculate TMT bar weight instantly using d²/162 formula. Free chart covering 6mm to 40mm bars — weight per metre, per foot & per 12m bar.",
     url: "https://steelmath.com/calculators/tmt",

@@ -6,7 +6,7 @@ import CalculatorSchema from "@/components/seo/CalculatorSchema";
 
 export const metadata: Metadata = {
   title:
-    "Scrap to Steel Production Cost Calculator — IF/EAF Full Cost Breakdown | SteelMath",
+    "Scrap to Steel Production Cost Calculator — IF/EAF Full Cost Breakdown",
   description:
     "Calculate complete production cost from scrap to finished steel. Enter your own scrap, electricity, alloy, and overhead costs. Full waterfall breakdown. Free.",
   keywords: [
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   openGraph: {
     images: [{ url: "/og?title=Scrap%20to%20Steel%20Production%20Cost%20Calculator%20%E2%80%94%20IF/EAF%20Full%20Cost%20Breakdown&accent=orange", width: 1200, height: 630 }],
     title:
-      "Scrap to Steel Production Cost Calculator — Full Breakdown | SteelMath",
+      "Scrap to Steel Production Cost Calculator — Full Breakdown",
     description:
       "Calculate complete steel production cost from scrap to finished product. Enter your own input costs — scrap, electricity, alloys, overheads. Free tool.",
     url: "https://steelmath.com/calculators/scrap-production-cost",

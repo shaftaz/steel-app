@@ -4,7 +4,7 @@ import CalculatorDirectory from "@/components/CalculatorDirectory";
 
 export const metadata: Metadata = {
   title:
-    "Free Steel Calculators — Weight, TMT Bar, Plate, Pipe & More | SteelMath",
+    "Free Steel Calculators — Weight, TMT Bar, Plate, Pipe & More",
   description:
     "Free online steel calculators for weight, TMT bar (d²/162), steel plate, MS pipe, angle, channel, beam, scrap yield & production cost. Instant results with formulas, charts and all standard sizes. Built for engineers, traders & fabricators.",
   keywords: [
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://steelmath.com/calculators" },
   openGraph: {
     title:
-      "Free Steel Calculators — Weight, TMT Bar, Plate, Pipe & More | SteelMath",
+      "Free Steel Calculators — Weight, TMT Bar, Plate, Pipe & More",
     description:
       "All-in-one steel calculator hub. Calculate weight for TMT bar, plate, pipe, angle, channel & beam instantly. Free, accurate, built for construction professionals.",
     url: "https://steelmath.com/calculators",

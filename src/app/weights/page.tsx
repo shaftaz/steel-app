@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     "Size-by-size steel weight reference: every TMT bar diameter, MS pipe NB size, ISMB beam, ISMC channel and equal angle, weight per metre, per length and per tonne, with formulas and calculators.",
   alternates: { canonical: "https://steelmath.com/weights" },
   openGraph: {
-    title: "Steel Weight Charts by Size: TMT, Pipe, Beam, Channel & Angle | SteelMath",
+    title: "Steel Weight Charts by Size: TMT, Pipe, Beam, Channel & Angle",
     description:
       "Every standard size, one page each: weight per metre, per length, per tonne, with formulas, standards and prefilled calculators.",
     url: "https://steelmath.com/weights",

@@ -7,7 +7,7 @@ import { HARDNESS_TABLE } from "@/lib/calculators/materials";
 
 export const metadata: Metadata = {
   title:
-    "Hardness Conversion Calculator — Brinell, Rockwell, Vickers & Tensile | SteelMath",
+    "Hardness Conversion Calculator — Brinell, Rockwell, Vickers & Tensile",
   description:
     "Free hardness conversion calculator. Convert between Brinell (HB), Rockwell C (HRC), Rockwell B (HRB), Vickers (HV), and approximate tensile strength (MPa). Complete hardness comparison chart for steel based on ASTM E140.",
   keywords: [
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://steelmath.com/calculators/hardness-conversion" },
   openGraph: {
     images: [{ url: "/og?title=Hardness%20Conversion%20Calculator%20%E2%80%94%20Brinell%2C%20Rockwell%2C%20Vickers%20%26%20Tensile&accent=orange", width: 1200, height: 630 }],
-    title: "Hardness Conversion Calculator — HB, HRC, HRB, HV & MPa | SteelMath",
+    title: "Hardness Conversion Calculator — HB, HRC, HRB, HV & MPa",
     description:
       "Convert between Brinell, Rockwell C/B, Vickers hardness scales and tensile strength. Free instant converter with full reference chart.",
     url: "https://steelmath.com/calculators/hardness-conversion",

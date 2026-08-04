@@ -6,7 +6,7 @@ import CalculatorSchema from "@/components/seo/CalculatorSchema";
 
 export const metadata: Metadata = {
   title:
-    "Scrap Yield Calculator — Liquid Steel Recovery by Grade & Furnace | SteelMath",
+    "Scrap Yield Calculator — Liquid Steel Recovery by Grade & Furnace",
   description:
     "Model scrap-to-steel yield by grade and furnace type. HMS 1 yields 90-93%, turnings 82-87%. Calculate liquid steel output, slag, and effective cost. Free tool.",
   keywords: [
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   openGraph: {
     images: [{ url: "/og?title=Scrap%20Yield%20Calculator%20%E2%80%94%20Liquid%20Steel%20Recovery%20by%20Grade%20%26%20Furnace&accent=orange", width: 1200, height: 630 }],
     title:
-      "Scrap Yield Calculator — Liquid Steel Recovery by Grade & Furnace | SteelMath",
+      "Scrap Yield Calculator — Liquid Steel Recovery by Grade & Furnace",
     description:
       "Model scrap-to-steel yield by grade and furnace type. HMS 1, HMS 2, shredded, turnings — calculate liquid steel output, slag, and effective cost.",
     url: "https://steelmath.com/calculators/scrap-yield",

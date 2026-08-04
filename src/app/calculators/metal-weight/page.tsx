@@ -7,7 +7,7 @@ import { MATERIALS } from "@/lib/calculators/materials";
 
 export const metadata: Metadata = {
   title:
-    "Metal Weight Calculator — Steel, Aluminium, Copper, Brass & 14 Metals | SteelMath",
+    "Metal Weight Calculator — Steel, Aluminium, Copper, Brass & 14 Metals",
   description:
     "Free online metal weight calculator for round bar, square bar, rectangular bar, sheet, pipe & hexagonal sections. Supports 14 metals including mild steel, stainless steel SS304/SS316, aluminium, copper, brass, titanium & more. Instant results with density reference table.",
   keywords: [
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://steelmath.com/calculators/metal-weight" },
   openGraph: {
     images: [{ url: "/og?title=Metal%20Weight%20Calculator%20%E2%80%94%20Steel%2C%20Aluminium%2C%20Copper%2C%20Brass%20%26%2014%20Metals&accent=orange", width: 1200, height: 630 }],
-    title: "Metal Weight Calculator — 14 Metals, All Shapes | SteelMath",
+    title: "Metal Weight Calculator — 14 Metals, All Shapes",
     description:
       "Calculate weight for round, square, rectangular, pipe, sheet & hex bar in steel, aluminium, copper, brass, titanium & more. Free instant calculator.",
     url: "https://steelmath.com/calculators/metal-weight",

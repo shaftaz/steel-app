@@ -6,12 +6,12 @@ import CalculatorSchema from "@/components/seo/CalculatorSchema";
 import { roundBars } from "@/lib/data/section-weights";
 
 export const metadata: Metadata = {
-  title: "Round Bar Weight Calculator — MS, SS 304/316, Aluminium, Brass | SteelMath",
+  title: "Round Bar Weight Calculator — MS, SS 304/316, Aluminium, Brass",
   description: "Free round bar weight calculator for MS, SS 304, SS 316, EN24, aluminium & brass. Uses formula d²/162.2 with density correction. Complete chart from 6mm to 100mm diameter.",
   keywords: ["round bar weight calculator", "ms round bar weight chart", "ss round bar weight", "round bar weight per metre", "round bar weight formula", "d2/162 formula", "bright bar weight calculator", "en24 round bar weight", "aluminium round bar weight", "brass round bar weight"],
   alternates: { canonical: "https://steelmath.com/calculators/round-bar-weight" },
   openGraph: {
-    images: [{ url: "/og?title=Round%20Bar%20Weight%20Calculator%20%E2%80%94%20MS%2C%20SS%20304/316%2C%20Aluminium%2C%20Brass&accent=orange", width: 1200, height: 630 }], title: "Round Bar Weight Calculator — Multi-Material | SteelMath", description: "Calculate round bar weight for MS, SS, EN24, aluminium & brass. d²/162.2 formula.", url: "https://steelmath.com/calculators/round-bar-weight", type: "website" },
+    images: [{ url: "/og?title=Round%20Bar%20Weight%20Calculator%20%E2%80%94%20MS%2C%20SS%20304/316%2C%20Aluminium%2C%20Brass&accent=orange", width: 1200, height: 630 }], title: "Round Bar Weight Calculator — Multi-Material", description: "Calculate round bar weight for MS, SS, EN24, aluminium & brass. d²/162.2 formula.", url: "https://steelmath.com/calculators/round-bar-weight", type: "website" },
 };
 
 const FAQS = [
