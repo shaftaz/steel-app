@@ -6998,6 +6998,71 @@ At k = 0.95: D/t = 40.0, very thin, buckling is the primary failure mode.</p>
 <p>It closes another door at a difficult moment (alongside the EU’s tightened quotas and Chinese price pressure at home) and signals that Gulf markets can no longer be treated as duty-free diversification. Participation in investigations and faster market diversification become commercial priorities.</p>
 `,
   },
+  {
+    slug: "how-to-use-cbam-calculator",
+    title: "How to Estimate Your CBAM Cost in Under Two Minutes",
+    category: "GUIDE",
+    categoryColor: "green",
+    date: "2026-08-04",
+    readTime: "5 min",
+    excerpt:
+      "Step-by-step guide to the free SteelMath CBAM calculator: model EU & UK carbon border costs per tonne, certificates needed, and your cost curve to 2034.",
+    metaTitle: "CBAM Calculator: Estimate Your Steel Import Cost Fast",
+    metaDescription:
+      "Step-by-step guide to the free SteelMath CBAM calculator: model EU & UK carbon border costs per tonne, certificates needed, and your cost curve to 2034.",
+    relatedCalculators: ["steel-plate", "metal-weight"],
+    content: `
+<p><strong>Executive summary:</strong> The EU’s Carbon Border Adjustment Mechanism entered its definitive regime in 2026: importers of steel, aluminium, cement, fertilisers, and hydrogen now buy CBAM certificates against the embedded emissions of what they bring in, with the charge phasing up from 2.5% of full exposure in 2026 to 100% by 2034. The free <a href="/cbam/calculator">SteelMath CBAM Cost Calculator</a> turns that regulation into a number: cost per tonne, total levy, and certificates required, under both EU and UK regimes, for any covered product and origin. This guide walks through each input, decodes the outputs with a worked example, and explains the two decisions (emissions data and import year) that move your result most.</p>
+
+<p>Carbon border pricing has crossed from policy debate to invoice line. What every importer, exporter, and trader touching the EU now needs is not another explainer of the regulation: it is their number. Here is how to get it.</p>
+
+<h2>Before you start: what the calculator answers</h2>
+
+<p>The <a href="/cbam/calculator">CBAM Cost Calculator</a> answers four questions in one pass: what will CBAM cost on a given shipment (total and per tonne), how many certificates that implies, how the cost escalates year by year through 2034, and how the answer changes if you can document actual emissions instead of accepting defaults. It covers the CBAM commodity scope (iron and steel, aluminium, cement, fertilisers, hydrogen) with steel product granularity (HRC, CRC, rebar, pipe, and more) and origin selection spanning the major exporters: India, Turkey, China, Vietnam, South Korea, Japan, and beyond.</p>
+
+<h2>The five inputs, and what each one does</h2>
+
+<p><strong>1. Commodity and product.</strong> Select the commodity group, then the product type. This matters because embedded-emissions defaults differ by product (iron and steel typically spans roughly 1.9–2.8 tCO₂e per tonne depending on route and product) and the product choice anchors the default the tool applies.</p>
+
+<p><strong>2. Country of origin.</strong> Origin drives the default emissions profile the calculation uses when verified data isn’t supplied. A tonne of HRC does not carry the same assumed footprint from every geography: production routes differ, and so do the defaults.</p>
+
+<p><strong>3. Cargo volume.</strong> Enter your shipment or annual volume in tonnes. One practical note from the regulation: small importers now benefit from an exemption threshold, as <a href="https://www.tanso.de/en/blog/cbam-2026-who-is-affected-50-tonne-threshold-costs-obligations" target="_blank" rel="noopener">imports below 50 tonnes a year fall outside the obligation</a>, so the calculator’s real audience starts where that threshold ends.</p>
+
+<p><strong>4. Import year.</strong> The single most consequential dropdown. CBAM’s charge phases in as the EU’s free allocation to domestic producers phases out: from 2.5% of full exposure in 2026 rising to 100% by 2034. The same shipment can carry a radically different cost depending on when it lands, which is why the tool’s multi-year projection matters more than any single-year figure.</p>
+
+<p><strong>5. Emissions data: defaults or verified actuals.</strong> The toggle that separates estimating from managing. Default values are the regulation’s fallback, and they are deliberately conservative. If your supplier can provide verified actual emissions below the default, your cost falls with them. If not, you pay as if your steel matched the default profile regardless of reality: the dynamic that is <a href="/articles/asean-steel-cbam-carbon-lock-in">reshaping supplier selection across every CBAM-exposed corridor</a>.</p>
+
+<h2>Reading the output: a worked example</h2>
+
+<p>Take a concrete case the tool handles out of the box: 10,000 tonnes of HRC from India, imported in 2026. At the current reference certificate price of €75.28/tCO₂e (tracking the EU ETS), the calculator returns a net CBAM cost of roughly €60,600 (about €6.1 per tonne) requiring 805 certificates.</p>
+
+<p>Three things to notice in that result. First, €6.1/t in 2026 sounds manageable: that is the 2.5% phase-in doing the softening. The multi-year table shows the same cargo’s cost climbing steeply as the factor ratchets toward 100%: the number to plan against is not this year’s, it is the curve. Second, the certificates line converts cost into compliance workload: certificates must be purchased and surrendered on the regulatory calendar, a cash-flow and administration reality invoices don’t show. Third, the carbon-deduction line matters when origin countries price carbon domestically: carbon already paid at home is creditable, a variable worth tracking as more exporting nations introduce carbon pricing partly for this reason.</p>
+
+<h2>The two mistakes the calculator prevents</h2>
+
+<p>The first is pricing forward contracts on today’s phase-in factor. A 2027 or 2028 delivery carries a different factor and, likely, a different certificate price: quoting DDP into Europe without the curve is quoting blind. The second is ignoring the default-versus-actual spread. For many origins the default assumption sits above what an efficient plant actually emits; an importer who never asks the supplier for verified data donates the difference. Two minutes with <a href="/cbam/calculator">the calculator</a>, before negotiation, tells you what that conversation is worth per tonne.</p>
+
+<h2>The honest limits</h2>
+
+<p>The calculator is an estimator, not a filing tool: it states plainly that results are estimates, not tax or legal advice. Certificate prices track the EU ETS and move; default values and regulatory parameters evolve (the tool notes its price assumptions and verification date on-page); and UK CBAM parameters carry their own timeline. For binding obligations, importers work with their customs representatives: the calculator’s job is to make sure no one enters that conversation, or a price negotiation, without a defensible number.</p>
+
+<p>Model your own cargo now (product, origin, year, volume) with the <a href="/cbam/calculator">SteelMath CBAM Cost Calculator</a>. The regulation set the rules of the game; <a href="/articles/cbam-relevance-steel-importers-exporters">knowing your number before your counterparty knows theirs</a> is how you win it.</p>
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>How is CBAM cost calculated for steel?</h3>
+<p>Embedded emissions per tonne (verified actuals, or default values by product and origin) × tonnes imported × the year’s phase-in factor × the CBAM certificate price (which tracks the EU ETS), minus any creditable carbon price already paid in the origin country. The SteelMath CBAM Calculator runs this per shipment and projects it through 2034.</p>
+
+<h3>What does CBAM cost per tonne of steel in 2026?</h3>
+<p>As a worked example, 10,000 t of HRC from India in 2026 computes to roughly €6.1 per tonne at a €75.28/tCO₂e certificate price: modest because 2026’s phase-in factor is 2.5%. The same cargo’s cost rises steeply toward 2034 as the factor approaches 100%.</p>
+
+<h3>Do small importers pay CBAM?</h3>
+<p>Imports below the 50-tonne annual threshold are exempt under the 2026 rules, removing the obligation for most occasional importers while keeping the vast majority of covered emissions in scope.</p>
+
+<h3>Why do verified emissions matter under CBAM?</h3>
+<p>Without verified data, the levy is assessed on conservative default values: importers pay as if their steel matched the default profile even when actual emissions are lower. Verified actuals below the default translate directly into lower cost per tonne.</p>
+`,
+  },
 ];
 
 /** Articles sorted by date, most recent first */
