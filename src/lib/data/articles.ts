@@ -450,7 +450,7 @@ export const articles: Article[] = [
     excerpt:
       "Oil at $92, freight up 38%, propane supply under threat, coated steel lines at risk. A comprehensive breakdown of every cost channel the Hormuz crisis is hitting, from blast furnace energy bills to galvanizing plant shutdowns.",
     metaTitle:
-      "Hormuz Crisis Full Impact on Indian Steel 2026 \u2014 Costs, Freight, Propane, Coated Steel | SteelMath",
+      "Hormuz Crisis Full Impact on Indian Steel 2026 \u2014 Costs, Freight, Propane, Coated Steel",
     metaDescription:
       "Comprehensive analysis of how the Strait of Hormuz closure impacts Indian steel: crude oil, freight, propane supply, coated steel production, raw materials, and actionable strategy for every stakeholder. March 2026.",
     relatedCalculators: ["freight", "energy-cost", "landed-cost"],
@@ -575,7 +575,7 @@ export const articles: Article[] = [
     excerpt:
       "JSW, Tata Steel, SAIL, three rounds of hikes and counting. Complete timeline with amounts, dates, and products affected.",
     metaTitle:
-      "Steel Price Hike Tracker March 2026 \u2014 JSW, Tata Steel, SAIL Hike History | SteelMath",
+      "Steel Price Hike Tracker March 2026 \u2014 JSW, Tata Steel, SAIL Hike History",
     metaDescription:
       "Complete tracker of every steel price hike announcement in March 2026. JSW Steel, Tata Steel, SAIL \u2014 dates, amounts, products affected. Updated daily.",
     relatedCalculators: ["margin"],
@@ -644,7 +644,7 @@ export const articles: Article[] = [
     excerpt:
       "Formulas for TMT bar, plate, pipe, angle, channel, I-beam, and more. With worked examples and a free online calculator.",
     metaTitle:
-      "Steel Weight Calculator \u2014 Formulas for TMT Bar, Plate, Pipe, Angle, Beam | SteelMath",
+      "Steel Weight Calculator \u2014 Formulas for TMT Bar, Plate, Pipe, Angle, Beam",
     metaDescription:
       "Complete guide to calculating steel weight for every section type \u2014 TMT bar, plate, pipe, angle, channel, I-beam. Free online calculator with formulas and examples.",
     relatedCalculators: ["weight"],
@@ -749,7 +749,7 @@ export const articles: Article[] = [
     excerpt:
       "The real cost breakdown: freight, insurance, working capital, and opportunity cost. It\u2019s more than just +38%.",
     metaTitle:
-      "Cape of Good Hope Rerouting Cost for Indian Steel \u2014 Freight, Insurance, Working Capital | SteelMath",
+      "Cape of Good Hope Rerouting Cost for Indian Steel \u2014 Freight, Insurance, Working Capital",
     metaDescription:
       "Detailed breakdown of what Hormuz rerouting via Cape of Good Hope costs Indian steel buyers \u2014 freight, insurance, transit time, and working capital impact.",
     relatedCalculators: ["freight", "landed-cost"],
@@ -831,7 +831,7 @@ export const articles: Article[] = [
     excerpt:
       "Australia coking coal flows normally. Gulf scrap is halted. LNG from Qatar is at risk. Route-by-route assessment for every key input.",
     metaTitle:
-      "Coking Coal, Iron Ore, Scrap Supply Routes Open for India \u2014 Hormuz Crisis Update | SteelMath",
+      "Coking Coal, Iron Ore, Scrap Supply Routes Open for India \u2014 Hormuz Crisis Update",
     metaDescription:
       "Which raw material supply routes are still open for Indian steel mills? Coking coal from Australia, iron ore availability, scrap alternatives \u2014 March 2026 update.",
     relatedCalculators: ["freight", "energy-cost"],
@@ -905,7 +905,7 @@ export const articles: Article[] = [
     excerpt:
       "The buy-vs-wait decision framework every steel buyer needs right now. When to lock in, when to hold, and what signals to watch.",
     metaTitle:
-      "Should You Buy Steel Now or Wait? Hormuz Crisis Procurement Framework | SteelMath",
+      "Should You Buy Steel Now or Wait? Hormuz Crisis Procurement Framework",
     metaDescription:
       "Buy steel now or wait? A data-driven procurement decision framework for the Hormuz crisis. Price forecasts, hedging strategies, and key signals to watch.",
     relatedCalculators: ["margin", "landed-cost"],
@@ -957,7 +957,7 @@ export const articles: Article[] = [
     excerpt:
       "12% safeguard duty on flat steel imports, which products, which countries, price thresholds, and how it affects your landed cost.",
     metaTitle:
-      "Safeguard Duty on Steel Imports India 2025\u20132028 \u2014 Complete Guide | SteelMath",
+      "Safeguard Duty on Steel Imports India 2025\u20132028 \u2014 Complete Guide",
     metaDescription:
       "Complete guide to India\u2019s safeguard duty on flat steel imports. Rates, covered products, exemptions, price thresholds, and landed cost calculation.",
     relatedCalculators: ["landed-cost", "gst"],
@@ -1025,7 +1025,7 @@ export const articles: Article[] = [
     excerpt:
       "Weight per metre for every TMT bar from 6mm to 40mm. Plus bars per tonne, cost per bar, and how to verify deliveries.",
     metaTitle:
-      "TMT Bar Weight Per Metre Chart \u2014 All Sizes Fe 500D | SteelMath",
+      "TMT Bar Weight Per Metre Chart \u2014 All Sizes Fe 500D",
     metaDescription:
       "Complete TMT bar weight chart \u2014 weight per metre for 6mm to 40mm bars. Bars per tonne, cost per bar at current rates, and delivery verification method.",
     relatedCalculators: ["weight"],
@@ -1083,7 +1083,7 @@ export const articles: Article[] = [
     excerpt:
       "EU\u2019s carbon border tax is now live. What it costs Indian exporters, how to comply, and why Hormuz makes it worse.",
     metaTitle:
-      "CBAM Impact on Indian Steel Exports 2026 \u2014 Costs, Compliance & Strategy | SteelMath",
+      "CBAM Impact on Indian Steel Exports 2026 \u2014 Costs, Compliance & Strategy",
     metaDescription:
       "How the EU\u2019s Carbon Border Adjustment Mechanism affects Indian steel exports in 2026. Cost estimates, compliance requirements, and strategic positioning.",
     relatedCalculators: ["energy-cost", "margin"],
@@ -1137,7 +1137,7 @@ export const articles: Article[] = [
     excerpt:
       "Pipe weight formula with complete IS 1239 reference chart. 15mm NB to 200mm NB, light/medium/heavy class.",
     metaTitle:
-      "MS Pipe Weight Calculator \u2014 Formula, Chart & Quick Reference | SteelMath",
+      "MS Pipe Weight Calculator \u2014 Formula, Chart & Quick Reference",
     metaDescription:
       "MS pipe weight formula and complete chart for all sizes from 15mm NB to 200mm NB. IS 1239 reference, light/medium/heavy class weights.",
     relatedCalculators: ["weight"],
@@ -1191,7 +1191,7 @@ export const articles: Article[] = [
     excerpt:
       "Full cost breakdown at current input prices. Where your \u20B952,000/MT HRC price comes from, and why mills are hiking.",
     metaTitle:
-      "Steel Production Cost India 2026 \u2014 BF-BOF vs EAF Breakdown | SteelMath",
+      "Steel Production Cost India 2026 \u2014 BF-BOF vs EAF Breakdown",
     metaDescription:
       "Complete steel production cost breakdown for India in 2026. BF-BOF vs EAF/IF route, current input prices, and Hormuz crisis impact on manufacturing costs.",
     relatedCalculators: ["energy-cost"],
@@ -1253,7 +1253,7 @@ export const articles: Article[] = [
     excerpt:
       "Weight per sqm for every plate thickness from 1mm to 50mm. Standard sizes, chequered plate adjustment, and cost estimation.",
     metaTitle:
-      "Steel Plate Weight Calculator \u2014 Formula & Thickness Chart | SteelMath",
+      "Steel Plate Weight Calculator \u2014 Formula & Thickness Chart",
     metaDescription:
       "Steel plate weight formula and chart by thickness. Weight per square metre from 1mm to 50mm, standard Indian plate sizes, and chequered plate adjustment.",
     relatedCalculators: ["weight"],
@@ -1295,7 +1295,7 @@ export const articles: Article[] = [
     excerpt:
       "Base price vs transaction price, grade extras, size extras, effective dates, decode the circular like a pro.",
     metaTitle:
-      "How to Read a Steel Mill Price Circular India \u2014 Buyer\u2019s Guide | SteelMath",
+      "How to Read a Steel Mill Price Circular India \u2014 Buyer\u2019s Guide",
     metaDescription:
       "Guide to reading Indian steel mill price circulars. Base price vs transaction price, grade extras, size extras, effective dates, and negotiation tips.",
     relatedCalculators: ["margin", "landed-cost"],
@@ -1343,7 +1343,7 @@ export const articles: Article[] = [
     excerpt:
       "18% GST on most steel, but ITC rules, e-way bills, reverse charge, and job work GST trip up even experienced traders.",
     metaTitle:
-      "GST on Steel Products India \u2014 Rates, ITC Rules & Calculator | SteelMath",
+      "GST on Steel Products India \u2014 Rates, ITC Rules & Calculator",
     metaDescription:
       "Complete guide to GST on steel products in India. Rates by HSN code, input tax credit rules, e-way bill requirements, reverse charge, and job work GST.",
     relatedCalculators: ["gst"],
@@ -1393,7 +1393,7 @@ export const articles: Article[] = [
     excerpt:
       "Complete equal and unequal angle weight chart per IS 808. From 25\u00D725\u00D73mm to 200\u00D7200\u00D716mm, all in one place.",
     metaTitle:
-      "Steel Angle Weight Chart \u2014 All Sizes & Formula (IS 808) | SteelMath",
+      "Steel Angle Weight Chart \u2014 All Sizes & Formula (IS 808)",
     metaDescription:
       "Complete steel angle weight chart for equal and unequal angles per IS 808. Formula, all standard Indian sizes from 25mm to 200mm, weight per metre.",
     relatedCalculators: ["weight"],
@@ -1445,7 +1445,7 @@ export const articles: Article[] = [
     excerpt:
       "Propane spot prices up 17%, West Asian cargoes delayed by 3 weeks, galvanizing lines facing temperature instability. Inside the industrial gas shortage that could disrupt India\u2019s \u20B960,000 crore coated steel sector.",
     metaTitle:
-      "Propane Shortage Impact on Coated Steel India 2026 \u2014 Galvanizing, Colour Coating, Supply Crisis | SteelMath",
+      "Propane Shortage Impact on Coated Steel India 2026 \u2014 Galvanizing, Colour Coating, Supply Crisis",
     metaDescription:
       "How the propane and LPG shortage from the Hormuz crisis is threatening India\u2019s galvanized and colour-coated steel production. Impact on JSW, Tata, AM/NS, downstream sectors, and what the government can do.",
     relatedCalculators: ["landed-cost"],
@@ -1560,7 +1560,7 @@ export const articles: Article[] = [
     excerpt:
       "A \u20B93,200 crore EAF in Ludhiana producing rebar at one-seventh the carbon intensity of blast furnaces. Tata Steel\u2019s move validates scrap-based steelmaking and reshapes the competitive landscape for India\u2019s secondary sector.",
     metaTitle:
-      "Tata Steel EAF Ludhiana \u2014 India\u2019s First Scrap-Based Electric Arc Furnace | SteelMath",
+      "Tata Steel EAF Ludhiana \u2014 India\u2019s First Scrap-Based Electric Arc Furnace",
     metaDescription:
       "Tata Steel\u2019s \u20B93,200 crore EAF facility in Ludhiana marks a turning point for Indian steelmaking. Scrap-based, low-carbon, and strategically positioned. Full analysis.",
     relatedCalculators: ["energy-cost"],
@@ -1629,7 +1629,7 @@ export const articles: Article[] = [
     excerpt:
       "ArcelorMittal Nippon Steel India begins construction on a 17.8 MTPA integrated steel plant near Visakhapatnam with a captive 50 MTPA port. A \u20B91.36 lakh crore investment that reshapes India\u2019s steel geography.",
     metaTitle:
-      "AM/NS India Andhra Pradesh Steel Plant \u2014 \u20B91.36 Lakh Crore, 17.8 MTPA | SteelMath",
+      "AM/NS India Andhra Pradesh Steel Plant \u2014 \u20B91.36 Lakh Crore, 17.8 MTPA",
     metaDescription:
       "ArcelorMittal Nippon Steel India begins work on India\u2019s largest greenfield steel plant in Anakapalli, Andhra Pradesh. \u20B91.36 lakh crore investment, 17.8 MTPA capacity. Complete analysis.",
     relatedCalculators: ["landed-cost"],
@@ -1694,7 +1694,7 @@ export const articles: Article[] = [
     excerpt:
       "Gas supply slashed 50%, Gujarat Gas declares force majeure, coal costs up 10\u201312%. India\u2019s secondary steel producers) the backbone of the TMT and rebar market) are running out of options.",
     metaTitle:
-      "Gujarat Small Steel Mills 50% Production Cut \u2014 LNG Shortage, Gas Crisis 2026 | SteelMath",
+      "Gujarat Small Steel Mills 50% Production Cut \u2014 LNG Shortage, Gas Crisis 2026",
     metaDescription:
       "Small steel producers in Gujarat face 50% production cuts as the Hormuz crisis chokes LNG supplies. Gujarat Gas declares force majeure. Coal costs surge 10\u201313%. Impact analysis.",
     relatedCalculators: ["energy-cost", "landed-cost"],
@@ -1763,7 +1763,7 @@ export const articles: Article[] = [
     excerpt:
       "Swedish steel major SSAB opens a 100,000 sq ft service center in Taloja with 10,000+ MT of Hardox and Strenx stock. A shift from plate imports to ready-to-assemble kits, and a signal for India\u2019s speciality steel market.",
     metaTitle:
-      "SSAB Opens Mumbai Steel Service Center \u2014 Hardox, Strenx & What It Means for Indian Manufacturers | SteelMath",
+      "SSAB Opens Mumbai Steel Service Center \u2014 Hardox, Strenx & What It Means for Indian Manufacturers",
     metaDescription:
       "SSAB\u2019s new 100,000 sq ft Mumbai service center with 10,000+ MT capacity signals a shift towards localised value-added steel processing in India. Full analysis.",
     relatedCalculators: ["landed-cost"],
@@ -1842,7 +1842,7 @@ export const articles: Article[] = [
     excerpt:
       "Nippon Steel completes the refinancing of its $14.1 billion US Steel acquisition with a \u00A5900 billion JBIC-led loan. Here\u2019s what the deal structure, $11 billion investment plan, and $3 billion earnings target mean for the global steel industry.",
     metaTitle:
-      "Nippon Steel \u00A5900B JBIC Financing for US Steel \u2014 Deal Analysis | SteelMath",
+      "Nippon Steel \u00A5900B JBIC Financing for US Steel \u2014 Deal Analysis",
     metaDescription:
       "Nippon Steel completes \u00A52 trillion refinancing of US Steel acquisition. Full breakdown: JBIC co-financing, subordinated loans, convertible bonds, $11B investment plan, and implications for global steel.",
     relatedCalculators: ["landed-cost", "energy-cost"],
@@ -1933,7 +1933,7 @@ export const articles: Article[] = [
     excerpt:
       "RINL swings from \u20B9486 crore loss to \u20B954 crore profit, capacity utilization hits 94%, daily output doubles to 19,400+ tonnes. A data-driven look at the turnaround, its structural fragilities, and what it means for India\u2019s 300 MTPA ambition.",
     metaTitle:
-      "RINL Vizag Steel Plant Revival 2026 \u2014 Turnaround Analysis, Production Data & Strategic Implications | SteelMath",
+      "RINL Vizag Steel Plant Revival 2026 \u2014 Turnaround Analysis, Production Data & Strategic Implications",
     metaDescription:
       "Deep analysis of RINL\u2019s turnaround \u2014 from \u20B9486 crore loss to \u20B954 crore profit, 94% capacity utilization, and what it signals for India\u2019s steel sector. Data-driven insight for industry professionals.",
     relatedCalculators: ["energy-cost"],
@@ -2038,7 +2038,7 @@ export const articles: Article[] = [
     excerpt:
       "12\u201314 MT in FY26, doubling YoY. JSW drives the surge. Iran pellets face collapse. Brazil and Oman supply 70%. What the structural shift means for your procurement.",
     metaTitle:
-      "India Iron Ore Imports FY26: 7-Year High at 12\u201314 MT \u2014 JSW Steel, Brazil, Oman | SteelMath",
+      "India Iron Ore Imports FY26: 7-Year High at 12\u201314 MT \u2014 JSW Steel, Brazil, Oman",
     metaDescription:
       "India\u2019s iron ore imports to hit 12\u201314 million tonnes in FY26, doubling YoY. Why JSW Steel is driving the surge, what Iran pellet disruptions mean, and what it signals for India\u2019s steel future.",
     relatedCalculators: ["landed-cost"],
@@ -2111,7 +2111,7 @@ export const articles: Article[] = [
     excerpt:
       "LPG at \u20B96,000 on the black market. 40\u201350% of Ghaziabad stainless units shut. Mundra at 50% capacity. Jajpur at 60\u201370%. The ground-level report from India\u2019s industrial belts.",
     metaTitle:
-      "India MSME Steel Crisis: Gas Shortages Force Shutdowns in Pune, Ghaziabad, Gujarat | SteelMath",
+      "India MSME Steel Crisis: Gas Shortages Force Shutdowns in Pune, Ghaziabad, Gujarat",
     metaDescription:
       "Gas and LPG shortages are forcing 40\u201350% of India\u2019s smaller steel units to shut or cut production. Ground-level report from Pune, Ghaziabad, Mundra, and Jajpur.",
     relatedCalculators: ["energy-cost"],
@@ -2196,7 +2196,7 @@ export const articles: Article[] = [
     excerpt:
       "Punjab\u2019s steel hub faces effective 70% PNG supply cut. 200 rerolling mills reduced to hours of daily operation. Gas prices up \u20B96/SCM plus \u20B95 surcharge. Middle East freight at $50\u201360/MT. The MSME secondary steel sector faces an existential squeeze.",
     metaTitle:
-      "Mandi Gobindgarh Gas Cut 70% \u2014 MSME Steel Crisis, Freight Surge, Hadeed Hike | SteelMath",
+      "Mandi Gobindgarh Gas Cut 70% \u2014 MSME Steel Crisis, Freight Surge, Hadeed Hike",
     metaDescription:
       "200 Punjab steel mills face 70% gas cut. PNG prices up \u20B96/SCM. Middle East freight at $50\u201360/MT. Hadeed raises May HRC to $640/t. Complete analysis for steel leaders.",
     relatedCalculators: ["energy-cost"],
@@ -2283,7 +2283,7 @@ export const articles: Article[] = [
     excerpt:
       "The EU adopted its most ambitious industrial competitiveness agenda in a decade. EUROFER warns energy costs remain the critical barrier. Here\u2019s what it means for steel globally, and for Indian exporters.",
     metaTitle:
-      "EU One Market Strategy 2026: Steel Industry Impact, Energy Prices & CBAM | SteelMath",
+      "EU One Market Strategy 2026: Steel Industry Impact, Energy Prices & CBAM",
     metaDescription:
       "Deep analysis of the EU\u2019s One Europe One Market agenda \u2014 energy costs, CBAM, Industrial Accelerator Act, and what it means for Indian steel exporters.",
     relatedCalculators: ["energy-cost", "landed-cost"],
@@ -2384,7 +2384,7 @@ export const articles: Article[] = [
     excerpt:
       "PPIS 2026 signals Punjab\u2019s ambition to move beyond Mandi Gobindgarh\u2019s commodity steel into specialty grades, green steel, and advanced manufacturing. A full map of India\u2019s steel geography and where Punjab fits.",
     metaTitle:
-      "Punjab Specialty Steel Hub 2026 \u2014 PPIS Summit, Mandi Gobindgarh & India Steel Map | SteelMath",
+      "Punjab Specialty Steel Hub 2026 \u2014 PPIS Summit, Mandi Gobindgarh & India Steel Map",
     metaDescription:
       "Punjab targets specialty steel and green steel manufacturing. Analysis of PPIS 2026, Mandi Gobindgarh\u2019s evolution, India\u2019s steel hub geography, and what it means for investors and buyers.",
     relatedCalculators: ["energy-cost"],
@@ -2499,7 +2499,7 @@ export const articles: Article[] = [
     excerpt:
       "IREPAS March 2026 warns of unprecedented instability. Hormuz war drives costs up 38%. Turkish exports down 20%. EU CBAM creates import paralysis. US tariffs in legal chaos. Chinese exports at record 119 MT. What it means for Indian long steel.",
     metaTitle:
-      "Global Long Steel Market Faces Rising Uncertainty \u2014 IREPAS March 2026 Analysis | SteelMath",
+      "Global Long Steel Market Faces Rising Uncertainty \u2014 IREPAS March 2026 Analysis",
     metaDescription:
       "IREPAS March 2026 outlook warns of unprecedented instability in global long steel. Hormuz war, EU CBAM confusion, Turkish export collapse, US tariff chaos \u2014 complete analysis for Indian steel leaders.",
     relatedCalculators: ["landed-cost", "energy-cost"],
@@ -2592,7 +2592,7 @@ export const articles: Article[] = [
     excerpt:
       "MOIL raises manganese ore prices 15\u201317.5% from April 6, 2026, the steepest revision in nearly two years. Full impact analysis for ferroalloy producers, steelmakers, and procurement teams.",
     metaTitle:
-      "MOIL Manganese Ore Price Hike April 2026 \u2014 Steel Impact | SteelMath",
+      "MOIL Manganese Ore Price Hike April 2026 \u2014 Steel Impact",
     metaDescription:
       "MOIL raises manganese ore prices 15\u201317.5% from April 6, 2026 \u2014 sharpest hike in 2 years. Full impact analysis for ferroalloy producers and steelmakers.",
     relatedCalculators: ["calculator"],
@@ -2750,7 +2750,7 @@ EMD:                         Unchanged (\u20B91,80,000/MT)</pre>
     excerpt:
       "NMDC raises iron ore lumps by 10.4% and fines by 11.1% after record 53 MT production year. Full impact analysis on BF-BOF costs, landed pricing, import dynamics, and procurement strategy.",
     metaTitle:
-      "NMDC Iron Ore Price Hike April 2026 \u2014 Steel Cost Analysis | SteelMath",
+      "NMDC Iron Ore Price Hike April 2026 \u2014 Steel Cost Analysis",
     metaDescription:
       "NMDC raises iron ore prices up to 11.1% from April 5, 2026 after record 53 MT production. Full impact analysis on BF-BOF costs, landed pricing, and strategy.",
     relatedCalculators: ["calculator"],
@@ -2937,7 +2937,7 @@ March 2026 Sales:      5.90 MT</pre>
     excerpt:
       "India\u2019s steel demand grew 37% in 5 years while China\u2019s declined 6.5%. Per capita at 100 kg vs 219 kg global average. Why India is the world\u2019s last great steel growth market, and what it means for professionals.",
     metaTitle:
-      "India\u2019s Steel Story Is Not China\u2019s \u2014 Why Demand Will Win | SteelMath",
+      "India\u2019s Steel Story Is Not China\u2019s \u2014 Why Demand Will Win",
     metaDescription:
       "India\u2019s steel demand grew 37% in 5 years while China\u2019s declined 6.5%. Why India is the world\u2019s last great steel growth market \u2014 and what it means for you.",
     relatedCalculators: ["margin", "energy-cost"],
@@ -3162,7 +3162,7 @@ March 2026 Sales:      5.90 MT</pre>
     excerpt:
       "India targets 300 MT steel capacity by 2030. But volume alone won\u2019t set prices. Analysis of raw material gaps, global capital flows, and the value chain deficit that defines India\u2019s limits.",
     metaTitle:
-      "Can India Control Global Steel Pricing by 2030? | SteelMath",
+      "Can India Control Global Steel Pricing by 2030?",
     metaDescription:
       "India targets 300 MT steel capacity by 2030. But volume alone won\u2019t set prices. Analysis of raw material gaps, global capital flows, and the value chain deficit.",
     relatedCalculators: ["energy-cost", "landed-cost"],
@@ -3370,7 +3370,7 @@ March 2026 Sales:      5.90 MT</pre>
     excerpt:
       "SteelWatch\u2019s 2026 scorecard scores 18 steelmakers on transition readiness. None cross 50/100. SSAB leads at 46.2, HBIS trails at 8.3. What the data reveals for India\u2019s steel path.",
     metaTitle:
-      "Green Steel Transition: Why Zero of 18 Steelmakers Are Ready | SteelMath",
+      "Green Steel Transition: Why Zero of 18 Steelmakers Are Ready",
     metaDescription:
       "SteelWatch\u2019s 2026 scorecard scores 18 steelmakers on transition readiness. None cross 50/100. What the data reveals \u2014 and what it means for India\u2019s steel path.",
     relatedCalculators: ["energy-cost", "margin"],
@@ -3585,7 +3585,7 @@ March 2026 Sales:      5.90 MT</pre>
     excerpt:
       "NMDC crosses 53 MT, Lloyds Metals doubles output, exports drop 30%, imports hit 7-year highs. Three data-driven shifts reveal a fundamental restructuring of India\u2019s iron ore economy.",
     metaTitle:
-      "India\u2019s Iron Ore Transformation: 3 Structural Shifts in 2026 | SteelMath",
+      "India\u2019s Iron Ore Transformation: 3 Structural Shifts in 2026",
     metaDescription:
       "India\u2019s iron ore sector is undergoing a quiet transformation \u2014 rising grades, falling exports, and geographic consolidation. Data-driven analysis of what\u2019s changing.",
     relatedCalculators: ["energy-cost"],
@@ -3790,7 +3790,7 @@ March 2026 Sales:      5.90 MT</pre>
     excerpt:
       "\u20B98.69 trillion Jal Jeevan Mission 2.0 fuels DI pipe demand. But this isn\u2019t a manufacturing business, it\u2019s an EPC-controlled ecosystem. Who wins, who fails, and why.",
     metaTitle:
-      "India\u2019s DI Pipe Market: \u20B98.69 Trillion Demand, But Not Open to All | SteelMath",
+      "India\u2019s DI Pipe Market: \u20B98.69 Trillion Demand, But Not Open to All",
     metaDescription:
       "\u20B98.69 trillion Jal Jeevan Mission 2.0 fuels DI pipe demand. But this isn\u2019t a manufacturing business \u2014 it\u2019s an EPC-controlled ecosystem. Who wins, who fails, and why.",
     relatedCalculators: ["energy-cost", "margin"],
@@ -4492,7 +4492,7 @@ March 2026 Sales:      5.90 MT</pre>
     excerpt:
       "60 MT of Gulf limestone imports stranded by Hormuz. RSMM Jaisalmer dispatches surge 43%. Domestic cost \u20B93,900/t vs \u20B93,100/t imported, a 26% premium steel mills must absorb.",
     metaTitle:
-      "Gulf Limestone Stranded: India\u2019s Steel Mills Turn to Jaisalmer | SteelMath",
+      "Gulf Limestone Stranded: India\u2019s Steel Mills Turn to Jaisalmer",
     metaDescription:
       "60 MT of Gulf limestone imports stranded by Hormuz. RSMM Jaisalmer dispatches surge 43%. Domestic cost \u20B93,900/t vs \u20B93,100/t imported \u2014 a 26% premium steel mills must absorb.",
     relatedCalculators: ["energy-cost", "landed-cost"],
@@ -4692,7 +4692,7 @@ March 2026 Sales:      5.90 MT</pre>
     excerpt:
       "Iranian strikes destroy EGA\u2019s Al Taweelah smelter (1.6 MT/yr). Alba at 30%. Gulf loses 9% of global aluminium. Steel and construction face existential supply crisis.",
     metaTitle:
-      "GCC Industrial War: EGA Down 12 Months, Steel & Aluminium Crisis | SteelMath",
+      "GCC Industrial War: EGA Down 12 Months, Steel & Aluminium Crisis",
     metaDescription:
       "Iranian strikes destroy EGA\u2019s Al Taweelah smelter (1.6 MT/yr). Alba at 30%. Gulf loses 9% of global aluminium. Steel and construction face existential supply crisis.",
     relatedCalculators: ["landed-cost", "margin"],
@@ -4867,7 +4867,7 @@ Sulphur exports at risk: ~50% of global (Linesight)</p>
     excerpt:
       "From \u20B94,538 crore negative net worth to \u20B954 crore monthly profit. RINL Vizag Steel\u2019s turnaround, \u20B919,537 crore total package, 94% capacity, all 3 BFs running. The complete story of India\u2019s most dramatic PSU steel rescue.",
     metaTitle:
-      "RINL Vizag Steel Revival 2026: \u20B919,537 Cr Package, 94% Capacity | SteelMath",
+      "RINL Vizag Steel Revival 2026: \u20B919,537 Cr Package, 94% Capacity",
     metaDescription:
       "From \u20B94,538 crore negative net worth to \u20B954 crore monthly profit. RINL Vizag Steel\u2019s turnaround \u2014 \u20B919,537 crore total package, 94% capacity, all 3 BFs running.",
     relatedCalculators: ["weight", "energy-cost"],
@@ -5075,7 +5075,7 @@ Sulphur exports at risk: ~50% of global (Linesight)</p>
     excerpt:
       "Steel weight formulas for TMT bar, plate, pipe, angle, channel, beam, tube, flat bar. Worked examples with IS standard density values. Free online calculators.",
     metaTitle:
-      "How to Calculate Weight of Steel \u2014 Every Formula & Section | SteelMath",
+      "How to Calculate Weight of Steel \u2014 Every Formula & Section",
     metaDescription:
       "Steel weight formulas for TMT bar, plate, pipe, angle, channel, beam, tube, flat bar. Worked examples with IS standard density values. Free online calculators.",
     relatedCalculators: ["weight", "tmt", "steel-plate", "pipe-weight", "angle-weight"],
@@ -5509,7 +5509,7 @@ Sulphur exports at risk: ~50% of global (Linesight)</p>
     excerpt:
       "Complete steel scrap classification: HMS 1, HMS 2, shredded, busheling, turnings, cast iron. ISRI codes, density, yield rates, and furnace compatibility guide.",
     metaTitle:
-      "Steel Scrap Grades \u2014 HMS 1 vs HMS 2 vs Shredded | ISRI Guide | SteelMath",
+      "Steel Scrap Grades \u2014 HMS 1 vs HMS 2 vs Shredded | ISRI Guide",
     metaDescription:
       "Complete steel scrap classification: HMS 1, HMS 2, shredded, busheling, turnings, cast iron. ISRI codes, density, yield rates, and furnace compatibility guide.",
     relatedCalculators: ["scrap-yield", "scrap-production-cost", "weight"],
@@ -5735,7 +5735,7 @@ Electricity consumption: IF ~550\u2013650 kWh/t | EAF ~380\u2013550 kWh/t
     excerpt:
       "A hollow shaft resists torsion 2.92\u00D7 better than a solid one of equal weight. This isn\u2019t opinion, it\u2019s algebra from \u03C4 = TR/J. Complete engineering analysis.",
     metaTitle:
-      "Why Hollow Steel Sections Are Stronger Than Solid \u2014 The Math | SteelMath",
+      "Why Hollow Steel Sections Are Stronger Than Solid \u2014 The Math",
     metaDescription:
       "A hollow shaft resists torsion 2.92\u00D7 better than a solid one of equal weight. This isn\u2019t opinion \u2014 it\u2019s algebra from \u03C4 = TR/J. Complete engineering analysis.",
     relatedCalculators: ["pipe-weight", "square-tube-weight", "rect-tube-weight", "round-bar-weight", "beam-weight"],
@@ -6009,7 +6009,7 @@ At k = 0.95: D/t = 40.0, very thin, buckling is the primary failure mode.</p>
     excerpt:
       "151 Indian Standards now mandatory for all steel imports under QCO 2024. BIS certification process, timeline, cost, penalties, essential for every importer.",
     metaTitle:
-      "BIS Certification for Steel Imports India 2026 \u2014 151 Standards Guide | SteelMath",
+      "BIS Certification for Steel Imports India 2026 \u2014 151 Standards Guide",
     metaDescription:
       "151 Indian Standards now mandatory for all steel imports under QCO 2024. BIS certification process, timeline, cost, penalties. Essential guide for importers.",
     relatedCalculators: ["weight"],
@@ -6153,7 +6153,7 @@ At k = 0.95: D/t = 40.0, very thin, buckling is the primary failure mode.</p>
     excerpt:
       "Every active anti-dumping duty on steel imports into India. Products, countries, duty rates, expiry dates. DGTR cases on stainless, seamless, flat products.",
     metaTitle:
-      "Anti-Dumping Duty on Steel India 2026 \u2014 Active Cases & Rates Guide | SteelMath",
+      "Anti-Dumping Duty on Steel India 2026 \u2014 Active Cases & Rates Guide",
     metaDescription:
       "Every active anti-dumping duty on steel imports into India. Products, countries, duty rates, expiry dates. DGTR cases on stainless, seamless, flat products.",
     relatedCalculators: ["weight"],
@@ -6289,7 +6289,7 @@ At k = 0.95: D/t = 40.0, very thin, buckling is the primary failure mode.</p>
     excerpt:
       "India consumed ~45\u201347 MT of steel scrap in FY26. 28% of 169.2 MT crude steel. Only 84% domestic. Why India can\u2019t copy the EU/US scrap playbook. JPC data.",
     metaTitle:
-      "India\u2019s 47 MT Steel Scrap Deficit \u2014 The Number Shaping Steel\u2019s Future | SteelMath",
+      "India\u2019s 47 MT Steel Scrap Deficit \u2014 The Number Shaping Steel\u2019s Future",
     metaDescription:
       "India consumed ~45-47 MT of steel scrap in FY26 \u2014 28% of 169.2 MT crude steel. Only 84% domestic. Why India can\u2019t copy the EU/US scrap playbook. JPC data.",
     relatedCalculators: ["scrap-yield", "scrap-production-cost"],
