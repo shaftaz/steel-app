@@ -169,7 +169,7 @@ export const articles: Article[] = [
 
 <h2>The validation gap</h2>
 
-<p>When an export offer rises because domestic futures rallied (rather than because buyers bid it up) the move opens what we call the validation gap: the distance between where sellers mark the market and where demand is actually willing to transact. The gap resolves one of two ways. Either physical buyers step in within a handful of sessions and confirm the new level, or offers drift back to where the bids live. What it almost never does is stay open for long.</p>
+<p>When an export offer rises because domestic futures rallied (rather than because buyers bid it up) the move opens what we call the validation gap: the distance between where sellers mark the market and where demand is actually willing to transact. The gap resolves one of two ways. Either physical buyers step in within a handful of sessions and confirm the new level, or <a href="/articles/china-steel-export-prices-fall-validation-gap-closes">offers drift back to where the bids live</a>. What it almost never does is stay open for long.</p>
 
 <p>Right now the gap is wide and the confirming evidence is absent. Southeast Asia (the marginal buyer that sets the tone for Chinese export pricing) is in its seasonal demand lull, and importers there are pressing hard on billet prices while Chinese mills hold firm on production-cost grounds. That standoff, mills\u2019 cost floor against buyers\u2019 seasonal patience, is the actual price discovery happening beneath the headline uptick.</p>
 
@@ -3648,7 +3648,7 @@ March 2026 Sales:      5.90 MT</pre>
 
 <p>This is the second structural shift: India is transitioning from a \u201cmine-and-export\u201d model to a \u201cmine-and-consume\u201d model. Iron ore is increasingly being retained within the domestic value chain, processed into pellets and fed to Indian steel mills rather than shipped overseas as low-grade fines. The government\u2019s 30% export duty on high-grade ore (above 58% Fe) reinforces this direction at the policy level.</p>
 
-<p>For the global seaborne market, this has implications. India has historically been a swing supplier, particularly of lower-grade fines to China. As domestic absorption rises and exports decline, India\u2019s role as a marginal supplier diminishes. For Indian miners, this means domestic steel demand (not Chinese import appetite) increasingly sets the pricing anchor.</p>
+<p>For <a href="/articles/iron-ore-price-one-year-low">the global seaborne market</a>, this has implications. India has historically been a swing supplier, particularly of lower-grade fines to China. As domestic absorption rises and exports decline, India\u2019s role as a marginal supplier diminishes. For Indian miners, this means domestic steel demand (not Chinese import appetite) increasingly sets the pricing anchor.</p>
 
 <h2>Shift Three: Geographic Consolidation. And a New Frontier</h2>
 
@@ -3851,7 +3851,7 @@ March 2026 Sales:      5.90 MT</pre>
 
 <h3>Jindal Saw: The Scale Player</h3>
 
-<p>Jindal Saw is among the largest pipe manufacturers globally, with DI pipe capacity exceeding 1 MTPA. The company operates from multiple facilities in India and is expanding internationally, with new seamless and DI pipe facilities in Abu Dhabi and Saudi Arabia expected to be operational by February 2028.</p>
+<p>Jindal Saw is among the largest pipe manufacturers globally, with DI pipe capacity exceeding 1 MTPA. The company operates from multiple facilities in India and is expanding internationally, with new seamless and DI pipe facilities in Abu Dhabi and <a href="/articles/saudi-anti-dumping-duties-indian-ductile-iron-pipes">Saudi Arabia</a> expected to be operational by February 2028.</p>
 
 <p>In its Q3 FY26 earnings call, the company disclosed a total pipe order book of 19.64 lakh tonnes, with DI pipes comprising approximately 40%, roughly 750,000 tonnes. This order visibility provides revenue clarity but also highlights a challenge: the company acknowledged that \u201cprotracted payment timelines in the Indian water sector\u201d and \u201clengthy receivables days associated with public infrastructure projects\u201d continue to pose challenges for cash flow and supply chain stability.</p>
 
