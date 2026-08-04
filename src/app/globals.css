@@ -305,6 +305,71 @@ input[type="number"] {
   font-family: var(--font-plex-mono), monospace;
 }
 
+/* ============================================================
+   Editorial long-form — global-standard reading experience.
+   Applied alongside .prose-glass on article bodies; pure CSS so
+   article content strings stay byte-identical.
+   ============================================================ */
+.prose-editorial {
+  counter-reset: section;
+}
+.prose-editorial p,
+.prose-editorial li {
+  font-size: 16px;
+  line-height: 1.72;
+}
+.prose-editorial li {
+  margin-top: 0.4rem;
+  margin-bottom: 0.4rem;
+}
+.prose-editorial strong {
+  color: var(--ink);
+}
+/* Standfirst: the opening paragraph reads as a deck, not body copy */
+.prose-editorial > p:first-of-type {
+  font-size: 17.5px;
+  line-height: 1.6;
+  color: var(--ink);
+}
+/* Numbered mono kickers on section headings — 01, 02, 03 … */
+.prose-editorial h2 {
+  counter-increment: section;
+  font-size: clamp(21px, 2.4vw, 24px);
+  font-weight: 800;
+  letter-spacing: -0.015em;
+  line-height: 1.25;
+  margin-top: 2.9rem;
+  margin-bottom: 0.9rem;
+}
+.prose-editorial h2::before {
+  content: counter(section, decimal-leading-zero);
+  display: block;
+  font-family: var(--font-plex-mono), monospace;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  color: var(--accent);
+  margin-bottom: 0.45rem;
+}
+.prose-editorial h3 {
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin-top: 1.9rem;
+  margin-bottom: 0.5rem;
+}
+.prose-editorial table {
+  font-size: 13.5px;
+}
+.prose-editorial blockquote {
+  font-size: 18px;
+  line-height: 1.55;
+  font-weight: 500;
+  font-style: normal;
+  border-left: 2px solid var(--accent);
+  padding-left: 1.25rem;
+}
+
 /* Legacy inline-styled CTA buttons inside article body HTML —
    content strings must stay byte-identical, so reskin via CSS. */
 .prose-glass a[style] {

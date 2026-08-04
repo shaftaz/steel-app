@@ -265,20 +265,20 @@ export default async function ArticlePage({ params }: PageProps) {
               </span>
             </div>
 
-            <h1 className="text-ink text-2xl sm:text-[28px] font-extrabold mb-3 leading-tight tracking-[-0.02em]">
+            <h1 className="text-ink text-[clamp(26px,4.5vw,38px)] font-extrabold mb-4 leading-[1.12] tracking-[-0.02em]">
               {article.title}
             </h1>
-            <p className="font-mono text-[11px] tracking-[0.06em] text-muted-3 mb-8 uppercase">
+            <p className="font-mono text-[11px] tracking-[0.06em] text-muted-3 uppercase pb-5 mb-8 border-b border-rule">
               By <span className="text-muted font-medium">Special Correspondent</span> &middot; SteelMath
             </p>
 
             <div
-              className="prose max-w-none prose-glass prose-headings:font-semibold prose-h2:text-lg prose-h2:mt-8 prose-h2:mb-3 prose-h3:text-base prose-h3:mt-6 prose-h3:mb-2 prose-p:text-sm prose-p:leading-relaxed prose-li:text-sm prose-li:leading-relaxed prose-ul:my-3 prose-strong:text-ink"
+              className="prose max-w-none prose-glass prose-editorial"
               dangerouslySetInnerHTML={{ __html: article.content }}
             />
 
             {/* CTA section */}
-            <div className="mt-10 pt-6 border-t border-white/[0.06] flex flex-col sm:flex-row items-start sm:items-center gap-3">
+            <div className="mt-10 pt-6 border-t border-rule flex flex-col sm:flex-row items-start sm:items-center gap-3">
               <Link
                 href="/calculator"
                 className="btn-glow inline-block px-6 py-2.5 no-underline text-xs font-semibold"
