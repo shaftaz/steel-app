@@ -54,7 +54,7 @@ export const articles: Article[] = [
 
 <h2>Why the small 2026 number is misleading</h2>
 
-<p>Three reasons. First, the factor ramps steeply: what costs \u20AC5/t today is on a published schedule toward forty times that. Second, default values are set from the worst emitters, importers who fail to obtain verified supplier data systematically overpay. Third, trade flows are already shifting as exporters reroute around <a href="/articles/anti-dumping-chinese-steel-barrier-cascade">a rising wall of trade measures</a>, which changes which origins, and therefore which emission intensities, show up in your supply chain. Buyers pricing landed cost, from <a href="/calculators/steel-plate">plate</a> to coil, should be quoting CBAM-inclusive numbers for any EU-bound material from this year onward.</p>
+<p>Three reasons. First, the factor ramps steeply: what costs \u20AC5/t today is on a published schedule toward forty times that. Second, default values are set from the worst emitters, importers who <a href="/articles/asean-steel-cbam-carbon-lock-in">fail to obtain verified supplier data</a> systematically overpay. Third, trade flows are already shifting as exporters reroute around <a href="/articles/anti-dumping-chinese-steel-barrier-cascade">a rising wall of trade measures</a>, which changes which origins, and therefore which emission intensities, show up in your supply chain. Buyers pricing landed cost, from <a href="/calculators/steel-plate">plate</a> to coil, should be quoting CBAM-inclusive numbers for any EU-bound material from this year onward.</p>
 
 <h2>Frequently Asked Questions</h2>
 
@@ -107,7 +107,7 @@ export const articles: Article[] = [
 
 <p>That contradiction (record walls, record flows) resolves into a repeatable three-step pattern. Call it the barrier cascade.</p>
 
-<p><strong>Step one: the product hop.</strong> When finished products get blocked, flows shift to categories the duties don\u2019t cover. The clearest evidence is in semi-finished steel: in the first quarter of 2026, Chinese slab exports surged 182% year-on-year and billet exports rose 14.8% to 2.66 million tonnes, precisely as finished-product exports to Brazil, South Korea, and Vietnam fell 30%, and cold-rolled and coated exports to Turkey collapsed 42%. The steel did not stop moving. It changed form.</p>
+<p><strong>Step one: the product hop.</strong> When finished products get blocked, flows shift to categories the duties don\u2019t cover. The clearest evidence is in semi-finished steel: in the first quarter of 2026, Chinese slab exports surged 182% year-on-year and billet exports rose 14.8% to 2.66 million tonnes, precisely as finished-product exports to Brazil, South Korea, and <a href="/articles/asean-steel-cbam-carbon-lock-in">Vietnam</a> fell 30%, and cold-rolled and coated exports to Turkey collapsed 42%. The steel did not stop moving. It changed form.</p>
 
 <p><strong>Step two: the market hop.</strong> Volumes displaced from protected markets flow toward open ones, which then experience the import surge that triggers their own investigations, which is exactly why probes are now appearing in Korea, Brazil, and Turkey in the same season. <a href="/articles/south-korea-steel-squeeze-china-imports">Each new barrier redirects pressure to whoever hasn\u2019t built one yet</a>.</p>
 
@@ -6768,6 +6768,69 @@ At k = 0.95: D/t = 40.0, very thin, buckling is the primary failure mode.</p>
 
 <h3>Why does a maintenance contract matter for India’s steel sector?</h3>
 <p>It signals a shift to life-cycle asset stewardship, which changes steel demand toward fatigue- and corrosion-resistant grades, grows the asset-integrity services market, and builds the domestic capability base for future advanced steel structures.</p>
+`,
+  },
+  {
+    slug: "asean-steel-cbam-carbon-lock-in",
+    title: "ASEAN Built a Steel Boom. CBAM Is About to Send It the Bill.",
+    category: "ANALYSIS",
+    categoryColor: "blue",
+    date: "2026-08-04",
+    readTime: "6 min",
+    excerpt:
+      "ASEAN steel output tripled to 49 Mt, with emissions of 1.78–2.00 tCO₂/t and 68.7 Mt of new coal-based capacity. What CBAM means for Vietnam, Indonesia, Malaysia.",
+    metaTitle: "ASEAN Steel and CBAM: The Three Clocks Now Running",
+    metaDescription:
+      "ASEAN steel output tripled to 49 Mt, with emissions of 1.78–2.00 tCO₂/t and 68.7 Mt of new coal-based capacity. What CBAM means for Vietnam, Indonesia, Malaysia.",
+    relatedCalculators: ["scrap-yield", "metal-weight"],
+    content: `
+<p><strong>Executive summary:</strong> Southeast Asia has staged one of the fastest steel expansions in the world: crude output more than tripling from 14 million tonnes in 2015 to over 49 million tonnes in 2024, led by Vietnam, Indonesia, and Malaysia. But a new analysis by Ramboll, published through the Singapore Green Building Council, shows the boom is being built on the wrong side of Europe’s carbon border: regional emissions intensity of 1.78–2.00 tCO₂ per tonne sits well above EU benchmarks, 68.7 million tonnes of new coal-based BF-BOF capacity is announced or under construction, and 75% of the region’s cleaner EAF fleet is more than 20 years old. Three clocks are now running against ASEAN steel (the asset clock, the regulation clock, and the verification clock) and only one of them can still be reset cheaply.</p>
+
+<p>Steel booms are usually judged by tonnes. The one unfolding across Southeast Asia deserves to be judged by a different unit: tonnes of CO₂ per tonne of steel, because that ratio, not output, will decide who gets paid what in the region’s most valuable export market.</p>
+
+<h2>The boom, and its carbon arithmetic</h2>
+
+<p>The expansion itself is remarkable. ASEAN crude steel output has grown from 14 million tonnes in 2015 to more than 49 million tonnes in 2024, with Vietnam, Indonesia, and Malaysia as the primary engines, and the pipeline is bigger still, with 68.7 million tonnes of new blast furnace–basic oxygen furnace capacity announced or under construction, according to <a href="https://www.sgbc.sg/ramboll-asean-steel-cbam/" target="_blank" rel="noopener">Ramboll’s analysis for the Singapore Green Building Council</a>, drawing on World Steel Association and Global Energy Monitor data.</p>
+
+<p>The arithmetic underneath is the problem. Weighted average emissions intensity across the three lead producers runs 1.78–2.00 tCO₂ per tonne of crude steel, substantially above the EU benchmarks against which the <a href="/cbam">Carbon Border Adjustment Mechanism</a> prices imported emissions. And the capacity mix is moving the wrong way: the new investment wave is dominated by coal-based BF-BOF routes, while the region’s electric arc furnace fleet (the lower-carbon alternative) is aging in place, with three-quarters of facilities over 20 years old. The region is simultaneously building its carbon-intensive future and letting its low-carbon present depreciate.</p>
+
+<h2>The three clocks</h2>
+
+<p>The strategic situation resolves into three timers running at different speeds, a framing worth keeping for any exposed producer or buyer.</p>
+
+<p><strong>The asset clock runs 25–30 years.</strong> Blast furnaces are generational commitments: capital recovered over decades, relined rather than retired. Ramboll’s analysis makes the financing dimension explicit (much of the new BF-BOF wave is backed by Chinese state-linked capital) which means the region is locking in carbon-intensive production for 25–30 years precisely as its key export market begins pricing carbon at the border. The report calls this the investment paradox; a plainer name is a bet that carbon stays free. Europe has already repealed the assumption.</p>
+
+<p><strong>The regulation clock is already ringing.</strong> <a href="/articles/cbam-cost-steel-importers">CBAM’s cost curve ramps as free allocation phases out</a>, and ASEAN producers hold meaningful EU market share, which is exactly what creates what the analysis calls “substantial CBAM exposure.” This is <a href="/articles/anti-dumping-chinese-steel-barrier-cascade">the same wall-building dynamic reshaping steel trade everywhere</a>, with one crucial difference: a carbon border charge scales with measured emissions rather than legal findings, making it a permanent cost gradient rather than a case-by-case dispute.</p>
+
+<p><strong>The verification clock is the underrated one.</strong> Here sits the report’s sharpest warning: without robust monitoring, reporting, and verification (MRV) systems and domestic carbon pricing, ASEAN producers face CBAM’s punitive default values: charges assessed as if their steel were dirtier than it may actually be, “regardless of actual performance.” Read that carefully, because it inverts the usual logic: a producer can lose EU competitiveness not because its emissions are high, but because it cannot prove what they are. Measurement capability has become market access. And of the three clocks, this is the only one that can be reset quickly and comparatively cheaply. Ramboll’s Volodymyr Shatokha warns that producers who fail to adapt technology and deploy robust MRV capability face “significantly higher costs and reduced access to high-value export markets.”</p>
+
+<h2>The Malaysia anomaly</h2>
+
+<p>One data point in the analysis deserves separate attention: Malaysia’s export-to-production ratios exceed 100%, a country exporting more steel than it makes, which arithmetically requires re-exported material and raises transshipment concerns. In a world of origin-based trade measures, that anomaly is a magnet for scrutiny: circumvention investigations, origin verification demands, and precautionary duties tend to find such patterns quickly. For ASEAN, it is a reminder that the region’s trade credibility, not just its carbon intensity, is now an asset to manage.</p>
+
+<h2>The honest limits</h2>
+
+<p>Three cautions. Emissions-intensity ranges are weighted averages across three countries: individual plants span a wide spread, and the best regional producers may sit far closer to EU benchmarks than the average implies. Announced capacity is not built capacity; 68.7 million tonnes of pipeline will be tested by financing conditions and demand before it all pours steel. And CBAM’s own parameters (scope, default values, phase-in pace) remain subject to EU policy evolution, cutting in either direction.</p>
+
+<h2>What the exposed should do now</h2>
+
+<p>The three-clocks framing orders the priorities. For producers: MRV first (it is the cheapest clock to reset, the fastest to show returns, and the difference between paying for your actual emissions and paying punitive defaults); then EAF renewal and <a href="/calculators/scrap-yield">scrap strategy</a>, which connects directly to <a href="/articles/financing-steel-decarbonisation-value-chain">the value-chain financing now emerging for exactly these investments</a>; and only then the harder generational question of whether the next blast furnace should be built at all. For EU buyers sourcing from ASEAN: supplier emissions data is now procurement-critical, because a supplier without credible MRV is carrying a hidden cost escalator. For everyone pricing the region’s steel: CBAM exposure will increasingly separate ASEAN export offers into verified and unverified tiers, <a href="/articles/china-steel-export-prices-fall-validation-gap-closes">a spread worth tracking as systematically as freight</a>, the kind of emerging price differential SteelMath’s market intelligence is built to surface early. Estimating what CBAM adds per tonne for a given product and emissions profile is exactly what <a href="/cbam/calculator">our CBAM cost tools</a> are for.</p>
+
+<p>The boom is real, and so is the bill. The only question ASEAN’s steelmakers still control is which of the three clocks they answer first.</p>
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>How exposed is ASEAN steel to the EU’s CBAM?</h3>
+<p>Substantially: regional emissions intensity of 1.78–2.00 tCO₂ per tonne of crude steel exceeds EU benchmarks, ASEAN producers hold meaningful EU market share, and 68.7 Mt of new coal-based BF-BOF capacity is announced or under construction, extending carbon-intensive production for 25–30 years into CBAM’s pricing era.</p>
+
+<h3>What are CBAM default values and why do they matter?</h3>
+<p>When importers cannot provide verified emissions data, CBAM applies punitive default values, assessing charges as if the steel were highly emissions-intensive regardless of actual performance. Producers without robust monitoring, reporting, and verification (MRV) systems can lose EU competitiveness even if their real emissions are lower than the defaults assume.</p>
+
+<h3>Which ASEAN countries lead steel production growth?</h3>
+<p>Vietnam, Indonesia, and Malaysia drove the region’s expansion from 14 Mt of crude steel in 2015 to over 49 Mt in 2024. Malaysia’s export-to-production ratio above 100% has separately raised transshipment concerns.</p>
+
+<h3>What should ASEAN steel producers do about CBAM?</h3>
+<p>In order of speed and cost: build MRV capability immediately (the difference between paying actual versus punitive default charges), renew aging EAF capacity and secure scrap supply, and re-examine new BF-BOF commitments against a 25–30-year horizon in which carbon carries a border price.</p>
 `,
   },
   {
