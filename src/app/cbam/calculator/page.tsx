@@ -18,7 +18,32 @@ export const metadata: Metadata = {
   },
 };
 
+const FAQS = [
+  {
+    q: "How is CBAM cost calculated for steel?",
+    a: "Embedded emissions per tonne (verified actuals, or default values by product and origin) × tonnes imported × the year’s phase-in factor × the CBAM certificate price (which tracks the EU ETS), minus any creditable carbon price already paid in the origin country. This calculator runs that per shipment and projects it through 2034.",
+  },
+  {
+    q: "What does CBAM cost per tonne of steel in 2026?",
+    a: "As a worked example, 10,000 t of HRC from India in 2026 computes to roughly €6.1 per tonne at a €75.28/tCO₂e certificate price: modest because 2026’s phase-in factor is 2.5%. The same cargo’s cost rises steeply toward 2034 as the factor approaches 100%.",
+  },
+  {
+    q: "Why do verified emissions matter under CBAM?",
+    a: "Without verified data, the levy is assessed on conservative default values: importers pay as if their steel matched the default profile even when actual emissions are lower. Verified actuals below the default translate directly into lower cost per tonne.",
+  },
+];
+
 export default function CbamCalculatorPage() {
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: FAQS.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  };
+
   const webAppJsonLd = {
     "@context": "https://schema.org",
     "@type": "WebApplication",
@@ -55,6 +80,10 @@ export default function CbamCalculatorPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(webAppJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
       <script
         type="application/ld+json"
@@ -127,6 +156,63 @@ export default function CbamCalculatorPage() {
             </div>
           </Link>
         </div>
+
+        {/* Guides */}
+        <div className="mt-8">
+          <div className="font-mono text-[11px] tracking-[0.12em] text-cbam mb-3">
+            GUIDES
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+            <Link
+              href="/articles/how-to-use-cbam-calculator"
+              className="border border-input-border bg-[#FFFFFF] px-4.5 py-4 text-ink no-underline hover:border-cbam transition-colors"
+            >
+              <div className="font-mono text-[10.5px] tracking-[0.1em] text-cbam mb-1.5">
+                HOW TO USE THIS CALCULATOR →
+              </div>
+              <div className="text-[13.5px] text-muted leading-normal">
+                The five inputs, a worked example (10,000 t HRC from India), and
+                the two decisions that move your result most.
+              </div>
+            </Link>
+            <Link
+              href="/articles/cbam-relevance-steel-importers-exporters"
+              className="border border-input-border bg-[#FFFFFF] px-4.5 py-4 text-ink no-underline hover:border-cbam transition-colors"
+            >
+              <div className="font-mono text-[10.5px] tracking-[0.1em] text-cbam mb-1.5">
+                WHO NEEDS TO CALCULATE CBAM →
+              </div>
+              <div className="text-[13.5px] text-muted leading-normal">
+                Importers, mills, traders, procurement, finance, analysts: what
+                each seat should compute, and when.
+              </div>
+            </Link>
+          </div>
+        </div>
+
+        {/* FAQ */}
+        <div className="mt-8">
+          <div className="font-mono text-[11px] tracking-[0.12em] text-cbam mb-3">
+            FREQUENTLY ASKED QUESTIONS
+          </div>
+          {FAQS.map((f) => (
+            <details
+              key={f.q}
+              className="border-b border-rule py-3.5 group"
+            >
+              <summary className="cursor-pointer text-[14.5px] font-semibold text-ink list-none flex justify-between items-baseline gap-3">
+                {f.q}
+                <span className="font-mono text-[11px] text-muted-3 group-open:rotate-90 transition-transform">
+                  ▸
+                </span>
+              </summary>
+              <p className="text-[13.5px] text-muted leading-relaxed mt-2 max-w-[720px]">
+                {f.a}
+              </p>
+            </details>
+          ))}
+        </div>
+
         <div className="font-mono text-[10.5px] text-muted-3 mt-6 flex justify-between flex-wrap gap-2">
           <span>© 2026 STEELMATH · ESTIMATES ONLY — NOT TAX OR LEGAL ADVICE</span>
           <Link href="/cbam" className="text-muted no-underline hover:text-ink transition-colors">
