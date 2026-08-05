@@ -7129,6 +7129,64 @@ At k = 0.95: D/t = 40.0, very thin, buckling is the primary failure mode.</p>
 <p>Supplier landed costs now diverge by carbon profile, adding a fourth dimension (documented emissions) to price, quality, and lead time. Procurement teams increasingly run CBAM estimates per candidate origin before issuing RFQs.</p>
 `,
   },
+  {
+    slug: "us-steel-prices-multi-year-highs-two-price-world",
+    title:
+      "The Two-Price World: US Steel at $1,180 While the Rest of the Planet Discounts",
+    category: "ANALYSIS",
+    categoryColor: "blue",
+    date: "2026-08-05",
+    readTime: "5 min",
+    excerpt:
+      "US HR hit $1,180/st (highest since June 2022) with plate at $1,380 and lead times out to 12 weeks, while world prices sink. Inside steel’s great divergence.",
+    metaTitle: "US Steel Prices Hit Multi-Year Highs: The Wall Premium",
+    metaDescription:
+      "US HR hit $1,180/st (highest since June 2022) with plate at $1,380 and lead times out to 12 weeks, while world prices sink. Inside steel’s great divergence.",
+    relatedCalculators: ["steel-plate", "metal-weight"],
+    content: `
+<p><strong>Executive summary:</strong> US hot-rolled coil has reached $1,180 per short ton on SMU’s assessment (its highest since June 2022) with plate at $1,380/st, the highest since January 2024, and mill lead times stretched to 5–12 weeks for HR and 6–12 weeks for coated products. The same week, Chinese HRC export offers sat near $480 per tonne FOB. Adjusting units, American buyers are paying roughly two and a half times the world export price for the same commodity. That spread is not a freight cost or a quality premium; it is the measurable price of the trade wall, and it defines the strategic question every market participant should be asking: how long can two steel worlds coexist, and who pays for the difference?</p>
+
+<p>Steel has always had regional spreads. What it has now is something categorically different: a bifurcation deep enough that “the price of steel” no longer means anything without specifying which side of the wall you stand on.</p>
+
+<h2>The American anomaly, in numbers</h2>
+
+<p>SMU’s benchmark hot-rolled price has <a href="https://www.steelmarketupdate.com/data-tools/flat-rolled-prices/" target="_blank" rel="noopener">climbed to $1,180 per short ton</a>, a level unseen since June 2022 (the tail of the post-pandemic super-cycle). <a href="/calculators/steel-plate">Plate</a> at $1,380/st marks its own multi-year high. And the tightness is physical, not rhetorical: lead times of 5–12 weeks for hot-rolled and 6–12 weeks for coated products mean mills are selling weeks of future production, not clearing inventory. Lead times are the honest indicator in any steel market: offers can be talked up, but a twelve-week queue cannot be faked.</p>
+
+<p>The context makes the anomaly stark. This is happening while <a href="/articles/iron-ore-price-one-year-low">iron ore probes one-year lows on weak Chinese demand</a>, while <a href="/articles/china-steel-export-prices-floor-test">Chinese export offers grind along near $480/t FOB searching for buyers</a>, and while producers from Turkey to Korea count the costs of shrinking export markets. The US market is not rising with the world; it is rising against it.</p>
+
+<h2>What the spread actually is</h2>
+
+<p>Convert the units and the divergence becomes explicit: $1,180 per short ton is roughly $1,300 per metric tonne, against Chinese export offers near $480/t FOB. Even loading generous freight, handling, and margin onto the Chinese tonne, the residual gap of several hundred dollars is structural, not logistical. It is the arithmetic of a market ringed by Section 232 tariffs at 50% and layered trade measures, in which domestic supply discipline (not import competition) sets the clearing price. Call it the wall premium: the amount by which protection allows the domestic price to detach from the world price.</p>
+
+<p>Who pays it is not ambiguous. Every steel-consuming manufacturer in America (construction, automotive, machinery, energy) carries input costs their overseas competitors don’t, an uncomfortable mirror of the advantage the wall gives domestic mills. The two-price world doesn’t eliminate competitive pressure; it relocates it downstream, from steelmakers to steel users.</p>
+
+<h2>The sustainability question</h2>
+
+<p>Can the spread persist? Two forces say yes for now: the wall itself is politically durable, and lead times this long indicate genuine near-term supply tightness. Two forces argue for eventual compression: a spread this wide summons supply (restarts, capacity creep, and <a href="/articles/japan-korea-steel-overseas-expansion-green-hydrogen">the wave of foreign-owned plants being built inside the wall</a> precisely to capture it) and demand destruction works quietly as manufacturers re-engineer, substitute, or lose share to imports of finished goods that embed cheap foreign steel. The wall protects steel; it cannot protect everything made of steel.</p>
+
+<h2>The honest limits</h2>
+
+<p>Assessment levels describe transacted ranges, and the momentum behind them (how much is restocking versus underlying consumption) is not knowable from price alone. Multi-year highs also carry their own gravity: the June 2022 comparison cuts both ways, since that peak preceded a long slide. This analysis takes no view on timing a top; it maps the structure.</p>
+
+<h2>Reading it from each side of the wall</h2>
+
+<p>For US buyers, the discipline is lead-time watching: sustained contraction below the 5-week floor of the current range would be the first hard evidence of loosening, likelier to lead price than follow it. For importers, the math is duty-inclusive landed cost against a domestic price that finally makes even walled imports interesting: a spreadsheet worth refreshing weekly at these spreads. For everyone else, the US market is the proof-of-concept that the fragmenting trade order produces radically different price outcomes by geography, the core reason tracking regional spreads systematically, the way SteelMath’s market intelligence does, has become table stakes for anyone buying, selling, or pricing steel across borders. One commodity, two prices. The difference is the wall, and the wall premium is now the most consequential number in global steel.</p>
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>Why are US steel prices so high in 2026?</h3>
+<p>US HR reached $1,180/short ton (highest since June 2022) and plate $1,380/st on tight domestic supply: lead times run 5–12 weeks for HR and 6–12 for coated, inside a market insulated by 50% Section 232 tariffs and layered trade measures, while world export prices remain weak.</p>
+
+<h3>How do US steel prices compare with world prices?</h3>
+<p>At roughly $1,300 per metric tonne equivalent, US HR trades around two and a half times Chinese export offers near $480/t FOB: a structural “wall premium” far exceeding freight and handling differences.</p>
+
+<h3>What do steel lead times signal?</h3>
+<p>Lead times measure real order-book depth: extension signals tightness (mills selling future weeks of production), while sustained contraction is typically the earliest hard evidence of a market loosening, often leading price moves.</p>
+
+<h3>Will high US steel prices last?</h3>
+<p>Tight lead times and durable trade protection support the current level; against that, wide spreads attract new supply (including foreign-owned US capacity) and gradually destroy demand via substitution and finished-goods imports. The structure favors eventual compression; the timing is not forecastable from price alone. (Market analysis, not financial advice.)</p>
+`,
+  },
 ];
 
 /** Articles sorted by date, most recent first */
