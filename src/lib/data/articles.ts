@@ -7241,6 +7241,62 @@ At k = 0.95: D/t = 40.0, very thin, buckling is the primary failure mode.</p>
 <p>Deep-sea enquiry-to-deal conversion over the next two to three weeks, any Southeast Asian re-engagement, the billet–HRC spread, and Chinese policy signals on production discipline: the standing wildcard that can reprice the market from the supply side.</p>
 `,
   },
+  {
+    slug: "japan-korea-steel-overseas-expansion-green-hydrogen",
+    title:
+      "The Two Escapes: How Japan and Korea Plan to Outlive the Steel Trade War",
+    category: "ANALYSIS",
+    categoryColor: "blue",
+    date: "2026-08-05",
+    readTime: "6 min",
+    excerpt:
+      "JFE made Japan’s first green-hydrogen DRI, POSCO will double overseas output by 2031, Nippon Steel accelerates in the US. The playbook for escaping the walls.",
+    metaTitle: "Japan & Korea’s Steel Escape: Build Abroad, Go Hydrogen",
+    metaDescription:
+      "JFE made Japan’s first green-hydrogen DRI, POSCO will double overseas output by 2031, Nippon Steel accelerates in the US. The playbook for escaping the walls.",
+    relatedCalculators: ["scrap-yield", "metal-weight"],
+    content: `
+<p><strong>Executive summary:</strong> In the same news cycle, JFE Steel produced Japan’s first direct reduced iron made with green hydrogen; Nippon Steel raised its full-year sales forecast to ¥11.2 trillion while accelerating its US Steel investment and maintaining expansion in India and Europe; and POSCO Holdings announced it will double overseas crude steel production from 5 to 10 million tonnes a year by 2031, with accelerated investments in Indonesia, India, and the United States. These are not three stories. They are one strategy with two arms: the geographic escape (produce inside the walls) and the technology escape (produce what the walls can’t tax). They preview how the world’s squeezed steel exporters intend to survive the fragmenting trade order.</p>
+
+<p>When we mapped <a href="/articles/south-korea-steel-squeeze-china-imports">the middle-power squeeze on Korean and Japanese steel</a> (Chinese volume from below, Western trade walls from above) the open question was what the squeezed would do about it. The answer is now on the record, and it is coherent: stop shipping steel across walls, and start shipping capital and technology over them instead.</p>
+
+<h2>Escape one: build inside the walls</h2>
+
+<p>POSCO’s announcement is the cleanest statement of the doctrine: <a href="https://www.steelradar.com/en/haber/posco-plans-to-double-overseas-steel-capacity-through-indonesia-investment/" target="_blank" rel="noopener">overseas crude steel production doubling from 5 MTPA to 10 MTPA by 2031</a>, through accelerated investment in Indonesia, India, and the United States. Each destination answers a specific strategic problem: the US puts production behind the world’s highest wall, where <a href="/articles/us-steel-prices-multi-year-highs-two-price-world">domestic prices at multi-year highs</a> make the wall premium capturable rather than suffered; India places capacity inside the world’s fastest-growing protected demand pool; Indonesia anchors low-cost regional production in ASEAN’s boom.</p>
+
+<p>Nippon Steel is running the same play at larger scale (accelerating its US Steel investment while maintaining expansion in India and Europe) and its raised full-year sales forecast of ¥11.2 trillion suggests the strategy is already earning, not merely defending. The economic logic is unsentimental: a tariff taxes a cargo but rewards the factory built behind it. Trade walls don’t stop competition; they relocate it, from cargoes crossing borders to capital crossing them instead.</p>
+
+<p>Host countries should read the fine print of their own success. FDI of this kind delivers capacity, technology transfer, and jobs, and it also plants formidable competitors inside <a href="/articles/indian-steel-industry-challenges">markets whose domestic mills lobbied for the walls</a> in the first place. Protection invited the capital in; the capital now competes locally, wall-free.</p>
+
+<h2>Escape two: build what the walls can’t tax</h2>
+
+<p>The JFE milestone belongs to a different dimension of the same strategy. Producing direct reduced iron with green hydrogen (<a href="https://gmk.center/en/news/jfe-steel-has-produced-the-first-dri-prototype-using-green-hydrogen/amp/" target="_blank" rel="noopener">a first for Japan</a>) is a prototype, not a plant. But it targets the one trade barrier that scales with carbon rather than origin: as <a href="/articles/asean-steel-cbam-carbon-lock-in">carbon border pricing matures in Europe and spreads</a>, verified low-carbon steel becomes the product that crosses borders with the smallest penalty. Hydrogen-DRI capability is, among other things, future market access: the technology escape from a world where <a href="/cbam/calculator">emissions intensity is becoming a tariff schedule</a>. It is also precisely the class of investment <a href="/articles/financing-steel-decarbonisation-value-chain">the emerging value-chain finance ecosystem</a> exists to fund.</p>
+
+<p>The two escapes reinforce each other. Overseas plants in green-power-rich geographies are natural sites for low-carbon routes; low-carbon capability makes overseas capacity premium rather than commodity. The endgame both firms are sketching: multinational production networks selling verified low-carbon steel inside every major protected market, competing on locality and carbon, the two axes tariffs respect.</p>
+
+<h2>The honest limits</h2>
+
+<p>A prototype DRI batch is years and billions from commercial tonnage, and green hydrogen economics remain unproven at steel scale. POSCO’s 2031 target is a plan whose financing and permitting must survive five-plus years of cycles. And the escape strategy has a ceiling: not every producer can relocate inside every wall. The doctrine works best for the largest, best-capitalized firms, which is exactly why it may accelerate consolidation among those who cannot follow.</p>
+
+<h2>What the rest of the market should take from it</h2>
+
+<p>For exporters without POSCO’s balance sheet, the message is uncomfortable but clarifying: the walls are being answered with capital and carbon capability, and competitiveness plans built purely on shipping tonnes are aging fast. For steel-importing nations, the courtship of this FDI wave is now a live policy contest: capacity, technology, and jobs flow to whoever combines market access with buildable conditions. And for buyers everywhere, the map of who makes steel where is about to change more in the next five years than in the last fifteen: supply-origin risk worth tracking as actively as price, the way SteelMath’s market intelligence does. The trade war’s first phase was about walls. Its second phase is about who learns to live on both sides of them.</p>
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>What is POSCO’s overseas expansion plan?</h3>
+<p>POSCO Holdings plans to double overseas crude steel production from 5 million to 10 million tonnes per year by 2031, through accelerated investments in Indonesia, India, and the United States, placing production inside protected and high-growth markets.</p>
+
+<h3>What did JFE Steel achieve with green hydrogen?</h3>
+<p>JFE produced Japan’s first direct reduced iron (DRI) made using green hydrogen: a milestone prototype for low-carbon steelmaking, positioning the firm for a market where carbon border pricing increasingly penalizes high-emissions steel.</p>
+
+<h3>Why are Japanese and Korean steelmakers investing abroad?</h3>
+<p>Trade barriers tax exported cargoes but reward local production: building inside walled markets (US, India) converts the tariff from a cost into a moat, while overseas growth offsets squeezed home-market exports and Chinese import pressure.</p>
+
+<h3>Is Nippon Steel’s strategy working?</h3>
+<p>Its raised full-year sales forecast of ¥11.2 trillion, alongside accelerated US Steel investment and continued expansion in India and Europe, indicates the multinational-production strategy is currently delivering growth rather than merely defense.</p>
+`,
+  },
 ];
 
 /** Articles sorted by date, most recent first */
