@@ -7187,6 +7187,60 @@ At k = 0.95: D/t = 40.0, very thin, buckling is the primary failure mode.</p>
 <p>Tight lead times and durable trade protection support the current level; against that, wide spreads attract new supply (including foreign-owned US capacity) and gradually destroy demand via substitution and finished-goods imports. The structure favors eventual compression; the timing is not forecastable from price alone. (Market analysis, not financial advice.)</p>
 `,
   },
+  {
+    slug: "china-steel-export-prices-floor-test",
+    title:
+      "First Bids at the Bottom: China’s Export Prices Begin the Floor Test",
+    category: "ANALYSIS",
+    categoryColor: "blue",
+    date: "2026-08-05",
+    readTime: "5 min",
+    excerpt:
+      "Chinese HRC export offers steadied at $480–483/t as deep-sea buyers finally appeared. Is this the floor? The three signals that answer the question.",
+    metaTitle: "China Steel Export Prices: The Floor Test Begins",
+    metaDescription:
+      "Chinese HRC export offers steadied at $480–483/t as deep-sea buyers finally appeared. Is this the floor? The three signals that answer the question.",
+    relatedCalculators: ["steel-plate", "rebar"],
+    content: `
+<p><strong>Executive summary:</strong> Chinese HRC export offers ticked up $1 to $480–483/t FOB on August 5, and for the first time in this down-leg, real buying interest appeared, with deep-sea markets lodging increased enquiries drawn by low Chinese domestic prices. Billet held at $448–455/t with exporters signalling little room to cut further; rebar sat stable at $474–480, still gapped from buyer expectations. This is the third act of a sequence we have tracked since July: the rally without buyers, the rollover, and now the floor test. A floor is not where sellers stop cutting: it is where buyers start appearing. The evidence says that test has begun, not that it has passed.</p>
+
+<p>Since mid-July this market has followed a script. Export offers rallied on futures strength with no buyer participation: <a href="/articles/china-hrc-export-prices-validation-gap">the validation gap</a>. The gap closed downward, as they do, with <a href="/articles/china-steel-export-prices-fall-validation-gap-closes">offers falling through the old bids</a>. The third act is now underway: the search for the level at which demand actually engages. Call it the floor test, and read this week’s tape as its opening evidence.</p>
+
+<h2>What changed this week, and what didn’t</h2>
+
+<p>The change is small but categorical: enquiries arrived. On August 5, HRC export offers edged up $1 to $480–483/t FOB, and deep-sea markets (the distant buyers of the Middle East, Africa, Latin America) showed increased enquiry activity, drawn in by how cheap Chinese material has become relative to alternatives. After weeks in which every price description included “buyers sidelined,” the appearance of genuine interest at a level is the market’s first data point about where clearing might occur.</p>
+
+<p>What didn’t change matters equally. Nearby markets (Southeast Asia and the region) remained sluggish, not out of resistance to Chinese prices but because competitor offers are equally low: regional oversupply has compressed everyone, so proximity confers no arbitrage. Billet told the cost-side story: steady at $448–455/t FOB with exporters having limited room to cut further, the sound of offers resting on <a href="/articles/iron-ore-price-one-year-low">the cost floor that falling iron ore had been lowering</a>. And <a href="/calculators/rebar">rebar</a>, stable at $474–480, remains “some distance from buyer expectations”: a standing reminder that stability of offers is not agreement on price.</p>
+
+<h2>Stabilization is not recovery</h2>
+
+<p>The analytical distinction this moment turns on: a floor forms in two stages, and they are routinely confused. Stage one is supply-side: sellers stop cutting because they can’t cut profitably anymore. Billet’s “limited room” language is exactly this. Stage two is demand-side: buyers judge the level attractive and convert enquiries into bookings. Deep-sea enquiry growth is the candidate for stage two, but enquiries are questions, not commitments; the conversion rate over the next two to three weeks is the entire question. Stage one without stage two produces a shelf that eventually gives way; both together produce a bottom.</p>
+
+<p>The geography of this week’s interest carries its own information. Deep-sea demand responding while nearby markets stay flat implies the price is now low enough to overcome distance (the widest arbitrage window) but not yet low enough, or trusted enough, to reactivate saturated regional buyers who see equally cheap alternatives everywhere they look. Floors built only on distant demand are real but thin; the durable bottom arrives when nearby markets re-engage.</p>
+
+<h2>The honest limits</h2>
+
+<p>One session’s enquiry uptick is the beginning of evidence, not a conclusion: enquiry waves can evaporate, and thin-market offer assessments overstate precision in both directions. The policy wildcard remains live: any Chinese production-discipline measure would reprice this market from the supply side and render the demand-side floor test moot overnight. And “limited room to cut” is a mill’s claim about its own costs: true until a mill under enough pressure discovers new room.</p>
+
+<h2>The watchlist that settles it</h2>
+
+<p>Three signals decide the test. Enquiry-to-deal conversion in deep-sea markets: bookings, not questions, over the coming fortnight. The nearby-market pulse: first signs of Southeast Asian re-engagement would upgrade a thin floor to a firm one. And the billet-HRC spread: billet pinned to its cost floor while HRC drifts would say finished-product demand remains the weak link. This is precisely the <a href="/articles/us-steel-prices-multi-year-highs-two-price-world">sequence-reading that separates systematic buyers from price-followers</a>, the discipline SteelMath’s intelligence builds into a daily practice. The market spent July proving where buyers weren’t. It has begun the harder work of proving where they are.</p>
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>Are Chinese steel export prices at the bottom?</h3>
+<p>The evidence says the floor test has begun, not concluded: HRC offers steadied at $480–483/t FOB with the first real deep-sea enquiry interest of this down-leg, and billet exporters signal little room to cut below $448–455. Confirmation requires enquiries converting to bookings and nearby markets re-engaging.</p>
+
+<h3>Why are deep-sea buyers interested while nearby markets stay quiet?</h3>
+<p>Low Chinese domestic prices have made export offers attractive enough to overcome long freight distances, while Southeast Asian buyers face equally cheap competing offers from regional oversupply, so proximity currently confers no advantage to Chinese material.</p>
+
+<h3>What is the difference between price stabilization and recovery?</h3>
+<p>Stabilization is supply-side: sellers stop cutting because costs allow no more. Recovery is demand-side: buyers judge the level attractive and transact. A durable floor needs both; offers resting on costs without buyer engagement eventually give way.</p>
+
+<h3>What should steel buyers watch to confirm a floor?</h3>
+<p>Deep-sea enquiry-to-deal conversion over the next two to three weeks, any Southeast Asian re-engagement, the billet–HRC spread, and Chinese policy signals on production discipline: the standing wildcard that can reprice the market from the supply side.</p>
+`,
+  },
 ];
 
 /** Articles sorted by date, most recent first */
