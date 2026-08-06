@@ -1088,7 +1088,7 @@ export const articles: Article[] = [
       "How the EU\u2019s Carbon Border Adjustment Mechanism affects Indian steel exports in 2026. Cost estimates, compliance requirements, and strategic positioning.",
     relatedCalculators: ["energy-cost", "margin"],
     content: `
-<p>The European Union\u2019s Carbon Border Adjustment Mechanism entered its definitive phase on January 1, 2026. For Indian steel exporters, this is no longer a future concern, it\u2019s an operational reality. Here\u2019s what has changed, what the financial impact looks like, and how to prepare.</p>
+<p>The European Union\u2019s <a href="/cbam">Carbon Border Adjustment Mechanism</a> entered its definitive phase on January 1, 2026. For Indian steel exporters, this is no longer a future concern, it\u2019s an operational reality. Here\u2019s what has changed, what the financial impact looks like, and how to prepare.</p>
 
 <h2>What Is CBAM?</h2>
 
@@ -7012,7 +7012,7 @@ At k = 0.95: D/t = 40.0, very thin, buckling is the primary failure mode.</p>
       "Step-by-step guide to the free SteelMath CBAM calculator: model EU & UK carbon border costs per tonne, certificates needed, and your cost curve to 2034.",
     relatedCalculators: ["steel-plate", "metal-weight"],
     content: `
-<p><strong>Executive summary:</strong> The EU’s Carbon Border Adjustment Mechanism entered its definitive regime in 2026: importers of steel, aluminium, cement, fertilisers, and hydrogen now buy CBAM certificates against the embedded emissions of what they bring in, with the charge phasing up from 2.5% of full exposure in 2026 to 100% by 2034. The free <a href="/cbam/calculator">SteelMath CBAM Cost Calculator</a> turns that regulation into a number: cost per tonne, total levy, and certificates required, under both EU and UK regimes, for any covered product and origin. This guide walks through each input, decodes the outputs with a worked example, and explains the two decisions (emissions data and import year) that move your result most.</p>
+<p><strong>Executive summary:</strong> The EU’s <a href="/cbam">Carbon Border Adjustment Mechanism</a> entered its definitive regime in 2026: importers of steel, aluminium, cement, fertilisers, and hydrogen now buy CBAM certificates against the embedded emissions of what they bring in, with the charge phasing up from 2.5% of full exposure in 2026 to 100% by 2034. The free <a href="/cbam/calculator">SteelMath CBAM Cost Calculator</a> turns that regulation into a number: cost per tonne, total levy, and certificates required, under both EU and UK regimes, for any covered product and origin. This guide walks through each input, decodes the outputs with a worked example, and explains the two decisions (emissions data and import year) that move your result most.</p>
 
 <p>Carbon border pricing has crossed from policy debate to invoice line. What every importer, exporter, and trader touching the EU now needs is not another explainer of the regulation: it is their number. Here is how to get it.</p>
 
@@ -7030,7 +7030,7 @@ At k = 0.95: D/t = 40.0, very thin, buckling is the primary failure mode.</p>
 
 <p><strong>4. Import year.</strong> The single most consequential dropdown. CBAM’s charge phases in as the EU’s free allocation to domestic producers phases out: from 2.5% of full exposure in 2026 rising to 100% by 2034. The same shipment can carry a radically different cost depending on when it lands, which is why the tool’s multi-year projection matters more than any single-year figure.</p>
 
-<p><strong>5. Emissions data: defaults or verified actuals.</strong> The toggle that separates estimating from managing. Default values are the regulation’s fallback, and they are deliberately conservative. If your supplier can provide verified actual emissions below the default, your cost falls with them. If not, you pay as if your steel matched the default profile regardless of reality: the dynamic that is <a href="/articles/asean-steel-cbam-carbon-lock-in">reshaping supplier selection across every CBAM-exposed corridor</a>.</p>
+<p><strong>5. Emissions data: defaults or verified actuals.</strong> The toggle that separates estimating from managing. Default values are the regulation’s fallback, and they are deliberately conservative. If your supplier can provide <a href="/articles/cbam-verification-bottleneck">verified actual emissions</a> below the default, your cost falls with them. If not, you pay as if your steel matched the default profile regardless of reality: the dynamic that is <a href="/articles/asean-steel-cbam-carbon-lock-in">reshaping supplier selection across every CBAM-exposed corridor</a>.</p>
 
 <h2>Reading the output: a worked example</h2>
 
@@ -7078,7 +7078,7 @@ At k = 0.95: D/t = 40.0, very thin, buckling is the primary failure mode.</p>
       "EU importers, non-EU mills, traders, procurement, finance, analysts: who actually needs to run CBAM numbers, when, and what each should compute. A field map.",
     relatedCalculators: ["steel-plate", "credit-cost"],
     content: `
-<p><strong>Executive summary:</strong> The EU’s carbon border charge is written as an importer’s obligation, but its cost flows through every seat in the steel trade: the non-EU mill whose offer must now compete carbon-inclusive, the trader quoting DDP, the EU manufacturer buying tonnes, the finance team forecasting landed cost to 2034, and the analyst pricing which origins win. Each seat needs the same calculation at a different moment. This field map lays out who should run CBAM numbers, when, and what decision each number feeds, using the free <a href="/cbam/calculator">SteelMath CBAM Calculator</a> as the common instrument.</p>
+<p><strong>Executive summary:</strong> The EU’s <a href="/cbam">carbon border charge</a> is written as an importer’s obligation, but its cost flows through every seat in the steel trade: the non-EU mill whose offer must now compete carbon-inclusive, the trader quoting DDP, the EU manufacturer buying tonnes, the finance team forecasting landed cost to 2034, and the analyst pricing which origins win. Each seat needs the same calculation at a different moment. This field map lays out who should run CBAM numbers, when, and what decision each number feeds, using the free <a href="/cbam/calculator">SteelMath CBAM Calculator</a> as the common instrument.</p>
 
 <p>Regulations name one party; markets bill everybody. CBAM’s legal duty sits with the EU importer: the authorised declarant who registers, reports, and surrenders certificates. Its economics sit with the whole chain. Here is the map, seat by seat.</p>
 
@@ -7088,7 +7088,7 @@ At k = 0.95: D/t = 40.0, very thin, buckling is the primary failure mode.</p>
 
 <h2>Seat 2: The non-EU mill, the competitiveness question</h2>
 
-<p>For exporters in India, Turkey, Vietnam, Korea, Japan, and beyond, CBAM redraws the competitive map of the EU market. Two mills quoting identical FOB prices no longer land at identical cost: the spread between their emissions profiles, and whether those profiles are verified, is now a price wedge that widens every year to 2034. Mills should be running their own products through the calculation for two reasons: to see their offers as EU buyers see them (carbon-inclusive), and to quantify the return on verification, because unverified mills are priced at conservative defaults regardless of actual performance, <a href="/articles/asean-steel-cbam-carbon-lock-in">the dynamic already reshaping ASEAN’s export outlook</a>. The mill that arrives with a verified number and a CBAM-inclusive quote is selling certainty, and certainty wins tenders. For Indian exporters <a href="/articles/india-steel-eu-quota-china-pincer">squeezed by Europe’s tightened quotas</a>, the compounding matters doubly.</p>
+<p>For exporters in India, Turkey, Vietnam, Korea, Japan, and beyond, CBAM redraws the competitive map of the EU market. Two mills quoting identical FOB prices no longer land at identical cost: the spread between their emissions profiles, and whether those profiles are verified, is now a price wedge that widens every year to 2034. Mills should be running their own products through the calculation for two reasons: to see their offers as EU buyers see them (carbon-inclusive), and to quantify <a href="/articles/cbam-playbook-steel-exporters">the return on verification</a>, because unverified mills are priced at conservative defaults regardless of actual performance, <a href="/articles/asean-steel-cbam-carbon-lock-in">the dynamic already reshaping ASEAN’s export outlook</a>. The mill that arrives with a verified number and a CBAM-inclusive quote is selling certainty, and certainty wins tenders. For Indian exporters <a href="/articles/india-steel-eu-quota-china-pincer">squeezed by Europe’s tightened quotas</a>, the compounding matters doubly.</p>
 
 <h2>Seat 3: The trader, pricing the unknown</h2>
 
