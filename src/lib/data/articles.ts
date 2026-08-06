@@ -7355,6 +7355,72 @@ At k = 0.95: D/t = 40.0, very thin, buckling is the primary failure mode.</p>
 <p>Redirected volumes will intensify competition in open markets (the Gulf, Africa, and Southeast Asia) at worse prices and freight for the exporters, and historically such surges trigger new defensive measures in the receiving markets.</p>
 `,
   },
+  {
+    slug: "cbam-playbook-steel-exporters",
+    title:
+      "The Exporter’s CBAM Playbook: Six Moves That Decide Who Keeps Europe",
+    category: "GUIDE",
+    categoryColor: "green",
+    date: "2026-08-06",
+    readTime: "6 min",
+    excerpt:
+      "CBAM will re-rank steel exporters by carbon and data quality. The six-move playbook (measure, prove, cut, cascade, systematize, hedge) explained in order.",
+    metaTitle: "CBAM Playbook for Steel Exporters: The Six Moves",
+    metaDescription:
+      "CBAM will re-rank steel exporters by carbon and data quality. The six-move playbook (measure, prove, cut, cascade, systematize, hedge) explained in order.",
+    relatedCalculators: ["scrap-yield", "scrap-production-cost"],
+    content: `
+<p><strong>Executive summary:</strong> The EU’s Carbon Border Adjustment Mechanism is not a tariff to be absorbed; it is a re-ranking of steel exporters by two variables most have never competed on: carbon intensity and data credibility. The exporters who keep their European market share through 2034 will be those who execute six moves in the right order: measure embedded emissions across the full value chain, prove them through accredited verification, cut them through plant-level operations, cascade requirements into the supply chain, systematize reporting digitally, and hedge intelligently while the reduction work compounds. This playbook lays out each move, why the sequence matters, and where exporters most often stall.</p>
+
+<p>Steel exporters have survived every kind of trade barrier by being cheaper, faster, or better. <a href="/cbam">CBAM</a> is the first barrier that is indifferent to all three. It prices a property of your product you may never have measured, on evidence you may not yet be able to produce, which is why the winners of the CBAM era are being decided now, years before the charge reaches full force, in data rooms and plant control rooms rather than in Brussels.</p>
+
+<h2>Move 1: Measure, and deeper than you think</h2>
+
+<p>The foundation is knowing your embedded emissions, and the trap is thinking narrowly. CBAM’s logic reaches beyond direct process emissions into the full production chain: the emissions story of your inputs, your energy, and every process step between ore and coil. A number assembled from annual averages and assumptions will not survive contact with verification; what’s needed is measurement at the level where decisions live: per process, per input, per product route. Exporters who have run this exercise typically discover two things: their real intensity differs from their assumed intensity, and the difference varies enormously by product line. That granularity is not bureaucracy; it is <a href="/articles/how-to-use-cbam-calculator">the map of where money will be made and lost under carbon pricing</a>.</p>
+
+<h2>Move 2: Prove, because verification is the market-access step</h2>
+
+<p>Measured emissions that cannot be verified might as well not exist: unverified exporters are priced at conservative default values regardless of actual performance, the inversion we’ve called <a href="/articles/asean-steel-cbam-carbon-lock-in">measurement-as-market-access</a>. Proving requires accredited third-party verification, and here the practical constraint is not willingness but capacity: the pool of accredited verifiers is small, <a href="/articles/cbam-verification-bottleneck">the queue is real</a>, and the timeline to the first declaration deadline is shorter than it looks. The strategic implication is blunt: verification is a scarce resource to be secured early, not a formality to be scheduled late.</p>
+
+<h2>Move 3: Cut, because the plant is the P&amp;L lever</h2>
+
+<p>Everything before this is defense; operations is where CBAM becomes offense. The reduction levers are unglamorous and well-understood by anyone who has run a plant: process efficiency (yield, heat recovery, downtime discipline), energy substitution (every unit of coal-fired energy replaced by lower-carbon power moves the number), and raw-material choices (<a href="/calculators/scrap-yield">scrap share</a>, ore grade, input quality, each with a carbon coefficient attached). None of this requires a hydrogen plant. The exporters who treat carbon intensity as an operations KPI (reviewed like cost per tonne, owned like safety) will find reductions that compound annually, while those waiting for breakthrough technology will pay the levy in the meantime. The financing world is increasingly organized to fund <a href="/articles/financing-steel-decarbonisation-value-chain">exactly this work</a>.</p>
+
+<h2>Move 4: Cascade, because your suppliers’ emissions are your price now</h2>
+
+<p>CBAM makes every exporter accountable for carbon it does not directly control. Input emissions flow into your embedded number, which means supplier engagement has become margin protection: emissions data clauses in purchase contracts, supplier measurement support where partners lack capability, and sourcing decisions that weigh carbon alongside price and quality. The exporters furthest ahead treat their supply chain as a shared compliance perimeter, because a supplier who cannot document emissions is no longer merely a quality risk; they are a line item on your CBAM invoice.</p>
+
+<h2>Move 5: Systematize, because spreadsheets will not scale</h2>
+
+<p>Quarterly-grade, verifiable, product-level emissions reporting across a value chain is a data engineering problem, and manual tracking fails it predictably: versions drift, formulas break, evidence trails vanish exactly when a verifier asks for them. Robust digital MRV systems (automated data capture from plant systems, auditable calculation chains, report generation aligned to regulatory formats) are becoming standard infrastructure, as fundamental as the ERP. The build takes time, which is another reason this playbook rewards early movers.</p>
+
+<h2>Move 6: Hedge, but don’t confuse credits with strategy</h2>
+
+<p>The credit market belongs in a complete CBAM strategy: as knowledge, and where regimes allow, as a bridge. Two clarifications keep it honest. Carbon already priced in your home jurisdiction may be <a href="/cbam/calculator">deductible against CBAM liability</a>, a reason to track your domestic carbon-pricing landscape closely. And voluntary offsets do not reduce CBAM obligations: the mechanism prices embedded emissions, not net corporate claims. Credits are a financial instrument; reduction is the strategy. Exporters who invert that ordering buy time and lose position.</p>
+
+<h2>The honest limits</h2>
+
+<p>The playbook’s economics vary by starting point: an EAF-route exporter with clean power runs these moves for advantage, a coal-DRI producer runs them for survival, and the capital intensity differs accordingly. Regulatory parameters will keep moving (scope, defaults, deductions) cutting both ways. And sequence discipline has a cost: measurement and verification spend precedes any visible return, a cash-flow reality smaller exporters must plan rather than discover.</p>
+
+<h2>The order is the strategy</h2>
+
+<p>Run the six moves out of order and each undermines the next: cutting before measuring optimizes blind, promising before proving invites default values, digitizing before defining the data model automates chaos. Run them in order and each compounds: measurement finds the levers, verification monetizes the improvements, operations widen the gap, the supply chain deepens it, systems make it durable, and hedging smooths the path. Model what each move is worth for your products and destinations with the <a href="/cbam/calculator">SteelMath CBAM Calculator</a>: the spread between your default-value cost and your verified, reduced cost is the playbook’s business case, computed in minutes. CBAM re-ranks the export market by carbon and credibility. The ranking is being written now; the only question is whether your firm is holding the pen.</p>
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>How should steel exporters prepare for CBAM?</h3>
+<p>In sequence: measure embedded emissions granularly across the value chain; secure accredited verification early (capacity is scarce); reduce intensity through plant operations (efficiency, energy substitution, raw-material choices); cascade emissions requirements to suppliers; implement digital MRV systems; and understand carbon-credit and deduction mechanics without mistaking them for reduction.</p>
+
+<h3>What are embedded emissions under CBAM?</h3>
+<p>The emissions attributable to producing an imported good, extending beyond a plant’s direct process emissions into inputs and energy across the production chain. They determine the CBAM charge, calculated per product and origin, using verified actuals or conservative default values.</p>
+
+<h3>Can carbon credits offset CBAM costs?</h3>
+<p>Voluntary offsets do not reduce CBAM liability. However, carbon prices already paid in the exporting country may be deductible against the CBAM charge, making domestic carbon-pricing developments commercially relevant to every exporter.</p>
+
+<h3>Do suppliers’ emissions affect an exporter’s CBAM cost?</h3>
+<p>Yes: input emissions flow into the embedded-emissions calculation. Suppliers who cannot document their footprint raise the exporter’s assessed intensity, which is why emissions clauses and supplier data collaboration are becoming standard in procurement contracts.</p>
+`,
+  },
 ];
 
 /** Articles sorted by date, most recent first */
