@@ -1174,7 +1174,7 @@ export const articles: Article[] = [
 
 <p>When ordering pipes, always specify whether you need light, medium, or heavy class, the weight difference can be 15\u201325%. A \u201C2-inch pipe\u201D without class specification is ambiguous and can lead to disputes.</p>
 
-<p>For seamless pipes (IS 2062), weights may differ slightly from ERW pipes of the same dimensions due to manufacturing tolerances. Always confirm the pipe standard and wall thickness with your supplier.</p>
+<p>For <a href="/articles/api-5l-pipeline-steel-grade-selection">seamless pipes</a> (IS 2062), weights may differ slightly from ERW pipes of the same dimensions due to manufacturing tolerances. Always confirm the pipe standard and wall thickness with your supplier.</p>
 
 <p>Standard pipe lengths in India are 6 metres. When calculating total weight for a PO, multiply weight per metre by 6 to get per-piece weight, then by the number of pieces.</p>
 
@@ -6022,7 +6022,7 @@ At k = 0.95: D/t = 40.0, very thin, buckling is the primary failure mode.</p>
 
 <h2>The Regulatory Framework: QCO 2024</h2>
 
-<p>The Steel and Steel Products (Quality Control) Order, 2024 is the legal instrument that makes BIS certification mandatory for steel imports. Issued under Section 16 of the BIS Act, 2016, it represents the most comprehensive quality control intervention in Indian steel history.</p>
+<p>The Steel and Steel Products (Quality Control) Order, 2024 is the legal instrument that makes BIS certification mandatory for steel imports. Issued under Section 16 of the BIS Act, 2016, it represents the most comprehensive <a href="/articles/quality-function-steel-certificate-economy">quality control intervention</a> in Indian steel history.</p>
 
 <p>The QCO incorporates 151 Indian Standards covering steel and steel products classified under Chapters 72 (iron and steel) and 73 (articles of iron or steel) of the ITC(HS) codes. These 151 standards encompass all major product categories: plain carbon steel, alloy steel, and stainless steel across every product form, flat products, long products, tubes and pipes, wire, forgings, and castings.</p>
 
@@ -6981,7 +6981,7 @@ At k = 0.95: D/t = 40.0, very thin, buckling is the primary failure mode.</p>
 
 <h2>What exporters and buyers should take from it</h2>
 
-<p>For Indian producers, three imperatives follow: treat trade-remedy participation as seriously as sales (the Electrosteel spread is the proof of value); diversify the market book faster than cases proliferate: Africa, Southeast Asia, and Latin America each carry their own emerging-enforcement risk worth mapping before entry; and price the five-year horizon into Gulf strategy, because duties of this length outlast market cycles. For Gulf buyers, the arithmetic runs the other way: a 29.94% duty on most Indian supply narrows the competitive field for water-infrastructure procurement and will feed through to project costs. And for everyone watching the global board: each new enforcer added to the map accelerates the rerouting dynamics that now drive steel trade flows more than fundamentals do. Mapping those reroutes before they land in your price is the work SteelMath’s market intelligence exists to do. The wall reaching the Gulf was predictable. Where it rises next is the question worth money.</p>
+<p>For Indian producers, three imperatives follow: treat trade-remedy participation as seriously as sales (the Electrosteel spread is the proof of value); diversify the market book faster than cases proliferate: Africa, Southeast Asia, and Latin America each carry their own emerging-enforcement risk worth mapping before entry; and price the five-year horizon into Gulf strategy, because duties of this length outlast market cycles. For Gulf buyers, the arithmetic runs the other way: a 29.94% duty on most Indian supply narrows the competitive field for water-infrastructure procurement and will feed through to project costs. And for everyone watching the global board: each new enforcer added to the map accelerates <a href="/articles/seamless-steel-pipe-market-trends-2026">the rerouting dynamics that now drive steel trade flows</a> more than fundamentals do. Mapping those reroutes before they land in your price is the work SteelMath’s market intelligence exists to do. The wall reaching the Gulf was predictable. Where it rises next is the question worth money.</p>
 
 <h2>Frequently Asked Questions</h2>
 
