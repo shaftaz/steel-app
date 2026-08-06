@@ -187,6 +187,35 @@ export default function CbamCalculatorPage() {
                 each seat should compute, and when.
               </div>
             </Link>
+            <Link
+              href="/articles/cbam-playbook-steel-exporters"
+              className="border border-input-border bg-[#FFFFFF] px-4.5 py-4 text-ink no-underline hover:border-cbam transition-colors"
+            >
+              <div className="font-mono text-[10.5px] tracking-[0.1em] text-cbam mb-1.5">
+                THE EXPORTER’S PLAYBOOK →
+              </div>
+              <div className="text-[13.5px] text-muted leading-normal">
+                Six moves that decide who keeps Europe: measure, prove, cut,
+                cascade, systematize, hedge.
+              </div>
+            </Link>
+            <Link
+              href="/articles/cbam-verification-bottleneck"
+              className="border border-input-border bg-[#FFFFFF] px-4.5 py-4 text-ink no-underline hover:border-cbam transition-colors"
+            >
+              <div className="font-mono text-[10.5px] tracking-[0.1em] text-cbam mb-1.5">
+                THE VERIFICATION QUEUE →
+              </div>
+              <div className="text-[13.5px] text-muted leading-normal">
+                403 verifiers, 12,000 declarants: why booking verification early
+                is the cheapest CBAM decision.
+              </div>
+            </Link>
+          </div>
+          <div className="font-mono text-[10.5px] tracking-[0.08em] mt-3">
+            <Link href="/cbam#guides" className="text-cbam no-underline hover:text-ink transition-colors">
+              ALL CBAM GUIDES &amp; ANALYSIS →
+            </Link>
           </div>
         </div>
 

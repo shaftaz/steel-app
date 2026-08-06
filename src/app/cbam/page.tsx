@@ -436,6 +436,68 @@ export default function CbamHubPage() {
         </div>
       </section>
 
+      {/* Guides & analysis — the CBAM article cluster */}
+      <section id="guides" className="max-w-[1320px] mx-auto px-4 sm:px-6 pb-14">
+        <div className="font-mono text-[11px] tracking-[0.12em] text-cbam mb-2.5">
+          GUIDES &amp; ANALYSIS
+        </div>
+        <h2 className="text-[clamp(24px,3vw,30px)] font-extrabold tracking-[-0.02em] mb-5">
+          Read the CBAM cluster
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-3.5">
+          {[
+            {
+              href: "/articles/how-to-use-cbam-calculator",
+              k: "HOW-TO",
+              t: "Estimate your CBAM cost in under two minutes",
+              d: "The five calculator inputs, a worked example, and the two decisions that move your result most.",
+            },
+            {
+              href: "/articles/cbam-relevance-steel-importers-exporters",
+              k: "FIELD MAP",
+              t: "Who needs to calculate CBAM: six seats, one calculation",
+              d: "Importers, mills, traders, procurement, finance, analysts: what each should compute, and when.",
+            },
+            {
+              href: "/articles/cbam-playbook-steel-exporters",
+              k: "PLAYBOOK",
+              t: "The exporter’s six moves that decide who keeps Europe",
+              d: "Measure, prove, cut, cascade, systematize, hedge: the sequence is the strategy.",
+            },
+            {
+              href: "/articles/cbam-verification-bottleneck",
+              k: "COMPLIANCE",
+              t: "The real bottleneck: 403 verifiers, 12,000 declarants",
+              d: "Why the verification queue, not the carbon price, is the binding constraint before Sept 2027.",
+            },
+            {
+              href: "/articles/cbam-cost-steel-importers",
+              k: "COST GUIDE",
+              t: "What CBAM actually costs steel importers",
+              d: "Price per tonne, certificates, and the 2026–2034 ramp, worked through with real numbers.",
+            },
+            {
+              href: "/articles/asean-steel-cbam-carbon-lock-in",
+              k: "REGION",
+              t: "ASEAN’s steel boom meets the carbon border",
+              d: "Three clocks (assets, regulation, verification) running against Southeast Asia’s exporters.",
+            },
+          ].map((g) => (
+            <Link
+              key={g.href}
+              href={g.href}
+              className="border border-input-border bg-[#FFFFFF] px-4.5 py-4 text-ink no-underline hover:border-cbam transition-colors"
+            >
+              <div className="font-mono text-[10.5px] tracking-[0.1em] text-cbam mb-1.5">
+                {g.k} →
+              </div>
+              <div className="text-[14.5px] font-semibold leading-snug mb-1">{g.t}</div>
+              <div className="text-[13px] text-muted leading-normal">{g.d}</div>
+            </Link>
+          ))}
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="max-w-[1320px] mx-auto px-4 sm:px-6 pb-16">
         <div className="border border-ink bg-[#FFFFFF] p-7 flex items-center justify-between gap-6 flex-wrap">
