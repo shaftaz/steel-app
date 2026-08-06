@@ -7541,6 +7541,60 @@ At k = 0.95: D/t = 40.0, very thin, buckling is the primary failure mode.</p>
 <p>Seamless pipe is forged from solid billets with no longitudinal seam: costlier, limited to small-to-medium diameters, preferred for extreme pressure and sour/offshore-riser service. Welded pipe (ERW/LSAW) is formed from plate or coil and seam-welded: cost-effective, available in large diameters and long lengths, standard for high-capacity transmission with modern seam quality controls.</p>
 `,
   },
+  {
+    slug: "api-5l-47th-edition-co2-pipelines",
+    title:
+      "The Starting Gun for CCUS Steel: What API 5L’s 47th Edition Actually Changes",
+    category: "ANALYSIS",
+    categoryColor: "blue",
+    date: "2026-08-06",
+    readTime: "5 min",
+    excerpt:
+      "API 5L’s 47th edition adds first-ever CO₂ pipeline requirements, tighter HFW and sour-service rules across 15+ areas. What buyers and mills must do now.",
+    metaTitle: "API 5L 47th Edition: CO₂ Pipelines Get Their Rulebook",
+    metaDescription:
+      "API 5L’s 47th edition adds first-ever CO₂ pipeline requirements, tighter HFW and sour-service rules across 15+ areas. What buyers and mills must do now.",
+    relatedCalculators: ["pipe-weight", "steel-plate"],
+    content: `
+<p><strong>Executive summary:</strong> On June 2, 2026, the American Petroleum Institute published the 47th edition of API Specification 5L (the line pipe standard in continuous service since 1924) with revisions across more than 15 topic areas and one genuine landmark: the first dedicated requirements for carbon dioxide transmission pipelines. Alongside the CO₂ rules come tightened high-frequency-weld (HFW) quality controls, updated sour-service and sulfide-stress-cracking specifications, enhanced impact-toughness and lamination requirements, and stricter process controls from hydrotest gauge calibration to NDE personnel certification. With industry reporting pointing to a July 1, 2027 Monogram compliance date, the window for mills to re-qualify and for projects to update specifications is short, and CCUS developers who design against the old metrics are building regulatory risk into their capital plans.</p>
+
+<p>Standards are how industries announce what they intend to build next. For a century, API 5L described pipe for hydrocarbons. <a href="https://www.api.org/news-policy-and-issues/news/2026/06/02/api-announces-47th-edition-of-api-specification-5l" target="_blank" rel="noopener">The 47th edition</a> adds a second product to that mandate, and in doing so, fires the starting gun for a qualified CCUS steel supply chain.</p>
+
+<h2>Why CO₂ needed its own rulebook</h2>
+
+<p>The physics justify the paperwork. Dense-phase and supercritical CO₂ does not behave like natural gas when containment fails: its decompression behavior sustains the driving force at a running crack’s tip, making CO₂ lines uniquely vulnerable to long, fast, running ductile fractures. The engineering answer is extreme fracture toughness, demonstrated (not assumed) through Charpy V-notch impact testing and drop-weight tear testing regimes designed to guarantee that a crack, once started, arrests itself. Impurities and phase behavior add further metallurgical demands beyond hydrocarbon practice. The 47th edition converts this accumulated research into dedicated CO₂ transmission requirements, meaning CCUS projects now have a citable procurement basis, and regulators have a benchmark to hold them to. The <a href="/articles/api-5l-pipeline-steel-grade-selection">grade-selection arithmetic</a> still applies underneath it all.</p>
+
+<h2>The broader tightening</h2>
+
+<p>The CO₂ chapter headlines, but the revision runs wider: more than 15 topic areas, forming a consistent theme of closing the gaps where quality escapes. HFW line pipe (the cost-effective alternative to seamless whose historic weakness was seam imperfections like hook cracks and untempered martensite) receives stricter manufacturing quality controls, continuing the industry’s push toward inline NDT and post-weld heat treatment discipline. Sour-service and SSC test specifications are updated; impact toughness and lamination control are enhanced; chemical element ranges are revised. And two unglamorous-but-telling additions: tighter hydrotest pressure-gauge calibration rules and NDE personnel certification requirements, the standard reaching past the steel into the humans and instruments that vouch for it. The pattern echoes what we’ve observed across steel markets this year: <a href="/articles/cbam-verification-bottleneck">proof infrastructure is becoming as regulated as product</a>.</p>
+
+<h2>The compliance clock</h2>
+
+<p>Industry reporting places the API Monogram compliance date at July 1, 2027, roughly thirteen months from publication. For mills, that is a short runway to revise procedures, re-qualify processes, and evidence conformance for monogrammed product. For buyers and EPCs, the practical timeline is shorter still: specifications drafted today for pipe delivered in 2027–28 should reference the 47th edition now, because material sourced against superseded metrics invites exactly the trio every project fears: regulatory roadblocks, engineering rework, and long-term liability. CCUS developers face the sharpest version: designing a CO₂ line against pre-47th-edition assumptions means designing against a standard that no longer describes the product regulators will expect.</p>
+
+<h2>The honest limits</h2>
+
+<p>The Monogram date cited comes from industry reporting and the trade press rather than API’s announcement text: procurement teams should confirm the applicable transition timeline for their certification scope directly with API. And a standard is a floor, not a design: CO₂ project specifications will continue to layer project-specific fracture-control plans on top of 5L’s requirements, particularly where impurity profiles are aggressive.</p>
+
+<h2>What each actor should do this quarter</h2>
+
+<p>Mills: gap-assess against the 47th edition now (HFW controls, SSC testing, calibration and personnel requirements) because qualification queues compound as the deadline nears. Buyers and EPCs: update master specifications to the 47th edition, and for CO₂ service, begin supplier dialogues early: the pool of mills that can evidence CO₂-grade fracture toughness is a subset of the line pipe market, and subsets price accordingly. Investors and analysts: watch which producers announce 47th-edition CO₂ qualification first; in a standard-gated market, <a href="/articles/japan-korea-steel-overseas-expansion-green-hydrogen">early qualification is market share</a>. A century after its first edition, API 5L just defined the next pipe market, and as with every qualified-supply business, the profits will flow to whoever shows up certified. Sizing the steel itself starts, as always, with <a href="/calculator">the tonnage math</a>: run it with the <a href="/calculators/pipe-weight">pipe calculator</a>.</p>
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>What is new in API 5L 47th edition?</h3>
+<p>Published June 2, 2026, it revises more than 15 topic areas, headlined by first-ever dedicated requirements for CO₂ transmission pipelines, plus tightened HFW pipe quality controls, updated sour-service/SSC and impact-toughness specifications, lamination control, hydrotest gauge calibration, and NDE personnel certification rules.</p>
+
+<h3>Why do CO₂ pipelines need special steel requirements?</h3>
+<p>Dense-phase CO₂’s decompression behavior can sustain long, running ductile fractures that natural gas lines don’t experience. CO₂ service therefore demands exceptional fracture toughness, proven through Charpy V-notch and drop-weight tear testing designed to ensure cracks self-arrest.</p>
+
+<h3>When must line pipe comply with the 47th edition?</h3>
+<p>Industry reporting indicates an API Monogram compliance date of July 1, 2027; buyers should confirm the transition timeline for their scope with API and reference the 47th edition in specifications for 2027+ deliveries now.</p>
+
+<h3>What is HFW pipe and why is its quality under scrutiny?</h3>
+<p>High-frequency-welded pipe is a cost-effective alternative to seamless, historically exposed to seam imperfections such as hook cracks and untempered martensite. The 47th edition tightens manufacturing quality controls, reinforcing inline NDT and post-weld heat treatment practice.</p>
+`,
+  },
 ];
 
 /** Articles sorted by date, most recent first */
