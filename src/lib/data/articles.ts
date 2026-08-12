@@ -7715,6 +7715,64 @@ At k = 0.95: D/t = 40.0, very thin, buckling is the primary failure mode.</p>
 <p>Beyond failure costs: in market-access terms, certifications held and their tonnage value, markets opened or defended, default-value penalties avoided, and qualification lead times versus competitors.</p>
 `,
   },
+  {
+    slug: "china-deflation-steel-demand-chain",
+    title:
+      "The Deflation Chain: How China’s Weak Prices Become the World’s Weak Steel",
+    category: "ANALYSIS",
+    categoryColor: "blue",
+    date: "2026-08-12",
+    readTime: "5 min",
+    excerpt:
+      "China’s CPI cooled to 0.3%, PPI hit a 3-month low, and iron ore has spent 15 sessions below $100. Tracing the deflation chain from consumer to steel price.",
+    metaTitle: "China’s Steel Deflation Chain: CPI, PPI, Ore Below $100",
+    metaDescription:
+      "China’s CPI cooled to 0.3%, PPI hit a 3-month low, and iron ore has spent 15 sessions below $100. Tracing the deflation chain from consumer to steel price.",
+    relatedCalculators: ["scrap-production-cost", "credit-cost"],
+    content: `
+<p><strong>Executive summary:</strong> July’s Chinese inflation data landed soft on both ends: consumer prices rose just 0.3% year-on-year (a three-month low that missed forecasts) while producer prices fell to their own three-month low, deepening industrial deflation. For steel, this is not background macro. Construction accounts for over 30% of China’s steel demand, factory-gate deflation compresses mill margins directly, and the market’s most honest witness has already voted: benchmark iron ore has now spent 15 consecutive trading sessions below the psychologically important $100 mark, at $94.75/t. The transmission chain from Chinese consumer weakness to global steel prices runs through four links, and every one of them is currently pulling in the same direction.</p>
+
+<p>Steel analysts sometimes treat China’s inflation prints as wallpaper: context, not signal. July’s pair deserves closer attention, because together they describe a demand problem at both ends of the world’s largest steel economy simultaneously.</p>
+
+<h2>Link one: the consumer isn’t consuming</h2>
+
+<p>Consumer inflation of 0.3% year-on-year (a three-month low, below market forecasts) is not price stability; at China’s stage of development it signals demand weakness. Households that don’t spend don’t buy apartments, appliances, or vehicles, and each of those is a steel order deferred. The reading compounds the concern that has shadowed this market all year: the property sector’s prolonged slump, which matters more to steel than any other single variable because construction takes over 30% of China’s total steel demand. A weak consumer and a weak developer are the same problem wearing two coats.</p>
+
+<h2>Link two: the factory gate confirms it</h2>
+
+<p>Producer prices falling to a three-month low deepens the industrial deflation story, and for mills it is the more directly painful print. Factory-gate deflation means the price of what mills sell is falling while their output competes against a persistent manufacturing capacity glut. The response has been rational but insufficient: mills have been reducing output in recent weeks, yet domestic demand is softening faster than production discipline is tightening. When cuts chase demand down a slope, <a href="/calculators/scrap-production-cost">margins</a> compress the whole way: the same margin pressure that has kept <a href="/articles/iron-ore-price-one-year-low">hot-metal output falling and mill profitability deteriorating</a> through this cycle.</p>
+
+<h2>Link three: the ore market has already voted</h2>
+
+<p>If the inflation prints are testimony, iron ore is the verdict. Benchmark September ore on the Singapore Exchange traded at $94.75/t: below $100 for fifteen consecutive sessions. That duration is the tell. When ore first broke $95 in early August, part of the move traced to acute trader stress, which can reverse quickly. Fifteen straight sessions below the psychological line converts the episode into a regime: the market has repriced Chinese steel production intensity as structurally lower, exactly as the demand data says it should. Our ore-paradox framework applies with full force: cheap ore is a demand alarm before it is a cost saving, and it lowers the credible floor under <a href="/articles/china-steel-export-prices-floor-test">every steel offer downstream</a>.</p>
+
+<h2>Link four: the pressure goes abroad</h2>
+
+<p>The chain’s final link is the one that reaches every reader outside China. Weak domestic demand plus insufficient output cuts equals exportable surplus, and a falling cost floor (cheap ore, deflating input prices) gives that surplus room to travel at prices few can match. This is the engine feeding <a href="/articles/global-steel-price-divergence-structural">the global divergence now hardening between walled and unwalled markets</a>, and it strengthens the case that the floor under Chinese export offers is being tested from beneath, not building from above.</p>
+
+<h2>The honest limits</h2>
+
+<p>Two prints make a data point, not a destiny: August’s numbers could firm, and Beijing’s policy levers (stimulus, production controls) remain the standing wildcard that can reprice this entire chain in a week. The 30% construction share is a structural figure, not a live monthly reading. And deflation chains can pause at any link: a genuine mill-discipline push would break the surplus-export link even with demand weak.</p>
+
+<h2>What to watch, and what to do</h2>
+
+<p>The chain gives buyers and analysts a checklist in causal order: August CPI/PPI (does the deflation deepen?), weekly hot-metal output and mill margins (is discipline catching up to demand?), the ore price’s relationship with $100 (a sustained reclaim would be the first sign the chain is breaking), and Chinese export offer levels (the transmission’s final gauge). For steel buyers outside China, the practical read: the pressure pipeline argues against paying premiums anchored to last quarter’s cost assumptions, while the policy wildcard argues against betting everything on further declines: staggered cover, watching the chain’s links, remains the professional posture. Tracking those links as one connected system rather than four separate headlines is precisely what SteelMath’s market intelligence is built for. China’s deflation is not China’s alone; steel is how it ships.</p>
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>Why does China’s inflation data matter for steel prices?</h3>
+<p>July’s CPI (0.3%, a three-month low) signals weak consumption and a sluggish recovery in the world’s largest steel consumer, while the PPI’s three-month low shows industrial deflation compressing mill margins. Construction (over 30% of China’s steel demand) sits at the center of the weakness.</p>
+
+<h3>Why has iron ore stayed below $100?</h3>
+<p>Benchmark SGX ore at $94.75/t has held below $100 for 15 consecutive sessions, reflecting persistent demand concerns: falling hot-metal output, weak mill margins, and soft inflation data, a structural repricing rather than a brief dip.</p>
+
+<h3>Are Chinese steel mills cutting production?</h3>
+<p>Yes, mills have reduced output in recent weeks, but domestic demand is softening faster than cuts are deepening, sustaining a surplus that pressures both domestic prices and export markets.</p>
+
+<h3>What would signal the pressure is easing?</h3>
+<p>Firming August CPI/PPI, hot-metal output stabilizing, iron ore sustainably reclaiming $100, and Chinese export offers finding genuine buyer validation, in roughly that causal order. Policy stimulus from Beijing remains the wildcard that can short-circuit the sequence.</p>
+`,
+  },
 ];
 
 /** Articles sorted by date, most recent first */
