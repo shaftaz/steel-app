@@ -6872,7 +6872,7 @@ At k = 0.95: D/t = 40.0, very thin, buckling is the primary failure mode.</p>
 
 <h2>What buyers and sellers should do with this</h2>
 
-<p>Treat the ore print as a leading indicator with a lag structure: ore moves first, export steel offers follow within weeks, and regional domestic prices follow the import alternative. Practically: resist locking long-duration steel positions against stale cost floors; watch hot-metal output for the turn, because a fifth or sixth weekly decline entrenches the trend while a rebound signals restocking; and monitor the trader-stress channel, since a disorderly resolution would mean a sharper, faster spike down and snap back. Tracking that chain (ore, margins, offers, landed prices) as one connected system rather than four separate headlines is exactly the discipline SteelMath’s market intelligence is built around. Cheap ore is information. The buyers who profit from it are the ones who read it as a warning first and a discount second.</p>
+<p>Treat the ore print as a leading indicator with a lag structure: ore moves first, export steel offers follow within weeks, and regional domestic prices follow the import alternative. Practically: resist locking long-duration steel positions against stale cost floors; watch hot-metal output for the turn, because <a href="/articles/china-deflation-steel-demand-chain">a fifth or sixth weekly decline entrenches the trend</a> while a rebound signals restocking; and monitor the trader-stress channel, since a disorderly resolution would mean a sharper, faster spike down and snap back. Tracking that chain (ore, margins, offers, landed prices) as one connected system rather than four separate headlines is exactly the discipline SteelMath’s market intelligence is built around. Cheap ore is information. The buyers who profit from it are the ones who read it as a warning first and a discount second.</p>
 
 <h2>Frequently Asked Questions</h2>
 
@@ -6917,7 +6917,7 @@ At k = 0.95: D/t = 40.0, very thin, buckling is the primary failure mode.</p>
 
 <p>Here is the analytically interesting part: the validation gap has flipped sides. In July, the question was whether demand would rise to meet the offers. Now the question is how far offers must fall to meet demand. Watch the same signal in mirror image: enquiry volume. The level at which sidelined buyers in Southeast Asia and elsewhere begin converting enquiries into bookings is the market’s true clearing price, and <a href="/articles/china-steel-export-prices-floor-test">the first sustained pickup in enquiries</a> will mark it. Until then, each $1–3 daily markdown is an offer in search of validation, just as July’s markups were.</p>
 
-<p>Two structural pressures argue the search continues lower. Chinese domestic demand remains in its seasonal trough with construction indicators at post-pandemic lows, and export competition is intensifying precisely because every mill facing that domestic picture is drawing the same conclusion. Against that, one force argues for a floor forming: at some spread below regional alternatives, Chinese material becomes impossible for price-sensitive buyers to ignore, <a href="/articles/anti-dumping-chinese-steel-barrier-cascade">trade barriers notwithstanding</a>.</p>
+<p>Two structural pressures argue the search continues lower. <a href="/articles/china-deflation-steel-demand-chain">Chinese domestic demand remains in its seasonal trough</a> with construction indicators at post-pandemic lows, and export competition is intensifying precisely because every mill facing that domestic picture is drawing the same conclusion. Against that, one force argues for a floor forming: at some spread below regional alternatives, Chinese material becomes impossible for price-sensitive buyers to ignore, <a href="/articles/anti-dumping-chinese-steel-barrier-cascade">trade barriers notwithstanding</a>.</p>
 
 <h2>The honest limits</h2>
 
@@ -7136,6 +7136,7 @@ At k = 0.95: D/t = 40.0, very thin, buckling is the primary failure mode.</p>
     category: "ANALYSIS",
     categoryColor: "blue",
     date: "2026-08-05",
+    lastUpdated: "2026-08-12",
     readTime: "5 min",
     excerpt:
       "US HR hit $1,180/st (highest since June 2022) with plate at $1,380 and lead times out to 12 weeks, while world prices sink. Inside steel’s great divergence.",
@@ -7144,6 +7145,8 @@ At k = 0.95: D/t = 40.0, very thin, buckling is the primary failure mode.</p>
       "US HR hit $1,180/st (highest since June 2022) with plate at $1,380 and lead times out to 12 weeks, while world prices sink. Inside steel’s great divergence.",
     relatedCalculators: ["steel-plate", "metal-weight"],
     content: `
+<p><em>Update (August 2026): The divergence has since widened, and gained a middle tier. See <a href="/articles/global-steel-price-divergence-structural">our latest analysis of steel’s three-price world</a>.</em></p>
+
 <p><strong>Executive summary:</strong> US hot-rolled coil has reached $1,180 per short ton on SMU’s assessment (its highest since June 2022) with plate at $1,380/st, the highest since January 2024, and mill lead times stretched to 5–12 weeks for HR and 6–12 weeks for coated products. The same week, Chinese HRC export offers sat near $480 per tonne FOB. Adjusting units, American buyers are paying roughly two and a half times the world export price for the same commodity. That spread is not a freight cost or a quality premium; it is the measurable price of the trade wall, and it defines the strategic question every market participant should be asking: how long can two steel worlds coexist, and who pays for the difference?</p>
 
 <p>Steel has always had regional spreads. What it has now is something categorically different: a bifurcation deep enough that “the price of steel” no longer means anything without specifying which side of the wall you stand on.</p>
