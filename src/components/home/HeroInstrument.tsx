@@ -1,6 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
+import { addQuoteItem, useQuoteCount } from "@/lib/quote";
+import { track } from "@/components/instrument";
 
 type Shape = "round" | "square" | "flat" | "plate";
 
@@ -48,6 +51,8 @@ export default function HeroInstrument() {
   const [mathsOpen, setMathsOpen] = useState(false);
   const [copied, setCopied] = useState(false);
   const [shared, setShared] = useState(false);
+  const [addedFlash, setAddedFlash] = useState(false);
+  const quoteCount = useQuoteCount();
 
   useEffect(() => {
     try {
@@ -298,6 +303,42 @@ export default function HeroInstrument() {
               className="bg-transparent text-paper font-mono text-[11.5px] tracking-[0.08em] py-3.5 px-2 cursor-pointer hover:bg-panel-dark">
               DOWNLOAD PDF
             </button>
+          </div>
+          <div className="grid grid-cols-2 border-t border-ink-border no-print">
+            <button
+              onClick={() => {
+                const dims =
+                  shape === "round"
+                    ? `round ${d} mm × ${len} m`
+                    : shape === "square"
+                      ? `square ${side} mm × ${len} m`
+                      : shape === "flat"
+                        ? `flat ${fw}×${ft} mm × ${len} m`
+                        : `plate ${pl}×${pw} m × ${pt} mm`;
+                const item = addQuoteItem({
+                  tool: "Steel Weight Calculator",
+                  path: "/calculator",
+                  desc: `${grade} ${dims}`,
+                  pieces: 1,
+                  unitKg: total,
+                  totalKg: total,
+                });
+                if (item) {
+                  track("quote_add_item", { page: "/" });
+                  setAddedFlash(true);
+                  setTimeout(() => setAddedFlash(false), 2200);
+                }
+              }}
+              className="bg-transparent border-r border-ink-border text-accent font-mono text-[11px] tracking-[0.06em] font-semibold py-3 px-1.5 cursor-pointer hover:bg-panel-dark"
+            >
+              {addedFlash ? "ADDED TO QUOTE ✓" : "+ ADD TO QUOTE"}
+            </button>
+            <Link
+              href="/quote"
+              className="flex items-center justify-center text-paper font-mono text-[11px] tracking-[0.06em] py-3 px-1.5 no-underline hover:bg-panel-dark"
+            >
+              {quoteCount > 0 ? `VIEW QUOTE (${quoteCount}) →` : "QUOTE BUILDER →"}
+            </Link>
           </div>
         </div>
       </div>

@@ -400,9 +400,16 @@ input[type="number"] {
   .print-block {
     border: 1px solid #17181A;
   }
-  /* Quote builder — print as a clean A4 sheet */
+  /* Quote builder — prints cleanly on A4 and Letter alike */
+  @page {
+    size: auto;
+    margin: 12mm;
+  }
   .quote-sheet {
     border: 1px solid #17181A !important;
+  }
+  .quote-sheet img {
+    max-height: 64px !important;
   }
   .quote-sheet input,
   .quote-sheet select,

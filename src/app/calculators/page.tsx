@@ -47,6 +47,13 @@ const CALCULATORS = [
     tag: "All-in-One",
   },
   {
+    href: "/quote",
+    title: "Quote Builder",
+    description:
+      "Combine calculator results into a dispatch-ready quotation & loading sheet. Print or save as PDF.",
+    tag: "Dispatch",
+  },
+  {
     href: "/calculators/tmt",
     title: "TMT Bar Weight Calculator",
     description:
@@ -288,7 +295,7 @@ export default function CalculatorsPage() {
         <div className="mb-7 flex items-end justify-between gap-4 lg:gap-8 flex-wrap">
           <div>
             <div className="font-mono text-[11px] tracking-[0.14em] text-accent mb-2.5">
-              20 FREE TOOLS · INSTANT RECALC · IS · ASTM · JIS · EN · GB STANDARDS
+              21 FREE TOOLS · INSTANT RECALC · IS · ASTM · JIS · EN · GB STANDARDS
             </div>
             <h1 className="text-[clamp(26px,4vw,36px)] font-extrabold text-ink mb-2 tracking-[-0.02em] [text-wrap:balance]">
               Free Steel Calculators for Every Section Type

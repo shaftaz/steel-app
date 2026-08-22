@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import {
   QuoteItem,
@@ -17,6 +17,8 @@ import {
 } from "@/lib/quote";
 import { fmt, track, useCurrency, LABEL_CLS } from "@/components/instrument";
 import { shareResultCard } from "@/lib/share-card";
+import { buildVerifyUrl } from "@/lib/quote-link";
+import { processLogoFile, LogoError } from "@/lib/quote-logo";
 
 const TH =
   "font-mono text-[10px] tracking-[0.08em] text-muted-3 uppercase text-left font-semibold px-2 py-2 border-b border-ink";
@@ -60,10 +62,36 @@ export default function QuoteBuilder() {
   const [copied, setCopied] = useState(false);
   const [cardState, setCardState] = useState<"idle" | "busy" | "done">("idle");
   const [confirmClear, setConfirmClear] = useState(false);
+  const [logoErr, setLogoErr] = useState("");
+  const [verifyUrl, setVerifyUrl] = useState("");
+  const fileRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     setMeta(loadQuoteMeta());
   }, []);
+
+  // Keep the footer verify-link current (debounced; payload lives in the fragment).
+  useEffect(() => {
+    if (!meta || items.length === 0) return;
+    const t = setTimeout(() => {
+      buildVerifyUrl(meta, items).then(setVerifyUrl, () => setVerifyUrl(""));
+    }, 300);
+    return () => clearTimeout(t);
+  }, [meta, items]);
+
+  const onLogoFile = async (file: File | undefined) => {
+    if (!file) return;
+    try {
+      const dataUrl = await processLogoFile(file);
+      patchMeta({ logo: dataUrl });
+      track("quote_logo_upload");
+      setLogoErr("");
+    } catch (e) {
+      setLogoErr(e instanceof LogoError ? e.message : "Couldn't read that image.");
+      setTimeout(() => setLogoErr(""), 4000);
+    }
+    if (fileRef.current) fileRef.current.value = "";
+  };
 
   const patchMeta = (patch: Partial<QuoteMeta>) => {
     setMeta((m) => {
@@ -168,7 +196,7 @@ export default function QuoteBuilder() {
       <div className="flex flex-wrap gap-2 mb-4 no-print">
         <button
           onClick={() => {
-            track("quote_print");
+            track("quote_export");
             window.print();
           }}
           className="btn-glow px-5 py-2.5 text-[12px] font-semibold cursor-pointer"
@@ -221,20 +249,84 @@ export default function QuoteBuilder() {
 
       {/* The sheet — this block is what prints */}
       <div className="quote-sheet border border-ink bg-[#FFFFFF]">
-        {/* Sheet header */}
+        {/* Sheet header — the document is the SELLER's, not SteelMath's */}
         <div className="flex justify-between items-start gap-4 flex-wrap px-6 pt-6 pb-5 border-b border-ink">
-          <div>
-            <div className="flex items-baseline gap-1.5">
-              <span className="text-[22px] font-extrabold tracking-[-0.02em]">
-                Steel<span className="text-accent">Math</span>
-              </span>
-              <span className="font-mono text-[10px] text-muted-3">.COM</span>
-            </div>
-            <div className="font-mono text-[10.5px] tracking-[0.1em] text-muted-3 mt-1">
-              QUOTATION · LOADING SHEET
-            </div>
+          <div className="max-w-[420px] min-w-[240px]">
+            <input
+              ref={fileRef}
+              type="file"
+              accept="image/png,image/jpeg,image/svg+xml"
+              className="hidden"
+              onChange={(e) => onLogoFile(e.target.files?.[0])}
+              aria-label="Upload seller logo"
+            />
+            {meta.logo ? (
+              <>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={meta.logo}
+                  alt={meta.seller ? `${meta.seller} logo` : "Seller logo"}
+                  className="max-h-16 w-auto"
+                />
+                <div className="flex gap-3 mt-1.5 no-print">
+                  <button
+                    onClick={() => fileRef.current?.click()}
+                    className="bg-transparent border-0 p-0 font-mono text-[9.5px] tracking-[0.08em] text-muted-3 hover:text-ink cursor-pointer"
+                  >
+                    REPLACE LOGO
+                  </button>
+                  <button
+                    onClick={() => patchMeta({ logo: "" })}
+                    className="bg-transparent border-0 p-0 font-mono text-[9.5px] tracking-[0.08em] text-muted-3 hover:text-red-down cursor-pointer"
+                  >
+                    REMOVE
+                  </button>
+                </div>
+                <input
+                  value={meta.seller}
+                  onChange={(e) => patchMeta({ seller: e.target.value })}
+                  placeholder="Your firm name"
+                  className="mt-2 w-full bg-transparent border-0 font-semibold text-[13px] outline-none placeholder:text-muted-3 placeholder:font-normal"
+                  aria-label="Seller name"
+                />
+              </>
+            ) : (
+              <div className="flex items-start gap-3">
+                <div className="flex-1">
+                  <input
+                    value={meta.seller}
+                    onChange={(e) => patchMeta({ seller: e.target.value })}
+                    placeholder="Your firm name"
+                    className="w-full bg-transparent border-0 border-b border-dashed border-rule font-extrabold tracking-[-0.02em] text-[21px] outline-none focus:border-accent placeholder:text-muted-3 placeholder:font-semibold"
+                    aria-label="Seller name"
+                  />
+                </div>
+                <button
+                  onClick={() => fileRef.current?.click()}
+                  className="no-print shrink-0 border border-dashed border-rule text-muted-3 font-mono text-[9.5px] tracking-[0.08em] px-2.5 py-2 cursor-pointer hover:border-ink hover:text-ink transition-colors"
+                >
+                  + ADD YOUR
+                  <br />
+                  LOGO
+                </button>
+              </div>
+            )}
+            <textarea
+              value={meta.sellerDetail}
+              onChange={(e) => patchMeta({ sellerDetail: e.target.value })}
+              placeholder="Address · GSTIN · phone"
+              rows={2}
+              className="mt-1.5 w-full bg-transparent border-0 font-mono text-[11px] text-muted outline-none resize-none placeholder:text-muted-3"
+              aria-label="Seller details"
+            />
+            {logoErr && (
+              <div className="font-mono text-[10px] text-red-down mt-1 no-print">{logoErr}</div>
+            )}
           </div>
           <div className="text-right">
+            <div className="font-mono text-[10.5px] tracking-[0.1em] text-muted-3 mb-1.5">
+              QUOTATION · LOADING SHEET
+            </div>
             <div className="font-mono text-[13px] font-semibold">
               <input
                 value={meta.quoteNo}
@@ -262,38 +354,22 @@ export default function QuoteBuilder() {
           </div>
         </div>
 
-        {/* Parties */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 border-b border-rule">
-          <div className="px-6 py-4 sm:border-r border-rule">
-            <div className={LABEL_CLS}>FROM (SELLER)</div>
-            <input
-              value={meta.seller}
-              onChange={(e) => patchMeta({ seller: e.target.value })}
-              placeholder="Your firm name"
-              className="mt-1.5 w-full bg-transparent border-0 border-b border-dashed border-rule font-semibold text-[15px] outline-none focus:border-accent placeholder:text-muted-3 placeholder:font-normal"
-            />
-            <textarea
-              value={meta.sellerDetail}
-              onChange={(e) => patchMeta({ sellerDetail: e.target.value })}
-              placeholder="Address · GSTIN · phone"
-              rows={2}
-              className="mt-1.5 w-full bg-transparent border-0 font-mono text-[11.5px] text-muted outline-none resize-none placeholder:text-muted-3"
-            />
-          </div>
-          <div className="px-6 py-4 border-t sm:border-t-0 border-rule">
+        {/* Buyer (seller identity lives in the header) */}
+        <div className="border-b border-rule">
+          <div className="px-6 py-4">
             <div className={LABEL_CLS}>TO (BUYER)</div>
             <input
               value={meta.buyer}
               onChange={(e) => patchMeta({ buyer: e.target.value })}
               placeholder="Buyer / consignee"
-              className="mt-1.5 w-full bg-transparent border-0 border-b border-dashed border-rule font-semibold text-[15px] outline-none focus:border-accent placeholder:text-muted-3 placeholder:font-normal"
+              className="mt-1.5 w-full max-w-[520px] bg-transparent border-0 border-b border-dashed border-rule font-semibold text-[15px] outline-none focus:border-accent placeholder:text-muted-3 placeholder:font-normal"
             />
             <textarea
               value={meta.buyerDetail}
               onChange={(e) => patchMeta({ buyerDetail: e.target.value })}
               placeholder="Address · site / delivery point"
               rows={2}
-              className="mt-1.5 w-full bg-transparent border-0 font-mono text-[11.5px] text-muted outline-none resize-none placeholder:text-muted-3"
+              className="mt-1.5 w-full max-w-[520px] bg-transparent border-0 font-mono text-[11.5px] text-muted outline-none resize-none placeholder:text-muted-3"
             />
           </div>
         </div>
@@ -439,9 +515,24 @@ export default function QuoteBuilder() {
           </div>
         </div>
 
-        <div className="px-6 py-3 border-t border-ink flex justify-between gap-2 flex-wrap font-mono text-[9.5px] tracking-[0.06em] text-muted-3">
-          <span>WEIGHTS CALCULATED WITH STEELMATH.COM — VERIFY AGAINST WEIGHBRIDGE BEFORE DISPATCH · NOT A TAX INVOICE</span>
-          <span>STEELMATH.COM/QUOTE</span>
+        {/* SteelMath verification strip — slim, survives print */}
+        <div className="px-6 py-2.5 border-t border-ink flex justify-between items-center gap-2 flex-wrap font-mono text-[9.5px] tracking-[0.05em] text-muted-3">
+          <span className="inline-flex items-baseline gap-1.5 min-w-0">
+            <span className="font-sans text-[11px] font-extrabold tracking-[-0.02em] text-ink shrink-0">
+              Steel<span className="text-accent">Math</span>
+            </span>
+            <span>
+              WEIGHTS COMPUTED PER IS/ASTM/JIS/EN/GB STANDARD DENSITIES · VERIFIED BY
+              STEELMATH.COM · NOT A TAX INVOICE
+            </span>
+          </span>
+          <a
+            href={verifyUrl || "https://steelmath.com/quote"}
+            className="text-muted-3 no-underline hover:text-accent shrink-0"
+            title="Check these weights on SteelMath"
+          >
+            steelmath.com/q/{meta.quoteNo}
+          </a>
         </div>
       </div>
     </div>

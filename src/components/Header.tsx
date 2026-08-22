@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState, useRef, useEffect, useCallback } from "react";
-import { useQuoteCount } from "@/lib/quote";
+import { useQuoteItems, quoteTotals } from "@/lib/quote";
 
 const CALC_CATEGORIES = [
   {
@@ -84,7 +84,9 @@ const CMDK_TOOLS = [
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [calcOpen, setCalcOpen] = useState(false);
-  const quoteCount = useQuoteCount();
+  const quoteItems = useQuoteItems();
+  const quoteCount = quoteItems.length;
+  const quoteTonnes = (quoteTotals(quoteItems).kg / 1000).toFixed(2);
   const [cmdkOpen, setCmdkOpen] = useState(false);
   const [query, setQuery] = useState("");
   const dropdownRef = useRef<HTMLDivElement>(null);
@@ -163,10 +165,14 @@ export default function Header() {
                     ))}
                   </div>
                 ))}
-                <div className="col-span-4 border-t border-rule pt-2.5 mt-1">
+                <div className="col-span-4 border-t border-rule pt-2.5 mt-1 flex justify-between gap-3 flex-wrap">
                   <Link href="/calculators" onClick={() => setCalcOpen(false)}
                     className="block py-1 font-mono text-[11.5px] tracking-[0.06em] text-accent hover:text-ink no-underline transition-colors font-medium">
                     VIEW ALL CALCULATORS &rarr;
+                  </Link>
+                  <Link href="/quote" onClick={() => setCalcOpen(false)}
+                    className="block py-1 font-mono text-[11.5px] tracking-[0.06em] text-muted hover:text-ink no-underline transition-colors font-medium">
+                    QUOTE BUILDER{quoteCount > 0 ? ` (${quoteCount})` : ""} &rarr;
                   </Link>
                 </div>
               </div>
@@ -189,11 +195,13 @@ export default function Header() {
             <Link
               href="/quote"
               className="hidden sm:inline-flex items-center gap-1.5 border border-rule font-mono text-[11.5px] tracking-[0.04em] text-ink px-3 py-2 no-underline hover:border-ink transition-colors whitespace-nowrap"
+              title={`Quote builder — ${quoteCount} item${quoteCount === 1 ? "" : "s"}`}
             >
               QUOTE
               <span className="bg-accent text-white font-semibold text-[10.5px] px-1.5 py-px leading-[1.4]">
                 {quoteCount}
               </span>
+              <span className="text-muted-2">{quoteTonnes} t</span>
             </Link>
           )}
           {/* ⌘K search */}
@@ -311,6 +319,19 @@ export default function Header() {
             </div>
           </div>
         </div>
+      )}
+
+      {/* Mobile sticky quote bar — visible site-wide once a draft exists */}
+      {quoteCount > 0 && (
+        <Link
+          href="/quote"
+          className="sm:hidden no-print fixed bottom-0 inset-x-0 z-40 bg-ink text-paper font-mono text-[12px] tracking-[0.05em] px-4 py-3.5 flex justify-between items-center no-underline border-t border-ink-border"
+        >
+          <span>
+            QUOTE · {quoteCount} ITEM{quoteCount === 1 ? "" : "S"} · {quoteTonnes} T
+          </span>
+          <span className="text-accent font-semibold">OPEN →</span>
+        </Link>
       )}
     </header>
   );

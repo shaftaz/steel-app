@@ -9,6 +9,7 @@ const FOOTER_COLS: { heading: string; links: { href: string; label: string }[] }
       { href: "/calculators/steel-plate", label: "Steel Plate Calculator" },
       { href: "/calculators/scrap-yield", label: "Scrap Yield Calculator" },
       { href: "/calculators/scrap-production-cost", label: "Steel Production Cost Calculator" },
+      { href: "/quote", label: "Quote Builder" },
       { href: "/calculators", label: "All Calculators" },
     ],
   },

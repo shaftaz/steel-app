@@ -33,6 +33,8 @@ export interface QuoteItem {
 export interface QuoteMeta {
   seller: string;
   sellerDetail: string;
+  /** Seller logo as a data URL (raster, ≤512px long edge), "" when unset */
+  logo: string;
   buyer: string;
   buyerDetail: string;
   quoteNo: string;
@@ -169,6 +171,7 @@ export function loadQuoteMeta(): QuoteMeta {
   const base: QuoteMeta = {
     seller: "",
     sellerDetail: "",
+    logo: "",
     buyer: "",
     buyerDetail: "",
     quoteNo: defaultQuoteNo(),
