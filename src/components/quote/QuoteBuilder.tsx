@@ -7,6 +7,7 @@ import {
   QuoteItem,
   QuoteMeta,
   RateBasis,
+  buildDefaultTerms,
   clearQuote,
   computeQuotePricing,
   countryPreset,
@@ -25,7 +26,7 @@ import { buildVerifyUrl } from "@/lib/quote-link";
 import { processLogoFile, LogoError } from "@/lib/quote-logo";
 
 const TH =
-  "font-mono text-[10px] tracking-[0.08em] text-muted-3 uppercase text-left font-semibold px-2 py-2 border-b border-ink";
+  "font-mono text-[10px] tracking-[0.08em] text-muted uppercase text-left font-semibold px-2 py-2 border-b border-ink";
 const TD = "px-2 py-2.5 border-b border-rule-faint font-mono text-[12.5px] align-top";
 
 function basisLabel(b: RateBasis, currency: string) {
@@ -109,6 +110,14 @@ export default function QuoteBuilder() {
     patchMeta({ country: preset.key, taxLabel: preset.taxLabel, taxRate: preset.taxRate });
     setCurrency(preset.currency);
   };
+
+  // Terms follow the basis / tax / freight choices until hand-edited.
+  useEffect(() => {
+    if (!meta || meta.termsCustom === "1") return;
+    const next = buildDefaultTerms(meta);
+    if (next !== meta.terms) patchMeta({ terms: next });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [meta?.basis, meta?.basisPlace, meta?.taxLabel, meta?.taxRate, meta?.termsCustom]);
 
   // Keep the footer verify-link current (debounced; payload lives in the fragment).
   useEffect(() => {
@@ -484,8 +493,8 @@ export default function QuoteBuilder() {
                           className="bg-transparent border border-rule-faint font-mono text-[10.5px] px-0.5 py-0.5 outline-none cursor-pointer no-print-border"
                           aria-label="Rate basis"
                         >
-                          <option value="kg">{basisLabel("kg", currency)}</option>
                           <option value="t">{basisLabel("t", currency)}</option>
+                          <option value="kg">{basisLabel("kg", currency)}</option>
                           <option value="pc">{basisLabel("pc", currency)}</option>
                         </select>
                       </span>
@@ -714,10 +723,24 @@ export default function QuoteBuilder() {
         {/* Terms + notes */}
         <div className="grid grid-cols-1 sm:grid-cols-2 border-t border-rule">
           <div className="px-6 py-4 sm:border-r border-rule">
-            <div className={LABEL_CLS}>TERMS</div>
+            <div className="flex items-baseline justify-between gap-2">
+              <div className={LABEL_CLS}>TERMS</div>
+              {meta.termsCustom === "1" ? (
+                <button
+                  onClick={() => patchMeta({ termsCustom: "", terms: buildDefaultTerms(meta) })}
+                  className="no-print bg-transparent border-0 p-0 font-mono text-[9px] tracking-[0.08em] text-muted-3 hover:text-ink cursor-pointer"
+                >
+                  RESET TO STANDARD TERMS
+                </button>
+              ) : (
+                <span className="no-print font-mono text-[9px] tracking-[0.08em] text-muted-3">
+                  AUTO — FOLLOWS BASIS &amp; TAX
+                </span>
+              )}
+            </div>
             <textarea
               value={meta.terms}
-              onChange={(e) => patchMeta({ terms: e.target.value })}
+              onChange={(e) => patchMeta({ terms: e.target.value, termsCustom: "1" })}
               rows={4}
               className="mt-1.5 w-full bg-transparent border-0 font-mono text-[11px] leading-relaxed text-muted outline-none resize-none"
               aria-label="Terms"

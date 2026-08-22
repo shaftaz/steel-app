@@ -180,7 +180,7 @@ export default function SteelPlateCalculatorPage() {
 
         {/* Calculator */}
         <div className="mb-8">
-          <Calculator />
+          <Calculator initialShape="plate" initialGrade="MS" />
         </div>
 
         {/* ── Plate Weight Reference Table ── */}

@@ -6,7 +6,7 @@ import { decodeQuotePayload, VerifyPayload } from "@/lib/quote-link";
 import { fmt, track } from "@/components/instrument";
 
 const TH =
-  "font-mono text-[10px] tracking-[0.08em] text-muted-3 uppercase text-left font-semibold px-2 py-2 border-b border-ink";
+  "font-mono text-[10px] tracking-[0.08em] text-muted uppercase text-left font-semibold px-2 py-2 border-b border-ink";
 const TD = "px-2 py-2.5 border-b border-rule-faint font-mono text-[12.5px] align-top";
 
 export default function QuoteVerify() {
@@ -106,7 +106,7 @@ export default function QuoteVerify() {
 
   return (
     <div>
-      <div className="border border-ink bg-[#FFFFFF]">
+      <div className="quote-sheet border border-ink bg-[#FFFFFF]">
         <div className="flex justify-between items-start gap-4 flex-wrap px-6 pt-5 pb-4 border-b border-ink">
           <div>
             <div className="font-mono text-[10.5px] tracking-[0.12em] text-accent mb-1.5">
@@ -238,6 +238,17 @@ export default function QuoteVerify() {
                 PRICES {basisText} · {taxName} INCLUDED{landed ? "" : " · FREIGHT EXTRA"}
               </div>
             </div>
+          </div>
+        )}
+
+        {data.meta.terms && (
+          <div className="px-6 py-3.5 border-t border-rule">
+            <div className="font-mono text-[10px] tracking-[0.1em] text-muted uppercase font-semibold mb-1.5">
+              TERMS
+            </div>
+            <p className="font-mono text-[11px] leading-relaxed text-muted max-w-[680px]">
+              {data.meta.terms}
+            </p>
           </div>
         )}
 

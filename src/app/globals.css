@@ -385,6 +385,25 @@ input[type="number"] {
 }
 
 /* ============================================================
+   Quote sheet readability — it is a commercial document, so
+   content text runs darker than the site's dashboard greys.
+   Labels keep one lighter step for hierarchy; placeholders
+   (::placeholder) are untouched and stay light.
+   ============================================================ */
+.quote-sheet .text-muted-3 {
+  color: #6f6d66;
+}
+.quote-sheet .text-muted-2,
+.quote-sheet .text-muted {
+  color: #2e2d2b;
+}
+.quote-sheet input,
+.quote-sheet textarea,
+.quote-sheet select {
+  color: #17181a;
+}
+
+/* ============================================================
    Print — one clean page per calculator result
    ============================================================ */
 @media print {
@@ -399,6 +418,14 @@ input[type="number"] {
   }
   .print-block {
     border: 1px solid #17181A;
+  }
+  /* Quote sheet on paper: everything near-ink for crisp output */
+  .quote-sheet .text-muted-3 {
+    color: #55534e !important;
+  }
+  .quote-sheet .text-muted-2,
+  .quote-sheet .text-muted {
+    color: #17181a !important;
   }
   /* Quote builder — prints cleanly on A4 and Letter alike */
   @page {

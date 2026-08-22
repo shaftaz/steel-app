@@ -56,6 +56,28 @@ export interface QuoteMeta {
   freight: string;
   /** Loading / other charges amount as a string */
   otherCharges: string;
+  /** "1" once the user hand-edits terms — stops auto-regeneration */
+  termsCustom: string;
+}
+
+/** Standard terms composed from the live basis / tax / freight choices. */
+export function buildDefaultTerms(meta: QuoteMeta): string {
+  const place = meta.basisPlace ? ` ${meta.basisPlace}` : "";
+  const taxName = meta.taxLabel || "tax";
+  const rate = parseFloat(meta.taxRate);
+  const taxBit =
+    isFinite(rate) && rate > 0
+      ? `${taxName} @ ${rate}% additional, as itemised in the total payable.`
+      : `Applicable ${taxName.toLowerCase()} extra as per law.`;
+  const basisBit =
+    meta.basis === "ex"
+      ? `Prices are ex-works${place}; freight, transit insurance and unloading are to the buyer's account. `
+      : `Prices are on landed${place} (delivered) basis, inclusive of the freight and charges itemised. `;
+  return (
+    basisBit +
+    taxBit +
+    " Weights are calculated on standard density basis and may differ from weighbridge readings within rolling-tolerance limits. Quotation valid for the period stated; supply subject to stock and mill confirmation."
+  );
 }
 
 /* ============================================================
@@ -144,7 +166,8 @@ function sanitizeItem(raw: unknown): QuoteItem | null {
   const r = raw as Record<string, unknown>;
   if (typeof r.id !== "string" || typeof r.desc !== "string") return null;
   if (!isFiniteNum(r.totalKg) || (r.totalKg as number) < 0) return null;
-  const basis = r.rateBasis === "t" || r.rateBasis === "pc" ? r.rateBasis : "kg";
+  // Steel trades per tonne by default; kg/pc stay available per line.
+  const basis = r.rateBasis === "kg" || r.rateBasis === "pc" ? r.rateBasis : "t";
   return {
     id: r.id,
     tool: typeof r.tool === "string" ? r.tool : "Calculator",
@@ -187,7 +210,7 @@ export function addQuoteItem(
   if (!isFiniteNum(seed.totalKg) || seed.totalKg < 0) return null;
   const item: QuoteItem = {
     rate: 0,
-    rateBasis: "kg",
+    rateBasis: "t",
     ...seed,
     pieces: isFiniteNum(seed.pieces) && seed.pieces > 0 ? Math.round(seed.pieces) : 1,
     unitKg: isFiniteNum(seed.unitKg) && seed.unitKg >= 0 ? seed.unitKg : 0,
@@ -315,6 +338,7 @@ export function loadQuoteMeta(): QuoteMeta {
     taxRate: "18",
     freight: "",
     otherCharges: "",
+    termsCustom: "",
   };
   if (typeof window === "undefined") return base;
   try {
@@ -324,6 +348,11 @@ export function loadQuoteMeta(): QuoteMeta {
     (Object.keys(base) as (keyof QuoteMeta)[]).forEach((k) => {
       if (typeof r[k] === "string") base[k] = r[k] as string;
     });
+    // Terms saved before auto-terms existed: if they differ from the old
+    // static default, the user wrote them — protect from regeneration.
+    if (!base.termsCustom && base.terms && base.terms !== DEFAULT_TERMS) {
+      base.termsCustom = "1";
+    }
   } catch {}
   return base;
 }

@@ -56,9 +56,16 @@ const SHAPE_DEFS: { key: Shape; label: string }[] = [
   { key: "plate", label: "Sheet / plate" },
 ];
 
-export default function Calculator() {
-  const [shape, setShape] = useState<Shape>("round");
-  const [grade, setGrade] = useState("Fe500");
+export default function Calculator({
+  initialShape = "round",
+  initialGrade = "Fe500",
+}: {
+  /** Shape tab preselected for the hosting page (URL params still win) */
+  initialShape?: Shape;
+  initialGrade?: string;
+}) {
+  const [shape, setShape] = useState<Shape>(initialShape);
+  const [grade, setGrade] = useState(initialGrade);
   const [dims, setDims] = useState({
     d: 12, side: 25, hex: 22, fw: 50, ft: 6, od: 48.3, wt: 3.2,
     sa: 40, st2: 3, rw: 60, rh: 40, rt: 3, aa: 50, at: 6,

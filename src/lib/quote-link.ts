@@ -149,7 +149,7 @@ export async function decodeQuotePayload(payload: string): Promise<VerifyPayload
         unitKg: num(r[3]),
         totalKg: num(r[4]),
         rate: num(r[5]),
-        rateBasis: (r[6] === "t" || r[6] === "pc" ? r[6] : "kg") as RateBasis,
+        rateBasis: (r[6] === "kg" || r[6] === "pc" ? r[6] : "t") as RateBasis,
       }));
     if (items.length === 0) return null;
     return {
