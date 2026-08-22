@@ -77,6 +77,33 @@ export default function QuoteVerify() {
     { pieces: 0, kg: 0 }
   );
 
+  // The buyer's payable picture, when the quote was shared with rates.
+  const cur = data.meta.currency;
+  const amt = (it: (typeof data.items)[number]) =>
+    it.rate > 0
+      ? it.rateBasis === "t"
+        ? (it.totalKg / 1000) * it.rate
+        : it.rateBasis === "pc"
+          ? it.pieces * it.rate
+          : it.totalKg * it.rate
+      : 0;
+  const goods = data.items.reduce((a, it) => a + amt(it), 0);
+  const priced = cur !== "" && goods > 0;
+  const landed = data.meta.basis !== "ex";
+  const pn = (s: string) => {
+    const n = parseFloat(String(s).replace(/[,\s]/g, ""));
+    return isFinite(n) && n >= 0 ? n : 0;
+  };
+  const charges = landed ? pn(data.meta.freight) + pn(data.meta.otherCharges) : 0;
+  const taxable = goods + charges;
+  const taxRate = Math.min(100, Math.max(0, pn(data.meta.taxRate)));
+  const tax = (taxable * taxRate) / 100;
+  const payable = taxable + tax;
+  const taxName = (data.meta.taxLabel || "TAX").toUpperCase();
+  const basisText = `${landed ? "LANDED" : "EX-WORKS"}${
+    data.meta.basisPlace ? ` ${data.meta.basisPlace.toUpperCase()}` : ""
+  }`;
+
   return (
     <div>
       <div className="border border-ink bg-[#FFFFFF]">
@@ -113,6 +140,8 @@ export default function QuoteVerify() {
                 <th className={`${TH} text-right`}>PCS</th>
                 <th className={`${TH} text-right`}>UNIT WT (KG)</th>
                 <th className={`${TH} text-right`}>TOTAL WT (KG)</th>
+                {priced && <th className={`${TH} text-right`}>RATE</th>}
+                {priced && <th className={`${TH} text-right`}>AMOUNT</th>}
               </tr>
             </thead>
             <tbody>
@@ -130,6 +159,18 @@ export default function QuoteVerify() {
                     {it.unitKg > 0 ? fmt(it.unitKg, 2) : "—"}
                   </td>
                   <td className={`${TD} text-right font-semibold`}>{fmt(it.totalKg, 1)}</td>
+                  {priced && (
+                    <td className={`${TD} text-right text-muted-2`}>
+                      {it.rate > 0
+                        ? `${cur}${fmt(it.rate, it.rate % 1 ? 2 : 0)}/${it.rateBasis === "t" ? "t" : it.rateBasis === "pc" ? "pc" : "kg"}`
+                        : "—"}
+                    </td>
+                  )}
+                  {priced && (
+                    <td className={`${TD} text-right font-semibold`}>
+                      {it.rate > 0 ? `${cur}${fmt(amt(it), 0)}` : "—"}
+                    </td>
+                  )}
                 </tr>
               ))}
             </tbody>
@@ -149,14 +190,63 @@ export default function QuoteVerify() {
                     {fmt(totals.kg / 1000, 3)} t
                   </div>
                 </td>
+                {priced && <td className="px-2 py-3 border-t-2 border-ink" />}
+                {priced && (
+                  <td className="px-2 py-3 border-t-2 border-ink text-right font-mono text-[13px] font-semibold">
+                    {cur}
+                    {fmt(goods, 0)}
+                  </td>
+                )}
               </tr>
             </tfoot>
           </table>
         </div>
 
+        {priced && (
+          <div className="px-6 py-4 border-t border-rule flex justify-end">
+            <div className="w-full max-w-[360px] font-mono text-[12.5px]">
+              <div className="flex justify-between py-1.5 border-b border-rule-faint">
+                <span className="text-muted-2">GOODS SUBTOTAL</span>
+                <span className="font-semibold">{cur}{fmt(goods, 0)}</span>
+              </div>
+              {landed ? (
+                charges > 0 && (
+                  <div className="flex justify-between py-1.5 border-b border-rule-faint">
+                    <span className="text-muted-2">FREIGHT &amp; CHARGES</span>
+                    <span className="font-semibold">{cur}{fmt(charges, 0)}</span>
+                  </div>
+                )
+              ) : (
+                <div className="flex justify-between py-1.5 border-b border-rule-faint">
+                  <span className="text-muted-2">FREIGHT &amp; DELIVERY</span>
+                  <span className="text-muted-3">EXTRA — BUYER’S SCOPE</span>
+                </div>
+              )}
+              <div className="flex justify-between py-1.5 border-b border-rule-faint">
+                <span className="text-muted-2">
+                  {taxName} @ {fmt(taxRate, taxRate % 1 ? 1 : 0)}%
+                </span>
+                <span className="font-semibold">{cur}{fmt(tax, 0)}</span>
+              </div>
+              <div className="flex justify-between items-baseline pt-2.5 mt-1 border-t-2 border-ink">
+                <span className="text-[11px] tracking-[0.08em] font-semibold">TOTAL PAYABLE</span>
+                <span className="text-[19px] font-semibold text-accent">
+                  {cur}{fmt(payable, 0)}
+                </span>
+              </div>
+              <div className="text-[9.5px] tracking-[0.06em] text-muted-3 mt-1.5 text-right">
+                PRICES {basisText} · {taxName} INCLUDED{landed ? "" : " · FREIGHT EXTRA"}
+              </div>
+            </div>
+          </div>
+        )}
+
         <div className="px-6 py-2.5 border-t border-ink font-mono text-[9.5px] tracking-[0.05em] text-muted-3">
-          WEIGHTS COMPUTED PER IS/ASTM/JIS/EN/GB STANDARD DENSITIES · RATES AND TERMS ARE
-          BETWEEN BUYER AND SELLER · VERIFY AGAINST WEIGHBRIDGE BEFORE DISPATCH
+          WEIGHTS COMPUTED PER IS/ASTM/JIS/EN/GB STANDARD DENSITIES ·{" "}
+          {priced
+            ? "AMOUNTS AS QUOTED BY THE SELLER — CONFIRM BEFORE ORDERING"
+            : "RATES AND TERMS ARE BETWEEN BUYER AND SELLER"}{" "}
+          · VERIFY AGAINST WEIGHBRIDGE BEFORE DISPATCH
         </div>
       </div>
 

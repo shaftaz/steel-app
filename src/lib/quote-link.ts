@@ -13,8 +13,20 @@ import type { QuoteItem, QuoteMeta, RateBasis } from "@/lib/quote";
 export interface VerifyPayload {
   meta: Pick<
     QuoteMeta,
-    "seller" | "sellerDetail" | "buyer" | "quoteNo" | "date" | "validity" | "terms"
-  >;
+    | "seller"
+    | "sellerDetail"
+    | "buyer"
+    | "quoteNo"
+    | "date"
+    | "validity"
+    | "terms"
+    | "basis"
+    | "basisPlace"
+    | "taxLabel"
+    | "taxRate"
+    | "freight"
+    | "otherCharges"
+  > & { currency: string };
   items: Pick<
     QuoteItem,
     "desc" | "detail" | "pieces" | "unitKg" | "totalKg" | "rate" | "rateBasis"
@@ -66,12 +78,29 @@ async function gunzip(bytes: Uint8Array): Promise<Uint8Array | null> {
 
 export async function encodeQuotePayload(
   meta: QuoteMeta,
-  items: QuoteItem[]
+  items: QuoteItem[],
+  currency: string
 ): Promise<string> {
-  // Compact wire shape: versioned, arrays for items.
+  // Compact wire shape: versioned, arrays for items. Fields 7+ are the
+  // pricing/tax extension — older decoders simply ignore them.
   const wire = {
     v: 1,
-    m: [meta.seller, meta.sellerDetail, meta.buyer, meta.quoteNo, meta.date, meta.validity, meta.terms],
+    m: [
+      meta.seller,
+      meta.sellerDetail,
+      meta.buyer,
+      meta.quoteNo,
+      meta.date,
+      meta.validity,
+      meta.terms,
+      meta.basis,
+      meta.basisPlace,
+      meta.taxLabel,
+      meta.taxRate,
+      meta.freight,
+      meta.otherCharges,
+      currency,
+    ],
     i: items.map((it) => [
       it.desc,
       it.detail || "",
@@ -107,7 +136,9 @@ export async function decodeQuotePayload(payload: string): Promise<VerifyPayload
     }
     const wire = JSON.parse(new TextDecoder().decode(bytes));
     if (!wire || wire.v !== 1 || !Array.isArray(wire.m) || !Array.isArray(wire.i)) return null;
-    const m = wire.m.map((x: unknown) => (typeof x === "string" ? x : ""));
+    const m: string[] = Array.from({ length: 14 }, (_, k) =>
+      typeof wire.m[k] === "string" ? (wire.m[k] as string) : ""
+    );
     const items = (wire.i as unknown[][])
       .filter((r) => Array.isArray(r) && typeof r[0] === "string")
       .slice(0, 60)
@@ -130,6 +161,13 @@ export async function decodeQuotePayload(payload: string): Promise<VerifyPayload
         date: m[4].slice(0, 20),
         validity: m[5].slice(0, 40),
         terms: m[6].slice(0, 1200),
+        basis: m[7] === "ex" ? "ex" : "landed",
+        basisPlace: m[8].slice(0, 60),
+        taxLabel: m[9].slice(0, 40),
+        taxRate: m[10].slice(0, 8),
+        freight: m[11].slice(0, 16),
+        otherCharges: m[12].slice(0, 16),
+        currency: m[13].slice(0, 6),
       },
       items,
     };
@@ -138,8 +176,12 @@ export async function decodeQuotePayload(payload: string): Promise<VerifyPayload
   }
 }
 
-export async function buildVerifyUrl(meta: QuoteMeta, items: QuoteItem[]): Promise<string> {
-  const payload = await encodeQuotePayload(meta, items);
+export async function buildVerifyUrl(
+  meta: QuoteMeta,
+  items: QuoteItem[],
+  currency: string
+): Promise<string> {
+  const payload = await encodeQuotePayload(meta, items, currency);
   const id = encodeURIComponent(meta.quoteNo || "quote");
   return `https://steelmath.com/q/${id}#d=${payload}`;
 }

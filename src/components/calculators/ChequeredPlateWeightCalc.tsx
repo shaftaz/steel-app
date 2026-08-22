@@ -12,6 +12,7 @@ import {
   fmt,
   num,
   useCurrency,
+  CurrencyOptions,
 } from "@/components/instrument";
 
 const COMMON_THICKNESSES = [3, 4, 5, 6, 8, 10, 12, 14, 16, 20, 25];
@@ -86,16 +87,7 @@ export default function ChequeredPlateWeightCalc() {
               placeholder="e.g. 62"
             />
             <SelectField label="CURRENCY" value={currency} onChange={setCurrency}>
-              <option value="₹">₹ INR</option>
-              <option value="€">€ EUR</option>
-              <option value="$">$ USD</option>
-              <option value="£">£ GBP</option>
-              <option value="S$">S$ SGD</option>
-              <option value="¥">¥ JPY</option>
-              <option value="CN¥">CN¥ CNY</option>
-              <option value="A$">A$ AUD</option>
-              <option value="C$">C$ CAD</option>
-              <option value="₫">₫ VND</option>
+              <CurrencyOptions />
             </SelectField>
           </div>
 

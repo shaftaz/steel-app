@@ -42,6 +42,89 @@ export interface QuoteMeta {
   validity: string;
   terms: string;
   notes: string;
+  /** ISO-ish country key from COUNTRY_PRESETS ("" = not chosen yet) */
+  country: string;
+  /** "landed" (delivered, charges included) | "ex" (ex-works, freight extra) */
+  basis: string;
+  /** Place the basis refers to, e.g. "Delhi" → "LANDED DELHI" / "EX-WORKS MUMBAI" */
+  basisPlace: string;
+  /** Tax name shown on the document, e.g. GST / VAT / SALES TAX */
+  taxLabel: string;
+  /** Tax percentage as a string, e.g. "18" */
+  taxRate: string;
+  /** Freight amount (quote currency) as a string */
+  freight: string;
+  /** Loading / other charges amount as a string */
+  otherCharges: string;
+}
+
+/* ============================================================
+   Country presets — currency, tax name and default rate, so a
+   country pick (or first-visit locale detection) prefills the
+   commercial fields. Rates are editable defaults, not advice.
+   ============================================================ */
+export interface CountryPreset {
+  key: string;
+  label: string;
+  currency: string;
+  taxLabel: string;
+  taxRate: string;
+  note?: string;
+}
+
+export const COUNTRY_PRESETS: CountryPreset[] = [
+  { key: "IN", label: "India", currency: "₹", taxLabel: "GST", taxRate: "18" },
+  { key: "AE", label: "UAE", currency: "AED", taxLabel: "VAT", taxRate: "5" },
+  { key: "SA", label: "Saudi Arabia", currency: "SAR", taxLabel: "VAT", taxRate: "15" },
+  { key: "SG", label: "Singapore", currency: "S$", taxLabel: "GST", taxRate: "9" },
+  { key: "GB", label: "United Kingdom", currency: "£", taxLabel: "VAT", taxRate: "20" },
+  { key: "EU", label: "EU (Eurozone)", currency: "€", taxLabel: "VAT", taxRate: "20", note: "varies by member state" },
+  { key: "US", label: "United States", currency: "$", taxLabel: "SALES TAX", taxRate: "0", note: "varies by state" },
+  { key: "JP", label: "Japan", currency: "¥", taxLabel: "CONSUMPTION TAX", taxRate: "10" },
+  { key: "CN", label: "China", currency: "CN¥", taxLabel: "VAT", taxRate: "13" },
+  { key: "KR", label: "South Korea", currency: "₩", taxLabel: "VAT", taxRate: "10" },
+  { key: "TR", label: "Türkiye", currency: "₺", taxLabel: "KDV (VAT)", taxRate: "20" },
+  { key: "VN", label: "Vietnam", currency: "₫", taxLabel: "VAT", taxRate: "10" },
+  { key: "ID", label: "Indonesia", currency: "Rp", taxLabel: "PPN (VAT)", taxRate: "11" },
+  { key: "MY", label: "Malaysia", currency: "RM", taxLabel: "SST", taxRate: "10" },
+  { key: "AU", label: "Australia", currency: "A$", taxLabel: "GST", taxRate: "10" },
+  { key: "CA", label: "Canada", currency: "C$", taxLabel: "GST/HST", taxRate: "5" },
+  { key: "OT", label: "Other", currency: "$", taxLabel: "TAX", taxRate: "0" },
+];
+
+export function countryPreset(key: string): CountryPreset | undefined {
+  return COUNTRY_PRESETS.find((c) => c.key === key);
+}
+
+const TZ_COUNTRY: [RegExp, string][] = [
+  [/^Asia\/(Kolkata|Calcutta|Colombo)/, "IN"],
+  [/^Asia\/Dubai/, "AE"],
+  [/^Asia\/(Riyadh|Qatar|Bahrain|Kuwait)/, "SA"],
+  [/^Asia\/Singapore/, "SG"],
+  [/^Asia\/Tokyo/, "JP"],
+  [/^Asia\/(Shanghai|Chongqing|Urumqi|Hong_Kong|Macau)/, "CN"],
+  [/^Asia\/Seoul/, "KR"],
+  [/^Europe\/Istanbul/, "TR"],
+  [/^Asia\/(Ho_Chi_Minh|Saigon|Hanoi)/, "VN"],
+  [/^Asia\/(Jakarta|Makassar|Jayapura)/, "ID"],
+  [/^Asia\/(Kuala_Lumpur|Kuching)/, "MY"],
+  [/^Europe\/(London|Belfast)/, "GB"],
+  [/^(America|US)\//, "US"],
+  [/^Australia\//, "AU"],
+  [/^Canada\//, "CA"],
+  [/^Europe\//, "EU"],
+];
+
+/** Best-effort country guess from the browser locale/timezone. Never throws. */
+export function detectCountry(): string {
+  try {
+    const region = (navigator.language || "").split("-")[1]?.toUpperCase();
+    if (region && COUNTRY_PRESETS.some((c) => c.key === region)) return region;
+    if (region === "DE" || region === "FR" || region === "IT" || region === "ES" || region === "NL") return "EU";
+    const tz = Intl.DateTimeFormat().resolvedOptions().timeZone || "";
+    for (const [re, key] of TZ_COUNTRY) if (re.test(tz)) return key;
+  } catch {}
+  return "IN";
 }
 
 const ITEMS_KEY = "sm_quote_items";
@@ -146,6 +229,52 @@ export function itemAmount(it: QuoteItem): number {
   return it.totalKg * it.rate;
 }
 
+function parseAmt(s: string): number {
+  const n = parseFloat(String(s).replace(/[,\s]/g, ""));
+  return isFinite(n) && n >= 0 ? n : 0;
+}
+
+export interface QuotePricing {
+  /** Σ priced line amounts */
+  goods: number;
+  /** freight + other charges (0 on ex-works basis) */
+  charges: number;
+  freight: number;
+  other: number;
+  taxable: number;
+  taxRate: number;
+  tax: number;
+  /** goods + charges + tax — the buyer's final payable */
+  payable: number;
+  landed: boolean;
+  /** true when at least one line item carries a rate */
+  priced: boolean;
+}
+
+/** The complete buyer-payable picture: goods → charges → tax → total. */
+export function computeQuotePricing(items: QuoteItem[], meta: QuoteMeta): QuotePricing {
+  const goods = items.reduce((a, it) => a + itemAmount(it), 0);
+  const landed = meta.basis !== "ex";
+  const freight = landed ? parseAmt(meta.freight) : 0;
+  const other = landed ? parseAmt(meta.otherCharges) : 0;
+  const charges = freight + other;
+  const taxable = goods + charges;
+  const taxRate = Math.min(100, Math.max(0, parseAmt(meta.taxRate)));
+  const tax = (taxable * taxRate) / 100;
+  return {
+    goods,
+    charges,
+    freight,
+    other,
+    taxable,
+    taxRate,
+    tax,
+    payable: taxable + tax,
+    landed,
+    priced: items.some((it) => it.rate > 0),
+  };
+}
+
 export function quoteTotals(items: QuoteItem[]) {
   return items.reduce(
     (acc, it) => {
@@ -179,6 +308,13 @@ export function loadQuoteMeta(): QuoteMeta {
     validity: "7 days",
     terms: DEFAULT_TERMS,
     notes: "",
+    country: "",
+    basis: "landed",
+    basisPlace: "",
+    taxLabel: "GST",
+    taxRate: "18",
+    freight: "",
+    otherCharges: "",
   };
   if (typeof window === "undefined") return base;
   try {

@@ -29,6 +29,38 @@ export function num(v: string) {
   return isFinite(n) && n >= 0 ? n : 0;
 }
 
+/** Major trade currencies. `sym` is what gets stored/prefixed to amounts. */
+export const CURRENCIES: { sym: string; code: string }[] = [
+  { sym: "₹", code: "INR" },
+  { sym: "$", code: "USD" },
+  { sym: "€", code: "EUR" },
+  { sym: "£", code: "GBP" },
+  { sym: "AED", code: "AED" },
+  { sym: "SAR", code: "SAR" },
+  { sym: "S$", code: "SGD" },
+  { sym: "¥", code: "JPY" },
+  { sym: "CN¥", code: "CNY" },
+  { sym: "₩", code: "KRW" },
+  { sym: "₺", code: "TRY" },
+  { sym: "₫", code: "VND" },
+  { sym: "RM", code: "MYR" },
+  { sym: "Rp", code: "IDR" },
+  { sym: "A$", code: "AUD" },
+  { sym: "C$", code: "CAD" },
+];
+
+export function CurrencyOptions() {
+  return (
+    <>
+      {CURRENCIES.map((c) => (
+        <option key={c.code} value={c.sym}>
+          {c.sym === c.code ? c.code : `${c.sym} ${c.code}`}
+        </option>
+      ))}
+    </>
+  );
+}
+
 export function useCurrency(): [string, (c: string) => void] {
   const [currency, setCurrency] = useState("₹");
   useEffect(() => {
