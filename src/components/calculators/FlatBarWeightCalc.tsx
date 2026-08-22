@@ -104,6 +104,7 @@ export default function FlatBarWeightCalc() {
         result={
           <ResultPanel
             context={`FLAT ${w}×${t} MM · ${match ? "STANDARD SIZE" : "CUSTOM SIZE"}`}
+            quote={{ desc: `MS flat bar ${w}×${t} mm × ${l} m`, pieces: q, unitKg: perPiece, totalKg: totalWeight }}
             headlineLabel="WEIGHT / METRE — KG/M"
             headlineValue={fmt(weightPerMetre, 2)}
             stats={[

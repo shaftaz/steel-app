@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState, useRef, useEffect, useCallback } from "react";
+import { useQuoteCount } from "@/lib/quote";
 
 const CALC_CATEGORIES = [
   {
@@ -83,6 +84,7 @@ const CMDK_TOOLS = [
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [calcOpen, setCalcOpen] = useState(false);
+  const quoteCount = useQuoteCount();
   const [cmdkOpen, setCmdkOpen] = useState(false);
   const [query, setQuery] = useState("");
   const dropdownRef = useRef<HTMLDivElement>(null);
@@ -182,6 +184,18 @@ export default function Header() {
         </nav>
 
         <div className="ml-auto flex items-center gap-3">
+          {/* Quote builder badge — appears once items exist */}
+          {quoteCount > 0 && (
+            <Link
+              href="/quote"
+              className="hidden sm:inline-flex items-center gap-1.5 border border-rule font-mono text-[11.5px] tracking-[0.04em] text-ink px-3 py-2 no-underline hover:border-ink transition-colors whitespace-nowrap"
+            >
+              QUOTE
+              <span className="bg-accent text-white font-semibold text-[10.5px] px-1.5 py-px leading-[1.4]">
+                {quoteCount}
+              </span>
+            </Link>
+          )}
           {/* ⌘K search */}
           <button
             onClick={openCmdk}
@@ -238,6 +252,10 @@ export default function Header() {
             <Link href="/calculator" onClick={() => setMobileOpen(false)}
               className="block px-3 py-2.5 text-sm text-muted hover:text-ink no-underline transition-colors">
               Weight Calculator
+            </Link>
+            <Link href="/quote" onClick={() => setMobileOpen(false)}
+              className="block px-3 py-2.5 text-sm text-muted hover:text-ink no-underline transition-colors">
+              Quote Builder{quoteCount > 0 ? ` (${quoteCount})` : ""}
             </Link>
             <Link href="/articles" onClick={() => setMobileOpen(false)}
               className="block px-3 py-2.5 text-sm text-muted hover:text-ink no-underline transition-colors">

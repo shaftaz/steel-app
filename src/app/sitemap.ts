@@ -35,6 +35,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.95,
     },
     {
+      url: `${BASE_URL}/quote`,
+      lastModified: new Date("2026-08-12"),
+      changeFrequency: "monthly",
+      priority: 0.85,
+    },
+    {
       url: `${BASE_URL}/about`,
       lastModified: CBAM_VERIFIED,
       changeFrequency: "monthly",

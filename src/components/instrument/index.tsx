@@ -1,6 +1,9 @@
 "use client";
 
 import { ReactNode, useEffect, useState } from "react";
+import Link from "next/link";
+import { shareResultCard, ShareCardStat } from "@/lib/share-card";
+import { addQuoteItem, useQuoteCount } from "@/lib/quote";
 
 /* ============================================================
    Precision Instrument primitives — shared by every calculator.
@@ -203,6 +206,27 @@ export interface Stat {
   positive?: boolean;
 }
 
+/** Seed for the quote builder — provided by weight-producing calculators. */
+export interface QuoteSeed {
+  /** Line description, e.g. "12mm Fe500 TMT × 12 m" */
+  desc: string;
+  detail?: string;
+  pieces?: number;
+  unitKg?: number;
+  totalKg: number;
+}
+
+function pageTool(): string {
+  try {
+    // The title tag is authored per page and cleaner than a composed <h1>.
+    const t = document.title.split("|")[0].trim();
+    if (t) return t;
+    return document.querySelector("h1")?.textContent?.trim() || "SteelMath Calculator";
+  } catch {
+    return "SteelMath Calculator";
+  }
+}
+
 export function ResultPanel({
   kicker = "RESULT — RECALCULATES AS YOU TYPE",
   context,
@@ -213,6 +237,7 @@ export function ResultPanel({
   formulaLine,
   copyText,
   shareUrl,
+  quote,
 }: {
   kicker?: string;
   context?: string;
@@ -223,9 +248,71 @@ export function ResultPanel({
   formulaLine?: string;
   copyText: string;
   shareUrl?: string;
+  quote?: QuoteSeed;
 }) {
   const [copied, setCopied] = useState(false);
   const [shared, setShared] = useState(false);
+  const [cardState, setCardState] = useState<"idle" | "busy" | "shared" | "saved" | "link">("idle");
+  const [addedFlash, setAddedFlash] = useState(false);
+  const quoteCount = useQuoteCount();
+
+  const doShareCard = async () => {
+    if (cardState === "busy") return;
+    setCardState("busy");
+    track("share_card", { page: typeof window !== "undefined" ? window.location.pathname : "" });
+    const url = shareUrl ?? (typeof window !== "undefined" ? window.location.href : "");
+    const title = pageTool();
+    try {
+      const outcome = await shareResultCard(
+        {
+          title,
+          context,
+          headlineLabel,
+          headlineValue,
+          subline,
+          // Placeholder stats ("— enter rate") don't belong on a shared card.
+          stats: (stats as ShareCardStat[] | undefined)?.filter(
+            (s) => !/enter rate|^—$/.test(s.value.trim())
+          ),
+          formulaLine,
+          url,
+          accent:
+            typeof window !== "undefined" && window.location.pathname.startsWith("/cbam")
+              ? "#8FA3E8"
+              : undefined,
+        },
+        `steelmath-${title.slice(0, 40)}`
+      );
+      setCardState(outcome === "shared" ? "shared" : outcome === "downloaded" ? "saved" : "idle");
+    } catch {
+      // Never break the page: fall back to copying the share link.
+      try {
+        await navigator.clipboard?.writeText(url);
+        setCardState("link");
+      } catch {
+        setCardState("idle");
+      }
+    }
+    setTimeout(() => setCardState("idle"), 2200);
+  };
+
+  const doAddToQuote = () => {
+    if (!quote) return;
+    const item = addQuoteItem({
+      tool: pageTool(),
+      path: typeof window !== "undefined" ? window.location.pathname : "/calculators",
+      desc: quote.desc,
+      detail: quote.detail,
+      pieces: quote.pieces ?? 1,
+      unitKg: quote.unitKg ?? 0,
+      totalKg: quote.totalKg,
+    });
+    if (item) {
+      track("quote_add_item", { page: typeof window !== "undefined" ? window.location.pathname : "" });
+      setAddedFlash(true);
+      setTimeout(() => setAddedFlash(false), 2200);
+    }
+  };
 
   useEffect(() => {
     try {
@@ -295,12 +382,26 @@ export function ResultPanel({
           {formulaLine}
         </div>
       )}
-      <div className="mt-auto grid grid-cols-3 border-t border-ink-border no-print">
+      <div className="mt-auto grid grid-cols-2 sm:grid-cols-4 border-t border-ink-border no-print">
         <button
           onClick={() => doCopy(copyText, setCopied, "copy_result")}
-          className="bg-transparent border-r border-ink-border text-paper font-mono text-[11px] tracking-[0.06em] py-3 px-1.5 cursor-pointer hover:bg-panel-dark"
+          className="bg-transparent border-r border-b sm:border-b-0 border-ink-border text-paper font-mono text-[10.5px] tracking-[0.05em] py-3 px-1 cursor-pointer hover:bg-panel-dark"
         >
           {copied ? "COPIED ✓" : "COPY RESULT"}
+        </button>
+        <button
+          onClick={doShareCard}
+          className="bg-transparent border-b sm:border-b-0 sm:border-r border-ink-border text-paper font-mono text-[10.5px] tracking-[0.05em] py-3 px-1 cursor-pointer hover:bg-panel-dark"
+        >
+          {cardState === "busy"
+            ? "RENDERING…"
+            : cardState === "shared"
+              ? "SHARED ✓"
+              : cardState === "saved"
+                ? "PNG SAVED ✓"
+                : cardState === "link"
+                  ? "LINK COPIED ✓"
+                  : "SHARE CARD"}
         </button>
         <button
           onClick={() =>
@@ -310,17 +411,33 @@ export function ResultPanel({
               "share_link"
             )
           }
-          className="bg-transparent border-r border-ink-border text-paper font-mono text-[11px] tracking-[0.06em] py-3 px-1.5 cursor-pointer hover:bg-panel-dark"
+          className="bg-transparent border-r border-ink-border text-paper font-mono text-[10.5px] tracking-[0.05em] py-3 px-1 cursor-pointer hover:bg-panel-dark"
         >
           {shared ? "LINK COPIED ✓" : "SHARE LINK"}
         </button>
         <button
           onClick={() => { track("download_pdf"); window.print(); }}
-          className="bg-transparent text-paper font-mono text-[11px] tracking-[0.06em] py-3 px-1.5 cursor-pointer hover:bg-panel-dark"
+          className="bg-transparent text-paper font-mono text-[10.5px] tracking-[0.05em] py-3 px-1 cursor-pointer hover:bg-panel-dark"
         >
           DOWNLOAD PDF
         </button>
       </div>
+      {quote && (
+        <div className="grid grid-cols-2 border-t border-ink-border no-print">
+          <button
+            onClick={doAddToQuote}
+            className="bg-transparent border-r border-ink-border text-accent font-mono text-[11px] tracking-[0.06em] font-semibold py-3 px-1.5 cursor-pointer hover:bg-panel-dark"
+          >
+            {addedFlash ? "ADDED TO QUOTE ✓" : "+ ADD TO QUOTE"}
+          </button>
+          <Link
+            href="/quote"
+            className="flex items-center justify-center text-paper font-mono text-[11px] tracking-[0.06em] py-3 px-1.5 no-underline hover:bg-panel-dark"
+          >
+            {quoteCount > 0 ? `VIEW QUOTE (${quoteCount}) →` : "QUOTE BUILDER →"}
+          </Link>
+        </div>
+      )}
     </div>
   );
 }

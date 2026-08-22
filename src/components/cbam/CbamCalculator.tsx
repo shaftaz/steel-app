@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { shareResultCard } from "@/lib/share-card";
 
 /* ============================================================
    CBAM cost model, constants and formulas ported verbatim from
@@ -207,6 +208,7 @@ export default function CbamCalculator() {
   const [copied, setCopied] = useState(false);
   const [copiedBd, setCopiedBd] = useState(false);
   const [shared, setShared] = useState(false);
+  const [cardState, setCardState] = useState<"idle" | "busy" | "shared" | "saved">("idle");
 
   const interacted = useState(() => ({ fired: false }))[0];
   useEffect(() => {
@@ -719,6 +721,61 @@ export default function CbamCalculator() {
                 DOWNLOAD PDF
               </button>
             </div>
+            <button
+              onClick={async () => {
+                if (cardState === "busy") return;
+                setCardState("busy");
+                trackEv("share_card");
+                try {
+                  const outcome = await shareResultCard(
+                    {
+                      title: "CBAM Cost Calculator",
+                      context: `${isEu ? "EU CBAM" : "UK CBAM"} · ${year}${zero ? " · EXEMPT / NOT IN SCOPE" : ""}`,
+                      headlineLabel: view === "importer" ? "YOUR NET COST" : "YOUR BUYER'S NET COST",
+                      headlineValue: zero ? sym + "0" : money(net, sym),
+                      subline: zero
+                        ? domestic
+                          ? "Domestic-origin goods — no charge"
+                          : "Under the 50 t de minimis"
+                        : `≈ ${sym}${fmt(perT, 1)} per tonne · gross − deduction = net`,
+                      stats: [
+                        { label: "GROSS LEVY", value: zero ? sym + "0" : money(r.gross, sym) },
+                        {
+                          label: isEu ? "DEDUCTION — CARBON PAID" : "CARBON PRICE RELIEF",
+                          value: `−${zero ? sym + "0" : money(r.deduction, sym)}`,
+                          positive: true,
+                        },
+                        {
+                          label: isEu ? `CERTIFICATES (${year})` : "RATE APPLIED",
+                          value: isEu ? (zero ? "0" : fmt(r.certs)) : `£${fmt(r.p, 0)}/tCO₂e`,
+                        },
+                        {
+                          label: isDefault ? "IF VERIFIED ACTUALS" : "SAVING VS DEFAULTS",
+                          value: zero ? "—" : `−${money(saving, sym)}`,
+                          positive: true,
+                        },
+                      ],
+                      url: shareUrl,
+                      accent: "#8FA3E8",
+                    },
+                    `steelmath-cbam-${year}`
+                  );
+                  setCardState(outcome === "shared" ? "shared" : outcome === "downloaded" ? "saved" : "idle");
+                } catch {
+                  setCardState("idle");
+                }
+                setTimeout(() => setCardState("idle"), 2200);
+              }}
+              className="w-full bg-transparent border-t border-ink-border text-cbam-bright font-mono text-[11px] tracking-[0.06em] font-semibold py-3 px-1.5 cursor-pointer hover:bg-panel-dark no-print"
+            >
+              {cardState === "busy"
+                ? "RENDERING…"
+                : cardState === "shared"
+                  ? "SHARED ✓"
+                  : cardState === "saved"
+                    ? "PNG SAVED ✓"
+                    : "SHARE RESULT CARD (WHATSAPP-READY PNG)"}
+            </button>
           </div>
         </div>
 

@@ -264,6 +264,16 @@ export default function MetalWeightCalc() {
       result={
         <ResultPanel
           context={`${shapeLabel.toUpperCase()} · ${material.name.toUpperCase()}`}
+          quote={
+            result
+              ? {
+                  desc: `${material.name} ${shapeLabel.toLowerCase()} × ${L} m`,
+                  pieces,
+                  unitKg: result.weight,
+                  totalKg: total,
+                }
+              : undefined
+          }
           headlineLabel={`PER PIECE · ${L} M — KG`}
           headlineValue={result ? fmt(result.weight, 3) : "—"}
           subline={

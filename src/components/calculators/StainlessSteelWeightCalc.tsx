@@ -185,6 +185,12 @@ export default function StainlessSteelWeightCalc() {
       result={
         <ResultPanel
           context={`${g.label} · ${sectionLabel}`}
+          quote={{
+            desc: isPlate ? `${g.label} ${sectionLabel}` : `${g.label} ${sectionLabel} × ${l} m`,
+            pieces: q,
+            unitKg: perPiece,
+            totalKg: totalWeight,
+          }}
           headlineLabel={isPlate ? "WEIGHT / PIECE — KG" : "WEIGHT / METRE — KG/M"}
           headlineValue={fmt(weightPerUnit, 3)}
           stats={[

@@ -140,6 +140,7 @@ export default function RectTubeWeightCalc() {
       result={
         <ResultPanel
           context={name}
+          quote={{ desc: `${name} × ${l} m`, pieces: q, unitKg: perPiece, totalKg: totalWeight }}
           headlineLabel="WEIGHT / METRE — KG/M"
           headlineValue={fmt(weightPerMetre, 2)}
           stats={[

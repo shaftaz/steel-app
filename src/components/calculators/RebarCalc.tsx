@@ -95,6 +95,13 @@ export default function RebarCalc() {
       result={
         <ResultPanel
           context={`${size.diameter} MM TMT · ${size.kgPerMetre} KG/M`}
+          quote={{
+            desc: `${size.diameter}mm TMT rebar × ${fmt(bl, 1)} m`,
+            detail: `${size.kgPerMetre} kg/m`,
+            pieces: barsNeeded,
+            unitKg: size.kgPerMetre * bl,
+            totalKg: totalWeight,
+          }}
           headlineLabel="TOTAL WEIGHT — KG"
           headlineValue={fmt(totalWeight, 2)}
           subline={`${size.diameter}mm TMT · ${fmt(tl, 1)} m total length`}

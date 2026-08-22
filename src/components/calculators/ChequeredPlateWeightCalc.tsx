@@ -120,6 +120,7 @@ export default function ChequeredPlateWeightCalc() {
       result={
         <ResultPanel
           context={name}
+          quote={{ desc: name, pieces: q, unitKg: weightPerPiece, totalKg: totalWeight }}
           headlineLabel="WEIGHT / M² — KG/M²"
           headlineValue={fmt(weightPerSqm, 2)}
           stats={[

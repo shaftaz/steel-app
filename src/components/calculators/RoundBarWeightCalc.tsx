@@ -111,6 +111,7 @@ export default function RoundBarWeightCalc() {
         result={
           <ResultPanel
             context={`ROUND ${d} MM · ${mat.label}`}
+            quote={{ desc: `${mat.label} round bar ${d} mm × ${l} m`, pieces: q, unitKg: perPiece, totalKg: totalWeight }}
             headlineLabel="WEIGHT / METRE — KG/M"
             headlineValue={fmt(weightPerMetre, 3)}
             stats={[

@@ -277,6 +277,14 @@ export default function Calculator() {
         result={
           <ResultPanel
             context={`${shapeName} · ${grade}`}
+            quote={{
+              desc: isPlate
+                ? `${shapeName} (${grade}) — ${s.pl}×${s.pw} m sheet`
+                : `${shapeName} (${grade}) × ${s.len} m`,
+              pieces,
+              unitKg: perPiece,
+              totalKg: total,
+            }}
             headlineLabel={isPlate ? "WEIGHT / M² — KG/M²" : "WEIGHT / METRE — KG/M"}
             headlineValue={fmt(kgm, 3)}
             stats={[

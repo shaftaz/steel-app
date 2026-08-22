@@ -94,6 +94,7 @@ export default function BeamWeightCalc() {
         result={
           <ResultPanel
             context={selected}
+            quote={{ desc: `${selected} × ${l} m`, pieces: q, unitKg: weightPerMetre * l, totalKg: totalWeight }}
             headlineLabel="WEIGHT / METRE — KG/M"
             headlineValue={weightPerMetre.toFixed(1)}
             stats={[

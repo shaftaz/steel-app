@@ -400,4 +400,36 @@ input[type="number"] {
   .print-block {
     border: 1px solid #17181A;
   }
+  /* Quote builder — print as a clean A4 sheet */
+  .quote-sheet {
+    border: 1px solid #17181A !important;
+  }
+  .quote-sheet input,
+  .quote-sheet select,
+  .quote-sheet textarea {
+    border-color: transparent !important;
+    -webkit-appearance: none;
+    appearance: none;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .quote-sheet input[type="number"] {
+    text-align: right;
+  }
+  .quote-sheet .no-print-border {
+    border-color: transparent !important;
+  }
+  .quote-sheet a {
+    text-decoration: none !important;
+    color: inherit !important;
+  }
+  .quote-sheet ::placeholder {
+    color: transparent;
+  }
+  .quote-sheet {
+    break-inside: auto;
+  }
+  .quote-sheet tr {
+    break-inside: avoid;
+  }
 }
