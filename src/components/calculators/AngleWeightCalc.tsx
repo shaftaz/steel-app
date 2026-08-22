@@ -14,6 +14,7 @@ import {
   num,
   useCurrency,
   CurrencyOptions,
+  useUrlState,
 } from "@/components/instrument";
 
 const COMMON_SIZES = [
@@ -29,6 +30,14 @@ export default function AngleWeightCalc() {
   const [thickness, setThickness] = useState("5");
   const [length, setLength] = useState("6");
   const [quantity, setQuantity] = useState("1");
+
+  useUrlState((p) => {
+    if (p.get("a") && num(p.get("a")!) > 0) setLegA(p.get("a")!);
+    if (p.get("b") && num(p.get("b")!) > 0) setLegB(p.get("b")!);
+    if (p.get("t") && num(p.get("t")!) > 0) setThickness(p.get("t")!);
+    if (p.get("l") && num(p.get("l")!) > 0) setLength(p.get("l")!);
+    if (p.get("q") && num(p.get("q")!) > 0) setQuantity(p.get("q")!);
+  });
   const [rate, setRate] = useState("");
   const [currency, setCurrency] = useCurrency();
 
@@ -54,7 +63,7 @@ export default function AngleWeightCalc() {
   const perTonne = perPiece > 0 ? 1000 / perPiece : 0;
 
   const name = `ANGLE ${a}×${b}×${t}`;
-  const shareUrl = "https://steelmath.com/calculators/angle-weight";
+  const shareUrl = `https://steelmath.com/calculators/angle-weight?a=${legA}&b=${legB}&t=${thickness}&l=${length}&q=${quantity}`;
   const copyText = `${name} — ${fmt(weightPerMetre, 2)} kg/m · ${q} pcs = ${fmt(
     totalWeight,
     2

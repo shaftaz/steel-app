@@ -13,6 +13,7 @@ import {
   num,
   useCurrency,
   CurrencyOptions,
+  useUrlState,
 } from "@/components/instrument";
 
 const COMMON_THICKNESSES = [3, 4, 5, 6, 8, 10, 12, 14, 16, 20, 25];
@@ -24,6 +25,13 @@ export default function ChequeredPlateWeightCalc() {
   const [quantity, setQuantity] = useState("1");
   const [rate, setRate] = useState("");
   const [currency, setCurrency] = useCurrency();
+
+  useUrlState((p) => {
+    if (p.get("t") && num(p.get("t")!) > 0) setThickness(p.get("t")!);
+    if (p.get("l") && num(p.get("l")!) > 0) setLength(p.get("l")!);
+    if (p.get("w") && num(p.get("w")!) > 0) setWidth(p.get("w")!);
+    if (p.get("q") && num(p.get("q")!) > 0) setQuantity(p.get("q")!);
+  });
 
   const t = parseFloat(thickness) || 0;
   const l = parseFloat(length) || 0;
@@ -38,7 +46,7 @@ export default function ChequeredPlateWeightCalc() {
   const cost = totalWeight * r;
 
   const name = `CHQ PLATE ${t} MM`;
-  const shareUrl = "https://steelmath.com/calculators/chequered-plate-weight";
+  const shareUrl = `https://steelmath.com/calculators/chequered-plate-weight?t=${thickness}&l=${length}&w=${width}&q=${quantity}`;
   const copyText = `${name} — ${fmt(weightPerSqm, 2)} kg/m² · ${q} pcs = ${fmt(
     totalWeight,
     2

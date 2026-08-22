@@ -61,6 +61,24 @@ export function CurrencyOptions() {
   );
 }
 
+/**
+ * Restore calculator state from shareable URL query params, once on mount.
+ * The callback only fires when params are present, so page defaults stand.
+ */
+export function useUrlState(apply: (p: URLSearchParams) => void) {
+  useEffect(() => {
+    try {
+      const p = new URLSearchParams(window.location.search);
+      let has = false;
+      p.forEach(() => {
+        has = true;
+      });
+      if (has) apply(p);
+    } catch {}
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+}
+
 export function useCurrency(): [string, (c: string) => void] {
   const [currency, setCurrency] = useState("₹");
   useEffect(() => {

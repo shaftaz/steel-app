@@ -163,7 +163,7 @@ for (const p of pipes) {
       href: `/weights/${pipeSlug(r.nbSize)}`,
       active: r.nbSize === p.nbSize,
     })),
-    calcHref: "/calculators/pipe-weight",
+    calcHref: `/calculators/pipe-weight?nb=${p.nbSize}&l=6`,
     calcLabel: "Open the MS pipe calculator →",
     related: [
       { label: "MS Pipe Weight Calculator", href: "/calculators/pipe-weight" },
@@ -222,7 +222,7 @@ for (const bm of ismbBeams) {
       href: `/weights/${ismbSlug(r.designation)}`,
       active: r.designation === bm.designation,
     })),
-    calcHref: "/calculators/beam-weight",
+    calcHref: `/calculators/beam-weight?sec=${encodeURIComponent(bm.designation)}&l=6`,
     calcLabel: "Open the I-beam calculator →",
     related: [
       { label: "I-Beam (ISMB) Calculator", href: "/calculators/beam-weight" },
@@ -278,7 +278,7 @@ for (const ch of ismcChannels) {
       href: `/weights/${ismcSlug(r.designation)}`,
       active: r.designation === ch.designation,
     })),
-    calcHref: "/calculators/channel-weight",
+    calcHref: `/calculators/channel-weight?sec=${encodeURIComponent(ch.designation)}&l=6`,
     calcLabel: "Open the channel calculator →",
     related: [
       { label: "Channel (ISMC) Calculator", href: "/calculators/channel-weight" },
@@ -335,7 +335,7 @@ for (const an of equalAngles) {
       href: `/weights/${angleSlug(r.legA, r.legB, r.thickness)}`,
       active: r.legA === an.legA && r.legB === an.legB && r.thickness === an.thickness,
     })),
-    calcHref: "/calculators/angle-weight",
+    calcHref: `/calculators/angle-weight?a=${an.legA}&b=${an.legB}&t=${an.thickness}&l=6`,
     calcLabel: "Open the angle calculator →",
     related: [
       { label: "Steel Angle Calculator", href: "/calculators/angle-weight" },

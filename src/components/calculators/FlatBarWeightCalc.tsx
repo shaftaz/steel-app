@@ -12,6 +12,7 @@ import {
   num,
   useCurrency,
   CurrencyOptions,
+  useUrlState,
 } from "@/components/instrument";
 
 const COMMON_SIZES = [
@@ -34,6 +35,13 @@ export default function FlatBarWeightCalc() {
   const [quantity, setQuantity] = useState("1");
   const [rate, setRate] = useState("");
   const [currency, setCurrency] = useCurrency();
+
+  useUrlState((p) => {
+    if (p.get("w") && num(p.get("w")!) > 0) setWidth(p.get("w")!);
+    if (p.get("t") && num(p.get("t")!) > 0) setThickness(p.get("t")!);
+    if (p.get("l") && num(p.get("l")!) > 0) setLength(p.get("l")!);
+    if (p.get("q") && num(p.get("q")!) > 0) setQuantity(p.get("q")!);
+  });
 
   const w = parseFloat(width) || 0;
   const t = parseFloat(thickness) || 0;
@@ -120,7 +128,7 @@ export default function FlatBarWeightCalc() {
             ]}
             formulaLine={formulaLine}
             copyText={copyText}
-            shareUrl="https://steelmath.com/calculators/flat-bar-weight"
+            shareUrl={`https://steelmath.com/calculators/flat-bar-weight?w=${width}&t=${thickness}&l=${length}&q=${quantity}`}
           />
         }
       />

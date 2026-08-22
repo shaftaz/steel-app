@@ -14,6 +14,7 @@ import {
   num,
   useCurrency,
   CurrencyOptions,
+  useUrlState,
 } from "@/components/instrument";
 
 const COMMON_SIZES = [
@@ -31,6 +32,14 @@ export default function RectTubeWeightCalc() {
   const [quantity, setQuantity] = useState("1");
   const [rate, setRate] = useState("");
   const [currency, setCurrency] = useCurrency();
+
+  useUrlState((p) => {
+    if (p.get("w") && num(p.get("w")!) > 0) setWidth(p.get("w")!);
+    if (p.get("h") && num(p.get("h")!) > 0) setHeight(p.get("h")!);
+    if (p.get("wt") && num(p.get("wt")!) > 0) setWt(p.get("wt")!);
+    if (p.get("l") && num(p.get("l")!) > 0) setLength(p.get("l")!);
+    if (p.get("q") && num(p.get("q")!) > 0) setQuantity(p.get("q")!);
+  });
 
   const w = parseFloat(width) || 0;
   const h = parseFloat(height) || 0;
@@ -53,7 +62,7 @@ export default function RectTubeWeightCalc() {
   const perTonne = perPiece > 0 ? 1000 / perPiece : 0;
 
   const name = `RHS ${w}×${h}×${t}`;
-  const shareUrl = "https://steelmath.com/calculators/rect-tube-weight";
+  const shareUrl = `https://steelmath.com/calculators/rect-tube-weight?w=${width}&h=${height}&wt=${wt}&l=${length}&q=${quantity}`;
   const copyText = `${name} — ${fmt(weightPerMetre, 2)} kg/m · ${q} pcs = ${fmt(
     totalWeight,
     2

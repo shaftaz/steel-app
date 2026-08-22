@@ -12,6 +12,7 @@ import {
   num,
   useCurrency,
   CurrencyOptions,
+  useUrlState,
 } from "@/components/instrument";
 
 export default function RebarCalc() {
@@ -20,6 +21,14 @@ export default function RebarCalc() {
   const [totalLengthNeeded, setTotalLengthNeeded] = useState("100");
   const [rate, setRate] = useState("");
   const [currency, setCurrency] = useCurrency();
+
+  useUrlState((p) => {
+    const d = parseInt(p.get("d") || "");
+    const idx = REBAR_SIZES.findIndex((s) => s.diameter === d);
+    if (idx >= 0) setSizeIdx(idx);
+    if (p.get("bl") && num(p.get("bl")!) > 0) setBarLength(p.get("bl")!);
+    if (p.get("tl") && num(p.get("tl")!) > 0) setTotalLengthNeeded(p.get("tl")!);
+  });
 
   const size = REBAR_SIZES[sizeIdx];
   const bl = parseFloat(barLength) || 12;
@@ -109,7 +118,7 @@ export default function RebarCalc() {
           ]}
           formulaLine={formulaLine}
           copyText={copyText}
-          shareUrl="https://steelmath.com/calculators/rebar"
+          shareUrl={`https://steelmath.com/calculators/rebar?d=${size.diameter}&bl=${barLength}&tl=${totalLengthNeeded}`}
         />
       }
     />

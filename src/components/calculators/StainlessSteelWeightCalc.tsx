@@ -13,6 +13,7 @@ import {
   num,
   useCurrency,
   CurrencyOptions,
+  useUrlState,
 } from "@/components/instrument";
 
 const SS_GRADES = [
@@ -44,6 +45,18 @@ export default function StainlessSteelWeightCalc() {
   const [quantity, setQuantity] = useState("1");
   const [rate, setRate] = useState("");
   const [currency, setCurrency] = useCurrency();
+
+  useUrlState((p) => {
+    const gr = p.get("g");
+    if (gr && SS_GRADES.some((x) => x.id === gr)) setGrade(gr);
+    const sec = p.get("sec");
+    if (sec) setSection(sec);
+    if (p.get("d1")) setDim1(p.get("d1")!);
+    if (p.get("d2")) setDim2(p.get("d2")!);
+    if (p.get("d3")) setDim3(p.get("d3")!);
+    if (p.get("l") && num(p.get("l")!) > 0) setLength(p.get("l")!);
+    if (p.get("q") && num(p.get("q")!) > 0) setQuantity(p.get("q")!);
+  });
 
   const g = SS_GRADES.find((gr) => gr.id === grade) || SS_GRADES[0];
   const d1 = parseFloat(dim1) || 0;
@@ -210,7 +223,7 @@ export default function StainlessSteelWeightCalc() {
               : undefined
           }
           copyText={copyText}
-          shareUrl="https://steelmath.com/calculators/stainless-steel-weight"
+          shareUrl={`https://steelmath.com/calculators/stainless-steel-weight?g=${grade}&sec=${section}&d1=${dim1}${dim2 ? `&d2=${dim2}` : ""}${dim3 ? `&d3=${dim3}` : ""}&l=${length}&q=${quantity}`}
         />
       }
     />

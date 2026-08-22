@@ -12,6 +12,7 @@ import {
   num,
   useCurrency,
   CurrencyOptions,
+  useUrlState,
 } from "@/components/instrument";
 
 const MATERIALS = [
@@ -34,6 +35,14 @@ export default function RoundBarWeightCalc() {
   const [quantity, setQuantity] = useState("1");
   const [rate, setRate] = useState("");
   const [currency, setCurrency] = useCurrency();
+
+  useUrlState((p) => {
+    if (p.get("d") && num(p.get("d")!) > 0) setDiameter(p.get("d")!);
+    const m = p.get("mat");
+    if (m && MATERIALS.some((x) => x.id === m)) setMaterial(m);
+    if (p.get("l") && num(p.get("l")!) > 0) setLength(p.get("l")!);
+    if (p.get("q") && num(p.get("q")!) > 0) setQuantity(p.get("q")!);
+  });
 
   const d = parseFloat(diameter) || 0;
   const l = parseFloat(length) || 0;
@@ -127,7 +136,7 @@ export default function RoundBarWeightCalc() {
             ]}
             formulaLine={formulaLine}
             copyText={copyText}
-            shareUrl="https://steelmath.com/calculators/round-bar-weight"
+            shareUrl={`https://steelmath.com/calculators/round-bar-weight?d=${diameter}&mat=${material}&l=${length}&q=${quantity}`}
           />
         }
       />

@@ -14,6 +14,7 @@ import {
   useCurrency,
   LABEL_CLS,
   CurrencyOptions,
+  useUrlState,
 } from "@/components/instrument";
 
 export default function ChannelWeightCalc() {
@@ -22,6 +23,13 @@ export default function ChannelWeightCalc() {
   const [quantity, setQuantity] = useState("1");
   const [rate, setRate] = useState(62);
   const [currency, setCurrency] = useCurrency();
+
+  useUrlState((p) => {
+    const sec = p.get("sec");
+    if (sec && ismcChannels.some((c) => c.designation === sec)) setSelected(sec);
+    if (p.get("l") && num(p.get("l")!) > 0) setLength(p.get("l")!);
+    if (p.get("q") && num(p.get("q")!) > 0) setQuantity(p.get("q")!);
+  });
 
   const channel = ismcChannels.find((c) => c.designation === selected);
   const weightPerMetre = channel?.weightPerMetre || 0;
@@ -110,7 +118,7 @@ export default function ChannelWeightCalc() {
             ]}
             formulaLine={formulaText}
             copyText={copyText}
-            shareUrl="https://steelmath.com/calculators/channel-weight"
+            shareUrl={`https://steelmath.com/calculators/channel-weight?sec=${encodeURIComponent(selected)}&l=${length}&q=${quantity}`}
           />
         }
       />

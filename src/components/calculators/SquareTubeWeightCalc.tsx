@@ -14,6 +14,7 @@ import {
   num,
   useCurrency,
   CurrencyOptions,
+  useUrlState,
 } from "@/components/instrument";
 
 const COMMON_SIZES = [
@@ -30,6 +31,13 @@ export default function SquareTubeWeightCalc() {
   const [quantity, setQuantity] = useState("1");
   const [rate, setRate] = useState("");
   const [currency, setCurrency] = useCurrency();
+
+  useUrlState((p) => {
+    if (p.get("a") && num(p.get("a")!) > 0) setSide(p.get("a")!);
+    if (p.get("wt") && num(p.get("wt")!) > 0) setWt(p.get("wt")!);
+    if (p.get("l") && num(p.get("l")!) > 0) setLength(p.get("l")!);
+    if (p.get("q") && num(p.get("q")!) > 0) setQuantity(p.get("q")!);
+  });
 
   const s = parseFloat(side) || 0;
   const t = parseFloat(wt) || 0;
@@ -51,7 +59,7 @@ export default function SquareTubeWeightCalc() {
   const perTonne = perPiece > 0 ? 1000 / perPiece : 0;
 
   const name = `SHS ${s}×${s}×${t}`;
-  const shareUrl = "https://steelmath.com/calculators/square-tube-weight";
+  const shareUrl = `https://steelmath.com/calculators/square-tube-weight?a=${side}&wt=${wt}&l=${length}&q=${quantity}`;
   const copyText = `${name} — ${fmt(weightPerMetre, 2)} kg/m · ${q} pcs = ${fmt(
     totalWeight,
     2

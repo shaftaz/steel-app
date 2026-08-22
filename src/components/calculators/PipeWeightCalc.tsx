@@ -15,6 +15,7 @@ import {
   num,
   useCurrency,
   CurrencyOptions,
+  useUrlState,
 } from "@/components/instrument";
 
 export default function PipeWeightCalc() {
@@ -26,6 +27,22 @@ export default function PipeWeightCalc() {
   const [useCustom, setUseCustom] = useState(false);
   const [rate, setRate] = useState("");
   const [currency, setCurrency] = useCurrency();
+
+  useUrlState((p) => {
+    const nb = parseInt(p.get("nb") || "");
+    if (pipes.some((x) => x.nbSize === nb)) {
+      setSelectedNB(nb);
+      setUseCustom(false);
+    }
+    const od = p.get("od"), wt = p.get("wt");
+    if (od && wt && num(od) > 0 && num(wt) > 0) {
+      setCustomOD(od);
+      setCustomWT(wt);
+      setUseCustom(true);
+    }
+    if (p.get("l") && num(p.get("l")!) > 0) setLength(p.get("l")!);
+    if (p.get("q") && num(p.get("q")!) > 0) setQuantity(p.get("q")!);
+  });
 
   const selectedPipe = pipes.find((p) => p.nbSize === selectedNB);
 
@@ -55,7 +72,9 @@ export default function PipeWeightCalc() {
   const name = useCustom
     ? `PIPE ${customOD || 0} × ${customWT || 0}`
     : `PIPE ${selectedNB} NB`;
-  const shareUrl = "https://steelmath.com/calculators/pipe-weight";
+  const shareUrl = `https://steelmath.com/calculators/pipe-weight?${
+    useCustom ? `od=${customOD}&wt=${customWT}` : `nb=${selectedNB}`
+  }&l=${length}&q=${quantity}`;
   const copyText = `${name} — ${fmt(weightPerMetre, 2)} kg/m · ${q} pcs = ${fmt(
     totalWeight,
     2
