@@ -7924,6 +7924,74 @@ ${steelCapitalFlowsFigure("full")}
 <p>Mostly, but not entirely. The US and Gulf projects use DRI-EAF routes, but India’s growth market still favours blast furnaces: POSCO–JSW’s 6 Mt Odisha mill is BF-based, reflecting abundant ore, limited scrap, and the need for bankable scale.</p>
 `,
   },
+  {
+    slug: "posco-three-answers-steel-strategy",
+    title:
+      "Hydrogen in Korea, an EAF in America, a Blast Furnace in India: Why POSCO’s Three Answers Are One Strategy",
+    category: "ANALYSIS",
+    categoryColor: "blue",
+    date: "2026-10-26",
+    readTime: "6 min",
+    excerpt:
+      "POSCO is building a hydrogen pilot, a US EAF and an Indian blast furnace at once. Contradiction? No: it’s a portfolio. The Earn–Defend–Invent logic, explained.",
+    metaTitle: "POSCO’s Steel Strategy: Hydrogen, US EAF, India BF",
+    metaDescription:
+      "POSCO is building a hydrogen pilot, a US EAF and an Indian blast furnace at once. Contradiction? No: it’s a portfolio. The Earn–Defend–Invent logic, explained.",
+    relatedCalculators: ["steel-plate", "scrap-yield"],
+    content: `
+<p><strong>Executive summary:</strong> POSCO is simultaneously advancing a hydrogen-reduction demonstration plant in Korea, a $5.8 billion DRI-EAF mill in Louisiana with Hyundai Steel, and a 6 Mt blast-furnace-based integrated mill in Odisha with JSW Steel. Read in isolation, the three look inconsistent: one future-facing, one transitional, one conventional. Read together, they form a coherent portfolio we call <strong>Earn–Defend–Invent</strong>: the Indian blast furnace earns in a high-growth market, the US electric arc furnace defends access behind the world’s highest tariff wall, and the Korean hydrogen programme invents the low-carbon route the company will need at home. POSCO has said as much itself: profits from global markets are meant to help fund decarbonisation in Korea. It is the clearest corporate expression yet of how steel’s transition is actually being financed.</p>
+
+<p>Strategy is often judged by consistency. POSCO’s current capital programme looks, at first glance, like three companies with three theories of the future. That reading misses the design.</p>
+
+<h2>Answer one: Earn, with a blast furnace in India</h2>
+
+<p>In August 2025, POSCO and JSW Steel signed a 50:50 joint venture agreement to build an integrated, blast-furnace-based mill in Odisha with 6 Mt of annual crude steel capacity, covering ironmaking through hot rolling and cold rolling/galvanising for premium products. The project is targeted for completion in 2031 after a 48-month build, and POSCO frames it as a representative case of its <a href="https://newsroom.posco.com/en/posco-to-build-integrated-steel-mill-in-india-via-joint-venture-securing-a-strategic-bold-move-for-future-competitiveness/" target="_blank" rel="noopener">“Complete Localization Strategy” for India</a>.</p>
+
+<p>Why a blast furnace in 2026? Because in India the BF is still the bankable route to scale: abundant domestic ore near the site, limited scrap for EAFs, and <a href="/articles/indian-steel-industry-challenges">demand growing fast enough to absorb premium flat products</a>. This is the earning engine, and the companies say they are reviewing renewable power for part of the plant in line with India’s Green Steel Taxonomy, an acknowledgement that the carbon question has been parked, not dismissed.</p>
+
+<h2>Answer two: Defend, with an electric arc furnace in America</h2>
+
+<p>The Louisiana project, a $5.8 billion, 2.7 Mt DRI-EAF mill led by Hyundai Steel with POSCO as partner, which <a href="https://www.steelradar.com/en/hyundai-steel-and-posco-break-ground-on-usd-58-billion-steel-plant-in-louisiana/" target="_blank" rel="noopener">broke ground in September 2026</a>, is not primarily a growth bet. It is a market-access defence. Korean steel faces a widening set of US trade measures, including <a href="/articles/south-korea-steel-squeeze-china-imports">countervailing duties on plate</a>, while <a href="/articles/us-steel-prices-multi-year-highs-two-price-world">US prices sit at multi-year highs behind a 50% tariff wall</a>. Producing inside the wall converts a tariff from a tax on exports into protection for local output, and supplying automotive customers locally removes the most exposed link in the chain. The DRI-EAF route fits the US context: competitive natural gas, a scrap ecosystem, and customers increasingly specifying lower-carbon steel.</p>
+
+<h2>Answer three: Invent, with hydrogen in Korea</h2>
+
+<p>At home, POSCO is advancing HyREX, its hydrogen-reduction ironmaking technology, through a demonstration plant. This is the long-dated option: Korea lacks the cheap gas of the Gulf and the protected premium of the US, and its export customers, Europe above all, are moving toward <a href="/articles/cbam-playbook-steel-exporters">carbon border pricing</a>. Hydrogen-based ironmaking is the route that could keep Korean integrated steelmaking competitive in a carbon-priced world. It is also the most capital-intensive and least proven of the three, which is exactly why it needs to be funded by the other two.</p>
+
+<h2>The logic that ties them together</h2>
+
+<p>POSCO’s CEO has described the India investment as a bridgehead for a “Virtuous Cycle Growth Model,” in which profits earned in global markets fund decarbonisation investment in Korea. That sentence turns three seemingly unrelated projects into one system:</p>
+
+<ul>
+<li><strong>Earn</strong> where demand grows and conventional routes are still bankable (India).</li>
+<li><strong>Defend</strong> where market access is at risk and protection creates premium pricing (US).</li>
+<li><strong>Invent</strong> where the long-term carbon problem is hardest and most strategic (Korea).</li>
+</ul>
+
+<p>Each piece answers a different constraint, and the portfolio as a whole hedges the uncertainty no single bet can: nobody knows how fast hydrogen becomes economic, how long US protection lasts, or how quickly India tightens carbon rules. A company that commits to only one answer is betting the firm on one forecast. This is <a href="/articles/japan-korea-steel-overseas-expansion-green-hydrogen">the same doctrine we saw Japan’s and Korea’s majors adopting under trade pressure</a>, and it explains <a href="/articles/global-steel-investment-capital-map-2026">the wider capital map</a> in which cross-border steel money flows toward protection, growth, and cheap energy, and away from Europe.</p>
+
+<h2>The honest limits</h2>
+
+<p>The strongest objection is carbon lock-in. A blast furnace completed in 2031 will be expected to run for decades, and India’s green-steel framework, global carbon pricing, and buyers’ procurement standards will all tighten during that life: the same <a href="/articles/asean-steel-cbam-carbon-lock-in">25–30-year lock-in risk documented for ASEAN’s BF wave</a>. Whether the Odisha plant earns enough, for long enough, to fund Korea’s transition before its own carbon costs rise is the open bet inside the strategy. Execution risk is also real: two greenfield megaprojects and a first-of-kind technology demonstration, running concurrently, stretch capital and management attention. And reported project totals differ by source (POSCO–JSW has been cited at both about $7.3 billion and about $7.7 billion), so cost figures should be treated as approximate.</p>
+
+<h2>What other steelmakers should take from it</h2>
+
+<p>The broader lesson is not “copy POSCO’s geography.” It is that the transition demands a portfolio, not a pivot. Every serious steelmaker will need something that earns today, something that defends market access as walls rise, and something that invents the route it will need once carbon is priced at home and at the border. Firms that pour everything into decarbonising a home asset without an earning engine elsewhere will find the financing harder; firms that only earn, without an invention programme, will find their markets closing. Mapping which producers are building which leg, and what that implies for future supply and pricing, is part of the market intelligence SteelMath tracks. POSCO’s three answers look contradictory only if you expect one. The industry’s real question is who can afford all three.</p>
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>What is POSCO’s India project?</h3>
+<p>A 50:50 joint venture with JSW Steel to build a 6 Mt-per-year, blast-furnace-based integrated steel mill in Odisha, producing premium flat products, targeted for completion in 2031 as part of POSCO’s “Complete Localization Strategy” for India.</p>
+
+<h3>Why is POSCO building a blast furnace if it is decarbonising?</h3>
+<p>Because in India the blast furnace remains the bankable route to scale, given abundant ore, scarce scrap, and fast-growing demand. POSCO describes the profits from global markets as a source of funding for decarbonisation investment in Korea: its “Virtuous Cycle Growth Model.”</p>
+
+<h3>What is the Hyundai Steel–POSCO Louisiana plant?</h3>
+<p>A $5.8 billion, 2.7 Mt DRI-EAF steel mill in Louisiana that broke ground in September 2026, designed to supply the US market (including automotive customers) from inside the US tariff wall.</p>
+
+<h3>What is POSCO’s hydrogen steelmaking technology?</h3>
+<p>HyREX, a hydrogen-reduction ironmaking process POSCO is developing through a demonstration plant in Korea, aimed at producing low-carbon iron for integrated steelmaking as carbon pricing tightens.</p>
+`,
+  },
 ];
 
 /** Articles sorted by date, most recent first */
