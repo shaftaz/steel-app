@@ -1,3 +1,5 @@
+import { steelCapitalFlowsFigure } from "@/lib/charts/steel-capital-flows";
+
 export type Category = "CRISIS" | "ANALYSIS" | "GUIDE";
 
 export interface Article {
@@ -7832,6 +7834,94 @@ At k = 0.95: D/t = 40.0, very thin, buckling is the primary failure mode.</p>
 
 <h3>How should steel buyers plan in a fragmented market?</h3>
 <p>Regionally: use regional benchmarks rather than a single world price, model wall premiums as persistent input costs in protected markets, watch finished-goods arbitrage (steel-content crossing walls that steel cannot), and track the policy calendar as closely as the price chart.</p>
+`,
+  },
+  {
+    slug: "global-steel-investment-capital-map-2026",
+    title:
+      "Follow the Money: Steel’s New Capital Map Has Three Magnets — and Europe Has None of Them",
+    category: "ANALYSIS",
+    categoryColor: "blue",
+    date: "2026-10-26",
+    readTime: "7 min",
+    excerpt:
+      "$42bn of announced cross-border steel capital is flowing to the US, India and the Gulf, none to Europe. The three magnets drawing it, and what they signal.",
+    metaTitle: "Where Steel Investment Is Going in 2026 — Not to Europe",
+    metaDescription:
+      "$42bn of announced cross-border steel capital is flowing to the US, India and the Gulf, none to Europe. The three magnets drawing it, and what they signal.",
+    relatedCalculators: ["steel-plate", "metal-weight"],
+    content: `
+<p><strong>Executive summary:</strong> Tally the largest cross-border steel commitments announced across 2025–2026 and a single pattern dominates: roughly $42 billion of foreign capital is flowing into the United States (about three-quarters of it), India, and the Middle East and North Africa, and none of the headline cross-border money is going to Europe. Nippon Steel’s $14.9 billion acquisition of US Steel and its roughly $11 billion follow-on investment pledge, Hyundai Steel and POSCO’s $5.8 billion Louisiana DRI-EAF mill, POSCO and JSW’s 6 Mt Odisha project, Baowu’s Ras Al Khair joint venture with Aramco and PIF, and Tosyali’s Algerian programme all point to the same three magnets: <strong>protection, growth, and cheap energy</strong>. Europe, with the world’s most demanding carbon policy, offers investors none of the three. The lesson for anyone allocating, financing, or buying steel: carbon policy shapes how plants are built, but it is not what decides where the money goes.</p>
+
+<p>Steel’s strategic debates usually start with technology: hydrogen versus gas DRI, blast furnace relines versus electric arc furnaces. The more revealing question is simpler: when steelmakers spend money outside their home markets, where do they send it? The answer, assembled from company announcements and trade press, is unusually clear.</p>
+
+<h2>The map, in numbers</h2>
+
+${steelCapitalFlowsFigure("full")}
+
+<table>
+<caption style="caption-side:top;text-align:left;font-weight:600;font-size:13px;padding-bottom:6px">Data table: selected announced cross-border steel investments, 2025–2026 (US$ billion; foreign partner’s share for joint ventures)</caption>
+<thead>
+<tr><th>Investor (origin)</th><th>Project</th><th>Destination</th><th>Type</th><th style="text-align:right">US$ bn</th></tr>
+</thead>
+<tbody>
+<tr><td>Nippon Steel (Japan)</td><td>Acquisition of US Steel</td><td>United States</td><td>Acquisition of existing assets</td><td style="text-align:right">14.9</td></tr>
+<tr><td>Nippon Steel (Japan)</td><td>New investment in US Steel by 2028</td><td>United States</td><td>New capacity / upgrades</td><td style="text-align:right">~11.0</td></tr>
+<tr><td>Nippon Steel (Japan)</td><td>AMNS India expansion (40% share of ~$6.0–6.6bn FY26–28 capex)</td><td>India</td><td>New capacity</td><td style="text-align:right">~2.5</td></tr>
+<tr><td>Hyundai Steel–POSCO (Korea)</td><td>Louisiana DRI-EAF mill, 2.7 Mt</td><td>United States</td><td>Greenfield</td><td style="text-align:right">5.8</td></tr>
+<tr><td>POSCO (Korea)</td><td>Odisha integrated mill with JSW, 6 Mt (50% share)</td><td>India</td><td>Greenfield</td><td style="text-align:right">~3.6</td></tr>
+<tr><td>Baowu (China)</td><td>Ras Al Khair DRI-EAF plate mill (50% share of ~$4bn)</td><td>Saudi Arabia (MENA)</td><td>Greenfield</td><td style="text-align:right">~2.0</td></tr>
+<tr><td>Tosyali (Türkiye)</td><td>Algeria investment programme</td><td>Algeria (MENA)</td><td>New capacity</td><td style="text-align:right">2.5</td></tr>
+<tr><td><strong>Total</strong></td><td></td><td></td><td></td><td style="text-align:right"><strong>~42.3</strong></td></tr>
+<tr><td><em>Of which: Europe</em></td><td></td><td></td><td></td><td style="text-align:right"><em><strong>0</strong></em></td></tr>
+</tbody>
+</table>
+
+<p>By origin, Japan accounts for about $28.4 billion, Korea $9.4 billion, Türkiye $2.5 billion and China $2.0 billion. By destination, the United States absorbs roughly $31.7 billion, India $6.2 billion, and MENA $4.5 billion. Europe: zero. Two structural observations matter more than the totals. First, only about a third of the money ($14.9 billion) buys existing assets; the majority is new capacity: investors are building, not just buying. Second, the new capacity is overwhelmingly lower-carbon by route: the Louisiana and Ras Al Khair projects are DRI-EAF, and Nippon Steel’s US programme centres on modernising and extending its American footprint. The notable exception, POSCO–JSW in Odisha, is a blast furnace, and that exception is <a href="/articles/posco-three-answers-steel-strategy">the most instructive data point on the map</a>.</p>
+
+<h2>Magnet one: protection</h2>
+
+<p>The United States draws three-quarters of the tally for a reason that has little to do with geology and everything to do with policy. Behind 50% Section 232 tariffs, US hot-rolled prices have traded at multi-year highs, <a href="/articles/us-steel-prices-multi-year-highs-two-price-world">at times more than double world export levels</a>. For a foreign steelmaker, a tariff wall is a cost when you export over it and a moat when you produce behind it. Nippon Steel’s acquisition, completed in June 2025, and the Hyundai–POSCO Louisiana mill, which <a href="https://www.steelradar.com/en/hyundai-steel-and-posco-break-ground-on-usd-58-billion-steel-plant-in-louisiana/" target="_blank" rel="noopener">broke ground in September 2026</a>, are the same decision made two ways: buy inside the wall, or build inside it. We described this as <a href="/articles/japan-korea-steel-overseas-expansion-green-hydrogen">the geographic escape from a fragmenting trade system</a>; the capital map confirms it is now the dominant allocation logic, not a footnote.</p>
+
+<h2>Magnet two: growth</h2>
+
+<p>India draws capital because it has the one thing mature markets lack: demand growth measured in tens of millions of tonnes. With <a href="/articles/indian-steel-industry-challenges">national targets of 230 Mt of finished steel output by 2030</a>, India rewards capacity that is local, scaled, and close to iron ore. Nippon Steel is co-funding AMNS India’s push toward roughly 25 Mt by 2030; POSCO’s 6 Mt Odisha mill with JSW, targeted for completion in 2031, sits next to the ore. Growth markets also tolerate a different technology answer: in a market adding capacity at this pace, with limited scrap and abundant ore, the blast furnace remains the bankable route, a choice with long carbon consequences that investors are pricing knowingly rather than ignoring.</p>
+
+<h2>Magnet three: cheap energy</h2>
+
+<p>The Gulf and North Africa draw capital because the economics of DRI begin with the price of gas and, eventually, hydrogen. Ras Al Khair, a joint venture of China Baowu (50%), Aramco (25%) and PIF (25%) with an estimated total cost of around $4 billion and capacity of up to 1.5 Mt of <a href="/calculators/steel-plate">heavy plate</a>, uses a natural-gas DRI furnace feeding an EAF, <a href="https://www.iea.org/reports/chinas-official-energy-finance-in-emerging-and-developing-economies/case-3-saudi-arabia-s-first-green-full-process-heavy-plate-mill-project" target="_blank" rel="noopener">designed to be hydrogen-ready</a>. Tosyali’s Algerian programme rests on the same foundation: low-cost gas, local ore, and a position close to both Mediterranean and African demand. In a decarbonising industry, cheap clean molecules are becoming what cheap coal and ore once were: the reason a plant is built in one place rather than another.</p>
+
+<h2>Why Europe draws none of it</h2>
+
+<p>Europe’s steel capital is real, but it looks entirely different: incumbents converting their own assets from blast furnaces to EAF and DRI routes, typically with the state alongside as co-funder. The cross-border money that would signal external confidence is absent, and the region scores poorly on all three magnets. Protection exists (quotas and CBAM) but it is defensive, aimed at limiting import damage rather than creating a premium price. Demand growth is flat. Energy is structurally expensive relative to the US and Gulf. Add the cost of carbon, and Europe asks investors to fund the most expensive version of the transition in the market with the least upside.</p>
+
+<p>The two cases that test this most directly both point the same way. In the UK, when Jingye planned to close British Steel’s last two blast furnaces, the government took operational control in April 2025 and moved to full nationalisation in July 2026. In Italy, the former Ilva, the one large European integrated asset genuinely for sale, has struggled for over a year to find a buyer able to close, with one bidder saying it <a href="/articles/europe-steel-state-ownership-bankability-gap">approached thirty banks and none would lend</a>. When the market’s answer to Europe’s largest steel assets is the state or nobody, the absence of foreign capital is not a mystery.</p>
+
+<h2>The real thesis: carbon is financed from elsewhere</h2>
+
+<p>The most important sentence in this whole capital map belongs to POSCO. Describing its Odisha project, the company said profits from global markets are intended to help fund decarbonisation investment back in Korea, what it calls a “<a href="https://newsroom.posco.com/en/posco-to-build-integrated-steel-mill-in-india-via-joint-venture-securing-a-strategic-bold-move-for-future-competitiveness/" target="_blank" rel="noopener">Virtuous Cycle Growth Model</a>.” That is the pattern in miniature. Capital goes where it can earn (behind walls, into growth, near cheap energy) and the returns finance the transition at home. Decarbonisation is not attracting capital on its own merits; it is being cross-subsidised by investments made for other reasons. The financing world is beginning to recognise <a href="/articles/financing-steel-decarbonisation-value-chain">this value-chain reality</a>.</p>
+
+<h2>The honest limits</h2>
+
+<p>This map is a selection, not a census: it covers large, announced cross-border commitments, and announced capital is not spent capital; financing, permitting, and politics will move some of these numbers. It excludes domestic investment, which in Europe is substantial (and increasingly publicly co-funded), so “zero” describes foreign appetite, not total European spending. Currency conversions and joint-venture shares introduce rounding, and some reported totals differ across sources: POSCO–JSW, for example, has been reported at both about $7.3 billion and about $7.7 billion overall. The direction of the pattern is robust; the precise totals are approximate.</p>
+
+<h2>What it means for steel buyers, sellers, and investors</h2>
+
+<p>Three implications follow. For buyers: capacity is migrating toward protected and growing markets, so supply-origin maps in the US, India and the Gulf will look materially different by 2030, and European buyers will increasingly source from <a href="/articles/eu-steel-quota-cost-turkey-india-retaliation">regions whose capacity was financed by someone else’s strategy</a>. For producers outside the three magnets: competing for capital now means manufacturing one of them: protected offtake, contracted growth, or contracted cheap energy. For investors: carbon exposure matters, but it is priced as a cost to manage, not a reason to invest; projects win on the magnets, then decarbonise within them. Tracking where new capacity lands, and what it will cost to bring its steel across carbon borders, is exactly the kind of forward market intelligence SteelMath is built to provide, and the <a href="/cbam/calculator">CBAM calculator</a> prices the carbon leg for any origin in minutes. Steel’s money has already voted on the next decade’s map. Europe was not on the ballot.</p>
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>Where is global steel investment going in 2026?</h3>
+<p>Large announced cross-border steel commitments across 2025–2026 total roughly $42 billion in the examples tracked here, flowing mainly to the United States (about $31.7bn), India (about $6.2bn) and the Middle East and North Africa (about $4.5bn). None of the headline cross-border capital is going to Europe.</p>
+
+<h3>Why is foreign capital investing in US steel?</h3>
+<p>Protection: behind 50% Section 232 tariffs, US steel prices trade far above world levels, turning the tariff wall into a moat for producers inside it. Nippon Steel’s $14.9bn acquisition of US Steel plus about $11bn of committed investment, and Hyundai Steel–POSCO’s $5.8bn Louisiana DRI-EAF mill, are the leading examples.</p>
+
+<h3>Why isn’t Europe attracting cross-border steel investment?</h3>
+<p>Europe offers investors little of what draws steel capital elsewhere: its protection is defensive rather than price-creating, demand growth is flat, and energy is expensive. Its steel capital is largely incumbents converting their own assets with state co-funding, and its largest assets (British Steel and the former Ilva) have ended up with the state or without a financeable buyer.</p>
+
+<h3>Is new steel capacity low-carbon?</h3>
+<p>Mostly, but not entirely. The US and Gulf projects use DRI-EAF routes, but India’s growth market still favours blast furnaces: POSCO–JSW’s 6 Mt Odisha mill is BF-based, reflecting abundant ore, limited scrap, and the need for bankable scale.</p>
 `,
   },
 ];
