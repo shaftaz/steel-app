@@ -289,6 +289,15 @@ input[type="number"] {
 .prose-glass table {
   font-size: 13px;
 }
+/* Phones: wide tables scroll inside the column instead of being clipped
+   by the article card (its overflow is hidden). */
+@media (max-width: 640px) {
+  .prose-glass table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
 .prose-glass thead th {
   font-family: var(--font-plex-mono), monospace;
   font-size: 10.5px;

@@ -134,7 +134,7 @@ function buildSvg(): { svg: string; height: number } {
   ].join(" ");
 
   const svg =
-    `<svg viewBox="0 0 ${W} ${height}" width="100%" role="img" aria-labelledby="scf-title scf-desc" style="display:block;height:auto;max-width:100%">` +
+    `<svg viewBox="0 0 ${W} ${height}" width="100%" role="img" aria-labelledby="scf-title scf-desc" style="display:block;height:auto;min-width:520px">` +
     `<title id="scf-title">Steel capital flows 2025–2026: about US$${total.toFixed(1)} billion of cross-border steel investment flows from Japan, Korea, Türkiye and China to the United States, India and MENA, and none to Europe</title>` +
     `<desc id="scf-desc">${desc}</desc>` +
     `<defs><pattern id="scf-hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="#C9C7C0"/><line x1="0" y1="0" x2="0" y2="6" stroke="${INK}" stroke-width="2" stroke-opacity="0.55"/></pattern></defs>` +
@@ -159,7 +159,10 @@ export function steelCapitalFlowsFigure(variant: "full" | "compact" = "full"): s
       : "Where cross-border steel capital went, 2025–2026 (US$ billion)";
   return (
     `<figure style="margin:2rem 0;${maxW}border:1px solid ${INK};background:#FFFFFF;padding:20px 18px 14px">` +
-    svg +
+    `<style>.scf-hint{display:none}@media (max-width:600px){.scf-hint{display:block}}</style>` +
+    `<div class="scf-hint" style="${LABEL_MONO};font-size:10.5px;letter-spacing:1px;color:${ORANGE};margin-bottom:8px">SWIPE TO SEE DESTINATIONS →</div>` +
+    // Labels stay legible on phones: below ~520px the chart scrolls inside its frame.
+    `<div style="overflow-x:auto;-webkit-overflow-scrolling:touch" tabindex="0" aria-label="Steel capital flows chart (scrolls horizontally on small screens)">${svg}</div>` +
     `<figcaption style="margin-top:14px;padding-top:10px;border-top:1px solid #D8D6D0;font-size:12.5px;line-height:1.55;color:${MUTED}">` +
     `<strong style="color:${INK}">${heading}.</strong> <em>${CAVEAT}</em>` +
     (variant === "compact"
