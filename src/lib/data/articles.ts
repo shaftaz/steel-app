@@ -7992,6 +7992,77 @@ ${steelCapitalFlowsFigure("full")}
 <p>HyREX, a hydrogen-reduction ironmaking process POSCO is developing through a demonstration plant in Korea, aimed at producing low-carbon iron for integrated steelmaking as carbon pricing tightens.</p>
 `,
   },
+  {
+    slug: "europe-steel-state-ownership-bankability-gap",
+    title: "The State or Nobody: Europe’s Steel Problem Is Bankability, Not Technology",
+    category: "ANALYSIS",
+    categoryColor: "blue",
+    date: "2026-10-26",
+    readTime: "6 min",
+    excerpt:
+      "Britain nationalised British Steel; ex-Ilva’s bidder found 30 banks unwilling to lend. Why Europe’s largest steel assets have become unbankable, and the fixes.",
+    metaTitle: "Europe’s Steel Bankability Gap: British Steel and Ilva",
+    metaDescription:
+      "Britain nationalised British Steel; ex-Ilva’s bidder found 30 banks unwilling to lend. Why Europe’s largest steel assets have become unbankable, and the fixes.",
+    relatedCalculators: ["steel-plate", "scrap-production-cost"],
+    content: `
+<p><strong>Executive summary:</strong> In July 2026, the UK moved to nationalise British Steel after more than a year of state operational control prompted by Jingye’s plan to close Scunthorpe’s last two blast furnaces. In Italy, the former Ilva has spent more than a year searching for a buyer able to close; one bidder said it approached thirty banks and none would lend. Meanwhile, the largest cross-border steel investments of 2025–2026 (roughly $42 billion in the examples we track) went to the US, India and the Gulf, and none of them to Europe. Europe does not have a technology gap in steel decarbonisation. It has a <strong>bankability gap</strong>: projects that are technically ready but commercially unfinanceable without the state. Closing it requires changing the business case (energy cost, demand certainty, and carbon-price durability), not just funding the furnaces.</p>
+
+<p>Europe set out to lead the world in clean steel. On current evidence it is leading the world in something else: steel assets the private market will not own on its own terms.</p>
+
+<h2>Case one: Scunthorpe, from operational control to state ownership</h2>
+
+<p>In April 2025, the UK government took operational control of British Steel’s Scunthorpe works to stop Jingye Group from shutting down the last two blast furnaces, a closure that would have ended the UK’s ability to make primary steel. In July 2026, following passage of the Steel Act, the government <a href="https://gmk.center/en/news/the-uk-government-has-nationalised-british-steel/" target="_blank" rel="noopener">announced the company’s transfer to state ownership</a>. The economics explain the politics: Jingye said the business was losing £700,000 a day, while the National Audit Office put the cost to the public purse of keeping Scunthorpe running at around £1.3 million a day. Around 2,700 people work at the site. Jingye is seeking compensation, and China’s government publicly objected. The strategic point is blunt: when a private owner concluded the assets could not be made to pay, the only buyer of last resort was the state.</p>
+
+<h2>Case two: Taranto, a sale nobody can finance</h2>
+
+<p>The former Ilva in Taranto, now Acciaierie d’Italia, is the one large integrated European steel asset genuinely on the market. The process has dragged for over a year. By April 2026, one bidder, Flacks Group, said it had spoken with 30 banks and none would lend, citing the November court seizure of the Taranto site and the wider legal history around Ilva; it <a href="https://eurometal.net/flacks-seeks-vendor-loan-jindals-bid-stalls-adi/" target="_blank" rel="noopener">sought a vendor loan from the state</a> to cover the first six months after an award. A competing bid from Jindal reportedly stalled. Both bidders’ plans pointed toward electric arc furnaces: Flacks proposed three EAFs, a 100 MW solar plant and a possible DRI unit as blast furnaces are phased out. The technology pathway was never the obstacle. The finance was.</p>
+
+<h2>The bankability gap, defined</h2>
+
+<p>Put the two cases beside <a href="/articles/global-steel-investment-capital-map-2026">the global capital map</a> and the pattern sharpens. Cross-border steel capital is following three magnets: protection that creates premium prices (the US), demand growth (India), and cheap energy (the Gulf).</p>
+
+${steelCapitalFlowsFigure("compact")}
+
+<p>Europe offers investors weak versions of all three, plus three distinctive risks:</p>
+
+<ul>
+<li><strong>Energy risk:</strong> DRI-EAF routes convert the steel business into an electricity and gas business, and European power remains structurally expensive compared with the US and the Gulf.</li>
+<li><strong>Demand risk:</strong> European steel demand is flat, and low-carbon steel’s green premium has no reliable buyer at scale; <a href="/articles/financing-steel-decarbonisation-value-chain">demand, not technology, is the binding constraint on green steel</a>.</li>
+<li><strong>Policy-durability risk:</strong> a carbon-advantaged plant is only valuable if carbon pricing, CBAM and trade defence stay strong for the life of the asset. Lenders price the possibility that they won’t.</li>
+</ul>
+
+<p>A project can be technically excellent and still fail all three tests. That is what “bankability gap” means: the gap between what is buildable and what is financeable.</p>
+
+<h2>Why the state keeps stepping in</h2>
+
+<p>The pattern across Europe is incumbents converting their own assets with the state alongside: grants, state-aid-approved subsidies, guarantees, and, in the UK’s case, ownership itself. This is rational policy when steel is treated as strategic infrastructure for construction, rail and defence. But it has a cost the capital map makes visible: a state-led transition substitutes public balance sheets for private conviction, and it does not by itself create the conditions that would attract outside investors. Each rescue keeps capacity alive; none of them changes the three risks.</p>
+
+<h2>The honest limits</h2>
+
+<p>“Zero cross-border capital” describes the headline foreign commitments in our sample, not total European investment, which is substantial: incumbents and governments are spending heavily on EAF and DRI conversions. Both the UK and Italian cases carry site-specific histories (legal seizures, owner disputes, environmental litigation in Taranto) that make them harder than a typical European asset. And policy is moving: CBAM’s definitive phase and tightened EU import quotas are designed precisely to protect the value of low-carbon European production. Whether those tools prove durable enough to change lenders’ minds is the open question.</p>
+
+<h2>What would close the gap</h2>
+
+<p>Three levers matter more than additional grants. <strong>Contracted demand:</strong> public procurement and long-term offtake for low-carbon steel would give lenders the revenue certainty they currently lack. <strong>Contracted energy:</strong> long-dated, competitively priced power and hydrogen supply, the input that decides DRI-EAF economics. <strong>Durable carbon value:</strong> carbon contracts for difference and a credible, long-lived CBAM so that a plant’s carbon advantage is bankable rather than hoped for: the mechanism whose <a href="/articles/cbam-playbook-steel-exporters">exporter-side mechanics we have mapped</a>, and whose cost per tonne for any import origin can be modelled with the <a href="/cbam/calculator">SteelMath CBAM calculator</a>. Meanwhile, Europe’s trade defences are already <a href="/articles/eu-steel-quota-cost-turkey-india-retaliation">redirecting suppliers’ volumes and redrawing who serves its market</a>.</p>
+
+<p>For buyers, the practical implication is that Europe’s domestic supply base will be shaped as much by state decisions as by market ones for the rest of the decade, making policy signals as important to watch as prices, which is why SteelMath tracks both. Europe can build clean steel. The question it has not yet answered is who, other than the state, will pay for it.</p>
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>Why was British Steel nationalised?</h3>
+<p>After Jingye planned to close Scunthorpe’s last two blast furnaces (which would have ended UK primary steelmaking), the government took operational control in April 2025 and moved to state ownership in July 2026 under the Steel Act. The National Audit Office estimated the cost of keeping Scunthorpe running at around £1.3 million a day.</p>
+
+<h3>What is happening with the sale of the former Ilva?</h3>
+<p>The sale of Acciaierie d’Italia has been protracted. One bidder, Flacks Group, said 30 banks declined to lend, citing the November court seizure of the Taranto site, and sought a state vendor loan; a competing Jindal bid reportedly stalled.</p>
+
+<h3>Why isn’t private capital investing in European steel?</h3>
+<p>European steel projects face expensive energy, flat demand without a reliable buyer for green premiums, and doubt over whether carbon pricing and trade protection will stay strong for the asset’s life: a bankability gap rather than a technology gap.</p>
+
+<h3>What could make European green steel investable?</h3>
+<p>Contracted demand through public procurement and long-term offtake, contracted low-cost power and hydrogen, and durable carbon value through carbon contracts for difference and a stable CBAM.</p>
+`,
+  },
 ];
 
 /** Articles sorted by date, most recent first */
