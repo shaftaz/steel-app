@@ -84,7 +84,7 @@ export default function HardnessCalc() {
               "There is no exact algebraic relation between hardness scales — table values are approximate correlations.",
               "Tensile strength (MPa) is an approximation for steel only.",
             ]}
-            source="SOURCE: APPROXIMATE CONVERSION TABLE · LAST VERIFIED 18 JUL 2026"
+            source="SOURCE: APPROXIMATE CONVERSION TABLE · LAST VERIFIED 9 NOV 2026"
           />
         </>
       }

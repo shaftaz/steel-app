@@ -393,7 +393,7 @@ export default function ScrapProductionCostCalc() {
                 `Finished = liquid × ${rollingYieldFactor.toFixed(3)} + conversion ${fmt(rcc, 2)} = ${fmt(finishedProductCost, 2)}`,
                 `Delivered = finished + overheads ${fmt(totalOverhead, 2)} = ${fmt(totalDeliveredCost, 2)}`,
               ]}
-              source="BASIS: YOUR INPUTS · TYPICAL IF 625 / EAF 450 KWH/T · LEAVE PRICE BLANK TO EXCLUDE · LAST VERIFIED 18 JUL 2026"
+              source="BASIS: YOUR INPUTS · TYPICAL IF 625 / EAF 450 KWH/T · LEAVE PRICE BLANK TO EXCLUDE · LAST VERIFIED 9 NOV 2026"
             />
           </>
         }

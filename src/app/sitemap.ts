@@ -12,8 +12,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  const TOOLS_VERIFIED = new Date("2026-07-18");
-  const CBAM_VERIFIED = new Date("2026-07-19");
+  const TOOLS_VERIFIED = new Date("2026-11-09");
+  const CBAM_VERIFIED = new Date("2026-11-09");
 
   return [
     {

@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title:
     "CBAM Calculator: EU & UK Carbon Border Cost",
   description:
-    "Free CBAM cost calculator for EU and UK regimes, iron & steel, aluminium, cement, fertilisers and hydrogen. Country default intensities, carbon-price deductions, certificate counts and the full phase-in to 2034. Q2 2026 price €75.28/tCO₂e.",
+    "Free CBAM cost calculator for EU and UK regimes, iron & steel, aluminium, cement, fertilisers and hydrogen. Country default intensities, carbon-price deductions, certificate counts and the full phase-in to 2034. Q3 2026 price €82.32/tCO₂e.",
   alternates: { canonical: "https://steelmath.com/cbam/calculator" },
   openGraph: {
     images: [{ url: "/og?title=CBAM%20Calculator%20%E2%80%94%20EU%20%26%20UK%20Carbon%20Border%20Cost&accent=blue", width: 1200, height: 630 }],
@@ -25,7 +25,7 @@ const FAQS = [
   },
   {
     q: "What does CBAM cost per tonne of steel in 2026?",
-    a: "As a worked example, 10,000 t of HRC from India in 2026 computes to roughly €6.1 per tonne at a €75.28/tCO₂e certificate price: modest because 2026’s phase-in factor is 2.5%. The same cargo’s cost rises steeply toward 2034 as the factor approaches 100%.",
+    a: "As a worked example, 10,000 t of HRC from India in 2026 computes to roughly €6.6 per tonne at the Q3 2026 certificate price of €82.32/tCO₂e: modest because 2026’s phase-in factor is 2.5%. The same cargo’s cost rises steeply toward 2034 as the factor approaches 100% and default values carry a growing mark-up.",
   },
   {
     q: "Why do verified emissions matter under CBAM?",
@@ -62,7 +62,7 @@ export default function CbamCalculatorPage() {
       "Free-allocation phase-in 2026–2034",
       "Importer and supplier views, shareable results",
     ],
-    dateModified: "2026-07-19",
+    dateModified: "2026-11-09",
   };
 
   const breadcrumbJsonLd = {

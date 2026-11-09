@@ -246,7 +246,7 @@ export default function HeroInstrument() {
                 <div>Constant 162.2 = 10⁶ ÷ (π/4 × 7,850), from steel density 7,850 kg/m³</div>
                 <div>ρ — MS/Fe500/A36/SS400 7,850 · SS304 8,000 · SS316 8,027 · Al 2,700 · Cu 8,940 kg/m³</div>
                 <div>Imperial — 1 kg/m = 0.672 lb/ft · 1 t = 2,204.6 lb</div>
-                <div className="text-muted-3 mt-1.5">SOURCE: IS 1786 / IS 2062 · ASTM A615 / A36 · JIS G3112 / G3101 · GB/T 1499 / 700 · EN 10025 · LAST VERIFIED 18 JUL 2026</div>
+                <div className="text-muted-3 mt-1.5">SOURCE: IS 1786 / IS 2062 · ASTM A615 / A36 · JIS G3112 / G3101 · GB/T 1499 / 700 · EN 10025 · LAST VERIFIED 9 NOV 2026</div>
               </div>
             )}
           </div>
@@ -347,7 +347,7 @@ export default function HeroInstrument() {
           INSTANT RECALC · WORKS OFFLINE (PWA) · SHAREABLE RESULTS · WCAG 2.2 AA
         </span>
         <span className="font-mono text-[10.5px] tracking-[0.1em] text-muted-3">
-          FORMULAS LAST VERIFIED — 18 JUL 2026
+          FORMULAS LAST VERIFIED — 9 NOV 2026
         </span>
       </div>
     </div>

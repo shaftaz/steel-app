@@ -84,7 +84,7 @@ for (const b of tmtBars) {
     formula: `${b.diameter}² ÷ 162.2 = ${f(b.weightPerMetre)} kg/m`,
     formulaNote:
       "Constant 162.2 = 10⁶ ÷ (π/4 × 7,850), from mild-steel density 7,850 kg/m³",
-    source: "SOURCE: IS 1786 · ASTM A615 · JIS G3112 · BS 4449 · LAST VERIFIED 18 JUL 2026",
+    source: "SOURCE: IS 1786 · ASTM A615 · JIS G3112 · BS 4449 · LAST VERIFIED 9 NOV 2026",
     faqs: [
       {
         q: `How much does a ${b.diameter}mm TMT bar weigh per metre?`,
@@ -140,7 +140,7 @@ for (const p of pipes) {
     ],
     formula: `(${p.od} − ${p.wallThickness}) × ${p.wallThickness} × 0.02466 = ${f(p.weightPerMetre, 2)} kg/m`,
     formulaNote: "0.02466 = π × 7,850 ÷ 10⁶, steel density 7,850 kg/m³",
-    source: "SOURCE: IS 1239 (MEDIUM) · ASTM A53 · JIS G3452 · EN 10255 · LAST VERIFIED 18 JUL 2026",
+    source: "SOURCE: IS 1239 (MEDIUM) · ASTM A53 · JIS G3452 · EN 10255 · LAST VERIFIED 9 NOV 2026",
     faqs: [
       {
         q: `What is the weight of a ${p.nbSize}mm (${p.nbInch}) MS pipe per metre?`,
@@ -199,7 +199,7 @@ for (const bm of ismbBeams) {
     ],
     formula: `${bm.designation}: ${f(bm.weightPerMetre, 1)} kg/m (IS 808 tabulated)`,
     formulaNote: "Rolled-section weights are standardised in IS 808, not derived from a simple area formula",
-    source: "SOURCE: IS 808 · ASTM A6 / A36 · JIS G3192 · LAST VERIFIED 18 JUL 2026",
+    source: "SOURCE: IS 808 · ASTM A6 / A36 · JIS G3192 · LAST VERIFIED 9 NOV 2026",
     faqs: [
       {
         q: `What is the weight of ${bm.designation} per metre?`,
@@ -255,7 +255,7 @@ for (const ch of ismcChannels) {
     ],
     formula: `${ch.designation}: ${f(ch.weightPerMetre, 1)} kg/m (IS 808 tabulated)`,
     formulaNote: "Rolled-section weights are standardised in IS 808, not derived from a simple area formula",
-    source: "SOURCE: IS 808 · ASTM A6 / A36 · JIS G3192 · LAST VERIFIED 18 JUL 2026",
+    source: "SOURCE: IS 808 · ASTM A6 / A36 · JIS G3192 · LAST VERIFIED 9 NOV 2026",
     faqs: [
       {
         q: `What is the weight of ${ch.designation} per metre?`,
@@ -312,7 +312,7 @@ for (const an of equalAngles) {
     ],
     formula: `(${an.legA} + ${an.legB} − ${an.thickness}) × ${an.thickness} × 0.00785 = ${f(an.weightPerMetre, 2)} kg/m`,
     formulaNote: "0.00785 = 7,850 ÷ 10⁶, sharp-corner approximation; IS 808 tabulated values differ slightly",
-    source: "SOURCE: IS 808 · ASTM A6 · JIS G3192 · LAST VERIFIED 18 JUL 2026",
+    source: "SOURCE: IS 808 · ASTM A6 · JIS G3192 · LAST VERIFIED 9 NOV 2026",
     faqs: [
       {
         q: `What is the weight of a ${name} mm angle per metre?`,
@@ -368,7 +368,7 @@ for (const pl of plates) {
     ],
     formula: `${pl.thickness} × 7.85 = ${f(pl.weightPerSqm, 2)} kg/m²`,
     formulaNote: "7.85 = density 7,850 kg/m³ expressed per mm of thickness per m²",
-    source: "SOURCE: IS 2062 · ASTM A36 · JIS G3101 · EN 10025 · LAST VERIFIED 18 JUL 2026",
+    source: "SOURCE: IS 2062 · ASTM A36 · JIS G3101 · EN 10025 · LAST VERIFIED 9 NOV 2026",
     faqs: [
       {
         q: `What is the weight of ${pl.thickness}mm MS plate per square metre?`,
@@ -425,7 +425,7 @@ for (const fb of flatBars) {
     ],
     formula: `${fb.width} × ${fb.thickness} × 0.00785 = ${f(fb.weightPerMetre, 2)} kg/m`,
     formulaNote: "0.00785 = 7,850 ÷ 10⁶, steel density 7,850 kg/m³",
-    source: "SOURCE: IS 2062 · ASTM A36 · JIS G3101 · LAST VERIFIED 18 JUL 2026",
+    source: "SOURCE: IS 2062 · ASTM A36 · JIS G3101 · LAST VERIFIED 9 NOV 2026",
     faqs: [
       {
         q: `What is the weight of a ${name} mm flat bar per metre?`,

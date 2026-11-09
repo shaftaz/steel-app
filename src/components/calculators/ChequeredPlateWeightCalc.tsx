@@ -113,7 +113,7 @@ export default function ChequeredPlateWeightCalc() {
               "T(mm) × 7.85 = kg/m² for plain MS plate (density 7,850 kg/m³)",
               "× 1.05 adds ≈ 5% for the raised chequer pattern",
             ]}
-            source="SOURCE: IS 2062 · ASTM A36 · JIS G3101 (SS400) · EN 10025 · LAST VERIFIED 18 JUL 2026"
+            source="SOURCE: IS 2062 · ASTM A36 · JIS G3101 (SS400) · EN 10025 · LAST VERIFIED 9 NOV 2026"
           />
         </>
       }

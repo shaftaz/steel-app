@@ -183,7 +183,7 @@ export default function StainlessSteelWeightCalc() {
           </div>
           <ShowMaths
             lines={mathsLines}
-            source="SOURCE: ASTM A240 / IS 6911 DENSITIES · LAST VERIFIED 18 JUL 2026"
+            source="SOURCE: ASTM A240 / IS 6911 DENSITIES · LAST VERIFIED 9 NOV 2026"
           />
         </>
       }

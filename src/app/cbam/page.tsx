@@ -34,8 +34,8 @@ const PHASE_IN = [
 
 const PRICES = [
   { q: "Q1", note: "PUBLISHED 7 APR 2026", val: "€75.36", cls: "text-ink" },
-  { q: "Q2", note: "PUBLISHED 6 JUL 2026 — LATEST", val: "€75.28", cls: "text-cbam" },
-  { q: "Q3", note: "DUE 5 OCT 2026", val: "—", cls: "text-[#A0A6B4]" },
+  { q: "Q2", note: "PUBLISHED 6 JUL 2026", val: "€75.28", cls: "text-ink" },
+  { q: "Q3", note: "PUBLISHED 5 OCT 2026 — LATEST · +9.4% Q/Q", val: "€82.32", cls: "text-cbam" },
   { q: "Q4", note: "DUE 4 JAN 2027", val: "—", cls: "text-[#A0A6B4]" },
 ];
 
@@ -47,7 +47,7 @@ const COUNTRIES = [
   { name: "South Korea", badge: "K-ETS DEDUCTION", badgeColor: "#2447C9", carbon: "K-ETS since 2015 (≈ €6–9 recent); generous free allocation cuts the deductible “price effectively paid”.", route: "BF-BOF majors + EAF; strong MRV culture (verification is straightforward.", action: "Compute deduction net of free allocation) claiming gross K-ETS price will fail review." },
   { name: "Japan", badge: "GX TRANSITION", badgeColor: "#5A6070", carbon: "GX-ETS turning mandatory FY2026; carbon levy from 2028 → deductions emerging, small at first.", route: "BF-BOF heavy; high-grade products with strong data systems.", action: "Prepare installation-level actuals now; deduction paperwork matures with GX pricing." },
   { name: "United Kingdom", badge: "LINKING PATH", badgeColor: "#2447C9", carbon: "UK ETS ≈ EU levels; UK–EU linkage agreed in principle. A linked ETS would exempt UK goods from EU CBAM.", route: "EAF transition underway (Port Talbot, Scunthorpe plans).", action: "Track linkage timing; also prepare for the UK’s own CBAM on your imports from 1 Jan 2027." },
-  { name: "EU (domestic)", badge: "REFERENCE", badgeColor: "#5A6070", carbon: "Full EU ETS price (~€75); free allocation phasing out 2026–34 in step with CBAM.", route: "All routes; benchmark for the “level playing field”.", action: "Buyers: your imported and domestic carbon costs now converge, compare total landed cost, not base price." },
+  { name: "EU (domestic)", badge: "REFERENCE", badgeColor: "#5A6070", carbon: "Full EU ETS price (~€82, Q3 2026 average); free allocation phasing out 2026–34 in step with CBAM.", route: "All routes; benchmark for the “level playing field”.", action: "Buyers: your imported and domestic carbon costs now converge, compare total landed cost, not base price." },
 ];
 
 const FINISHED = [
@@ -61,7 +61,9 @@ const MILESTONES = [
   { date: "31 DEC 2025", label: "Transitional phase & quarterly reporting end", status: "DONE", done: true },
   { date: "1 JAN 2026", label: "Definitive regime live: declarant status required at the border", status: "DONE", done: true },
   { date: "6 JUL 2026", label: "Q2 2026 certificate price published: €75.28", status: "DONE", done: true },
-  { date: "5 OCT 2026", label: "Q3 2026 certificate price publication", status: "NEXT", done: false },
+  { date: "31 JUL 2026", label: "Reg. (EU) 2026/1740: default-value corrections; mark-up 10% (2026) → 20% (2027) → 30% (2028+)", status: "DONE", done: true },
+  { date: "5 OCT 2026", label: "Q3 2026 certificate price published: €82.32 (+9.4% q/q)", status: "DONE", done: true },
+  { date: "4 JAN 2027", label: "Q4 2026 certificate price publication", status: "NEXT", done: false },
   { date: "1 FEB 2027", label: "Certificate sales open on EU central platform", status: "AHEAD", done: false },
   { date: "30 SEP 2027", label: "First annual declaration & certificate surrender (2026 imports)", status: "AHEAD", done: false },
   { date: "1 JAN 2028", label: "Proposed: downstream finished-goods scope + tighter anti-circumvention", status: "AHEAD", done: false },
@@ -157,12 +159,12 @@ export default function CbamHubPage() {
             </div>
             <div className="px-5 py-3.5 flex justify-between items-baseline gap-2.5 flex-wrap">
               <span className="font-mono text-[10.5px] tracking-[0.1em] text-[#7A8094]">
-                CERT PRICE Q2 2026
+                CERT PRICE Q3 2026
               </span>
               <span className="font-mono text-[22px] font-semibold text-ink">
-                €75.28<span className="text-[11px] text-[#7A8094]"> /tCO₂e</span>
+                €82.32<span className="text-[11px] text-[#7A8094]"> /tCO₂e</span>
               </span>
-              <span className="font-mono text-[10.5px] text-[#7A8094]">VERIFIED 6 JUL 2026</span>
+              <span className="font-mono text-[10.5px] text-[#7A8094]">PUBLISHED 5 OCT 2026 · +9.4% Q/Q</span>
             </div>
           </div>
         </div>
@@ -248,7 +250,7 @@ export default function CbamHubPage() {
                 WORKED EXAMPLE — ILLUSTRATIVE
               </span>
               <span className="font-mono text-[10.5px] text-[#7A8094]">
-                10,000 t HRC · 2.6 tCO₂e/t · €75.28
+                10,000 t HRC · 2.6 tCO₂e/t · €82.32
               </span>
             </div>
             <div className="p-4.5 flex flex-col gap-3 flex-1">
@@ -259,19 +261,19 @@ export default function CbamHubPage() {
               <div className="flex justify-between items-baseline border-b border-rule-faint pb-3">
                 <span className="text-[13.5px] text-muted">2026 · factor 2.5%</span>
                 <span className="font-mono text-[15px] font-semibold text-cbam">
-                  €48,932 <span className="text-[11.5px] text-[#7A8094]">≈ €4.9/t</span>
+                  €53,508 <span className="text-[11.5px] text-[#7A8094]">≈ €5.4/t</span>
                 </span>
               </div>
               <div className="flex justify-between items-baseline border-b border-rule-faint pb-3">
                 <span className="text-[13.5px] text-muted">2030 · factor 48.5%</span>
                 <span className="font-mono text-[15px] font-semibold text-cbam">
-                  €949,281 <span className="text-[11.5px] text-[#7A8094]">≈ €95/t</span>
+                  €1,038,055 <span className="text-[11.5px] text-[#7A8094]">≈ €104/t</span>
                 </span>
               </div>
               <div className="flex justify-between items-baseline">
                 <span className="text-[13.5px] text-muted">2034 · factor 100%</span>
                 <span className="font-mono text-[15px] font-semibold text-cbam">
-                  €1,957,280 <span className="text-[11.5px] text-[#7A8094]">≈ €196/t</span>
+                  €2,140,320 <span className="text-[11.5px] text-[#7A8094]">≈ €214/t</span>
                 </span>
               </div>
               <div className="mt-auto text-[13px] leading-relaxed text-muted-2 border-t border-dashed border-rule pt-3">
@@ -355,7 +357,7 @@ export default function CbamHubPage() {
           ))}
         </div>
         <div className="font-mono text-[11px] text-muted-3 mt-3">
-          INDICATIVE POSITIONS · LAST VERIFIED 18 JUL 2026 · CONFIRM DEDUCTIBILITY WITH YOUR NCA / ADVISER BEFORE FILING
+          INDICATIVE POSITIONS · LAST VERIFIED 9 NOV 2026 · CONFIRM DEDUCTIBILITY WITH YOUR NCA / ADVISER BEFORE FILING
         </div>
       </section>
 
@@ -415,7 +417,7 @@ export default function CbamHubPage() {
           ))}
         </div>
         <div className="font-mono text-[11px] tracking-[0.04em] text-[#7A8094] mt-4 border-t border-rule pt-3.5 leading-[1.8]">
-          CHANGELOG — 06 JUL 2026: Q2 price €75.28 published · 17 DEC 2025: implementing acts package + downstream proposal · 20 OCT 2025: Omnibus (EU) 2025/2083 in force. 50 t threshold, surrender → 30 SEP, sales → 1 FEB 2027
+          CHANGELOG — 05 OCT 2026: Q3 price €82.32 published (+9.4% q/q) · 31 JUL 2026: Reg. (EU) 2026/1740 default-value corrections, mark-up 10/20/30% by year · 06 JUL 2026: Q2 price €75.28 published · 17 DEC 2025: implementing acts package + downstream proposal · 20 OCT 2025: Omnibus (EU) 2025/2083 in force. 50 t threshold, surrender → 30 SEP, sales → 1 FEB 2027
         </div>
       </section>
 
@@ -516,7 +518,7 @@ export default function CbamHubPage() {
         </div>
         <div className="font-mono text-[10.5px] text-muted-3 mt-6 flex justify-between flex-wrap gap-2">
           <span>© 2026 STEELMATH · ESTIMATES ONLY — NOT TAX OR LEGAL ADVICE</span>
-          <span>CBAM Q2 €75.28 · SALES OPEN 1 FEB 2027 · SURRENDER 30 SEP 2027</span>
+          <span>CBAM Q3 €82.32 · SALES OPEN 1 FEB 2027 · SURRENDER 30 SEP 2027</span>
         </div>
       </section>
     </>

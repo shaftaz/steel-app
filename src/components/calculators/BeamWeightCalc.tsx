@@ -87,7 +87,7 @@ export default function BeamWeightCalc() {
                   ? `Section — depth ${beam.depth} mm · flange ${beam.flangeWidth} mm · web ${beam.webThickness} mm · flange t ${beam.flangeThickness} mm`
                   : "",
               ]}
-              source="SOURCE: IS 808 (ISMB/ISMC) · ASTM A6 / A36 · JIS G3192 · LAST VERIFIED 18 JUL 2026"
+              source="SOURCE: IS 808 (ISMB/ISMC) · ASTM A6 / A36 · JIS G3192 · LAST VERIFIED 9 NOV 2026"
             />
           </>
         }

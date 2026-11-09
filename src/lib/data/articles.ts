@@ -32,18 +32,21 @@ export const articles: Article[] = [
     category: "GUIDE",
     categoryColor: "green",
     date: "2026-07-26",
+    lastUpdated: "2026-11-09",
     readTime: "5 min",
     excerpt:
-      "CBAM certificates cost \u20AC75.28/tCO\u2082e in Q2 2026, but the 2.5% phase-in factor keeps 2026 bills small. What importers pay per tonne now, and by 2034.",
+      "CBAM certificates cost \u20AC82.32/tCO\u2082e in Q3 2026, but the 2.5% phase-in factor keeps 2026 bills small. What importers pay per tonne now, and by 2034.",
     metaTitle: "CBAM Cost for Steel Importers: Price Per Tonne & Certificates",
     metaDescription:
-      "CBAM certificates cost \u20AC75.28/tCO\u2082e in Q2 2026. With the 2.5% phase-in factor, HRC costs roughly \u20AC5/t today, rising toward \u20AC200/t by 2034. Worked numbers and a free CBAM calculator.",
+      "CBAM certificates cost \u20AC82.32/tCO\u2082e in Q3 2026. With the 2.5% phase-in factor, HRC costs roughly \u20AC5/t today, rising toward \u20AC200/t by 2034. Worked numbers and a free CBAM calculator.",
     relatedCalculators: ["steel-plate", "tmt"],
     ogImage: {
-      url: "/og?title=What%20CBAM%20Costs%20Steel%20Importers&value=%E2%82%AC75.28&label=PER%20tCO%E2%82%82e%20%C2%B7%20Q2%202026%20%C2%B7%20FACTOR%202.5%25&accent=blue",
-      alt: "CBAM certificate price of 75.28 euros per tonne of CO2 with the 2026 phase-in factor of 2.5 percent",
+      url: "/og?title=What%20CBAM%20Costs%20Steel%20Importers&value=%E2%82%AC82.32&label=PER%20tCO%E2%82%82e%20%C2%B7%20Q3%202026%20%C2%B7%20FACTOR%202.5%25&accent=blue",
+      alt: "CBAM certificate price of 82.32 euros per tonne of CO2 with the 2026 phase-in factor of 2.5 percent",
     },
     content: `
+<p><em>Update (November 2026): the Q3 2026 certificate price is \u20AC82.32/tCO\u2082e (published 5 October 2026, up 9.4% on Q2\u2019s \u20AC75.28 used in the worked examples below), and Implementing Reg. (EU) 2026/1740 raises the mark-up on default values from 10% in 2026 to 20% in 2027 and 30% from 2028. The <a href="/cbam/calculator">calculator</a> already applies both; the Q4 2026 price is due 4 January 2027.</em></p>
+
 <p>Every tonne of steel entering the EU now carries a carbon charge. The mechanics are simple to state and easy to misjudge: importers surrender CBAM certificates priced from EU ETS auctions (\u20AC75.28/tCO\u2082e in Q2 2026, \u20AC75.36 in Q1), but only on the share of embedded emissions the phase-in factor makes chargeable, 2.5% in 2026, climbing to 100% by 2034. The result is a cost that feels trivial today and compounds into a major line item within a few years.</p>
 
 <h2>The price per tonne, worked out</h2>
@@ -64,7 +67,7 @@ export const articles: Article[] = [
 <p>At default HRC intensity (2.8 tCO\u2082e/t), the 2.5% phase-in factor and the Q2 2026 certificate price of \u20AC75.28, roughly \u20AC5.3 per tonne of steel. Cleaner routes and deductible home carbon prices reduce it.</p>
 
 <h3>What is the CBAM certificate price?</h3>
-<p>\u20AC75.28 per tonne of CO\u2082e for Q2 2026 (Q1 was \u20AC75.36). The price tracks quarterly EU ETS auction averages and moves to weekly pricing from 2027. Certificates go on sale 1 February 2027.</p>
+<p>\u20AC82.32 per tonne of CO\u2082e for Q3 2026, published 5 October 2026 (Q2 was \u20AC75.28, Q1 \u20AC75.36). The price tracks quarterly EU ETS auction averages and moves to weekly pricing from 2027. Certificates go on sale 1 February 2027.</p>
 
 <h3>Is there a free CBAM calculator?</h3>
 <p>Yes. SteelMath's free <a href="/cbam/calculator">CBAM cost calculator</a> covers EU and UK regimes, five commodity groups, nine origins, default versus verified-actual emissions and the full 2026\u20132034 phase-in. Estimates only, certificate prices vary quarterly and figures are not tax or legal advice.</p>
@@ -7006,6 +7009,7 @@ At k = 0.95: D/t = 40.0, very thin, buckling is the primary failure mode.</p>
     category: "GUIDE",
     categoryColor: "green",
     date: "2026-08-04",
+    lastUpdated: "2026-11-09",
     readTime: "5 min",
     excerpt:
       "Step-by-step guide to the free SteelMath CBAM calculator: model EU & UK carbon border costs per tonne, certificates needed, and your cost curve to 2034.",
@@ -7036,9 +7040,9 @@ At k = 0.95: D/t = 40.0, very thin, buckling is the primary failure mode.</p>
 
 <h2>Reading the output: a worked example</h2>
 
-<p>Take a concrete case the tool handles out of the box: 10,000 tonnes of HRC from India, imported in 2026. At the current reference certificate price of €75.28/tCO₂e (tracking the EU ETS), the calculator returns a net CBAM cost of roughly €60,600 (about €6.1 per tonne) requiring 805 certificates.</p>
+<p>Take a concrete case the tool handles out of the box: 10,000 tonnes of HRC from India, imported in 2026. At the latest published certificate price of €82.32/tCO₂e (Q3 2026, tracking the EU ETS), the calculator returns a net CBAM cost of roughly €66,300 (about €6.6 per tonne) requiring 805 certificates.</p>
 
-<p>Three things to notice in that result. First, €6.1/t in 2026 sounds manageable: that is the 2.5% phase-in doing the softening. The multi-year table shows the same cargo’s cost climbing steeply as the factor ratchets toward 100%: the number to plan against is not this year’s, it is the curve. Second, the certificates line converts cost into compliance workload: certificates must be purchased and surrendered on the regulatory calendar, a cash-flow and administration reality invoices don’t show. Third, the carbon-deduction line matters when origin countries price carbon domestically: carbon already paid at home is creditable, a variable worth tracking as more exporting nations introduce carbon pricing partly for this reason.</p>
+<p>Three things to notice in that result. First, €6.6/t in 2026 sounds manageable: that is the 2.5% phase-in doing the softening. The multi-year table shows the same cargo’s cost climbing steeply as the factor ratchets toward 100%: the number to plan against is not this year’s, it is the curve. Second, the certificates line converts cost into compliance workload: certificates must be purchased and surrendered on the regulatory calendar, a cash-flow and administration reality invoices don’t show. Third, the carbon-deduction line matters when origin countries price carbon domestically: carbon already paid at home is creditable, a variable worth tracking as more exporting nations introduce carbon pricing partly for this reason.</p>
 
 <h2>The two mistakes the calculator prevents</h2>
 
@@ -7056,7 +7060,7 @@ At k = 0.95: D/t = 40.0, very thin, buckling is the primary failure mode.</p>
 <p>Embedded emissions per tonne (verified actuals, or default values by product and origin) × tonnes imported × the year’s phase-in factor × the CBAM certificate price (which tracks the EU ETS), minus any creditable carbon price already paid in the origin country. The SteelMath CBAM Calculator runs this per shipment and projects it through 2034.</p>
 
 <h3>What does CBAM cost per tonne of steel in 2026?</h3>
-<p>As a worked example, 10,000 t of HRC from India in 2026 computes to roughly €6.1 per tonne at a €75.28/tCO₂e certificate price: modest because 2026’s phase-in factor is 2.5%. The same cargo’s cost rises steeply toward 2034 as the factor approaches 100%.</p>
+<p>As a worked example, 10,000 t of HRC from India in 2026 computes to roughly €6.6 per tonne at the Q3 2026 certificate price of €82.32/tCO₂e: modest because 2026’s phase-in factor is 2.5%. The same cargo’s cost rises steeply toward 2034 as the factor approaches 100%.</p>
 
 <h3>Do small importers pay CBAM?</h3>
 <p>Imports below the 50-tonne annual threshold are exempt under the 2026 rules, removing the obligation for most occasional importers while keeping the vast majority of covered emissions in scope.</p>

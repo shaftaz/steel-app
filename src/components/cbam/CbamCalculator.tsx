@@ -6,7 +6,8 @@ import { shareResultCard } from "@/lib/share-card";
 /* ============================================================
    CBAM cost model, constants and formulas ported verbatim from
    the verified reference implementation (CBAM Calculator v2).
-   MODEL & FACTORS LAST VERIFIED — 19 JUL 2026.
+   MODEL & FACTORS LAST VERIFIED — 9 NOV 2026 (Q3 2026 price €82.32
+   published 5 Oct 2026; default mark-up schedule per Reg. (EU) 2026/1740).
    ============================================================ */
 
 type Regime = "eu" | "uk";
@@ -127,10 +128,28 @@ function num(v: string) {
   return isFinite(n) && n >= 0 ? n : 0;
 }
 
+/** Latest published EU certificate price: Q3 2026, €82.32/tCO₂e (5 Oct 2026). */
+const EU_PRICE_LATEST = 82.32;
+
 function price(regime: Regime, yearKey: string, scenario: string) {
   const m = SCENARIOS[scenario].mult;
-  if (regime === "eu") return yearKey === "2026" ? 75.28 : 75 * m;
+  // 2026 imports: latest published quarterly price. 2027+: the same level as
+  // the central planning price, flexed by scenario (analyst 2027 consensus
+  // sits near the HIGH case).
+  if (regime === "eu") return yearKey === "2026" ? EU_PRICE_LATEST : EU_PRICE_LATEST * m;
   return 55 * m;
+}
+
+/**
+ * EU default values carry a mark-up that steps up by year: 10% in 2026,
+ * 20% in 2027, 30% from 2028 (Implementing Reg. (EU) 2026/1740). The
+ * tool's defaults are 2026-level, so later years scale relative to 1.10.
+ */
+function defaultMarkup(yearKey: string): number {
+  const y = +yearKey;
+  if (y <= 2026) return 1;
+  if (y === 2027) return 1.2 / 1.1;
+  return 1.3 / 1.1;
 }
 
 function calc(
@@ -304,7 +323,10 @@ export default function CbamCalculator() {
   const vDef = V.def;
   const steelV = V as SteelVariant;
   const baseV = V as BaseVariant;
-  const defIntensity = +(isSteel ? vDef * C.mult : vDef).toFixed(2);
+  const defBase = +(isSteel ? vDef * C.mult : vDef).toFixed(2);
+  // EU defaults escalate by import year (Reg. 2026/1740 mark-up schedule).
+  const defFor = (y: string) => +(defBase * (isEu ? defaultMarkup(y) : 1)).toFixed(2);
+  const defIntensity = defFor(year);
   const typActual = isSteel ? steelV[route] : baseV.base;
   const intensity = isDefault ? defIntensity : intensityTouched ? intensityInput : typActual;
   const carbonPaidEur = carbonTouched
@@ -351,7 +373,7 @@ export default function CbamCalculator() {
   const trajYears = isEu ? ["2026", "2028", "2030", "2032", "2034"] : ["low", "central", "high"];
   const trajectory = isEu
     ? trajYears.map((y) => {
-        const t = calc("eu", y, scenario, intensity, qty, carbonPaidEur);
+        const t = calc("eu", y, scenario, isDefault ? defFor(y) : intensity, qty, carbonPaidEur);
         const active = y === year;
         return {
           key: y,
@@ -446,7 +468,7 @@ export default function CbamCalculator() {
               <span className="text-[15px] font-extrabold">{rg === "eu" ? "EU CBAM" : "UK CBAM"}</span>
               <span className="font-mono text-[10.5px] tracking-[0.06em] opacity-80">
                 {rg === "eu"
-                  ? `LIVE SINCE 1 JAN 2026 · ${year === "2026" && regime === "eu" ? "Q2 PRICE €75.28" : `PRICE ASSUMED €${fmt(price("eu", regime === "eu" ? year : "2027", scenario), 0)}`}`
+                  ? `LIVE SINCE 1 JAN 2026 · ${year === "2026" && regime === "eu" ? `Q3 PRICE €${EU_PRICE_LATEST}` : `PRICE ASSUMED €${fmt(price("eu", regime === "eu" ? year : "2027", scenario), 0)}`}`
                   : "STARTS 1 JAN 2027 · PLANNING RATE £55"}
               </span>
             </button>
@@ -612,7 +634,7 @@ export default function CbamCalculator() {
               )}
               <div className="font-mono text-[11px] leading-[1.7] text-[#7A8094] border-t border-dashed border-rule pt-3">
                 {isDefault
-                  ? `DEFAULT APPLIED, ${fmt(defIntensity, 2)} tCO₂e/t (indicative, set from high emitters${isSteel ? ", regional adjustment" : ""}). Switch to VERIFIED ACTUAL (typical ${fmt(typActual, 2)}) to see your saving.`
+                  ? `DEFAULT APPLIED, ${fmt(defIntensity, 2)} tCO₂e/t (indicative, set from high emitters${isSteel ? ", regional adjustment" : ""}${isEu ? `; EU mark-up 10% in 2026 → 20% in 2027 → 30% from 2028, Reg. (EU) 2026/1740` : ""}). Switch to VERIFIED ACTUAL (typical ${fmt(typActual, 2)}) to see your saving.`
                   : `TYPICAL ${isSteel ? route.toUpperCase() + " " : ""}VALUE, ${fmt(typActual, 2)} tCO₂e/t. Edit to your verified figure. Verification: ${isEu ? "accredited verifier (EU)" : "IAF-member-accredited body (UK)"}.`}
               </div>
             </div>
@@ -809,7 +831,7 @@ export default function CbamCalculator() {
             INSTANT RECALC · ESTIMATES ONLY — NOT TAX OR LEGAL ADVICE
           </span>
           <span className="font-mono text-[10.5px] tracking-[0.08em] text-muted-3">
-            MODEL &amp; FACTORS LAST VERIFIED — 19 JUL 2026
+            MODEL &amp; FACTORS LAST VERIFIED — 9 NOV 2026
           </span>
         </div>
       </div>
@@ -831,8 +853,8 @@ export default function CbamCalculator() {
               <span className={LABEL}>
                 {isEu
                   ? year === "2026"
-                    ? "PRICE — Q2 2026 PUBLISHED (SCENARIOS APPLY TO FUTURE YEARS)"
-                    : "PRICE SCENARIO — €75 BASE"
+                    ? "PRICE — Q3 2026 PUBLISHED (SCENARIOS APPLY TO FUTURE YEARS)"
+                    : `PRICE SCENARIO — €${EU_PRICE_LATEST} BASE (LATEST PUBLISHED)`
                   : "RATE SCENARIO — £55 PLANNING BASE"}
               </span>
               {Object.keys(SCENARIOS).map((k) => (
@@ -923,7 +945,7 @@ export default function CbamCalculator() {
             <div>4 · Net cost = chargeable × net rate = {zero ? `${sym}0 (${domestic ? "not in scope" : "exempt"})` : `${sym}${fmt(net, 0)}`}</div>
             <div className="text-muted-3 mt-2">
               {isEu
-                ? "SIMPLIFICATIONS. 2026 modelled at the Q2 price (€75.28); strictly each quarter’s imports use that quarter’s price (Q1 €75.36). Deduction pro-rata to the payable share; certificates rounded up; precursor & verification detail per Reg. (EU) 2023/956. Defaults indicative until final EC tables."
+                ? "SIMPLIFICATIONS. 2026 modelled at the latest published quarterly price (Q3 €82.32); strictly each quarter’s imports use that quarter’s price (Q1 €75.36, Q2 €75.28, Q4 due 4 Jan 2027). 2027+ use the same level flexed by scenario; analysts’ 2027 consensus sits nearer the HIGH case. Default values carry the EU mark-up schedule (10% 2026, 20% 2027, 30% from 2028, Reg. (EU) 2026/1740). Deduction pro-rata to the payable share; certificates rounded up; precursor & verification detail per Reg. (EU) 2023/956."
                 : `SIMPLIFICATIONS, £55 planning rate (UK ETS proxy); HMRC publishes per-product quarterly rates from Q1 2027, net of sector free allocation. Direct emissions only until 2029 at earliest; scrap excluded from scope; CPR capped at the liability; FX €→£ ${FX} indicative. Weight net of packing.`}
             </div>
           </div>

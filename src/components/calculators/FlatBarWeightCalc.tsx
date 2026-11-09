@@ -97,7 +97,7 @@ export default function FlatBarWeightCalc() {
                   : "Custom size — calculated from W × T × 0.00785",
                 "Constant 0.00785 = MS density 7,850 kg/m³ ÷ 10⁶",
               ]}
-              source="SOURCE: IS 2062 / IS 1732 · ASTM A36 · JIS G3101 · EN 10025 · LAST VERIFIED 18 JUL 2026"
+              source="SOURCE: IS 2062 / IS 1732 · ASTM A36 · JIS G3101 · EN 10025 · LAST VERIFIED 9 NOV 2026"
             />
           </>
         }

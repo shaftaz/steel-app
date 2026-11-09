@@ -110,7 +110,7 @@ export default function Footer() {
           &copy; 2026 SteelMath. All rights reserved. Developed by MetalX.
         </span>
         <span className="font-mono text-[10.5px] text-muted-3">
-          ρ MS = 7,850 KG/M³ · d² ÷ 162.2 · CBAM Q2 €75.28
+          ρ MS = 7,850 KG/M³ · d² ÷ 162.2 · CBAM Q3 €82.32
         </span>
       </div>
     </footer>

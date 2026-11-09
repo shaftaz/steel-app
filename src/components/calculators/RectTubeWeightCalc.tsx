@@ -134,7 +134,7 @@ export default function RectTubeWeightCalc() {
                 : "Custom size — sharp-corner approximation of the hollow section",
               "Constant 0.00785 = 7,850 kg/m³ ÷ 10⁶ (steel density per mm²·m)",
             ]}
-            source="SOURCE: IS 4923 · ASTM A500 · JIS G3466 · EN 10219 · LAST VERIFIED 18 JUL 2026"
+            source="SOURCE: IS 4923 · ASTM A500 · JIS G3466 · EN 10219 · LAST VERIFIED 9 NOV 2026"
           />
         </>
       }

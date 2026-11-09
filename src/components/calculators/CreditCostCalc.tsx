@@ -98,7 +98,7 @@ export default function CreditCostCalc() {
               "Material = quantity × price per kg · Total = material + interest",
               "Effective add-on % = interest ÷ material × 100 · Effective cost/kg = total ÷ quantity",
             ]}
-            source="BASIS: SIMPLE INTEREST · 365-DAY YEAR · LAST VERIFIED 18 JUL 2026"
+            source="BASIS: SIMPLE INTEREST · 365-DAY YEAR · LAST VERIFIED 9 NOV 2026"
           />
         </>
       }

@@ -193,10 +193,10 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-[auto_1fr_auto] items-center bg-[#FFFFFF] border border-cbam-rule">
           <div className="px-5 py-4 md:border-r border-cbam-rule border-b md:border-b-0">
             <div className="font-mono text-[10.5px] tracking-[0.12em] text-[#7A8094] mb-1">
-              EU CARBON BORDER PRICE — Q2 2026
+              EU CARBON BORDER PRICE — Q3 2026
             </div>
             <div className="font-mono text-[26px] font-semibold text-cbam leading-none">
-              €75.28<span className="text-xs text-[#7A8094]"> /tCO₂e</span>
+              €82.32<span className="text-xs text-[#7A8094]"> /tCO₂e</span>
             </div>
           </div>
           <div className="px-5 py-4 border-b md:border-b-0">
@@ -204,7 +204,7 @@ export default function Home() {
               Every tonne of steel entering the EU now carries this price on its embedded carbon.
             </p>
             <div className="font-mono text-[11px] text-[#7A8094] mt-1.5">
-              Q3 PRICE — 5 OCT 2026 · CERTIFICATE SALES OPEN — 1 FEB 2027
+              +9.4% VS Q2 · Q4 PRICE — 4 JAN 2027 · CERTIFICATE SALES OPEN — 1 FEB 2027
             </div>
           </div>
           <div className="px-5 py-4 flex flex-col gap-2 items-start md:items-end">

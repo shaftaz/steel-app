@@ -170,7 +170,7 @@ export default function PipeWeightCalc() {
                   }) = ${fmt(weightPerMetre, 2)} kg/m`,
               "Constant 0.02466 = π × 7,850 ÷ 10⁶ (steel density 7,850 kg/m³)",
             ]}
-            source="SOURCE: IS 1239 · ASTM A53 · JIS G3452 · EN 10255 · LAST VERIFIED 18 JUL 2026"
+            source="SOURCE: IS 1239 · ASTM A53 · JIS G3452 · EN 10255 · LAST VERIFIED 9 NOV 2026"
           />
         </>
       }

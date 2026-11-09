@@ -496,7 +496,7 @@ export function InstrumentShell({
   inputs,
   result,
   statusLeft = "INSTANT RECALC · WORKS OFFLINE (PWA) · SHAREABLE RESULTS",
-  statusRight = "FORMULAS LAST VERIFIED — 18 JUL 2026",
+  statusRight = "FORMULAS LAST VERIFIED — 9 NOV 2026",
   header,
 }: {
   inputs: ReactNode;

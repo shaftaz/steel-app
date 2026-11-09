@@ -299,7 +299,7 @@ export default function ScrapYieldCalc() {
                   : "Liquid steel = charge × weighted yield",
                 `Loss split — slag est. 65% (${hasCharge ? fmt(slagLoss, 2) : "—"} MT) · fumes & oxidation 35% (${hasCharge ? fmt(fumesLoss, 2) : "—"} MT)`,
               ]}
-              source={`BASIS: TYPICAL ${furnaceLabel} YIELD RANGES BY SCRAP GRADE · SLAG 65% / FUMES 35% OF LOSS (EST.) · LAST VERIFIED 18 JUL 2026`}
+              source={`BASIS: TYPICAL ${furnaceLabel} YIELD RANGES BY SCRAP GRADE · SLAG 65% / FUMES 35% OF LOSS (EST.) · LAST VERIFIED 9 NOV 2026`}
             />
           </>
         }

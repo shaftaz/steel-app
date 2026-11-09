@@ -269,7 +269,7 @@ export default function Calculator({
                 "ρ — MS/Fe500/A36/SS400 7,850 · SS304 8,000 · SS316 8,027 · Al 2,700 · Cu 8,940 kg/m³",
                 "Imperial — 1 kg/m = 0.672 lb/ft · 1 t = 2,204.6 lb",
               ]}
-              source="SOURCE: IS 1786 / 2062 / 1239 · ASTM A615 / A36 / A53 · JIS G3112 / G3101 · GB/T 1499 / 700 · EN 10025 · LAST VERIFIED 18 JUL 2026"
+              source="SOURCE: IS 1786 / 2062 / 1239 · ASTM A615 / A36 / A53 · JIS G3112 / G3101 · GB/T 1499 / 700 · EN 10025 · LAST VERIFIED 9 NOV 2026"
             />
           </>
         }
