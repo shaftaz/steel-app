@@ -4,6 +4,7 @@ import AngleWeightCalc from "@/components/calculators/AngleWeightCalc";
 import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 import CalculatorSchema from "@/components/seo/CalculatorSchema";
 import { equalAngles } from "@/lib/data/section-weights";
+import WeightPagesIndex from "@/components/WeightPagesIndex";
 
 export const metadata: Metadata = {
   title: "Steel Angle Weight Calculator — Equal & Unequal IS 808 Chart",
@@ -34,6 +35,7 @@ export default function AngleWeightPage() {
         </nav>
         <h1 className="text-white text-2xl sm:text-3xl font-bold mb-5 tracking-tight">Steel Angle Weight Calculator — All IS 808 Sizes<span className="block text-white/30 text-sm font-normal mt-1.5">Calculate MS angle weight using (A + B − T) × T × 0.00785 for equal &amp; unequal angles</span></h1>
         <div className="mb-8"><AngleWeightCalc /></div>
+        <WeightPagesIndex family="angle" heading="MS angle weight by size" />
 
         <section className="glass-panel p-5 sm:p-6 mb-8">
           <h2 className="text-white font-bold text-lg sm:text-xl mb-4">Complete Steel Angle Weight Chart — Equal Angles (IS 808)</h2>

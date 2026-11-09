@@ -4,6 +4,7 @@ import FlatBarWeightCalc from "@/components/calculators/FlatBarWeightCalc";
 import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 import CalculatorSchema from "@/components/seo/CalculatorSchema";
 import { flatBars } from "@/lib/data/section-weights";
+import WeightPagesIndex from "@/components/WeightPagesIndex";
 
 export const metadata: Metadata = {
   title: "Flat Bar Weight Calculator — All MS Flat Bar Sizes",
@@ -34,6 +35,7 @@ export default function FlatBarWeightPage() {
         </nav>
         <h1 className="text-white text-2xl sm:text-3xl font-bold mb-5 tracking-tight">Flat Bar Weight Calculator — All MS Sizes<span className="block text-white/30 text-sm font-normal mt-1.5">Calculate mild steel flat bar weight using W × T × 0.00785</span></h1>
         <div className="mb-8"><FlatBarWeightCalc /></div>
+        <WeightPagesIndex family="flat" heading="MS flat bar weight by size" />
 
         <section className="glass-panel p-5 sm:p-6 mb-8">
           <h2 className="text-white font-bold text-lg sm:text-xl mb-4">Complete MS Flat Bar Weight Chart</h2>

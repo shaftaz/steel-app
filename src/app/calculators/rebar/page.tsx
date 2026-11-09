@@ -4,6 +4,7 @@ import RebarCalc from "@/components/calculators/RebarCalc";
 import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 import CalculatorSchema from "@/components/seo/CalculatorSchema";
 import { REBAR_SIZES } from "@/lib/calculators/materials";
+import WeightPagesIndex from "@/components/WeightPagesIndex";
 
 export const metadata: Metadata = {
   title:
@@ -95,6 +96,7 @@ export default function RebarPage() {
         <div className="mb-8">
           <RebarCalc />
         </div>
+        <WeightPagesIndex family="tmt" heading="TMT bar weight by diameter" />
 
         {/* Rebar Weight Reference Table */}
         <section className="glass-panel p-5 sm:p-6 mb-8">

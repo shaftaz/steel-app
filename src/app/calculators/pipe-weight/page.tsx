@@ -4,6 +4,7 @@ import PipeWeightCalc from "@/components/calculators/PipeWeightCalc";
 import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 import CalculatorSchema from "@/components/seo/CalculatorSchema";
 import { pipes } from "@/lib/data/section-weights";
+import WeightPagesIndex from "@/components/WeightPagesIndex";
 
 export const metadata: Metadata = {
   title: "MS Pipe Weight Calculator — All NB Sizes 15mm to 200mm",
@@ -35,6 +36,7 @@ export default function PipeWeightPage() {
         </nav>
         <h1 className="text-white text-2xl sm:text-3xl font-bold mb-5 tracking-tight">MS Pipe Weight Calculator — All NB Sizes<span className="block text-white/30 text-sm font-normal mt-1.5">Calculate mild steel pipe weight using (OD − WT) × WT × 0.02466 for IS 1239 sizes</span></h1>
         <div className="mb-8"><PipeWeightCalc /></div>
+        <WeightPagesIndex family="pipe" heading="MS pipe weight by NB size" />
 
         <section className="glass-panel p-5 sm:p-6 mb-8">
           <h2 className="text-white font-bold text-lg sm:text-xl mb-4">Complete MS Pipe Weight Chart — IS 1239 Medium Class</h2>

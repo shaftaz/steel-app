@@ -4,6 +4,7 @@ import ChannelWeightCalc from "@/components/calculators/ChannelWeightCalc";
 import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 import CalculatorSchema from "@/components/seo/CalculatorSchema";
 import { ismcChannels } from "@/lib/data/section-weights";
+import WeightPagesIndex from "@/components/WeightPagesIndex";
 
 export const metadata: Metadata = {
   title: "Channel (ISMC) Weight Calculator — All Sizes 75 to 400",
@@ -35,6 +36,7 @@ export default function ChannelWeightPage() {
         </nav>
         <h1 className="text-white text-2xl sm:text-3xl font-bold mb-5 tracking-tight">Channel (ISMC) Weight Calculator — All Sizes<span className="block text-white/30 text-sm font-normal mt-1.5">Complete ISMC weight chart with section dimensions as per IS 808</span></h1>
         <div className="mb-8"><ChannelWeightCalc /></div>
+        <WeightPagesIndex family="ismc" heading="ISMC channel weight by designation" />
 
         <section className="glass-panel p-5 sm:p-6 mb-8">
           <h2 className="text-white font-bold text-lg sm:text-xl mb-4">Complete ISMC Channel Weight Chart</h2>

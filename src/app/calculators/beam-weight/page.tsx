@@ -4,6 +4,7 @@ import BeamWeightCalc from "@/components/calculators/BeamWeightCalc";
 import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 import CalculatorSchema from "@/components/seo/CalculatorSchema";
 import { ismbBeams } from "@/lib/data/section-weights";
+import WeightPagesIndex from "@/components/WeightPagesIndex";
 
 export const metadata: Metadata = {
   title: "I-Beam (ISMB) Weight Calculator — All Sizes with Section Properties",
@@ -35,6 +36,7 @@ export default function BeamWeightPage() {
         </nav>
         <h1 className="text-white text-2xl sm:text-3xl font-bold mb-5 tracking-tight">I-Beam (ISMB) Weight Calculator — All Sizes<span className="block text-white/30 text-sm font-normal mt-1.5">Complete ISMB weight chart with section properties Zxx &amp; Ixx as per IS 808</span></h1>
         <div className="mb-8"><BeamWeightCalc /></div>
+        <WeightPagesIndex family="ismb" heading="ISMB beam weight by designation" />
 
         <section className="glass-panel p-5 sm:p-6 mb-8">
           <h2 className="text-white font-bold text-lg sm:text-xl mb-4">Complete ISMB Weight Chart with Section Properties</h2>
