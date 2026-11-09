@@ -1,4 +1,5 @@
 import { steelCapitalFlowsFigure } from "@/lib/charts/steel-capital-flows";
+import { cokingCoalSourcesFigure } from "@/lib/charts/coking-coal-sources";
 
 export type Category = "CRISIS" | "ANALYSIS" | "GUIDE";
 
@@ -25,6 +26,139 @@ export const CATEGORY_STYLES: Record<Category, { bg: string; text: string }> = {
 };
 
 export const articles: Article[] = [
+  {
+    slug: "india-marginal-buyer-seaborne-coking-coal-2026",
+    title:
+      "India Is Becoming the Marginal Buyer of the World’s Coking Coal. That Changes Who Sets the Price",
+    category: "ANALYSIS",
+    categoryColor: "blue",
+    date: "2026-11-09",
+    readTime: "9 min",
+    excerpt:
+      "39.94 Mt through major ports in seven months, up 10.85%. As China retreats to Mongolian coal and Japan closes furnaces, India’s blast-furnace build-out is turning it into the buyer that clears the seaborne market, and the one that will pay for its own growth.",
+    metaTitle: "India, the New Marginal Buyer of Seaborne Coking Coal",
+    metaDescription:
+      "India imported 39.94 Mt of coking coal through major ports in Apr–Oct FY27, up 10.85%. Why China’s shift to Mongolia and Asia’s furnace closures make India the price-setting buyer, the 2030 supply arithmetic, and five levers weighed honestly.",
+    relatedCalculators: ["landed-cost", "scrap-production-cost", "scrap-yield"],
+    ogImage: {
+      url: "/og?title=India%20is%20coking%20coal%E2%80%99s%20new%20marginal%20buyer&value=39.94%20Mt&label=APR%E2%80%93OCT%20FY27%20%C2%B7%20%2B10.85%25%20YoY%20%C2%B7%20MAJOR%20PORTS&accent=orange",
+      alt: "India imported 39.94 million tonnes of coking coal through major ports in April to October FY27, up 10.85 percent year on year",
+    },
+    content: `
+<p><strong>Executive summary:</strong> India’s coking coal imports through its major ports reached 39.94 million tonnes in the first seven months of FY27, up 10.85% on a year earlier and more than four times the pace at which the country’s crude steel output grew. That gap is the story. India is not merely consuming more coal because it makes more steel; it is making steel in a progressively more coal-intensive way, through a blast-furnace fleet that is still being built while the rest of the world’s importers shrink theirs. At the same time, China, the buyer that has set seaborne coking coal prices for two decades, is retreating onto Mongolian rail and its own mines. The result is a quiet transfer of power: by the end of this decade the marginal tonne of seaborne metallurgical coal will be bought by an Indian mill, which means Indian demand will increasingly set the price Indian mills pay. For a country that imports roughly 90% of the coking coal it uses, that is a strategic position of a very particular kind.</p>
+
+<h2>Seven months, one signal</h2>
+
+<p>The numbers come from the Indian Ports Association’s provisional traffic data, <a href="https://www.steelorbis.com/steel-news/latest-news/indias-coking-coal-import-port-traffic-up-11-in-apr-oct-fy-2026-27-1488601.htm" target="_blank" rel="noopener">released on 5 November</a>. Coking coal arriving at the twelve major ports totalled 39.94 Mt between April and October, against about 36.0 Mt in the same months of FY26. October alone brought 6.41 Mt, a jump of roughly 25% from September’s 5.12 Mt, which is partly the usual post-monsoon catch-up in discharge and evacuation and partly restocking by mills heading into their strongest production quarter. Iron ore and pellet traffic through the same ports rose 9.4% to 29.53 Mt, confirming that the whole blast-furnace supply chain, not just coal, is running harder.</p>
+
+<p>Set that against the steel data published the same week. The Joint Plant Committee put crude steel output for April to October at 99.1 Mt, up 2.6%, with October itself up just 0.7%. Finished steel consumption grew 7.5% to 99.3 Mt, and imports rose sharply to fill the gap. So the country’s coal appetite is growing at four times the rate of its steel output. Three things explain the divergence, and none of them is temporary.</p>
+
+<p>First, the metallic mix is shifting toward hot metal. India’s crude steel comes from three routes in roughly a 41:38:21 split between blast furnace–basic oxygen furnace, induction furnace and electric arc furnace, but almost all of the large-scale capacity now being commissioned is blast-furnace based: JSW’s Vijayanagar expansion, Tata’s Kalinganagar phase two, JSPL at Angul and AMNS at Hazira. Each new furnace adds coal demand before it adds much steel, as it is heated, charged and ramped. Second, the induction-furnace segment, which uses scrap and sponge iron rather than coking coal, is the part of Indian steel that has been squeezed hardest by cheap imports this year, so growth has concentrated in the integrated mills. Third, the quality of the domestic coal India blends into its coke ovens is poor enough that every incremental tonne of hot metal requires a near-full tonne of imported coal rather than a partial one.</p>
+
+<p>The macro ratio makes the point without any plant-level assumptions. In calendar 2025 India imported about 62.6 Mt of coking coal plus 21 Mt of pulverised coal injection (PCI) grades, roughly 83 Mt of metallurgical coal in total, and washed perhaps 6 Mt of its own, to produce about 91 Mt of hot metal. That is close to one tonne of metallurgical coal per tonne of hot metal, well above the 0.8 tonnes a modern Japanese or Korean furnace would use. The difference is ash: Indian coking coal runs at 25% to 35% ash before washing, and even the washed product sits well above the 9% or 10% of a premium Australian hard coking coal.</p>
+
+<h2>Where the coal comes from, and how that is changing</h2>
+
+${cokingCoalSourcesFigure()}
+
+<table>
+<caption style="caption-side:top;text-align:left;font-weight:600;font-size:13px;padding-bottom:6px">Data table: India’s coking coal import shares by origin (per cent of tonnes)</caption>
+<thead>
+<tr><th>Origin</th><th style="text-align:right">2019</th><th style="text-align:right">2025</th><th style="text-align:right">Change</th><th>What is driving it</th></tr>
+</thead>
+<tbody>
+<tr><td>Australia</td><td style="text-align:right">73.0</td><td style="text-align:right">54.0</td><td style="text-align:right">−19 pt</td><td>Still the quality benchmark; share eroded by price, royalties and mine disruptions</td></tr>
+<tr><td>United States</td><td style="text-align:right">8.0</td><td style="text-align:right">17.0</td><td style="text-align:right">+9 pt</td><td>Swing exporter; volumes track the Australia–US price spread month to month</td></tr>
+<tr><td>Russia</td><td style="text-align:right">0.6</td><td style="text-align:right">8.2</td><td style="text-align:right">+7.6 pt</td><td>Discounted cargoes since 2022; dominates India’s PCI imports (over 14 Mt of 21 Mt)</td></tr>
+<tr><td>Mozambique</td><td style="text-align:right">4.0</td><td style="text-align:right">7.3</td><td style="text-align:right">+3.3 pt</td><td>Indian-owned mines (ICVL, Jindal) and a shorter voyage than Queensland</td></tr>
+<tr><td>Indonesia</td><td style="text-align:right">2.5</td><td style="text-align:right">4.0</td><td style="text-align:right">+1.5 pt</td><td>Semi-soft and PCI grades for blending; near and cheap, not premium</td></tr>
+<tr><td>Others, mainly Canada</td><td style="text-align:right">11.9</td><td style="text-align:right">9.5</td><td style="text-align:right">−2.4 pt</td><td>Canadian hard coking coal competes on quality but loses on freight</td></tr>
+</tbody>
+</table>
+
+<p>The shares come from the Ministry of Steel’s <a href="https://news.metal.com/newscontent/104205652-indias-coking-coal-import-dependence-on-australia-falls-to-54" target="_blank" rel="noopener">deposition to a parliamentary standing committee</a> and describe a genuine diversification: Australia has gone from three-quarters of the book to little more than half in six years. Read carefully, though, the table also describes the limits of that diversification. The United States is a swing supplier whose exports to India fell by a third in May 2026 when the price spread closed. Russia’s coal arrives with sanctions, payment and shipping frictions attached. Mozambique and Indonesia supply blending grades, not the premium low-volatile coal that sets coke strength. Australia remains the only origin that combines quality, scale and reliability, which is why no Indian mill has walked away from it, and why the most consequential supply news for Indian steel this year happened not in Jharkhand but in Queensland’s Bowen Basin.</p>
+
+<h2>A market re-sorting into three blocs</h2>
+
+<p>The global metallurgical coal trade is quietly splitting into three systems that barely touch one another, and India sits alone in the one that is growing.</p>
+
+<p><strong>Bloc one: China and Mongolia, by rail.</strong> China imported about 60 Mt of Mongolian coking coal in 2025, over half of its total metallurgical coal imports, and Mongolian deliveries across all coal grades were <a href="https://www.hellenicshippingnews.com/chinas-mongolian-coking-coal-demand-seen-higher-in-2026-on-blending-supply-curbs/" target="_blank" rel="noopener">running almost 50% higher again</a> through the first eight months of 2026 as safety inspections curbed domestic mining in Shanxi. Russian coal into China fell by more than 10% over the same period, squeezed by rail tariffs and a strong rouble. The important point for everyone else is that Mongolian coal never touches a ship. Every tonne China takes from Mongolia is a tonne it does not bid for in the seaborne market, and China’s seaborne appetite, which swung prices from $100 to $600 a tonne within a single cycle between 2020 and 2022, is structurally shrinking. China’s crude steel output is flat to slightly down, the state is explicitly managing capacity, and the country meets roughly three-quarters of its coking coal need from its own mines.</p>
+
+<p><strong>Bloc two: the legacy importers, in retreat.</strong> Japan and Korea, for decades the price-setting premium buyers alongside China, are closing blast furnaces rather than opening them. JFE has shut the last furnace at Keihin and will close one of three at Fukuyama by March 2028; Nippon Steel is idling capacity at Kimitsu; both countries’ crude steel output fell by 3% to 5% in 2025. Europe is the exception that proves the rule: ArcelorMittal has restarted three furnaces this year behind tighter import quotas, but the continent’s structural direction, financed by states and shaped by carbon policy, is toward electric arc furnaces and direct reduction. Taiwan’s and the EU’s coal demand fall each year. The <a href="https://www.iea.org/reports/coal-mid-year-update-2026/trade" target="_blank" rel="noopener">IEA’s mid-year update</a> puts the seaborne metallurgical trade at 304 Mt in 2025, growing perhaps 16 Mt in 2026, with the entire increase attributed to India and Indonesia and the rest of the importing world flat or falling.</p>
+
+<p><strong>Bloc three: India, and nobody else.</strong> Of the world’s large steel producers, India is the only one adding blast-furnace capacity at scale, the only one whose coking coal demand is forecast to grow by double digits, and the only one that must buy almost all of it at sea. That combination has never existed before. China grew its steel industry on domestic coal; Japan and Korea grew theirs when they were the sole large buyers in a market with spare Australian capacity. India is growing into a market where the other big buyers are leaving, which sounds comfortable until one asks who will invest in new mines for a single customer.</p>
+
+<h2>Who sets the price now</h2>
+
+<p>For most of the last two decades the premium hard coking coal benchmark, assessed FOB eastern Australia, moved to the rhythm of Chinese restocking, Chinese steel margins and the occasional Chinese import ban. The last twelve months show the handover in progress. The benchmark has risen about 22% this year to the $260 to $267 range, and the proximate cause was Chinese: domestic supply curbs that pulled seaborne cargoes into northern China. But the cushion under the price, the reason it did not fall back to $180 when Chinese buying paused in late October, was Indian and Southeast Asian demand. BHP’s realised price for its Queensland coal rose 8% to $210 a tonne in the year to June even as Chinese seaborne imports softened, which is not how a China-led market behaves.</p>
+
+<p>Two features of Indian demand will make it a more volatile price-setter than China ever was. The first is seasonality. India’s monsoon depresses construction demand and port throughput from June to September and then releases both at once; the 25% jump in October coal arrivals is that pattern in a single number. A market whose marginal buyer restocks in a three-month window will have a sharper seasonal price shape than one whose marginal buyer ran furnaces at a steady 90%. The second is quality dependence. Chinese mills can and do swap between Mongolian, domestic and seaborne coal as prices move. Indian mills, with high-ash domestic coal already in the blend, have very little room to substitute away from premium imports when prices spike, which means Indian demand is more price-inelastic at the top of the cycle than Chinese demand was.</p>
+
+<p>Put plainly: the buyer with the least flexibility is becoming the buyer that clears the market. Miners will notice.</p>
+
+<h2>The unit economics every mill already feels</h2>
+
+<p>At $265 a tonne FOB and $20 to $25 of freight to the east coast of India, premium coal lands at roughly $285 to $290. At the macro ratio of about one tonne of metallurgical coal per tonne of hot metal, blended across premium, semi-soft and PCI grades that average perhaps $230 landed, coal alone costs an Indian integrated mill in the region of $230 to $250 per tonne of hot metal, somewhere between 40% and 45% of the cash cost of making it. Every $10 move in the benchmark moves hot metal cost by roughly $8 to $9 a tonne, or around ₹700 to ₹800 at current exchange rates. Across 91 Mt of hot metal, a $10 move in coal is a $750 million swing in the industry’s annual cost base; a repeat of 2022’s spike to $600 would be an existential event for the weaker balance sheets. Buyers can run their own version of this through the <a href="/calculators/landed-cost">landed cost calculator</a>, which handles the duty, freight and currency stack for any origin, and compare the result with the scrap route in the <a href="/calculators/scrap-production-cost">scrap-to-steel production cost model</a>.</p>
+
+<p>The exposure is asymmetric by producer. Tata Steel and JSW hold equity in Australian and Mozambican mines and run long-term contracts for part of their book; SAIL and the mid-sized integrated producers buy more at spot and feel every cycle. The sector-wide pattern is nonetheless the same: Indian steel is long a product whose price is set globally and short an input whose price is increasingly set by its own buying.</p>
+
+<h2>The 2030 arithmetic that no capacity target answers</h2>
+
+<p>The National Steel Policy targets 300 Mt of capacity by 2030, and the industry’s own projection, in the <a href="https://www.ey.com/en_in/newsroom/2025/09/india-s-coking-coal-imports-set-to-rise" target="_blank" rel="noopener">EY-Parthenon and Indian Steel Association study</a> of September 2025, is that coking coal demand rises 55% to 135 Mt by FY30 and imports rise 42% to about 115 Mt. FY26 imports through major ports were about 66 Mt. So India needs to find roughly 50 Mt a year of additional seaborne coking coal within four years.</p>
+
+<p>Hold that number against the supply side. The entire seaborne metallurgical market is about 304 Mt; India’s increment alone is 16% of it, and three times the IEA’s estimate of total seaborne growth in 2026. BHP’s BMA, the world’s largest exporter, produced 37.3 Mt in the year to June and guides 37 to 41 Mt for the year ahead: flat. Anglo American, after a mine fire at Moranbah North collapsed its sale to Peabody, <a href="https://www.abc.net.au/news/2026-05-18/anglo-american-sells-queensland-coal-mines-to-dhilmar/106592324" target="_blank" rel="noopener">sold its Queensland mines to Dhilmar</a> in May for up to A$5.4 billion, with the Grosvenor longwall not expected back before late 2027. Peabody’s new Centurion mine will add 1.5 to 2 Mt in the second half of 2026. Queensland’s tiered royalty, reaching 40% above A$300 a tonne, has been blamed by BMA for the closure of Saraji South and is a standing deterrent to greenfield investment. Canada’s Elk Valley is now owned by a trader with no mandate to expand. The United States can swing 10 to 15 Mt either way, but at a cost base that only works above about $200. Mozambique can grow but from a small base over a single rail line. Russia can discount but cannot be banked. Mongolia, the supplier India has courted for a decade, delivered its first coking coal to SAIL in October 2026 in the form of a <a href="https://www.constructionworld.in/energy-infrastructure/coal-and-mining/sail-tests-mongolia-as-new-coking-coal-supplier/98252" target="_blank" rel="noopener">one-tonne sample flown in for testing</a>, with any commercial route running through Russia’s Far East at a cost that no analyst believes competitive.</p>
+
+<p>There is no plausible combination of these sources that delivers 50 Mt of new supply at today’s price. The arithmetic therefore resolves in one of three ways: India pays a premium large enough to bring marginal US, Canadian and Australian tonnes into production; India’s steel growth is slower and less blast-furnace-heavy than the targets assume; or India changes how much coal each tonne of steel needs. The first is the default path, and it is the sense in which India will pay for its own growth. The second is what the market quietly expects. The third is the only one that is actually in India’s hands.</p>
+
+<h2>Five levers, honestly weighed</h2>
+
+<p><strong>1. Washing and beneficiation.</strong> India mined 66.8 Mt of raw coking coal in FY24 but washed only 5.4 Mt to steelmaking grade. The Ministry of Coal’s mission targets 140 Mt of raw output by FY30, with 105 Mt from Coal India and 35 Mt from captive and commercial blocks, and new washeries that it says will supply <a href="https://coal.gov.in/sites/default/files/2024-08/PIB2042650.pdf" target="_blank" rel="noopener">about 23 Mt a year of washed coal</a> to steel by 2030. If that is delivered in full and on time it covers less than half of the import increment, and washing high-ash Gondwana coal yields a product that still needs premium imports to carry coke strength. Necessary, insufficient, and a decade late. <a href="https://ieefa.org/resources/indias-coking-coal-push-needs-methane-plan" target="_blank" rel="noopener">IEEFA</a> adds that the new underground mines carry a methane problem nobody has yet planned for.</p>
+
+<p><strong>2. Blend engineering.</strong> Indian coke plants already blend more domestic and semi-soft coal than any comparable fleet. Pushing further means accepting lower coke strength after reaction and higher coke rates, which raises coal consumption per tonne of hot metal even as it lowers the premium share. Stamp charging, which several Indian mills have adopted, lets a blend carry more weak coal. This lever is real but it trades quality risk for price risk, and in a tight market the premium coal is still needed.</p>
+
+<p><strong>3. Scrap.</strong> The cleanest substitute for coking coal is steel that has already been made. India’s <a href="/articles/india-steel-scrap-deficit-47-million-tonnes-fy26-analysis">scrap deficit of about 47 Mt</a> is the mirror image of its coal dependence: a young capital stock generates little obsolete scrap, collection is informal and the 2025 Gulf disruptions showed how fragile imported scrap supply is. Scrap displaces coal at the margin in the electric routes, not in the blast furnaces being built. Over fifteen years it is the most important lever; over the next five it moves the coal number very little.</p>
+
+<p><strong>4. DRI and electric steelmaking.</strong> India is already the world’s largest producer of direct reduced iron, at about 55 Mt, but almost all of it is made in coal-fired rotary kilns using non-coking coal, which insulates it from the coking coal market while exposing it to thermal coal and to carbon pricing. Gas-based DRI at scale needs gas at $6 to $8 per MMBtu that India does not have, and hydrogen is a 2035 conversation. The honest version of this lever is that India will shift its growth from blast furnaces toward DRI-EAF only when carbon costs, notably the <a href="/cbam/calculator">EU’s CBAM</a>, make the blast-furnace export tonne uneconomic. That is a lever pulled by Brussels, not by Delhi.</p>
+
+<p><strong>5. Logistics and contracting.</strong> The one lever entirely within reach. Deeper berths at Paradip, Dhamra and Gangavaram, more rakes dedicated to coal evacuation, and a shift from spot buying to a book of long-term contracts and equity stakes would lower the volatility of Indian demand even if they cannot lower its level. A marginal buyer that restocks smoothly pays less than one that restocks in October. The <a href="/articles/coking-coal-iron-ore-routes-open">route-by-route assessment</a> we published during the Hormuz disruption still applies: resilience here is a matter of ports and paper, not geology.</p>
+
+<h2>What this means around the world</h2>
+
+<p><strong>For Indian mills:</strong> coal procurement has become a strategic function, not a purchasing one. Equity in mines, contract tenor and blend flexibility will separate the producers who survive the next spike from those who do not. The question to ask of every expansion plan is not whether the furnace is bankable but whether its coal is.</p>
+
+<p><strong>For miners in Queensland, Appalachia, British Columbia and Tete:</strong> the customer base is narrowing to one growing buyer. That is a pricing opportunity in the short run and a concentration risk in the long run; it argues for Indian offtake agreements and Indian equity in new projects, and against the assumption that China will return.</p>
+
+<p><strong>For Japanese, Korean and European steelmakers:</strong> shrinking coal demand at home means less competition for premium tonnes, but it also means their Indian competitors, operating the newest large blast furnaces in the world, will have a structurally higher and more volatile input cost. Under carbon border pricing that cost gap compounds: blast-furnace steel carries more embedded emissions, and India’s coal-heavy growth path is precisely what <a href="/articles/global-steel-investment-capital-map-2026">foreign capital is funding</a> there.</p>
+
+<p><strong>For shipowners and traders:</strong> tonne-miles rise as the trade pivots from Australia–China (about 4,000 nautical miles) toward United States–India (over 9,000) and Mozambique–India. Panamax and Capesize demand in the metallurgical trade becomes an Indian-demand story.</p>
+
+<p><strong>For policymakers:</strong> raw material security has been framed in India as a sourcing problem. The data say it is a technology-choice problem. A country that builds 100 Mt of new blast-furnace capacity on 90% imported coal has chosen its exposure, whatever its diplomats negotiate in Ulaanbaatar.</p>
+
+<h2>The honest limits</h2>
+
+<p>Port traffic is not the same as customs imports: the IPA series covers the twelve major ports and excludes private ports such as Dhamra and Gangavaram, which is why full-year figures from port, customs and trade-house sources differ by several million tonnes. Origin shares are the ministry’s for calendar 2025 and will have moved in 2026 as US volumes swung. The one-tonne-of-coal-per-tonne-of-hot-metal ratio is a national average that conceals a wide spread between the best and worst furnaces. Forecasts of 115 Mt of imports by 2030 assume capacity targets are met on time, which Indian steel has historically not done. None of these caveats changes the direction of the argument; all of them should temper confidence in any single number in it.</p>
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>How much coking coal did India import in April–October FY27?</h3>
+<p>Provisional Indian Ports Association data put coking coal traffic through India’s major ports at 39.94 million tonnes for April to October 2026, up 10.85% year on year. October alone was 6.41 Mt against 5.12 Mt in September. Iron ore and pellet traffic rose 9.4% to 29.53 Mt over the same period.</p>
+
+<h3>Why are India’s coking coal imports growing faster than its steel output?</h3>
+<p>Crude steel output rose 2.6% in the same months while coal arrivals rose 10.85%. New capacity is almost entirely blast-furnace based and consumes coal during commissioning and ramp-up, the scrap-based induction furnace segment has lost share to imports, and India’s high-ash domestic coal means each tonne of hot metal needs close to a full tonne of imported metallurgical coal.</p>
+
+<h3>Where does India buy its coking coal?</h3>
+<p>According to the Ministry of Steel, Australia’s share fell from 73% in 2019 to 54% in 2025, while the United States rose to 17%, Russia to about 8%, Mozambique to 7% and Indonesia to 4%. Russia also supplies most of India’s roughly 21 Mt of PCI coal. Mongolia has supplied only a test sample so far.</p>
+
+<h3>Is India now setting the seaborne coking coal price?</h3>
+<p>Not yet alone, but increasingly at the margin. China is sourcing over half of its metallurgical coal imports from Mongolia by rail and its seaborne demand is shrinking, while Japan and Korea are closing blast furnaces. The IEA attributes all of the 2026 growth in seaborne metallurgical coal to India and Indonesia. The premium benchmark has held in the $260s in late 2026 partly on Indian demand even as Chinese buying softened.</p>
+
+<h3>How much coking coal will India need by 2030?</h3>
+<p>The EY-Parthenon and Indian Steel Association study projects demand of 135 Mt and imports of about 115 Mt by FY30, up from roughly 66 Mt of port imports in FY26. The increment of about 50 Mt equals 16% of today’s entire seaborne metallurgical coal market, against a supply pipeline in which the largest exporter is guiding flat output.</p>
+
+<h3>What is the cost impact of coking coal prices on Indian steel?</h3>
+<p>At about one tonne of metallurgical coal per tonne of hot metal and landed prices around $230 to $290 depending on grade, coal is roughly 40% to 45% of hot metal cash cost. Each $10 per tonne move in the benchmark changes hot metal cost by about $8 to $9, or ₹700 to ₹800 per tonne.</p>
+`,
+  },
   {
     slug: "cbam-cost-steel-importers",
     title:
@@ -898,6 +1032,8 @@ export const articles: Article[] = [
 <p>We\u2019ll continue updating this assessment as the situation evolves. Use SteelMath\u2019s daily brief to stay informed on route changes and supply developments. Subscribe to our free daily email to get updates delivered to your inbox every morning.</p>
 
 <p><strong>Related on SteelMath:</strong> <a href="/articles/hormuz-crisis-steel-impact-india">Hormuz Crisis Impact</a> &middot; <a href="/articles/jaisalmer-limestone-steel-mills-gulf-imports-stranded-hormuz-2026">Jaisalmer Limestone Crisis</a> &middot; <a href="/articles/freight-cost-rerouting-india">Freight Cost Rerouting</a> &middot; <a href="/calculator">Steel Weight Calculator</a></p>
+
+<p><strong>Related analysis (November 2026):</strong> Seven months into FY27, coking coal arrivals at India’s major ports are up 10.85% while steel output is up 2.6%. We examine why India is becoming the marginal buyer of seaborne coking coal, and what that does to the price it pays, in <a href="/articles/india-marginal-buyer-seaborne-coking-coal-2026">India Is Becoming the Marginal Buyer of the World’s Coking Coal</a>.</p>
 `,
   },
   {
@@ -2103,6 +2239,8 @@ export const articles: Article[] = [
 <p>The deeper signal is this: India\u2019s steel capacity is growing faster than its mine-to-mill supply chain can support at the required quality levels. The 7-year high in imports is not an aberration, it\u2019s the beginning of a structural dependence on seaborne iron ore that will shape procurement strategy, port infrastructure investment, and trade policy for the next decade.</p>
 
 <p><strong>Related on SteelMath:</strong> Use our <a href="/calculator">Weight Calculator</a> and explore our <a href="/articles">full analysis library</a> for ongoing coverage.</p>
+
+<p><strong>Related analysis (November 2026):</strong> Iron ore and pellet traffic through India’s major ports rose 9.4% in April–October FY27 while coking coal traffic rose 10.85%. The coal side of the same blast-furnace build-out, and the 2030 supply arithmetic behind it, is in <a href="/articles/india-marginal-buyer-seaborne-coking-coal-2026">India Is Becoming the Marginal Buyer of the World’s Coking Coal</a>.</p>
 `,
   },
   {
@@ -6459,6 +6597,8 @@ At k = 0.95: D/t = 40.0, very thin, buckling is the primary failure mode.</p>
 <p><strong>For policy makers and industry bodies:</strong> The scrap deficit is the binding constraint on India\u2019s steel growth trajectory. Without addressing it through aggressive vehicle scrappage implementation, organised C&amp;D waste recovery, and strategic import infrastructure, the 300 MTPA capacity target will face a raw material bottleneck that no amount of iron ore or DRI alone can resolve.</p>
 
 <p><strong>For sustainability and carbon professionals:</strong> India\u2019s decarbonisation pathway runs through the scrap question. More scrap means less DRI, which means less coal consumption, which means lower emissions per tonne. Every additional million tonnes of domestic scrap generated saves approximately 1.5 million tonnes of CO\u2082 (by displacing coal-based DRI). The scrap gap is a carbon gap, and closing it is the single most impactful near-term decarbonisation lever available to the Indian steel industry.</p>
+
+<p><strong>Related analysis (November 2026):</strong> The scrap deficit has a mirror image: a coking coal dependence that is growing four times faster than steel output. Why India is becoming the price-setting buyer of seaborne coking coal, and where scrap fits among the five levers, in <a href="/articles/india-marginal-buyer-seaborne-coking-coal-2026">India Is Becoming the Marginal Buyer of the World’s Coking Coal</a>.</p>
 
 <h2>Frequently Asked Questions</h2>
 

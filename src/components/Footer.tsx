@@ -53,11 +53,11 @@ const FOOTER_COLS: { heading: string; links: { href: string; label: string }[] }
   {
     heading: "ANALYSIS",
     links: [
+      { href: "/articles/india-marginal-buyer-seaborne-coking-coal-2026", label: "India, Coking Coal's Marginal Buyer" },
       { href: "/articles/india-steel-scrap-deficit-47-million-tonnes-fy26-analysis", label: "India's Scrap Deficit Analysis" },
       { href: "/articles/rinl-vizag-steel-plant-revival-2026-complete-story", label: "RINL Vizag Turnaround" },
       { href: "/articles/india-steel-demand-story-not-china-2026", label: "India Steel Demand Story" },
       { href: "/articles/can-india-control-global-steel-pricing-2030", label: "The Volume Trap" },
-      { href: "/articles/moil-manganese-ore-price-hike-april-2026-steel-impact", label: "MOIL Manganese Hike" },
       { href: "/articles", label: "All Articles →" },
     ],
   },
