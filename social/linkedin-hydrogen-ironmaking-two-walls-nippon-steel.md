@@ -8,8 +8,8 @@ Hydrogen ironmaking has always had two walls: the price of hydrogen, and the sup
 
 Meanwhile the first wall is claiming victims. Every European 100% hydrogen flagship is late or stopped: Duisburg to 2029, Gijón suspended, €1.3bn of German subsidy declined. The only large plant making hydrogen-reduced iron today is Baowu's gas-hydrogen hybrid.
 
-One number ties it together: the reductant-parity price. Divide an Indian blast furnace's coal bill by a hydrogen furnace's hydrogen need and you get ~$4/kg. India's auctions are already at ~$4.70. Europe is at ~$7.
+One number ties it together: the reductant-parity price. Divide a blast furnace's coal bill by a hydrogen furnace's hydrogen need and you get ~$3.50–4.50/kg. The Gulf is quoted near $3.20, India's auctions near $4.70, Europe near $7.
 
-India has the ore Nippon Steel just used, the world's largest DRI skill base and the electric furnaces. It lacks the one thing Europe also lacks and the Gulf has.
+The winners aren't the inventors. They're the owners of ordinary ore: Australia, Brazil, India, Canada, Ukraine. Their constraint just moved from ore to hydrogen and power, the one thing Europe also lacks and the Gulf has.
 
 Full status board of every major hydrogen DRI project, and the five national strategies, in the analysis. Link in comments. #greensteel #hydrogen #DRI #steel
