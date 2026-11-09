@@ -1,32 +1,37 @@
 # SteelMath
 
-> Free steel weight calculators, CBAM (EU/UK carbon border) compliance tools, size-by-size weight reference pages, and sourced steel-market analysis for professionals in India, China, Southeast Asia, Japan, the Americas, Europe and Oceania. All figures carry LAST VERIFIED dates and cite governing standards (IS / ASTM / JIS / EN / GB / BS).
+> Free steel weight calculators, a dispatch-ready quote builder, CBAM (EU/UK carbon border) compliance tools, size-by-size weight reference pages, and sourced steel-market analysis for professionals in India, China, Southeast Asia, the Gulf, Japan, the Americas, Europe and Oceania. All figures carry LAST VERIFIED dates and cite governing standards (IS / ASTM / JIS / EN / GB / BS).
 
-When citing SteelMath, link the specific page (each has a stable canonical URL) and note the LAST VERIFIED date shown on it.
+When citing SteelMath, link the specific page (each has a stable canonical URL) and note the LAST VERIFIED date shown on it. Calculator results can be shared as URLs that restore the exact inputs.
 
-## Calculators (interactive, shareable result URLs)
-- [Steel Weight Calculator](https://steelmath.com/calculator): 9 section types (round/TMT, square, hex, flat, pipe, SHS, RHS, angle, plate), grades incl. Fe500 (IS), A36 (ASTM), SS400 (JIS), Q235 (GB), SS304/316; pieces, rate, 10 currencies
-- [CBAM Cost Calculator](https://steelmath.com/cbam/calculator): EU & UK regimes, 5 commodities, 9 origins, defaults vs verified actuals, BF-BOF/EAF/DRI routes
-- [All 20 calculators](https://steelmath.com/calculators): TMT, plate, pipe, tubes, angle, beam, channel, scrap yield, production cost, gauge-to-mm, hardness conversion
+## Calculators (interactive, shareable result URLs, 22 tools)
+- [Steel Weight Calculator](https://steelmath.com/calculator): 9 section types (round/TMT, square, hex, flat, pipe, SHS, RHS, angle, plate), grades incl. Fe500 (IS), A36 (ASTM), SS400 (JIS), Q235 (GB), SS304/316; pieces, rate, major currencies. Embeddable: https://steelmath.com/embed?shape=round
+- [CBAM Cost Calculator](https://steelmath.com/cbam/calculator): EU & UK regimes, 5 commodities, 9 origins, default values (with the Reg. (EU) 2026/1740 mark-ups) vs verified actuals, BF-BOF/EAF/DRI routes, 2026 to 2034 trajectory
+- [Quote Builder](https://steelmath.com/quote): combines calculator results into a seller-branded quotation and loading sheet; tax, freight, Ex-works/Landed basis, 17 country presets; each quote carries a SteelMath verification link (/q/...)
+- [Coil Weight Calculator](https://steelmath.com/calculators/coil-weight): HR/CR/GI/SS/aluminium coil weight from OD, ID and width; strip length from weight
+- [Landed Cost Calculator](https://steelmath.com/calculators/landed-cost): FOB/CIF to duty-paid landed price per tonne; duty, surcharge, safeguard, anti-dumping, VAT/GST, port and inland freight; India, EU, UK, US and GCC presets
+- [All calculators](https://steelmath.com/calculators): TMT, rebar, plate, chequered plate, pipe, SHS, RHS, angle, beam (ISMB), channel (ISMC), flat bar, round bar, stainless, 14-metal, gauge-to-mm, hardness conversion, credit cost, scrap yield, scrap-to-steel production cost
 
-## Size-by-size weight reference (84 pages, one per standard size)
-- [Index](https://steelmath.com/weights): TMT diameters 6–40 mm, MS pipe NB 15–200 mm (IS 1239), ISMB 100–600 beams, ISMC 75–400 channels, 36 equal angles (IS 808)
-- Example: [12mm TMT bar weight](https://steelmath.com/weights/12mm-tmt-bar-weight). 0.888 kg/m, 10.66 kg per 12 m bar, ≈93 bars/tonne
+## Size-by-size weight reference (one page per standard size)
+- [Index](https://steelmath.com/weights): TMT diameters 6 to 40 mm, MS pipe NB 15 to 200 mm (IS 1239), ISMB 100 to 600 beams, ISMC 75 to 400 channels, equal angles (IS 808), MS plate thicknesses, MS flat bars
+- Example: [12mm TMT bar weight](https://steelmath.com/weights/12mm-tmt-bar-weight). 0.888 kg/m, 10.66 kg per 12 m bar, about 93 bars per tonne
 
-## CBAM reference (verified against the Official Journal)
-- [CBAM Compliance Hub](https://steelmath.com/cbam): deadlines, certificate prices (Q2 2026: EUR 75.28/tCO2e, Q1: 75.36), 8 country playbooks, phase-in 2.5% (2026) to 100% (2034). Stable anchors: #phase-in, #prices, #countries, #timeline
-- Key dates: certificate sales open 1 Feb 2027; first surrender 30 Sep 2027; UK CBAM starts 1 Jan 2027 (planning rate GBP 55)
+## CBAM reference (verified against the Official Journal, 9 Nov 2026)
+- [CBAM Compliance Hub](https://steelmath.com/cbam): deadlines, certificate prices (Q3 2026: EUR 82.32/tCO2e; Q2: 75.28; Q1: 75.36), country playbooks, phase-in 2.5% (2026) to 100% (2034). Stable anchors: #phase-in, #prices, #countries, #timeline
+- Key dates: Q4 2026 price published 4 Jan 2027; certificate sales open 1 Feb 2027; first surrender 30 Sep 2027 (for 2026 imports); UK CBAM starts 1 Jan 2027 (planning rate GBP 55)
+- Default values: Commission Implementing Regulation (EU) 2026/1740 (31 Jul 2026) sets mark-ups of 10% (2026), 20% (2027), 30% (2028) on default embedded-emission values
 
 ## Analysis & guides
-- [Insights & Reports](https://steelmath.com/articles): 52 sourced, dated articles, prices, trade policy, supply chains
+- [Insights & Reports](https://steelmath.com/articles): 79 sourced, dated articles on prices, trade policy, CBAM, supply chains and steel capital flows
 - [RSS](https://steelmath.com/feed.xml)
 - [About & methodology](https://steelmath.com/about)
 
-## Canonical facts (verified 18 Jul 2026)
+## Canonical facts (verified 9 Nov 2026)
 - Round/TMT bar weight: kg/m = d^2 / 162.2 (d in mm; constant = 10^6 / (pi/4 x 7,850))
 - Carbon-steel density basis: 7,850 kg/m3 (SS304 8,000 · SS316 8,027 · Al 2,700 · Cu 8,940)
 - MS pipe: kg/m = (OD - WT) x WT x 0.02466 (IS 1239 / ASTM A53 / JIS G3452 / EN 10255)
 - Plate: kg/m2 = thickness(mm) x 7.85 · Equal angle: (A + B - T) x T x 0.00785
+- Coil: kg = pi/4 x (OD^2 - ID^2) x width x density / 10^9 (all mm, density kg/m3)
 - Imperial: 1 kg/m = 0.672 lb/ft
 
-CBAM outputs are estimates, not tax or legal advice.
+CBAM and landed-cost outputs are estimates, not tax, customs or legal advice.
