@@ -173,6 +173,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
+      url: `${BASE_URL}/calculators/coil-weight`,
+      lastModified: TOOLS_VERIFIED,
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+    {
+      url: `${BASE_URL}/calculators/landed-cost`,
+      lastModified: TOOLS_VERIFIED,
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+    {
       url: `${BASE_URL}/calculators/scrap-yield`,
       lastModified: TOOLS_VERIFIED,
       changeFrequency: "monthly",

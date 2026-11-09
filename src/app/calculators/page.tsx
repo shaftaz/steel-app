@@ -68,6 +68,20 @@ const CALCULATORS = [
     tag: "Plate / Sheet",
   },
   {
+    href: "/calculators/coil-weight",
+    title: "Coil Weight Calculator",
+    description:
+      "HR, CR, GI, SS & aluminium coils. Weight from OD, ID & width; strip length and OD from target weight.",
+    tag: "Coil / Sheet",
+  },
+  {
+    href: "/calculators/landed-cost",
+    title: "Landed Cost Calculator",
+    description:
+      "FOB/CFR/CIF to duty-paid price per tonne: duty, safeguard, anti-dumping, IGST/VAT, port & inland. India, EU, UK, US, GCC presets.",
+    tag: "Trade Finance",
+  },
+  {
     href: "/calculators/metal-weight",
     title: "Metal Weight Calculator",
     description:
@@ -295,7 +309,7 @@ export default function CalculatorsPage() {
         <div className="mb-7 flex items-end justify-between gap-4 lg:gap-8 flex-wrap">
           <div>
             <div className="font-mono text-[11px] tracking-[0.14em] text-accent mb-2.5">
-              21 FREE TOOLS · INSTANT RECALC · IS · ASTM · JIS · EN · GB STANDARDS
+              23 FREE TOOLS · INSTANT RECALC · IS · ASTM · JIS · EN · GB STANDARDS
             </div>
             <h1 className="text-[clamp(26px,4vw,36px)] font-extrabold text-ink mb-2 tracking-[-0.02em] [text-wrap:balance]">
               Free Steel Calculators for Every Section Type

@@ -315,7 +315,7 @@ export default function Home() {
               href="/calculators"
               className="block py-3.5 px-1 font-mono text-xs tracking-[0.06em] text-ink no-underline hover:text-accent transition-colors"
             >
-              ALL 20 CALCULATORS →
+              ALL 22 CALCULATORS →
             </Link>
           </div>
           <Scenarios />

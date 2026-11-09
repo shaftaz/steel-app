@@ -63,7 +63,7 @@ const VALID_CALCS = new Set([
   "square-tube-weight", "rect-tube-weight", "chequered-plate-weight",
   "stainless-steel-weight", "metal-weight", "gauge-to-mm",
   "hardness-conversion", "credit-cost", "scrap-yield",
-  "scrap-production-cost",
+  "scrap-production-cost", "coil-weight", "landed-cost",
 ]);
 const CALC_ALIASES: Record<string, string> = {
   weight: "calculator",
