@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Calculator from "@/components/Calculator";
+import WeightPagesIndex from "@/components/WeightPagesIndex";
+import EmbedSnippet from "@/components/EmbedSnippet";
 
 export const metadata: Metadata = {
   title:
@@ -190,6 +192,8 @@ export default function TmtCalculatorPage() {
         <div className="mb-8">
           <Calculator />
         </div>
+        <EmbedSnippet shape="round" label="TMT Bar Weight Calculator" />
+        <WeightPagesIndex family="tmt" heading="TMT bar weight by diameter" />
 
         {/* TMT Weight Reference Table */}
         <section className="glass-panel p-5 sm:p-6 mb-8">

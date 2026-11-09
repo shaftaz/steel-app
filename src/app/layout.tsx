@@ -3,6 +3,7 @@ import Script from "next/script";
 import { Archivo, IBM_Plex_Mono } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import ChromeGate from "@/components/ChromeGate";
 import SwRegister from "@/components/SwRegister";
 import GaRouteTracker from "@/components/GaRouteTracker";
 // import PriceTicker from "@/components/dashboard/PriceTicker";
@@ -340,7 +341,9 @@ gtag('config', 'G-V0FPXV02V5');`}
         <Header />
         {/* <PriceTicker /> */}
         {children}
-        <Footer />
+        <ChromeGate>
+          <Footer />
+        </ChromeGate>
         <SwRegister />
         <GaRouteTracker />
       </body>

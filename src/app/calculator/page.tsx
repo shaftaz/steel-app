@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Calculator from "@/components/Calculator";
 import NewsletterCta from "@/components/NewsletterCta";
+import EmbedSnippet from "@/components/EmbedSnippet";
 
 export const metadata: Metadata = {
   title:
@@ -227,6 +228,9 @@ export default function CalculatorPage() {
           {/* Calculator. 2/3 width */}
           <div className="lg:col-span-2">
             <Calculator />
+            <div className="mt-3">
+              <EmbedSnippet shape="round" label="Steel Weight Calculator" />
+            </div>
           </div>
 
           {/* Sidebar. 1/3 width */}

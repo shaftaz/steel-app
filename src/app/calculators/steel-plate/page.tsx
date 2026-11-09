@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Calculator from "@/components/Calculator";
+import WeightPagesIndex from "@/components/WeightPagesIndex";
+import EmbedSnippet from "@/components/EmbedSnippet";
 
 export const metadata: Metadata = {
   title:
@@ -182,6 +184,8 @@ export default function SteelPlateCalculatorPage() {
         <div className="mb-8">
           <Calculator initialShape="plate" initialGrade="MS" />
         </div>
+        <EmbedSnippet shape="plate" label="Steel Plate Weight Calculator" />
+        <WeightPagesIndex family="plate" heading="MS plate weight by thickness" />
 
         {/* ── Plate Weight Reference Table ── */}
         <section className="glass-panel p-5 sm:p-6 mb-8">

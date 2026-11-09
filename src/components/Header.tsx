@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState, useRef, useEffect, useCallback } from "react";
 import { useQuoteItems, quoteTotals } from "@/lib/quote";
 
@@ -19,6 +20,7 @@ const CALC_CATEGORIES = [
     items: [
       { href: "/calculators/steel-plate", label: "Steel Plate Calculator" },
       { href: "/calculators/chequered-plate-weight", label: "Chequered Plate Calculator" },
+      { href: "/calculators/coil-weight", label: "Coil Weight Calculator" },
     ],
   },
   {
@@ -47,6 +49,7 @@ const CALC_CATEGORIES = [
   {
     label: "Import Compliance",
     items: [
+      { href: "/calculators/landed-cost", label: "Landed Cost Calculator" },
       { href: "/articles/bis-certification-steel-imports-india-2026-complete-guide", label: "BIS Certification Guide" },
       { href: "/articles/anti-dumping-duty-steel-imports-india-2026-active-cases", label: "Anti-Dumping Duty Tracker" },
       { href: "/articles/safeguard-duty-steel-imports-india-2026", label: "Safeguard Duty Guide" },
@@ -68,6 +71,9 @@ const CMDK_TOOLS = [
   { label: "Steel Weight Calculator", meta: "TOOL", href: "/calculator" },
   { label: "TMT Bar Calculator", meta: "TOOL · d²/162", href: "/calculators/tmt" },
   { label: "Steel Plate Calculator", meta: "TOOL", href: "/calculators/steel-plate" },
+  { label: "Coil Weight Calculator", meta: "TOOL · OD · ID · WIDTH", href: "/calculators/coil-weight" },
+  { label: "Landed Cost Calculator", meta: "TOOL · FOB/CIF → DUTY-PAID", href: "/calculators/landed-cost" },
+  { label: "Quote Builder", meta: "TOOL · DISPATCH", href: "/quote" },
   { label: "Scrap Yield Calculator", meta: "TOOL", href: "/calculators/scrap-yield" },
   { label: "Production Cost Calculator", meta: "TOOL", href: "/calculators/scrap-production-cost" },
   { label: "CBAM Hub — Exporter View", meta: "CBAM HUB", href: "/cbam" },
@@ -82,6 +88,7 @@ const CMDK_TOOLS = [
 ];
 
 export default function Header() {
+  const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [calcOpen, setCalcOpen] = useState(false);
   const quoteItems = useQuoteItems();
@@ -129,6 +136,9 @@ export default function Header() {
   const filteredTools = q
     ? CMDK_TOOLS.filter((t) => (t.label + " " + t.meta).toLowerCase().includes(q))
     : CMDK_TOOLS;
+
+  /* The embeddable widget (/embed) renders inside third-party iframes: no site chrome. */
+  if (pathname?.startsWith("/embed")) return null;
 
   return (
     <header className="sticky top-0 z-50 bg-paper border-b border-rule">
