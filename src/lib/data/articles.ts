@@ -1,5 +1,6 @@
 import { steelCapitalFlowsFigure } from "@/lib/charts/steel-capital-flows";
 import { cokingCoalSourcesFigure } from "@/lib/charts/coking-coal-sources";
+import { hydrogenDriStatusFigure } from "@/lib/charts/hydrogen-dri-status";
 
 export type Category = "CRISIS" | "ANALYSIS" | "GUIDE";
 
@@ -26,6 +27,120 @@ export const CATEGORY_STYLES: Record<Category, { bg: string; text: string }> = {
 };
 
 export const articles: Article[] = [
+  {
+    slug: "hydrogen-ironmaking-ore-constraint-nippon-steel-2040",
+    title:
+      "Hydrogen Ironmaking Had Two Walls. Nippon Steel Just Put a Crack in the One Nobody Was Watching",
+    category: "ANALYSIS",
+    categoryColor: "blue",
+    date: "2026-11-09",
+    readTime: "10 min",
+    excerpt:
+      "A thousand tonnes of iron made with pure hydrogen from ordinary blast-furnace pellets is a small number with a large meaning: the ore constraint on green steel is negotiable. The hydrogen-price constraint is not, and Europe’s stalled flagships prove it. Where that leaves Japan, China, Korea, the Gulf and India.",
+    metaTitle: "Hydrogen Ironmaking’s Two Walls: Ore and Hydrogen Price",
+    metaDescription:
+      "Nippon Steel made 1,000 t of DRI with 100% hydrogen from blast-furnace-grade pellets. Why the ore constraint matters more than it looks, why hydrogen cost still decides everything, a status board of every major hydrogen DRI project, and the reductant-parity price that tells India when to move.",
+    relatedCalculators: ["scrap-production-cost", "scrap-yield", "landed-cost"],
+    ogImage: {
+      url: "/og?title=Hydrogen%20ironmaking%E2%80%99s%20two%20walls&value=1%2C000%20t&label=100%25%20H%E2%82%82%20DRI%20%C2%B7%20BF-GRADE%20PELLETS%20%C2%B7%20300%20HOURS&accent=blue",
+      alt: "Nippon Steel produced over 1,000 tonnes of direct reduced iron with 100 percent hydrogen from blast-furnace-grade pellets in a 300-hour pilot campaign",
+    },
+    content: `
+<p><strong>Executive summary:</strong> On 4 November Nippon Steel reported that a 60-metre pilot shaft furnace at its Hasaki research centre had run for more than 300 hours on pure hydrogen and produced over 1,000 tonnes of direct reduced iron from blast-furnace-grade pellets, the ordinary 63% to 65% iron product that feeds most of the world’s furnaces, rather than the scarce 67%-plus pellets that direct reduction has always demanded. The tonnage is trivial; a single commercial module makes that much before lunch. The feedstock is not. Hydrogen ironmaking has always faced two walls: the price of hydrogen and the supply of ore good enough to reduce without a blast furnace’s forgiving slag chemistry. For a decade the industry has stared at the first wall while quietly assuming the second away. Nippon Steel’s result is the first credible evidence at pilot scale that the ore wall can be climbed with chemistry and furnace control rather than by waiting for mines that do not exist. The hydrogen wall, meanwhile, has just claimed another set of victims in Europe, where the continent’s flagship 100% hydrogen plants are delayed to 2029 or suspended outright. The two facts together redraw the map: the technology race is being won slowly in Japan and Korea, the deployment race is being won pragmatically in China with gas-hydrogen hybrids, the economics will be settled wherever hydrogen is cheapest, and India, the world’s largest DRI producer and the owner of exactly the kind of ore Nippon Steel just used, has more to gain from this result than the company that produced it.</p>
+
+<h2>What was actually demonstrated</h2>
+
+<p>The facts in <a href="https://www.nipponsteel.com/en/newsroom/news/2026/20261104_100.html" target="_blank" rel="noopener">Nippon Steel’s release</a> are spare. The furnace is a pilot-scale shaft about 60 metres tall with a design rate of one tonne per hour, commissioned in March 2026 under the NEDO Green Innovation Fund programme that Nippon Steel shares with JFE Steel and the Japan Research and Development Center for Metals. In the reported campaign it ran continuously for over 300 hours on 100% hydrogen and produced more than 1,000 tonnes of DRI. The feed was blast-furnace-grade pellets. Two problems that have dogged every hydrogen shaft-furnace trial were handled: the reaction is endothermic, so a furnace fed only hydrogen cools itself down and the reduction stalls, which Nippon Steel countered with what it calls thermal compensation technology; and low-grade pellets tend to disintegrate into fines as they reduce, choking gas flow, which it suppressed through operating technique. The company gives no iron grade for either pellet type, no metallisation figure and no energy balance. Scale-up development begins in FY2027 and the target for an implementable technology is around 2040.</p>
+
+<p>Three things about that paragraph deserve emphasis because the commentary around the announcement has missed them. First, 2040 is not a slip; it was always the schedule. Japan’s steelmakers chose a long, state-cofunded research path and are on it. Second, the thermal problem is the easier of the two: it is an engineering question of how to put heat into a hydrogen shaft furnace, and several answers exist, from preheating the gas to electric heating of the burden. Third, the pellet problem is the one that matters for the rest of the world, because it is not an engineering question at all. It is a question about the Earth’s crust.</p>
+
+<h2>The wall nobody was watching</h2>
+
+<p>Direct reduction has run on natural gas for fifty years in Mexico, Iran, the Gulf, Russia and the United States, and in all that time it has used a narrow slice of the world’s iron ore: pellets at 67% iron or better with low silica and alumina, because what is not iron in the pellet stays in the DRI and must be melted out in an electric furnace that, unlike a blast furnace, does not want slag. About 100 Mt of DRI a year is made this way. Scaling hydrogen DRI to replace even a third of the world’s blast-furnace iron would require several hundred million tonnes of DR-grade pellets that nobody mines. Midrex, the dominant shaft-furnace licensor, <a href="https://gmk.center/en/infographic/dri-expansion-vs-pellet-gap-production-surge-feedstock-crunch/" target="_blank" rel="noopener">projects a DR-grade pellet shortfall</a> of 16.5 Mt by 2034; BloombergNEF puts the gap at 133 Mt by 2040. Only about 30% of today’s DR-grade supply is even sold on the open market; the rest is captive. The miners who could fix this, Vale, Rio Tinto, BHP and LKAB, face their own constraint: the high-grade deposits that beneficiate cleanly to DR grade are a small and shrinking share of what they dig, and Pilbara ore, the largest single source of iron units on earth, is not among them.</p>
+
+<p>Two workarounds have emerged, and Nippon Steel’s result is a third. The first is to accept low-grade DRI and melt it in an electric smelting furnace that can handle slag, then feed the hot metal to a conventional converter; this is the path BHP, Rio Tinto and BlueScope are piloting in Australia and the one <a href="https://ieefa.org/sites/default/files/2026-06/BN_DRI%20smelter-%20promise,%20progress%20and%20barriers_Jun26.pdf" target="_blank" rel="noopener">IEEFA’s June 2026 review</a> judges necessary if direct reduction is to scale on Pilbara-type ores. It adds a furnace and a cost. The second is to abandon pellets and reduce fines directly in a fluidised bed, which is POSCO’s HyREX bet, now being tested on BHP ore under a collaboration signed in September. It is elegant and unproven above laboratory scale. The third, Nippon Steel’s, is to keep the shaft furnace that industry already knows how to build and operate, and make it tolerate worse pellets through heat management and burden control. If that holds at scale, the addressable ore base for hydrogen DRI widens from a few tens of millions of tonnes of premium pellets to the hundreds of millions of tonnes of blast-furnace pellets already made in India, Brazil, Ukraine, Canada and China. That is why a thousand tonnes matter.</p>
+
+<h2>The wall everybody is watching, and hitting</h2>
+
+${hydrogenDriStatusFigure()}
+
+<table>
+<caption style="caption-side:top;text-align:left;font-weight:600;font-size:13px;padding-bottom:6px">Data table: hydrogen-ready direct reduction projects, status at 9 November 2026</caption>
+<thead>
+<tr><th>Project</th><th style="text-align:right">DRI Mt/yr</th><th>Reductant</th><th>Status</th><th>Why it is where it is</th></tr>
+</thead>
+<tbody>
+<tr><td>thyssenkrupp tkH2Steel, Duisburg</td><td style="text-align:right">2.5</td><td>Gas first, hydrogen share to follow</td><td>Delayed to 2029 from 2027; funding terms rewritten to allow a gas start</td><td>No hydrogen supply contract; a fresh tender only now being prepared</td></tr>
+<tr><td>ArcelorMittal Gijón</td><td style="text-align:right">2.3</td><td>Hydrogen-ready</td><td>Final investment decision suspended</td><td>Cited CBAM “deficiencies” and absence of a hydrogen framework</td></tr>
+<tr><td>ArcelorMittal Dunkirk, Bremen, Eisenhüttenstadt</td><td style="text-align:right">—</td><td>—</td><td>DRI dropped (Dunkirk becomes a 2 Mt EAF in 2029); German modules cancelled</td><td>€1.3bn of German subsidy declined; gas, power and hydrogen prices</td></tr>
+<tr><td>Stegra, Boden</td><td style="text-align:right">2.1</td><td>100% hydrogen, 700 MW electrolysis</td><td>Under construction; 2026 start still the stated target, not yet confirmed</td><td>Funded (€6.5bn) and permitted; first-of-a-kind commissioning risk</td></tr>
+<tr><td>HYBRIT demonstration, Gällivare</td><td style="text-align:right">1.35</td><td>100% hydrogen</td><td>Delayed; engineering now 2027 or later</td><td>Cost and sequencing of the LKAB–SSAB system</td></tr>
+<tr><td>Salzgitter SALCOS</td><td style="text-align:right">~2.1 (stage 1)</td><td>Hydrogen-ready</td><td>Stage 1 slipped to 2027; stages 2 and 3 postponed about three years</td><td>Board decision of September 2025 on economics and regulation</td></tr>
+<tr><td>Baowu Zhanjiang</td><td style="text-align:right">1.0</td><td>Gas, coke-oven gas and up to 70% hydrogen</td><td>Operating since 2024; Pilbara ore trials with BHP and Rio Tinto</td><td>Fuel-flexible design that did not wait for green hydrogen</td></tr>
+<tr><td>POSCO HyREX, Pohang</td><td style="text-align:right">0.3 demo</td><td>100% hydrogen, fluidised bed on fines</td><td>Demonstration plant due 2028; commercial-ready target 2030</td><td>State-backed “Steel GX” cluster; BHP ore agreement Sept 2026</td></tr>
+<tr><td>Nippon Steel, Hasaki</td><td style="text-align:right">0.008 pilot</td><td>100% hydrogen, BF-grade pellets</td><td>Operating since March 2026; 300 h, 1,000 t</td><td>Scale-up from FY2027; implementation around 2040</td></tr>
+</tbody>
+</table>
+
+<p>Read the status column top to bottom and a pattern appears that no single headline conveys. Every European project designed around 100% green hydrogen is late or stopped. The one large plant actually making hydrogen-reduced iron is Chinese, was engineered to run on whatever gas is cheapest, and treats hydrogen as a dial rather than a destination. The two projects most likely to produce genuinely new technology are Japanese and Korean, state-cofunded, and scheduled for the late 2030s. Europe’s problem was never the chemistry. <a href="https://www.gasworld.com/story/thyssenkrupp-steel-keeps-duisburg-dri-plant-moving-as-hydrogen-switch-delayed/2260448.article/" target="_blank" rel="noopener">Thyssenkrupp’s Duisburg tower is being erected</a> on schedule; what is missing is anyone willing to sell it hydrogen at a price that makes the steel sellable. European green hydrogen was quoted at roughly $7 a kilogram this year against the €2.50 to €3 that steelmakers say they need. ArcelorMittal walked away from <a href="https://www.energy-alternatives.eu/en/linkedin/2026-09-17-hydrogene-dri-en-question.html" target="_blank" rel="noopener">€1.3 billion of German subsidies</a> rather than commit to that gap, and <a href="/articles/europe-steel-state-ownership-bankability-gap">the state has been stepping in</a> to carry what private balance sheets will not.</p>
+
+<h2>The reductant-parity price</h2>
+
+<p>The cleanest way to see when hydrogen ironmaking becomes a business rather than a programme is to compare what each route pays for its reductant, because that is where the two routes differ most and where policy can least disguise the gap. A hydrogen shaft furnace needs roughly 55 to 60 kilograms of hydrogen per tonne of DRI once gas recycling is accounted for. A blast furnace, in Indian practice, consumes close to a tonne of metallurgical coal per tonne of hot metal, as we set out in <a href="/articles/india-marginal-buyer-seaborne-coking-coal-2026">this week’s analysis of India’s coking coal position</a>, and that coal lands at $230 to $290 a tonne depending on grade. Divide the coal bill by the hydrogen requirement and the arithmetic gives a reductant-parity price of about $4 to $4.50 a kilogram: below that, hydrogen is the cheaper reductant per tonne of iron before anyone counts carbon, capital or electricity.</p>
+
+<p>That number is both encouraging and sobering. Encouraging, because India’s own hydrogen auctions under the SIGHT scheme have discovered prices around ₹397 a kilogram, about $4.70, and a <a href="https://iecc.gspp.berkeley.edu/wp-content/uploads/2026/05/IECC-Economic-Case-for-Green-Steel-Production-in-India-Report-May26.pdf" target="_blank" rel="noopener">Berkeley study published in May</a> models $3 as achievable for Indian plants and full cost parity with blast-furnace steel at about $2.50 for plants commissioned around 2030. The Gulf, with the world’s cheapest solar, is already quoted near $3.20. Sobering, because reductant parity is only the first hurdle: the DRI must then be melted in an electric furnace at Indian industrial power prices, the plant must be built at first-of-a-kind capital cost, and the hydrogen must be delivered continuously to a furnace that cannot wait for the sun. Europe, at $7 hydrogen and €80-plus power, clears none of these; India at $3 hydrogen would clear the first and struggle with the second.</p>
+
+<p>Carbon pricing moves the parity point. At the EU’s current certificate price of about €82 per tonne of CO₂, the roughly 1.5 tonnes of CO₂ per tonne of steel that separates a blast furnace from a hydrogen DRI-EAF route is worth around €120 a tonne of steel once CBAM reaches full strength in 2034, which, spread over 60 kilograms of hydrogen, is equivalent to a subsidy of about $2.30 a kilogram for steel sold into Europe. Exporters can test their own numbers in the <a href="/cbam/calculator">CBAM calculator</a>. The point is not that CBAM alone closes the gap; it is that a market with CBAM and $3 hydrogen is a market where hydrogen DRI pencils out, and a market with CBAM and $7 hydrogen is a market where steelmakers, rationally, build electric furnaces and import the iron.</p>
+
+<h2>Five strategies, one technology</h2>
+
+<p><strong>Japan: the patient incumbent.</strong> Nippon Steel is pursuing three breakthroughs in parallel under its 2050 vision: high-grade steel from large electric furnaces, hydrogen injection into blast furnaces, and hydrogen DRI. The hydrogen blast furnace, Super COURSE50, has <a href="https://www.nipponsteel.com/en/ir/library/strategy/pdf/20260514_100.pdf" target="_blank" rel="noopener">reported about a third less CO₂</a> in a test furnace with heated hydrogen and is being readied for a commercial furnace at Kimitsu. The company’s strategy is to keep its blast furnaces running cleaner for two decades while the DRI route matures to 2040, and to use the time and its US acquisition to fund it. This is coherent. It is also only available to a company with Japan’s cost of capital and the Green Innovation Fund behind it.</p>
+
+<p><strong>China: the pragmatic deployer.</strong> Baowu did not wait. Its 1 Mt Zhanjiang plant runs on a mixture of natural gas, coke-oven gas and hydrogen up to 70%, produced 21,620 tonnes at 94% metallisation in its performance test, and has completed commercial-scale trials with <a href="https://www.bhp.com/es/news/articles/2025/05/bhp-and-china-baowu-celebrated-successful-commercial-scale-dri-trials-using-bhps-pilbara-iron-ores" target="_blank" rel="noopener">BHP’s Pilbara ore</a> and Rio Tinto’s, with the DRI largely charged into existing converters. Half the emissions of a blast furnace, today, on ordinary ore, with no dependence on a hydrogen market that does not exist. China is treating the shaft furnace as a flexible asset whose carbon intensity falls as hydrogen gets cheaper, which is how a capital-rich, policy-directed system learns by doing.</p>
+
+<p><strong>Korea: the technology gambler.</strong> POSCO’s HyREX skips pellets entirely, reducing fines in fluidised beds and melting in an electric smelter. If it works it solves the ore problem more completely than any shaft-furnace variant and uses the cheapest iron units on earth. The 300,000-tonne demonstration plant is due in 2028 inside a state-backed decarbonisation cluster stretching from Pohang to Gwangyang, and POSCO has said that profits from its overseas growth, including <a href="/articles/posco-three-answers-steel-strategy">its Indian joint venture with JSW</a>, are meant to pay for it.</p>
+
+<p><strong>The Gulf: the resource owner.</strong> Saudi Arabia, the UAE and Oman already run the world’s largest fleet of gas-based DRI, have the cheapest solar electricity on record and are building the Ras Al Khair DRI-EAF complex with Baowu, Aramco and PIF. They will not invent hydrogen ironmaking; they will own the place where it is cheapest to do. Every European steelmaker that drops a DRI module and keeps an EAF is implicitly planning to buy Gulf iron.</p>
+
+<p><strong>Europe: the policy builder.</strong> Europe wrote the carbon price that makes all of this bankable and then discovered that a carbon price cannot conjure hydrogen. Its retreat is not a verdict on the technology; it is a verdict on the sequencing of its own policy, which priced carbon before it built the electricity and electrolyser base to supply the alternative. The <a href="/articles/steelwatch-scorecard-2026-green-steel-transition-gap">transition scorecards</a> that rank European producers highest are measuring intention, and intention has just met the hydrogen price.</p>
+
+<h2>Why this matters most for India</h2>
+
+<p>India is the world’s largest producer of direct reduced iron, around 55 Mt a year, and almost none of it is made the way the rest of the world makes it. It comes from coal-fired rotary kilns, hundreds of them, using non-coking coal and lump ore or low-grade pellets, feeding induction furnaces that make long products for construction. It is the most carbon-intensive iron on earth, at roughly two and a half to three tonnes of CO₂ per tonne, and it is also the reason India has the world’s deepest reservoir of DRI operating skill and the largest installed base of electric steelmaking that a hydrogen route could feed. The Nippon Steel result lands directly on India’s central raw-material fact: Indian ore is blast-furnace grade, 62% to 65% iron with stubborn alumina, and India makes perhaps 100 Mt of pellets a year, almost all of them BF grade. A hydrogen DRI technology that insists on 67% pellets is a technology India would have to import ore to use. One that tolerates BF-grade pellets is one India could run on its own ground.</p>
+
+<p>The constraint, then, is not ore and not operating culture. It is hydrogen and power. India had commissioned only about 8,000 tonnes a year of green hydrogen by February against a 2030 target of five million tonnes; the Ministry of Steel has <a href="https://www.drishtiias.com/daily-updates/daily-news-editorials/indias-green-hydrogen-roadmap" target="_blank" rel="noopener">₹455 crore</a> allocated for steel pilots through FY30, which is a rounding error against a single DRI module; JSW’s Vijayanagar pilot takes 3,800 tonnes of hydrogen a year, enough to reduce perhaps 60,000 tonnes of iron, into an existing DRI unit; Tata and SAIL are injecting hydrogen into blast furnaces for single-digit emission cuts. These are sensible experiments and they are not a strategy.</p>
+
+<p>A strategy for India would read differently. It would build the next generation of gas-based shaft furnaces hydrogen-ready and fuel-flexible, on the Baowu model, at the coastal sites where LNG and future hydrogen imports land, and run them on blended gas while the hydrogen price falls. It would treat pelletisation and beneficiation as strategic infrastructure, because the ore tolerance Nippon Steel demonstrated still requires pellets, not fines, and India’s pellet industry is export-oriented and capital-starved. It would pair DRI with electric smelting furnaces where the ore is too poor even for a tolerant shaft, as IEEFA recommends, so that <a href="/articles/india-steel-scrap-deficit-47-million-tonnes-fy26-analysis">scarce scrap</a> is not the only clean metallic available. And it would recognise that the reductant-parity price of about $4 a kilogram is already within sight of Indian auction results, which means the question is no longer whether hydrogen DRI can work in India but who builds the first hydrogen-ready module and where its power comes from. India has the ore, the DRI skills and the electric furnaces. What it lacks is the one thing Europe also lacks, and the one thing the Gulf has.</p>
+
+<h2>What to watch</h2>
+
+<p>Six markers will tell you whether this analysis is right. Stegra’s first hydrogen DRI at Boden, which would be the world’s first 100% hydrogen production at commercial scale and is now the single most important data point in green steel. Thyssenkrupp’s annual report on 8 December and whatever it says about hydrogen supply for Duisburg. Nippon Steel’s FY2027 scale-up design, specifically the module size it chooses and whether it publishes metallisation and energy figures. POSCO’s HyREX demonstration in 2028. Any announcement by an Indian producer of a hydrogen-ready shaft furnace rather than a pilot. And the price discovered in India’s next green hydrogen auction, measured against $4 a kilogram.</p>
+
+<h2>The honest limits</h2>
+
+<p>Nippon Steel disclosed no metallisation, energy consumption or pellet chemistry, so the quality of the DRI and the cost of the thermal compensation are unknown; a tolerant furnace that makes poor DRI slowly is not a breakthrough. The reductant-parity calculation compares reductant costs only and ignores capital, electricity, labour and the value of blast-furnace by-products; it is a threshold, not a business case. Hydrogen requirements per tonne vary with ore, metallisation target and recycling design. Project statuses are as publicly reported and several, notably Stegra and SALCOS, rest on company guidance that has moved before. None of these caveats alters the direction of the argument; each should temper confidence in any single number in it.</p>
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>What did Nippon Steel achieve with hydrogen DRI?</h3>
+<p>At its Hasaki R&amp;D centre, a 60-metre pilot shaft furnace rated at one tonne per hour ran for more than 300 hours on 100% hydrogen and produced over 1,000 tonnes of direct reduced iron from blast-furnace-grade pellets rather than the high-grade DR pellets normally required. The company reports solving the furnace-cooling problem of hydrogen reduction with thermal compensation technology and suppressing pellet powdering through operating technique. Scale-up work begins in FY2027 with implementation targeted around 2040.</p>
+
+<h3>Why is using blast-furnace-grade pellets significant?</h3>
+<p>Direct reduction has historically needed pellets of 67% iron or more, a scarce product with a projected shortfall of 16.5 Mt by 2034 (Midrex) to 133 Mt by 2040 (BloombergNEF). Blast-furnace-grade pellets at 63% to 65% iron are produced in the hundreds of millions of tonnes, including almost all of India’s output. A hydrogen DRI process that tolerates them widens the ore base for green steel dramatically.</p>
+
+<h3>Why are Europe’s hydrogen steel projects delayed?</h3>
+<p>Hydrogen price, not technology. European green hydrogen has been quoted near $7 a kilogram against the €2.50 to €3 steelmakers say they need. Thyssenkrupp has pushed its Duisburg DRI plant to 2029 and may start it on natural gas; ArcelorMittal suspended its Gijón decision and dropped DRI at Dunkirk and in Germany; HYBRIT and Salzgitter have slipped. Stegra in Sweden remains the key 100% hydrogen project to watch.</p>
+
+<h3>What is the reductant-parity price for hydrogen in steelmaking?</h3>
+<p>Roughly $4 to $4.50 a kilogram. It is the hydrogen price at which 55 to 60 kg of hydrogen per tonne of DRI costs the same as the roughly one tonne of metallurgical coal, at $230 to $290 landed, that an Indian blast furnace uses per tonne of hot metal. Below it, hydrogen is the cheaper reductant before carbon pricing, capital or electricity are considered.</p>
+
+<h3>What does the result mean for India?</h3>
+<p>India is the largest DRI producer in the world, about 55 Mt a year, almost all from coal-fired rotary kilns, and its ore and pellets are blast-furnace grade. A hydrogen DRI route that tolerates such pellets fits India’s resource base. The binding constraints are green hydrogen supply, only about 8,000 tonnes a year commissioned by early 2026 against a 5 Mt 2030 target, and industrial power cost. Indian auction prices near $4.70 a kilogram are already close to the reductant-parity threshold.</p>
+
+<h3>Is Baowu’s Zhanjiang plant a hydrogen DRI plant?</h3>
+<p>It is a 1 Mt fuel-flexible direct reduction plant that can run on natural gas, coke-oven gas and hydrogen in any mix up to about 70% hydrogen, operating since 2024. It has completed commercial-scale trials on BHP and Rio Tinto Pilbara ores with roughly half the CO₂ intensity of blast-furnace hot metal, making it the largest hydrogen-using DRI plant in operation today.</p>
+`,
+  },
   {
     slug: "india-marginal-buyer-seaborne-coking-coal-2026",
     title:
@@ -137,6 +252,8 @@ ${cokingCoalSourcesFigure()}
 <h2>The honest limits</h2>
 
 <p>Port traffic is not the same as customs imports: the IPA series covers the twelve major ports and excludes private ports such as Dhamra and Gangavaram, which is why full-year figures from port, customs and trade-house sources differ by several million tonnes. Origin shares are the ministry’s for calendar 2025 and will have moved in 2026 as US volumes swung. The one-tonne-of-coal-per-tonne-of-hot-metal ratio is a national average that conceals a wide spread between the best and worst furnaces. Forecasts of 115 Mt of imports by 2030 assume capacity targets are met on time, which Indian steel has historically not done. None of these caveats changes the direction of the argument; all of them should temper confidence in any single number in it.</p>
+
+<p><strong>Related analysis (November 2026):</strong> The coal bill above sets the price hydrogen must beat. Dividing it by a hydrogen furnace’s requirement gives a reductant-parity price of about $4 a kilogram, and Nippon Steel has just shown hydrogen DRI can run on the blast-furnace-grade pellets India actually produces. See <a href="/articles/hydrogen-ironmaking-ore-constraint-nippon-steel-2040">Hydrogen Ironmaking Had Two Walls</a>.</p>
 
 <h2>Frequently Asked Questions</h2>
 
@@ -3675,6 +3792,8 @@ March 2026 Sales:      5.90 MT</pre>
 
 <p><strong>For anyone in the steel industry:</strong> Regardless of where you sit in the value chain, the transition is not a distant theoretical concern. It is a decade-level restructuring of how steel is produced, priced, traded, and regulated. The SteelWatch scorecard is the first standardised attempt to measure how far along that restructuring each major producer has progressed. The answer, uniformly, is: not far enough.</p>
 
+<p><strong>Related analysis (November 2026):</strong> Seven months on, the scorecard’s European leaders have delayed or suspended their 100% hydrogen DRI plants while Nippon Steel made 1,000 tonnes of hydrogen DRI from blast-furnace-grade pellets. A status board of every major project and the hydrogen price that decides them, in <a href="/articles/hydrogen-ironmaking-ore-constraint-nippon-steel-2040">Hydrogen Ironmaking Had Two Walls</a>.</p>
+
 <h2>Frequently Asked Questions</h2>
 
 <h3>What is the SteelWatch Corporate Scorecard 2026?</h3>
@@ -6740,6 +6859,8 @@ At k = 0.95: D/t = 40.0, very thin, buckling is the primary failure mode.</p>
 
 <p>Steel’s cost curve is about to acquire a carbon axis, and the interaction between the two (who pays the green premium, where, and when) will <a href="/articles/anti-dumping-chinese-steel-barrier-cascade">move prices in ways that reward foresight</a>. Tracking that intersection of policy, finance, and price is precisely the intelligence layer SteelMath is built to provide. The mill was never the whole story. Now the financing world has said so too.</p>
 
+<p><strong>Related analysis (November 2026):</strong> The financing problem now has a price tag: hydrogen at $7 a kilogram in Europe against a reductant-parity threshold of about $4. Which projects stalled, which are running and what India’s auctions imply, in <a href="/articles/hydrogen-ironmaking-ore-constraint-nippon-steel-2040">Hydrogen Ironmaking Had Two Walls</a>.</p>
+
 <h2>Frequently Asked Questions</h2>
 
 <h3>What is the Climate Bonds Initiative’s steel report about?</h3>
@@ -7430,6 +7551,8 @@ At k = 0.95: D/t = 40.0, very thin, buckling is the primary failure mode.</p>
 <h2>What the rest of the market should take from it</h2>
 
 <p>For exporters without POSCO’s balance sheet, the message is uncomfortable but clarifying: the walls are being answered with capital and carbon capability, and competitiveness plans built purely on shipping tonnes are aging fast. For steel-importing nations, the courtship of this FDI wave is now a live policy contest: capacity, technology, and jobs flow to whoever combines market access with buildable conditions. And for buyers everywhere, the map of who makes steel where is about to change more in the next five years than in the last fifteen: supply-origin risk worth tracking as actively as price, the way SteelMath’s market intelligence does. The trade war’s first phase was about walls. Its second phase is about who learns to live on both sides of them.</p>
+
+<p><strong>Related analysis (November 2026):</strong> Japan’s long game has a new data point: Nippon Steel’s pilot shaft furnace ran 300 hours on pure hydrogen using ordinary blast-furnace pellets. Why that attacks the ore constraint on green steel, and how it compares with POSCO’s HyREX and China’s pragmatic hybrids, in <a href="/articles/hydrogen-ironmaking-ore-constraint-nippon-steel-2040">Hydrogen Ironmaking Had Two Walls</a>.</p>
 
 <h2>Frequently Asked Questions</h2>
 

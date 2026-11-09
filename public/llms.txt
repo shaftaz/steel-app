@@ -22,8 +22,9 @@ When citing SteelMath, link the specific page (each has a stable canonical URL) 
 - Default values: Commission Implementing Regulation (EU) 2026/1740 (31 Jul 2026) sets mark-ups of 10% (2026), 20% (2027), 30% (2028) on default embedded-emission values
 
 ## Analysis & guides
-- [Insights & Reports](https://steelmath.com/articles): 80 sourced, dated articles on prices, trade policy, CBAM, raw materials, supply chains and steel capital flows
-- Latest: [India as the marginal buyer of seaborne coking coal](https://steelmath.com/articles/india-marginal-buyer-seaborne-coking-coal-2026) (39.94 Mt via major ports Apr–Oct FY27, +10.85%; origin shares 2019 vs 2025; 2030 supply arithmetic)
+- [Insights & Reports](https://steelmath.com/articles): 81 sourced, dated articles on prices, trade policy, CBAM, raw materials, decarbonisation, supply chains and steel capital flows
+- Latest: [Hydrogen ironmaking’s two walls](https://steelmath.com/articles/hydrogen-ironmaking-ore-constraint-nippon-steel-2040) (Nippon Steel 1,000 t of 100% H2 DRI from BF-grade pellets; status board of every major hydrogen DRI project; reductant-parity price ~$4/kg H2)
+- [India as the marginal buyer of seaborne coking coal](https://steelmath.com/articles/india-marginal-buyer-seaborne-coking-coal-2026) (39.94 Mt via major ports Apr–Oct FY27, +10.85%; origin shares 2019 vs 2025; 2030 supply arithmetic)
 - [RSS](https://steelmath.com/feed.xml)
 - [About & methodology](https://steelmath.com/about)
 
